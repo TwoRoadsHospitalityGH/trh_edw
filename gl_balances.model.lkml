@@ -30,8 +30,9 @@ explore: gl_balance_rpt {
 
   join: gl_account_dm {
     view_label: "GL Account"
-    sql_on: ${gl_balance_rpt.gl_account_sid} = ${gl_account_dm.gl_account_sid} ;;
+    sql_on: ${gl_balance_rpt.gl_account_shk} = ${gl_account_dm.gl_account_shk} ;;
     type: inner
     relationship: many_to_one
   }
+
 }

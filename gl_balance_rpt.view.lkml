@@ -1,5 +1,5 @@
 view: gl_balance_rpt {
-  sql_table_name: pedw.fact.gl_balance_rpt;;
+  sql_table_name: pedw.dev.gl_balance_rpt;;
 
   dimension: date_sid {
     type: number
@@ -8,9 +8,9 @@ view: gl_balance_rpt {
     hidden: yes
   }
 
-  dimension: gl_account_sid {
+  dimension: gl_account_shk {
     type: string
-    sql: ${TABLE}.GL_ACCOUNT_SID ;;
+    sql: ${TABLE}.GL_ACCOUNT_SHK ;;
     hidden: yes
   }
 
@@ -43,7 +43,7 @@ view: gl_balance_rpt {
     group_label: "Actual"
     description: "Actual Balance (net of Debits and Credits) $"
     type: number
-    sql: ${act_net_cr_amt} - ${act_net_dr_amt} ;;
+    sql: -(${act_net_cr_amt} - ${act_net_dr_amt}) ;;
     drill_fields: [act_net_dr_amt, act_net_cr_amt]
     value_format_name: usd_0
   }
@@ -90,7 +90,7 @@ view: gl_balance_rpt {
     group_label: "Budget"
     description: "Budget Balance (net of Debits and Credits) $"
     type: number
-    sql: ${bgt_net_cr_amt} - ${bgt_net_dr_amt} ;;
+    sql: -(${bgt_net_cr_amt} - ${bgt_net_dr_amt}) ;;
     value_format_name: usd_0
   }
 
@@ -136,7 +136,7 @@ view: gl_balance_rpt {
     description: "Forecast Balance (net of Debits and Credits) $"
     type: number
     drill_fields: [  ]
-    sql: ${fcst_net_cr_amt} - ${fcst_net_dr_amt} ;;
+    sql: -(${fcst_net_cr_amt} - ${fcst_net_dr_amt}) ;;
     value_format_name: usd_0
   }
 
@@ -145,7 +145,7 @@ view: gl_balance_rpt {
     description: "Forecast"
     view_label: "1b) % Previous"
     type: percent_of_previous
-    sql: ${fcst_net_amt}_net_amt} ;;
+    sql: ${fcst_net_amt} ;;
     value_format: "0.0\%"
   }
 
@@ -182,7 +182,7 @@ view: gl_balance_rpt {
     group_label: "Projected"
     description: "Projected Balance (net of Debits and Credits) $"
     type: number
-    sql: ${prjc_net_cr_amt} - ${prjc_net_dr_amt} ;;
+    sql: -(${prjc_net_cr_amt} - ${prjc_net_dr_amt}) ;;
     value_format_name: usd_0
   }
 

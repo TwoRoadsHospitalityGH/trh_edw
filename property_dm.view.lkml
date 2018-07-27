@@ -1,8 +1,8 @@
 view: property_dm {
-  sql_table_name: pedw.fact.PROPERTY_DM ;;
+  sql_table_name: pedw.dev.PROPERTY_DM ;;
 
   dimension: property_key {
-    type: string
+    type: number
     sql: ${TABLE}.PROPERTY_KEY ;;
     hidden: no
   }

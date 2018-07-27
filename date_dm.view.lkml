@@ -1,5 +1,5 @@
 view: date_dm {
-  sql_table_name: pedw.fact.DATE_DM ;;
+  sql_table_name: pedw.dev.DATE_DM ;;
 
   dimension: date_sid {
     sql:  ${TABLE}.DATE_SID ;;
