@@ -23,7 +23,7 @@ view: gl_account_dm {
   dimension: segment1_name {
     label: "Entity Name"
     type: string
-    sql: ${TABLE}.SEGMENT1_CD;;
+    sql: ${TABLE}.SEGMENT1_NAME;;
   }
 
   dimension: Department {
