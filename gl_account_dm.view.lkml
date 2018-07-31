@@ -14,6 +14,7 @@ view: gl_account_dm {
   }
 
   dimension: segment1_cd {
+    group_label: "Seg1 - Entity"
     label: "Entity"
     type: number
     sql: ${TABLE}.SEGMENT1_CD;;
@@ -21,13 +22,14 @@ view: gl_account_dm {
   }
 
   dimension: segment1_name {
+    group_label: "Seg1 - Entity"
     label: "Entity Name"
     type: string
     sql: ${TABLE}.SEGMENT1_NAME;;
   }
 
   dimension: Department {
-    group_label: "Department"
+    group_label: "Seg2 - Department"
     label: "Department"
     type: string
     sql: concat(concat(${segment2_cd}, ' - '), ${segment2_class_name}) ;;
@@ -35,7 +37,7 @@ view: gl_account_dm {
   }
 
   dimension: segment2_cd {
-    group_label: "Department"
+    group_label: "Seg2 - Department"
     label: "Department Number"
     type: number
     sql: ${TABLE}.SEGMENT2_CD ;;
@@ -43,7 +45,7 @@ view: gl_account_dm {
   }
 
   dimension: segment2_class_name {
-    group_label: "Department"
+    group_label: "Seg2 - Department"
     label: "Department Name"
     type: string
     sql: ${TABLE}.SEGMENT2_class_name ;;
@@ -51,7 +53,7 @@ view: gl_account_dm {
   }
 
   dimension: segment2_subclass_name {
-    group_label: "Department"
+    group_label: "Seg2 - Department"
     label: "SubDepartment"
     type: string
     sql: ${TABLE}.SEGMENT2_subclass_name ;;
@@ -59,14 +61,14 @@ view: gl_account_dm {
   }
 
   dimension: Account {
-    group_label: "Account"
+    group_label: "Seg3 - Account"
     label: "Account"
     type: string
     sql: concat(concat(${segment3_cd}, ' - '),${segment3_name})  ;;
   }
 
   dimension: segment3_cd {
-    group_label: "Account"
+    group_label: "Seg3 - Account"
     label: "Account Number"
     type: number
     sql: ${TABLE}.SEGMENT3_CD ;;
@@ -74,22 +76,22 @@ view: gl_account_dm {
   }
 
   dimension: segment3_name {
-    group_label: "Account"
+    group_label: "Seg3 - Account"
     label: "Account Name"
     type: string
     sql: ${TABLE}.SEGMENT3_NAME ;;
   }
 
   dimension: segment3_type_name {
-    group_label: "Account"
-    label: "Account Type"
+    group_label: "Seg3 - Account"
+    label: "Account Group"
     type: string
     sql: ${TABLE}.SEGMENT3_type_name ;;
     drill_fields: [gl_account_ds*,property_dm.property_ds*]
   }
 
   dimension: segment3_class_name {
-    group_label: "Account"
+    group_label: "Seg3 - Account"
     label: "Account Class"
     type: string
     sql: ${TABLE}.SEGMENT3_class_name ;;
@@ -97,15 +99,15 @@ view: gl_account_dm {
   }
 
   dimension: segment3_subclass_name {
-    group_label: "Account"
-    label: "Account SubClass"
+    group_label: "Seg3 - Account"
+    label: "Account Sub Group"
     type: string
     sql: ${TABLE}.SEGMENT3_subclass_name ;;
     drill_fields: [gl_account_ds*,property_dm.property_ds*]
   }
 
   dimension: segment4_cd {
-    group_label: "Other Segments"
+    group_label: "Seg4 - Sub Account"
     label: "Segment4"
     type: number
     sql: ${TABLE}.SEGMENT4_CD ;;
@@ -113,14 +115,14 @@ view: gl_account_dm {
   }
 
   dimension: segment4_name {
-    group_label: "Other Segments"
+    group_label: "Seg4 - Sub Account"
     label: "Segment4 Name"
     type: string
     sql: ${TABLE}.SEGMENT4_NAME ;;
   }
 
   dimension: segment5_cd {
-    group_label: "Other Segments"
+    group_label: "Seg5 - Future"
     label: "Segment5"
     type: number
     sql: ${TABLE}.SEGMENT5_CD ;;
@@ -128,7 +130,7 @@ view: gl_account_dm {
   }
 
   dimension: segment5_name {
-    group_label: "Other Segments"
+    group_label: "Seg5 - Future"
     label: "Segment5 Name"
     type: string
     sql: ${TABLE}.SEGMENT5_NAME ;;
