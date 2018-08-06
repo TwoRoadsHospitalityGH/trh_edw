@@ -52,6 +52,7 @@ view: gl_balance_rpt {
 
   measure: act_gop_amt {
     label: "Actual GOP Amount$"
+    hidden:  yes
     group_label: "Actual"
     description: "Actual Gross Operating Profit $"
     type: number
@@ -62,6 +63,7 @@ view: gl_balance_rpt {
 
   measure: act_agop_amt {
     label: "Actual AGOP Amount$"
+    hidden:  yes
     group_label: "Actual"
     description: "Actual Adjusted Gross Operating Profit $"
     type: number
