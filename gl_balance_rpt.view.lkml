@@ -8,9 +8,9 @@ view: gl_balance_rpt {
     hidden: yes
   }
 
-  dimension: gl_account_shk {
+  dimension: gl_account_str_shk {
     type: string
-    sql: ${TABLE}.GL_ACCOUNT_SHK ;;
+    sql: ${TABLE}.GL_ACCOUNT_STR_SHK ;;
     hidden: yes
   }
 
@@ -27,6 +27,7 @@ view: gl_balance_rpt {
     type: sum
     sql: ${TABLE}.act_net_dr_amt ;;
     value_format_name: usd_0
+    hidden:  yes
   }
 
   measure: act_net_cr_amt {
@@ -36,6 +37,7 @@ view: gl_balance_rpt {
     type: sum
     sql: ${TABLE}.act_net_cr_amt ;;
     value_format_name: usd_0
+    hidden:  yes
   }
 
   measure: act_net_amt {
@@ -47,6 +49,50 @@ view: gl_balance_rpt {
     drill_fields: [act_net_dr_amt, act_net_cr_amt]
     value_format_name: usd_0
   }
+
+  measure: act_gop_amt {
+    label: "Actual GOP Amount$"
+    group_label: "Actual"
+    description: "Actual Gross Operating Profit $"
+    type: number
+    sql: -((${act_net_cr_amt} - ${act_net_dr_amt}) * MAX(${gl_account_dm.gop_bt})) ;;
+#     drill_fields: [act_net_dr_amt, act_net_cr_amt]
+    value_format_name: usd_0
+  }
+
+  measure: act_agop_amt {
+    label: "Actual AGOP Amount$"
+    group_label: "Actual"
+    description: "Actual Adjusted Gross Operating Profit $"
+    type: number
+    sql: -((${act_net_cr_amt} - ${act_net_dr_amt}) * MAX(${gl_account_dm.agop_bt})) ;;
+#     drill_fields: [act_net_dr_amt, act_net_cr_amt]
+    value_format_name: usd_0
+  }
+
+#   measure: occupied_rooms {
+#     hidden: no
+#     label: "Actual OCC"
+#     group_label: "Actual"
+#     description: "Actual OCC"
+#     type: number
+#     sql:case when left(${gl_account_dm.segment2_cd}, 1) = 4
+#                   and ${gl_account_dm.segment3_cd} between 9005 and 9075
+#                   or  ${gl_account_dm.segment3_cd} = 9906
+#              then -(${act_net_cr_amt} - ${act_net_dr_amt}) end ;;
+#     drill_fields: [act_net_dr_amt, act_net_cr_amt]
+#     value_format_name: usd_0
+#   }
+#
+#   measure: per_occupied_rooms {
+#     label: "Per Occupied Rooms"
+#     group_label: "Actual"
+#     description: "Actual Amount Per Occupied Room"
+#     type: number
+#     sql: -(${act_net_cr_amt} - ${act_net_dr_amt}) ;;
+#     drill_fields: [act_net_dr_amt, act_net_cr_amt]
+#     value_format_name: usd_0
+#   }
 
   measure: act_amt_prev {
     label: "Actual Amount"

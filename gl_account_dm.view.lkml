@@ -1,9 +1,9 @@
 view: gl_account_dm {
   sql_table_name: pedw.dev.GL_ACCOUNT_DM ;;
 
-  dimension: gl_account_shk {
+  dimension: gl_account_str_shk {
     type: string
-    sql: ${TABLE}.GL_ACCOUNT_SHK ;;
+    sql: ${TABLE}.GL_ACCOUNT_STR_SHK ;;
     hidden: yes
   }
 
@@ -11,6 +11,26 @@ view: gl_account_dm {
     label: "Account Type"
     type: string
     sql: ${TABLE}.account_type_cd ;;
+  }
+
+  dimension: account_string{
+    label: "Account String"
+    type: string
+    sql: concat(concat(concat(concat(concat(concat(concat(concat(${segment1_cd}, '-'), ${segment2_cd}), '-'),${segment3_cd}), '-'), ${segment4_cd}), '-'), ${segment5_cd}) ;;
+  }
+
+  dimension: gop_bt{
+    label: "GOP"
+    description: "Gross Operating Profit"
+    type: string
+    sql: ${TABLE}.gop_bt ;;
+  }
+
+  dimension: agop_bt{
+    label: "AGOP"
+    description: "Adjusted Gross Operating Profit"
+    type: string
+    sql: ${TABLE}.agop_bt ;;
   }
 
   dimension: segment1_cd {
@@ -32,7 +52,7 @@ view: gl_account_dm {
     group_label: "Seg2 - Department"
     label: "Department"
     type: string
-    sql: concat(concat(${segment2_cd}, ' - '), ${segment2_class_name}) ;;
+    sql: concat(concat(${segment2_cd}, ' - '), ${segment2_name}) ;;
     drill_fields: [gl_account_ds*,property_dm.property_ds*]
   }
 
@@ -44,9 +64,17 @@ view: gl_account_dm {
     value_format: "0"
   }
 
-  dimension: segment2_class_name {
+  dimension: segment2_name {
     group_label: "Seg2 - Department"
     label: "Department Name"
+    type: string
+    sql: ${TABLE}.SEGMENT2_name ;;
+    drill_fields: [gl_account_ds*,property_dm.property_ds*]
+  }
+
+  dimension: segment2_class_name {
+    group_label: "Seg2 - Department"
+    label: "Department Group"
     type: string
     sql: ${TABLE}.SEGMENT2_class_name ;;
     drill_fields: [gl_account_ds*,property_dm.property_ds*]
@@ -54,7 +82,7 @@ view: gl_account_dm {
 
   dimension: segment2_subclass_name {
     group_label: "Seg2 - Department"
-    label: "SubDepartment"
+    label: "Departmnet Rollup"
     type: string
     sql: ${TABLE}.SEGMENT2_subclass_name ;;
     drill_fields: [gl_account_ds*,property_dm.property_ds*]
@@ -86,7 +114,7 @@ view: gl_account_dm {
     group_label: "Seg3 - Account"
     label: "Account Group"
     type: string
-    sql: ${TABLE}.SEGMENT3_type_name ;;
+    sql: ${TABLE}.SEGMENT3_class_name ;;
     drill_fields: [gl_account_ds*,property_dm.property_ds*]
   }
 
@@ -94,7 +122,7 @@ view: gl_account_dm {
     group_label: "Seg3 - Account"
     label: "Account Class"
     type: string
-    sql: ${TABLE}.SEGMENT3_class_name ;;
+    sql: ${TABLE}.SEGMENT3_type_name ;;
     drill_fields: [gl_account_ds*,property_dm.property_ds*]
   }
 
