@@ -1,5 +1,5 @@
 view: date_dm {
-  sql_table_name: pedw.dev.DATE_DM ;;
+  sql_table_name: pedw.fact.DATE_DM ;;
 
   dimension: date_sid {
     sql:  ${TABLE}.DATE_SID ;;
@@ -42,7 +42,7 @@ view: date_dm {
     group_label: "QTD,YTD"
     type: yesno
     sql: ${TABLE}.cal_dt < current_date() and date_trunc( week, ${TABLE}.cal_dt ) = date_trunc( week, dateadd( day, -1, current_date() ) );;
-    hidden: yes
+    hidden: no
   }
 
   dimension: current_period_mtd {
@@ -50,7 +50,16 @@ view: date_dm {
     group_label: "QTD,YTD"
     type: yesno
     sql: ${TABLE}.cal_dt < current_date() and date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( day, -1, current_date() ) );;
-    hidden: yes
+    hidden: no
+  }
+
+  dimension: last_completed_mo {
+    label: "Last Complete Month"
+    group_label: "QTD,YTD"
+    type: yesno
+    sql: ${TABLE}.cal_dt < current_date() and date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( month, -1, current_date() ) )
+          and ${TABLE}.cal_ptd_bt = 1;;
+    hidden: no
   }
 
   #

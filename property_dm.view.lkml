@@ -1,5 +1,5 @@
 view: property_dm {
-  sql_table_name: pedw.dev.PROPERTY_DM ;;
+  sql_table_name: pedw.fact.PROPERTY_DM ;;
 
   dimension: property_key {
     type: number
