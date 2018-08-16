@@ -53,14 +53,14 @@ view: date_dm {
     hidden: no
   }
 
-  dimension: last_completed_mo {
-    label: "Last Complete Month"
-    group_label: "QTD,YTD"
-    type: yesno
-    sql: ${TABLE}.cal_dt < current_date() and date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( month, -1, current_date() ) )
-          and ${TABLE}.cal_ptd_bt = 1;;
-    hidden: no
-  }
+#   dimension: last_completed_mo {
+#     label: "Last Complete Month"
+#     group_label: "QTD,YTD"
+#     type: yesno
+#     sql: ${TABLE}.cal_dt < current_date() and date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( month, -1, current_date() ) )
+#           and ${TABLE}.cal_ptd_bt = 1;;
+#     hidden: no
+#   }
 
   #
   # restrict to up through prior month
@@ -80,6 +80,15 @@ view: date_dm {
     description: "Year of last complete month."
     type: yesno
     sql: ${TABLE}.cal_dt < date_trunc( month, current_date() ) and date_trunc( year, ${TABLE}.cal_dt ) = date_trunc( year, dateadd( month, -1, current_date() ) );;
+    hidden: no
+  }
+
+  filter: last_completed_mo {
+    label: "Last Complete Month"
+    group_label: "QTD,YTD"
+    type: yesno
+    sql: ${TABLE}.cal_dt < current_date() and date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( month, -1, current_date() ) )
+      and ${cal_ptd_bt} = 1;;
     hidden: no
   }
 

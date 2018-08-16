@@ -34,6 +34,13 @@ explore: mm_property_kpi_f {
     relationship: one_to_one
   }
 
+  join: period_type_dm {
+    view_label: "3 - Date"
+    sql_on: ${period_type_dm.period_type_shk} = ${mm_property_kpi_f.period_type_shk} ;;
+    type: inner
+    relationship: one_to_one
+  }
+
   join: property_dm {
     view_label: "4 - Property"
     sql_on: ${mm_property_kpi_f.property_key} = ${property_dm.property_key} ;;

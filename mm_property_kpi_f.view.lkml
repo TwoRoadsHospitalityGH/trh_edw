@@ -10,6 +10,12 @@ view: mm_property_kpi_f {
     hidden: yes
   }
 
+  dimension: period_type_shk {
+    type: string
+    sql: ${TABLE}.period_type_shk ;;
+    hidden: yes
+  }
+
   dimension: property_key{
     type: number
     sql: ${TABLE}.property_key ;;
@@ -39,7 +45,7 @@ view: mm_property_kpi_f {
   measure: numerator_val {
     group_label: "KPIs"
     label: "Numerator"
-    type: sum
+    type: number
     sql: ${TABLE}.numerator_val ;;
     hidden: yes
     }
@@ -47,7 +53,7 @@ view: mm_property_kpi_f {
   measure: denominator_val {
     group_label: "KPIs"
     label: "Denominator"
-    type: sum
+    type: number
     sql: ${TABLE}.denominator_val ;;
     hidden: yes
   }
@@ -60,17 +66,24 @@ view: mm_property_kpi_f {
     hidden: no
   }
 
+  measure: property_cnt_over_kpi {
+    type: number
+    sql: ${property_cnt} over (partition by ${performance_metric_dm.metric_name}) ;;
+    hidden: no
+  }
+
   measure: property_cnt_pttl {
     group_label: "Property"
-    description: "Percent of Proeprties"
-    label: "Percent of Proeprties"
-    type: percent_of_total
-    sql: ${property_cnt} ;;
+    description: "Percent of Properties"
+    label: "Percent of Properties"
+    type: number
+    sql: ${property_cnt} / ${property_cnt_over_kpi} ;;
     value_format: "0.0\%"
+    hidden: no
   }
 
   measure: kpi_val_p_1 {
-    type: sum
+    type: number
     sql:  ${TABLE}.kpi_val ;;
     value_format: "0.0\%"
     html: {% if value >= performance_metric_dm.goal_exceed_val_m._value %}
@@ -87,7 +100,7 @@ view: mm_property_kpi_f {
     hidden: yes
   }
   measure: kpi_val_p_2 {
-    type: sum
+    type: number
     sql:  ${TABLE}.kpi_val ;;
     value_format: "0.00\%"
     html: {% if value >= performance_metric_dm.goal_exceed_val_m._value %}
@@ -105,7 +118,7 @@ view: mm_property_kpi_f {
 }
 
   measure: kpi_val_d_1 {
-    type: sum
+    type: number
     sql:  ${TABLE}.kpi_val ;;
     value_format: "0.0"
     html: {% if value >= performance_metric_dm.goal_exceed_val_m._value %}
@@ -124,7 +137,7 @@ view: mm_property_kpi_f {
 
   measure: kpi_val {
     label: "KPI Amount"
-    type: average
+    type: sum
     sql: ${TABLE}.kpi_val ;;
 #     value_format: "0.0%"
 #     html:  {% if performance_metric_dm.value_format_str._value contains "percent_1" %}
@@ -134,6 +147,6 @@ view: mm_property_kpi_f {
 #            {% elsif performance_metric_dm.value_format_str._value contains "decimal_1" %}
 #             {{ kpi_val_d_1._rendered_value }}
 #            {% endif %};;
-    drill_fields: [property_metric_goal_dm.goal]
+#     drill_fields: [property_metric_goal_dm.goal]
 }
 }
