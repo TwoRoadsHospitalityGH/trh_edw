@@ -58,6 +58,30 @@ view: mm_property_kpi_f {
     hidden: yes
   }
 
+  measure: gs_property_cnt {
+    group_label: "Property"
+    type: count_distinct
+    sql: ${property_key} ;;
+    value_format: "0"
+    hidden: no
+  }
+
+  measure: gs_ttl_property_cnt {
+    group_label: "Property"
+    type: number
+    sql: sum( ${gs_property_cnt} ) over( partition by ${performance_metric_dm.metric_name} );;
+    value_format: "0"
+    hidden: no
+  }
+
+  measure: gs_property_pct {
+    group_label: "Property"
+    type: number
+    sql: ${gs_property_cnt} / ${gs_ttl_property_cnt} ;;
+    value_format_name: percent_1
+    hidden: no
+  }
+
   measure: property_cnt {
     group_label: "Property"
     type: count_distinct
