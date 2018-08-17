@@ -38,6 +38,14 @@ view: kpi_classification_dm {
     order_by_field: class_sort_no
   }
 
+  measure: class_cd {
+    group_label: "Goal Definitions"
+    label: "Classification Code"
+    type: max
+    sql: ${TABLE}.class_cd ;;
+    hidden: no
+  }
+
   dimension: class_sort_no {
     type: string
     sql: ${TABLE}.class_sort_no ;;
