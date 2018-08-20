@@ -42,21 +42,12 @@ view: mm_property_kpi_f {
 
 # KPI Measure Amounts
 
-  measure: numerator_val {
+  dimension: kpi_calc_dscr {
     group_label: "KPIs"
-    label: "Numerator"
-    type: number
-    sql: ${TABLE}.numerator_val ;;
-    hidden: yes
+    label: "Description"
+    sql: ${TABLE}.kpi_calc_dscr ;;
+    hidden: no
     }
-
-  measure: denominator_val {
-    group_label: "KPIs"
-    label: "Denominator"
-    type: number
-    sql: ${TABLE}.denominator_val ;;
-    hidden: yes
-  }
 
   measure: property_cnt {
     group_label: "Property"
@@ -81,17 +72,17 @@ view: mm_property_kpi_f {
     sql: ${property_cnt} / ${property_cnt_over_kpi} ;;
     value_format_name: percent_1
     hidden: no
-    html: {% if {{kpi_classification_dm.class_cd._value}} contains 'exceed' %}
-    <div style="background-color: #63BE7B; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% elsif {{kpi_classification_dm.class_cd._value}} contains 'above' %}
-    <div style="background-color: #C3DA81; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% elsif {{kpi_classification_dm.class_cd._value}} contains 'below' %}
-    <div style="background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% elsif {{kpi_classification_dm.class_cd._value}} contains 'atrisk' %}
-    <div style="background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% else %}
-    <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% endif %};;
+#     html: {% if {{kpi_classification_dm.class_cd._value}} contains 'exceed' %}
+#     <div style="background-color: #63BE7B; font-size:100%; text-align:center">{{ rendered_value }}</div>
+#     {% elsif {{kpi_classification_dm.class_cd._value}} contains 'above' %}
+#     <div style="background-color: #C3DA81; font-size:100%; text-align:center">{{ rendered_value }}</div>
+#     {% elsif {{kpi_classification_dm.class_cd._value}} contains 'below' %}
+#     <div style="background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>
+#     {% elsif {{kpi_classification_dm.class_cd._value}} contains 'atrisk' %}
+#     <div style="background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>
+#     {% else %}
+#     <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>
+#     {% endif %};;
   }
 
   measure: kpi_val_p_1 {
@@ -165,30 +156,15 @@ view: mm_property_kpi_f {
             end)
             ;;
     html: {% if {{kpi_classification_dm.class_cd._value}} contains 'exceed' %}
-    <div style="background-color: #63BE7B; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% elsif {{kpi_classification_dm.class_cd._value}} contains 'above' %}
-    <div style="background-color: #C3DA81; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% elsif {{kpi_classification_dm.class_cd._value}} contains 'below' %}
-    <div style="background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% elsif {{kpi_classification_dm.class_cd._value}} contains 'atrisk' %}
-    <div style="background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% else %}
-    <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% endif %};;
+            <div style="background-color: #63BE7B; font-size:100%; text-align:center">{{ rendered_value }}</div>
+          {% elsif {{kpi_classification_dm.class_cd._value}} contains 'above' %}
+            <div style="background-color: #C3DA81; font-size:100%; text-align:center">{{ rendered_value }}</div>
+          {% elsif {{kpi_classification_dm.class_cd._value}} contains 'below' %}
+            <div style="background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>
+          {% elsif {{kpi_classification_dm.class_cd._value}} contains 'atrisk' %}
+            <div style="background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>
+          {% else %}
+            <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>
+          {% endif %};;
   }
-
-#   measure: kpi_val {
-#     label: "KPI Amount"
-#     type: sum
-#     sql: ${TABLE}.kpi_val ;;
-#     value_format: "0.0%"
-#     html:  {% if performance_metric_dm.value_format_str._value contains "percent_1" %}
-#             {{ kpi_val_p_1._rendered_value }}
-#            {% elsif performance_metric_dm.value_format_str._value contains "percent_2" %}
-#             {{ kpi_val_p_2._rendered_value }}
-#            {% elsif performance_metric_dm.value_format_str._value contains "decimal_1" %}
-#             {{ kpi_val_d_1._rendered_value }}
-#            {% endif %};;
-#     drill_fields: [property_metric_goal_dm.goal]
-# }
 }

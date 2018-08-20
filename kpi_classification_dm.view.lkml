@@ -29,6 +29,14 @@ view: kpi_classification_dm {
     order_by_field: class_sort_no
   }
 
+    measure: class_cd {
+    group_label: "Goal Definitions"
+    label: "Classification Code"
+    type: max
+    sql: ${TABLE}.class_cd ;;
+    hidden: no
+  }
+
   dimension: class_name {
     group_label: "Goal Definitions"
     label: "Classification Name"
@@ -36,14 +44,17 @@ view: kpi_classification_dm {
     sql: ${TABLE}.class_name ;;
     hidden: no
     order_by_field: class_sort_no
-  }
-
-  measure: class_cd {
-    group_label: "Goal Definitions"
-    label: "Classification Code"
-    type: max
-    sql: ${TABLE}.class_cd ;;
-    hidden: no
+    html: {% if value == 'Killing It!' %}
+            <div style="background-color: #63BE7B; font-size:100%; text-align:center">{{ rendered_value }}</div>
+          {% elsif value == 'Above' %}
+            <div style="background-color: #C3DA81; font-size:100%; text-align:center">{{ rendered_value }}</div>
+          {% elsif value == 'Below' %}
+            <div style="background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>
+          {% elsif value == 'At Risk' %}
+            <div style="background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>
+          {% elsif value == 'Not Applicable' %}
+            <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>
+          {% endif %};;
   }
 
   dimension: class_sort_no {
