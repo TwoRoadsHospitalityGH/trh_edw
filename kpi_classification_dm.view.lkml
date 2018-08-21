@@ -19,7 +19,7 @@ view: kpi_classification_dm {
   dimension: group_name {
     type: string
     sql: ${TABLE}.group_name ;;
-    hidden: yes
+    hidden: no
   }
 
   dimension: group_sort_no {
@@ -30,7 +30,6 @@ view: kpi_classification_dm {
   }
 
     measure: class_cd {
-    group_label: "Goal Definitions"
     label: "Classification Code"
     type: max
     sql: ${TABLE}.class_cd ;;
@@ -38,7 +37,6 @@ view: kpi_classification_dm {
   }
 
   dimension: class_name {
-    group_label: "Goal Definitions"
     label: "Classification Name"
     type: string
     sql: ${TABLE}.class_name ;;
@@ -58,7 +56,6 @@ view: kpi_classification_dm {
   }
 
   dimension: class_name1 {
-    group_label: "Goal Definitions"
     label: "Classification Name1"
     type: string
     sql: ${TABLE}.class_name ;;
@@ -84,8 +81,9 @@ view: kpi_classification_dm {
   }
 
   dimension: point_no {
+    label: " Points Possible"
     type: number
     sql: ${TABLE}.point_no ;;
-    hidden: yes
+    hidden: no
   }
 }

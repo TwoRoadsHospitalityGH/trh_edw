@@ -33,24 +33,23 @@ view: property_metric_goal_dm {
   }
 
   dimension: goal  {
-    group_label: "Goals"
     type: number
     sql: ${TABLE}.goal ;;
+    value_format: "0%"
     hidden: no
   }
 
   dimension: above_goal  {
-    group_label: "Goals"
     type: number
     sql: ${TABLE}.above_goal ;;
+    value_format: "0%"
     hidden: no
   }
 
   dimension: below_goal  {
-    group_label: "Goals"
     type: number
     sql: ${TABLE}.below_goal ;;
+    value_format: "0%"
     hidden: no
   }
-
 }

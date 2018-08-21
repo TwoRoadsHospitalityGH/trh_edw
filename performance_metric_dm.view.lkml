@@ -67,7 +67,6 @@ view: performance_metric_dm {
   }
 
   dimension: goal_exceed_rule_dscr{
-    group_label: "Goals"
     label: "Exceed"
     description: "Exceeding Above Goal"
     type: string
@@ -78,7 +77,6 @@ view: performance_metric_dm {
   }
 
   dimension: goal_above_rule_dscr{
-    group_label: "Goals"
     label: "Above"
     description: "Perfoming above Goal"
     type: string
@@ -88,7 +86,6 @@ view: performance_metric_dm {
   }
 
   dimension: goal_below_rule_dscr{
-    group_label: "Goals"
     label: "Below"
     description: "Performing Below Goal"
     type: string
@@ -98,7 +95,6 @@ view: performance_metric_dm {
   }
 
   dimension: goal_atrisk_rule_dscr{
-    group_label: "Goals"
     label: "At Risk"
     description: "At Risk"
     type: string
@@ -108,8 +104,7 @@ view: performance_metric_dm {
   }
 
 # Scorecard and weighting
-  dimension: fsc_bt{
-    group_label: "Report Metics"
+  filter: fsc_bt{
     label: "Finance Scorecard"
     type: yesno
     sql: ${TABLE}.fsc_bt = 1  ;;
@@ -117,8 +112,7 @@ view: performance_metric_dm {
 }
 
   dimension: fsc_weight_no{
-    group_label: "Scorecard Goal Weight"
-    label: "Finance Scorecard"
+    label: "Finance Scorecard Weight"
     type: number
     sql: ${TABLE}.fsc_weight_no  ;;
     hidden: no
@@ -126,8 +120,7 @@ view: performance_metric_dm {
     html: <div style="color: black; font-size:100%; text-align:center">{{ rendered_value }}</div>;;
   }
 
-  dimension: bsc_bt{
-    group_label: "Report Metics"
+  filter: bsc_bt{
     label: "Balanced Scorecard"
     type: yesno
     sql: ${TABLE}.bsc_bt = 1  ;;
@@ -135,15 +128,13 @@ view: performance_metric_dm {
   }
 
   dimension: bsc_weight_no{
-    group_label: "Scorecard Goal Weight"
-    label: "Balanced Scorecard"
+    label: "Balanced Scorecard Weight"
     type: number
     sql: ${TABLE}.bsc_weight_no  ;;
     hidden: no
   }
 
   dimension: max_possible_str{
-    group_label: "Points"
     label: "Maximum Points Available"
     type: string
     sql: ${TABLE}.max_possible_str  ;;
@@ -158,20 +149,20 @@ view: performance_metric_dm {
     }
 
     dimension: common_dscr {
-      group_label: "Goal Definitions"
       label: "Common Description"
       type: string
       sql: ${TABLE}.common_dscr ;;
+      hidden: no
     }
 
 
     dimension: metric_name {
-      group_label: "Measures"
-      label: "KPI Name"
+      label: "Metric Name"
       description: "Key Performance Indicator"
       type: string
       sql: ${TABLE}.metric_name ;;
       order_by_field: fsc_sort_no
+      hidden:  no
     }
 
  }

@@ -6,13 +6,6 @@ view: date_dm {
     hidden: yes
   }
 
-  dimension: fiscal_period_label {
-    label: "Name"
-    type: string
-    sql: to_char( ${TABLE}.cal_dt, 'mm Mon-yy' ) ;;
-    drill_fields: [property_dm.property_ds*]
-  }
-
   dimension_group: Calendar {
     type: time
     timeframes: [
@@ -30,35 +23,29 @@ view: date_dm {
     drill_fields: [property_dm.property_ds*]
   }
 
-  dimension: cal_ptd_bt {
-    label: "Period-to-Date"
-    description: "Restrict to Completed Periods Only"
-    type: yesno
-    sql: ${TABLE}.cal_ptd_bt = 1 ;;
-  }
+  #
+  # restrict to up through prior month
+  #
 
-  dimension: current_period_wtd {
+  filter: current_period_wtd {
+    group_label: "Calendar Filters"
     label: "Current Week"
-    group_label: "QTD,YTD"
     type: yesno
     sql: ${TABLE}.cal_dt < current_date() and date_trunc( week, ${TABLE}.cal_dt ) = date_trunc( week, dateadd( day, -1, current_date() ) );;
     hidden: no
   }
 
-  dimension: current_period_mtd {
+  filter: current_period_mtd {
+    group_label: "Calendar Filters"
     label: "Current Month"
-    group_label: "QTD,YTD"
     type: yesno
     sql: ${TABLE}.cal_dt < current_date() and date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( day, -1, current_date() ) );;
     hidden: no
   }
 
-  #
-  # restrict to up through prior month
-  #
   filter: current_period_qtd {
+    group_label: "Calendar Filters"
     label: "Quarter-to-Date"
-    group_label: "QTD,YTD"
     description: "Quarter of last complete month."
     type: yesno
     sql: ${TABLE}.cal_dt < date_trunc( month, current_date() ) and date_trunc( quarter, ${TABLE}.cal_dt ) = date_trunc( quarter, dateadd( month, -1, current_date() ) );;
@@ -66,8 +53,8 @@ view: date_dm {
   }
 
   filter: current_period_ytd {
+    group_label: "Calendar Filters"
     label: "Year-to-Date"
-    group_label: "QTD,YTD"
     description: "Year of last complete month."
     type: yesno
     sql: ${TABLE}.cal_dt < date_trunc( month, current_date() ) and date_trunc( year, ${TABLE}.cal_dt ) = date_trunc( year, dateadd( month, -1, current_date() ) );;
@@ -75,13 +62,13 @@ view: date_dm {
   }
 
   filter: last_completed_mo {
-    group_label: "QTD,YTD"
+    group_label: "Calendar Filters"
     label: "Last Complete Month"
     description: "Last complete month."
     type: yesno
     sql: ${TABLE}.cal_dt < current_date()
          and date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( month, -1, current_date() ) )
-         and ${cal_ptd_bt} = 1;;
+         and ${TABLE}.cal_ptd_bt = 1;;
     hidden: no
   }
 

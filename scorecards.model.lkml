@@ -15,14 +15,14 @@ explore: mm_property_kpi_f {
 #   }
 
   join: performance_metric_dm {
-    view_label: "4 - KPI Metric"
+    view_label: "Metric"
     sql_on: ${performance_metric_dm.performance_metric_shk} = ${mm_property_kpi_f.performance_metric_shk} ;;
     type: inner
     relationship: one_to_one
   }
 
   join: kpi_classification_dm {
-    view_label: "4 - KPI Metric"
+    view_label: "Scored As"
     sql_on: ${kpi_classification_dm.kpi_class_shk} = ${mm_property_kpi_f.kpi_class_shk} ;;
     type: inner
     relationship: one_to_one
@@ -36,7 +36,7 @@ explore: mm_property_kpi_f {
   }
 
   join: period_type_dm {
-    view_label: "3 - Date"
+    view_label: "Aggregation Period"
     sql_on: ${period_type_dm.period_type_shk} = ${mm_property_kpi_f.period_type_shk} ;;
     type: inner
     relationship: one_to_one
@@ -50,7 +50,7 @@ explore: mm_property_kpi_f {
   }
 
   join: property_metric_goal_dm {
-    view_label: "4 - KPI Metric"
+    view_label: "Goal"
     sql_on: ${property_metric_goal_dm.property_metric_goal_shk} = ${mm_property_kpi_f.property_metric_goal_shk} ;;
     type: inner
     relationship: one_to_one

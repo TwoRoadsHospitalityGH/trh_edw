@@ -43,13 +43,14 @@ view: mm_property_kpi_f {
 # KPI Measure Amounts
 
   dimension: kpi_calc_dscr {
-    group_label: "KPIs"
     label: "Description"
     sql: ${TABLE}.kpi_calc_dscr ;;
     hidden: yes
     }
 
   measure: property_cnt {
+    label: "Properties"
+    description: "Distinct Count of Properties"
     type: count_distinct
     sql: ${property_key} ;;
     value_format: "0"
@@ -64,9 +65,8 @@ view: mm_property_kpi_f {
   }
 
   measure: property_cnt_pct {
-    group_label: "1b - % Total"
-    description: "Percent of Properties"
     label: "Percent of Properties"
+    description: "Percent of Properties"
     type: number
     sql: ${property_cnt} / ${property_cnt_over_kpi} ;;
     value_format_name: percent_1
@@ -74,7 +74,7 @@ view: mm_property_kpi_f {
   }
 
   measure: kpi_val {
-    label: "KPI Amount"
+    label: "Metric Value"
     type: string
     sql: max(case performance_metric_dm.value_format_str
             when 'percent_1'
