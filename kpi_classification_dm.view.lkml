@@ -34,7 +34,7 @@ view: kpi_classification_dm {
     label: "Classification Code"
     type: max
     sql: ${TABLE}.class_cd ;;
-    hidden: no
+    hidden: yes
   }
 
   dimension: class_name {
@@ -55,6 +55,26 @@ view: kpi_classification_dm {
           {% elsif value == 'Not Applicable' %}
             <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>
           {% endif %};;
+  }
+
+  dimension: class_name1 {
+    group_label: "Goal Definitions"
+    label: "Classification Name1"
+    type: string
+    sql: ${TABLE}.class_name ;;
+    hidden: no
+    order_by_field: class_sort_no
+     html: {% if {{kpi_classification_dm.class_cd._value}} contains 'exceed' %}
+    <div style="background-color: #63BE7B; font-size:100%; text-align:center">{{ rendered_value }}</div>
+    {% elsif {{kpi_classification_dm.class_cd._value}} contains 'above' %}
+    <div style="background-color: #C3DA81; font-size:100%; text-align:center">{{ rendered_value }}</div>
+    {% elsif {{kpi_classification_dm.class_cd._value}} contains 'below' %}
+    <div style="background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>
+    {% elsif {{kpi_classification_dm.class_cd._value}} contains 'atrisk' %}
+    <div style="background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>
+    {% else %}
+    <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>
+    {% endif %};;
   }
 
   dimension: class_sort_no {
