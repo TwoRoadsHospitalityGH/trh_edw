@@ -13,7 +13,7 @@ view: date_dm {
     drill_fields: [property_dm.property_ds*]
   }
 
-  dimension_group: cal {
+  dimension_group: Calendar {
     type: time
     timeframes: [
       raw
@@ -53,15 +53,6 @@ view: date_dm {
     hidden: no
   }
 
-#   dimension: last_completed_mo {
-#     label: "Last Complete Month"
-#     group_label: "QTD,YTD"
-#     type: yesno
-#     sql: ${TABLE}.cal_dt < current_date() and date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( month, -1, current_date() ) )
-#           and ${TABLE}.cal_ptd_bt = 1;;
-#     hidden: no
-#   }
-
   #
   # restrict to up through prior month
   #
@@ -84,11 +75,13 @@ view: date_dm {
   }
 
   filter: last_completed_mo {
-    label: "Last Complete Month"
     group_label: "QTD,YTD"
+    label: "Last Complete Month"
+    description: "Last complete month."
     type: yesno
-    sql: ${TABLE}.cal_dt < current_date() and date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( month, -1, current_date() ) )
-      and ${cal_ptd_bt} = 1;;
+    sql: ${TABLE}.cal_dt < current_date()
+         and date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( month, -1, current_date() ) )
+         and ${cal_ptd_bt} = 1;;
     hidden: no
   }
 

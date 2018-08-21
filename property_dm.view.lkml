@@ -8,6 +8,7 @@ view: property_dm {
   }
 
   dimension: proper_name {
+    label: "Property Name"
     type: string
     sql: ${TABLE}.PROPER_NAME ;;
     drill_fields: [property_ds*]
