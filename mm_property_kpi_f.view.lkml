@@ -71,6 +71,7 @@ view: mm_property_kpi_f {
     sql: ${property_cnt} / ${property_cnt_over_kpi} ;;
     value_format_name: percent_1
     hidden: no
+    html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
   }
 
   measure: kpi_val {
@@ -80,7 +81,7 @@ view: mm_property_kpi_f {
             when 'percent_1'
             then to_char( round( ${TABLE}.kpi_val * 100, 2 ), 'fm999,999,990.0"%"'  )
             when 'decimal_1'
-            then to_char( round( ${TABLE}.kpi_val , 2 ), 'fm999,999,990.0'  )
+            then to_char( round( ${TABLE}.kpi_val * 100, 2 ), 'fm999,999,990.0'  )
             when 'decimal_2'
             then to_char( round( ${TABLE}.kpi_val , 2 ), 'fm999,999,990.00'  )
             when 'usd'
@@ -91,17 +92,17 @@ view: mm_property_kpi_f {
             end)
             ;;
     html: {% if {{kpi_classification_dm.class_cd._value}} contains 'exceed' %}
-            <div style="background-color: #63BE7B; font-size:100%; text-align:center">{{ rendered_value }}</div>
+            <div style="background-color: #63BE7B; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% elsif {{kpi_classification_dm.class_cd._value}} contains 'above' %}
-            <div style="background-color: #C3DA81; font-size:100%; text-align:center">{{ rendered_value }}</div>
+            <div style="background-color: #C3DA81; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% elsif {{kpi_classification_dm.class_cd._value}} contains 'below' %}
-            <div style="background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>
+            <div style="background-color: #FDD27F; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% elsif {{kpi_classification_dm.class_cd._value}} contains 'atrisk' %}
-            <div style="background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>
+            <div style="background-color: #F87B6E; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% elsif {{kpi_classification_dm.class_cd._value}} contains 'not appli' %}
-            <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>
+            <div style="background-color: #A6A6A6; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% else %}
-            <div style="background-color: #AARRGGBB; font-size:100%; text-align:center">{{ rendered_value }}</div>
+            <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% endif %};;
   }
 }

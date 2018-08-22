@@ -43,15 +43,15 @@ view: kpi_classification_dm {
     hidden: no
     order_by_field: class_sort_no
     html: {% if value == 'Killing It!' %}
-            <div style="background-color: #63BE7B; font-size:100%; text-align:center">{{ rendered_value }}</div>
+            <div style="background-color: #63BE7B; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% elsif value == 'Above' %}
-            <div style="background-color: #C3DA81; font-size:100%; text-align:center">{{ rendered_value }}</div>
+            <div style="background-color: #C3DA81; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% elsif value == 'Below' %}
-            <div style="background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>
+            <div style="background-color: #FDD27F; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% elsif value == 'At Risk' %}
-            <div style="background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>
+            <div style="background-color: #F87B6E; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% elsif value == 'Not Applicable' %}
-            <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>
+            <div style="background-color: #A6A6A6; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% endif %};;
   }
 
