@@ -14,4 +14,9 @@ view: period_type_dm {
     hidden: no
     }
 
+  filter: aggregation_type_filter{
+    type: string
+    default_value: "Month"
+  }
+
   }

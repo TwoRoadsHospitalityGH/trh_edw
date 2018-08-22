@@ -155,6 +155,12 @@ view: performance_metric_dm {
       hidden: no
     }
 
+    dimension: calc_dscr {
+    label: "Calculation Description"
+    type: string
+    sql: ${TABLE}.calc_dscr ;;
+    hidden: yes
+    }
 
     dimension: metric_name {
       label: "Metric Name"

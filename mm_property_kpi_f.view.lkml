@@ -45,7 +45,7 @@ view: mm_property_kpi_f {
   dimension: kpi_calc_dscr {
     label: "Description"
     sql: ${TABLE}.kpi_calc_dscr ;;
-    hidden: yes
+    hidden: no
     }
 
   measure: property_cnt {
