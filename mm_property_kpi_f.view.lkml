@@ -98,8 +98,10 @@ view: mm_property_kpi_f {
             <div style="background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>
           {% elsif {{kpi_classification_dm.class_cd._value}} contains 'atrisk' %}
             <div style="background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>
-          {% else %}
+          {% elsif {{kpi_classification_dm.class_cd._value}} contains 'not appli' %}
             <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>
+          {% else %}
+            <div style="background-color: #AARRGGBB; font-size:100%; text-align:center">{{ rendered_value }}</div>
           {% endif %};;
   }
 }
