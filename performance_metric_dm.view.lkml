@@ -149,7 +149,7 @@ view: performance_metric_dm {
     }
 
     dimension: common_dscr {
-      label: "Common Description"
+      label: "Calculation"
       type: string
       sql: ${TABLE}.common_dscr ;;
       hidden: no

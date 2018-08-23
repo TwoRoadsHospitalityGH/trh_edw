@@ -27,11 +27,6 @@ view: property_dm {
 
   }
 
-  dimension: short_name {
-    type: string
-    sql: ${TABLE}.SHORT_NAME ;;
-  }
-
   dimension: marketing_name {
     type: string
     sql: ${TABLE}.MARKETING_NAME ;;

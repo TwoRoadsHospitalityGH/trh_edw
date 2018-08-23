@@ -36,6 +36,12 @@ view: kpi_classification_dm {
     hidden: yes
   }
 
+  dimension: class_cd_dm {
+    type: string
+    sql: ${TABLE}.class_cd ;;
+    hidden: yes
+  }
+
   dimension: class_name {
     label: "Classification Name"
     type: string
@@ -48,7 +54,7 @@ view: kpi_classification_dm {
             <div style="background-color: #C3DA81; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% elsif value == 'Below' %}
             <div style="background-color: #FDD27F; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
-          {% elsif value == 'At Risk' %}
+          {% elsif value == 'At-Risk' %}
             <div style="background-color: #F87B6E; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% elsif value == 'Not Applicable' %}
             <div style="background-color: #A6A6A6; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
@@ -61,13 +67,13 @@ view: kpi_classification_dm {
     sql: ${TABLE}.class_name ;;
     hidden: no
     order_by_field: class_sort_no
-     html: {% if {{kpi_classification_dm.class_cd._value}} contains 'exceed' %}
+     html: {% if {{class_cd_dm._value}} contains 'exceed' %}
     <div style="background-color: #63BE7B; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% elsif {{kpi_classification_dm.class_cd._value}} contains 'above' %}
+    {% elsif {{class_cd_dm._value}} contains 'above' %}
     <div style="background-color: #C3DA81; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% elsif {{kpi_classification_dm.class_cd._value}} contains 'below' %}
+    {% elsif {{class_cd_dm._value}} contains 'below' %}
     <div style="background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% elsif {{kpi_classification_dm.class_cd._value}} contains 'atrisk' %}
+    {% elsif {{class_cd_dm._value}} contains 'atrisk' %}
     <div style="background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>
     {% else %}
     <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>

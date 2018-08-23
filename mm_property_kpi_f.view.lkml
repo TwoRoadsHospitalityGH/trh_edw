@@ -42,9 +42,10 @@ view: mm_property_kpi_f {
 
 # KPI Measure Amounts
 
-  dimension: kpi_calc_dscr {
-    label: "Description"
-    sql: ${TABLE}.kpi_calc_dscr ;;
+  measure: kpi_calc_dscr {
+    label: "Calculation Description"
+    type: string
+    sql: max(${TABLE}.kpi_calc_dscr) ;;
     hidden: no
     }
 
@@ -76,21 +77,21 @@ view: mm_property_kpi_f {
 
   measure: kpi_val {
     label: "Metric Value"
-    type: string
-    sql: max(case performance_metric_dm.value_format_str
-            when 'percent_1'
-            then to_char( round( ${TABLE}.kpi_val * 100, 2 ), 'fm999,999,990.0"%"'  )
-            when 'decimal_1'
-            then to_char( round( ${TABLE}.kpi_val * 100, 2 ), 'fm999,999,990.0'  )
-            when 'decimal_2'
-            then to_char( round( ${TABLE}.kpi_val , 2 ), 'fm999,999,990.00'  )
-            when 'usd'
-            then to_char( round( ${TABLE}.kpi_val , 2 ), 'fmmi"$"999,999,990.00'  )
-            when 'usd_0'
-            then to_char( round( ${TABLE}.kpi_val , 0 ), 'fmmi"$"999,999,990'  )
-            else to_char( ${TABLE}.kpi_val, 'tm9' )
-            end)
-            ;;
+    type: max
+    sql: ${TABLE}.kpi_val ;;
+#     (case performance_metric_dm.value_format_str
+#             when 'percent_1'
+#             then to_char( round( ${TABLE}.kpi_val * 100, 2 ), 'fm999,999,990.0"%"'  )
+#             when 'decimal_1'
+#             then to_char( round( ${TABLE}.kpi_val * 100, 2 ), 'fm999,999,990.0'  )
+#             when 'decimal_2'
+#             then to_char( round( ${TABLE}.kpi_val , 2 ), 'fm999,999,990.00'  )
+#             when 'usd'
+#             then to_char( round( ${TABLE}.kpi_val , 2 ), 'fmmi"$"999,999,990.00'  )
+#             when 'usd_0'
+#             then to_char( round( ${TABLE}.kpi_val , 0 ), 'fmmi"$"999,999,990'  )
+#             else to_char( ${TABLE}.kpi_val, 'tm9' )
+#             end)
     html: {% if {{kpi_classification_dm.class_cd._value}} contains 'exceed' %}
             <div style="background-color: #63BE7B; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
           {% elsif {{kpi_classification_dm.class_cd._value}} contains 'above' %}

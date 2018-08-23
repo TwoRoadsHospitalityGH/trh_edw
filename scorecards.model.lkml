@@ -7,6 +7,12 @@ explore: mm_property_kpi_f {
   label: "Finance Scorecard"
   persist_for: "0 minutes"
   view_label: "1 - Measures"
+  always_filter: {
+    filters: {
+      field: period_type_dm.period_type_name
+      value: "Month"
+      }
+  }
 
 
 #   access_filter: {

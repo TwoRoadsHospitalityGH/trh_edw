@@ -13,10 +13,4 @@ view: period_type_dm {
     sql: ${TABLE}.period_type_name ;;
     hidden: no
     }
-
-  filter: aggregation_type_filter{
-    type: string
-    default_value: "Month"
-  }
-
   }
