@@ -16,7 +16,7 @@ view: performance_metric_dm {
     hidden: yes
   }
 
-  measure:  gs_value_format_str {
+  measure:  value_format_str_m {
     type: max
     sql: ${TABLE}.value_format_str ;;
     hidden:  yes
