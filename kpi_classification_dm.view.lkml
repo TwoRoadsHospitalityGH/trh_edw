@@ -36,6 +36,12 @@ view: kpi_classification_dm {
     hidden: yes
   }
 
+  dimension: gs_class_cd {
+    type: string
+    sql: ${TABLE}.class_cd ;;
+    hidden: yes
+  }
+
   dimension: class_cd_dm {
     type: string
     sql: ${TABLE}.class_cd ;;

@@ -75,6 +75,82 @@ view: mm_property_kpi_f {
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
   }
 
+  measure: gs_kpi_val_d1 {
+    type: max
+    value_format_name: decimal_3
+    sql:  ${TABLE}.kpi_val ;;
+    hidden: yes
+  }
+
+  measure: gs_kpi_val_d2 {
+    type: max
+    value_format_name: decimal_4
+    sql: ${TABLE}.kpi_val ;;
+    hidden: yes
+  }
+
+  measure: gs_measure_val {
+    type: max
+    value_format_name: percent_1
+    sql:  ${TABLE}.kpi_val ;;
+    html: <!-- exceed  -->
+          {% if {{kpi_classification_dm.class_cd._value}} == 'exceed' %}
+            {% if {{performance_metric_dm.gs_value_format_str._value}} == 'percent_1' %}
+              <div style="background-color: #63BE7B; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
+            {% elsif {{performance_metric_dm.gs_value_format_str._value}} == 'decimal_2' %}
+              <div style="background-color: #63BE7B; font-size:100%; color:black; text-align:center">{{ gs_kpi_val_d1._rendered_value }}</div>
+            {% else %}
+              <div style="background-color: #63BE7B; font-size:100%; color:black; text-align:center">{{ gs_kpi_val_d2._rendered_value }}</div>
+            {% endif %}
+          <!-- above  -->
+          {% elsif {{kpi_classification_dm.class_cd._value}} == 'above' %}
+            {% if {{performance_metric_dm.gs_value_format_str._value}} == 'percent_1' %}
+              <div style="background-color: #C3DA81; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
+            {% elsif {{performance_metric_dm.gs_value_format_str._value}} == 'decimal_1' %}
+              <div style="background-color: #C3DA81; font-size:100%; color:black; text-align:center">{{ gs_kpi_val_d1._rendered_value }}</div>
+            {% else %}
+              <div style="background-color: #C3DA81; font-size:100%; color:black; text-align:center">{{ gs_kpi_val_d2._rendered_value }}</div>
+            {% endif %}
+          <!-- below -->
+          {% elsif {{kpi_classification_dm.class_cd._value}} == 'below' %}
+            {% if {{performance_metric_dm.gs_value_format_str._value}} == 'percent_1' %}
+              <div style="background-color: #FDD27F; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
+            {% elsif {{performance_metric_dm.gs_value_format_str._value}} == 'decimal_1' %}
+              <div style="background-color: #FDD27F; font-size:100%; color:black; text-align:center">{{ gs_kpi_val_d1._rendered_value }}</div>
+            {% else %}
+              <div style="background-color: #FDD27F; font-size:100%; color:black; text-align:center">{{ gs_kpi_val_d2._rendered_value }}</div>
+            {% endif %}
+          <!-- atrisk -->
+          {% elsif {{kpi_classification_dm.class_cd._value}} == 'atrisk' %}
+            {% if {{performance_metric_dm.gs_value_format_str._value}} == 'percent_1' %}
+              <div style="background-color: #F87B6E; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
+            {% elsif {{performance_metric_dm.gs_value_format_str._value}} == 'decimal_1' %}
+              <div style="background-color: #F87B6E; font-size:100%; color:black; text-align:center">{{ gs_kpi_val_d1._rendered_value }}</div>
+            {% else %}
+              <div style="background-color: #F87B6E; font-size:100%; color:black; text-align:center">{{ gs_kpi_val_d2._rendered_value }}</div>
+            {% endif %}
+          <!-- na -->
+          {% elsif {{kpi_classification_dm.class_cd._value}} == 'not applicable' %}
+            {% if {{performance_metric_dm.gs_value_format_str._value}} == 'percent_1' %}
+              <div style="background-color: #A6A6A6; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
+            {% elsif {{performance_metric_dm.gs_value_format_str._value}} == 'decimal_1' %}
+              <div style="background-color: #A6A6A6; font-size:100%; color:black; text-align:center">{{ gs_kpi_val_d1._rendered_value }}</div>
+            {% else %}
+              <div style="background-color: #A6A6A6; font-size:100%; color:black; text-align:center">{{ gs_kpi_val_d2._rendered_value }}</div>
+            {% endif %}
+          <!-- none -->
+          {% else %}
+            {% if {{performance_metric_dm.gs_value_format_str._value}} == 'percent_1' %}
+              {{ rendered_value }}
+            {% elsif {{performance_metric_dm.gs_value_format_str._value}} == 'decimal_1' %}
+              {{ gs_kpi_val_d1._rendered_value }}
+            {% else %}
+              {{ gs_kpi_val_d2._rendered_value }}
+            {% endif %}
+          {% endif %};;
+    required_fields:[gs_kpi_val_d1, gs_kpi_val_d2]
+}
+
   measure: kpi_val {
     label: "Metric Value"
     type: max
