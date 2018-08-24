@@ -75,24 +75,30 @@ view: mm_property_kpi_f {
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
   }
 
-  measure: gs_kpi_val_d1 {
+  measure: gs_kpi_val {
     type: max
-    value_format_name: decimal_3
-    sql:  ${TABLE}.kpi_val ;;
+    sql:  iff( performance_metric_dm.value_format_str ='decimal_1', ${TABLE}.kpi_val * 100, ${TABLE}.kpi_val )  ;;
+    hidden: yes
+  }
+
+  measure: gs_kpi_val_d1 {
+    type: number
+    value_format_name: decimal_1
+    sql:  ${gs_kpi_val} ;;
     hidden: yes
   }
 
   measure: gs_kpi_val_d2 {
-    type: max
-    value_format_name: decimal_4
-    sql: ${TABLE}.kpi_val ;;
+    type: number
+    value_format_name: decimal_2
+    sql: ${gs_kpi_val} ;;
     hidden: yes
   }
 
   measure: gs_measure_val {
-    type: max
+    type: number
     value_format_name: percent_1
-    sql:  ${TABLE}.kpi_val ;;
+    sql:  ${gs_kpi_val} ;;
     html: <!-- exceed  -->
           {% if {{kpi_classification_dm.class_cd._value}} == 'exceed' %}
             {% if {{performance_metric_dm.gs_value_format_str._value}} == 'percent_1' %}
