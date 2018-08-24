@@ -43,7 +43,7 @@ view: mm_property_kpi_f {
 # KPI Measure Amounts
 
   measure: kpi_calc_dscr {
-    label: "Calculation Description"
+    label: "Calculation"
     type: string
     sql: max(${TABLE}.kpi_calc_dscr) ;;
     hidden: no

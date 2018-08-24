@@ -118,7 +118,7 @@ view: performance_metric_dm {
 }
 
   dimension: fsc_weight_no{
-    label: "Finance Scorecard Weight"
+    label: "Metric Weight"
     type: number
     sql: ${TABLE}.fsc_weight_no  ;;
     hidden: no
@@ -134,7 +134,7 @@ view: performance_metric_dm {
   }
 
   dimension: bsc_weight_no{
-    label: "Balanced Scorecard Weight"
+    label: "Metric Weight"
     type: number
     sql: ${TABLE}.bsc_weight_no  ;;
     hidden: no
@@ -155,7 +155,7 @@ view: performance_metric_dm {
     }
 
     dimension: common_dscr {
-      label: "Calculation"
+      label: "Description"
       type: string
       sql: ${TABLE}.common_dscr ;;
       hidden: no
