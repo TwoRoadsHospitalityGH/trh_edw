@@ -10,7 +10,7 @@ explore: mm_property_kpi_f {
   always_filter: {
     filters: {
       field: period_type_dm.period_type_name
-      value: "Month"
+      value: "Year"
       }
   }
 
