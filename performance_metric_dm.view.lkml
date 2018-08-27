@@ -74,7 +74,7 @@ view: performance_metric_dm {
 
   dimension: goal_exceed_rule_dscr{
     label: "Exceed"
-    description: "Exceeding Above Goal"
+    description: "Exceeding above goal."
     type: string
     sql: ${TABLE}.goal_exceed_rule_dscr ;;
     hidden: yes
@@ -84,7 +84,7 @@ view: performance_metric_dm {
 
   dimension: goal_above_rule_dscr{
     label: "Above"
-    description: "Perfoming above Goal"
+    description: "Perfoming above goal."
     type: string
     sql: ${TABLE}.goal_above_rule_dscr ;;
     hidden: yes
@@ -93,7 +93,7 @@ view: performance_metric_dm {
 
   dimension: goal_below_rule_dscr{
     label: "Below"
-    description: "Performing Below Goal"
+    description: "Performing below goal."
     type: string
     sql: ${TABLE}.goal_below_rule_dscr ;;
     hidden: yes
@@ -102,7 +102,7 @@ view: performance_metric_dm {
 
   dimension: goal_atrisk_rule_dscr{
     label: "At Risk"
-    description: "At Risk"
+    description: "At risk."
     type: string
     sql: ${TABLE}.goal_atrisk_rule_dscr ;;
     hidden: yes
@@ -112,6 +112,7 @@ view: performance_metric_dm {
 # Scorecard and weighting
   filter: fsc_bt{
     label: "Finance Scorecard"
+    description: "Is included within Finance Scorecard."
     type: yesno
     sql: ${TABLE}.fsc_bt = 1  ;;
     hidden: no
@@ -119,6 +120,7 @@ view: performance_metric_dm {
 
   dimension: fsc_weight_no{
     label: "Metric Weight"
+    description: "Weight applied to metric within Finance Scorecard"
     type: number
     sql: ${TABLE}.fsc_weight_no  ;;
     hidden: no
@@ -128,6 +130,7 @@ view: performance_metric_dm {
 
   filter: bsc_bt{
     label: "Balanced Scorecard"
+    description: "Is included within Balanced Scorecard"
     type: yesno
     sql: ${TABLE}.bsc_bt = 1  ;;
     hidden: no
@@ -135,6 +138,7 @@ view: performance_metric_dm {
 
   dimension: bsc_weight_no{
     label: "Metric Weight"
+    description: "Weight applied to metric within Balanced Scorecard"
     type: number
     sql: ${TABLE}.bsc_weight_no  ;;
     hidden: no
@@ -144,7 +148,7 @@ view: performance_metric_dm {
     label: "Maximum Points Available"
     type: string
     sql: ${TABLE}.max_possible_str  ;;
-    hidden: no
+    hidden: yes
   }
 
 # Measures

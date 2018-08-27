@@ -109,7 +109,7 @@ view: property_dm {
   }
 
   dimension: evp_full_last_first {
-    label: "EVP Name"
+    label: "Ops Leader Name"
     type: string
     sql: ${TABLE}.evp_full_last_first ;;
   }
@@ -159,6 +159,17 @@ view: property_dm {
   }
 
   #--------------
+  #   filters
+
+  filter: brand {
+    type: string
+    sql: ${brand_name} ;;
+    }
+
+  filter: ops_leader{
+    type: string
+    sql: ${evp_full_last_first} ;;
+  }
 
   # ----- Sets of fields for drilling ------
   set: property_ds {

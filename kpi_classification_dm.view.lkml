@@ -37,6 +37,7 @@ view: kpi_classification_dm {
   }
 
   dimension: class_cd_dm {
+    label: "Classifcation Grouping"
     type: string
     sql: ${TABLE}.class_cd ;;
     hidden: yes
@@ -44,6 +45,7 @@ view: kpi_classification_dm {
 
   dimension: class_name {
     label: "Classification Name"
+    description: "Classification of score."
     type: string
     sql: ${TABLE}.class_name ;;
     hidden: no
@@ -61,24 +63,24 @@ view: kpi_classification_dm {
           {% endif %};;
   }
 
-  dimension: class_name1 {
-    label: "Classification Name1"
-    type: string
-    sql: ${TABLE}.class_name ;;
-    hidden: no
-    order_by_field: class_sort_no
-     html: {% if {{class_cd_dm._value}} contains 'exceed' %}
-    <div style="background-color: #63BE7B; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% elsif {{class_cd_dm._value}} contains 'above' %}
-    <div style="background-color: #C3DA81; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% elsif {{class_cd_dm._value}} contains 'below' %}
-    <div style="background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% elsif {{class_cd_dm._value}} contains 'atrisk' %}
-    <div style="background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% else %}
-    <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>
-    {% endif %};;
-  }
+#   dimension: class_name1 {
+#     label: "Classification Name1"
+#     type: string
+#     sql: ${TABLE}.class_name ;;
+#     hidden: no
+#     order_by_field: class_sort_no
+#      html: {% if {{class_cd_dm._value}} contains 'exceed' %}
+#     <div style="background-color: #63BE7B; font-size:100%; text-align:center">{{ rendered_value }}</div>
+#     {% elsif {{class_cd_dm._value}} contains 'above' %}
+#     <div style="background-color: #C3DA81; font-size:100%; text-align:center">{{ rendered_value }}</div>
+#     {% elsif {{class_cd_dm._value}} contains 'below' %}
+#     <div style="background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>
+#     {% elsif {{class_cd_dm._value}} contains 'atrisk' %}
+#     <div style="background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>
+#     {% else %}
+#     <div style="background-color: #A6A6A6; font-size:100%; text-align:center">{{ rendered_value }}</div>
+#     {% endif %};;
+#   }
 
   dimension: class_sort_no {
     type: string
@@ -88,6 +90,7 @@ view: kpi_classification_dm {
 
   dimension: point_no {
     label: " Points Possible"
+    description: "Total points possible."
     type: number
     sql: ${TABLE}.point_no ;;
     hidden: no

@@ -44,6 +44,7 @@ view: mm_property_kpi_f {
 
   measure: kpi_calc_dscr {
     label: "Calculation"
+    description: "Metric calculation."
     type: string
     sql: max(${TABLE}.kpi_calc_dscr) ;;
     hidden: no
@@ -51,7 +52,7 @@ view: mm_property_kpi_f {
 
   measure: property_cnt {
     label: "Properties"
-    description: "Distinct Count of Properties"
+    description: "Count of distinct properties."
     type: count_distinct
     sql: ${property_key} ;;
     value_format: "0"
@@ -67,7 +68,7 @@ view: mm_property_kpi_f {
 
   measure: property_cnt_pct {
     label: "Percent of Properties"
-    description: "Percent of Properties"
+    description: "Percent of properties."
     type: number
     sql: ${property_cnt} / ${property_cnt_over_kpi} ;;
     value_format_name: percent_1

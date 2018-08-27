@@ -9,6 +9,7 @@ view: period_type_dm {
 
   dimension: period_type_name {
     label: "Period Type"
+    description: "Period of time to be applied (Month/Year)."
     type: string
     sql: ${TABLE}.period_type_name ;;
     hidden: no
