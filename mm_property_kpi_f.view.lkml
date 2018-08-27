@@ -157,5 +157,12 @@ view: mm_property_kpi_f {
             {% endif %}
           {% endif %};;
     required_fields:[kpi_val_d1, kpi_val_d2]
+    drill_fields: [metric_drill*]
+  }
+
+  set: metric_drill {
+    fields: [
+      kpi_calc_dscr
+    ]
   }
 }
