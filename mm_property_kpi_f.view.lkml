@@ -76,9 +76,18 @@ view: mm_property_kpi_f {
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
   }
 
+  measure: amt_prev {
+    label: "Percent Previous"
+    description: "Percent to Previous"
+    type: percent_of_previous
+    sql: ${measure_kpi}} ;;
+    value_format_name: percent_1
+    hidden: no
+  }
+
   measure: kpi_val_base {
     type: max
-    sql:  iff( performance_metric_dm.value_format_str ='decimal_1', ${TABLE}.kpi_val * 100,iff( performance_metric_dm.value_format_str ='decimal_1', ${TABLE}.kpi_val * 100,  ${TABLE}.kpi_val ))  ;;
+    sql:  iff( performance_metric_dm.value_format_str ='decimal_1' , ${TABLE}.kpi_val * 100, ${TABLE}.kpi_val )  ;;
     hidden: yes
   }
 
@@ -92,6 +101,13 @@ view: mm_property_kpi_f {
   measure: kpi_val_d2 {
     type: number
     value_format_name: decimal_2
+    sql: ${kpi_val_base} ;;
+    hidden: yes
+  }
+
+  measure: kpi_val_id {
+    type: number
+    value_format_name: decimal_0
     sql: ${kpi_val_base} ;;
     hidden: yes
   }
@@ -152,11 +168,13 @@ view: mm_property_kpi_f {
               {{ rendered_value }}
             {% elsif {{performance_metric_dm.value_format_str_m._value}} == 'decimal_1' %}
               {{ kpi_val_d1._rendered_value }}
+            {% elsif {{performance_metric_dm.value_format_str_m._value}} == 'id' %}
+              {{ kpi_val_id._rendered_value }}
             {% else %}
               {{ kpi_val_d2._rendered_value }}
             {% endif %}
           {% endif %};;
-    required_fields:[kpi_val_d1, kpi_val_d2]
+    required_fields:[kpi_val_d1, kpi_val_d2, kpi_val_id]
     drill_fields: [metric_drill*]
   }
 

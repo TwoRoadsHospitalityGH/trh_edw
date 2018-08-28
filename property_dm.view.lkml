@@ -160,13 +160,12 @@ view: property_dm {
 
   dimension: mih_eligible_fl {
     label: "MIH Eligible"
-    type: string
+    type: yesno
     sql: ${TABLE}.mih_eligible_fl = 'Y' ;;
   }
 
 
  #   filters
-
 
   filter: same_store_financial {
     group_label: "Property Filters"

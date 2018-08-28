@@ -42,7 +42,7 @@ explore: mm_property_kpi_f {
   }
 
   join: period_type_dm {
-    view_label: "Aggregation Period"
+    view_label: "Aggregation Type"
     sql_on: ${period_type_dm.period_type_shk} = ${mm_property_kpi_f.period_type_shk} ;;
     type: inner
     relationship: one_to_one
