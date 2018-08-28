@@ -7,10 +7,10 @@ view: property_dm {
     hidden: no
   }
 
-  dimension: proper_name {
+  dimension: property_name {
     label: "Property Name"
     type: string
-    sql: ${TABLE}.PROPER_NAME ;;
+    sql: ${TABLE}.PROPERTY_NAME ;;
     drill_fields: [property_ds*]
 
     link: {
@@ -135,27 +135,77 @@ view: property_dm {
   }
 
   dimension: same_store_financial_fl {
+    group_label: "Property Filters"
     label: "Same Store Financial"
     type: yesno
     sql: ${TABLE}.same_store_financial_fl = 'Y' ;;
   }
 
   dimension: same_store_revenue_fl {
+    group_label: "Property Filters"
     label: "Same Store Revenue"
     type: yesno
     sql: ${TABLE}.same_store_revenue_fl = 'Y' ;;
   }
 
   dimension: closed_fl {
+    group_label: "Property Filters"
     label: "Closed"
     type: yesno
     sql: ${TABLE}.closed_fl = 'Y' ;;
   }
 
   dimension: active_fl {
+    group_label: "Property Filters"
     label: "Active"
     type: yesno
     sql: ${TABLE}.active_fl = 'Y' ;;
+  }
+
+  dimension: mih_eligible_fl {
+    group_label: "Property Filters"
+    label: "MIH Eligible"
+    type: string
+    sql: ${TABLE}.mih_eligible_fl = 'Y' ;;
+  }
+
+
+ #   filters
+
+
+  filter: same_store_financial {
+    group_label: "Property Filters"
+    label: "Same Store Financial Filter"
+    type: yesno
+    sql: ${TABLE}.same_store_financial_fl = 'Y' ;;
+  }
+
+  filter: same_store_revenue {
+    group_label: "Property Filters"
+    label: "Same Store Revenue Filter"
+    type: yesno
+    sql: ${TABLE}.same_store_revenue_fl = 'Y' ;;
+  }
+
+  filter: closed {
+    group_label: "Property Filters"
+    label: "Closed Filter"
+    type: yesno
+    sql: ${TABLE}.closed_fl = 'Y' ;;
+  }
+
+  filter: active {
+    group_label: "Property Filters"
+    label: "Active Filter"
+    type: yesno
+    sql: ${TABLE}.active_fl = 'Y' ;;
+  }
+
+  filter: mih_eligible {
+    group_label: "Property Filters"
+    label: "MIH Eligible Filter"
+    type: yesno
+    sql: ${TABLE}.mih_eligible_fl = 'Y' ;;
   }
 
   #--------------
@@ -175,7 +225,7 @@ view: property_dm {
   set: property_ds {
     fields: [
       brand_name,
-      proper_name,
+      property_name,
       gl_account_dm.seg2_department_name,
       gl_account_dm.seg2_subdepartment_name,
       date_dm.fiscal_period_label,
