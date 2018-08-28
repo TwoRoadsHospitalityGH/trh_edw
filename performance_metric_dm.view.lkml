@@ -16,6 +16,18 @@ view: performance_metric_dm {
     hidden: yes
   }
 
+  dimension: bsc_sort_no  {
+    type: number
+    sql: ${TABLE}.bsc_sort_no ;;
+    hidden: yes
+  }
+
+  dimension: metric_sort_no  {
+    type: number
+    sql: ifnull(${TABLE}.fsc_sort_no , ${TABLE}.bsc_sort_no);;
+    hidden: no
+  }
+
   measure:  value_format_str_m {
     type: max
     sql: ${TABLE}.value_format_str ;;
@@ -177,7 +189,7 @@ view: performance_metric_dm {
       description: "Key Performance Indicator"
       type: string
       sql: ${TABLE}.metric_name ;;
-      order_by_field: fsc_sort_no
+      order_by_field: metric_sort_no
       hidden:  no
     }
 
