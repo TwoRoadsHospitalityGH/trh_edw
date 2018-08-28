@@ -135,35 +135,30 @@ view: property_dm {
   }
 
   dimension: same_store_financial_fl {
-    group_label: "Property Filters"
     label: "Same Store Financial"
     type: yesno
     sql: ${TABLE}.same_store_financial_fl = 'Y' ;;
   }
 
   dimension: same_store_revenue_fl {
-    group_label: "Property Filters"
     label: "Same Store Revenue"
     type: yesno
     sql: ${TABLE}.same_store_revenue_fl = 'Y' ;;
   }
 
   dimension: closed_fl {
-    group_label: "Property Filters"
     label: "Closed"
     type: yesno
     sql: ${TABLE}.closed_fl = 'Y' ;;
   }
 
   dimension: active_fl {
-    group_label: "Property Filters"
     label: "Active"
     type: yesno
     sql: ${TABLE}.active_fl = 'Y' ;;
   }
 
   dimension: mih_eligible_fl {
-    group_label: "Property Filters"
     label: "MIH Eligible"
     type: string
     sql: ${TABLE}.mih_eligible_fl = 'Y' ;;
