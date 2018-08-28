@@ -161,15 +161,15 @@ view: property_dm {
   #--------------
   #   filters
 
-  filter: brand {
-    type: string
-    sql: ${brand_name} ;;
-    }
-
-  filter: ops_leader{
-    type: string
-    sql: ${evp_full_last_first} ;;
-  }
+#   filter: brand {
+#     type: string
+#     sql: ${brand_name} ;;
+#     }
+#
+#   filter: ops_leader{
+#     type: string
+#     sql: = ${evp_full_last_first}  ;;
+#   }
 
   # ----- Sets of fields for drilling ------
   set: property_ds {
