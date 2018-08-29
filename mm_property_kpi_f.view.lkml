@@ -80,7 +80,7 @@ view: mm_property_kpi_f {
     label: "Percent Previous"
     description: "Percent to Previous"
     type: percent_of_previous
-    sql: ${measure_kpi}} ;;
+    sql: ${measure_kpi} ;;
     value_format_name: percent_1
     hidden: no
   }
