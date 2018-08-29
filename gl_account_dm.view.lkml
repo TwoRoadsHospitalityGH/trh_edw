@@ -59,7 +59,7 @@ view: gl_account_dm {
   dimension: segment2_cd {
     group_label: "Seg2 - Department"
     label: "Department Number"
-    type: number
+    type: string
     sql: ${TABLE}.SEGMENT2_CD ;;
     value_format: "0"
   }

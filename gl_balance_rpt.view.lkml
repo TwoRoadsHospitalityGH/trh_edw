@@ -99,7 +99,7 @@ view: gl_balance_rpt {
   measure: act_amt_prev {
     label: "Actual Amount"
     description: "Actual"
-    view_label: "1b) % Previous"
+    view_label: "1b - % Previous"
     type: percent_of_previous
     sql: ${act_net_amt}_net_amt} ;;
     value_format: "0.0\%"
@@ -109,7 +109,7 @@ view: gl_balance_rpt {
   measure: act_amt_pttl {
     label: "Actual Amount$"
     description: "Actual Amount $"
-    view_label: "1c) % Total"
+    view_label: "1c - % Total"
     type: percent_of_total
     sql: ${act_net_amt} ;;
     value_format: "0.0\%"
@@ -145,7 +145,7 @@ view: gl_balance_rpt {
   measure: bgt_amt_prev {
     label: "Budget Amount"
     description: "Budget"
-    view_label: "1b) % Previous"
+    view_label: "1b - % Previous"
     type: percent_of_previous
     sql: ${bgt_net_amt} ;;
     value_format: "0.0\%"
@@ -154,7 +154,7 @@ view: gl_balance_rpt {
   measure: bgt_amt_pttl {
     label: "Budget Amount$"
     description: "Budget Amount $"
-    view_label: "1c) % Total"
+    view_label: "1c - % Total"
     type: percent_of_total
     sql: ${bgt_net_amt} ;;
     value_format: "0.0\%"
@@ -191,7 +191,7 @@ view: gl_balance_rpt {
   measure: fcst_amt_prev {
     label: "Forecast Amount"
     description: "Forecast"
-    view_label: "1b) % Previous"
+    view_label: "1b - % Previous"
     type: percent_of_previous
     sql: ${fcst_net_amt} ;;
     value_format: "0.0\%"
@@ -200,7 +200,7 @@ view: gl_balance_rpt {
   measure: fcst_amt_pttl {
     label: "Forecast Amount$"
     description: "Forecast Amount $"
-    view_label: "1c) % Total"
+    view_label: "1c - % Total"
     type: percent_of_total
     sql: ${fcst_net_amt} ;;
     value_format: "0.0\%"
@@ -237,7 +237,7 @@ view: gl_balance_rpt {
   measure: prjc_amt_prev {
     label: "Projected Amount"
     description: "Projected"
-    view_label: "1b) % Previous"
+    view_label: "1b - % Previous"
     type: percent_of_previous
     sql: ${prjc_net_amt}_net_amt} ;;
     value_format: "0.0\%"
@@ -246,7 +246,7 @@ view: gl_balance_rpt {
   measure: prjc_amt_pttl {
     label: "Projected Amount$"
     description: "Projected Amount $"
-    view_label: "1c) % Total"
+    view_label: "1c - % Total"
     type: percent_of_total
     sql: ${prjc_net_amt} ;;
     value_format: "0.0\%"
