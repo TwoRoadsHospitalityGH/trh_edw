@@ -128,7 +128,7 @@ view: performance_metric_dm {
     label: "Metric Weight"
     description: "Weight applied to metric within Finance Scorecard"
     type: number
-    sql: ${TABLE}.fsc_weight_no  ;;
+    sql: (${TABLE}.fsc_weight_no  ;;
     hidden: no
     value_format: "0.0"
     html: <div style="color: black; font-size:100%; text-align:center">{{ rendered_value }}</div>;;
@@ -169,6 +169,7 @@ view: performance_metric_dm {
       type: string
       sql: ${TABLE}.common_dscr ;;
       hidden: no
+      html: {{value | newline_to_br }}  ;;
     }
 
     dimension: calc_dscr {

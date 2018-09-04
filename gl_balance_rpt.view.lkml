@@ -52,24 +52,24 @@ view: gl_balance_rpt {
 
   measure: act_gop_amt {
     label: "Actual GOP Amount$"
-    hidden:  yes
     group_label: "Actual"
     description: "Actual Gross Operating Profit $"
     type: number
     sql: -((${act_net_cr_amt} - ${act_net_dr_amt}) * MAX(${gl_account_dm.gop_bt})) ;;
 #     drill_fields: [act_net_dr_amt, act_net_cr_amt]
     value_format_name: usd_0
+    hidden:  no
   }
 
   measure: act_agop_amt {
     label: "Actual AGOP Amount$"
-    hidden:  yes
     group_label: "Actual"
     description: "Actual Adjusted Gross Operating Profit $"
     type: number
     sql: -((${act_net_cr_amt} - ${act_net_dr_amt}) * MAX(${gl_account_dm.agop_bt})) ;;
 #     drill_fields: [act_net_dr_amt, act_net_cr_amt]
     value_format_name: usd_0
+    hidden:  no
   }
 
 #   measure: occupied_rooms {
@@ -122,6 +122,7 @@ view: gl_balance_rpt {
     type: sum
     sql: ${TABLE}.bgt_net_dr_amt ;;
     value_format_name: usd_0
+    hidden:  yes
   }
 
   measure: bgt_net_cr_amt {
@@ -131,6 +132,7 @@ view: gl_balance_rpt {
     type: sum
     sql: ${TABLE}.bgt_net_cr_amt ;;
     value_format_name: usd_0
+    hidden:  yes
   }
 
   measure: bgt_net_amt {
@@ -167,6 +169,7 @@ view: gl_balance_rpt {
     type: sum
     sql: ${TABLE}.fcst_net_dr_amt ;;
     value_format_name: usd_0
+    hidden:  yes
   }
 
   measure: fcst_net_cr_amt {
@@ -176,6 +179,7 @@ view: gl_balance_rpt {
     type: sum
     sql: ${TABLE}.fcst_net_cr_amt ;;
     value_format_name: usd_0
+    hidden:  yes
   }
 
   measure: fcst_net_amt {
@@ -214,6 +218,7 @@ view: gl_balance_rpt {
     type: sum
     sql: ${TABLE}.prjc_net_dr_amt ;;
     value_format_name: usd_0
+    hidden:  yes
   }
 
   measure: prjc_net_cr_amt {
@@ -223,6 +228,7 @@ view: gl_balance_rpt {
     type: sum
     sql: ${TABLE}.prjc_net_cr_amt ;;
     value_format_name: usd_0
+    hidden:  yes
   }
 
   measure: prjc_net_amt {

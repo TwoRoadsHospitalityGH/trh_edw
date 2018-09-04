@@ -27,6 +27,15 @@ view: date_dm {
   # restrict to up through prior month
   #
 
+  filter: cal_year_dt {
+    group_label: "Calendar Filters"
+    label: "Month"
+    description: "Month."
+    type: string
+    sql: ${TABLE}.cal_month_dt;;
+    hidden: no
+  }
+
   filter: current_period_wtd {
     group_label: "Calendar Filters"
     label: "Current Week"
