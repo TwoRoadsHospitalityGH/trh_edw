@@ -116,6 +116,7 @@ view: performance_metric_dm {
   }
 
 # Scorecard and weighting
+
   filter: fsc_bt{
     label: "Finance Scorecard"
     description: "Is included within Finance Scorecard."

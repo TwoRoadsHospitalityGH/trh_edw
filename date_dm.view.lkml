@@ -6,6 +6,24 @@ view: date_dm {
     hidden: yes
   }
 
+#   parameter: date_filter {
+#     type: date_time
+#     allowed_value: {
+#       label: "Last Complete Month"
+#       value: "Last Completed Month"
+#     }
+#
+#     allowed_value: {
+#       label: "Last month"
+#       value: "Last Month"
+#     }
+#
+#     allowed_value: {
+#       label: "Last year"
+#       value: "Last Year"
+#     }
+#   }
+
   dimension_group: Calendar {
     type: time
     timeframes: [
@@ -27,7 +45,7 @@ view: date_dm {
   # restrict to up through prior month
   #
 
-  filter: cal_year_dt {
+  dimension: cal_month_dt {
     group_label: "Calendar Filters"
     label: "Month"
     description: "Month."

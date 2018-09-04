@@ -12,6 +12,10 @@ explore: mm_property_kpi_f {
       field: period_type_dm.period_type_name
       value: "Year"
       }
+    filters: {
+      field: date_dm.cal_month_dt
+      value: "2018"
+    }
   }
 
 
