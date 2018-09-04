@@ -14,7 +14,6 @@ explore: mm_property_kpi_f {
       }
     filters: {
       field: date_dm.cal_month_dt
-      value: "2018"
     }
   }
 
