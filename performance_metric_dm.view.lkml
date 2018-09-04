@@ -125,10 +125,10 @@ view: performance_metric_dm {
 }
 
   dimension: fsc_weight_no{
-    label: "Metric Weight"
+    label: "Finance Scorecard Metric Weight"
     description: "Weight applied to metric within Finance Scorecard"
     type: number
-    sql: (${TABLE}.fsc_weight_no  ;;
+    sql: ${TABLE}.fsc_weight_no  ;;
     hidden: no
     value_format: "0.0"
     html: <div style="color: black; font-size:100%; text-align:center">{{ rendered_value }}</div>;;
@@ -143,7 +143,7 @@ view: performance_metric_dm {
   }
 
   dimension: bsc_weight_no{
-    label: "Metric Weight"
+    label: "Balanced Scorecard Metric Weight"
     description: "Weight applied to metric within Balanced Scorecard"
     type: number
     sql: ${TABLE}.bsc_weight_no  ;;
