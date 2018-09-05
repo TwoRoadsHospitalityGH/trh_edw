@@ -101,4 +101,15 @@ view: date_dm {
     hidden: no
   }
 
+  filter: two_months_prior {
+    group_label: "Calendar Filters"
+    label: "Prior Month"
+    description: "Prior month."
+    type: yesno
+    sql: ${TABLE}.cal_dt < current_date()
+         and date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( month, -2, current_date() ) )
+         and ${TABLE}.cal_ptd_bt = 1;;
+    hidden: no
+  }
+
 }
