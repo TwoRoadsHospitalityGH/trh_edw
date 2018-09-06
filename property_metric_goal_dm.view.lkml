@@ -35,14 +35,14 @@ view: property_metric_goal_dm {
   dimension: goal  {
     type: number
     sql: ${TABLE}.goal ;;
-    value_format: "0%"
+    value_format_name:"decimal_1"
     hidden: no
   }
 
   measure: goal_m  {
     type: max
     sql: ${TABLE}.goal ;;
-    value_format: "0%"
+    value_format_name: "decimal_1"
     hidden: no
   }
 
