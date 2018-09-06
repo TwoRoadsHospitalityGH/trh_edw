@@ -10,15 +10,9 @@ view: performance_metric_dm {
 
 # Format & sort
 
-  dimension: fsc_sort_no  {
+  dimension: metric_sort_no  {
     type: number
-    sql: ${TABLE}.fsc_sort_no ;;
-    hidden: yes
-  }
-
-  dimension: bsc_sort_no  {
-    type: number
-    sql: ${TABLE}.bsc_sort_no ;;
+    sql: ${TABLE}.metric_sort_no ;;
     hidden: yes
   }
 
@@ -121,7 +115,7 @@ view: performance_metric_dm {
     label: "Finance Scorecard"
     description: "Is included within Finance Scorecard."
     type: yesno
-    sql: ${TABLE}.fsc_bt = 1  ;;
+    sql: ${TABLE}.fsc_rpt_bt = 1  ;;
     hidden: no
 }
 
@@ -129,7 +123,7 @@ view: performance_metric_dm {
     label: "Finance Scorecard Weight"
     description: "Weight applied to metric within Finance Scorecard"
     type: number
-    sql: ${TABLE}.fsc_weight_no  ;;
+    sql: ${TABLE}.fsc_rpt_weight_no  ;;
     hidden: no
     value_format: "0.0"
     html: <div style="color: black; font-size:100%; text-align:center">{{ rendered_value }}</div>;;
@@ -139,7 +133,7 @@ view: performance_metric_dm {
     label: "Balanced Scorecard"
     description: "Is included within Balanced Scorecard"
     type: yesno
-    sql: ${TABLE}.bsc_bt = 1  ;;
+    sql: ${TABLE}.bsc_rpt_bt = 1  ;;
     hidden: no
   }
 
@@ -147,7 +141,15 @@ view: performance_metric_dm {
     label: "Balanced Scorecard Weight"
     description: "Weight applied to metric within Balanced Scorecard"
     type: number
-    sql: ${TABLE}.bsc_weight_no  ;;
+    sql: ${TABLE}.bsc_rpt_weight_no  ;;
+    hidden: no
+  }
+
+  filter: gs_rpt_bt{
+    label: "Finance Scorecard"
+    description: "Is included within guest scorecard."
+    type: yesno
+    sql: ${TABLE}.gs_rpt_bt = 1  ;;
     hidden: no
   }
 
@@ -185,7 +187,7 @@ view: performance_metric_dm {
       description: "Key Performance Indicator"
       type: string
       sql: ${TABLE}.metric_name ;;
-      order_by_field: fsc_sort_no
+      order_by_field: metric_sort_no
       hidden:  no
     }
 
