@@ -126,7 +126,7 @@ view: performance_metric_dm {
 }
 
   dimension: fsc_weight_no{
-    label: "Finance Scorecard Metric Weight"
+    label: "Finance Scorecard Weight"
     description: "Weight applied to metric within Finance Scorecard"
     type: number
     sql: ${TABLE}.fsc_weight_no  ;;
@@ -144,7 +144,7 @@ view: performance_metric_dm {
   }
 
   dimension: bsc_weight_no{
-    label: "Balanced Scorecard Metric Weight"
+    label: "Balanced Scorecard Weight"
     description: "Weight applied to metric within Balanced Scorecard"
     type: number
     sql: ${TABLE}.bsc_weight_no  ;;

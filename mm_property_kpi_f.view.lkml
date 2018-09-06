@@ -77,8 +77,9 @@ view: mm_property_kpi_f {
   }
 
   measure: amt_prev {
-    label: "Percent Previous"
-    description: "Percent to Previous"
+    group_label: "% Previous"
+    label: "% Previous"
+    description: "Percent to Previous Value"
     type: percent_of_previous
     sql: ${measure_kpi} ;;
     value_format_name: percent_1
@@ -87,7 +88,7 @@ view: mm_property_kpi_f {
 
   measure: kpi_val_base {
     type: max
-    sql:  iff( performance_metric_dm.value_format_str ='decimal_1' , ${TABLE}.kpi_val * 100, ${TABLE}.kpi_val )  ;;
+    sql:  ${TABLE}.kpi_val  ;;
     hidden: yes
   }
 

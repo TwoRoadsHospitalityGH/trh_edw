@@ -4,7 +4,8 @@ include: "*.view"         # include all views in this project
 # include: "*.dashboard.lookml"  # include all dashboards in this project
 
 explore: mm_property_kpi_f {
-  label: "Finance Scorecard"
+  group_label: "Portfolio"
+  label: "Performance Metrics"
   persist_for: "0 minutes"
   view_label: "1 - Measures"
   always_filter: {
@@ -12,9 +13,9 @@ explore: mm_property_kpi_f {
       field: period_type_dm.period_type_name
       value: "Year"
       }
-    filters: {
-      field: date_dm.cal_month_dt
-    }
+#     filters: {
+#       field: date_dm.cal_month_dt
+#     }
   }
 
 
@@ -37,9 +38,9 @@ explore: mm_property_kpi_f {
     relationship: one_to_one
   }
 
-  join: date_dm {
+  join: date_month_dm {
     view_label: "3 - Date"
-    sql_on: ${mm_property_kpi_f.month_date_sid} = ${date_dm.date_sid} ;;
+    sql_on: ${mm_property_kpi_f.month_date_sid} = ${date_month_dm.date_sid} ;;
     type: inner
     relationship: one_to_one
   }

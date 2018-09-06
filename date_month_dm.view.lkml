@@ -1,59 +1,27 @@
-view: date_dm {
-  sql_table_name: pedw.fact.DATE_DM ;;
+view: date_month_dm {
+  sql_table_name: pedw.fact.date_dm ;;
 
-  dimension: date_sid {
-    sql:  ${TABLE}.DATE_SID ;;
-    hidden: yes
-  }
+    dimension: date_sid {
+      sql:  ${TABLE}.DATE_SID ;;
+      hidden: yes
+    }
 
-#   parameter: date_filter {
-#     type: date_time
-#     allowed_value: {
-#       label: "Last Complete Month"
-#       value: "Last Completed Month"
-#     }
-#
-#     allowed_value: {
-#       label: "Last month"
-#       value: "Last Month"
-#     }
-#
-#     allowed_value: {
-#       label: "Last year"
-#       value: "Last Year"
-#     }
-#   }
-
-  dimension_group: Calendar {
+  dimension_group: Month {
     type: time
+    label: ""
     timeframes: [
-      raw
-      ,date
-      ,month
+       month
       ,month_num
       ,month_name
-      ,quarter
-      ,quarter_of_year
-      ,year
-    ]
+      ]
     convert_tz: no
-    datatype: date
-    sql: ${TABLE}.cal_dt ;;
+    datatype: yyyymmdd
+    sql: ${TABLE}.cal_month_dt ;;
     drill_fields: [property_dm.property_ds*]
   }
-
   #
   # restrict to up through prior month
   #
-
-  dimension: cal_month_dt {
-    group_label: "Calendar Filters"
-    label: "Month"
-    description: "Month."
-    type: string
-    sql: ${TABLE}.cal_month_dt;;
-    hidden: no
-  }
 
   filter: current_period_wtd {
     group_label: "Calendar Filters"
