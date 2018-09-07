@@ -13,9 +13,12 @@ view: date_month_dm {
        month
       ,month_num
       ,month_name
+      ,quarter
+      ,quarter_of_year
+      ,year
       ]
     convert_tz: no
-    datatype: yyyymmdd
+    datatype: date
     sql: ${TABLE}.cal_month_dt ;;
     drill_fields: [property_dm.property_ds*]
   }
@@ -43,8 +46,8 @@ view: date_month_dm {
 
   filter: current_period_qtd {
     group_label: "Calendar Filters"
-    label: "Quarter-to-Date"
-    description: "Quarter of last complete month."
+    label: "QTD"
+    description: "Quarter-to-Date."
     type: yesno
     sql: ${TABLE}.cal_dt < date_trunc( month, current_date() ) and date_trunc( quarter, ${TABLE}.cal_dt ) = date_trunc( quarter, dateadd( month, -1, current_date() ) );;
     hidden: no
@@ -52,8 +55,8 @@ view: date_month_dm {
 
   filter: current_period_ytd {
     group_label: "Calendar Filters"
-    label: "Year-to-Date"
-    description: "Year of last complete month."
+    label: "YTD"
+    description: "Year-to-Date."
     type: yesno
     sql: ${TABLE}.cal_dt < date_trunc( month, current_date() ) and date_trunc( year, ${TABLE}.cal_dt ) = date_trunc( year, dateadd( month, -1, current_date() ) );;
     hidden: no
