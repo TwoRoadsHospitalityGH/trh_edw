@@ -34,6 +34,7 @@ view: property_dm {
   }
 
   dimension: brand_cd {
+    label: "Brand Code"
     type: string
     sql: ${TABLE}.brand_cd ;;
   }
