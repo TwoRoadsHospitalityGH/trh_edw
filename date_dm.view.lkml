@@ -6,6 +6,11 @@ view: date_dm {
     hidden: yes
   }
 
+  dimension: cal_dt {
+    sql: ${TABLE}.cal_dt ;;
+    hidden: yes
+  }
+
 #   parameter: date_filter {
 #     type: date_time
 #     allowed_value: {
@@ -38,7 +43,7 @@ view: date_dm {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}.cal_dt ;;
+    sql: ${cal_dt} ;;
     drill_fields: [property_dm.property_ds*]
   }
 
@@ -60,7 +65,7 @@ view: date_dm {
     label: "Current Week"
     description: "Within the current week."
     type: yesno
-    sql: ${TABLE}.cal_dt < current_date() and date_trunc( week, ${TABLE}.cal_dt ) = date_trunc( week, dateadd( day, -1, current_date() ) );;
+    sql: ${cal_dt} < current_date() and date_trunc( week, ${cal_dt} ) = date_trunc( week, dateadd( day, -1, current_date() ) );;
     hidden: no
   }
 
@@ -69,7 +74,7 @@ view: date_dm {
     label: "Current Month"
     description: "Within the current month."
     type: yesno
-    sql: ${TABLE}.cal_dt < current_date() and date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( day, -1, current_date() ) );;
+    sql: ${cal_dt} < current_date() and date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( day, -1, current_date() ) );;
     hidden: no
   }
 
@@ -78,7 +83,7 @@ view: date_dm {
     label: "Quarter-to-Date"
     description: "Quarter of last complete month."
     type: yesno
-    sql: ${TABLE}.cal_dt < date_trunc( month, current_date() ) and date_trunc( quarter, ${TABLE}.cal_dt ) = date_trunc( quarter, dateadd( month, -1, current_date() ) );;
+    sql: ${cal_dt} < date_trunc( month, current_date() ) and date_trunc( quarter, ${cal_dt} ) = date_trunc( quarter, dateadd( month, -1, current_date() ) );;
     hidden: no
   }
 
@@ -87,7 +92,7 @@ view: date_dm {
     label: "Year-to-Date"
     description: "Year of last complete month."
     type: yesno
-    sql: ${TABLE}.cal_dt < date_trunc( month, current_date() ) and date_trunc( year, ${TABLE}.cal_dt ) = date_trunc( year, dateadd( month, -1, current_date() ) );;
+    sql: ${cal_dt} < date_trunc( month, current_date() ) and date_trunc( year, ${cal_dt} ) = date_trunc( year, dateadd( month, -1, current_date() ) );;
     hidden: no
   }
 
@@ -96,7 +101,7 @@ view: date_dm {
     label: "Last Complete Month"
     description: "Last complete month."
     type: yesno
-    sql: date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( month, -1, current_date() ) );;
+    sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -1, current_date() ) );;
     hidden: no
   }
 
@@ -105,7 +110,7 @@ view: date_dm {
     label: "Prior Month"
     description: "Prior month."
     type: yesno
-    sql: date_trunc( month, ${TABLE}.cal_dt ) = date_trunc( month, dateadd( month, -2, current_date() ) );;
+    sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -2, current_date() ) );;
     hidden: no
   }
 
