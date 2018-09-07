@@ -56,7 +56,7 @@ view: mm_property_kpi_f {
     type: count_distinct
     sql: ${property_key} ;;
     value_format: "0"
-    hidden: no
+    hidden: yes
   }
 
   measure: property_cnt_over_kpi {
@@ -72,7 +72,7 @@ view: mm_property_kpi_f {
     type: number
     sql: ${property_cnt} / ${property_cnt_over_kpi} ;;
     value_format_name: percent_1
-    hidden: no
+    hidden: yes
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
   }
 
@@ -83,7 +83,7 @@ view: mm_property_kpi_f {
     type: percent_of_previous
     sql: ${measure_kpi} ;;
     value_format_name: percent_1
-    hidden: no
+    hidden: yes
   }
 
   measure: kpi_val_base {
