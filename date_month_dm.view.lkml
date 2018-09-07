@@ -67,21 +67,12 @@ view: date_month_dm {
     hidden: no
   }
 
-  filter: last_completed_mo {
-    group_label: "Calendar Filters"
-    label: "Last Complete Month"
-    description: "Last complete month."
-    type: yesno
-    sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -1, current_date() ) );;
-    hidden: no
-  }
-
   filter: two_months_prior {
     group_label: "Calendar Filters"
     label: "Prior Month"
     description: "Prior month."
     type: yesno
-    sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -2, current_date() ) );;
+    sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -1, current_date() ) );;
     hidden: no
   }
 
