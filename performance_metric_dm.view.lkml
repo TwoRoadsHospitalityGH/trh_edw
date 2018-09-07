@@ -146,7 +146,7 @@ view: performance_metric_dm {
   }
 
   filter: gs_rpt_bt{
-    label: "Finance Scorecard"
+    label: "Guest Metric"
     description: "Is included within guest scorecard."
     type: yesno
     sql: ${TABLE}.gs_rpt_bt = 1  ;;
