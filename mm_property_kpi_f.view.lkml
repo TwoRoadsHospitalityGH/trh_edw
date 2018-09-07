@@ -51,12 +51,13 @@ view: mm_property_kpi_f {
     }
 
   measure: property_cnt {
+    view_label: "1a - Percent"
     label: "Properties"
     description: "Count of distinct properties."
     type: count_distinct
     sql: ${property_key} ;;
     value_format: "0"
-    hidden: yes
+    hidden: no
   }
 
   measure: property_cnt_over_kpi {
@@ -67,23 +68,25 @@ view: mm_property_kpi_f {
   }
 
   measure: property_cnt_pct {
+    view_label: "1a - Percent"
     label: "Percent of Properties"
     description: "Percent of properties."
     type: number
     sql: ${property_cnt} / ${property_cnt_over_kpi} ;;
     value_format_name: percent_1
-    hidden: yes
+    hidden: no
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
   }
 
   measure: amt_prev {
+    view_label: "1a - Percent"
     group_label: "% Previous"
     label: "% Previous"
     description: "Percent to Previous Value"
     type: percent_of_previous
     sql: ${measure_kpi} ;;
     value_format_name: percent_1
-    hidden: yes
+    hidden: no
   }
 
   measure: kpi_val_base {

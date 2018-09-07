@@ -24,13 +24,6 @@ explore: mm_property_kpi_f {
 #     user_attribute: property_access
 #   }
 
-  join: percent_measures_f {
-    view_label: "1a - Percent"
-    sql_on: ${percent_measures_f.performance_metric_shk} = ${mm_property_kpi_f.performance_metric_shk} ;;
-    type: inner
-    relationship: one_to_one
-  }
-
   join: performance_metric_dm {
     view_label: "Metric"
     sql_on: ${performance_metric_dm.performance_metric_shk} = ${mm_property_kpi_f.performance_metric_shk} ;;
