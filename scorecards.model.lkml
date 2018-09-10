@@ -30,13 +30,6 @@ explore: mm_property_kpi_f {
     type: inner
     relationship: one_to_one
   }
-#
-#   join: measure_test {
-#     view_label: "Metric Test"
-#     sql_on: ${performance_metric_dm.performance_metric_shk} = ${mm_property_kpi_f.performance_metric_shk} ;;
-#     type: inner
-#     relationship: one_to_one
-#   }
 
   join: kpi_classification_dm {
     view_label: "Scored As"

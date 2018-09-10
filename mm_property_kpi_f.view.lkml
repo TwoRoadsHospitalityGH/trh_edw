@@ -46,11 +46,12 @@ view: mm_property_kpi_f {
     label: "Calculation"
     description: "Metric calculation."
     type: string
-    sql: max(${TABLE}.kpi_calc_dscr) ;;
+    sql: avg(${TABLE}.kpi_calc_dscr) ;;
     hidden: no
     }
 
   measure: property_cnt {
+    label: "Properties"
     description: "Count of distinct properties."
     type: count_distinct
     sql: ${property_key} ;;
@@ -61,7 +62,6 @@ view: mm_property_kpi_f {
   measure: property_cnt_over_kpi {
     type: number
     sql: sum( ${property_cnt} ) over( partition by ${performance_metric_dm.metric_name} ) ;;
-    value_format: "0"
     hidden: yes
   }
 
@@ -77,7 +77,7 @@ view: mm_property_kpi_f {
   measure: amt_prev {
     view_label: "1a - % Previous"
     group_label: "% Previous"
-    label: "% Previous"
+    label: "Properties"
     description: "Percent to previous value."
     type: percent_of_previous
     sql: ${measure_kpi} ;;
@@ -88,7 +88,7 @@ view: mm_property_kpi_f {
   measure: amt_pttl {
     view_label: "1b - % Total"
     group_label: "% Total"
-    label: "% Total"
+    label: "Properties"
     description: "Percent of total value."
     type: percent_of_total
     sql: ${property_cnt} ;;
