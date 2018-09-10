@@ -169,35 +169,30 @@ view: property_dm {
  #   filters
 
   filter: same_store_financial {
-    group_label: "Property Filters"
     label: "Same Store Financial Filter"
     type: yesno
     sql: ${TABLE}.same_store_financial_fl = 'Y' ;;
   }
 
   filter: same_store_revenue {
-    group_label: "Property Filters"
     label: "Same Store Revenue Filter"
     type: yesno
     sql: ${TABLE}.same_store_revenue_fl = 'Y' ;;
   }
 
   filter: closed {
-    group_label: "Property Filters"
     label: "Closed Filter"
     type: yesno
     sql: ${TABLE}.closed_fl = 'Y' ;;
   }
 
   filter: active {
-    group_label: "Property Filters"
     label: "Active Filter"
     type: yesno
     sql: ${TABLE}.active_fl = 'Y' ;;
   }
 
   filter: mih_eligible {
-    group_label: "Property Filters"
     label: "MIH Eligible Filter"
     type: yesno
     sql: ${TABLE}.mih_eligible_fl = 'Y' ;;

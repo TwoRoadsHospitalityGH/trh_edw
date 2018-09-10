@@ -32,7 +32,6 @@ view: date_month_dm {
   #
 
   filter: current_period_wtd {
-    group_label: "Calendar Filters"
     label: "Current Week"
     description: "Within the current week."
     type: yesno
@@ -41,7 +40,6 @@ view: date_month_dm {
   }
 
   filter: current_period_mtd {
-    group_label: "Calendar Filters"
     label: "Current Month"
     description: "Within the current month."
     type: yesno
@@ -50,7 +48,6 @@ view: date_month_dm {
   }
 
   filter: current_period_qtd {
-    group_label: "Calendar Filters"
     label: "QTD"
     description: "Quarter-to-Date."
     type: yesno
@@ -59,7 +56,6 @@ view: date_month_dm {
   }
 
   filter: current_period_ytd {
-    group_label: "Calendar Filters"
     label: "YTD"
     description: "Year-to-Date."
     type: yesno
@@ -68,7 +64,6 @@ view: date_month_dm {
   }
 
   filter: two_months_prior {
-    group_label: "Calendar Filters"
     label: "Prior Month"
     description: "Prior month."
     type: yesno
