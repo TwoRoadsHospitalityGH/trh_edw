@@ -40,16 +40,18 @@ view: date_month_dm {
   }
 
   dimension: quarter_of_year {
+    type: date_quarter_of_year
     group_label: "Date"
     label: "Quarter of Year"
-#     convert_tz: no
+    convert_tz: no
     sql: ${TABLE}.cal_month_dt ;;
   }
 
   dimension: year {
+    type: date_year
     group_label: "Date"
     label: "Year"
-#     convert_tz: no
+    convert_tz: no
     sql: ${TABLE}.cal_month_dt ;;
   }
 
