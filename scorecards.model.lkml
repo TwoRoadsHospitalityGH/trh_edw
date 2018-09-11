@@ -39,7 +39,7 @@ explore: mm_property_kpi_f {
   }
 
   join: date_month_dm {
-    view_label: " Date"
+    view_label: "  Date"
     sql_on: ${mm_property_kpi_f.month_date_sid} = ${date_month_dm.date_sid} ;;
     type: inner
     relationship: one_to_one
@@ -53,7 +53,7 @@ explore: mm_property_kpi_f {
   }
 
   join: property_dm {
-    view_label: "  Property"
+    view_label: " Property"
     sql_on: ${mm_property_kpi_f.property_key} = ${property_dm.property_key} ;;
     type: inner
     relationship: one_to_one
