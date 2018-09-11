@@ -64,7 +64,7 @@ view: property_metric_goal_dm {
     label: "Goal"
     type: number
     sql: ${goal_val_base};;
-    hidden: no
+    hidden: yes
     value_format_name: percent_1
     html: {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1' %}
             {{ rendered_value }}
