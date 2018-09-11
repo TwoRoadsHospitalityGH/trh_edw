@@ -17,7 +17,7 @@ view: performance_metric_dm {
   }
 
   measure:  value_format_str_m {
-    type: average
+    type: max
     sql: ${TABLE}.value_format_str ;;
     hidden:  yes
   }

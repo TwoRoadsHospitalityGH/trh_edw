@@ -31,7 +31,7 @@ view: kpi_classification_dm {
 
   measure: class_cd {
     label: "Classification Code"
-    type: average
+    type: max
     sql: ${TABLE}.class_cd ;;
     hidden: yes
   }

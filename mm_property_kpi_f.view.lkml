@@ -46,7 +46,7 @@ view: mm_property_kpi_f {
     label: "Calculation"
     description: "Metric calculation."
     type: string
-    sql: avg(${TABLE}.kpi_calc_dscr) ;;
+    sql: max(${TABLE}.kpi_calc_dscr) ;;
     hidden: no
     }
 
