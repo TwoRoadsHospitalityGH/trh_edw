@@ -11,22 +11,54 @@ view: date_month_dm {
       hidden: yes
     }
 
-  dimension_group: Month {
-    type: time
-    label: ""
-    timeframes: [
-       month
-      ,month_num
-      ,month_name
-      ,quarter
-      ,quarter_of_year
-      ,year
-      ]
+    dimension: month {
+      type: date_month
+      group_label: "Date"
+      label: "Month"
+      convert_tz: no
+      sql: ${TABLE}.cal_month_dt ;;
+      }
+
+  dimension: month_num {
+    type: date_month_num
+    group_label: "Date"
+    label: "Month Number"
     convert_tz: no
-    datatype: date
     sql: ${TABLE}.cal_month_dt ;;
-    drill_fields: [property_dm.property_ds*]
   }
+
+  dimension: month_name {
+    type: date_month_name
+    group_label: "Date"
+    label: "Month Name"
+    convert_tz: no
+    sql: ${TABLE}.cal_month_dt ;;
+  }
+
+  dimension: quarter {
+    type: date_quarter
+    group_label: "Date"
+    label: "Quarter"
+    convert_tz: no
+    sql: ${TABLE}.cal_month_dt ;;
+  }
+
+  dimension: quarter_of_year {
+    type: date_quarter_of_year
+    group_label: "Date"
+    label: "Quarter of Year"
+    convert_tz: no
+    sql: ${TABLE}.cal_month_dt ;;
+  }
+
+  dimension: year {
+    type: date_year
+    group_label: "Date"
+    label: "Year"
+    convert_tz: no
+    sql: ${TABLE}.cal_month_dt ;;
+  }
+
   #
   # restrict to up through prior month
   #
