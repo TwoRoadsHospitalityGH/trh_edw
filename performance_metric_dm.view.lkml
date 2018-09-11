@@ -19,7 +19,7 @@ view: performance_metric_dm {
   measure:  value_format_str_m {
     type: max
     sql: ${TABLE}.value_format_str ;;
-    hidden:  no
+    hidden:  yes
   }
 
   dimension:  value_format_str {
