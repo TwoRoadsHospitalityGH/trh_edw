@@ -77,7 +77,7 @@ view: performance_metric_dm {
     description: "Exceeding above goal."
     type: string
     sql: ${TABLE}.goal_exceed_rule_dscr ;;
-    hidden: yes
+    hidden: no
     value_format:"0.0\%"
     html: <div style="color: black; background-color: #63BE7B; font-size:100%; text-align:center">{{ rendered_value }}</div>;;
   }
@@ -87,7 +87,7 @@ view: performance_metric_dm {
     description: "Perfoming above goal."
     type: string
     sql: ${TABLE}.goal_above_rule_dscr ;;
-    hidden: yes
+    hidden: no
     html: <div style="color: black; background-color: #C3DA81; font-size:100%; text-align:center">{{ rendered_value }}</div>;;
   }
 
@@ -96,7 +96,7 @@ view: performance_metric_dm {
     description: "Performing below goal."
     type: string
     sql: ${TABLE}.goal_below_rule_dscr ;;
-    hidden: yes
+    hidden: no
     html: <div style="color: black; background-color: #FDD27F; font-size:100%; text-align:center">{{ rendered_value }}</div>;;
   }
 
@@ -105,7 +105,7 @@ view: performance_metric_dm {
     description: "At risk."
     type: string
     sql: ${TABLE}.goal_atrisk_rule_dscr ;;
-    hidden: yes
+    hidden: no
     html: <div style="color: black; background-color: #F87B6E; font-size:100%; text-align:center">{{ rendered_value }}</div>;;
   }
 
