@@ -43,7 +43,7 @@ view: property_metric_goal_dm {
     type: number
     sql: ${goal_val_base} ;;
     value_format_name:decimal_1
-    hidden: no
+    hidden: yes
   }
 
   measure: goal_val_d2  {
@@ -80,21 +80,21 @@ view: property_metric_goal_dm {
     type: number
     sql: ${TABLE}.goal ;;
     value_format_name:decimal_1
-    hidden: no
+    hidden: yes
   }
 
   dimension: goal_val_d1_d  {
     type: number
     sql: ${goal_val_base_d} ;;
     value_format_name:decimal_1
-    hidden: no
+    hidden: yes
   }
 
   dimension: goal_val_d2_d  {
     type: number
     sql: ${goal_val_base_d} ;;
     value_format_name:decimal_2
-    hidden: no
+    hidden: yes
   }
 
   dimension: goal  {
@@ -208,21 +208,21 @@ view: property_metric_goal_dm {
   type: number
   sql: ${TABLE}.below_goal ;;
   value_format_name:decimal_1
-  hidden: no
+  hidden: yes
 }
 
 dimension: below_goal_val_d1_d  {
   type: number
   sql: ${below_goal_val_base_d} ;;
   value_format_name:decimal_1
-  hidden: no
+  hidden: yes
 }
 
 dimension: below_goal_val_d2_d  {
   type: number
   sql: ${below_goal_val_base_d} ;;
   value_format_name:decimal_2
-  hidden: no
+  hidden: yes
 }
 
 dimension: below_goal  {
