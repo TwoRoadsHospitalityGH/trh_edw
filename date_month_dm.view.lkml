@@ -31,14 +31,6 @@ view: date_month_dm {
   # restrict to up through prior month
   #
 
-  filter: current_period_wtd {
-    label: "Current Week"
-    description: "Within the current week."
-    type: yesno
-    sql: ${cal_dt} < current_date() and date_trunc( week, ${cal_dt} ) = date_trunc( week, dateadd( day, -1, current_date() ) );;
-    hidden: no
-  }
-
   filter: current_period_mtd {
     label: "Current Month"
     description: "Within the current month."
