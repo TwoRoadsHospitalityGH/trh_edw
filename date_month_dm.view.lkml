@@ -69,7 +69,7 @@ view: date_month_dm {
     label: "QTD"
     description: "Quarter-to-Date."
     type: yesno
-    sql: ${cal_dt} < date_trunc( month, current_date() ) and date_trunc( quarter, ${cal_dt} ) = date_trunc( quarter, dateadd( day, -1, current_date() ) );;
+    sql: ${cal_dt} < date_trunc( month, dateadd( day, -1, current_date() ) ) and date_trunc( quarter, ${cal_dt} ) = date_trunc( quarter, dateadd( month, -1, current_date() ) );;
     hidden: no
   }
 
@@ -77,7 +77,7 @@ view: date_month_dm {
     label: "YTD"
     description: "Year-to-Date."
     type: yesno
-    sql: ${cal_dt} < date_trunc( month, current_date() ) and date_trunc( year, ${cal_dt} ) = date_trunc( year, dateadd( day, -1, current_date() ) );;
+    sql: ${cal_dt} < date_trunc( month, dateadd( day, -1, current_date() ) ) and date_trunc( year, ${cal_dt} ) = date_trunc( year, dateadd( month, -1, current_date() ) );;
     hidden: no
   }
 
