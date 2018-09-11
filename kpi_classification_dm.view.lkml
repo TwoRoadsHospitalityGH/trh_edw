@@ -29,9 +29,9 @@ view: kpi_classification_dm {
     order_by_field: class_sort_no
   }
 
-    measure: class_cd {
+  measure: class_cd {
     label: "Classification Code"
-    type: max
+    type: average
     sql: ${TABLE}.class_cd ;;
     hidden: yes
   }

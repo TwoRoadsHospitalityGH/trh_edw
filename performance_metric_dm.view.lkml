@@ -17,7 +17,7 @@ view: performance_metric_dm {
   }
 
   measure:  value_format_str_m {
-    type: max
+    type: average
     sql: ${TABLE}.value_format_str ;;
     hidden:  yes
   }
@@ -38,7 +38,7 @@ view: performance_metric_dm {
   }
 
   measure: goal_exceed_val_m{
-    type: max
+    type: average
     value_format: "0%"
     sql:${TABLE}.goal_exceed_val ;;
     hidden: yes
@@ -52,7 +52,7 @@ view: performance_metric_dm {
   }
 
   measure: goal_above_val_m{
-    type: max
+    type: average
     value_format: "0%"
     sql: ${TABLE}.goal_above_val ;;
     hidden: yes
@@ -66,7 +66,7 @@ view: performance_metric_dm {
   }
 
   measure: goal_below_val_m{
-    type: max
+    type: average
     value_format: "0%"
     sql:${TABLE}.goal_below_val ;;
     hidden: yes
