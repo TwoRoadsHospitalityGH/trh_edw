@@ -7,11 +7,18 @@ view: property_dm {
     hidden: no
   }
 
+  dimension: property_name_sort {
+    type: string
+    sql: ${TABLE}.property_name_sort  ;;
+    hidden: yes
+  }
+
   dimension: property_name {
     label: "Property Name"
     type: string
     sql: ${TABLE}.PROPERTY_NAME ;;
     drill_fields: [property_ds*]
+    order_by_field: property_name_sort
 
     link: {
       label: "Website"
