@@ -75,7 +75,7 @@ view: mm_property_kpi_f {
   }
 
   measure: amt_prev {
-    view_label: "1a - % Previous"
+    view_label: "  % Previous"
     group_label: "% Previous"
     label: "Properties"
     description: "Percent to previous value."
@@ -86,7 +86,7 @@ view: mm_property_kpi_f {
   }
 
   measure: amt_pttl {
-    view_label: "1b - % Total"
+    view_label: "  % Total"
     group_label: "% Total"
     label: "Properties"
     description: "Percent of total value."
