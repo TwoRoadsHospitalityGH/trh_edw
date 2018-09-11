@@ -66,6 +66,7 @@ view: mm_property_kpi_f {
   }
 
   measure: property_cnt_pct {
+    label: "Percent of Properties"
     description: "Percent of properties."
     type: number
     sql: ${property_cnt} / ${property_cnt_over_kpi} ;;
@@ -73,6 +74,48 @@ view: mm_property_kpi_f {
     hidden: no
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
   }
+
+  measure: property_goal_cnt {
+    label: "Properties (Goal)"
+    description: "Count of distinct properties with goals."
+    type: count_distinct
+    sql: iff( ${property_metric_goal_dm.status_cd} = 'NA', to_number(NULL), ${property_key}) ;;
+    value_format: "0"
+    hidden: no
+  }
+
+  measure: property_cnt_over_goal {
+    type: number
+    sql: sum( ${property_goal_cnt} ) over( partition by ${performance_metric_dm.metric_name}, ${property_dm.evp_full_last_first} ) ;;
+    hidden: yes
+  }
+
+  measure: property_goal_cnt_pct {
+    label: "Percent of Properties (Goal)"
+    description: "Percent of properties."
+    type: number
+    sql: ${property_cnt} / ${property_cnt_over_goal} ;;
+    value_format_name: percent_1
+    hidden: no
+    html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
+  }
+
+#   measure: property_cnt_over_above_goal {
+#     type: number
+#     sql: sum( ${property_cnt} ) over( partition by ${kpi_classification_dm.class_name} ) ;;
+#     hidden: yes
+#     required_fields:[kpi_classification_dm.class_name]
+#   }
+#
+#   measure: property_above_goal_cnt_pct {
+#     label: "Percent of Properties (Above Goal)"
+#     description: "Percent of properties."
+#     type: number
+#     sql: ${property_cnt} / ${property_cnt_over_kpi} ;;
+#     value_format_name: percent_1
+#     hidden: no
+#     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
+#   }
 
   measure: amt_prev {
     view_label: "  % Previous"
