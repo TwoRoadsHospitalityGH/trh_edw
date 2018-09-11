@@ -56,6 +56,7 @@ view: property_dm {
   }
 
   dimension: state_province_cd {
+    label: "State/Providence Code"
     type: string
     sql: ${TABLE}.STATE_PROVINCE_CD ;;
   }
@@ -66,6 +67,7 @@ view: property_dm {
   }
 
   dimension: zip_cd {
+    label: "Zip Code"
     type: string
     sql: ${TABLE}.ZIP_CD ;;
   }
@@ -110,12 +112,13 @@ view: property_dm {
   }
 
   dimension: evp_full_last_first {
-    label: "Ops Leader Name"
+    label: "Regional Ops Leader Name"
     type: string
     sql: ${TABLE}.evp_full_last_first ;;
   }
 
   dimension: phone_no {
+    label: "Phone Number"
     type: string
     sql: ${TABLE}.PHONE_NO ;;
   }
@@ -126,11 +129,13 @@ view: property_dm {
   }
 
   dimension: opening_dt {
+    label: "Opening Date"
     type: date
     sql: ${TABLE}.opening_dt ;;
   }
 
   dimension: transition_dt {
+    label: "Transition Date"
     type: date
     sql: ${TABLE}.transition_dt ;;
   }
@@ -138,64 +143,70 @@ view: property_dm {
   dimension: same_store_financial_fl {
     label: "Same Store Financial"
     type: yesno
-    sql: ${TABLE}.same_store_financial_fl = 'Y' ;;
+    sql: ${TABLE}.same_store_financial_bt = 1 ;;
   }
 
   dimension: same_store_revenue_fl {
     label: "Same Store Revenue"
     type: yesno
-    sql: ${TABLE}.same_store_revenue_fl = 'Y' ;;
+    sql: ${TABLE}.same_store_revenue_bt = 1 ;;
   }
 
   dimension: closed_fl {
     label: "Closed"
     type: yesno
-    sql: ${TABLE}.closed_fl = 'Y' ;;
+    sql: ${TABLE}.closed_bt = 1 ;;
   }
 
   dimension: active_fl {
     label: "Active"
     type: yesno
-    sql: ${TABLE}.active_fl = 'Y' ;;
+    sql: ${TABLE}.active_bt = 1 ;;
   }
 
   dimension: mih_eligible_fl {
     label: "MIH Eligible"
     type: yesno
-    sql: ${TABLE}.mih_eligible_fl = 'Y' ;;
+    sql: ${TABLE}.mih_eligible_bt = 1 ;;
   }
 
 
  #   filters
 
   filter: same_store_financial {
-    label: "Same Store Financial Filter"
+    label: "Same Store Financial"
     type: yesno
-    sql: ${TABLE}.same_store_financial_fl = 'Y' ;;
+    sql: ${TABLE}.same_store_financial_bt = 1 ;;
   }
 
   filter: same_store_revenue {
-    label: "Same Store Revenue Filter"
+    label: "Same Store Revenue"
     type: yesno
-    sql: ${TABLE}.same_store_revenue_fl = 'Y' ;;
+    sql: ${TABLE}.same_store_revenue_bt = 1 ;;
   }
 
   filter: closed {
-    label: "Closed Filter"
+    label: "Closed"
     type: yesno
-    sql: ${TABLE}.closed_fl = 'Y' ;;
+    sql: ${TABLE}.closed_bt = 1 ;;
   }
 
   filter: active {
-    label: "Active Filter"
+    label: "Active"
     type: yesno
-    sql: ${TABLE}.active_fl = 'Y' ;;
+    sql: ${TABLE}.active_bt = 1 ;;
   }
 
   filter: mih_eligible {
-    label: "MIH Eligible Filter"
+    label: "MIH Eligible"
     type: yesno
-    sql: ${TABLE}.mih_eligible_fl = 'Y' ;;
+    sql: ${TABLE}.mih_eligible_bt = 1 ;;
+  }
+
+  filter: gl_entity_bt {
+    label: "GL Entity"
+    type: yesno
+    sql: ${TABLE}.gl_entity_bt = 1 ;;
   }
 
   #--------------
