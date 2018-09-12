@@ -29,7 +29,7 @@ view: property_metric_goal_dm {
   dimension: status_cd  {
     type: string
     sql: ${TABLE}.status_cd ;;
-    hidden: yes
+    hidden: no
   }
 
   measure: goal_val_base  {
