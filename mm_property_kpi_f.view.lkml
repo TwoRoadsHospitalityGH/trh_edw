@@ -76,7 +76,7 @@ view: mm_property_kpi_f {
   }
 
   measure: property_goal_cnt {
-    label: "Properties (Goal)"
+    label: "Regional Ops Leader Properties"
     description: "Count of distinct properties with goals."
     type: count_distinct
     sql: iff( ${property_metric_goal_dm.status_cd} = 'NA', to_number(NULL), ${property_key}) ;;
@@ -91,7 +91,7 @@ view: mm_property_kpi_f {
   }
 
   measure: property_goal_cnt_pct {
-    label: "Percent of Properties (Goal)"
+    label: "Percent of Regional Ops Leader Properties"
     description: "Percent of properties."
     type: number
     sql: ${property_cnt} / ${property_cnt_over_goal} ;;
