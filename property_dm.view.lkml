@@ -119,9 +119,15 @@ view: property_dm {
   }
 
   dimension: evp_full_last_first {
-    label: "Regional Ops Leader Name"
+    label: "Regional Operations Leader"
     type: string
-    sql: ${TABLE}.evp_full_last_first ;;
+    sql: ${TABLE}.regional_ops_ldr_full_name ;;
+  }
+
+  dimension: regional_fnc_ldr_full_name {
+    label: "Regional Finance Leader"
+    type: string
+    sql: ${TABLE}.regional_fnc_ldr_full_name ;;
   }
 
   dimension: phone_no {
