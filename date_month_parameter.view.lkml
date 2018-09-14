@@ -11,13 +11,7 @@ view: date_month_parameter {
   dimension: date_sid {
     type: string
     sql: ${TABLE}.date_sid ;;
-    hidden: no
-  }
-
-  dimension: cal_dt {
-    type: string
-    sql: ${TABLE}.cal_dt ;;
-    hidden: no
+    hidden: yes
   }
 
   parameter: available_months {
@@ -39,11 +33,4 @@ view: date_month_parameter {
 
   }
 
-  dimension: as_of_month {
-    type: string
-    sql:  utl..udf_lkrp_month_dt( {% parameter available_months %} ) ;;
-  }
-
  }
-
-# where   cal_dt = {% as_of_month %}
