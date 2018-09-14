@@ -3,7 +3,7 @@ view: date_month_parameter {
    sql:
       select  date_sid
       from    pedw.fact.date_dm
-      WHERE
+      where
         pedw.fact.date_dm.cal_dt =  utl..udf_lkrp_month_dt( {% parameter available_months %} )
       ;;
   }
