@@ -13,21 +13,24 @@ explore: mm_property_kpi_f {
   label: "Performance Metrics"
   persist_with: model_caching_dg
   view_label: "    Measures"
+  access_filter: {
+     field: user_property_fdm.user_id
+     user_attribute: atmp_userid
+   }
+
   always_filter: {
     filters: {
       field: period_type_dm.period_type_name
       value: "YTD"
       }
-#     filters: {
-#       field: date_dm.cal_month_dt
-#     }
   }
 
-
-#   access_filter: {
-#     field: property_dm.property_key
-#     user_attribute: property_access
-#   }
+  join: user_property_fdm {
+    view_label: " Property"
+    sql_on: ${user_property_fdm.property_key} = ${mm_property_kpi_f.property_key} ;;
+    type: inner
+    relationship: many_to_one
+  }
 
   join: performance_metric_dm {
     view_label: "Metric"
