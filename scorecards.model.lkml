@@ -45,6 +45,13 @@ explore: mm_property_kpi_f {
     relationship: one_to_one
   }
 
+  join: date_month_parameter{
+    view_label: "  Date"
+    sql_on: ${date_month_dm.date_sid} = ${date_month_parameter.date_sid} ;;
+    type: inner
+    relationship: one_to_one
+  }
+
   join: period_type_dm {
     view_label: "Aggregation Type"
     sql_on: ${period_type_dm.period_type_shk} = ${mm_property_kpi_f.period_type_shk} ;;

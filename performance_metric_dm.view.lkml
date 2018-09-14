@@ -147,9 +147,17 @@ view: performance_metric_dm {
 
   filter: gs_rpt_bt{
     label: "Guest Metric"
-    description: "Is included within guest scorecard."
+    description: "Is included within guest metrics."
     type: yesno
     sql: ${TABLE}.gs_rpt_bt = 1  ;;
+    hidden: no
+  }
+
+  filter: ms_rpt_bt{
+    label: "Meeting Metric"
+    description: "Is included within meeting metrics."
+    type: yesno
+    sql: ${TABLE}.ms_rpt_bt = 1  ;;
     hidden: no
   }
 

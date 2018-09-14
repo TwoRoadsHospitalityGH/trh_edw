@@ -11,11 +11,22 @@ view: date_month_dm {
       hidden: yes
     }
 
+  dimension: cal_month_dt {
+    sql: ${TABLE}.cal_month_dt ;;
+    hidden: yes
+  }
+
+#    dimension: month_test {
+#     type: string
+#     label: "Test"
+#     sql: utl..udf_lkrp_month_dt( 'prior' ) ;;
+# }
+
   dimension: month {
     type: date_month
     label: "Month"
     convert_tz: no
-    sql: ${TABLE}.cal_month_dt ;;
+    sql: ${cal_month_dt} ;;
     allow_fill: no
   }
 
@@ -23,7 +34,7 @@ view: date_month_dm {
     type: date_month_num
     label: "Month Number"
     convert_tz: no
-    sql: ${TABLE}.cal_month_dt ;;
+    sql: ${cal_month_dt} ;;
     allow_fill: no
   }
 
@@ -31,7 +42,7 @@ view: date_month_dm {
     type: date_month_name
     label: "Month Name"
     convert_tz: no
-    sql: ${TABLE}.cal_month_dt ;;
+    sql: ${cal_month_dt} ;;
     allow_fill: no
   }
 
@@ -39,7 +50,7 @@ view: date_month_dm {
     type: date_quarter
     label: "Quarter"
     convert_tz: no
-    sql: ${TABLE}.cal_month_dt ;;
+    sql: ${cal_month_dt} ;;
     allow_fill: no
   }
 
@@ -47,7 +58,7 @@ view: date_month_dm {
     type: date_quarter_of_year
     label: "Quarter of Year"
     convert_tz: no
-    sql: ${TABLE}.cal_month_dt ;;
+    sql: ${cal_month_dt} ;;
     allow_fill: no
   }
 
@@ -55,9 +66,15 @@ view: date_month_dm {
     type: date_year
     label: "Year"
     convert_tz: no
-    sql: ${TABLE}.cal_month_dt ;;
+    sql: ${cal_month_dt} ;;
     allow_fill: no
   }
+
+  dimension: month_name_year {
+    sql: concat(concat(${month_name}, ', '),  ${year}) ;;
+
+  }
+
 
   #
   # restrict to up through prior month
