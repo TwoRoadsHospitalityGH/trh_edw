@@ -1,10 +1,13 @@
 view: date_month_parameter {
   derived_table: {
    sql:
-      select  date_sid
-      from    pedw.fact.date_dm
-      where
-        pedw.fact.date_dm.cal_dt =  utl..udf_lkrp_month_dt( {% parameter available_months %} )
+
+  select
+     date_sid
+    ,cal_dt
+  from
+    table( utl..udtf_period_date_dm( {% parameter available_months %} ) )
+
       ;;
   }
 
@@ -16,8 +19,11 @@ view: date_month_parameter {
 
   parameter: available_months {
     type: string
-    allowed_value: {label: "Prior Month" value: "prior"}
-    allowed_value: {label: "Current Month" value: "current"}
+    allowed_value: {label: "Prior Month" value: "prior_month"}
+    allowed_value: {label: "Current Month" value: "current_month"}
+    allowed_value: {label: "Current Year" value: "current_year"}
+    allowed_value: {label: "Current Week" value: "current_week"}
+    allowed_value: {label: "Current Quarter" value: "current_quarter"}
     allowed_value: {label: "January" value: "jan"}
     allowed_value: {label: "Febraury" value: "feb"}
     allowed_value: {label: "March" value: "mar"}
