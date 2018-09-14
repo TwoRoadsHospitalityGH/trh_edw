@@ -20,6 +20,7 @@ view: date_month_parameter {
   parameter: available_months {
     type: string
     allowed_value: {label: "Prior Month" value: "prior_month"}
+    allowed_value: {label: "Prior Year" value: "prior_year"}
     allowed_value: {label: "Current Month" value: "current_month"}
     allowed_value: {label: "Current Year" value: "current_year"}
     allowed_value: {label: "Current Week" value: "current_week"}
