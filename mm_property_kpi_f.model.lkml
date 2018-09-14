@@ -26,7 +26,6 @@ explore: mm_property_kpi_f {
   }
 
   join: user_property_fdm {
-    view_label: " Property"
     sql_on: ${user_property_fdm.property_key} = ${mm_property_kpi_f.property_key} ;;
     type: inner
     relationship: many_to_one
