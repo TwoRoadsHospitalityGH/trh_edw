@@ -8,7 +8,7 @@ view: period_type_dm {
   }
 
   dimension: period_type_name {
-    label: "Period Type"
+    label: "Mertic Aggregation"
     description: "Period of time to be applied (Month/Year)."
     type: string
     sql: ${TABLE}.period_type_name ;;
