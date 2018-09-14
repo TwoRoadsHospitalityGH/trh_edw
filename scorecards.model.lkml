@@ -28,49 +28,49 @@ explore: mm_property_kpi_f {
     view_label: "Metric"
     sql_on: ${performance_metric_dm.performance_metric_shk} = ${mm_property_kpi_f.performance_metric_shk} ;;
     type: inner
-    relationship: one_to_one
+    relationship: one_to_many
   }
 
   join: kpi_classification_dm {
     view_label: "Scored As"
     sql_on: ${kpi_classification_dm.kpi_class_shk} = ${mm_property_kpi_f.kpi_class_shk} ;;
     type: inner
-    relationship: one_to_one
+    relationship: one_to_many
   }
 
   join: date_month_dm {
     view_label: "  Date"
     sql_on: ${mm_property_kpi_f.month_date_sid} = ${date_month_dm.date_sid} ;;
     type: inner
-    relationship: one_to_one
+    relationship: one_to_many
   }
 
   join: date_month_parameter{
     view_label: "  Date"
     sql_on: ${date_month_dm.date_sid} = ${date_month_parameter.date_sid} ;;
     type: inner
-    relationship: one_to_one
+    relationship: one_to_many
   }
 
   join: period_type_dm {
     view_label: "Aggregation Type"
     sql_on: ${period_type_dm.period_type_shk} = ${mm_property_kpi_f.period_type_shk} ;;
     type: inner
-    relationship: one_to_one
+    relationship: one_to_many
   }
 
   join: property_dm {
     view_label: " Property"
     sql_on: ${mm_property_kpi_f.property_key} = ${property_dm.property_key} ;;
     type: inner
-    relationship: one_to_one
+    relationship: one_to_many
   }
 
   join: property_metric_goal_dm {
     view_label: "Goal"
     sql_on: ${property_metric_goal_dm.property_metric_goal_shk} = ${mm_property_kpi_f.property_metric_goal_shk} ;;
     type: inner
-    relationship: one_to_one
+    relationship: one_to_many
   }
 
 }
