@@ -3,10 +3,15 @@ connection: "edw"
 include: "*.view"         # include all views in this project
 # include: "*.dashboard.lookml"  # include all dashboards in this project
 
+datagroup: model_caching_dg {
+  sql_trigger: select max( dw_update_dt ) from pedw.fact.mm_property_kpi_f ;;
+  max_cache_age: "8 hours"
+}
+
 explore: mm_property_kpi_f {
   group_label: "Portfolio"
   label: "Performance Metrics"
-  persist_for: "0 minutes"
+  persist_with: model_caching_dg
   view_label: "    Measures"
   always_filter: {
     filters: {
