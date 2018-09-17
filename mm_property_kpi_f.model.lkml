@@ -13,10 +13,10 @@ explore: mm_property_kpi_f {
   label: "Performance Metrics"
   persist_with: model_caching_dg
   view_label: "    Measures"
-  access_filter: {
-     field: user_property_fdm.user_id
-     user_attribute: atmp_userid
-   }
+#   access_filter: {
+#      field: user_property_fdm.user_id
+#      user_attribute: atmp_userid
+#    }
 
   always_filter: {
     filters: {
