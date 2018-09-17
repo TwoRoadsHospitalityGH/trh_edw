@@ -20,9 +20,9 @@ view: date_month_parameter {
   parameter: available_months {
     type: string
     allowed_value: {label: "Prior Month" value: "prior_month"}
+    allowed_value: {label: "Prior Month Last Year" value: "ly_prior_month"}
     allowed_value: {label: "Current Month" value: "current_month"}
     allowed_value: {label: "Current Month Last Year" value: "ly_current_month"}
-    allowed_value: {label: "Prior Month Last Year" value: "ly_prior_month"}
     allowed_value: {label: "January" value: "jan"}
     allowed_value: {label: "Febraury" value: "feb"}
     allowed_value: {label: "March" value: "mar"}
