@@ -10,14 +10,14 @@ datagroup: model_caching_dg {
 
 explore: mm_property_kpi_f {
   group_label: "Portfolio"
-  label: "Performance Metrics -Old"
+  label: "Performance Metrics"
   persist_with: model_caching_dg
   view_label: "    Measures"
   always_filter: {
     filters: {
       field: period_type_dm.period_type_name
       value: "YTD"
-      }
+    }
 #     filters: {
 #       field: date_dm.cal_month_dt
 #     }

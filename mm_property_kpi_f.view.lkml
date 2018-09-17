@@ -100,6 +100,33 @@ view: mm_property_kpi_f {
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
   }
 
+  measure: property_finance_cnt {
+    label: "Regional Finance Leader Properties"
+    description: "Count of distinct properties with goals."
+    type: count_distinct
+    sql: iff( ${property_metric_goal_dm.status_cd} = 'NA', to_number(NULL), ${property_key}) ;;
+    value_format: "0"
+    hidden: no
+  }
+
+  measure: property_cnt_over_finance_oal {
+    type: number
+    sql: sum( ${property_goal_cnt} ) over( partition by ${performance_metric_dm.metric_name}, ${property_dm.regional_fnc_ldr_full_name} ) ;;
+    hidden: yes
+  }
+
+  measure: property_goal_cnt_pct_fin {
+    label: "Percent of Regional Finance Leader Properties"
+    description: "Percent of properties."
+    type: number
+    sql: ${property_cnt} / ${property_cnt_over_finance_oal} ;;
+    value_format_name: percent_1
+    hidden: no
+    html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
+  }
+
+
+
 #   measure: property_cnt_over_above_goal {
 #     type: number
 #     sql: sum( ${property_cnt} ) over( partition by ${kpi_classification_dm.class_name} ) ;;
