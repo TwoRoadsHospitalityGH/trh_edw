@@ -16,12 +16,6 @@ view: date_month_dm {
     hidden: yes
   }
 
-#    dimension: month_test {
-#     type: string
-#     label: "Test"
-#     sql: utl..udf_lkrp_month_dt( 'prior' ) ;;
-# }
-
   dimension: month {
     type: date_month
     label: "Month"
@@ -71,10 +65,9 @@ view: date_month_dm {
   }
 
   dimension: month_name_year {
-    sql: concat(concat(${month_name}, ', '),  ${year}) ;;
+    sql: concat(concat(concat(concat(${month_name}, ', '),  ${year}), ' - '), ${period_type_dm.period_type_name}) ;;
 
   }
-
 
   #
   # restrict to up through prior month
