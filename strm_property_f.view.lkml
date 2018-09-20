@@ -18,7 +18,9 @@ view: strm_property_f {
 
 # measures
 
+  #--------------------------------------------------------------------------------
   #-- property
+  #--------------------------------------------------------------------------------
   measure: property_cnt {
     group_label: " Property"
     label: "Properties"
@@ -172,7 +174,7 @@ view: strm_property_f {
     value_format_name: percent_1
   }
 
-  measure: property_occ_index_prev_pct {
+  measure: property_occ_index_pct_prev {
     view_label: "  % Previous"
     label: "Pr Index Occupancy %Prev"
     description: "Pr Occupancy Rate / Cs Occupancy Rate"
@@ -190,7 +192,7 @@ view: strm_property_f {
     value_format_name: percent_1
   }
 
-  measure: property_adr_index_prev_pct {
+  measure: property_adr_index_pct_prev {
     view_label: "  % Previous"
     label: "Pr Index ADR %Prev"
     description: "Pr ADR / Cs ADR"
@@ -208,7 +210,7 @@ view: strm_property_f {
     value_format_name: percent_1
   }
 
-  measure: property_revpar_index_prev_pct {
+  measure: property_revpar_index_pct_prev {
     view_label: "  % Previous"
     label: "Pr Index RevPAR %Prev"
     description: "Pr RevPAR / Cs RevPAR"
@@ -217,7 +219,9 @@ view: strm_property_f {
     value_format: "0.0\%"
   }
 
+  #--------------------------------------------------------------------------------
   #-- compset
+  #--------------------------------------------------------------------------------
   measure: compset_rev_amt {
     group_label: "Compset"
     label: "Cs Rev $"
