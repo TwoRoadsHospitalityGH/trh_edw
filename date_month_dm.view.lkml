@@ -1,15 +1,15 @@
 view: date_month_dm {
   sql_table_name: pedw.fact.date_dm ;;
 
-    dimension: date_sid {
+ dimension: date_sid {
       sql:  ${TABLE}.DATE_SID ;;
       hidden: yes
-    }
+  }
 
-    dimension: cal_dt {
+ dimension: cal_dt {
       sql: ${TABLE}.cal_dt ;;
       hidden: yes
-    }
+  }
 
   dimension: cal_month_dt {
     sql: ${TABLE}.cal_month_dt ;;
@@ -104,23 +104,5 @@ view: date_month_dm {
     sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
     hidden: no
   }
-
-# note: this filter is intended to be used with the ytd filter
-
-  # or other date filter to isolate a year and provide a view of
-  # months and ytd value based on the current date
-  filter: monthly_plus_ytd {
-    group_label: "Calendar Filters"
-    label: "Monthly + YTD"
-    description: "TBD"
-    type: yesno
-    sql: (    month( ${cal_dt} ) <= month( current_date() )
-          and period_type_dm.period_type_cd = 'month'
-         )
-      or (    month( ${cal_dt} ) = month( current_date() )
-          and period_type_dm.period_type_cd = 'year'
-         );;
-  }
-
 
 }

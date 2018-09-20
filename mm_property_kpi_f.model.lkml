@@ -26,6 +26,7 @@ explore: mm_property_kpi_f {
     }
   }
 
+
   join: performance_metric_dm {
     view_label: "Metric"
     sql_on: ${performance_metric_dm.performance_metric_shk} = ${mm_property_kpi_f.performance_metric_shk} ;;
