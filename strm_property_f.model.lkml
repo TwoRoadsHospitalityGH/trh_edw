@@ -27,7 +27,7 @@ explore: strm_property_f {
   }
 
   join: date_dm {
-    from: date_dm
+    from: date_month_dm
     view_label: "  Date"
     sql_on: ${date_dm.date_sid} = ${strm_property_f.month_date_sid};;
     type: inner
