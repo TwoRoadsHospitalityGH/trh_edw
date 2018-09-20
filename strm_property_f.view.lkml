@@ -51,8 +51,8 @@ view: strm_property_f {
 
   measure: property_room_rev_amt {
     group_label: " Property"
-    label: "Pr Rev Room $"
-    description: "Property Room Revenue $"
+    label: "Pr Rev Rooms $"
+    description: "Property Rooms Revenue $"
     type: sum
     sql: ${TABLE}.property_room_rev_amt ;;
     value_format_name: usd_0
@@ -61,8 +61,8 @@ view: strm_property_f {
 
   measure: property_room_group_rev_amt {
     group_label: " Property"
-    label: "Pr Rev Room Group $"
-    description: "Property Room Group Revenue $"
+    label: "Pr Rev Rooms Group $"
+    description: "Property Rooms Group Revenue $"
     type: sum
     sql: ${TABLE}.property_room_group_rev_amt ;;
     value_format_name: usd_0
@@ -71,8 +71,8 @@ view: strm_property_f {
 
   measure: property_room_transient_rev_amt {
     group_label: " Property"
-    label: "Pr Rev Room Transient $"
-    description: "Property Room Transient Revenue $"
+    label: "Pr Rev Rooms Transient $"
+    description: "Property Rooms Transient Revenue $"
     type: sum
     sql: ${TABLE}.property_room_transient_rev_amt ;;
     value_format_name: usd_0
@@ -81,8 +81,8 @@ view: strm_property_f {
 
   measure: property_room_contract_rev_amt {
     group_label: " Property"
-    label: "Pr Rev Room Contract $"
-    description: "Property Room Contract Revenue $"
+    label: "Pr Rev Rooms Contract $"
+    description: "Property Rooms Contract Revenue $"
     type: sum
     sql: ${TABLE}.property_room_Contract_rev_amt ;;
     value_format_name: usd_0
@@ -91,8 +91,8 @@ view: strm_property_f {
 
   measure: property_room_other_rev_amt {
     group_label: " Property"
-    label: "Pr Rev Room Other $"
-    description: "Property Room Other Revenue $"
+    label: "Pr Rev Rooms Other $"
+    description: "Property Rooms Other Revenue $"
     type: sum
     sql: ${TABLE}.property_room_other_rev_amt ;;
     value_format_name: usd_0
@@ -262,8 +262,8 @@ view: strm_property_f {
 
   measure: compset_room_rev_amt {
     group_label: "Compset"
-    label: "Cs Rev Room $"
-    description: "Compset Room Revenue $"
+    label: "Cs Rev Rooms $"
+    description: "Compset Rooms Revenue $"
     type: sum
     sql: ${TABLE}.compset_room_rev_amt ;;
     value_format_name: usd_0
@@ -272,8 +272,8 @@ view: strm_property_f {
 
   measure: compset_room_group_rev_amt {
     group_label: "Compset"
-    label: "Cs Rev Room Group $"
-    description: "Compset Room Group Revenue $"
+    label: "Cs Rev Rooms Group $"
+    description: "Compset Rooms Group Revenue $"
     type: sum
     sql: ${TABLE}.compset_room_group_rev_amt ;;
     value_format_name: usd_0
@@ -282,8 +282,8 @@ view: strm_property_f {
 
   measure: compset_room_transient_rev_amt {
     group_label: "Compset"
-    label: "Cs Rev Room Transient $"
-    description: "Compset Room Transient Revenue $"
+    label: "Cs Rev Rooms Transient $"
+    description: "Compset Rooms Transient Revenue $"
     type: sum
     sql: ${TABLE}.compset_room_transient_rev_amt ;;
     value_format_name: usd_0
@@ -292,8 +292,8 @@ view: strm_property_f {
 
   measure: compset_room_contract_rev_amt {
     group_label: "Compset"
-    label: "Cs Rev Room Contract $"
-    description: "Compset Room Contract Revenue $"
+    label: "Cs Rev Rooms Contract $"
+    description: "Compset Rooms Contract Revenue $"
     type: sum
     sql: ${TABLE}.compset_room_Contract_rev_amt ;;
     value_format_name: usd_0
@@ -302,8 +302,8 @@ view: strm_property_f {
 
   measure: compset_room_other_rev_amt {
     group_label: "Compset"
-    label: "Cs Rev Room Other $"
-    description: "Compset Room Other Revenue $"
+    label: "Cs Rev Rooms Other $"
+    description: "Compset Rooms Other Revenue $"
     type: sum
     sql: ${TABLE}.compset_room_other_rev_amt ;;
     value_format_name: usd_0

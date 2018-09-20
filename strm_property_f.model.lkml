@@ -13,12 +13,21 @@ explore: strm_property_f {
   label: "STR Monthly"
   persist_with: model_caching_dg
   view_label: "    Measures"
-#   access_filter: {
-#      field: user_property_fdm.user_id
-#      user_attribute: atmp_userid
-#    }
+
+  access_filter: {
+    field: user_property_fdm.user_id
+    user_attribute: atmp_userid
+  }
+
+  join: user_property_fdm {
+    from:  user_property_fdm
+    sql_on: ${user_property_fdm.property_key} = ${strm_property_f.property_key} ;;
+    type: inner
+    relationship: many_to_one
+  }
 
   join: date_dm {
+    from: date_dm
     view_label: "  Date"
     sql_on: ${date_dm.date_sid} = ${strm_property_f.month_date_sid};;
     type: inner
@@ -26,6 +35,7 @@ explore: strm_property_f {
   }
 
   join: date_month_parameter{
+    from:  date_month_parameter
     view_label: "  Date"
     sql_on: ${date_month_parameter.date_sid} = ${strm_property_f.month_date_sid} ;;
     type: inner
@@ -33,6 +43,7 @@ explore: strm_property_f {
   }
 
   join: property_dm {
+    from: property_dm
     view_label: " Property"
     sql_on: ${property_dm.property_key} = ${strm_property_f.property_key} ;;
     type: inner
