@@ -64,11 +64,6 @@ view: date_month_dm {
     allow_fill: no
   }
 
-  dimension: month_name_year {
-    sql: concat(concat(concat(concat(${month_name}, ', '),  ${year}), ' - '), ${period_type_dm.period_type_name}) ;;
-
-  }
-
   #
   # restrict to up through prior month
   #

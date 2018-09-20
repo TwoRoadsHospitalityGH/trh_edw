@@ -1,7 +1,13 @@
 view: mm_property_kpi_f {
   sql_table_name: pedw.fact.mm_property_kpi_f ;;
 
-# Keys
+# filters
+
+  dimension: month_name_year {
+    sql: concat(concat(concat(concat(${date_month_dm.month_name}, ', '),  ${date_month_dm.year}), ' - '), ${period_type_dm.period_type_name}) ;;
+  }
+
+# keys
 
   dimension: month_date_sid {
     type: number

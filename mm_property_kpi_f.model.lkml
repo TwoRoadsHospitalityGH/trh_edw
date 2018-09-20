@@ -1,6 +1,5 @@
 connection: "edw"
 include: "*.view"         # include all views in this project
-# include: "*.dashboard.lookml"  # include all dashboards in this project
 
 label: "Performance Metrics"
 
@@ -43,14 +42,14 @@ explore: mm_property_kpi_f {
 
   join: date_month_dm {
     view_label: "  Date"
-    sql_on: ${mm_property_kpi_f.month_date_sid} = ${date_month_dm.date_sid} ;;
+    sql_on: ${date_month_dm.date_sid} = ${mm_property_kpi_f.month_date_sid}  ;;
     type: inner
     relationship: many_to_one
   }
 
   join: date_month_parameter{
     view_label: "  Date"
-    sql_on: ${date_month_dm.date_sid} = ${date_month_parameter.date_sid} ;;
+    sql_on: ${date_month_parameter.date_sid} = ${mm_property_kpi_f.month_date_sid};;
     type: inner
     relationship: many_to_one
   }
