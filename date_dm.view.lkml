@@ -76,39 +76,44 @@ view: date_dm {
   # restrict to up through prior month
   #
 
+  filter: current_period_mtd {
+    label: "Current Month"
+    description: "Within the current month."
+    type: yesno
+    sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( day, -1, current_date() ) );;
+    hidden: no
+  }
+
+  filter: current_period_qtd {
+    label: "QTD"
+    description: "Quarter-to-Date."
+    type: yesno
+    sql: date_trunc( quarter, ${cal_dt} ) = date_trunc( quarter, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
+    hidden: no
+  }
+
+  filter: current_period_ytd {
+    label: "YTD"
+    description: "Year-to-Date."
+    type: yesno
+    sql: date_trunc( year, ${cal_dt} ) = date_trunc( year, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
+    hidden: no
+  }
+
+  filter: prior_month {
+    label: "Prior Month"
+    description: "Prior month."
+    type: yesno
+    sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
+    hidden: no
+  }
+
   filter: current_period_wtd {
     group_label: "Calendar Filters"
     label: "Current Week"
     description: "Within the current week."
     type: yesno
     sql: ${cal_dt} < current_date() and date_trunc( week, ${cal_dt} ) = date_trunc( week, dateadd( day, -1, current_date() ) );;
-    hidden: no
-  }
-
-  filter: current_period_mtd {
-    group_label: "Calendar Filters"
-    label: "Current Month"
-    description: "Within the current month."
-    type: yesno
-    sql: ${cal_dt} < current_date() and date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( day, -1, current_date() ) );;
-    hidden: no
-  }
-
-  filter: current_period_qtd {
-    group_label: "Calendar Filters"
-    label: "Quarter-to-Date"
-    description: "Quarter of last complete month."
-    type: yesno
-    sql: ${cal_dt} < date_trunc( month, current_date() ) and date_trunc( quarter, ${cal_dt} ) = date_trunc( quarter, dateadd( month, -1, current_date() ) );;
-    hidden: no
-  }
-
-  filter: current_period_ytd {
-    group_label: "Calendar Filters"
-    label: "Year-to-Date"
-    description: "Year of last complete month."
-    type: yesno
-    sql: ${cal_dt} < date_trunc( month, current_date() ) and date_trunc( year, ${cal_dt} ) = date_trunc( year, dateadd( month, -1, current_date() ) );;
     hidden: no
   }
 

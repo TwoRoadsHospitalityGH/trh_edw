@@ -9,8 +9,8 @@ view: mm_property_kpi_f {
   }
 
   measure: month_name_year {
-    sql: concat(concat(concat(concat(${date_month_dm.month_name}, ', '),  ${date_month_dm.year}), ' - '), ${listagg}) ;;
-    required_fields:[date_month_dm.cal_month_dt]
+    sql: concat(concat(concat(concat(${date_dm.month_name}, ', '),  ${date_dm.year}), ' - '), ${listagg}) ;;
+    required_fields:[date_dm.cal_month_dt]
   }
 
 # keys
