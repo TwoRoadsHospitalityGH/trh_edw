@@ -3,17 +3,13 @@ view: mm_property_kpi_f {
 
 # filters
 
-  dimension: listagg {
-    sql: listagg(distinct ${period_type_dm.period_type_name}, '|')  ;;
+  measure: listagg {
+    type: string
+    sql:  listagg(distinct ${period_type_dm.period_type_name}, '|')  ;;
   }
 
-  dimension: month_name_yeartest {
+  measure: month_name_year {
     sql: concat(concat(concat(concat(${date_month_dm.month_name}, ', '),  ${date_month_dm.year}), ' - '), ${listagg}) ;;
-    required_fields:[date_month_dm.cal_month_dt]
-  }
-
-  dimension: month_name_year {
-    sql: concat(concat(concat(concat(${date_month_dm.month_name}, ', '),  ${date_month_dm.year}), ' - '), ${period_type_dm.period_type_name}) ;;
     required_fields:[date_month_dm.cal_month_dt]
   }
 
