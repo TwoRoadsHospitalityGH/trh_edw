@@ -5,7 +5,7 @@ view: mm_property_kpi_f {
 
   measure: listagg {
     type: string
-    sql:  listagg(distinct ${period_type_dm.period_type_name}, '|')  ;;
+    sql:  listagg(distinct ${period_type_dm.period_type_name}, ' | ')  ;;
   }
 
   measure: month_name_year {
