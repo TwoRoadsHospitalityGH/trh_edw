@@ -11,54 +11,70 @@ view: date_dm {
     hidden: yes
   }
 
-#   parameter: date_filter {
-#     type: date_time
-#     allowed_value: {
-#       label: "Last Complete Month"
-#       value: "Last Completed Month"
-#     }
-#
-#     allowed_value: {
-#       label: "Last month"
-#       value: "Last Month"
-#     }
-#
-#     allowed_value: {
-#       label: "Last year"
-#       value: "Last Year"
-#     }
-#   }
+  dimension: cal_month_dt {
+    sql: ${TABLE}.cal_month_dt ;;
+    hidden: yes
+  }
 
-  dimension_group: Calendar {
-    type: time
-    timeframes: [
-      raw
-      ,date
-      ,month
-      ,month_num
-      ,month_name
-      ,quarter
-      ,quarter_of_year
-      ,year
-    ]
+  dimension: date {
+    type: date
+    label: "Date"
     convert_tz: no
-    datatype: date
     sql: ${cal_dt} ;;
-    drill_fields: [property_dm.property_ds*]
+    allow_fill: no
+  }
+
+  dimension: month {
+    type: date_month
+    label: "Month"
+    convert_tz: no
+    sql: ${cal_month_dt} ;;
+    allow_fill: no
+  }
+
+  dimension: month_num {
+    type: date_month_num
+    label: "Month Number"
+    convert_tz: no
+    sql: ${cal_month_dt} ;;
+    allow_fill: no
+  }
+
+  dimension: month_name {
+    type: date_month_name
+    label: "Month Name"
+    convert_tz: no
+    sql: ${cal_month_dt} ;;
+    allow_fill: no
+  }
+
+  dimension: quarter {
+    type: date_quarter
+    label: "Quarter"
+    convert_tz: no
+    sql: ${cal_month_dt} ;;
+    allow_fill: no
+  }
+
+  dimension: quarter_of_year {
+    type: date_quarter_of_year
+    label: "Quarter of Year"
+    convert_tz: no
+    sql: ${cal_month_dt} ;;
+    allow_fill: no
+  }
+
+  dimension: year {
+    type: date_year
+    label: "Year"
+    convert_tz: no
+    sql: ${cal_month_dt} ;;
+    allow_fill: no
   }
 
   #
   # restrict to up through prior month
   #
-
-  dimension: cal_month_dt {
-    group_label: "Calendar Filters"
-    label: "Month"
-    description: "Month."
-    type: string
-    sql: ${TABLE}.cal_month_dt;;
-    hidden: no
-  }
 
   filter: current_period_wtd {
     group_label: "Calendar Filters"
@@ -102,15 +118,6 @@ view: date_dm {
     description: "Last complete month."
     type: yesno
     sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -1, current_date() ) );;
-    hidden: no
-  }
-
-  filter: two_months_prior {
-    group_label: "Calendar Filters"
-    label: "Prior Month"
-    description: "Prior month."
-    type: yesno
-    sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -2, current_date() ) );;
     hidden: no
   }
 

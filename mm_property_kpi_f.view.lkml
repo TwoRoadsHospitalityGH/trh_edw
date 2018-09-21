@@ -3,8 +3,18 @@ view: mm_property_kpi_f {
 
 # filters
 
+  dimension: listagg {
+    sql: listagg(distinct ${period_type_dm.period_type_name}, '|')  ;;
+  }
+
+  dimension: month_name_yeartest {
+    sql: concat(concat(concat(concat(${date_month_dm.month_name}, ', '),  ${date_month_dm.year}), ' - '), ${listagg}) ;;
+    required_fields:[date_month_dm.cal_month_dt]
+  }
+
   dimension: month_name_year {
     sql: concat(concat(concat(concat(${date_month_dm.month_name}, ', '),  ${date_month_dm.year}), ' - '), ${period_type_dm.period_type_name}) ;;
+    required_fields:[date_month_dm.cal_month_dt]
   }
 
 # keys
@@ -130,25 +140,6 @@ view: mm_property_kpi_f {
     hidden: no
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
   }
-
-
-
-#   measure: property_cnt_over_above_goal {
-#     type: number
-#     sql: sum( ${property_cnt} ) over( partition by ${kpi_classification_dm.class_name} ) ;;
-#     hidden: yes
-#     required_fields:[kpi_classification_dm.class_name]
-#   }
-#
-#   measure: property_above_goal_cnt_pct {
-#     label: "Percent of Properties (Above Goal)"
-#     description: "Percent of properties."
-#     type: number
-#     sql: ${property_cnt} / ${property_cnt_over_kpi} ;;
-#     value_format_name: percent_1
-#     hidden: no
-#     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
-#   }
 
   measure: amt_prev {
     view_label: "  % Previous"
