@@ -166,7 +166,7 @@ view: guest_experience_rpt {
     value_format: "0.0\%"
     html:
         {% if value < 0 %}
-        <p style="color: red; font-size:100%; text-align:centered">{{ rendered_value }}</p>
+        <font color="red">{{ rendered_value }}</font>
         {% endif %};;
 
   }
