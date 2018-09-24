@@ -133,7 +133,7 @@ view: mm_property_kpi_f {
     hidden: no
   }
 
-  measure: property_cnt_over_finance_oal {
+  measure: property_cnt_over_finance_goal {
     type: number
     sql: sum( ${property_goal_cnt} ) over( partition by ${performance_metric_dm.metric_name}, ${property_dm.regional_fnc_ldr_full_name} ) ;;
     hidden: yes
@@ -143,7 +143,32 @@ view: mm_property_kpi_f {
     label: "Percent of Regional Finance Leader Properties"
     description: "Percent of properties."
     type: number
-    sql: ${property_cnt} / ${property_cnt_over_finance_oal} ;;
+    sql: ${property_cnt} / ${property_cnt_over_finance_goal} ;;
+    value_format_name: percent_1
+    hidden: no
+    html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
+  }
+
+  measure: property_brand_cnt {
+    label: "Brand Properties"
+    description: "Count of distinct properties within each brand."
+    type: count_distinct
+    sql: iff( ${property_metric_goal_dm.status_cd} = 'NA', to_number(NULL), ${property_key}) ;;
+    value_format: "0"
+    hidden: no
+  }
+
+  measure: property_cnt_over_brand {
+    type: number
+    sql: sum( ${property_goal_cnt} ) over( partition by ${performance_metric_dm.metric_name}, ${date_dm.month_name}, ${property_dm.brand_name} ) ;;
+    hidden: yes
+  }
+
+  measure: property_brand_cnt_pct_fin {
+    label: "Percent of Brand Properties"
+    description: "Percent of properties."
+    type: number
+    sql: ${property_cnt} / ${property_cnt_over_brand} ;;
     value_format_name: percent_1
     hidden: no
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
