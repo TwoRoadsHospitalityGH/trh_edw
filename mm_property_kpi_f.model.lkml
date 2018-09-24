@@ -40,7 +40,8 @@ explore: mm_property_kpi_f {
     relationship: many_to_one
   }
 
-  join: date_dm {
+  join: date_dm{
+  from: date_dm
     view_label: "  Date"
     fields: [ date_dm.cal_dt
             , date_dm.cal_month_dt
@@ -50,6 +51,11 @@ explore: mm_property_kpi_f {
             , date_dm.quarter
             , date_dm.quarter_of_year
             , date_dm.year
+            , current_period_mtd
+            , current_period_qtd
+            , current_period_ytd
+            , prior_month
+
             ]
     sql_on: ${date_dm.date_sid} = ${mm_property_kpi_f.month_date_sid}  ;;
     type: inner

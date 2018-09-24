@@ -8,9 +8,21 @@ view: mm_property_kpi_f {
     sql:  listagg(distinct ${period_type_dm.period_type_name}, ' | ')  ;;
   }
 
+  measure: max_month_name {
+    type: max
+    sql:  ${date_dm.month_name} ;;
+    hidden: yes
+  }
+
+  measure: max_year {
+    type: max
+    sql:  ${date_dm.year} ;;
+    hidden: yes
+  }
+
   measure: month_name_year {
-    sql: concat(concat(concat(concat(${date_dm.month_name}, ', '),  ${date_dm.year}), ' - '), ${listagg}) ;;
-    required_fields:[date_dm.cal_month_dt]
+    sql: concat(concat(concat(concat(${max_month_name}, ', '),  ${max_year}), ' - '), ${listagg}) ;;
+
   }
 
 # keys
