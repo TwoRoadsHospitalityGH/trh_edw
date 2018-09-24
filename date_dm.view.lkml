@@ -126,4 +126,11 @@ view: date_dm {
     hidden: no
   }
 
+  filter: cal_ptd_bt {
+    label: "Period-to-Date"
+    description: "Restrict to Completed Periods Only"
+    type: yesno
+    sql: ${TABLE}.cal_ptd_bt = 1 ;;
+  }
+
 }

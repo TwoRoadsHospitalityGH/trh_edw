@@ -24,10 +24,10 @@ filter: monthly_plus_ytd {
 label: "Monthly + YTD"
   description: "Monthly & YTD through current month."
   type: yesno
-  sql: (    month( date_month_dm.cal_dt ) <= month( current_date() )
+  sql: (    month( date_dm.cal_dt ) <= month( current_date() )
           and period_type_dm.period_type_cd = 'month'
          )
-      or (    month( date_month_dm.cal_dt ) = month( current_date() )
+      or (    month( date_dm.cal_dt ) = month( current_date() )
           and period_type_dm.period_type_cd = 'year'
          );;
 }
