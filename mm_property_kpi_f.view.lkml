@@ -160,7 +160,7 @@ view: mm_property_kpi_f {
 
   measure: property_cnt_over_brand {
     type: number
-    sql: sum( ${property_goal_cnt} ) over( partition by ${performance_metric_dm.metric_name}, ${date_dm.month_name}, ${property_dm.brand_name} ) ;;
+    sql: sum( ${property_goal_cnt} ) over( partition by ${performance_metric_dm.metric_name}, ${property_dm.brand_name} ) ;;
     hidden: yes
   }
 

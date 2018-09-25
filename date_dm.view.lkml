@@ -36,7 +36,7 @@ view: date_dm {
     type: date_month
     label: "Month"
     convert_tz: no
-    sql: ${cal_month_dt} ;;
+    sql: ${cal_dt} ;;
     allow_fill: no
   }
 
@@ -44,7 +44,7 @@ view: date_dm {
     type: date_month_num
     label: "Month Number"
     convert_tz: no
-    sql: ${cal_month_dt} ;;
+    sql: ${cal_dt} ;;
     allow_fill: no
   }
 
@@ -52,7 +52,7 @@ view: date_dm {
     type: date_month_name
     label: "Month Name"
     convert_tz: no
-    sql: ${cal_month_dt} ;;
+    sql: ${cal_dt} ;;
     allow_fill: no
   }
 
@@ -60,7 +60,7 @@ view: date_dm {
     type: date_quarter
     label: "Quarter"
     convert_tz: no
-    sql: ${cal_month_dt} ;;
+    sql: ${cal_dt} ;;
     allow_fill: no
   }
 
@@ -68,7 +68,7 @@ view: date_dm {
     type: date_quarter_of_year
     label: "Quarter of Year"
     convert_tz: no
-    sql: ${cal_month_dt} ;;
+    sql: ${cal_dt} ;;
     allow_fill: no
   }
 
@@ -76,7 +76,7 @@ view: date_dm {
     type: date_year
     label: "Year"
     convert_tz: no
-    sql: ${cal_month_dt} ;;
+    sql: ${cal_dt} ;;
     allow_fill: no
   }
 
