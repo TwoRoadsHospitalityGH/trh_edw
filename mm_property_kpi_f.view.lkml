@@ -6,6 +6,7 @@ view: mm_property_kpi_f {
   measure: listagg {
     type: string
     sql:  listagg(distinct ${period_type_dm.period_type_name}, ' | ')  ;;
+    hidden: yes
   }
 
   measure: max_month_name {
@@ -22,7 +23,7 @@ view: mm_property_kpi_f {
 
   measure: month_name_year {
     sql: concat(concat(concat(concat(${max_month_name}, ', '),  ${max_year}), ' - '), ${listagg}) ;;
-
+    hidden: yes
   }
 
 # keys
@@ -90,7 +91,7 @@ view: mm_property_kpi_f {
   }
 
   measure: property_cnt_pct {
-    label: "Percent of Properties"
+    label: "Properties - %"
     description: "Percent of properties."
     type: number
     sql: ${property_cnt} / ${property_cnt_over_kpi} ;;
@@ -105,7 +106,7 @@ view: mm_property_kpi_f {
     type: count_distinct
     sql: iff( ${property_metric_goal_dm.status_cd} = 'NA', to_number(NULL), ${property_key}) ;;
     value_format: "0"
-    hidden: no
+    hidden: yes
   }
 
   measure: property_cnt_over_goal {
@@ -115,8 +116,8 @@ view: mm_property_kpi_f {
   }
 
   measure: property_goal_cnt_pct {
-    label: "Percent of Regional Ops Leader Properties"
-    description: "Percent of properties."
+    label: "Above/below goal - ops leader %"
+    description: "Percent of properties above or below goal by regional operations leader."
     type: number
     sql: ${property_cnt} / ${property_cnt_over_goal} ;;
     value_format_name: percent_1
@@ -130,7 +131,7 @@ view: mm_property_kpi_f {
     type: count_distinct
     sql: iff( ${property_metric_goal_dm.status_cd} = 'NA', to_number(NULL), ${property_key}) ;;
     value_format: "0"
-    hidden: no
+    hidden: yes
   }
 
   measure: property_cnt_over_finance_goal {
@@ -140,8 +141,8 @@ view: mm_property_kpi_f {
   }
 
   measure: property_goal_cnt_pct_fin {
-    label: "Percent of Regional Finance Leader Properties"
-    description: "Percent of properties."
+    label: "Above/below goal - fin leader %"
+    description: "Percent of properties above or below goal by regional finance leader."
     type: number
     sql: ${property_cnt} / ${property_cnt_over_finance_goal} ;;
     value_format_name: percent_1
@@ -155,7 +156,7 @@ view: mm_property_kpi_f {
     type: count_distinct
     sql: iff( ${property_metric_goal_dm.status_cd} = 'NA', to_number(NULL), ${property_key}) ;;
     value_format: "0"
-    hidden: no
+    hidden: yes
   }
 
   measure: property_cnt_over_brand {
@@ -165,8 +166,8 @@ view: mm_property_kpi_f {
   }
 
   measure: property_brand_cnt_pct_fin {
-    label: "Percent of Brand Properties"
-    description: "Percent of properties."
+    label: "Above/below goal - brand %"
+    description: "Percent of properties above or below goal by brand."
     type: number
     sql: ${property_cnt} / ${property_cnt_over_brand} ;;
     value_format_name: percent_1
@@ -181,7 +182,6 @@ view: mm_property_kpi_f {
     description: "Percent to previous value."
     type: percent_of_previous
     sql: ${measure_kpi} ;;
-    value_format_name: percent_1
     hidden: no
   }
 
@@ -196,7 +196,7 @@ view: mm_property_kpi_f {
   }
 
   measure: kpi_val_base {
-    type: max
+    type: average
     sql:  ${TABLE}.kpi_val  ;;
     hidden: yes
   }
@@ -225,6 +225,7 @@ view: mm_property_kpi_f {
   measure: measure_kpi {
     type: number
     label: "Metric Value"
+    description: "Metric amount."
     value_format_name: percent_1
     sql:  ${kpi_val_base} ;;
     html: <!-- exceed  -->
