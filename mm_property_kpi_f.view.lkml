@@ -72,7 +72,7 @@ view: mm_property_kpi_f {
     description: "Metric calculation."
     type: string
     sql: max(${TABLE}.kpi_calc_dscr) ;;
-    hidden: no
+    hidden: yes
     }
 
   measure: property_cnt {
