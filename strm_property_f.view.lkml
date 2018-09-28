@@ -24,7 +24,7 @@ view: strm_property_f {
   measure: property_cnt {
     group_label: " Property"
     label: "Properties"
-    description: "Count of distinct properties."
+    description: "Distinct count of properties."
     type: count_distinct
     sql: ${property_key} ;;
     value_format_name: decimal_0
@@ -42,7 +42,7 @@ view: strm_property_f {
   measure: property_rbe_rev_amt {
     group_label: " Property"
     label: "Pr Rev RB&E $"
-    description: "Property RB&E Revenue $"
+    description: "Property Revenue RB&E $"
     type: sum
     sql: ${TABLE}.property_rbe_rev_amt ;;
     value_format_name: usd_0
@@ -50,8 +50,8 @@ view: strm_property_f {
 
   measure: property_room_rev_amt {
     group_label: " Property"
-    label: "Pr Rev Rooms $"
-    description: "Property Rooms Revenue $"
+    label: "Pr Rev Rms $"
+    description: "Property Revenue Rooms $"
     type: sum
     sql: ${TABLE}.property_room_rev_amt ;;
     value_format_name: usd_0
@@ -59,8 +59,8 @@ view: strm_property_f {
 
   measure: property_room_group_rev_amt {
     group_label: " Property"
-    label: "Pr Rev Rooms Group $"
-    description: "Property Rooms Group Revenue $"
+    label: "Pr Rev Rms Group $"
+    description: "Property Revenue Rooms Group $"
     type: sum
     sql: ${TABLE}.property_room_group_rev_amt ;;
     value_format_name: usd_0
@@ -68,8 +68,8 @@ view: strm_property_f {
 
   measure: property_room_transient_rev_amt {
     group_label: " Property"
-    label: "Pr Rev Rooms Transient $"
-    description: "Property Rooms Transient Revenue $"
+    label: "Pr Rev Rms Transient $"
+    description: "Property Revenue Rooms Transient $"
     type: sum
     sql: ${TABLE}.property_room_transient_rev_amt ;;
     value_format_name: usd_0
@@ -77,8 +77,8 @@ view: strm_property_f {
 
   measure: property_room_contract_rev_amt {
     group_label: " Property"
-    label: "Pr Rev Rooms Contract $"
-    description: "Property Rooms Contract Revenue $"
+    label: "Pr Rev Rms Contract $"
+    description: "Property Revenue Rooms Contract $"
     type: sum
     sql: ${TABLE}.property_room_Contract_rev_amt ;;
     value_format_name: usd_0
@@ -86,8 +86,8 @@ view: strm_property_f {
 
   measure: property_room_other_rev_amt {
     group_label: " Property"
-    label: "Pr Rev Rooms Other $"
-    description: "Property Rooms Other Revenue $"
+    label: "Pr Rev Rms Other $"
+    description: "Property Revenue Rooms Other $"
     type: sum
     sql: ${TABLE}.property_room_other_rev_amt ;;
     value_format_name: usd_0
@@ -95,7 +95,7 @@ view: strm_property_f {
 
   measure: property_room_avail_cnt {
     group_label: " Property"
-    label: "Pr Rooms Available"
+    label: "Pr Rms Avail"
     description: "Property Rooms Available"
     type: sum
     sql: ${TABLE}.property_room_avail_cnt ;;
@@ -104,8 +104,8 @@ view: strm_property_f {
 
   measure: property_room_sold_cnt {
     group_label: " Property"
-    label: "Pr Rooms Sold"
-    description: "Property Rooms Sold"
+    label: "Pr Rms Occ"
+    description: "Property Rooms Occupied"
     type: sum
     sql: ${TABLE}.property_room_sold_cnt ;;
     value_format_name: decimal_0
@@ -113,8 +113,8 @@ view: strm_property_f {
 
   measure: property_room_contract_sold_cnt {
     group_label: " Property"
-    label: "Pr Rooms Sold Contract"
-    description: "Property Contract Rooms Sold"
+    label: "Pr Rms Occ Contract"
+    description: "Property Rooms Occupied Contract"
     type: sum
     sql: ${TABLE}.property_room_contract_sold_cnt ;;
     value_format_name: decimal_0
@@ -122,8 +122,8 @@ view: strm_property_f {
 
   measure: property_room_group_sold_cnt {
     group_label: " Property"
-    label: "Pr Rooms Sold Group"
-    description: "Property Group Rooms Sold"
+    label: "Pr Rms Occ Group"
+    description: "Property Rooms Occupied Group"
     type: sum
     sql: ${TABLE}.property_room_group_sold_cnt ;;
     value_format_name: decimal_0
@@ -131,8 +131,8 @@ view: strm_property_f {
 
   measure: property_room_transient_sold_cnt {
     group_label: " Property"
-    label: "Pr Rooms Sold Transient"
-    description: "Property Transient Rooms Sold"
+    label: "Pr Rms Occ Transient"
+    description: "Property Rooms Occupied Transient"
     type: sum
     sql: ${TABLE}.property_room_transient_sold_cnt ;;
     value_format_name: decimal_0
@@ -140,8 +140,8 @@ view: strm_property_f {
 
   measure: property_occupancy_rate_pct {
     group_label: " Property"
-    label: "Pr  Occupancy Rate"
-    description: "Property Occupancy Rate"
+    label: "Pr Rms Occ %"
+    description: "Property Rooms Occupancy Rate %.  Rms Occ / Rms Available"
     type: number
     sql: utl..udf_divide( ${property_room_sold_cnt}, ${property_room_avail_cnt} );;
     value_format_name: percent_1
@@ -149,8 +149,8 @@ view: strm_property_f {
 
   measure: property_adr_amt {
     group_label: " Property"
-    label: "Pr  ADR"
-    description: "Property Average Daily Rate"
+    label: "Pr ADR"
+    description: "Property Average Daily Rate. Rev Rms / Rms Occ"
     type: number
     sql: utl..udf_divide( ${property_room_rev_amt}, ${property_room_sold_cnt} );;
     value_format_name: usd
@@ -158,8 +158,8 @@ view: strm_property_f {
 
   measure: property_revpar_amt {
     group_label: " Property"
-    label: "Pr  RevPAR"
-    description: "Property Revenue Per Available Room"
+    label: "Pr RevPAR"
+    description: "Property Revenue Per Available Room. Rev Rms / Rms Avail"
     type: number
     sql: utl..udf_divide( ${property_room_rev_amt}, ${property_room_avail_cnt} );;
     value_format_name: usd
@@ -167,8 +167,8 @@ view: strm_property_f {
 
   measure: property_occ_index_pct {
     group_label: " Property"
-    label: "Pr Index Occupancy"
-    description: "Pr Occupancy Rate / Cs Occupancy Rate"
+    label: "Pr Rms Occ % Index to Compset"
+    description: "Property Rooms Occupancy Rate % Indexed to Compset. Rms Occ % / Cs Occ %"
     type: number
     sql: utl..udf_divide( ${property_occupancy_rate_pct}, ${compset_occupancy_rate_pct} );;
     value_format_name: percent_1
@@ -176,8 +176,8 @@ view: strm_property_f {
 
   measure: property_occ_index_pct_prev {
     view_label: "  % Previous"
-    label: "Pr Index Occupancy %Prev"
-    description: "Pr Occupancy Rate / Cs Occupancy Rate"
+    label: "Pr Rms Occ % Index to Compset %Prev"
+    description: "Percent to previous column or row."
     type: percent_of_previous
     sql: ${property_occ_index_pct} ;;
     value_format: "0.0\%"
@@ -185,7 +185,7 @@ view: strm_property_f {
 
   measure: property_adr_index_pct {
     group_label: " Property"
-    label: "Pr Index ADR"
+    label: "Pr ADR Index to Compset"
     description: "Pr ADR / Cs ADR"
     type: number
     sql: utl..udf_divide( ${property_adr_amt}, ${compset_adr_amt} );;
@@ -194,8 +194,8 @@ view: strm_property_f {
 
   measure: property_adr_index_pct_prev {
     view_label: "  % Previous"
-    label: "Pr Index ADR %Prev"
-    description: "Pr ADR / Cs ADR"
+    label: "Pr ADR Index to Compset %Prev"
+    description: "Percent to previous column or row."
     type: percent_of_previous
     sql: ${property_adr_index_pct} ;;
     value_format: "0.0\%"
@@ -203,7 +203,7 @@ view: strm_property_f {
 
   measure: property_revpar_index_pct {
     group_label: " Property"
-    label: "Pr Index RevPAR"
+    label: "Pr RevPAR Index to Compset"
     description: "Pr RevPAR / Cs RevPAR"
     type: number
     sql: utl..udf_divide( ${property_revpar_amt}, ${compset_revpar_amt} );;
@@ -212,8 +212,8 @@ view: strm_property_f {
 
   measure: property_revpar_index_pct_prev {
     view_label: "  % Previous"
-    label: "Pr Index RevPAR %Prev"
-    description: "Pr RevPAR / Cs RevPAR"
+    label: "Pr RevPAR Index to Compset %Prev"
+    description: "Percent to previous column or row."
     type: percent_of_previous
     sql: ${property_revpar_index_pct} ;;
     value_format: "0.0\%"
@@ -234,7 +234,7 @@ view: strm_property_f {
   measure: compset_rbe_rev_amt {
     group_label: "Compset"
     label: "Cs Rev RB&E $"
-    description: "Compset RB&E Revenue $"
+    description: "Compset Revenue RB&E $"
     type: sum
     sql: ${TABLE}.compset_rbe_rev_amt ;;
     value_format_name: usd_0
@@ -242,8 +242,8 @@ view: strm_property_f {
 
   measure: compset_room_rev_amt {
     group_label: "Compset"
-    label: "Cs Rev Rooms $"
-    description: "Compset Rooms Revenue $"
+    label: "Cs Rev Rms $"
+    description: "Compset Revenue Rooms $"
     type: sum
     sql: ${TABLE}.compset_room_rev_amt ;;
     value_format_name: usd_0
@@ -251,8 +251,8 @@ view: strm_property_f {
 
   measure: compset_room_group_rev_amt {
     group_label: "Compset"
-    label: "Cs Rev Rooms Group $"
-    description: "Compset Rooms Group Revenue $"
+    label: "Cs Rev Rms Group $"
+    description: "Compset Revenue Rooms Group $"
     type: sum
     sql: ${TABLE}.compset_room_group_rev_amt ;;
     value_format_name: usd_0
@@ -260,8 +260,8 @@ view: strm_property_f {
 
   measure: compset_room_transient_rev_amt {
     group_label: "Compset"
-    label: "Cs Rev Rooms Transient $"
-    description: "Compset Rooms Transient Revenue $"
+    label: "Cs Rev Rms Transient $"
+    description: "Compset Revenue Rooms Transient $"
     type: sum
     sql: ${TABLE}.compset_room_transient_rev_amt ;;
     value_format_name: usd_0
@@ -269,8 +269,8 @@ view: strm_property_f {
 
   measure: compset_room_contract_rev_amt {
     group_label: "Compset"
-    label: "Cs Rev Rooms Contract $"
-    description: "Compset Rooms Contract Revenue $"
+    label: "Cs Rev Rms Contract $"
+    description: "Compset Revenue Rooms Contract $"
     type: sum
     sql: ${TABLE}.compset_room_Contract_rev_amt ;;
     value_format_name: usd_0
@@ -278,8 +278,8 @@ view: strm_property_f {
 
   measure: compset_room_other_rev_amt {
     group_label: "Compset"
-    label: "Cs Rev Rooms Other $"
-    description: "Compset Rooms Other Revenue $"
+    label: "Cs Rev Rms Other $"
+    description: "Compset Revenue Rooms Other $"
     type: sum
     sql: ${TABLE}.compset_room_other_rev_amt ;;
     value_format_name: usd_0
@@ -287,7 +287,7 @@ view: strm_property_f {
 
   measure: compset_room_avail_cnt {
     group_label: "Compset"
-    label: "Cs Rooms Available"
+    label: "Cs Rms Avail"
     description: "Compset Rooms Available"
     type: sum
     sql: ${TABLE}.compset_room_avail_cnt ;;
@@ -296,8 +296,8 @@ view: strm_property_f {
 
   measure: compset_room_sold_cnt {
     group_label: "Compset"
-    label: "Cs Rooms Sold"
-    description: "Compset Rooms Sold"
+    label: "Cs Rms Occ"
+    description: "Compset Rooms Occupied"
     type: sum
     sql: ${TABLE}.compset_room_sold_cnt ;;
     value_format_name: decimal_0
@@ -305,8 +305,8 @@ view: strm_property_f {
 
   measure: compset_room_contract_sold_cnt {
     group_label: "Compset"
-    label: "Cs Rooms Sold Contract"
-    description: "Compset Contract Rooms Sold"
+    label: "Cs Rms Occ Contract"
+    description: "Compset Rooms Occupied Contract"
     type: sum
     sql: ${TABLE}.compset_room_contract_sold_cnt ;;
     value_format_name: decimal_0
@@ -314,8 +314,8 @@ view: strm_property_f {
 
   measure: compset_room_group_sold_cnt {
     group_label: "Compset"
-    label: "Cs Rooms Sold Group"
-    description: "Compset Group Rooms Sold"
+    label: "Cs Rms Occ Group"
+    description: "Compset Rooms Occupied Group"
     type: sum
     sql: ${TABLE}.compset_room_group_sold_cnt ;;
     value_format_name: decimal_0
@@ -323,8 +323,8 @@ view: strm_property_f {
 
   measure: compset_room_transient_sold_cnt {
     group_label: "Compset"
-    label: "Cs Rooms Sold Transient"
-    description: "Compset Transient Rooms Sold"
+    label: "Cs Rms Occ Transient"
+    description: "Compset Rooms Occupied Transient"
     type: sum
     sql: ${TABLE}.compset_room_transient_sold_cnt ;;
     value_format_name: decimal_0
@@ -332,8 +332,8 @@ view: strm_property_f {
 
   measure: compset_occupancy_rate_pct {
     group_label: "Compset"
-    label: "Cs  Occupancy Rate"
-    description: "Compset Occupancy Rate"
+    label: "Cs Rms Occ %"
+    description: "Compset Rooms Occupancy Rate %.  Rms Occ / Rms Available"
     type: number
     sql: utl..udf_divide( ${compset_room_sold_cnt}, ${compset_room_avail_cnt} );;
     value_format_name: percent_1
@@ -341,8 +341,8 @@ view: strm_property_f {
 
   measure: compset_adr_amt {
     group_label: "Compset"
-    label: "Cs  ADR"
-    description: "Compset Average Daily Rate"
+    label: "Cs ADR"
+    description: "Compset Average Daily Rate. Rev Rms / Rms Occ"
     type: number
     sql: utl..udf_divide( ${compset_room_rev_amt}, ${compset_room_sold_cnt} );;
     value_format_name: usd
@@ -350,8 +350,8 @@ view: strm_property_f {
 
   measure: compset_revpar_amt {
     group_label: "Compset"
-    label: "Cs  RevPAR"
-    description: "Compset Revenue Per Available Room"
+    label: "Cs RevPAR"
+    description: "Compset Revenue Per Available Room. Rev Rms / Rms Avail"
     type: number
     sql: utl..udf_divide( ${compset_room_rev_amt}, ${compset_room_avail_cnt} );;
     value_format_name: usd
