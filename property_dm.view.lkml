@@ -2,6 +2,7 @@ view: property_dm {
   sql_table_name: pedw.fact.PROPERTY_DM ;;
 
   dimension: property_key {
+    label: "Property Number"
     type: number
     sql: ${TABLE}.PROPERTY_KEY ;;
     hidden: no
@@ -14,7 +15,8 @@ view: property_dm {
   }
 
   dimension: property_name {
-    label: "Property Name"
+    label: "Property"
+    description: "Name of property."
     type: string
     sql: ${TABLE}.PROPERTY_NAME ;;
     drill_fields: [property_ds*]
@@ -35,46 +37,59 @@ view: property_dm {
   }
 
   dimension: marketing_name {
+    label: "Marketing Name"
     type: string
     sql: ${TABLE}.MARKETING_NAME ;;
     drill_fields: [property_ds*]
+    hidden: yes
   }
 
   dimension: brand_cd {
-    label: "Brand Code"
+    label: "Brand Abbreviation"
+    description: "Abbreviation of brand name."
     type: string
     sql: ${TABLE}.brand_cd ;;
   }
 
   dimension: brand_name {
+    label: "Brand Name"
+    description: "Property brand name."
     type: string
     sql: ${TABLE}.brand_name ;;
     drill_fields: [property_ds*]
   }
 
   dimension: address {
+    label: "Address"
+    description: "Property address ."
     type: string
     sql: ${TABLE}.ADDRESS ;;
   }
 
   dimension: city_name {
+    label: "City"
+    description: "Property city."
     type: string
     sql: ${TABLE}.CITY_NAME ;;
   }
 
   dimension: state_province_cd {
-    label: "State/Providence Code"
+    label: "State/Province Abbreviation"
+    description: "Property State/Province abbreviation."
     type: string
     sql: ${TABLE}.STATE_PROVINCE_CD ;;
   }
 
   dimension: state_province_name {
+    label: "State/Province"
+    description: "Property State/Province."
     type: string
     sql: ${TABLE}.STATE_PROVINCE_NAME ;;
   }
 
   dimension: zip_cd {
     label: "Zip Code"
+    description: "Property zip code"
     type: string
     sql: ${TABLE}.ZIP_CD ;;
   }
@@ -92,63 +107,80 @@ view: property_dm {
   }
 
   dimension: property_location {
+    label: "Lat/Long"
+    description: "Property location."
     type: location
     sql_latitude: ${property_lat} ;;
     sql_longitude: ${property_long} ;;
   }
 
   dimension: country_name {
+    label: "Country"
+    description: "Property country."
     type: string
     sql: ${TABLE}.COUNTRY_NAME ;;
   }
 
   dimension: region_name {
+    label: "Region"
+    description: "Property region."
     type: string
     sql: ${TABLE}.REGION_NAME ;;
     drill_fields: [property_ds*]
   }
 
   dimension: location_type_name {
+    label: "Location Type"
+    description: "Type of property location."
     type: string
     sql: ${TABLE}.location_type_name ;;
   }
 
   dimension: ownership_group_name {
+    label: "Ownership Group"
+    description: "Property owner."
     type: string
     sql: ${TABLE}.ownership_group_name ;;
   }
 
   dimension: evp_full_last_first {
-    label: "Regional Operations Leader"
+    label: "Regional Ops Leader"
+    description: "Regoinal operations leader."
     type: string
     sql: ${TABLE}.regional_ops_ldr_full_name ;;
   }
 
   dimension: regional_fnc_ldr_full_name {
-    label: "Regional Finance Leader"
+    label: "Regional Fnc Leader"
+    description: "Regional financial leader."
     type: string
     sql: ${TABLE}.regional_fnc_ldr_full_name ;;
   }
 
   dimension: phone_no {
     label: "Phone Number"
+    description: "Property phone number."
     type: string
     sql: ${TABLE}.PHONE_NO ;;
   }
 
   dimension: website_url {
+    label: "Website URL"
+    description: "Property website URL."
     type: string
     sql: ${TABLE}.WEBSITE_URL ;;
   }
 
   dimension: opening_dt {
     label: "Opening Date"
+    description: "Property opening date."
     type: date
     sql: ${TABLE}.opening_dt ;;
   }
 
   dimension: transition_dt {
     label: "Transition Date"
+    description: "Property transition date."
     type: date
     sql: ${TABLE}.transition_dt ;;
   }
@@ -186,54 +218,42 @@ view: property_dm {
 
  #   filters
 
-  filter: same_store_financial {
-    label: "Same Store Financial"
-    type: yesno
-    sql: ${TABLE}.same_store_financial_bt = 1 ;;
-  }
-
-  filter: same_store_revenue {
-    label: "Same Store Revenue"
-    type: yesno
-    sql: ${TABLE}.same_store_revenue_bt = 1 ;;
-  }
-
-  filter: closed {
-    label: "Closed"
-    type: yesno
-    sql: ${TABLE}.closed_bt = 1 ;;
-  }
-
-  filter: active {
-    label: "Active"
-    type: yesno
-    sql: ${TABLE}.active_bt = 1 ;;
-  }
-
-  filter: mih_eligible {
-    label: "MIH Eligible"
-    type: yesno
-    sql: ${TABLE}.mih_eligible_bt = 1 ;;
-  }
+#   filter: same_store_financial {
+#     label: "Same Store Financial"
+#     type: yesno
+#     sql: ${TABLE}.same_store_financial_bt = 1 ;;
+#   }
+#
+#   filter: same_store_revenue {
+#     label: "Same Store Revenue"
+#     type: yesno
+#     sql: ${TABLE}.same_store_revenue_bt = 1 ;;
+#   }
+#
+#   filter: closed {
+#     label: "Closed"
+#     type: yesno
+#     sql: ${TABLE}.closed_bt = 1 ;;
+#   }
+#
+#   filter: active {
+#     label: "Active"
+#     type: yesno
+#     sql: ${TABLE}.active_bt = 1 ;;
+#   }
+#
+#   filter: mih_eligible {
+#     label: "MIH Eligible"
+#     type: yesno
+#     sql: ${TABLE}.mih_eligible_bt = 1 ;;
+#   }
 
   filter: gl_entity_bt {
     label: "GL Entity"
     type: yesno
     sql: ${TABLE}.gl_entity_bt = 1 ;;
+    hidden: yes
   }
-
-  #--------------
-  #   filters
-
-#   filter: brand {
-#     type: string
-#     sql: ${brand_name} ;;
-#     }
-#
-#   filter: ops_leader{
-#     type: string
-#     sql: = ${evp_full_last_first}  ;;
-#   }
 
   # ----- Sets of fields for drilling ------
   set: property_ds {

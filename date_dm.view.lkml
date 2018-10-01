@@ -19,6 +19,7 @@ view: date_dm {
   dimension: date {
     type: date
     label: "Date"
+    description: "Date"
     convert_tz: no
     sql: ${cal_dt} ;;
     allow_fill: no
@@ -27,6 +28,7 @@ view: date_dm {
   dimension: week {
     type: date_week
     label: "Week"
+    description: "Week"
     convert_tz: no
     sql: ${cal_dt} ;;
     allow_fill: no
@@ -35,6 +37,7 @@ view: date_dm {
   dimension: month {
     type: date_month
     label: "Month"
+    description: "Month"
     convert_tz: no
     sql: ${cal_dt} ;;
     allow_fill: no
@@ -43,6 +46,7 @@ view: date_dm {
   dimension: month_num {
     type: date_month_num
     label: "Month Number"
+    description: "Month Number"
     convert_tz: no
     sql: ${cal_dt} ;;
     allow_fill: no
@@ -51,6 +55,7 @@ view: date_dm {
   dimension: month_name {
     type: date_month_name
     label: "Month Name"
+    description: "Month Name"
     convert_tz: no
     sql: ${cal_dt} ;;
     allow_fill: no
@@ -59,6 +64,7 @@ view: date_dm {
   dimension: quarter {
     type: date_quarter
     label: "Quarter"
+    description: "Quarter of year."
     convert_tz: no
     sql: ${cal_dt} ;;
     allow_fill: no
@@ -70,11 +76,13 @@ view: date_dm {
     convert_tz: no
     sql: ${cal_dt} ;;
     allow_fill: no
+    hidden: yes
   }
 
   dimension: year {
     type: date_year
     label: "Year"
+    description: "Year"
     convert_tz: no
     sql: ${cal_dt} ;;
     allow_fill: no

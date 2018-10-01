@@ -116,7 +116,7 @@ view: mm_property_kpi_f {
   }
 
   measure: property_goal_cnt_pct {
-    label: "Above/below goal - ops leader %"
+    label: "Above/Below Goal - Pps Leader %"
     description: "Percent of properties above or below goal by regional operations leader."
     type: number
     sql: ${property_cnt} / ${property_cnt_over_goal} ;;
@@ -141,7 +141,7 @@ view: mm_property_kpi_f {
   }
 
   measure: property_goal_cnt_pct_fin {
-    label: "Above/below goal - fin leader %"
+    label: "Above/Below Goal - Fnc Leader %"
     description: "Percent of properties above or below goal by regional finance leader."
     type: number
     sql: ${property_cnt} / ${property_cnt_over_finance_goal} ;;
@@ -166,7 +166,7 @@ view: mm_property_kpi_f {
   }
 
   measure: property_brand_cnt_pct_fin {
-    label: "Above/below goal - brand %"
+    label: "Above/Below Goal - Brand %"
     description: "Percent of properties above or below goal by brand."
     type: number
     sql: ${property_cnt} / ${property_cnt_over_brand} ;;
