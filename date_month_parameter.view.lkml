@@ -18,6 +18,7 @@ view: date_month_parameter {
   }
 
   parameter: available_months {
+    label: "Available Timeframe"
     type: string
     allowed_value: {label: "Prior Month" value: "prior_month"}
     allowed_value: {label: "Prior Month Last Year" value: "ly_prior_month"}
