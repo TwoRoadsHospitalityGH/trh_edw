@@ -289,6 +289,14 @@ view: mm_property_kpi_f {
     drill_fields: [metric_drill*]
   }
 
+  measure: var_to_goal {
+    type: number
+    label: "Goal - var"
+    description: "Variance to annual goal."
+    sql: ${measure_kpi} - ${property_metric_goal_dm.goal_m} ;;
+    hidden: no
+  }
+
   set: metric_drill {
     fields: [
       kpi_calc_dscr
