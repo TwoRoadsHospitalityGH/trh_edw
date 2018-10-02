@@ -94,7 +94,7 @@ view: mm_property_kpi_f {
     label: "Properties - %"
     description: "Percent of properties."
     type: number
-    sql: ${property_cnt} / ${property_cnt_over_kpi} ;;
+    sql: utl..udf_divide(${property_cnt},  ${property_cnt_over_kpi}) ;;
     value_format_name: percent_1
     hidden: no
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
@@ -119,7 +119,7 @@ view: mm_property_kpi_f {
     label: "Above/Below Goal - Ops Leader %"
     description: "Percent of properties above or below goal by regional operations leader."
     type: number
-    sql: ${property_cnt} / ${property_cnt_over_goal} ;;
+    sql: utl..udf_divide(${property_cnt},  ${property_cnt_over_goal}) ;;
     value_format_name: percent_1
     hidden: no
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
@@ -144,7 +144,7 @@ view: mm_property_kpi_f {
     label: "Above/Below Goal - Fnc Leader %"
     description: "Percent of properties above or below goal by regional finance leader."
     type: number
-    sql: ${property_cnt} / ${property_cnt_over_finance_goal} ;;
+    sql: utl..udf_divide(${property_cnt},  ${property_cnt_over_finance_goal}) ;;
     value_format_name: percent_1
     hidden: no
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
@@ -169,7 +169,7 @@ view: mm_property_kpi_f {
     label: "Above/Below Goal - Brand %"
     description: "Percent of properties above or below goal by brand."
     type: number
-    sql: ${property_cnt} / ${property_cnt_over_brand} ;;
+    sql: utl..udf_divide(${property_cnt},  ${property_cnt_over_brand}) ;;
     value_format_name: percent_1
     hidden: no
     html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;

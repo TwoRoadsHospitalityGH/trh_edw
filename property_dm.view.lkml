@@ -2,7 +2,8 @@ view: property_dm {
   sql_table_name: pedw.fact.PROPERTY_DM ;;
 
   dimension: property_key {
-    label: "Property Number"
+    label: "Property Code"
+    description: "Property Code within PMD."
     type: number
     sql: ${TABLE}.PROPERTY_KEY ;;
     hidden: no
@@ -61,7 +62,7 @@ view: property_dm {
 
   dimension: address {
     label: "Address"
-    description: "Property address ."
+    description: "Property address."
     type: string
     sql: ${TABLE}.ADDRESS ;;
   }
@@ -187,30 +188,35 @@ view: property_dm {
 
   dimension: same_store_financial_fl {
     label: "Same Store Financial"
+    description: "Indication of same store financials property."
     type: yesno
     sql: ${TABLE}.same_store_financial_bt = 1 ;;
   }
 
   dimension: same_store_revenue_fl {
     label: "Same Store Revenue"
+    description: "Indication of same store revenue property."
     type: yesno
     sql: ${TABLE}.same_store_revenue_bt = 1 ;;
   }
 
   dimension: closed_fl {
     label: "Closed"
+    description: "Indication of closed property."
     type: yesno
     sql: ${TABLE}.closed_bt = 1 ;;
   }
 
   dimension: active_fl {
     label: "Active"
+    description: "Indication of active property."
     type: yesno
     sql: ${TABLE}.active_bt = 1 ;;
   }
 
   dimension: mih_eligible_fl {
     label: "MIH Eligible"
+    description: "Indication of MIH eligible property."
     type: yesno
     sql: ${TABLE}.mih_eligible_bt = 1 ;;
   }
