@@ -116,7 +116,7 @@ view: mm_property_kpi_f {
   }
 
   measure: property_goal_cnt_pct {
-    label: "Above/Below Goal - Pps Leader %"
+    label: "Above/Below Goal - Ops Leader %"
     description: "Percent of properties above or below goal by regional operations leader."
     type: number
     sql: ${property_cnt} / ${property_cnt_over_goal} ;;
