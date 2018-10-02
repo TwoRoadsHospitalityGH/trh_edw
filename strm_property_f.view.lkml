@@ -25,7 +25,7 @@ view: strm_property_f {
   #-- property
   #--------------------------------------------------------------------------------
   measure: property_cnt {
-    group_label: " Property"
+    group_label: "  Property"
     label: " Properties"
     description: "Distinct count of properties."
     type: count_distinct
@@ -34,7 +34,7 @@ view: strm_property_f {
   }
 
   measure: property_rev_amt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "Rev $  Pr"
     description: "Revenue $ Property"
     type: sum
@@ -43,7 +43,7 @@ view: strm_property_f {
   }
 
   measure: property_rbe_rev_amt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "Rev RB&E $  Pr"
     description: "Revenue RB&E $ Property"
     type: sum
@@ -52,7 +52,7 @@ view: strm_property_f {
   }
 
   measure: property_room_rev_amt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "Rev Rms $  Pr"
     description: "Revenue Rooms $ Property"
     type: sum
@@ -61,7 +61,7 @@ view: strm_property_f {
   }
 
   measure: property_room_group_rev_amt {
-    group_label: "Segments"
+    group_label: " Group"
     label: "Rev Rms Group $  Pr"
     description: "Revenue Rooms Group $ Property"
     type: sum
@@ -70,7 +70,7 @@ view: strm_property_f {
   }
 
   measure: property_room_transient_rev_amt {
-    group_label: "Segments"
+    group_label: " Transient"
     label: "Rev Rms Transient $  Pr"
     description: "Revenue Rooms Transient $ Property"
     type: sum
@@ -79,7 +79,7 @@ view: strm_property_f {
   }
 
   measure: property_room_contract_rev_amt {
-    group_label: "Segments"
+    group_label: " Contract"
     label: "Rev Rms Contract $  Pr"
     description: "Revenue Rooms Contract $ Property"
     type: sum
@@ -88,7 +88,7 @@ view: strm_property_f {
   }
 
   measure: property_room_other_rev_amt {
-    group_label: "Segments"
+    group_label: "Other"
     label: "Rev Rms Other $  Pr"
     description: "Revenue Rooms Other $ Property"
     type: sum
@@ -97,7 +97,7 @@ view: strm_property_f {
   }
 
   measure: property_room_avail_cnt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "Rms Avail  Pr"
     description: "Rooms Available Property"
     type: sum
@@ -106,7 +106,7 @@ view: strm_property_f {
   }
 
   measure: property_room_sold_cnt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "Rms Occ  Pr"
     description: "Rooms Occupied Property"
     type: sum
@@ -115,7 +115,7 @@ view: strm_property_f {
   }
 
   measure: property_room_contract_sold_cnt {
-    group_label: "Segments"
+    group_label: " Contract"
     label: "Rms Occ Contract  Pr"
     description: "Rooms Occupied Contract Property"
     type: sum
@@ -124,7 +124,7 @@ view: strm_property_f {
   }
 
   measure: property_room_group_sold_cnt {
-    group_label: "Segments"
+    group_label: " Group"
     label: "Rms Occ Group  Pr"
     description: "Rooms Occupied Group Property"
     type: sum
@@ -133,7 +133,7 @@ view: strm_property_f {
   }
 
   measure: property_room_transient_sold_cnt {
-    group_label: "Segments"
+    group_label: " Transient"
     label: "Rms Occ Transient  Pr"
     description: "Rooms Occupied Transient Property"
     type: sum
@@ -145,7 +145,7 @@ view: strm_property_f {
   #-- property calcs: occ, adr, revpar, etc
   #--------------------------------------------------------------------------------
   measure: property_occupancy_rate_pct {
-    group_label: " Property"
+    group_label: "  Property"
     label: "Rms Occ %  Pr"
     description: "Rooms Occupancy Rate % Property
     Rms Occ / Rms Available"
@@ -155,7 +155,7 @@ view: strm_property_f {
   }
 
   measure: property_adr_amt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "ADR  Pr"
     description: "Average Daily Rate Property
     Rev Rms / Rms Occ"
@@ -165,7 +165,7 @@ view: strm_property_f {
   }
 
   measure: property_revpar_amt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "RevPAR  Pr"
     description: "Revenue Per Available Room Property
     Rev Rms / Rms Avail"
@@ -180,7 +180,7 @@ view: strm_property_f {
 
   #-- contract
   measure: pr_contract_occupancy_rate_pct {
-    group_label: "Segments"
+    group_label: " Contract"
     label: "Rms Occ % Contract  Pr"
     description: "Rooms Occupancy Rate % Contract Property
     Rms Occ Contract / Rms Available"
@@ -190,7 +190,7 @@ view: strm_property_f {
   }
 
   measure: pr_contract_adr_amt {
-    group_label: "Segments"
+    group_label: " Contract"
     label: "ADR Contract  Pr"
     description: "Average Daily Rate Contract Property
     Rev Rms Contract / Rms Occ Contract"
@@ -200,7 +200,7 @@ view: strm_property_f {
   }
 
   measure: pr_contract_revpar_amt {
-    group_label: "Segments"
+    group_label: " Contract"
     label: "RevPAR Contract  Pr"
     description: "Revenue Per Available Room Contract Property
     Rev Rms Contract / Rms Avail"
@@ -211,7 +211,7 @@ view: strm_property_f {
 
   #-- group
   measure: pr_group_occupancy_rate_pct {
-    group_label: "Segments"
+    group_label: " Group"
     label: "Rms Occ % Group  Pr"
     description: "Rooms Occupancy Rate % Group Property
     Rms Occ Group / Rms Available"
@@ -221,7 +221,7 @@ view: strm_property_f {
   }
 
   measure: pr_group_adr_amt {
-    group_label: "Segments"
+    group_label: " Group"
     label: "ADR Group  Pr"
     description: "Average Daily Rate Group Property
     Rev Rms Group / Rms Occ Group"
@@ -231,7 +231,7 @@ view: strm_property_f {
   }
 
   measure: pr_group_revpar_amt {
-    group_label: "Segments"
+    group_label: " Group"
     label: "RevPAR Group  Pr"
     description: "Revenue Per Available Room Group Property
     Rev Rms Group / Rms Avail"
@@ -242,7 +242,7 @@ view: strm_property_f {
 
   #-- transient
   measure: pr_transient_occupancy_rate_pct {
-    group_label: "Segments"
+    group_label: " Transient"
     label: "Rms Occ % Transient  Pr"
     description: "Rooms Occupancy Rate % Transient Property
     Rms Occ Transient / Rms Available"
@@ -252,7 +252,7 @@ view: strm_property_f {
   }
 
   measure: pr_transient_adr_amt {
-    group_label: "Segments"
+    group_label: " Transient"
     label: "ADR Transient  Pr"
     description: "Average Daily Rate Transient Property
     Rev Rms Transient / Rms Occ Transient"
@@ -262,7 +262,7 @@ view: strm_property_f {
   }
 
   measure: pr_transient_revpar_amt {
-    group_label: "Segments"
+    group_label: " Transient"
     label: "RevPAR Transient  Pr"
     description: "Revenue Per Available Room Transient Property
     Rev Rms Transient / Rms Avail"
@@ -275,8 +275,8 @@ view: strm_property_f {
   #-- property indexes to compset
   #--------------------------------------------------------------------------------
   measure: property_occ_index_pct {
-    group_label: " Property"
-    label: "Rms Occ % Index to Compset"
+    group_label: "  Property"
+    label: "Rms Occ % Index:Cs"
     description: "Rooms Occupancy Rate %
     Index to Compset
     Pr Rms Occ % / Cs Rms Occ %"
@@ -286,8 +286,8 @@ view: strm_property_f {
   }
 
   measure: property_adr_index_pct {
-    group_label: " Property"
-    label: "ADR Index to Compset"
+    group_label: "  Property"
+    label: "ADR Index:Cs"
     description: "Average Daily Rate
     Index to Compset
     Pr ADR / Cs ADR"
@@ -297,8 +297,8 @@ view: strm_property_f {
   }
 
   measure: property_revpar_index_pct {
-    group_label: " Property"
-    label: "RevPAR Index to Compset"
+    group_label: "  Property"
+    label: "RevPAR Index:Cs"
     description: "RevPAR Index to Compset
     Pr RevPAR / Cs RevPAR"
     type: number
@@ -312,8 +312,8 @@ view: strm_property_f {
 
   #-- contract
   measure: pr_contract_occ_index_pct {
-    group_label: "Segments"
-    label: "Rms Occ % Contract Index to Compset"
+    group_label: " Contract"
+    label: "Rms Occ % Contract Index:Cs"
     description: "Rooms Occupancy Rate % Contract
     Index to Compset
     Rms Occ % Contract Pr / Rms Occ % Contract Cs"
@@ -323,8 +323,8 @@ view: strm_property_f {
   }
 
   measure: pr_contract_adr_index_pct {
-    group_label: "Segments"
-    label: "ADR Contract Index to Compset"
+    group_label: " Contract"
+    label: "ADR Contract Index:Cs"
     description: "Average Daily Rate Contract
     Index to Compset
     ADR Contract Pr / ADR Contract Cs"
@@ -334,8 +334,8 @@ view: strm_property_f {
   }
 
   measure: pr_contract_revpar_index_pct {
-    group_label: "Segments"
-    label: "RevPAR Contract Index to Compset"
+    group_label: " Contract"
+    label: "RevPAR Contract Index:Cs"
     description: "RevPAR Contract Index to Compset
     RevPAR Contract Pr / RevPAR Contract Cs"
     type: number
@@ -345,8 +345,8 @@ view: strm_property_f {
 
   #-- group
   measure: pr_group_occ_index_pct {
-    group_label: "Segments"
-    label: "Rms Occ % Group Index to Compset"
+    group_label: " Group"
+    label: "Rms Occ % Group Index:Cs"
     description: "Rooms Occupancy Rate % Group
     Index to Compset
     Rms Occ % Group Pr / Rms Occ % Group Cs"
@@ -356,8 +356,8 @@ view: strm_property_f {
   }
 
   measure: pr_group_adr_index_pct {
-    group_label: "Segments"
-    label: "ADR Group Index to Compset"
+    group_label: " Group"
+    label: "ADR Group Index:Cs"
     description: "Average Daily Rate Group
     Index to Compset
     ADR Group Pr / ADR Group Cs"
@@ -367,8 +367,8 @@ view: strm_property_f {
   }
 
   measure: pr_group_revpar_index_pct {
-    group_label: "Segments"
-    label: "RevPAR Group Index to Compset"
+    group_label: " Group"
+    label: "RevPAR Group Index:Cs"
     description: "RevPAR Group Index to Compset
     RevPAR Group Pr / RevPAR Group Cs"
     type: number
@@ -378,8 +378,8 @@ view: strm_property_f {
 
   #-- transient
   measure: pr_transient_occ_index_pct {
-    group_label: "Segments"
-    label: "Rms Occ % Transient Index to Compset"
+    group_label: " Transient"
+    label: "Rms Occ % Transient Index:Cs"
     description: "Rooms Occupancy Rate % Transient
     Index to Compset
     Rms Occ % Transient Pr / Rms Occ % Transient Cs"
@@ -389,8 +389,8 @@ view: strm_property_f {
   }
 
   measure: pr_transient_adr_index_pct {
-    group_label: "Segments"
-    label: "ADR Transient Index to Compset"
+    group_label: " Transient"
+    label: "ADR Transient Index:Cs"
     description: "Average Daily Rate Transient
     Index to Compset
     ADR Transient Pr / ADR Transient Cs"
@@ -400,8 +400,8 @@ view: strm_property_f {
   }
 
   measure: pr_transient_revpar_index_pct {
-    group_label: "Segments"
-    label: "RevPAR Transient Index to Compset"
+    group_label: " Transient"
+    label: "RevPAR Transient Index:Cs"
     description: "RevPAR Transient Index to Compset
     RevPAR Transient Pr / RevPAR Transient Cs"
     type: number
@@ -413,8 +413,8 @@ view: strm_property_f {
   #-- property % previous
   #--------------------------------------------------------------------------------
   measure: property_occ_index_pct_prev {
-    view_label: "  % Previous"
-    label: "Rms Occ % Index to Compset %Prev"
+    group_label: "  Property"
+    label: "Rms Occ % Index:Cs %Prev"
     description: "Percent to previous column or row."
     type: percent_of_previous
     sql: ${property_occ_index_pct} ;;
@@ -422,8 +422,8 @@ view: strm_property_f {
   }
 
   measure: property_adr_index_pct_prev {
-    view_label: "  % Previous"
-    label: "ADR Index to Compset %Prev"
+    group_label: "  Property"
+    label: "ADR Index:Cs %Prev"
     description: "Percent to previous column or row."
     type: percent_of_previous
     sql: ${property_adr_index_pct} ;;
@@ -431,8 +431,8 @@ view: strm_property_f {
   }
 
   measure: property_revpar_index_pct_prev {
-    view_label: "  % Previous"
-    label: "RevPAR Index to Compset %Prev"
+    group_label: "  Property"
+    label: "RevPAR Index:Cs %Prev"
     description: "Percent to previous column or row."
     type: percent_of_previous
     sql: ${property_revpar_index_pct} ;;
@@ -440,10 +440,98 @@ view: strm_property_f {
   }
 
   #--------------------------------------------------------------------------------
+  #-- property segments % previous
+  #--------------------------------------------------------------------------------
+
+  #-- contract
+  measure: pr_contract_occ_index_pct_prev {
+    group_label: " Contract"
+    label: "Rms Occ % Contract Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_contract_occ_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: pr_contract_adr_index_pct_prev {
+    group_label: " Contract"
+    label: "ADR Contract Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_contract_adr_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: pr_contract_revpar_index_pct_prev {
+    group_label: " Contract"
+    label: "RevPAR Contract Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_contract_revpar_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  #-- group
+  measure: pr_group_occ_index_pct_prev {
+    group_label: " Group"
+    label: "Rms Occ % Group Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_group_occ_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: pr_group_adr_index_pct_prev {
+    group_label: " Group"
+    label: "ADR Group Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_group_adr_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: pr_group_revpar_index_pct_prev {
+    group_label: " Group"
+    label: "RevPAR Group Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_group_revpar_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  #-- transient
+  measure: pr_transient_occ_index_pct_prev {
+    group_label: " Transient"
+    label: "Rms Occ % Transient Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_transient_occ_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: pr_transient_adr_index_pct_prev {
+    group_label: " Transient"
+    label: "ADR Transient Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_transient_adr_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: pr_transient_revpar_index_pct_prev {
+    group_label: " Transient"
+    label: "RevPAR Transient Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_transient_revpar_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  #--------------------------------------------------------------------------------
   #-- compset
   #--------------------------------------------------------------------------------
   measure: compset_rev_amt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "Rev $ Cs"
     description: "Revenue $ Compset"
     type: sum
@@ -452,7 +540,7 @@ view: strm_property_f {
   }
 
   measure: compset_rbe_rev_amt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "Rev RB&E $ Cs"
     description: "Revenue RB&E $ Compset"
     type: sum
@@ -461,7 +549,7 @@ view: strm_property_f {
   }
 
   measure: compset_room_rev_amt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "Rev Rms $ Cs"
     description: "Revenue Rooms $ Compset"
     type: sum
@@ -470,7 +558,7 @@ view: strm_property_f {
   }
 
   measure: compset_room_group_rev_amt {
-    group_label: "Segments"
+    group_label: " Group"
     label: "Rev Rms Group $ Cs"
     description: "Revenue Rooms Group $ Compset"
     type: sum
@@ -479,7 +567,7 @@ view: strm_property_f {
   }
 
   measure: compset_room_transient_rev_amt {
-    group_label: "Segments"
+    group_label: " Transient"
     label: "Rev Rms Transient $ Cs"
     description: "Revenue Rooms Transient $ Compset"
     type: sum
@@ -488,7 +576,7 @@ view: strm_property_f {
   }
 
   measure: compset_room_contract_rev_amt {
-    group_label: "Segments"
+    group_label: " Contract"
     label: "Rev Rms Contract $ Cs"
     description: "Revenue Rooms Contract $ Compset"
     type: sum
@@ -497,7 +585,7 @@ view: strm_property_f {
   }
 
   measure: compset_room_other_rev_amt {
-    group_label: "Segments"
+    group_label: "Other"
     label: "Rev Rms Other $ Cs"
     description: "Revenue Rooms Other $ Compset"
     type: sum
@@ -506,7 +594,7 @@ view: strm_property_f {
   }
 
   measure: compset_room_avail_cnt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "Rms Avail Cs"
     description: "Rooms Available Compset"
     type: sum
@@ -515,7 +603,7 @@ view: strm_property_f {
   }
 
   measure: compset_room_sold_cnt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "Rms Occ Cs"
     description: "Rooms Occupied Compset"
     type: sum
@@ -524,7 +612,7 @@ view: strm_property_f {
   }
 
   measure: compset_room_contract_sold_cnt {
-    group_label: "Segments"
+    group_label: " Contract"
     label: "Rms Occ Contract Cs"
     description: "Rooms Occupied Contract Compset"
     type: sum
@@ -533,7 +621,7 @@ view: strm_property_f {
   }
 
   measure: compset_room_group_sold_cnt {
-    group_label: "Segments"
+    group_label: " Group"
     label: "Rms Occ Group Cs"
     description: "Rooms Occupied Group Compset"
     type: sum
@@ -542,7 +630,7 @@ view: strm_property_f {
   }
 
   measure: compset_room_transient_sold_cnt {
-    group_label: "Segments"
+    group_label: " Transient"
     label: "Rms Occ Transient Cs"
     description: "Rooms Occupied Transient Compset"
     type: sum
@@ -551,7 +639,7 @@ view: strm_property_f {
   }
 
   measure: compset_occupancy_rate_pct {
-    group_label: " Property"
+    group_label: "  Property"
     label: "Rms Occ % Cs"
     description: "Rooms Occupancy Rate % Compset
     Rms Occ / Rms Available"
@@ -561,7 +649,7 @@ view: strm_property_f {
   }
 
   measure: compset_adr_amt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "ADR Cs"
     description: "Average Daily Rate Compset
     Rev Rms / Rms Occ Compset"
@@ -571,7 +659,7 @@ view: strm_property_f {
   }
 
   measure: compset_revpar_amt {
-    group_label: " Property"
+    group_label: "  Property"
     label: "RevPAR Cs"
     description: "Revenue Per Available Room Compset
     Rev Rms / Rms Avail"
@@ -586,7 +674,7 @@ view: strm_property_f {
 
   #-- contract
   measure: cs_contract_occupancy_rate_pct {
-    group_label: "Segments"
+    group_label: " Contract"
     label: "Rms Occ % Contract Cs"
     description: "Rooms Occupancy Rate % Contract Compset
     Rms Occ Contract / Rms Available"
@@ -596,7 +684,7 @@ view: strm_property_f {
   }
 
   measure: cs_contract_adr_amt {
-    group_label: "Segments"
+    group_label: " Contract"
     label: "ADR Contract Cs"
     description: "Average Daily Rate Contract Compset
     Rev Rms Contract / Rms Occ Contract"
@@ -606,7 +694,7 @@ view: strm_property_f {
   }
 
   measure: cs_contract_revpar_amt {
-    group_label: "Segments"
+    group_label: " Contract"
     label: "RevPAR Contract Cs"
     description: "Revenue Per Available Room Contract Compset
     Rev Rms Contract / Rms Avail"
@@ -617,7 +705,7 @@ view: strm_property_f {
 
   #-- group
   measure: cs_group_occupancy_rate_pct {
-    group_label: "Segments"
+    group_label: " Group"
     label: "Rms Occ % Group Cs"
     description: "Rooms Occupancy Rate % Group Compset
     Rms Occ Group / Rms Available"
@@ -627,7 +715,7 @@ view: strm_property_f {
   }
 
   measure: cs_group_adr_amt {
-    group_label: "Segments"
+    group_label: " Group"
     label: "ADR Group Cs"
     description: "Average Daily Rate Group Compset
     Rev Rms Group / Rms Occ Group"
@@ -637,7 +725,7 @@ view: strm_property_f {
   }
 
   measure: cs_group_revpar_amt {
-    group_label: "Segments"
+    group_label: " Group"
     label: "RevPAR Group Cs"
     description: "Revenue Per Available Room Group Compset
     Rev Rms Group / Rms Avail"
@@ -648,7 +736,7 @@ view: strm_property_f {
 
   #-- transient
   measure: cs_transient_occupancy_rate_pct {
-    group_label: "Segments"
+    group_label: " Transient"
     label: "Rms Occ % Transient Cs"
     description: "Rooms Occupancy Rate % Transient Compset
     Rms Occ Transient / Rms Available"
@@ -658,7 +746,7 @@ view: strm_property_f {
   }
 
   measure: cs_transient_adr_amt {
-    group_label: "Segments"
+    group_label: " Transient"
     label: "ADR Transient Cs"
     description: "Average Daily Rate Transient Compset
     Rev Rms Transient / Rms Occ Transient"
@@ -668,7 +756,7 @@ view: strm_property_f {
   }
 
   measure: cs_transient_revpar_amt {
-    group_label: "Segments"
+    group_label: " Transient"
     label: "RevPAR Transient Cs"
     description: "Revenue Per Available Room Transient Compset
     Rev Rms Transient / Rms Avail"
