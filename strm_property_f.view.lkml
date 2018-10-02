@@ -413,8 +413,8 @@ view: strm_property_f {
   #-- property % previous
   #--------------------------------------------------------------------------------
   measure: property_occ_index_pct_prev {
-    view_label: "  % Previous"
-    label: "Rms Occ % Index to Compset %Prev"
+    group_label: "  Property"
+    label: "Rms Occ % Index:Cs %Prev"
     description: "Percent to previous column or row."
     type: percent_of_previous
     sql: ${property_occ_index_pct} ;;
@@ -422,8 +422,8 @@ view: strm_property_f {
   }
 
   measure: property_adr_index_pct_prev {
-    view_label: "  % Previous"
-    label: "ADR Index to Compset %Prev"
+    group_label: "  Property"
+    label: "ADR Index:Cs %Prev"
     description: "Percent to previous column or row."
     type: percent_of_previous
     sql: ${property_adr_index_pct} ;;
@@ -431,11 +431,99 @@ view: strm_property_f {
   }
 
   measure: property_revpar_index_pct_prev {
-    view_label: "  % Previous"
-    label: "RevPAR Index to Compset %Prev"
+    group_label: "  Property"
+    label: "RevPAR Index:Cs %Prev"
     description: "Percent to previous column or row."
     type: percent_of_previous
     sql: ${property_revpar_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  #--------------------------------------------------------------------------------
+  #-- property segments % previous
+  #--------------------------------------------------------------------------------
+
+  #-- contract
+  measure: pr_contract_occ_index_pct_prev {
+    group_label: " Contract"
+    label: "Rms Occ % Contract Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_contract_occ_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: pr_contract_adr_index_pct_prev {
+    group_label: " Contract"
+    label: "ADR Contract Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_contract_adr_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: pr_contract_revpar_index_pct_prev {
+    group_label: " Contract"
+    label: "RevPAR Contract Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_contract_revpar_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  #-- group
+  measure: pr_group_occ_index_pct_prev {
+    group_label: " Group"
+    label: "Rms Occ % Group Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_group_occ_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: pr_group_adr_index_pct_prev {
+    group_label: " Group"
+    label: "ADR Group Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_group_adr_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: pr_group_revpar_index_pct_prev {
+    group_label: " Group"
+    label: "RevPAR Group Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_group_revpar_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  #-- transient
+  measure: pr_transient_occ_index_pct_prev {
+    group_label: " Transient"
+    label: "Rms Occ % Transient Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_transient_occ_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: pr_transient_adr_index_pct_prev {
+    group_label: " Transient"
+    label: "ADR Transient Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_transient_adr_index_pct} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: pr_transient_revpar_index_pct_prev {
+    group_label: " Transient"
+    label: "RevPAR Transient Index:Cs %Prev"
+    description: "Percent to previous column or row."
+    type: percent_of_previous
+    sql: ${pr_transient_revpar_index_pct} ;;
     value_format: "0.0\%"
   }
 
