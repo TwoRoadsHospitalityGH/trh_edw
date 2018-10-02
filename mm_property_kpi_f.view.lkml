@@ -295,6 +295,15 @@ view: mm_property_kpi_f {
     description: "Variance to annual goal."
     sql: ${measure_kpi} - ${property_metric_goal_dm.goal_m} ;;
     hidden: no
+    value_format_name: percent_1
+    html: {% if {{performance_metric_dm.value_format_str._value}} == 'percent_1' %}
+            {{ rendered_value }}
+          {% elsif {{performance_metric_dm.value_format_str._value}} == 'decimal_1' %}
+            {{ property_metric_goal_dm.below_goal_val_d1_d._rendered_value }}
+          {% elsif {{performance_metric_dm.value_format_str._value}} == 'decimal_2' %}
+            {{ property_metric_goal_dm.below_goal_val_d2_d._rendered_value }}
+          {% endif %};;
+    required_fields:[property_metric_goal_dm.below_goal_val_d1_d, property_metric_goal_dm.below_goal_val_d2_d,property_metric_goal_dm.below_goal_val_id]
   }
 
   set: metric_drill {
