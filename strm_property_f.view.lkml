@@ -276,7 +276,7 @@ view: strm_property_f {
   #--------------------------------------------------------------------------------
   measure: property_occ_index_pct {
     group_label: "  Property"
-    label: "Rms Occ % Index to Compset"
+    label: "Rms Occ % Index:Cs"
     description: "Rooms Occupancy Rate %
     Index to Compset
     Pr Rms Occ % / Cs Rms Occ %"
@@ -287,7 +287,7 @@ view: strm_property_f {
 
   measure: property_adr_index_pct {
     group_label: "  Property"
-    label: "ADR Index to Compset"
+    label: "ADR Index:Cs"
     description: "Average Daily Rate
     Index to Compset
     Pr ADR / Cs ADR"
@@ -298,7 +298,7 @@ view: strm_property_f {
 
   measure: property_revpar_index_pct {
     group_label: "  Property"
-    label: "RevPAR Index to Compset"
+    label: "RevPAR Index:Cs"
     description: "RevPAR Index to Compset
     Pr RevPAR / Cs RevPAR"
     type: number
@@ -313,7 +313,7 @@ view: strm_property_f {
   #-- contract
   measure: pr_contract_occ_index_pct {
     group_label: " Contract"
-    label: "Rms Occ % Contract Index to Compset"
+    label: "Rms Occ % Contract Index:Cs"
     description: "Rooms Occupancy Rate % Contract
     Index to Compset
     Rms Occ % Contract Pr / Rms Occ % Contract Cs"
@@ -324,7 +324,7 @@ view: strm_property_f {
 
   measure: pr_contract_adr_index_pct {
     group_label: " Contract"
-    label: "ADR Contract Index to Compset"
+    label: "ADR Contract Index:Cs"
     description: "Average Daily Rate Contract
     Index to Compset
     ADR Contract Pr / ADR Contract Cs"
@@ -335,7 +335,7 @@ view: strm_property_f {
 
   measure: pr_contract_revpar_index_pct {
     group_label: " Contract"
-    label: "RevPAR Contract Index to Compset"
+    label: "RevPAR Contract Index:Cs"
     description: "RevPAR Contract Index to Compset
     RevPAR Contract Pr / RevPAR Contract Cs"
     type: number
@@ -346,7 +346,7 @@ view: strm_property_f {
   #-- group
   measure: pr_group_occ_index_pct {
     group_label: " Group"
-    label: "Rms Occ % Group Index to Compset"
+    label: "Rms Occ % Group Index:Cs"
     description: "Rooms Occupancy Rate % Group
     Index to Compset
     Rms Occ % Group Pr / Rms Occ % Group Cs"
@@ -357,7 +357,7 @@ view: strm_property_f {
 
   measure: pr_group_adr_index_pct {
     group_label: " Group"
-    label: "ADR Group Index to Compset"
+    label: "ADR Group Index:Cs"
     description: "Average Daily Rate Group
     Index to Compset
     ADR Group Pr / ADR Group Cs"
@@ -368,7 +368,7 @@ view: strm_property_f {
 
   measure: pr_group_revpar_index_pct {
     group_label: " Group"
-    label: "RevPAR Group Index to Compset"
+    label: "RevPAR Group Index:Cs"
     description: "RevPAR Group Index to Compset
     RevPAR Group Pr / RevPAR Group Cs"
     type: number
@@ -379,7 +379,7 @@ view: strm_property_f {
   #-- transient
   measure: pr_transient_occ_index_pct {
     group_label: " Transient"
-    label: "Rms Occ % Transient Index to Compset"
+    label: "Rms Occ % Transient Index:Cs"
     description: "Rooms Occupancy Rate % Transient
     Index to Compset
     Rms Occ % Transient Pr / Rms Occ % Transient Cs"
@@ -390,7 +390,7 @@ view: strm_property_f {
 
   measure: pr_transient_adr_index_pct {
     group_label: " Transient"
-    label: "ADR Transient Index to Compset"
+    label: "ADR Transient Index:Cs"
     description: "Average Daily Rate Transient
     Index to Compset
     ADR Transient Pr / ADR Transient Cs"
@@ -401,7 +401,7 @@ view: strm_property_f {
 
   measure: pr_transient_revpar_index_pct {
     group_label: " Transient"
-    label: "RevPAR Transient Index to Compset"
+    label: "RevPAR Transient Index:Cs"
     description: "RevPAR Transient Index to Compset
     RevPAR Transient Pr / RevPAR Transient Cs"
     type: number
