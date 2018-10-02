@@ -1,7 +1,9 @@
 view: strm_property_f {
   sql_table_name: pedw.dev.strm_property_f ;;
 
-# Keys
+  #--------------------------------------------------------------------------------
+  # Keys
+  #--------------------------------------------------------------------------------
 
   dimension: property_key{
     type: number
@@ -11,19 +13,20 @@ view: strm_property_f {
 
   dimension: month_date_sid {
     type: number
-    value_format_name: id
     sql: ${TABLE}.month_date_sid ;;
     hidden: yes
   }
 
-# measures
+  #--------------------------------------------------------------------------------
+  # measures
+  #--------------------------------------------------------------------------------
 
   #--------------------------------------------------------------------------------
   #-- property
   #--------------------------------------------------------------------------------
   measure: property_cnt {
     group_label: " Property"
-    label: "Properties"
+    label: " Properties"
     description: "Distinct count of properties."
     type: count_distinct
     sql: ${property_key} ;;
@@ -32,8 +35,8 @@ view: strm_property_f {
 
   measure: property_rev_amt {
     group_label: " Property"
-    label: "Pr Rev $"
-    description: "Property Revenue $"
+    label: "Rev $  Pr"
+    description: "Revenue $ Property"
     type: sum
     sql: ${TABLE}.property_rev_amt ;;
     value_format_name: usd_0
@@ -41,8 +44,8 @@ view: strm_property_f {
 
   measure: property_rbe_rev_amt {
     group_label: " Property"
-    label: "Pr Rev RB&E $"
-    description: "Property Revenue RB&E $"
+    label: "Rev RB&E $  Pr"
+    description: "Revenue RB&E $ Property"
     type: sum
     sql: ${TABLE}.property_rbe_rev_amt ;;
     value_format_name: usd_0
@@ -50,44 +53,44 @@ view: strm_property_f {
 
   measure: property_room_rev_amt {
     group_label: " Property"
-    label: "Pr Rev Rms $"
-    description: "Property Revenue Rooms $"
+    label: "Rev Rms $  Pr"
+    description: "Revenue Rooms $ Property"
     type: sum
     sql: ${TABLE}.property_room_rev_amt ;;
     value_format_name: usd_0
   }
 
   measure: property_room_group_rev_amt {
-    group_label: " Property"
-    label: "Pr Rev Rms Group $"
-    description: "Property Revenue Rooms Group $"
+    group_label: "Segments"
+    label: "Rev Rms Group $  Pr"
+    description: "Revenue Rooms Group $ Property"
     type: sum
     sql: ${TABLE}.property_room_group_rev_amt ;;
     value_format_name: usd_0
   }
 
   measure: property_room_transient_rev_amt {
-    group_label: " Property"
-    label: "Pr Rev Rms Transient $"
-    description: "Property Revenue Rooms Transient $"
+    group_label: "Segments"
+    label: "Rev Rms Transient $  Pr"
+    description: "Revenue Rooms Transient $ Property"
     type: sum
     sql: ${TABLE}.property_room_transient_rev_amt ;;
     value_format_name: usd_0
   }
 
   measure: property_room_contract_rev_amt {
-    group_label: " Property"
-    label: "Pr Rev Rms Contract $"
-    description: "Property Revenue Rooms Contract $"
+    group_label: "Segments"
+    label: "Rev Rms Contract $  Pr"
+    description: "Revenue Rooms Contract $ Property"
     type: sum
     sql: ${TABLE}.property_room_Contract_rev_amt ;;
     value_format_name: usd_0
   }
 
   measure: property_room_other_rev_amt {
-    group_label: " Property"
-    label: "Pr Rev Rms Other $"
-    description: "Property Revenue Rooms Other $"
+    group_label: "Segments"
+    label: "Rev Rms Other $  Pr"
+    description: "Revenue Rooms Other $ Property"
     type: sum
     sql: ${TABLE}.property_room_other_rev_amt ;;
     value_format_name: usd_0
@@ -95,8 +98,8 @@ view: strm_property_f {
 
   measure: property_room_avail_cnt {
     group_label: " Property"
-    label: "Pr Rms Avail"
-    description: "Property Rooms Available"
+    label: "Rms Avail  Pr"
+    description: "Rooms Available Property"
     type: sum
     sql: ${TABLE}.property_room_avail_cnt ;;
     value_format_name: decimal_0
@@ -104,44 +107,48 @@ view: strm_property_f {
 
   measure: property_room_sold_cnt {
     group_label: " Property"
-    label: "Pr Rms Occ"
-    description: "Property Rooms Occupied"
+    label: "Rms Occ  Pr"
+    description: "Rooms Occupied Property"
     type: sum
     sql: ${TABLE}.property_room_sold_cnt ;;
     value_format_name: decimal_0
   }
 
   measure: property_room_contract_sold_cnt {
-    group_label: " Property"
-    label: "Pr Rms Occ Contract"
-    description: "Property Rooms Occupied Contract"
+    group_label: "Segments"
+    label: "Rms Occ Contract  Pr"
+    description: "Rooms Occupied Contract Property"
     type: sum
     sql: ${TABLE}.property_room_contract_sold_cnt ;;
     value_format_name: decimal_0
   }
 
   measure: property_room_group_sold_cnt {
-    group_label: " Property"
-    label: "Pr Rms Occ Group"
-    description: "Property Rooms Occupied Group"
+    group_label: "Segments"
+    label: "Rms Occ Group  Pr"
+    description: "Rooms Occupied Group Property"
     type: sum
     sql: ${TABLE}.property_room_group_sold_cnt ;;
     value_format_name: decimal_0
   }
 
   measure: property_room_transient_sold_cnt {
-    group_label: " Property"
-    label: "Pr Rms Occ Transient"
-    description: "Property Rooms Occupied Transient"
+    group_label: "Segments"
+    label: "Rms Occ Transient  Pr"
+    description: "Rooms Occupied Transient Property"
     type: sum
     sql: ${TABLE}.property_room_transient_sold_cnt ;;
     value_format_name: decimal_0
   }
 
+  #--------------------------------------------------------------------------------
+  #-- property calcs: occ, adr, revpar, etc
+  #--------------------------------------------------------------------------------
   measure: property_occupancy_rate_pct {
     group_label: " Property"
-    label: "Pr Rms Occ %"
-    description: "Property Rooms Occupancy Rate %.  Rms Occ / Rms Available"
+    label: "Rms Occ %  Pr"
+    description: "Rooms Occupancy Rate % Property
+    Rms Occ / Rms Available"
     type: number
     sql: utl..udf_divide( ${property_room_sold_cnt}, ${property_room_avail_cnt} );;
     value_format_name: percent_1
@@ -149,8 +156,9 @@ view: strm_property_f {
 
   measure: property_adr_amt {
     group_label: " Property"
-    label: "Pr ADR"
-    description: "Property Average Daily Rate. Rev Rms / Rms Occ"
+    label: "ADR  Pr"
+    description: "Average Daily Rate Property
+    Rev Rms / Rms Occ"
     type: number
     sql: utl..udf_divide( ${property_room_rev_amt}, ${property_room_sold_cnt} );;
     value_format_name: usd
@@ -158,61 +166,273 @@ view: strm_property_f {
 
   measure: property_revpar_amt {
     group_label: " Property"
-    label: "Pr RevPAR"
-    description: "Property Revenue Per Available Room. Rev Rms / Rms Avail"
+    label: "RevPAR  Pr"
+    description: "Revenue Per Available Room Property
+    Rev Rms / Rms Avail"
     type: number
     sql: utl..udf_divide( ${property_room_rev_amt}, ${property_room_avail_cnt} );;
     value_format_name: usd
   }
 
+  #--------------------------------------------------------------------------------
+  #-- property segment calcs: occ, adr, revpar, etc
+  #--------------------------------------------------------------------------------
+
+  #-- contract
+  measure: pr_contract_occupancy_rate_pct {
+    group_label: "Segments"
+    label: "Rms Occ % Contract  Pr"
+    description: "Rooms Occupancy Rate % Contract Property
+    Rms Occ Contract / Rms Available"
+    type: number
+    sql: utl..udf_divide( ${property_room_contract_sold_cnt}, ${property_room_avail_cnt} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_contract_adr_amt {
+    group_label: "Segments"
+    label: "ADR Contract  Pr"
+    description: "Average Daily Rate Contract Property
+    Rev Rms Contract / Rms Occ Contract"
+    type: number
+    sql: utl..udf_divide( ${property_room_contract_rev_amt}, ${property_room_contract_sold_cnt} );;
+    value_format_name: usd
+  }
+
+  measure: pr_contract_revpar_amt {
+    group_label: "Segments"
+    label: "RevPAR Contract  Pr"
+    description: "Revenue Per Available Room Contract Property
+    Rev Rms Contract / Rms Avail"
+    type: number
+    sql: utl..udf_divide( ${property_room_contract_rev_amt}, ${property_room_avail_cnt} );;
+    value_format_name: usd
+  }
+
+  #-- group
+  measure: pr_group_occupancy_rate_pct {
+    group_label: "Segments"
+    label: "Rms Occ % Group  Pr"
+    description: "Rooms Occupancy Rate % Group Property
+    Rms Occ Group / Rms Available"
+    type: number
+    sql: utl..udf_divide( ${property_room_group_sold_cnt}, ${property_room_avail_cnt} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_group_adr_amt {
+    group_label: "Segments"
+    label: "ADR Group  Pr"
+    description: "Average Daily Rate Group Property
+    Rev Rms Group / Rms Occ Group"
+    type: number
+    sql: utl..udf_divide( ${property_room_group_rev_amt}, ${property_room_group_sold_cnt} );;
+    value_format_name: usd
+  }
+
+  measure: pr_group_revpar_amt {
+    group_label: "Segments"
+    label: "RevPAR Group  Pr"
+    description: "Revenue Per Available Room Group Property
+    Rev Rms Group / Rms Avail"
+    type: number
+    sql: utl..udf_divide( ${property_room_group_rev_amt}, ${property_room_avail_cnt} );;
+    value_format_name: usd
+  }
+
+  #-- transient
+  measure: pr_transient_occupancy_rate_pct {
+    group_label: "Segments"
+    label: "Rms Occ % Transient  Pr"
+    description: "Rooms Occupancy Rate % Transient Property
+    Rms Occ Transient / Rms Available"
+    type: number
+    sql: utl..udf_divide( ${property_room_transient_sold_cnt}, ${property_room_avail_cnt} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_transient_adr_amt {
+    group_label: "Segments"
+    label: "ADR Transient  Pr"
+    description: "Average Daily Rate Transient Property
+    Rev Rms Transient / Rms Occ Transient"
+    type: number
+    sql: utl..udf_divide( ${property_room_transient_rev_amt}, ${property_room_transient_sold_cnt} );;
+    value_format_name: usd
+  }
+
+  measure: pr_transient_revpar_amt {
+    group_label: "Segments"
+    label: "RevPAR Transient  Pr"
+    description: "Revenue Per Available Room Transient Property
+    Rev Rms Transient / Rms Avail"
+    type: number
+    sql: utl..udf_divide( ${property_room_transient_rev_amt}, ${property_room_avail_cnt} );;
+    value_format_name: usd
+  }
+
+  #--------------------------------------------------------------------------------
+  #-- property indexes to compset
+  #--------------------------------------------------------------------------------
   measure: property_occ_index_pct {
     group_label: " Property"
-    label: "Pr Rms Occ % Index to Compset"
-    description: "Property Rooms Occupancy Rate % Indexed to Compset. Rms Occ % / Cs Occ %"
+    label: "Rms Occ % Index to Compset"
+    description: "Rooms Occupancy Rate %
+    Index to Compset
+    Pr Rms Occ % / Cs Rms Occ %"
     type: number
     sql: utl..udf_divide( ${property_occupancy_rate_pct}, ${compset_occupancy_rate_pct} );;
     value_format_name: percent_1
   }
 
+  measure: property_adr_index_pct {
+    group_label: " Property"
+    label: "ADR Index to Compset"
+    description: "Average Daily Rate
+    Index to Compset
+    Pr ADR / Cs ADR"
+    type: number
+    sql: utl..udf_divide( ${property_adr_amt}, ${compset_adr_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_revpar_index_pct {
+    group_label: " Property"
+    label: "RevPAR Index to Compset"
+    description: "RevPAR Index to Compset
+    Pr RevPAR / Cs RevPAR"
+    type: number
+    sql: utl..udf_divide( ${property_revpar_amt}, ${compset_revpar_amt} );;
+    value_format_name: percent_1
+  }
+
+  #--------------------------------------------------------------------------------
+  #-- property segments indexes to compset
+  #--------------------------------------------------------------------------------
+
+  #-- contract
+  measure: pr_contract_occ_index_pct {
+    group_label: "Segments"
+    label: "Rms Occ % Contract Index to Compset"
+    description: "Rooms Occupancy Rate % Contract
+    Index to Compset
+    Rms Occ % Contract Pr / Rms Occ % Contract Cs"
+    type: number
+    sql: utl..udf_divide( ${pr_contract_occupancy_rate_pct}, ${cs_contract_occupancy_rate_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_contract_adr_index_pct {
+    group_label: "Segments"
+    label: "ADR Contract Index to Compset"
+    description: "Average Daily Rate Contract
+    Index to Compset
+    ADR Contract Pr / ADR Contract Cs"
+    type: number
+    sql: utl..udf_divide( ${pr_contract_adr_amt}, ${cs_contract_adr_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_contract_revpar_index_pct {
+    group_label: "Segments"
+    label: "RevPAR Contract Index to Compset"
+    description: "RevPAR Contract Index to Compset
+    RevPAR Contract Pr / RevPAR Contract Cs"
+    type: number
+    sql: utl..udf_divide( ${pr_contract_revpar_amt}, ${cs_contract_revpar_amt} );;
+    value_format_name: percent_1
+  }
+
+  #-- group
+  measure: pr_group_occ_index_pct {
+    group_label: "Segments"
+    label: "Rms Occ % Group Index to Compset"
+    description: "Rooms Occupancy Rate % Group
+    Index to Compset
+    Rms Occ % Group Pr / Rms Occ % Group Cs"
+    type: number
+    sql: utl..udf_divide( ${pr_group_occupancy_rate_pct}, ${cs_group_occupancy_rate_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_group_adr_index_pct {
+    group_label: "Segments"
+    label: "ADR Group Index to Compset"
+    description: "Average Daily Rate Group
+    Index to Compset
+    ADR Group Pr / ADR Group Cs"
+    type: number
+    sql: utl..udf_divide( ${pr_group_adr_amt}, ${cs_group_adr_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_group_revpar_index_pct {
+    group_label: "Segments"
+    label: "RevPAR Group Index to Compset"
+    description: "RevPAR Group Index to Compset
+    RevPAR Group Pr / RevPAR Group Cs"
+    type: number
+    sql: utl..udf_divide( ${pr_group_revpar_amt}, ${cs_group_revpar_amt} );;
+    value_format_name: percent_1
+  }
+
+  #-- transient
+  measure: pr_transient_occ_index_pct {
+    group_label: "Segments"
+    label: "Rms Occ % Transient Index to Compset"
+    description: "Rooms Occupancy Rate % Transient
+    Index to Compset
+    Rms Occ % Transient Pr / Rms Occ % Transient Cs"
+    type: number
+    sql: utl..udf_divide( ${pr_transient_occupancy_rate_pct}, ${cs_transient_occupancy_rate_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_transient_adr_index_pct {
+    group_label: "Segments"
+    label: "ADR Transient Index to Compset"
+    description: "Average Daily Rate Transient
+    Index to Compset
+    ADR Transient Pr / ADR Transient Cs"
+    type: number
+    sql: utl..udf_divide( ${pr_transient_adr_amt}, ${cs_transient_adr_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_transient_revpar_index_pct {
+    group_label: "Segments"
+    label: "RevPAR Transient Index to Compset"
+    description: "RevPAR Transient Index to Compset
+    RevPAR Transient Pr / RevPAR Transient Cs"
+    type: number
+    sql: utl..udf_divide( ${pr_transient_revpar_amt}, ${cs_transient_revpar_amt} );;
+    value_format_name: percent_1
+  }
+
+  #--------------------------------------------------------------------------------
+  #-- property % previous
+  #--------------------------------------------------------------------------------
   measure: property_occ_index_pct_prev {
     view_label: "  % Previous"
-    label: "Pr Rms Occ % Index to Compset %Prev"
+    label: "Rms Occ % Index to Compset %Prev"
     description: "Percent to previous column or row."
     type: percent_of_previous
     sql: ${property_occ_index_pct} ;;
     value_format: "0.0\%"
   }
 
-  measure: property_adr_index_pct {
-    group_label: " Property"
-    label: "Pr ADR Index to Compset"
-    description: "Pr ADR / Cs ADR"
-    type: number
-    sql: utl..udf_divide( ${property_adr_amt}, ${compset_adr_amt} );;
-    value_format_name: percent_1
-  }
-
   measure: property_adr_index_pct_prev {
     view_label: "  % Previous"
-    label: "Pr ADR Index to Compset %Prev"
+    label: "ADR Index to Compset %Prev"
     description: "Percent to previous column or row."
     type: percent_of_previous
     sql: ${property_adr_index_pct} ;;
     value_format: "0.0\%"
   }
 
-  measure: property_revpar_index_pct {
-    group_label: " Property"
-    label: "Pr RevPAR Index to Compset"
-    description: "Pr RevPAR / Cs RevPAR"
-    type: number
-    sql: utl..udf_divide( ${property_revpar_amt}, ${compset_revpar_amt} );;
-    value_format_name: percent_1
-  }
-
   measure: property_revpar_index_pct_prev {
     view_label: "  % Previous"
-    label: "Pr RevPAR Index to Compset %Prev"
+    label: "RevPAR Index to Compset %Prev"
     description: "Percent to previous column or row."
     type: percent_of_previous
     sql: ${property_revpar_index_pct} ;;
@@ -223,137 +443,237 @@ view: strm_property_f {
   #-- compset
   #--------------------------------------------------------------------------------
   measure: compset_rev_amt {
-    group_label: "Compset"
-    label: "Cs Rev $"
-    description: "Compset Revenue $"
+    group_label: " Property"
+    label: "Rev $ Cs"
+    description: "Revenue $ Compset"
     type: sum
     sql: ${TABLE}.compset_rev_amt ;;
     value_format_name: usd_0
   }
 
   measure: compset_rbe_rev_amt {
-    group_label: "Compset"
-    label: "Cs Rev RB&E $"
-    description: "Compset Revenue RB&E $"
+    group_label: " Property"
+    label: "Rev RB&E $ Cs"
+    description: "Revenue RB&E $ Compset"
     type: sum
     sql: ${TABLE}.compset_rbe_rev_amt ;;
     value_format_name: usd_0
   }
 
   measure: compset_room_rev_amt {
-    group_label: "Compset"
-    label: "Cs Rev Rms $"
-    description: "Compset Revenue Rooms $"
+    group_label: " Property"
+    label: "Rev Rms $ Cs"
+    description: "Revenue Rooms $ Compset"
     type: sum
     sql: ${TABLE}.compset_room_rev_amt ;;
     value_format_name: usd_0
   }
 
   measure: compset_room_group_rev_amt {
-    group_label: "Compset"
-    label: "Cs Rev Rms Group $"
-    description: "Compset Revenue Rooms Group $"
+    group_label: "Segments"
+    label: "Rev Rms Group $ Cs"
+    description: "Revenue Rooms Group $ Compset"
     type: sum
     sql: ${TABLE}.compset_room_group_rev_amt ;;
     value_format_name: usd_0
   }
 
   measure: compset_room_transient_rev_amt {
-    group_label: "Compset"
-    label: "Cs Rev Rms Transient $"
-    description: "Compset Revenue Rooms Transient $"
+    group_label: "Segments"
+    label: "Rev Rms Transient $ Cs"
+    description: "Revenue Rooms Transient $ Compset"
     type: sum
     sql: ${TABLE}.compset_room_transient_rev_amt ;;
     value_format_name: usd_0
   }
 
   measure: compset_room_contract_rev_amt {
-    group_label: "Compset"
-    label: "Cs Rev Rms Contract $"
-    description: "Compset Revenue Rooms Contract $"
+    group_label: "Segments"
+    label: "Rev Rms Contract $ Cs"
+    description: "Revenue Rooms Contract $ Compset"
     type: sum
     sql: ${TABLE}.compset_room_Contract_rev_amt ;;
     value_format_name: usd_0
   }
 
   measure: compset_room_other_rev_amt {
-    group_label: "Compset"
-    label: "Cs Rev Rms Other $"
-    description: "Compset Revenue Rooms Other $"
+    group_label: "Segments"
+    label: "Rev Rms Other $ Cs"
+    description: "Revenue Rooms Other $ Compset"
     type: sum
     sql: ${TABLE}.compset_room_other_rev_amt ;;
     value_format_name: usd_0
   }
 
   measure: compset_room_avail_cnt {
-    group_label: "Compset"
-    label: "Cs Rms Avail"
-    description: "Compset Rooms Available"
+    group_label: " Property"
+    label: "Rms Avail Cs"
+    description: "Rooms Available Compset"
     type: sum
     sql: ${TABLE}.compset_room_avail_cnt ;;
     value_format_name: decimal_0
   }
 
   measure: compset_room_sold_cnt {
-    group_label: "Compset"
-    label: "Cs Rms Occ"
-    description: "Compset Rooms Occupied"
+    group_label: " Property"
+    label: "Rms Occ Cs"
+    description: "Rooms Occupied Compset"
     type: sum
     sql: ${TABLE}.compset_room_sold_cnt ;;
     value_format_name: decimal_0
   }
 
   measure: compset_room_contract_sold_cnt {
-    group_label: "Compset"
-    label: "Cs Rms Occ Contract"
-    description: "Compset Rooms Occupied Contract"
+    group_label: "Segments"
+    label: "Rms Occ Contract Cs"
+    description: "Rooms Occupied Contract Compset"
     type: sum
     sql: ${TABLE}.compset_room_contract_sold_cnt ;;
     value_format_name: decimal_0
   }
 
   measure: compset_room_group_sold_cnt {
-    group_label: "Compset"
-    label: "Cs Rms Occ Group"
-    description: "Compset Rooms Occupied Group"
+    group_label: "Segments"
+    label: "Rms Occ Group Cs"
+    description: "Rooms Occupied Group Compset"
     type: sum
     sql: ${TABLE}.compset_room_group_sold_cnt ;;
     value_format_name: decimal_0
   }
 
   measure: compset_room_transient_sold_cnt {
-    group_label: "Compset"
-    label: "Cs Rms Occ Transient"
-    description: "Compset Rooms Occupied Transient"
+    group_label: "Segments"
+    label: "Rms Occ Transient Cs"
+    description: "Rooms Occupied Transient Compset"
     type: sum
     sql: ${TABLE}.compset_room_transient_sold_cnt ;;
     value_format_name: decimal_0
   }
 
   measure: compset_occupancy_rate_pct {
-    group_label: "Compset"
-    label: "Cs Rms Occ %"
-    description: "Compset Rooms Occupancy Rate %.  Rms Occ / Rms Available"
+    group_label: " Property"
+    label: "Rms Occ % Cs"
+    description: "Rooms Occupancy Rate % Compset
+    Rms Occ / Rms Available"
     type: number
     sql: utl..udf_divide( ${compset_room_sold_cnt}, ${compset_room_avail_cnt} );;
     value_format_name: percent_1
   }
 
   measure: compset_adr_amt {
-    group_label: "Compset"
-    label: "Cs ADR"
-    description: "Compset Average Daily Rate. Rev Rms / Rms Occ"
+    group_label: " Property"
+    label: "ADR Cs"
+    description: "Average Daily Rate Compset
+    Rev Rms / Rms Occ Compset"
     type: number
     sql: utl..udf_divide( ${compset_room_rev_amt}, ${compset_room_sold_cnt} );;
     value_format_name: usd
   }
 
   measure: compset_revpar_amt {
-    group_label: "Compset"
-    label: "Cs RevPAR"
-    description: "Compset Revenue Per Available Room. Rev Rms / Rms Avail"
+    group_label: " Property"
+    label: "RevPAR Cs"
+    description: "Revenue Per Available Room Compset
+    Rev Rms / Rms Avail"
     type: number
     sql: utl..udf_divide( ${compset_room_rev_amt}, ${compset_room_avail_cnt} );;
+    value_format_name: usd
+  }
+
+  #--------------------------------------------------------------------------------
+  #-- compset segment calcs: occ, adr, revpar, etc
+  #--------------------------------------------------------------------------------
+
+  #-- contract
+  measure: cs_contract_occupancy_rate_pct {
+    group_label: "Segments"
+    label: "Rms Occ % Contract Cs"
+    description: "Rooms Occupancy Rate % Contract Compset
+    Rms Occ Contract / Rms Available"
+    type: number
+    sql: utl..udf_divide( ${compset_room_contract_sold_cnt}, ${compset_room_avail_cnt} );;
+    value_format_name: percent_1
+  }
+
+  measure: cs_contract_adr_amt {
+    group_label: "Segments"
+    label: "ADR Contract Cs"
+    description: "Average Daily Rate Contract Compset
+    Rev Rms Contract / Rms Occ Contract"
+    type: number
+    sql: utl..udf_divide( ${compset_room_contract_rev_amt}, ${compset_room_contract_sold_cnt} );;
+    value_format_name: usd
+  }
+
+  measure: cs_contract_revpar_amt {
+    group_label: "Segments"
+    label: "RevPAR Contract Cs"
+    description: "Revenue Per Available Room Contract Compset
+    Rev Rms Contract / Rms Avail"
+    type: number
+    sql: utl..udf_divide( ${compset_room_contract_rev_amt}, ${compset_room_avail_cnt} );;
+    value_format_name: usd
+  }
+
+  #-- group
+  measure: cs_group_occupancy_rate_pct {
+    group_label: "Segments"
+    label: "Rms Occ % Group Cs"
+    description: "Rooms Occupancy Rate % Group Compset
+    Rms Occ Group / Rms Available"
+    type: number
+    sql: utl..udf_divide( ${compset_room_group_sold_cnt}, ${compset_room_avail_cnt} );;
+    value_format_name: percent_1
+  }
+
+  measure: cs_group_adr_amt {
+    group_label: "Segments"
+    label: "ADR Group Cs"
+    description: "Average Daily Rate Group Compset
+    Rev Rms Group / Rms Occ Group"
+    type: number
+    sql: utl..udf_divide( ${compset_room_group_rev_amt}, ${compset_room_group_sold_cnt} );;
+    value_format_name: usd
+  }
+
+  measure: cs_group_revpar_amt {
+    group_label: "Segments"
+    label: "RevPAR Group Cs"
+    description: "Revenue Per Available Room Group Compset
+    Rev Rms Group / Rms Avail"
+    type: number
+    sql: utl..udf_divide( ${compset_room_group_rev_amt}, ${compset_room_avail_cnt} );;
+    value_format_name: usd
+  }
+
+  #-- transient
+  measure: cs_transient_occupancy_rate_pct {
+    group_label: "Segments"
+    label: "Rms Occ % Transient Cs"
+    description: "Rooms Occupancy Rate % Transient Compset
+    Rms Occ Transient / Rms Available"
+    type: number
+    sql: utl..udf_divide( ${compset_room_transient_sold_cnt}, ${compset_room_avail_cnt} );;
+    value_format_name: percent_1
+  }
+
+  measure: cs_transient_adr_amt {
+    group_label: "Segments"
+    label: "ADR Transient Cs"
+    description: "Average Daily Rate Transient Compset
+    Rev Rms Transient / Rms Occ Transient"
+    type: number
+    sql: utl..udf_divide( ${compset_room_transient_rev_amt}, ${compset_room_transient_sold_cnt} );;
+    value_format_name: usd
+  }
+
+  measure: cs_transient_revpar_amt {
+    group_label: "Segments"
+    label: "RevPAR Transient Cs"
+    description: "Revenue Per Available Room Transient Compset
+    Rev Rms Transient / Rms Avail"
+    type: number
+    sql: utl..udf_divide( ${compset_room_transient_rev_amt}, ${compset_room_avail_cnt} );;
     value_format_name: usd
   }
 
