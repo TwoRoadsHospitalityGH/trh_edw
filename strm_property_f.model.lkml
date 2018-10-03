@@ -35,12 +35,12 @@ explore: strm_property_f {
     relationship: one_to_one
   }
 
-  #join: strm_property_f_ly_measures {
-  #  from: strm_property_f_ly
-  #  view_label: "    aaa"
-  #  type: cross
-  #  relationship: many_to_one
-  #}
+  join: strm_property_f_toly {
+    from: strm_property_f_toly
+    view_label: "    Measures"
+    type: cross
+    relationship: one_to_one
+  }
 
   join: date_dm {
     from: date_dm
