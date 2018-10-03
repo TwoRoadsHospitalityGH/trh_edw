@@ -41,7 +41,7 @@ view: strm_property_f_toly {
   }
 
   #--------------------------------------------------------------------------------
-  #-- property segment calcs: occ, adr, revpar, etc
+  #-- property segment to LY: occ, adr, revpar, etc
   #--------------------------------------------------------------------------------
 
   #-- contract
@@ -129,6 +129,124 @@ view: strm_property_f_toly {
   }
 
   #--------------------------------------------------------------------------------
+  #-- property indexes to compset to LY
+  #--------------------------------------------------------------------------------
+  measure: property_occ_index_pct_toly {
+    group_label: "  Property"
+    label: "Rms Occ % Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${strm_property_f.property_occ_index_pct}, ${strm_property_f_ly.property_occ_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_adr_index_pct_toly {
+    group_label: "  Property"
+    label: "ADR Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${strm_property_f.property_adr_index_pct}, ${strm_property_f_ly.property_adr_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_revpar_index_pct_toly {
+    group_label: "  Property"
+    label: "RevPAR Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${strm_property_f.property_revpar_index_pct}, ${strm_property_f_ly.property_revpar_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  #--------------------------------------------------------------------------------
+  #-- property segments indexes to compset to LY
+  #--------------------------------------------------------------------------------
+
+  #-- contract
+  measure: pr_contract_occ_index_pct_toly {
+    group_label: " Contract"
+    label: "Rms Occ % Contract Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${strm_property_f.pr_contract_occ_index_pct}, ${strm_property_f_ly.pr_contract_occ_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_contract_adr_index_pct_toly {
+    group_label: " Contract"
+    label: "ADR Contract Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${strm_property_f.pr_contract_adr_index_pct}, ${strm_property_f_ly.pr_contract_adr_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_contract_revpar_index_pct_toly {
+    group_label: " Contract"
+    label: "RevPAR Contract Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${strm_property_f.pr_contract_revpar_index_pct}, ${strm_property_f_ly.pr_contract_revpar_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  #-- group
+  measure: pr_group_occ_index_pct_toly {
+    group_label: " Group"
+    label: "Rms Occ % Group Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${strm_property_f.pr_group_occ_index_pct}, ${strm_property_f_ly.pr_group_occ_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_group_adr_index_pct_toly {
+    group_label: " Group"
+    label: "ADR Group Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${strm_property_f.pr_group_adr_index_pct}, ${strm_property_f_ly.pr_group_adr_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_group_revpar_index_pct_toly {
+    group_label: " Group"
+    label: "RevPAR Group Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${strm_property_f.pr_group_revpar_index_pct}, ${strm_property_f_ly.pr_group_revpar_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  #-- transient
+  measure: pr_transient_occ_index_pct_toly {
+    group_label: " Transient"
+    label: "Rms Occ % Transient Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${strm_property_f.pr_transient_occ_index_pct}, ${strm_property_f_ly.pr_transient_occ_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_transient_adr_index_pct_toly {
+    group_label: " Transient"
+    label: "ADR Transient Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${strm_property_f.pr_transient_adr_index_pct}, ${strm_property_f_ly.pr_transient_adr_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: pr_transient_revpar_index_pct_toly {
+    group_label: " Transient"
+    label: "RevPAR Transient Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${strm_property_f.pr_transient_revpar_index_pct}, ${strm_property_f_ly.pr_transient_revpar_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  #--------------------------------------------------------------------------------
   #-- compset to LY: occ, adr, revpar, etc
   #--------------------------------------------------------------------------------
   measure: compset_occupancy_rate_pct_toly {
@@ -159,7 +277,7 @@ view: strm_property_f_toly {
   }
 
   #--------------------------------------------------------------------------------
-  #-- compset segment calcs: occ, adr, revpar, etc
+  #-- compset segment to LY: occ, adr, revpar, etc
   #--------------------------------------------------------------------------------
 
   #-- contract
