@@ -26,6 +26,22 @@ explore: strm_property_f {
     relationship: many_to_one
   }
 
+  join: strm_property_f_ly {
+    from: strm_property_f_ly
+    view_label: "   LY"
+    sql_on: ${strm_property_f_ly.property_key}   = ${strm_property_f.property_key}
+        and ${strm_property_f_ly.month_date_sid} = ${strm_property_f.month_date_sid} - 10000;;
+    type: left_outer
+    relationship: one_to_one
+  }
+
+  #join: strm_property_f_ly_measures {
+  #  from: strm_property_f_ly
+  #  view_label: "    aaa"
+  #  type: cross
+  #  relationship: many_to_one
+  #}
+
   join: date_dm {
     from: date_dm
     view_label: "  Date"
