@@ -152,6 +152,7 @@ view: property_metric_goal_dm {
 
   measure: above_goal_val_base  {
     type: average
+#     sql: iff(performance_metric_dm.metric_cd like '%excp%',-1, ${TABLE}.above_goal) ;;
     sql: ${TABLE}.above_goal ;;
     value_format_name:percent_1
     hidden: yes

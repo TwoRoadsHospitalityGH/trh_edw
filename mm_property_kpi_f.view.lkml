@@ -289,21 +289,50 @@ view: mm_property_kpi_f {
     drill_fields: [metric_drill*]
   }
 
+# Variance to goal
+
+  measure: var_to_goal_base {
+    type: number
+    sql:  ${kpi_val_base} - ${property_metric_goal_dm.goal_val_base}  ;;
+    hidden: yes
+  }
+
+  measure: var_to_goal_base_d1 {
+    type: number
+    value_format_name: decimal_1
+    sql:  ${kpi_val_base} - ${property_metric_goal_dm.goal_val_base} ;;
+    hidden: yes
+  }
+
+  measure: var_to_goal_base_d2 {
+    type: number
+    value_format_name: decimal_2
+    sql: ${kpi_val_base} - ${property_metric_goal_dm.goal_val_base} ;;
+    hidden: yes
+  }
+
+  measure: var_to_goal_base_id {
+    type: number
+    value_format_name: decimal_0
+    sql: ${kpi_val_base} - ${property_metric_goal_dm.goal_val_base} ;;
+    hidden: yes
+  }
+
   measure: var_to_goal {
     type: number
     label: "Goal - var"
     description: "Variance to annual goal."
-    sql: ${measure_kpi} - ${property_metric_goal_dm.goal_m} ;;
+    sql: ${measure_kpi} - ${property_metric_goal_dm.goal_val_base} ;;
     hidden: no
     value_format_name: percent_1
     html: {% if {{performance_metric_dm.value_format_str._value}} == 'percent_1' %}
             {{ rendered_value }}
           {% elsif {{performance_metric_dm.value_format_str._value}} == 'decimal_1' %}
-            {{ property_metric_goal_dm.below_goal_val_d1_d._rendered_value }}
+            {{ var_to_goal_base_d1._rendered_value }}
           {% elsif {{performance_metric_dm.value_format_str._value}} == 'decimal_2' %}
-            {{ property_metric_goal_dm.below_goal_val_d2_d._rendered_value }}
+            {{ var_to_goal_base_d2._rendered_value }}
           {% endif %};;
-    required_fields:[property_metric_goal_dm.below_goal_val_d1_d, property_metric_goal_dm.below_goal_val_d2_d,property_metric_goal_dm.below_goal_val_id]
+    required_fields:[var_to_goal_base, var_to_goal_base_d1, var_to_goal_base_d2]
   }
 
   set: metric_drill {
