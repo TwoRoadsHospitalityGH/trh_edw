@@ -1,5 +1,5 @@
 view: strm_property_f {
-  sql_table_name: pedw.dev.strm_property_f ;;
+  sql_table_name: pedw.fact.strm_property_f ;;
 
   #--------------------------------------------------------------------------------
   # Keys
