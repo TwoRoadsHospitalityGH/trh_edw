@@ -125,7 +125,6 @@ view: date_dm {
   }
 
   filter: current_period_wtd {
-    group_label: "Calendar Filters"
     label: "Current Week"
     description: "Within the current week."
     type: yesno
@@ -134,7 +133,6 @@ view: date_dm {
   }
 
   filter: last_completed_mo {
-    group_label: "Calendar Filters"
     label: "Last Complete Month"
     description: "Last complete month."
     type: yesno
