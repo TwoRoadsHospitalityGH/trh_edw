@@ -149,4 +149,39 @@ view: date_dm {
     sql: ${TABLE}.cal_ptd_bt = 1 ;;
   }
 
+  #
+  # Date Measures
+  #
+
+  measure: first_date {
+    label: "First Date"
+    sql: min(${cal_dt}) ;;
+  }
+
+  measure: last_date {
+    label: "Last Date"
+    sql: max(${cal_dt}) ;;
+  }
+
+  measure: months {
+    label: "Months"
+    description: "Count of months."
+    type: count_distinct
+    sql: ${cal_month_dt} ;;
+  }
+
+  measure: days {
+    label: "Days"
+    description: "Count of days."
+    type: count_distinct
+    sql: ${cal_dt} ;;
+  }
+
+  measure: date_range {
+    label: "Date Range"
+    type: string
+    sql:  concat(concat(to_char(min(${cal_dt}), 'mon dd, yy'), ' - ') , to_char(max(${cal_dt}), 'mon dd, yy') ) ;;
+  }
+
+
 }
