@@ -79,9 +79,9 @@ view: property_metric_goal_dm {
   }
 
   measure: above_goal_m  {
-    label: "Above Goal"
+    label: "Goal - Above"
     view_label: "    Measures"
-    description: "Annual goal."
+    description: "Above annual goal."
     type: number
     sql: ${above_goal_val_base};;
     hidden: no
@@ -97,9 +97,9 @@ view: property_metric_goal_dm {
   }
 
   measure: below_goal_m  {
-    label: "Below Goal"
+    label: "Goal - Below"
     view_label: "    Measures"
-    description: "Annual goal."
+    description: "Below annual goal."
     type: number
     sql: ${below_goal_val_base};;
     hidden: no
@@ -136,6 +136,7 @@ view: property_metric_goal_dm {
   }
 
   dimension: goal  {
+    label: "Goal"
     type: number
     sql: ${goal_val_base_d};;
     hidden: no
@@ -201,6 +202,7 @@ view: property_metric_goal_dm {
   }
 
   dimension: above_goal  {
+    label: "Goal - Above"
     type: number
     sql: ${above_goal_val_base_d};;
     hidden: no
@@ -265,6 +267,7 @@ dimension: below_goal_val_d2_d  {
 }
 
 dimension: below_goal  {
+  label: "Goal - Below"
   type: number
   sql: ${below_goal_val_base_d};;
   hidden: no

@@ -116,7 +116,7 @@ view: mm_property_kpi_f {
   }
 
   measure: property_goal_cnt_pct {
-    label: "Above/Below Goal - Ops Leader %"
+    label: "Goal Above/Below - Ops Leader %"
     description: "Percent of properties above or below goal by regional operations leader."
     type: number
     sql: utl..udf_divide(${property_cnt},  ${property_cnt_over_goal}) ;;
@@ -141,7 +141,7 @@ view: mm_property_kpi_f {
   }
 
   measure: property_goal_cnt_pct_fin {
-    label: "Above/Below Goal - Fnc Leader %"
+    label: "Goal Above/Below - Fnc Leader %"
     description: "Percent of properties above or below goal by regional finance leader."
     type: number
     sql: utl..udf_divide(${property_cnt},  ${property_cnt_over_finance_goal}) ;;
@@ -166,7 +166,7 @@ view: mm_property_kpi_f {
   }
 
   measure: property_brand_cnt_pct_fin {
-    label: "Above/Below Goal - Brand %"
+    label: "Goal Above/Below - Brand %"
     description: "Percent of properties above or below goal by brand."
     type: number
     sql: utl..udf_divide(${property_cnt},  ${property_cnt_over_brand}) ;;
@@ -320,7 +320,7 @@ view: mm_property_kpi_f {
 
   measure: var_to_goal {
     type: number
-    label: "Goal - var"
+    label: "Goal - Var"
     description: "Variance to annual goal."
     sql: ${measure_kpi} - ${property_metric_goal_dm.goal_val_base} ;;
     hidden: no
