@@ -2,7 +2,7 @@ view: property_dm {
   sql_table_name: pedw.fact.PROPERTY_DM ;;
 
   dimension: property_key {
-    label: "Property Code"
+    label: "Property Key PMD"
     description: "Property Code within PMD."
     type: number
     sql: ${TABLE}.PROPERTY_KEY ;;
