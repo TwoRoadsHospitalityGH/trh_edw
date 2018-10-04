@@ -9,8 +9,8 @@ datagroup: model_caching_dg {
 }
 
 explore: xx_mm_property_kpi_f {
-  group_label: "Test"
-  label: "Test"
+  group_label: "***Development***"
+  label: "Portfolio Performance Test"
   persist_with: model_caching_dg
   view_label: "    Measures"
 #   access_filter: {
