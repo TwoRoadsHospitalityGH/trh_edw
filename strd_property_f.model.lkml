@@ -8,7 +8,9 @@ datagroup: model_caching_dg {
   max_cache_age: "8 hours"
 }
 
-explore: strd_property_f {
+explore: str_property_v {
+  from: str_property_v
+  sql_table_name: pedw.fact.strd_property_f ;;
   group_label: "***Alpha Releases***"
   label: "STR Daily (alpha)"
   persist_with: model_caching_dg
@@ -21,22 +23,23 @@ explore: strd_property_f {
 
   join: user_property_fdm {
     from:  user_property_fdm
-    sql_on: ${user_property_fdm.property_key} = ${strd_property_f.property_key} ;;
+    sql_on: ${user_property_fdm.property_key} = ${str_property_v.property_key} ;;
     type: inner
     relationship: many_to_one
   }
 
-  join: strd_property_f_ly {
-    from: strd_property_f_ly
+  join: str_property_v_ly {
+    from: str_property_v_ly
+    sql_table_name: pedw.fact.strd_property_f ;;
     view_label: "   LY"
-    sql_on: ${strd_property_f_ly.property_key} = ${strd_property_f.property_key}
-      and ${strd_property_f_ly.date_sid}       = ${strd_property_f.ly_date_sid} ;;
+    sql_on: ${str_property_v_ly.property_key} = ${str_property_v.property_key}
+        and ${str_property_v_ly.date_sid}     = ${str_property_v.ly_date_sid} ;;
     type: left_outer
     relationship: one_to_one
   }
 
   join: strd_property_f_toly {
-    from: strd_property_f_toly
+    from: str_property_v_toly
     view_label: "    Measures"
     type: cross
     relationship: one_to_one
@@ -45,7 +48,7 @@ explore: strd_property_f {
   join: date_dm {
     from: date_dm
     view_label: "  Date"
-    sql_on: ${date_dm.date_sid} = ${strd_property_f.date_sid};;
+    sql_on: ${date_dm.date_sid} = ${str_property_v.date_sid};;
     type: inner
     relationship: many_to_one
   }
@@ -53,7 +56,7 @@ explore: strd_property_f {
   join: date_month_parameter{
     from:  date_month_parameter
     view_label: "  Date"
-    sql_on: ${date_month_parameter.date_sid} = ${strd_property_f.date_sid} ;;
+    sql_on: ${date_month_parameter.date_sid} = ${str_property_v.date_sid} ;;
     type: inner
     relationship: many_to_one
   }
@@ -61,7 +64,7 @@ explore: strd_property_f {
   join: property_dm {
     from: property_dm
     view_label: " Property"
-    sql_on: ${property_dm.property_key} = ${strd_property_f.property_key} ;;
+    sql_on: ${property_dm.property_key} = ${str_property_v.property_key} ;;
     type: inner
     relationship: many_to_one
   }

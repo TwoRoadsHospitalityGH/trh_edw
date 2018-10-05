@@ -1,4 +1,4 @@
-view: strm_property_f {
+view: str_property_v {
   sql_table_name: pedw.fact.strm_property_f ;;
 
   #--------------------------------------------------------------------------------
@@ -11,9 +11,15 @@ view: strm_property_f {
     hidden: yes
   }
 
-  dimension: month_date_sid {
+  dimension: date_sid {
     type: number
-    sql: ${TABLE}.month_date_sid ;;
+    sql: ${TABLE}.date_sid ;;
+    hidden: yes
+  }
+
+  dimension: ly_date_sid {
+    type: number
+    sql: ${TABLE}.ly_date_sid ;;
     hidden: yes
   }
 
