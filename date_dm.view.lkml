@@ -25,6 +25,15 @@ view: date_dm {
     allow_fill: no
   }
 
+  dimension: day_of_week {
+    type: date_day_of_week
+    label: "Day of Week"
+    description: "Day"
+    convert_tz: no
+    sql: ${cal_dt} ;;
+    allow_fill: no
+  }
+
   dimension: week {
     type: date_week
     label: "Week"
