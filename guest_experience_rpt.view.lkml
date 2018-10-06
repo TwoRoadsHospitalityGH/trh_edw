@@ -1,5 +1,5 @@
 view: guest_experience_rpt {
-  sql_table_name: pedw.dev.guest_experience_rpt ;;
+  sql_table_name: pedw.dev.guest_experience_f ;;
 
 # Keys
 
@@ -29,24 +29,49 @@ view: guest_experience_rpt {
   dimension: response_type_name {
     view_label: "Question"
     label: "Response Type Name"
-    description: "Review or Survey"
+    description: "Guest/Meeting Review/Survey"
     type: string
     sql: ${TABLE}.response_type_name ;;
   }
 
+  dimension: question_group_name {
+    view_label: "Question"
+    label: "Question Group Name"
+    description: "Goals, Other, etc."
+    type: string
+    sql: ${TABLE}.question_group_name ;;
+  }
+
   dimension: question_type_name {
     view_label: "Question"
-    label: "Question Type Name"
-    description: "Question type."
+    label: "Question Answer Type Name"
+    description: "Type of answer: Score, YesNo, Freeform, etc."
     type: string
-    sql: ${TABLE}.question_type_name ;;
+    sql: ${TABLE}.question_answer_type_name ;;
   }
 
   dimension: question_name {
     view_label: "Question"
     label: "Question Name"
+    description: "Full name of the question."
     type: string
     sql: ${TABLE}.question_name ;;
+  }
+
+  dimension: question_answer_score {
+    view_label: "Question"
+    label: "Question Score"
+    description: "Question score."
+    type: number
+    sql: ${TABLE}.question_score_no ;;
+  }
+
+  dimension: question_answer_str {
+    view_label: "Question"
+    label: "Question Answer Text"
+    description: "Text answer to review/survey question."
+    type: string
+    sql: ${TABLE}.question_answer_str ;;
   }
 
   dimension: room_type_cd {
@@ -106,12 +131,26 @@ view: guest_experience_rpt {
   }
 
   dimension: review_site_name {
-    view_label: "Review Site"
+    view_label: "Review"
     label: "Review Site Name"
     type: string
     sql: ${TABLE}.review_site_name ;;
   }
 
+  dimension: review_site_url {
+    view_label: "Review"
+    label: "Review Site URL"
+    type: string
+    sql: ${TABLE}.review_site_url ;;
+  }
+
+  dimension: review_title {
+    view_label: "Review"
+    label: "Review Title"
+    description: "Review title entered by guest."
+    type: string
+    sql: ${TABLE}.review_title ;;
+  }
 
 
 #--------------------------------------------------------------------------------
