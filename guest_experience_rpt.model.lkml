@@ -4,13 +4,13 @@ include: "*.view"         # include all views in this project
 label: "Guest Experience"
 
 datagroup: model_caching_dg {
-  sql_trigger: select max( dw_update_dt ) from pedw.fact.guest_experience_rpt ;;
+  sql_trigger: select max( dw_update_dt ) from pedw.fact.guest_experience_f ;;
   max_cache_age: "8 hours"
 }
 
 explore: guest_experience_rpt {
   group_label: "***Development***"
-  label: "Revinate Responses (dev)"
+  label: "Revinate Detail (dev)"
   persist_with: model_caching_dg
   view_label: "    Measures"
 

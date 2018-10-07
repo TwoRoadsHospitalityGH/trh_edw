@@ -23,11 +23,49 @@ view: guest_experience_rpt {
     hidden: yes
   }
 
-#--------------------------------------------------------------------------------
-#-- dimensions
-#--------------------------------------------------------------------------------
+  #--------------------------------------------------------------------------------
+  #-- dimensions
+  #--------------------------------------------------------------------------------
+  dimension: review_id {
+    view_label: "Guest Feedback"
+    label: "Review ID"
+    description: "Review ID within Revinate."
+    type: string
+    sql: ${TABLE}.review_id ;;
+  }
+
+  dimension: review_title {
+    view_label: "Guest Feedback"
+    label: "Review Title"
+    description: "Review title entered by guest."
+    type: string
+    sql: ${TABLE}.review_title ;;
+  }
+
+  dimension: review_site_name {
+    view_label: "Guest Feedback"
+    label: "Review Site Name"
+    type: string
+    sql: ${TABLE}.review_site_name ;;
+  }
+
+  dimension: review_site_url {
+    view_label: "Guest Feedback"
+    label: "Review Site URL"
+    type: string
+    sql: ${TABLE}.review_site_url ;;
+  }
+
+  dimension: review_subratings_str {
+    view_label: "Guest Feedback"
+    label: "Review Subratings"
+    description: "Review Subratings"
+    type: string
+    sql: ${TABLE}.review_subratings_str ;;
+  }
+
   dimension: response_type_name {
-    view_label: "Question"
+    view_label: "Guest Feedback"
     label: "Response Type Name"
     description: "Guest/Meeting Review/Survey"
     type: string
@@ -35,7 +73,7 @@ view: guest_experience_rpt {
   }
 
   dimension: question_group_name {
-    view_label: "Question"
+    view_label: "Guest Feedback"
     label: "Question Group Name"
     description: "Goals, Other, etc."
     type: string
@@ -43,15 +81,15 @@ view: guest_experience_rpt {
   }
 
   dimension: question_type_name {
-    view_label: "Question"
-    label: "Question Answer Type Name"
+    view_label: "Guest Feedback"
+    label: "Feedback Type Name"
     description: "Type of answer: Score, YesNo, Freeform, etc."
     type: string
     sql: ${TABLE}.question_answer_type_name ;;
   }
 
   dimension: question_name {
-    view_label: "Question"
+    view_label: "Guest Feedback"
     label: "Question Name"
     description: "Full name of the question."
     type: string
@@ -59,103 +97,80 @@ view: guest_experience_rpt {
   }
 
   dimension: question_answer_score {
-    view_label: "Question"
-    label: "Question Score"
+    view_label: "Guest Feedback"
+    label: "Feedback Score"
     description: "Question score."
     type: number
     sql: ${TABLE}.question_score_no ;;
   }
 
   dimension: question_answer_str {
-    view_label: "Question"
-    label: "Question Answer Text"
+    view_label: "Guest Feedback"
+    label: "Feedback Text"
     description: "Text answer to review/survey question."
     type: string
     sql: ${TABLE}.question_answer_str ;;
   }
 
-  dimension: room_type_cd {
-    view_label: "Room"
-    label: "Room Type Cd"
+  dimension: booking_channel_cd {
+    view_label: "Guest Stay"
+    label: "Booking Channel Cd"
     type: string
-    sql: ${TABLE}.room_type_cd ;;
-  }
-
-  dimension: room_no {
-    view_label: "Room"
-    label: "Room No."
-    type: string
-    sql: ${TABLE}.room_no ;;
-  }
-
-  dimension: rate_plan_cd {
-    view_label: "Room"
-    label: "Rate Plan Cd"
-    type: string
-    sql: ${TABLE}.rate_plan_cd ;;
+    sql: ${TABLE}.booking_channel_cd ;;
   }
 
   dimension: guest_title_cd {
-    view_label: "Guest"
+    view_label: "Guest Stay"
     label: "Guest Title Cd"
     type: string
     sql: ${TABLE}.guest_title_cd ;;
   }
 
   dimension: guest_name {
-    view_label: "Guest"
+    view_label: "Guest Stay"
     label: "Guest Name"
     type: string
     sql: ${TABLE}.guest_name ;;
   }
 
   dimension: guest_location_name {
-    view_label: "Guest"
+    view_label: "Guest Stay"
     label: "Guest City"
     type: string
     sql: ${TABLE}.guest_location_name ;;
   }
 
   dimension: guest_state_cd {
-    view_label: "Guest"
+    view_label: "Guest Stay"
     label: "Guest State Cd"
     type: string
     sql: ${TABLE}.guest_state_cd ;;
   }
 
-  dimension: booking_channel_cd {
-    view_label: "Booking Channel"
-    label: "Booking Channel Cd"
+  dimension: room_type_cd {
+    view_label: "Guest Stay"
+    label: "Room Type Cd"
     type: string
-    sql: ${TABLE}.booking_channel_cd ;;
+    sql: ${TABLE}.room_type_cd ;;
   }
 
-  dimension: review_site_name {
-    view_label: "Review"
-    label: "Review Site Name"
+  dimension: room_no {
+    view_label: "Guest Stay"
+    label: "Room No."
     type: string
-    sql: ${TABLE}.review_site_name ;;
+    sql: ${TABLE}.room_no ;;
   }
 
-  dimension: review_site_url {
-    view_label: "Review"
-    label: "Review Site URL"
+  dimension: rate_plan_cd {
+    view_label: "Guest Stay"
+    label: "Rate Plan Cd"
     type: string
-    sql: ${TABLE}.review_site_url ;;
+    sql: ${TABLE}.rate_plan_cd ;;
   }
 
-  dimension: review_title {
-    view_label: "Review"
-    label: "Review Title"
-    description: "Review title entered by guest."
-    type: string
-    sql: ${TABLE}.review_title ;;
-  }
-
-
-#--------------------------------------------------------------------------------
-#-- measures
-#--------------------------------------------------------------------------------
+  #--------------------------------------------------------------------------------
+  #-- measures
+  #--------------------------------------------------------------------------------
   measure: property_cnt {
     label: "Properties"
     description: "Count of distinct properties."
@@ -207,7 +222,6 @@ view: guest_experience_rpt {
         {% if value < 0 %}
         <font color="red">{{ rendered_value }}</font>
         {% endif %};;
-
   }
 
 }
