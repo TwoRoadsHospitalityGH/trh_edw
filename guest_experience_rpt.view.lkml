@@ -64,12 +64,28 @@ view: guest_experience_rpt {
     sql: ${TABLE}.review_subratings_str ;;
   }
 
-  dimension: response_type_name {
+  dimension: feedback_method_name {
     view_label: "Guest Feedback"
-    label: "Response Type Name"
-    description: "Guest/Meeting Review/Survey"
+    label: "Feedback Method"
+    description: "Review, guest survey, meeting survey."
     type: string
-    sql: ${TABLE}.response_type_name ;;
+    sql: ${TABLE}.feedback_method_name ;;
+  }
+
+  dimension: feedback_topic_name {
+    view_label: "Guest Feedback"
+    label: "Feedback Topic"
+    description: "Review or survey topic."
+    type: string
+    sql: ${TABLE}.feedback_topic_name ;;
+  }
+
+  dimension: question_type_name {
+    view_label: "Guest Feedback"
+    label: "Question Type Name"
+    description: "Range, rating, yesno, text, multi-choice."
+    type: string
+    sql: ${TABLE}.question_type_name ;;
   }
 
   dimension: question_group_name {
@@ -80,14 +96,6 @@ view: guest_experience_rpt {
     sql: ${TABLE}.question_group_name ;;
   }
 
-  dimension: question_type_name {
-    view_label: "Guest Feedback"
-    label: "Feedback Type Name"
-    description: "Type of answer: Score, YesNo, Freeform, etc."
-    type: string
-    sql: ${TABLE}.question_answer_type_name ;;
-  }
-
   dimension: question_name {
     view_label: "Guest Feedback"
     label: "Question Name"
@@ -96,20 +104,28 @@ view: guest_experience_rpt {
     sql: ${TABLE}.question_name ;;
   }
 
-  dimension: question_answer_score {
+  dimension: question_options_str {
     view_label: "Guest Feedback"
-    label: "Feedback Score"
-    description: "Question score."
-    type: number
-    sql: ${TABLE}.question_score_no ;;
+    label: "Question Options"
+    description: "Options presented for answering the question."
+    type: string
+    sql: ${TABLE}.question_options_str ;;
   }
 
-  dimension: question_answer_str {
+  dimension: answer_score_no {
     view_label: "Guest Feedback"
-    label: "Feedback Text"
-    description: "Text answer to review/survey question."
+    label: "Answer Score"
+    description: "Rating or score given as the guest response."
+    type: number
+    sql: ${TABLE}.answer_score_no ;;
+  }
+
+  dimension: answer_str {
+    view_label: "Guest Feedback"
+    label: "Answer Text"
+    description: "Multi-choice or text answer given by the guest."
     type: string
-    sql: ${TABLE}.question_answer_str ;;
+    sql: ${TABLE}.answer_str ;;
   }
 
   dimension: booking_channel_cd {
@@ -199,7 +215,7 @@ view: guest_experience_rpt {
     label: "Score No"
     description: "Avg Response Score"
     type: average
-    sql: ${TABLE}.question_score_no ;;
+    sql: ${answer_score_no} ;;
     value_format_name: decimal_1
   }
 
