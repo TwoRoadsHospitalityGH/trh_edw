@@ -162,22 +162,16 @@ view: date_dm {
 
   measure: first_date {
     label: "First Date"
-    group_label: "   Date"
-    view_label: "    Measures"
     sql: min(${cal_dt}) ;;
   }
 
   measure: last_date {
     label: "Last Date"
-    group_label: "   Date"
-    view_label: "    Measures"
     sql: max(${cal_dt}) ;;
   }
 
   measure: months {
     label: "Months"
-    group_label: "   Date"
-    view_label: "    Measures"
     description: "Count of months."
     type: count_distinct
     sql: ${cal_month_dt} ;;
@@ -185,8 +179,6 @@ view: date_dm {
 
   measure: days {
     label: "Days"
-    group_label: "   Date"
-    view_label: "    Measures"
     description: "Count of days."
     type: count_distinct
     sql: ${cal_dt} ;;
@@ -194,8 +186,6 @@ view: date_dm {
 
   measure: date_range {
     label: "Date Range"
-    view_label: "    Measures"
-    group_label: "   Date"
     type: string
     sql:  concat(concat(to_char(min(${cal_dt}), 'mon dd, yy'), ' - ') , to_char(max(${cal_dt}), 'mon dd, yy') ) ;;
   }
