@@ -13,6 +13,7 @@ explore: guest_experience_rpt {
   label: "Revinate Detail (alpha)"
   persist_with: model_caching_dg
   view_label: "    Measures"
+  case_sensitive: no
 
   access_filter: {
     field: user_property_fdm.user_id
