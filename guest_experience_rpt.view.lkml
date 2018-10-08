@@ -44,7 +44,7 @@ view: guest_experience_rpt {
 
   dimension: review_site_name {
     view_label: "Guest Feedback"
-    label: "Review Site Name"
+    label: "Review Site"
     type: string
     sql: ${TABLE}.review_site_name ;;
   }
@@ -82,24 +82,24 @@ view: guest_experience_rpt {
 
   dimension: question_type_name {
     view_label: "Guest Feedback"
-    label: "Question Type Name"
+    label: "Question Type"
     description: "Range, rating, yesno, text, multi-choice."
     type: string
     sql: ${TABLE}.question_type_name ;;
   }
 
-  dimension: question_group_name {
+  filter: question_common_bt {
     view_label: "Guest Feedback"
-    label: "Question Group Name"
-    description: "Goals, Other, etc."
-    type: string
-    sql: ${TABLE}.question_group_name ;;
+    label: "Common Question"
+    description: "Common questions with assigned goals."
+    type: yesno
+    sql: ${TABLE}.question_common_bt ;;
   }
 
   dimension: question_name {
     view_label: "Guest Feedback"
-    label: "Question Name"
-    description: "Full name of the question."
+    label: "Question"
+    description: "Full question from survey."
     type: string
     sql: ${TABLE}.question_name ;;
   }
@@ -137,14 +137,14 @@ view: guest_experience_rpt {
 
   dimension: guest_title_cd {
     view_label: "Guest Stay"
-    label: "Guest Title Cd"
+    label: "Guest Title"
     type: string
     sql: ${TABLE}.guest_title_cd ;;
   }
 
   dimension: guest_name {
     view_label: "Guest Stay"
-    label: "Guest Name"
+    label: "Guest"
     type: string
     sql: ${TABLE}.guest_name ;;
   }
