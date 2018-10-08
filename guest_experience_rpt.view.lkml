@@ -209,6 +209,7 @@ view: guest_experience_rpt {
     type: count_distinct
     sql: ${response_date_sid} ;;
     value_format_name: decimal_0
+    hidden: yes
   }
 
   measure: response_score_no {
