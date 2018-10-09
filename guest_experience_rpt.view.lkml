@@ -23,6 +23,13 @@ view: guest_experience_rpt {
     hidden: yes
   }
 
+  dimension: checkout_date_sid {
+    type: number
+    value_format_name: id
+    sql: ${TABLE}.checkout_date_sid ;;
+    hidden: yes
+  }
+
   #--------------------------------------------------------------------------------
   #-- dimensions
   #--------------------------------------------------------------------------------
@@ -40,6 +47,14 @@ view: guest_experience_rpt {
     description: "Review title entered by guest."
     type: string
     sql: ${TABLE}.review_title ;;
+  }
+
+  dimension: review_trip_type_cd {
+    view_label: "Guest Feedback"
+    label: "Review Trip Type"
+    description: "Type of trip guest was on."
+    type: string
+    sql: ${TABLE}.review_trip_type_cd ;;
   }
 
   dimension: review_site_name {
@@ -146,14 +161,21 @@ view: guest_experience_rpt {
     view_label: "Guest Stay"
     label: "Guest"
     type: string
-    sql: ${TABLE}.guest_name ;;
+    sql: ${TABLE}.review_guest_name ;;
   }
 
   dimension: guest_location_name {
     view_label: "Guest Stay"
-    label: "Guest City"
+    label: "Guest City, State"
     type: string
-    sql: ${TABLE}.guest_location_name ;;
+    sql: ${TABLE}.review_guest_location_str ;;
+  }
+
+  dimension: review_guest_language_name {
+    view_label: "Guest Stay"
+    label: "Guest Language"
+    type: string
+    sql: ${TABLE}.review_guest_language_name ;;
   }
 
   dimension: guest_state_cd {
@@ -161,6 +183,62 @@ view: guest_experience_rpt {
     label: "Guest State Cd"
     type: string
     sql: ${TABLE}.guest_state_cd ;;
+  }
+
+  dimension: guest_adrs1 {
+    view_label: "Guest Stay"
+    label: "Guest Address"
+    type: string
+    sql: ${TABLE}.guest_adrs1 ;;
+  }
+
+  dimension: guest_adrs2 {
+    view_label: "Guest Stay"
+    label: "Guest Address2"
+    type: string
+    sql: ${TABLE}.guest_adrs2 ;;
+  }
+
+  dimension: guest_city_name {
+    view_label: "Guest Stay"
+    label: "Guest City"
+    type: string
+    sql: ${TABLE}.guest_city_name ;;
+  }
+
+  dimension: guest_country_cd {
+    view_label: "Guest Stay"
+    label: "Guest Country Cd"
+    type: string
+    sql: ${TABLE}.guest_country_cd ;;
+  }
+
+  dimension: guest_email {
+    view_label: "Guest Stay"
+    label: "Guest Email"
+    type: string
+    sql: ${TABLE}.email ;;
+  }
+
+  dimension: guest_email_domain {
+    view_label: "Guest Stay"
+    label: "Guest Email Domain"
+    type: string
+    sql: ${TABLE}.guest_email_domain ;;
+  }
+
+  dimension: guest_phone {
+    view_label: "Guest Stay"
+    label: "Guest Phone"
+    type: string
+    sql: ${TABLE}.guest_phone ;;
+  }
+
+  dimension: guest_postcode {
+    view_label: "Guest Stay"
+    label: "Guest Zip/Province Cd"
+    type: string
+    sql: ${TABLE}.guest_postcode ;;
   }
 
   dimension: room_type_cd {

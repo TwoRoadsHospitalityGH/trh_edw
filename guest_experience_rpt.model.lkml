@@ -43,6 +43,14 @@ explore: guest_experience_rpt {
     relationship: many_to_one
   }
 
+  join: checkout_date_dm {
+    from: date_dm
+    view_label: "  Date Checkout"
+    sql_on: ${checkout_date_dm.date_sid} = ${guest_experience_rpt.checkout_date_sid};;
+    type: inner
+    relationship: many_to_one
+  }
+
   join: property_dm {
     from: property_dm
     view_label: " Property"
