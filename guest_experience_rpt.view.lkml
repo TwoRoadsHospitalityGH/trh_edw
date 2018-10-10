@@ -1,5 +1,5 @@
 view: guest_experience_rpt {
-  sql_table_name: pedw.dev.guest_experience_f ;;
+  sql_table_name: pedw.fact.guest_experience_f ;;
 
 # Keys
 
