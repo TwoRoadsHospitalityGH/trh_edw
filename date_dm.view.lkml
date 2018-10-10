@@ -186,7 +186,7 @@ view: date_dm {
 
   measure: date_range {
     label: "Date Range"
-    description: "Dates included in selection. Monthly data will be shown as the first of each month."
+    description: "Dates included in selection. Monthly data will be represented as the first of each month."
     type: string
     sql:  concat(concat(to_char(min(${cal_dt}), 'mon dd, yy'), ' - ') , to_char(max(${cal_dt}), 'mon dd, yy') ) ;;
   }
