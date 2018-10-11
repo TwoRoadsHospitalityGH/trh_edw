@@ -306,8 +306,15 @@ view: guest_experience_rpt {
     value_format_name: decimal_1
   }
 
-  measure: property_adr_index_pct_prev {
-    view_label: "  % Previous"
+  measure: response_cnt_pct_total {
+    label: "Responses % Total"
+    description: "% of total responses"
+    type: percent_of_total
+    sql: ${response_cnt} ;;
+    value_format: "0.0\%"
+  }
+
+  measure: response_score_no_pct_prev {
     label: "Score No % Prev"
     description: "Score No"
     type: percent_of_previous
