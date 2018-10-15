@@ -295,7 +295,7 @@ view: guest_experience_rpt {
     description: "Avg Response Score"
     type: average
     sql: ${answer_score_no} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: avg_daily_response_cnt {
