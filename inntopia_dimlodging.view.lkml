@@ -449,6 +449,12 @@ view: inntopia_dimlodging {
 #-- measures
 #-----------------------------------------------------------------------------
 
+  measure: record_cnt {
+    label: "Count(*)"
+    description: "Count of records"
+    type: number
+    sql: count(*) ;;
+  }
   measure:  event_count {
     label: "Events"
     description: "Count of distinct events."
