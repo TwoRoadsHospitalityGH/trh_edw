@@ -53,22 +53,6 @@ view: inntopia_dimlodging {
       sql: ${TABLE}.LASTDEPARTUREDATEIND ;;
     }
 
-    measure:  LODGINGNIGHTS  {
-      sql: ${TABLE}.LODGINGNIGHTS ;;
-    }
-
-    measure:  LODGINGAMOUNT  {
-      sql: ${TABLE}.LODGINGAMOUNT ;;
-    }
-
-    measure:  ADULTINPARTY  {
-      sql: ${TABLE}.ADULTINPARTY ;;
-    }
-
-    measure:  CHILDRENINPARTY  {
-      sql: ${TABLE}.CHILDRENINPARTY ;;
-    }
-
     dimension:  IATANUMBER  {
       sql: ${TABLE}.IATANUMBER ;;
     }
@@ -181,10 +165,6 @@ view: inntopia_dimlodging {
       sql: ${TABLE}.LODGINGKEY ;;
     }
 
-    measure: LODGINGAMOUNTLOCAL {
-      sql: ${TABLE}.LODGINGAMOUNTLOCAL ;;
-    }
-
     dimension: LOCALCURRENCYCODE {
       sql: ${TABLE}.LOCALCURRENCYCODE ;;
     }
@@ -209,10 +189,6 @@ view: inntopia_dimlodging {
       sql: ${TABLE}.AGENCYNAME ;;
     }
 
-    measure: AVGDAILYRATE {
-      sql: ${TABLE}.AVGDAILYRATE ;;
-    }
-
     dimension: BOOKINGUSER {
       sql: ${TABLE}.BOOKINGUSER ;;
     }
@@ -231,18 +207,6 @@ view: inntopia_dimlodging {
 
     dimension: CHECKOUTAGENT {
       sql: ${TABLE}.CHECKOUTAGENT ;;
-    }
-
-    measure: DEPOSITAMOUNT1 {
-      sql: ${TABLE}.DEPOSITAMOUNT1 ;;
-    }
-
-    measure: DEPOSITAMOUNT2 {
-      sql: ${TABLE}.DEPOSITAMOUNT2 ;;
-    }
-
-    dimension: DEPOSITDUE1 {
-      sql: ${TABLE}.DEPOSITDUE1 ;;
     }
 
     dimension: EXTERNALORDERID {
@@ -405,80 +369,12 @@ view: inntopia_dimlodging {
       sql: ${TABLE}.CANCELLATIONDATE ;;
     }
 
-    measure: AFTERTAX {
-      sql: ${TABLE}.AFTERTAX ;;
-    }
-
-    measure: AVERAGEDAILYRATE {
-      sql: ${TABLE}.AVERAGEDAILYRATE ;;
-    }
-
-    measure: BALANCEDUE {
-      sql: ${TABLE}.BALANCEDUE ;;
-    }
-
-    measure: BEFORETAX {
-      sql: ${TABLE}.BEFORETAX ;;
-    }
-
-    measure: DEPOSITRECEIVED{
-      sql: ${TABLE}.DEPOSITRECEIVED ;;
-    }
-
-    measure: DISCOUNT {
-      sql: ${TABLE}.DISCOUNT ;;
-    }
-
-    measure: FEES {
-      sql: ${TABLE}.FEES ;;
-    }
-
     dimension: OTHER {
       sql: ${TABLE}.OTHER ;;
     }
 
-    measure: ROOMRATE {
-      sql: ${TABLE}.ROOMRATE ;;
-    }
-
     dimension: SOURCECURRENCYCODE {
       sql: ${TABLE}.SOURCECURRENCYCODE ;;
-    }
-
-#-----------------------------------------------------------------------------
-#-- measures
-#-----------------------------------------------------------------------------
-
-  measure: record_cnt {
-    label: "Count(*)"
-    description: "Count of records"
-    type: number
-    sql: count(*) ;;
-  }
-  measure:  event_count {
-    label: "Events"
-    description: "Count of distinct events."
-    type: count_distinct
-    sql: ${EVENTID} ;;
-  }
-
-  measure: TAX {
-      sql: ${TABLE}.TAX ;;
-    }
-
-    measure: TOTALROOMS {
-      label: "Rooms"
-      description: "Booked rooms"
-      type: sum
-      sql: ${TABLE}.TOTALROOMS ;;
-    }
-
-    measure: CORPORATETOTAL {
-      sql: ${TABLE}.CORPORATETOTAL ;;
-    }
-
-    measure: GROUPTOTAL{
-      sql: ${TABLE}.GROUPTOTAL ;;
     }
 
     dimension: CHANNELCODE {
@@ -519,6 +415,94 @@ view: inntopia_dimlodging {
 
     dimension: SEGMENT2DESCRIPTION {
       sql: ${TABLE}.SEGMENT2DESCRIPTION ;;
+    }
 
+#-----------------------------------------------------------------------------
+#-- measures
+#-----------------------------------------------------------------------------
+
+    measure: record_cnt {
+      label: "Count(*)"
+      description: "Count of records"
+      type: number
+      sql: count(*) ;;
+    }
+
+    measure:  event_count {
+      label: "Events"
+      description: "Count of distinct events."
+      type: count_distinct
+      sql: ${EVENTID} ;;
+    }
+
+
+    measure: TOTALROOMS {
+      label: "Rooms"
+      description: "Booked rooms"
+      type: sum
+      sql: ${TABLE}.TOTALROOMS ;;
+    }
+
+    measure: BALANCEDUE {
+      label: "Balance"
+      description: "Balance Due"
+      type: sum
+      sql: ${TABLE}.BALANCEDUE ;;
+    }
+
+    measure: DISCOUNT {
+      label: "Discount"
+      description: "Discount"
+      type: sum
+      sql: ${TABLE}.DISCOUNT ;;
+    }
+
+    measure: FEES {
+      label: "Fees"
+      description: "Lodging Fees"
+      type: sum
+      sql: ${TABLE}.FEES ;;
+    }
+
+    measure:  LODGINGNIGHTS  {
+      label: "Lodging nights"
+      description: "Lodging room nights"
+      type:  sum
+      sql: ${TABLE}.LODGINGNIGHTS ;;
+    }
+
+    measure:  LODGINGAMOUNT  {
+      label: "Lodging Amount"
+      description: "Lodging Revenue Amount"
+      type: sum
+      sql: ${TABLE}.LODGINGAMOUNT ;;
+    }
+
+    measure:  ADULTINPARTY  {
+      label: "Num of Adults"
+      description: "Number of Adults in party"
+      type: sum
+      sql: ${TABLE}.ADULTINPARTY ;;
+    }
+
+    measure:  CHILDRENINPARTY  {
+      label: "Num of Children"
+      description: "Number of Children in party"
+      type: sum
+      sql: ${TABLE}.CHILDRENINPARTY ;;
+    }
+
+    measure: LODGINGAMOUNTLOCAL {
+      label: "Local Revenue"
+      description: "Local currency lodging revenue"
+      type: sum
+      sql: ${TABLE}.LODGINGAMOUNTLOCAL ;;
+    }
+
+    measure: ROOMRATE {
+      label: "Room Rate"
+      description: "Room Rate"
+      type: sum
+      sql: ${TABLE}.ROOMRATE ;;
   }
   }
