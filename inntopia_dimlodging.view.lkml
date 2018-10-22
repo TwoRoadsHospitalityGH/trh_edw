@@ -445,11 +445,25 @@ view: inntopia_dimlodging {
       sql: ${TABLE}.SOURCECURRENCYCODE ;;
     }
 
-    measure: TAX {
+#-----------------------------------------------------------------------------
+#-- measures
+#-----------------------------------------------------------------------------
+
+  measure:  event_count {
+    label: "Events"
+    description: "Count of distinct events."
+    type: count_distinct
+    sql: ${EVENTID} ;;
+  }
+
+  measure: TAX {
       sql: ${TABLE}.TAX ;;
     }
 
     measure: TOTALROOMS {
+      label: "Rooms"
+      description: "Booked rooms"
+      type: sum
       sql: ${TABLE}.TOTALROOMS ;;
     }
 
