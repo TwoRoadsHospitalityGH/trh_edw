@@ -3,8 +3,8 @@ view: inntopia_dimevent {
     dimension:  EVENTID {
       sql: ${TABLE}.EVENTID ;;
     }
-    dimension:  SOURCESYSTEMCODE {
-    sql: ${TABLE}.SOURCESYSTEMCODE ;;
+    dimension: SOURCESYSTEMCODE  {
+      sql: ${TABLE}.SOURCESYSTEMCODE ;;
     }
     dimension:  SOURCEDESCRIPTION {
     sql: ${TABLE}.SOURCEDESCRIPTION ;;
@@ -18,20 +18,11 @@ view: inntopia_dimevent {
     dimension:  FAMILYKEY {
     sql: ${TABLE}.FAMILYKEY ;;
     }
-    dimension:  EVENTSTATEKEY {
-    sql: ${TABLE}.EVENTSTATEKEY ;;
-    }
     dimension:  EVENTSTATE {
     sql: ${TABLE}.EVENTSTATE ;;
     }
-    dimension:  PURCHASEDATEKEY {
-    sql: ${TABLE}.PURCHASDATEKEY ;;
-    }
     dimension:  PURCHASEDATE {
     sql: ${TABLE}.PURCHASEDATE ;;
-    }
-    dimension:  PURCHASELOCATIONKEY {
-    sql: ${TABLE}.PURCHASELOCATIONKEY ;;
     }
     dimension:  PURCHASELOCATIONDESCRIPTION {
     sql: ${TABLE}.PURCHASELOCATIONDESCRIPTION ;;
@@ -45,14 +36,8 @@ view: inntopia_dimevent {
     dimension:  PURCHASERESORT {
     sql: ${TABLE}.PURCHASERESORT ;;
     }
-    dimension:  EVENTDATEKEY {
-    sql: ${TABLE}.EVENTDATEKEY ;;
-    }
     dimension:  EVENTDATE {
     sql: ${TABLE}.EVENTDATE ;;
-    }
-    dimension:  EVENTLOCATIONKEY {
-    sql: ${TABLE}.EVENTLOCATIONKEY ;;
     }
     dimension:  EVENTLOCATIONDESCRIPTION {
     sql: ${TABLE}.EVENTLOCATIONDESCRIPTION ;;
@@ -75,69 +60,19 @@ view: inntopia_dimevent {
     dimension:  PRODUCTDESCRIPTION {
     sql: ${TABLE}.PRODUCTDESCRIPTION ;;
     }
-    dimension:  PRODUCTLOB {
-    sql: ${TABLE}.PRODUCTLOB ;;
-    }
-    dimension:  PRODUCTLOBSUMMARY {
-    sql: ${TABLE}.PRODUCTLOBSUMMARY ;;
-    }
-    dimension:  SOURCEPRODUCTLOBSUMMARY {
-    sql: ${TABLE}.SOURCEPRODUCTLOBSUMMARY ;;
-    }
-    dimension:  SEASONID {
-    sql: ${TABLE}.SEASONID ;;
-    }
-    dimension:  SEASON {
-    sql: ${TABLE}.SEASON ;;
-    }
-    dimension:  YEAR {
-    sql: ${TABLE}.YEAR ;;
-    }
-    dimension:  HOLIDAY {
-    sql: ${TABLE}.HOLIDAY ;;
-    }
-    dimension:  EVENTTYPE {
-    sql: ${TABLE}.EVENTTYPE ;;
-    }
-    dimension:  PROMOTIONDESCRIPTION {
-    sql: ${TABLE}.PROMOTIONDESCRIPTION ;;
-    }
-    dimension:  PROMOTIONKEY {
-    sql: ${TABLE}.PROMOTIONKEY ;;
-    }
-    dimension:  SOURCEPROMOTIONKEY {
-    sql: ${TABLE}.SOURCEPROMOTIONKEY ;;
-    }
     dimension:  EVENTAMOUNTLOCAL {
     sql: ${TABLE}.EVENTAMOUNTLOCAL ;;
     }
     dimension:  LOCALCURRENCYCODE {
     sql: ${TABLE}.LOCALCURRENCYCODE ;;
     }
-    dimension:  UPDATEDATE {
-    sql: ${TABLE}.UPDATEDATE ;;
-    }
-    dimension:  REPORTID {
-    sql: ${TABLE}.REPORTID ;;
-    }
     dimension:  SOURCESYSTEMCUSTOMERKEY {
     sql: ${TABLE}.SOURCESYSTEMCUSTOMERKEY ;;
-    }
-    dimension:  RESENDFLAG {
-    sql: ${TABLE}.RESENDFLAG ;;
-    }
-    dimension:  EVENTHEADERID {
-    sql: ${TABLE}.EVENTHEADERID ;;
-    }
-    dimension:  POSTEDUSER {
-    sql: ${TABLE}.POSTEDUSER ;;
     }
     dimension:  EVENTBRAND {
     sql: ${TABLE}.EVENTBRAND ;;
     }
-    dimension:  EVENTCHAIN {
-    sql: ${TABLE}.EVENTCHAIN ;;
-    }
+
   #----------------------------------------------------------------------
   #---measures---
   #----------------------------------------------------------------------
@@ -152,12 +87,19 @@ view: inntopia_dimevent {
       label: "Revenue Amount"
       description: "Event Revenue Amount"
       type: sum
+      value_format_name: usd_0
     sql: ${TABLE}.EVENTAMOUNT ;;
     }
     measure:  QUANTITY {
-      label: "Quantity"
-      description: "Quantity"
+      label: "Room Night"
+      description: "Quanity of Room Nights"
       type: sum
     sql: ${TABLE}.QUANTITY ;;
+    }
+    measure:  ADR {
+      label: "ADR"
+      description: "Average Daily Rate"
+      sql: sum(${TABLE}.EVENTAMOUNT) / sum(${TABLE}.QUANTITY)  ;;
+      value_format_name: usd_0
     }
 }
