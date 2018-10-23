@@ -1,5 +1,5 @@
 view: inntopia_dimcustomer {
-  sql_table_name: PRAW_inntopia.dbo.dimevent ;;
+  sql_table_name: PRAW_inntopia.dbo.dimcustomer ;;
     dimension:  CUSTOMERKEY {
     sql: ${TABLE}.CUSTOMERKEY ;;
     }
