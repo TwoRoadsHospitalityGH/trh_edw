@@ -35,17 +35,6 @@ explore: inntopia_dimevent {
   join: date_dm{
     from: date_dm
     view_label: "Event Date"
-    fields: [ date_dm.cal_dt
-      , date_dm.cal_month_dt
-      , date_dm.month
-      , date_dm.month_num
-      , date_dm.month_name
-      , date_dm.quarter
-      , date_dm.quarter_of_year
-      , date_dm.year
-      , current_period_qtd
-      , current_period_ytd
-    ]
     sql_on: ${date_dm.cal_dt} = ${inntopia_dimevent.EVENTDATE}  ;;
     type: inner
     relationship: many_to_one
