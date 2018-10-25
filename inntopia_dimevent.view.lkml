@@ -98,7 +98,7 @@ view: inntopia_dimevent {
       label: "ADR"
       description: "Average Daily Rate"
       view_label: "  Measures"
-      sql: sum(${TABLE}.EVENTAMOUNT) / sum(${TABLE}.QUANTITY)  ;;
+      sql: utl..udf_divide( ${EVENTAMOUNT}, ${QUANTITY});;
       value_format_name: usd_0
     }
 }
