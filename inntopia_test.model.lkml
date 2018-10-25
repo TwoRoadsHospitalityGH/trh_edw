@@ -9,15 +9,15 @@ datagroup: model_caching_dg {
 }
 
 explore: inntopia_dimevent {
-  view_label: "Event"
+  view_label: "Event Details"
   group_label: "***Development***"
-  label: "Inntopia Test (dev)"
+  label: "Inntopia (dev)"
   persist_with: model_caching_dg
   case_sensitive: no
 
 
   join: inntopia_dimlodging {
-    view_label: "Lodging"
+    view_label: "Lodging Details"
     sql_on:     ${inntopia_dimevent.CUSTOMERKEY}      = ${inntopia_dimlodging.CUSTOMERKEY}
             and ${inntopia_dimevent.EVENTID}          = ${inntopia_dimlodging.EVENTID}
             and ${inntopia_dimevent.SOURCESYSTEMCODE} = ${inntopia_dimlodging.SOURCESYSTEMCODE};;
@@ -26,7 +26,7 @@ explore: inntopia_dimevent {
   }
 
   join: inntopia_dimcustomer {
-    view_label: "Customer"
+    view_label: "Customer Details"
     sql_on: ${inntopia_dimevent.CUSTOMERKEY} = ${inntopia_dimcustomer.CUSTOMERKEY} ;;
     type: inner
     relationship: many_to_one
@@ -34,7 +34,7 @@ explore: inntopia_dimevent {
 
   join: date_dm{
     from: date_dm
-    view_label: "Event Date"
+    view_label: " Event Date"
     sql_on: ${date_dm.cal_dt} = ${inntopia_dimevent.EVENTDATE}  ;;
     type: inner
     relationship: many_to_one

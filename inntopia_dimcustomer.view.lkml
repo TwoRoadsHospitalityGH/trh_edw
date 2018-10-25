@@ -100,14 +100,16 @@ view: inntopia_dimcustomer {
 #----MEASURES---------
 #---------------------------------------------------------------------
     measure: record_cnt {
-      label: "Count(*)"
-      description: "Count of records"
+      label: "Customer Count"
+      description: "Count of distinct customers"
+      view_label: "  Measures"
       type: number
-    sql: count(*) ;;
+    sql: count(distinct ${CUSTOMERKEY}) ;;
     }
     measure: avg_customer_age{
       label: "Avg Age"
       description: "Average Customer Age"
+      view_label: "  Measures"
       type: average
     }
 }

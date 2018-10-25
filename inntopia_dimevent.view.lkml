@@ -77,15 +77,12 @@ view: inntopia_dimevent {
   #---measures---
   #----------------------------------------------------------------------
 
-    measure: record_cnt {
-      label: "Count(*)"
-      description: "Count of records"
-      type: number
-    sql: count(*) ;;
-    }
+
+
     measure:  EVENTAMOUNT {
       label: "Revenue Amount"
       description: "Event Revenue Amount"
+      view_label: "  Measures"
       type: sum
       value_format_name: usd_0
     sql: ${TABLE}.EVENTAMOUNT ;;
@@ -93,12 +90,14 @@ view: inntopia_dimevent {
     measure:  QUANTITY {
       label: "Room Night"
       description: "Quanity of Room Nights"
+      view_label: "  Measures"
       type: sum
     sql: ${TABLE}.QUANTITY ;;
     }
     measure:  ADR {
       label: "ADR"
       description: "Average Daily Rate"
+      view_label: "  Measures"
       sql: sum(${TABLE}.EVENTAMOUNT) / sum(${TABLE}.QUANTITY)  ;;
       value_format_name: usd_0
     }

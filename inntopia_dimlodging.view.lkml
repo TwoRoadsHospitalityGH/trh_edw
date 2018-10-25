@@ -171,16 +171,11 @@ view: inntopia_dimlodging {
 #-- measures
 #-----------------------------------------------------------------------------
 
-    measure: record_cnt {
-      label: "Count(*)"
-      description: "Count of records"
-      type: number
-      sql: count(*) ;;
-    }
 
     measure:  event_count {
-      label: "Events"
+      label: "Event Count"
       description: "Count of distinct events."
+      view_label: "  Measures"
       type: count_distinct
       sql: ${EVENTID} ;;
     }
@@ -188,6 +183,7 @@ view: inntopia_dimlodging {
     measure: DISCOUNT {
       label: "Discount"
       description: "Discount"
+      view_label: "  Measures"
       type: sum
       sql: ${TABLE}.DISCOUNT ;;
     }
@@ -195,6 +191,7 @@ view: inntopia_dimlodging {
     measure: FEES {
       label: "Fees"
       description: "Lodging Fees"
+      view_label: "  Measures"
       type: sum
       sql: ${TABLE}.FEES ;;
     }
@@ -202,6 +199,7 @@ view: inntopia_dimlodging {
     measure:  ADULTINPARTY  {
       label: "Num of Adults"
       description: "Number of Adults in party"
+      view_label: "  Measures"
       type: sum
       sql: ${TABLE}.ADULTINPARTY ;;
     }
@@ -209,6 +207,7 @@ view: inntopia_dimlodging {
     measure:  CHILDRENINPARTY  {
       label: "Num of Children"
       description: "Number of Children in party"
+      view_label: "  Measures"
       type: sum
       sql: ${TABLE}.CHILDRENINPARTY ;;
     }
