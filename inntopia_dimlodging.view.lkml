@@ -172,14 +172,6 @@ view: inntopia_dimlodging {
 #-----------------------------------------------------------------------------
 
 
-    measure:  event_count {
-      label: "Event Count"
-      description: "Count of distinct events."
-      view_label: "  Measures"
-      type: count_distinct
-      sql: ${EVENTID} ;;
-    }
-
     measure: DISCOUNT {
       label: "Discount"
       description: "Discount"

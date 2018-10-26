@@ -76,8 +76,19 @@ view: inntopia_dimevent {
   #----------------------------------------------------------------------
   #---measures---
   #----------------------------------------------------------------------
-
-
+    measure:  Countall{
+      label: "Count(*)"
+      description: "count all"
+      view_label: "  Measures"
+      type: count
+    }
+    measure:  event_count {
+      label: "Event Count"
+      description: "Count of distinct events."
+      view_label: "  Measures"
+      type: count_distinct
+      sql: ${EVENTID} ;;
+  }
 
     measure:  EVENTAMOUNT {
       label: "Revenue Amount"
@@ -98,6 +109,7 @@ view: inntopia_dimevent {
       label: "ADR"
       description: "Average Daily Rate"
       view_label: "  Measures"
+      type: number
       sql: utl..udf_divide( ${EVENTAMOUNT}, ${QUANTITY});;
       value_format_name: usd_0
     }
