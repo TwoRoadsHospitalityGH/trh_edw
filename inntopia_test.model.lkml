@@ -22,14 +22,14 @@ explore: inntopia_dimevent {
             and ${inntopia_dimevent.EVENTID}          = ${inntopia_dimlodging.EVENTID}
             and ${inntopia_dimevent.SOURCESYSTEMCODE} = ${inntopia_dimlodging.SOURCESYSTEMCODE};;
     type: inner
-    relationship: many_to_one
+    relationship: one_to_many
   }
 
   join: inntopia_dimcustomer {
     view_label: "Customer Details"
     sql_on: ${inntopia_dimevent.CUSTOMERKEY} = ${inntopia_dimcustomer.CUSTOMERKEY} ;;
     type: inner
-    relationship: many_to_one
+    relationship: one_to_many
   }
 
   join: date_dm{
@@ -37,7 +37,27 @@ explore: inntopia_dimevent {
     view_label: " Event Date"
     sql_on: ${date_dm.cal_dt} = ${inntopia_dimevent.EVENTDATE}  ;;
     type: inner
-    relationship: many_to_one
+    relationship: one_to_many
   }
-
+  join: book_date_dm{
+    from: date_dm
+    view_label: " Event Date"
+    sql_on: ${date_dm.cal_dt} = ${inntopia_dimlodging.BOOKINGDATE}  ;;
+    type: inner
+    relationship: one_to_many
+  }
+  join: cancel_date_dm{
+    from: date_dm
+    view_label: " Event Date"
+    sql_on: ${date_dm.cal_dt} = ${inntopia_dimlodging.CANCELLATIONDATE}  ;;
+    type: inner
+    relationship: one_to_many
+  }
+  join: arrival_date_dm{
+    from: date_dm
+    view_label: " Event Date"
+    sql_on: ${date_dm.cal_dt} = ${inntopia_dimlodging.ARRIVALDATE}  ;;
+    type: inner
+    relationship: one_to_many
+  }
 }

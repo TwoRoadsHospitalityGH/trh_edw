@@ -166,6 +166,9 @@ view: inntopia_dimlodging {
       sql: ${TABLE}.CANCELLATIONDATE ;;
     }
 
+    dimension: ARRIVALDATE {
+    sql: ${TABLE}.ARRIVALDATE ;;
+    }
 
 #-----------------------------------------------------------------------------
 #-- measures
