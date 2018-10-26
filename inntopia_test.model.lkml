@@ -41,21 +41,21 @@ explore: inntopia_dimevent {
   }
   join: book_date_dm{
     from: date_dm
-    view_label: " Event Date"
+    view_label: " Booking Date"
     sql_on: ${date_dm.cal_dt} = ${inntopia_dimlodging.BOOKINGDATE}  ;;
     type: inner
     relationship: one_to_many
   }
   join: cancel_date_dm{
     from: date_dm
-    view_label: " Event Date"
+    view_label: " Cancellation Date"
     sql_on: ${date_dm.cal_dt} = ${inntopia_dimlodging.CANCELLATIONDATE}  ;;
     type: inner
     relationship: one_to_many
   }
   join: arrival_date_dm{
     from: date_dm
-    view_label: " Event Date"
+    view_label: " Arrival Date"
     sql_on: ${date_dm.cal_dt} = ${inntopia_dimlodging.ARRIVALDATE}  ;;
     type: inner
     relationship: one_to_many
