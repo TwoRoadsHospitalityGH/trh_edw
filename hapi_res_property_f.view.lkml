@@ -5,6 +5,12 @@ view: hapi_res_property_f {
   #-- Keys
   #-------------------------------------------------------------------------------------------
 
+  dimension: primary_key {
+    primary_key: yes
+    sql: ${stay_date_sid} || ${property_cd}  ;;
+    hidden: yes
+  }
+
   dimension: property_key{
     type: number
     sql: ${TABLE}.property_key ;;
@@ -83,6 +89,15 @@ view: hapi_res_property_f {
     label: "Records"
     description: "Records from table."
     type: count
+    value_format_name: decimal_0
+    }
+
+  measure: reservation_cnt {
+    label: "Reservations"
+    description: "Count of distinct reservations"
+    type: count_distinct
+    sql: ${reservation_no};;
+    value_format_name: decimal_0
   }
 
   measure: res_nights_cnt {
@@ -90,7 +105,23 @@ view: hapi_res_property_f {
     description: "Reservation nights."
     type: number
     sql: count( ${stay_date_sid} ) ;;
+    value_format_name: decimal_0
+    }
+
+  measure: stay_nights_tcnt {
+    label: "Rms Nights Total"
+    type: sum_distinct
+    sql: ${TABLE}.stay_nights_tcnt ;;
+    value_format_name: decimal_0
   }
+
+  measure: avg_res_nights_cnt {
+    label: "Avg Nights"
+    description: "Rms Nights / Reservations"
+    type: number
+    sql: utl..udf_divide( ${res_nights_cnt}, ${reservation_cnt} ) ;;
+    value_format_name: decimal_1
+    }
 
   measure: room_rev_amt {
     label: "Rev Rms $"
