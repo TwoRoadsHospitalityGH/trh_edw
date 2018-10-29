@@ -13,15 +13,19 @@ view: inntopia_dimcampaign {
     sql: ${TABLE}.MAILINGNAME ;;
   }
   dimension:  MAILINGSENTDATE {
+    hidden: yes
     sql: ${TABLE}.MAILINGSENTDATE ;;
   }
   dimension:  FIRSTOPENEDDATE {
+    hidden:  yes
     sql: ${TABLE}.FIRSTOPENEDDATE ;;
   }
   dimension:  FIRSTCLICKEDDATE {
+    hidden: yes
     sql: ${TABLE}.FIRSTCLICKEDDATE ;;
   }
   dimension:  LASTEVENTDATE {
+    hidden: yes
     sql: ${TABLE}.LASTEVENTDATE ;;
   }
   dimension:  ISOPTOUT {

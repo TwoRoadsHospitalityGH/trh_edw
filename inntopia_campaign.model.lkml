@@ -23,23 +23,30 @@ explore: inntopia_dimcampaign {
 
   join: first_open_date_dm{
     from: date_dm
-    view_label: " Booking Date"
+    view_label: " First Opened Date"
     sql_on: ${first_open_date_dm.cal_dt} = ${inntopia_dimcampaign.FIRSTOPENEDDATE}  ;;
     type: inner
-    relationship: one_to_many
+    relationship: many_to_one
   }
   join: first_click_date_dm{
     from: date_dm
-    view_label: " Cancellation Date"
+    view_label: " First Clicked Date"
     sql_on: ${first_click_date_dm.cal_dt} = ${inntopia_dimcampaign.FIRSTCLICKEDDATE} ;;
     type: inner
-    relationship: one_to_many
+    relationship: many_to_one
   }
   join: last_event_date_dm{
     from: date_dm
-    view_label: " Arrival Date"
+    view_label: " Last Event Date"
     sql_on: ${last_event_date_dm.cal_dt} = ${inntopia_dimcampaign.LASTEVENTDATE} ;;
     type: inner
-    relationship: one_to_many
+    relationship: many_to_one
+  }
+  join: mailing_sent_date_dm{
+    from: date_dm
+    view_label: " Mailing Sent Date"
+    sql_on: ${mailing_sent_date_dm.cal_dt} = ${inntopia_dimcampaign.LASTEVENTDATE} ;;
+    type: inner
+    relationship: many_to_one
   }
 }
