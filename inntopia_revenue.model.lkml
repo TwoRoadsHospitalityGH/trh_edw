@@ -11,7 +11,7 @@ datagroup: model_caching_dg {
 explore: inntopia_dimevent {
   view_label: "Event Details"
   group_label: "***Development***"
-  label: "Inntopia Revenues (dev)"
+  label: "Inntopia Revenue (dev)"
   persist_with: model_caching_dg
   case_sensitive: no
 

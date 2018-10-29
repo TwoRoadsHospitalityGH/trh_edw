@@ -10,7 +10,7 @@ datagroup: model_caching_dg {
 
 explore: inntopia_dimlodging {
   group_label: "***Development***"
-  label: "Inntopia Reservations (dev)"
+  label: "Inntopia Reservation (dev)"
   persist_with: model_caching_dg
   case_sensitive: no
 
