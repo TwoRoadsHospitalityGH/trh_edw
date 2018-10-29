@@ -100,32 +100,40 @@ view: hapi_res_property_f {
     value_format_name: decimal_0
   }
 
-  measure: res_nights_cnt {
-    label: "Rms Nights"
-    description: "Reservation nights."
+  measure: stay_nights_cnt {
+    label: "Rms Bkd"
+    description: "Room nights booked."
     type: number
     sql: count( ${stay_date_sid} ) ;;
     value_format_name: decimal_0
     }
 
   measure: stay_nights_tcnt {
-    label: "Rms Nights Total"
+    label: "Rms Bkd Total"
     type: sum_distinct
     sql: ${TABLE}.stay_nights_tcnt ;;
     value_format_name: decimal_0
   }
 
   measure: avg_res_nights_cnt {
-    label: "Avg Nights"
-    description: "Rms Nights / Reservations"
+    label: "Rms Bkd / Res"
+    description: "Rms Bkd / Res"
     type: number
-    sql: utl..udf_divide( ${res_nights_cnt}, ${reservation_cnt} ) ;;
+    sql: utl..udf_divide( ${stay_nights_cnt}, ${reservation_cnt} ) ;;
     value_format_name: decimal_1
     }
 
+  measure: stay_nights_tpct {
+    label: "Rms Bkd % Total"
+    description: "Rms Bkd / Total Rms Bkd"
+    type: number
+    sql: utl..udf_divide( ${stay_nights_cnt}, ${stay_nights_tcnt} ) ;;
+    value_format_name: percent_1
+  }
+
   measure: room_rev_amt {
     label: "Rev Rms $"
-    description: "Reservation nights."
+    description: "Revenue Rooms $"
     type: sum
     value_format_name: usd
     sql: ${room_rate_amt} ;;
