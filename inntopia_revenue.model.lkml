@@ -19,7 +19,7 @@ explore: inntopia_dimevent {
     view_label: "Customer Details"
     sql_on: ${inntopia_dimevent.CUSTOMERKEY} = ${inntopia_dimcustomer.CUSTOMERKEY} ;;
     type: inner
-    relationship: one_to_many
+    relationship: many_to_one
   }
 
   join: date_dm{
@@ -27,6 +27,14 @@ explore: inntopia_dimevent {
     view_label: " Event Date"
     sql_on: ${date_dm.cal_dt} = ${inntopia_dimevent.EVENTDATE}  ;;
     type: inner
-    relationship: one_to_many
+    relationship: many_to_one
+  }
+
+  join: purchase_date_dm{
+    from: date_dm
+    view_label: " Purchase Date"
+    sql_on: ${purchase_date_dm.cal_dt} = ${inntopia_dimevent.EVENTDATE}  ;;
+    type: inner
+    relationship: many_to_one
   }
 }

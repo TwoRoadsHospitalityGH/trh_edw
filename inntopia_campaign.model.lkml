@@ -18,7 +18,7 @@ explore: inntopia_dimcampaign {
     view_label: "Customer Details"
     sql_on: ${inntopia_dimcampaign.CUSTOMERKEY} = ${inntopia_dimcustomer.CUSTOMERKEY} ;;
     type: inner
-    relationship: one_to_many
+    relationship: many_to_one
   }
 
   join: first_open_date_dm{
