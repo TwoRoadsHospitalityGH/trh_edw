@@ -214,6 +214,46 @@ view: hapi_res_property_f {
     sql: ${TABLE}.market_cd ;;
   }
 
+  dimension: market_segment_name {
+    view_label: "Room"
+    label: "Market Segment"
+    description: "Market Segment Name"
+    type: string
+    sql: ${TABLE}.market_segment_name ;;
+  }
+
+  dimension: market_subsegment_name {
+    view_label: "Room"
+    label: "Market Subsegment"
+    description: "Market Subsegment Name"
+    type: string
+    sql: ${TABLE}.market_subsegment_name ;;
+  }
+
+  dimension: market_fnc_rollup_name {
+    view_label: "Room"
+    label: "Market Fnc Rollup"
+    description: "Market Fnc Rollup Name"
+    type: string
+    sql: ${TABLE}.market_fnc_rollup_name ;;
+  }
+
+  dimension: market_chr_cd {
+    view_label: "Room"
+    label: "Market CHR Cd"
+    description: "Market CHR Code"
+    type: string
+    sql: ${TABLE}.market_chr_cd ;;
+  }
+
+  dimension: market_dhr_cd {
+    view_label: "Room"
+    label: "Market DHR Cd"
+    description: "Market DHR Code"
+    type: string
+    sql: ${TABLE}.market_dhr_cd ;;
+  }
+
   dimension: reservation_status_cd {
     view_label: "Room"
     label: "Reservation Status Cd"
@@ -238,12 +278,28 @@ view: hapi_res_property_f {
     sql: ${TABLE}.room_type_cd ;;
   }
 
-  dimension: stay_source_cd {
+  dimension: source_cd {
     view_label: "Room"
     label: "Source Cd"
     description: "Source Code"
     type: string
-    sql: ${TABLE}.stay_source_cd ;;
+    sql: ${TABLE}.source_cd ;;
+  }
+
+  dimension: source_category_cd {
+    view_label: "Room"
+    label: "Source Category Cd"
+    description: "Source Category Code"
+    type: string
+    sql: ${TABLE}.source_category_cd ;;
+  }
+
+  dimension: source_dscr {
+    view_label: "Room"
+    label: "Source Desc"
+    description: "Source Description"
+    type: string
+    sql: ${TABLE}.source_dscr ;;
   }
 
   dimension: rate_plan_cd {
