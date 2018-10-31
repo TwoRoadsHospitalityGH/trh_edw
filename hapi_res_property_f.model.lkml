@@ -11,6 +11,7 @@ datagroup: model_caching_dg {
 explore: hapi_res_property_f {
   from: hapi_res_property_f
   sql_table_name: pedw.dev.hapi_res_property_f ;;
+  sql_always_where: ${tyly_bt} = 1 ;;
   group_label: "***Development***"
   label: "Reservations (HAPI) (dev)"
   persist_with: model_caching_dg

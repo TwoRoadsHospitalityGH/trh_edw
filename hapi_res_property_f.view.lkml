@@ -5,6 +5,11 @@ view: hapi_res_property_f {
   #-- Keys
   #-------------------------------------------------------------------------------------------
 
+  dimension: tyly_bt {
+    sql: ${TABLE}.ty_bt ;;
+    hidden: yes
+  }
+
   dimension: primary_key {
     primary_key: yes
     sql: ${TABLE}.primary_key ;;
@@ -345,7 +350,8 @@ view: hapi_res_property_f {
   measure: record_cnt {
     label: "Records"
     description: "Records from table."
-    type: count
+    type: sum
+    sql: ${tyly_bt} ;;
     value_format_name: decimal_0
     }
 
@@ -353,7 +359,7 @@ view: hapi_res_property_f {
     label: "Reservations"
     description: "Count of distinct reservations"
     type: count_distinct
-    sql: ${reservation_key};;
+    sql: iff( ${tyly_bt} = 1, ${reservation_key}, to_number( null ) );;
     value_format_name: decimal_0
   }
 
@@ -362,7 +368,7 @@ view: hapi_res_property_f {
     description: "Number of adults."
     type: sum_distinct
     sql_distinct_key: ${reservation_key} ;;
-    sql: ${adults_cnt} ;;
+    sql: ${adults_cnt} * ${tyly_bt} ;;
     value_format_name: decimal_0
   }
 
@@ -379,7 +385,7 @@ view: hapi_res_property_f {
     description: "Number of children."
     type: sum_distinct
     sql_distinct_key: ${reservation_key} ;;
-    sql: ${children_cnt} ;;
+    sql: ${children_cnt} * ${tyly_bt} ;;
     value_format_name: decimal_0
   }
 
@@ -394,8 +400,8 @@ view: hapi_res_property_f {
   measure: rooms_booked_cnt {
     label: "Rms Bkd"
     description: "Rooms Booked"
-    type: number
-    sql: count( ${stay_date_sid} ) ;;
+    type: sum
+    sql: ${tyly_bt} ;;
     value_format_name: decimal_0
     }
 
@@ -403,7 +409,7 @@ view: hapi_res_property_f {
     label: "Rms Bkd Total"
     type: sum_distinct
     sql_distinct_key: ${stay_date_key} ;;
-    sql: ${TABLE}.stay_nights_tcnt ;;
+    sql: ${TABLE}.stay_nights_tcnt * ${tyly_bt} ;;
     value_format_name: decimal_0
   }
 
@@ -428,7 +434,7 @@ view: hapi_res_property_f {
     description: "Revenue Rooms $"
     type: sum
     value_format_name: usd
-    sql: ${room_rate_amt} ;;
+    sql: ${room_rate_amt} * ${tyly_bt} ;;
   }
 
   measure: adr_amt {
@@ -436,7 +442,7 @@ view: hapi_res_property_f {
     description: "Average Daily Rate
     Rev Rms / Rms Nights"
     type: average
-    sql: ${room_rate_amt};;
+    sql: iff( ${tyly_bt} = 1, ${room_rate_amt}, to_decimal( null ) );;
     value_format_name: usd
   }
 
