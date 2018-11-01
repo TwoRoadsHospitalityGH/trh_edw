@@ -17,7 +17,7 @@ view: hapi_res_property_f_v_msr_toly {
     label: "Reservations TY:LY - var %"
     description: "(TY - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${hapi_res_property_f_v_msr.reservation_cnt}, ${hapi_res_property_f_v_msr_ly.reservation_cnt} );;
+    sql: utl..udf_percent_var( ${hapi_res_property_f_v_msr_ty.reservation_cnt}, ${hapi_res_property_f_v_msr_ly.reservation_cnt} );;
     value_format_name: percent_1
   }
 
@@ -25,7 +25,7 @@ view: hapi_res_property_f_v_msr_toly {
     label: "Rms Bkd TY:LY - var %"
     description: "(TY - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${hapi_res_property_f_v_msr.rooms_booked_cnt}, ${hapi_res_property_f_v_msr_ly.rooms_booked_cnt} );;
+    sql: utl..udf_percent_var( ${hapi_res_property_f_v_msr_ty.rooms_booked_cnt}, ${hapi_res_property_f_v_msr_ly.rooms_booked_cnt} );;
     value_format_name: percent_1
   }
 
@@ -33,7 +33,7 @@ view: hapi_res_property_f_v_msr_toly {
     label: "ADR TY:LY - var %"
     description: "(TY - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${hapi_res_property_f_v_msr.adr_amt}, ${hapi_res_property_f_v_msr_ly.adr_amt} );;
+    sql: utl..udf_percent_var( ${hapi_res_property_f_v_msr_ty.adr_amt}, ${hapi_res_property_f_v_msr_ly.adr_amt} );;
     value_format_name: percent_1
   }
 

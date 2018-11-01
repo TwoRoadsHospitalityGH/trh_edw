@@ -1,4 +1,4 @@
-view: hapi_res_property_f_v_msr {
+view: hapi_res_property_f_v_msr_ty {
   derived_table: {
     sql: select 1 as key_no ;;
   }

@@ -20,9 +20,9 @@ explore: hapi_res_property_f_v {
     user_attribute: atmp_userid
   }
 
-  join: hapi_res_property_f_v_msr {
-    from: hapi_res_property_f_v_msr
-    view_label: "    Measures"
+  join: hapi_res_property_f_v_msr_ty {
+    from: hapi_res_property_f_v_msr_ty
+    view_label: "    TY"
     type: cross
     relationship: one_to_one
   }
@@ -36,7 +36,7 @@ explore: hapi_res_property_f_v {
 
   join: hapi_res_property_f_v_msr_toly {
     from: hapi_res_property_f_v_msr_toly
-    view_label: "    Measures"
+    view_label: "    TY"
     type: cross
     relationship: one_to_one
   }
