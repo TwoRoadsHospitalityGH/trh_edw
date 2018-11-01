@@ -1,7 +1,7 @@
 connection: "edw"
 include: "*.view"         # include all views in this project
 
-label: "Reservations (HAPI)"
+label: "Reservations (HAPI)x"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.dev.hapi_res_property_f ;;
@@ -13,7 +13,7 @@ explore: hapi_res_property_f {
   sql_table_name: pedw.dev.hapi_res_property_f ;;
   sql_always_where: ${tyly_bt} = 1 ;;
   group_label: "***Development***"
-  label: "Reservations (HAPI) (dev)"
+  label: "Reservations (HAPI) (dev)x"
   persist_with: model_caching_dg
   view_label: "    Measures"
 
