@@ -29,6 +29,7 @@ view: hapi_res_property_f_v_msr_ty {
     type: sum
     sql: ${tyly_bt} ;;
     value_format_name: decimal_0
+    hidden: yes
   }
 
   measure: reservation_cnt {
