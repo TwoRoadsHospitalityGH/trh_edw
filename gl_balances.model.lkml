@@ -6,6 +6,7 @@ include: "*.view"         # include all the views
 explore: gl_balance_rpt {
   persist_for: "0 minutes"
   group_label: "***Development***"
+  case_sensitive: no
   label: "GL Balances (dev)"
 #   access_filter: {
 #     field: property_dm.property_key
