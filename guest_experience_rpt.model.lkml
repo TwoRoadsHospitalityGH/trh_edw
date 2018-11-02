@@ -17,7 +17,7 @@ explore: guest_experience_rpt {
 
   access_filter: {
     field: user_property_fdm.user_id
-    user_attribute: atmp_userid
+    user_attribute: looker_ldap_user_id
   }
 
   join: user_property_fdm {

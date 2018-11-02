@@ -17,7 +17,7 @@ explore: hapi_res_property_f_v {
 
   access_filter: {
     field: user_property_fdm.user_id
-    user_attribute: atmp_userid
+    user_attribute: looker_ldap_user_id
   }
 
   join: hapi_res_property_f_v_msr_ty {
