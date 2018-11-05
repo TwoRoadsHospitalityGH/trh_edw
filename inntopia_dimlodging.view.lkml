@@ -207,31 +207,36 @@ view: inntopia_dimlodging {
       sql: ${TABLE}.CHILDRENINPARTY ;;
     }
 
+  measure:  ADR {
+    label: "ADR"
+    description: "Average Daily Rate"
+    view_label: "  Measures"
+    type: average
+    sql: ${TABLE}.AVGDAILYRATE;;
+    value_format_name: usd_0
+
+  }
+
+  measure:  LODGINGNIGHTS  {
+    label: "Lodging Nights"
+    description: "Room nights in lodging"
+    view_label: "  Measures"
+    type: sum
+    sql: ${TABLE}.LODGINGNIGHTS ;;
+  }
+
     measure:  LODGINGAMOUNT{
       label: "Lodging Amount"
       description: "Revenue amount in lodging"
       view_label: "  Measures"
       value_format_name: usd_0
       type: sum
-      sql: ${TABLE}.LODGINGAMOUNT ;;
+      sql: ${TABLE}.LODGINGNIGHTS*${TABLE}.AVGDAILYRATE ;;
     }
 
-    measure:  LODGINGNIGHTS  {
-      label: "Lodging Nights"
-      description: "Room nights in lodging"
-      view_label: "  Measures"
-      type: sum
-      sql: ${TABLE}.LODGINGNIGHTS ;;
-    }
 
-    measure:  ADR {
-      label: "ADR"
-      description: "Average Daily Rate"
-      view_label: "  Measures"
-      type: number
-      sql: utl..udf_divide( ${LODGINGAMOUNT}, ${LODGINGNIGHTS});;
-      value_format_name: usd_0
-  }
+
+
 
 
   }
