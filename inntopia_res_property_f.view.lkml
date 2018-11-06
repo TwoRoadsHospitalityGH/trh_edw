@@ -47,7 +47,7 @@ view: inntopia_res_property_f {
 
   dimension: stay_date_sid {
     type: number
-    sql: ${TABLE}.stay_date_sid ;;
+    sql: ${TABLE}.stay_dt_sid ;;
     hidden: yes
     }
 
