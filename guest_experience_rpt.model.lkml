@@ -9,8 +9,8 @@ datagroup: model_caching_dg {
 }
 
 explore: guest_experience_rpt {
-  group_label: "***Alpha Releases***"
-  label: "Revinate Detail (alpha)"
+  group_label: "Property"
+  label: "Revinate Detail"
   persist_with: model_caching_dg
   view_label: "    Measures"
   case_sensitive: no
