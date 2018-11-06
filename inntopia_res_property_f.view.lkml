@@ -124,7 +124,7 @@ view: inntopia_res_property_f {
     label: "Rate Plan Description"
     description: "Rate Plan Description"
     type: string
-    sql: ${TABLE}.unit_type ;;
+    sql: ${TABLE}.rate_plan_description ;;
   }
 
   dimension: rate_plan_group {
@@ -132,7 +132,7 @@ view: inntopia_res_property_f {
     label: "Rate Plan Group"
     description: "Rate Plan Group"
     type: string
-    sql: ${TABLE}.unit_type ;;
+    sql: ${TABLE}.rate_plan_group ;;
   }
   dimension: iata_no{
     view_label: "Room"
