@@ -23,7 +23,7 @@ view: inntopia_res_property_f {
 
   dimension: propertykey{
     type: number
-    sql: ${TABLE}.property_key ;;
+    sql: ${TABLE}.propertykey ;;
     hidden: yes
   }
 
