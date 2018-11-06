@@ -15,10 +15,7 @@ explore: inntopia_res_property_f {
   label: "Property Pace Inntopia (dev)"
   persist_with: model_caching_dg
 
-  access_filter: {
-    field: user_property_fdm.user_id
-    user_attribute: looker_ldap_user_id
-  }
+
 
   join: inntopia_res_property_f_msr_ty {
     from: inntopia_res_property_f_msr_ty
@@ -41,16 +38,9 @@ explore: inntopia_res_property_f {
     relationship: one_to_one
   }
 
-  join: user_property_fdm {
-    from:  user_property_fdm
-    sql_on: ${user_property_fdm.property_key} = ${inntopia_res_property_f.propertykey} ;;
-    type: inner
-    relationship: many_to_one
-  }
-
   join: booking_date_dm {
     from: date_dm
-    view_label: "  Booked Date"
+    view_label: "  Booking Date"
     sql_on: ${booking_date_dm.date_sid} = ${inntopia_res_property_f.booking_date_sid};;
     type: inner
     relationship: many_to_one

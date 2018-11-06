@@ -39,4 +39,31 @@ view: inntopia_res_property_f_msr_ty {
     sql: iff( ${tyly_bt} = 1, ${inntopia_res_property_f.reservation_key}, to_number( null ) );;
     value_format_name: decimal_0
   }
+
+  measure: room_rev_amt {
+    label: "Rev Rms $"
+    description: "Revenue Rooms $"
+    type: sum
+    value_format_name: usd
+    sql: ${inntopia_res_property_f.avg_daily_rate} * ${tyly_bt} ;;
+  }
+
+  measure: adr_amt {
+    label: "ADR"
+    description: "Average Daily Rate
+    Rev Rms / Rms Nights"
+    type: average
+    sql: iff( ${tyly_bt} = 1, ${inntopia_res_property_f.avg_daily_rate}, to_decimal( null ) );;
+    value_format_name: usd
+  }
+  measure: rooms_booked_cnt {
+    label: "Rms Bkd"
+    description: "Rooms Booked"
+    type: sum
+    sql: ${tyly_bt} ;;
+    value_format_name: decimal_0
+  }
+
+
+
   }

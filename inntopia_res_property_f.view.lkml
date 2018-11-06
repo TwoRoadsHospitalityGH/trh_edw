@@ -90,7 +90,7 @@ view: inntopia_res_property_f {
 
   dimension: sub_market_segment_name {
     view_label: "Room"
-    label: "Sub Market Segment Name"
+    label: "Market Segment Description"
     description: "Market Segment Description"
     type: string
     sql: ${TABLE}.market_segment_description ;;
@@ -98,7 +98,7 @@ view: inntopia_res_property_f {
 
   dimension: sub_source_channel_name {
     view_label: "Room"
-    label: "Source Channel Name"
+    label: "Source Channel Description"
     description: "Source of Business Description"
     type: string
     sql: ${TABLE}.source_of_business_description ;;
@@ -110,4 +110,42 @@ view: inntopia_res_property_f {
     type: string
     sql: ${TABLE}.source_of_business_group ;;
   }
+
+  dimension: room_type_name {
+    view_label: "Room"
+    label: "Room Type"
+    description: "Unit Type"
+    type: string
+    sql: ${TABLE}.unit_type ;;
+  }
+
+  dimension: rate_plan_description {
+    view_label: "Room"
+    label: "Rate Plan Description"
+    description: "Rate Plan Description"
+    type: string
+    sql: ${TABLE}.unit_type ;;
+  }
+
+  dimension: rate_plan_group {
+    view_label: "Room"
+    label: "Rate Plan Group"
+    description: "Rate Plan Group"
+    type: string
+    sql: ${TABLE}.unit_type ;;
+  }
+  dimension: iata_no{
+    view_label: "Room"
+    label: "Iata Number"
+    description: "Iata Number"
+    type: string
+    sql: ${TABLE}.iata_number ;;
+  }
+  dimension: avg_daily_rate {
+    type: number
+    sql: ${TABLE}.avg_daily_rate ;;
+    hidden: yes
+  }
+
+
 }
