@@ -48,6 +48,14 @@ explore: inntopia_res_property_f {
     relationship: one_to_one
   }
 
+  join: stay_date_dm {
+    from: date_dm
+    view_label: "  Stay Date"
+    sql_on: ${stay_date_dm.date_sid} = ${inntopia_res_property_f.stay_date_sid};;
+    type: inner
+    relationship: many_to_one
+  }
+
   join: booking_date_dm {
     from: date_dm
     view_label: "  Booking Date"
@@ -56,13 +64,7 @@ explore: inntopia_res_property_f {
     relationship: many_to_one
   }
 
-  join: stay_date_dm {
-    from: date_dm
-    view_label: "  Stay Date"
-    sql_on: ${stay_date_dm.date_sid} = ${inntopia_res_property_f.stay_date_sid};;
-    type: inner
-    relationship: many_to_one
-  }
+
 
   join: property_dm {
     from: property_dm
