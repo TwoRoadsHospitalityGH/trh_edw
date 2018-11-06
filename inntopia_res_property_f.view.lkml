@@ -29,19 +29,19 @@ view: inntopia_res_property_f {
 
   dimension: booking_date_sid {
     type: number
-    sql: ${TABLE}.booked_date_sid ;;
+    sql: ${TABLE}.bookeddate_sid ;;
     hidden: yes
   }
 
   dimension: arrival_date_sid {
     type: number
-    sql: ${TABLE}.arrival_date_sid ;;
+    sql: ${TABLE}.arrivaldate_sid ;;
     hidden: yes
   }
 
   dimension: departure_date_sid {
     type: number
-    sql: ${TABLE}.departure_date_sid ;;
+    sql: ${TABLE}.departuredate_sid ;;
     hidden: yes
   }
 
@@ -53,7 +53,7 @@ view: inntopia_res_property_f {
 
   dimension: cancellation_date_sid {
     type: number
-    sql: ${TABLE}.cancellation_date_sid ;;
+    sql: ${TABLE}.cancellationdate_sid ;;
     hidden: yes
   }
 
