@@ -82,15 +82,15 @@ view: inntopia_res_property_f {
 
   dimension: market_segment_name {
     view_label: "Room"
-    label: "Market Segment Name"
+    label: "Macro Market Segment Name"
     description: "Report Market Segment"
     type: string
     sql: ${TABLE}.report_marketsegment ;;
   }
 
-  dimension: sub_market_segment_name {
+  dimension: micro_market_segment_name {
     view_label: "Room"
-    label: "Market Segment Description"
+    label: "Micro Market Segment Name"
     description: "Market Segment Description"
     type: string
     sql: ${TABLE}.market_segment_description ;;
@@ -121,19 +121,12 @@ view: inntopia_res_property_f {
 
   dimension: rate_plan_description {
     view_label: "Room"
-    label: "Rate Plan Description"
+    label: "Rate Code"
     description: "Rate Plan Description"
     type: string
     sql: ${TABLE}.rate_plan_description ;;
   }
 
-  dimension: rate_plan_group {
-    view_label: "Room"
-    label: "Rate Plan Group"
-    description: "Rate Plan Group"
-    type: string
-    sql: ${TABLE}.rate_plan_group ;;
-  }
   dimension: iata_no{
     view_label: "Room"
     label: "Iata Number"
