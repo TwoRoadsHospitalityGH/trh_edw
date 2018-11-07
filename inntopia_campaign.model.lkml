@@ -11,11 +11,12 @@ datagroup: model_caching_dg {
 explore: inntopia_dimcampaign {
   group_label: "***Development***"
   label: "Inntopia Campaign (dev)"
+  view_label: "  Measures"
   persist_with: model_caching_dg
   case_sensitive: no
 
   join: inntopia_dimcustomer {
-    view_label: "Customer Details"
+    view_label: "  Measures"
     sql_on: ${inntopia_dimcampaign.CUSTOMERKEY} = ${inntopia_dimcustomer.CUSTOMERKEY} ;;
     type: inner
     relationship: many_to_one

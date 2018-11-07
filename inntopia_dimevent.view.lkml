@@ -20,46 +20,56 @@ view: inntopia_dimevent {
       sql: ${TABLE}.FAMILYKEY ;;
       hidden: yes
     }
-    dimension:  EVENTSTATE {
-      sql: ${TABLE}.EVENTSTATE ;;
-    }
-    dimension:  PURCHASEDATE {
-    sql: ${TABLE}.PURCHASEDATE ;;
+    dimension:  PURCHASEDATE_SID {
+      sql: utl..udf_date_to_julian(${TABLE}.PURCHASEDATE) ;;
+      hidden:  yes
     }
     dimension:  PURCHASELOCATIONDESCRIPTION {
-    sql: ${TABLE}.PURCHASELOCATIONDESCRIPTION ;;
+      view_label: "Purchase Details"
+      label: "Purchase Description"
+      description: "Purchase Location Description"
+      type: string
+      sql: ${TABLE}.PURCHASELOCATIONDESCRIPTION ;;
     }
     dimension:  PURCHASELOCATIONTYPE {
-    sql: ${TABLE}.PURCHASELOCATIONTYPE ;;
+      view_label: "Purchase Details"
+      label: "Purchase Location Type"
+      description: "Purchase Location Type"
+      type: string
+      sql: ${TABLE}.PURCHASELOCATIONTYPE ;;
     }
-    dimension:  PURCHASERESORTDETAIL {
-    sql: ${TABLE}.PURCHASERESORTDETAIL ;;
-    }
-    dimension:  PURCHASERESORT {
-    sql: ${TABLE}.PURCHASERESORT ;;
-    }
-    dimension:  EVENTDATE {
-    sql: ${TABLE}.EVENTDATE ;;
+    dimension:  EVENTDATE_SID {
+      sql: utl..udf_date_to_julian(${TABLE}.EVENTDATE) ;;
+      hidden:  yes
     }
     dimension:  EVENTLOCATIONDESCRIPTION {
-    sql: ${TABLE}.EVENTLOCATIONDESCRIPTION ;;
+      view_label: "Event Details"
+      label: "Event Location Description"
+      description: "Event Location Description"
+      type:  string
+      sql: ${TABLE}.EVENTLOCATIONDESCRIPTION ;;
     }
     dimension:  EVENTLOCATIONTYPE {
-    sql: ${TABLE}.EVENTLOCATIONTYPE ;;
-    }
-    dimension:  EVENTRESORTDETAIL {
-    sql: ${TABLE}.EVENTRESORTDETAIL ;;
-    }
-    dimension:  EVENTRESORT {
-    sql: ${TABLE}.EVENTRESORT ;;
+      view_label: "Event Details"
+      label: "Event Location Type"
+      description: "Event Location Type"
+      type:  string
+      sql: ${TABLE}.EVENTLOCATIONTYPE ;;
     }
     dimension:  PRODUCTKEY {
-    sql: ${TABLE}.PRODUCTKEY ;;
+      view_label: "Product Details"
+      label: "Product Key"
+      description: "Source System Product Key"
+      type:  string
+      sql: ${TABLE}.PRODUCTSOURCESYSTEMKEY ;;
     }
     dimension:  PRODUCTDESCRIPTION {
-    sql: ${TABLE}.PRODUCTDESCRIPTION ;;
+      view_label: "Product Details"
+      label: "Product Description"
+      description: "Product Description"
+      type:  string
+      sql: ${TABLE}.PRODUCTDESCRIPTION ;;
     }
-
 
   #----------------------------------------------------------------------
   #---measures---
