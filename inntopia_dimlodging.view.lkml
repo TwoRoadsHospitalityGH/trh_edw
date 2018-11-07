@@ -160,9 +160,13 @@ view: inntopia_dimlodging {
       view_label: "Reservation"
     }
 
-
-
-
+    dimension: lead_time_tier{
+      type: tier
+      tiers: [0, 5, 10, 40, 50, 70, 100]
+      sql: ${TABLE}.LEADTIME ;;
+      label: "Lead Time Tier"
+      view_label: "Reservation"
+    }
 
 #-----------------------------------------------------------------------------
 #-- measures
@@ -233,10 +237,31 @@ view: inntopia_dimlodging {
       sql: ${TABLE}.LODGINGAMOUNT ;;
     }
 
+    measure: customer_cnt  {
+      hidden: yes
+      type: count_distinct
+      sql: ${TABLE}.CUSTOMERKEY ;;
+      }
 
+    measure:  customer_spend{
+      label: "Rev/Customer"
+      description: "Total Revenue Spent/Customer"
+      value_format_name: usd_0
+      sql: ${LODGINGAMOUNT}/${customer_cnt} ;;
+    }
 
+    measure:  customer_room_spend{
+      label: "RmRev/Customer"
+      description: "Room Revenue Spent/Customer"
+      value_format_name: usd_0
+      sql: ${LODGINGREV}/${customer_cnt} ;;
+    }
 
-
-
+    measure:  customer_room_night{
+      label: "Rm Bkd/Customer"
+      description: "Room Booked/Customer"
+      value_format_name: decimal_1
+      sql: ${LODGINGNIGHTS}/${customer_cnt} ;;
+    }
 
   }

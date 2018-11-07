@@ -98,4 +98,24 @@ view: inntopia_dimevent {
       type: sum
     sql: ${TABLE}.QUANTITY ;;
     }
+
+    measure: customer_cnt  {
+      hidden: yes
+      type: count_distinct
+      sql: ${TABLE}.CUSTOMERKEY ;;
+    }
+
+    measure:  customer_spend{
+      label: "Rev/Customer"
+      description: "Total Revenue Spent/Customer"
+      value_format_name: usd_0
+      sql: ${EVENTAMOUNT}/${customer_cnt} ;;
+  }
+
+    measure:  customer_room_night{
+      label: "Rm Bkd/Customer"
+      description: "Room Booked/Customer"
+      value_format_name: decimal_1
+      sql: ${QUANTITY}/${customer_cnt} ;;
+  }
 }
