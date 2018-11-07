@@ -72,14 +72,6 @@ view: inntopia_res_property_f {
     hidden: yes
   }
 
-  dimension: reservation_no {
-    view_label: "Reservation"
-    label: "Reservation #"
-    description: "Reservation Number"
-    type: string
-    sql: ${TABLE}.cenrezid ;;
-  }
-
   dimension: market_segment_name {
     view_label: "Room"
     label: "Macro Market Segment Name"
@@ -119,12 +111,36 @@ view: inntopia_res_property_f {
     sql: ${TABLE}.unit_type ;;
   }
 
+  dimension: room_to_charge_name {
+    view_label: "Room"
+    label: "Room To Charge"
+    description: "Room Type to Charge"
+    type: string
+    sql: ${TABLE}.price_basis ;;
+  }
+
   dimension: rate_plan_description {
     view_label: "Room"
     label: "Rate Code"
     description: "Rate Plan Description"
     type: string
     sql: ${TABLE}.rate_plan_description ;;
+  }
+
+  dimension: agency_name {
+    view_label: "Room"
+    label: "Agency Name"
+    description: "Agency Name"
+    type: string
+    sql: ${TABLE}.agency_name ;;
+  }
+
+  dimension: group_name {
+    view_label: "Room"
+    label: "Company Name"
+    description: "Group Name"
+    type: string
+    sql: ${TABLE}.agency_name ;;
   }
 
   dimension: iata_no{

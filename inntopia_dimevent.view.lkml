@@ -2,24 +2,26 @@ view: inntopia_dimevent {
   sql_table_name: PRAW_inntopia.dbo.dimevent ;;
     dimension:  EVENTID {
       sql: ${TABLE}.EVENTID ;;
+      hidden:  yes
     }
     dimension: SOURCESYSTEMCODE  {
       sql: ${TABLE}.SOURCESYSTEMCODE ;;
-    }
-    dimension:  SOURCEDESCRIPTION {
-    sql: ${TABLE}.SOURCEDESCRIPTION ;;
+      hidden: yes
     }
     dimension:  EVENTKEY {
-    sql: ${TABLE}.EVENTKEY ;;
+      sql: ${TABLE}.EVENTKEY ;;
+      hidden: yes
     }
     dimension:  CUSTOMERKEY {
       sql: ${TABLE}.CUSTOMERKEY ;;
+      hidden:  yes
     }
     dimension:  FAMILYKEY {
-    sql: ${TABLE}.FAMILYKEY ;;
+      sql: ${TABLE}.FAMILYKEY ;;
+      hidden: yes
     }
     dimension:  EVENTSTATE {
-    sql: ${TABLE}.EVENTSTATE ;;
+      sql: ${TABLE}.EVENTSTATE ;;
     }
     dimension:  PURCHASEDATE {
     sql: ${TABLE}.PURCHASEDATE ;;
@@ -54,24 +56,10 @@ view: inntopia_dimevent {
     dimension:  PRODUCTKEY {
     sql: ${TABLE}.PRODUCTKEY ;;
     }
-    dimension:  PRODUCTSOURCESYSTEMKEY {
-    sql: ${TABLE}.PRODUCTSOURCESYSTEMKEY ;;
-    }
     dimension:  PRODUCTDESCRIPTION {
     sql: ${TABLE}.PRODUCTDESCRIPTION ;;
     }
-    dimension:  EVENTAMOUNTLOCAL {
-    sql: ${TABLE}.EVENTAMOUNTLOCAL ;;
-    }
-    dimension:  LOCALCURRENCYCODE {
-    sql: ${TABLE}.LOCALCURRENCYCODE ;;
-    }
-    dimension:  SOURCESYSTEMCUSTOMERKEY {
-    sql: ${TABLE}.SOURCESYSTEMCUSTOMERKEY ;;
-    }
-    dimension:  EVENTBRAND {
-    sql: ${TABLE}.EVENTBRAND ;;
-    }
+
 
   #----------------------------------------------------------------------
   #---measures---
@@ -79,38 +67,25 @@ view: inntopia_dimevent {
     measure:  Countall{
       label: "Count(*)"
       description: "count all"
-      view_label: "  Measures"
       type: count
     }
     measure:  event_count {
       label: "Event Count"
       description: "Count of distinct events."
-      view_label: "  Measures"
       type: count_distinct
       sql: ${EVENTID} ;;
-  }
-
+    }
     measure:  EVENTAMOUNT {
-      label: "Revenue Amount"
-      description: "Event Revenue Amount"
-      view_label: "  Measures"
+      label: "Rev/TRev"
+      description: "Total Portolio Revenue"
       type: sum
       value_format_name: usd_0
     sql: ${TABLE}.EVENTAMOUNT ;;
     }
     measure:  QUANTITY {
-      label: "Room Night"
-      description: "Quanity of Room Nights"
-      view_label: "  Measures"
+      label: "Rm Bkd"
+      description: "Room Nights Actual & OTB"
       type: sum
     sql: ${TABLE}.QUANTITY ;;
-    }
-    measure:  ADR {
-      label: "ADR"
-      description: "Average Daily Rate"
-      view_label: "  Measures"
-      type: number
-      sql: utl..udf_divide( ${EVENTAMOUNT}, ${QUANTITY});;
-      value_format_name: usd_0
     }
 }
