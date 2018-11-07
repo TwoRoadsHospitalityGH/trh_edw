@@ -44,95 +44,95 @@ view: inntopia_dimlodging {
     dimension: SOURCEOFBUSINESSDESCRIPTION {
       sql: ${TABLE}.SOURCEOFBUSINESSDESCRIPTION;;
       label: "Source Channel Detail"
-      view_label: "Reservation Details"
+      view_label: "Reservation"
     }
 
     dimension: SOURCEOFBUSINESSGROUP {
       sql: ${TABLE}.SOURCEOFBUSINESSGROUP ;;
       label: "Source Channel Group"
-      view_label: "Reservation Details"
+      view_label: "Reservation"
     }
 
     dimension: RATEPLANDESCRIPTION {
       sql: ${TABLE}.RATEPLANDESCRIPTION ;;
       label: "Rate Plan Detail"
-      view_label: "Reservation Details"
+      view_label: "Reservation"
     }
 
     dimension: RATEPLANGROUP {
       sql: ${TABLE}.RATEPLANGROUP ;;
       label: "Rate Plan Group"
-      view_label: "Reservation Details"
+      view_label: "Reservation"
     }
 
     dimension: CENREZID {
       sql: ${TABLE}.CENREZID ;;
       label: "Reservation ID"
-      view_label: "Reservation Details"
+      view_label: "Reservation"
     }
 
     dimension: MARKETSEGMENTDESCRIPTION {
       sql: ${TABLE}.MARKETSEGMENTDESCRIPTION ;;
       label: "Market Segment Detail"
-      view_label: "Reservation Details"
+      view_label: "Reservation"
     }
 
     dimension: AGENCYCONTACT {
       sql: ${TABLE}.AGENCYCONTACT ;;
-      view_label: "Reservation Details"
+      view_label: "Reservation"
       label: "Agency Contact"
     }
 
     dimension: AGENCYLOCATION {
       sql: ${TABLE}.AGENCYLOCATION ;;
-      view_label: "Reservation Details"
+      view_label: "Reservation"
       label: "Agency Location"
     }
 
     dimension: AGENCYNAME {
       sql: ${TABLE}.AGENCYNAME ;;
-      view_label: "Reservation Details"
+      view_label: "Reservation"
       label: "Agency Name"
     }
 
     dimension: GROUPCODE {
       sql: ${TABLE}.GROUPCODE ;;
-      view_label: "Reservation Details"
+      view_label: "Reservation"
       label: "Group Code"
     }
 
     dimension: GROUPLOCATION {
       sql: ${TABLE}.GROUPLOCATION ;;
-      view_label: "Reservation Details"
+      view_label: "Reservation"
       label: "Group Location"
     }
 
     dimension: GROUPNAME {
       sql: ${TABLE}.GROUPNAME ;;
-      view_label: "Reservation Details"
+      view_label: "Reservation"
       label: "Group Name"
     }
 
     dimension: LEVEL {
       sql: ${TABLE}.LEVEL ;;
-      view_label: "Reservation Details"
+      view_label: "Reservation"
       label: "Reservation Status"
     }
 
     dimension: ROOMNUMBER {
       sql: ${TABLE}.ROOMNUMBER ;;
-      view_label: "Reservation Details"
+      view_label: "Reservation"
     }
 
     dimension: UNITTYPE {
       sql: ${TABLE}.UNITTYPE ;;
-      view_label: "Reservation Details"
+      view_label: "Reservation"
       label: "Rate Code"
     }
 
     dimension: UNITTYPEDESCRIPTION {
       sql: ${TABLE}.UNITTYPEDESCRIPTION ;;
-      view_label: "Reservation Details"
+      view_label: "Reservation"
       label: "Rate Code Description"
     }
 
@@ -143,13 +143,13 @@ view: inntopia_dimlodging {
 
     dimension: PRICEBASISDESCRIPTION {
       sql: ${TABLE}.PRICEBASISDESCRIPTION ;;
-      view_label: "Reservation Details"
+      view_label: "Reservation"
       label: "Rate Code Charged Descripton"
     }
 
   dimension: PRICEBASIS {
     sql: ${TABLE}.PRICEBASIS ;;
-    view_label: "Reservation Details"
+    view_label: "Reservation"
     label: "Rate Code Charged"
   }
 
@@ -157,7 +157,7 @@ view: inntopia_dimlodging {
     dimension: REPORTMARKETSEGMENT {
       sql: ${TABLE}.REPORTMARKETSEGMENT ;;
       label: "Market Segment Group"
-      view_label: "Reservation Details"
+      view_label: "Reservation"
     }
 
 

@@ -12,7 +12,7 @@ view: inntopia_dimcampaign {
   dimension:  MAILINGNAME {
     sql: ${TABLE}.MAILINGNAME ;;
     label: "Mailing Name"
-    view_label: "Campaign Details"
+    view_label: "Campaign"
   }
   dimension:  MAILINGSENTDATE_SID {
     hidden: yes
@@ -29,9 +29,6 @@ view: inntopia_dimcampaign {
   dimension:  LASTEVENTDATE_SID {
     hidden: yes
     sql: utl..udf_date_to_julian(${TABLE}.LASTEVENTDATE) ;;
-  }
-  dimension:  REPORTID {
-    sql: ${TABLE}.REPORTID ;;
   }
 
 

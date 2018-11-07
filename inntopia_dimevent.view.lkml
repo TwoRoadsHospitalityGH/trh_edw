@@ -25,14 +25,14 @@ view: inntopia_dimevent {
       hidden:  yes
     }
     dimension:  PURCHASELOCATIONDESCRIPTION {
-      view_label: "Purchase Details"
+      view_label: "Purchase"
       label: "Purchase Description"
       description: "Purchase Location Description"
       type: string
       sql: ${TABLE}.PURCHASELOCATIONDESCRIPTION ;;
     }
     dimension:  PURCHASELOCATIONTYPE {
-      view_label: "Purchase Details"
+      view_label: "Purchase"
       label: "Purchase Location Type"
       description: "Purchase Location Type"
       type: string
@@ -43,28 +43,28 @@ view: inntopia_dimevent {
       hidden:  yes
     }
     dimension:  EVENTLOCATIONDESCRIPTION {
-      view_label: "Event Details"
+      view_label: "Event"
       label: "Event Location Description"
       description: "Event Location Description"
       type:  string
       sql: ${TABLE}.EVENTLOCATIONDESCRIPTION ;;
     }
     dimension:  EVENTLOCATIONTYPE {
-      view_label: "Event Details"
+      view_label: "Event"
       label: "Event Location Type"
       description: "Event Location Type"
       type:  string
       sql: ${TABLE}.EVENTLOCATIONTYPE ;;
     }
     dimension:  PRODUCTKEY {
-      view_label: "Product Details"
+      view_label: "Product"
       label: "Product Key"
       description: "Source System Product Key"
       type:  string
       sql: ${TABLE}.PRODUCTSOURCESYSTEMKEY ;;
     }
     dimension:  PRODUCTDESCRIPTION {
-      view_label: "Product Details"
+      view_label: "Product"
       label: "Product Description"
       description: "Product Description"
       type:  string
