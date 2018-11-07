@@ -264,8 +264,16 @@ view: mm_property_kpi_f {
             {% else %}
               <div style="background-color: #F87B6E; font-size:100%; color:black; text-align:center">{{ kpi_val_d2._rendered_value }}</div>
             {% endif %}
+           <!-- none -->
+          {% elsif {{kpi_classification_dm.class_cd_min._value}} == '<none>' %}
+            {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1' %}
+              <div style="background-color: #00FFFFFF; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
+            {% elsif {{performance_metric_dm.value_format_str_m._value}} == 'decimal_1' %}
+              <div style="background-color: #00FFFFFF; font-size:100%; color:black; text-align:center">{{ kpi_val_d1._rendered_value }}</div>
+            {% else %}
+              <div style="background-color: #00FFFFFF; font-size:100%; color:black; text-align:center">{{ kpi_val_d2._rendered_value }}</div>
+            {% endif %}
           <!-- na -->
-
           {% elsif {{kpi_classification_dm.class_cd._value}} == 'na' %}
             {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1' %}
               <div style="background-color: #A6A6A6; font-size:100%; color:#A6A6A6; text-align:center">{{ rendered_value }}</div>
@@ -274,7 +282,7 @@ view: mm_property_kpi_f {
             {% else %}
               <div style="background-color: #A6A6A6; font-size:100%; color:#A6A6A6; text-align:center">{{ kpi_val_d2._rendered_value }}</div>
             {% endif %}
-          <!-- none -->
+         <!-- no format -->
           {% else %}
             {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1' %}
               {{ rendered_value }}

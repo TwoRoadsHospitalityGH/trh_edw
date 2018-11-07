@@ -36,6 +36,14 @@ view: kpi_classification_dm {
     hidden: yes
   }
 
+  measure: class_cd_min {
+    label: "Classification Code - Min"
+    type: min
+    sql: ${TABLE}.class_cd ;;
+    hidden: yes
+  }
+
+
   dimension: class_cd_dm {
     label: "Classifcation Grouping"
     type: string
