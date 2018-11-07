@@ -55,13 +55,13 @@ view: inntopia_dimlodging {
 
     dimension: RATEPLANDESCRIPTION {
       sql: ${TABLE}.RATEPLANDESCRIPTION ;;
-      label: "Rate Plan Detail"
+      label: "Rate Code Description"
       view_label: "Reservation"
     }
 
-    dimension: RATEPLANGROUP {
-      sql: ${TABLE}.RATEPLANGROUP ;;
-      label: "Rate Plan Group"
+    dimension: RATEPLANSOURCESYSTEMKEY {
+      sql: ${TABLE}.RATEPLANSOURCESYSTEMKEY ;;
+      label: "Rate Code"
       view_label: "Reservation"
     }
 
@@ -127,13 +127,13 @@ view: inntopia_dimlodging {
     dimension: UNITTYPE {
       sql: ${TABLE}.UNITTYPE ;;
       view_label: "Reservation"
-      label: "Rate Code"
+      label: "Room Type"
     }
 
     dimension: UNITTYPEDESCRIPTION {
       sql: ${TABLE}.UNITTYPEDESCRIPTION ;;
       view_label: "Reservation"
-      label: "Rate Code Description"
+      label: "Room Type Description"
     }
 
     dimension: HOTELID {
