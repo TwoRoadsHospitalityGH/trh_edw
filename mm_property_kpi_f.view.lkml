@@ -265,6 +265,7 @@ view: mm_property_kpi_f {
               <div style="background-color: #F87B6E; font-size:100%; color:black; text-align:center">{{ kpi_val_d2._rendered_value }}</div>
             {% endif %}
           <!-- na -->
+
           {% elsif {{kpi_classification_dm.class_cd._value}} == 'na' %}
             {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1' %}
               <div style="background-color: #A6A6A6; font-size:100%; color:#A6A6A6; text-align:center">{{ rendered_value }}</div>
@@ -284,7 +285,8 @@ view: mm_property_kpi_f {
             {% else %}
               {{ kpi_val_d2._rendered_value }}
             {% endif %}
-          {% endif %};;
+          {% endif %}
+          ;;
     required_fields:[kpi_val_d1, kpi_val_d2, kpi_val_id]
     drill_fields: [metric_drill*]
   }
