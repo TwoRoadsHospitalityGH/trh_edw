@@ -158,6 +158,13 @@ view: property_dm {
     sql: ${TABLE}.regional_fnc_ldr_full_name ;;
   }
 
+  dimension: regional_rev_mngr_full_name {
+    label: "Regional Rev Mngr"
+    description: "Regional Revenue Manager."
+    type: string
+    sql: ${TABLE}.regional_rm_ldr_full_name ;;
+  }
+
   dimension: phone_no {
     label: "Phone Number"
     description: "Property phone number."
