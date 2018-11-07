@@ -2,41 +2,38 @@ view: inntopia_dimcampaign {
   sql_table_name: PRAW_inntopia.dbo.dimcampaign ;;
   dimension:  CUSTOMERKEY {
     sql: ${TABLE}.CUSTOMERKEY ;;
+    hidden: yes
   }
   dimension:  FAMILYKEY {
     sql: ${TABLE}.FAMILYKEY ;;
+    hidden:  yes
   }
-  dimension:  EVENTADDRESS {
-    sql: ${TABLE}.EVENTADDRESS ;;
-  }
+
   dimension:  MAILINGNAME {
     sql: ${TABLE}.MAILINGNAME ;;
+    label: "Mailing Name"
+    view_label: "Campaign Details"
   }
-  dimension:  MAILINGSENTDATE {
+  dimension:  MAILINGSENTDATE_SID {
     hidden: yes
-    sql: ${TABLE}.MAILINGSENTDATE ;;
+    sql: utl..udf_date_to_julian(${TABLE}.MAILINGSENTDATE) ;;
   }
-  dimension:  FIRSTOPENEDDATE {
+  dimension:  FIRSTOPENEDDATE_SID {
     hidden:  yes
-    sql: ${TABLE}.FIRSTOPENEDDATE ;;
+    sql: utl..udf_date_to_julian(${TABLE}.FIRSTOPENEDDATE) ;;
   }
-  dimension:  FIRSTCLICKEDDATE {
+  dimension:  FIRSTCLICKEDDATE_SID {
     hidden: yes
-    sql: ${TABLE}.FIRSTCLICKEDDATE ;;
+    sql: utl..udf_date_to_julian(${TABLE}.FIRSTCLICKEDDATE) ;;
   }
-  dimension:  LASTEVENTDATE {
+  dimension:  LASTEVENTDATE_SID {
     hidden: yes
-    sql: ${TABLE}.LASTEVENTDATE ;;
-  }
-  dimension:  ISOPTOUT {
-    sql: ${TABLE}.ISOPTOUT ;;
+    sql: utl..udf_date_to_julian(${TABLE}.LASTEVENTDATE) ;;
   }
   dimension:  REPORTID {
     sql: ${TABLE}.REPORTID ;;
   }
-  dimension:  RESENDFLAG {
-    sql: ${TABLE}.RESENDFLAG ;;
-  }
+
 
   #---------------------------------------------------------------
   #----MEASURES-------------------------------------
