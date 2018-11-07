@@ -11,8 +11,8 @@ datagroup: model_caching_dg {
 explore: str_property_v {
   from: str_property_v
   sql_table_name: pedw.fact.strm_property_f ;;
-  group_label: "***Alpha Releases***"
-  label: "STR Monthly (alpha)"
+  group_label: "Property"
+  label: "STR Monthly"
   persist_with: model_caching_dg
   view_label: "    Measures"
 

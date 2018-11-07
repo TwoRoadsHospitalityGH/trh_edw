@@ -20,6 +20,15 @@ view: inntopia_res_property_f_msr_toly {
     sql: utl..udf_percent_var( ${inntopia_res_property_f_msr_ty.reservation_cnt}, ${inntopia_res_property_f_msr_ly.reservation_cnt} );;
     value_format_name: percent_1
   }
+
+  measure: rooms_revenue_pct_toly {
+    label: "Rev Rms $ TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${inntopia_res_property_f_msr_ty.room_rev_amt}, ${inntopia_res_property_f_msr_ly.room_rev_amt} );;
+    value_format_name: percent_1
+  }
+
   measure: rooms_booked_cnt_pct_toly {
     label: "Rms Bkd TY:LY - var %"
     description: "(TY - LY) / LY"

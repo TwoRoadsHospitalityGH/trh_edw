@@ -23,37 +23,37 @@ view: inntopia_res_property_f {
 
   dimension: propertykey{
     type: number
-    sql: ${TABLE}.property_key ;;
+    sql: ${TABLE}.propertykey ;;
     hidden: yes
   }
 
   dimension: booking_date_sid {
     type: number
-    sql: ${TABLE}.booked_date_sid ;;
+    sql: ${TABLE}.bookeddate_sid ;;
     hidden: yes
   }
 
   dimension: arrival_date_sid {
     type: number
-    sql: ${TABLE}.arrival_date_sid ;;
+    sql: ${TABLE}.arrivaldate_sid ;;
     hidden: yes
   }
 
   dimension: departure_date_sid {
     type: number
-    sql: ${TABLE}.departure_date_sid ;;
+    sql: ${TABLE}.departuredate_sid ;;
     hidden: yes
   }
 
   dimension: stay_date_sid {
     type: number
-    sql: ${TABLE}.stay_date_sid ;;
+    sql: ${TABLE}.stay_dt_sid ;;
     hidden: yes
     }
 
   dimension: cancellation_date_sid {
     type: number
-    sql: ${TABLE}.cancellation_date_sid ;;
+    sql: ${TABLE}.cancellationdate_sid ;;
     hidden: yes
   }
 
@@ -72,25 +72,17 @@ view: inntopia_res_property_f {
     hidden: yes
   }
 
-  dimension: reservation_no {
-    view_label: "Reservation"
-    label: "Reservation #"
-    description: "Reservation Number"
-    type: string
-    sql: ${TABLE}.cenrezid ;;
-  }
-
   dimension: market_segment_name {
     view_label: "Room"
-    label: "Market Segment Name"
+    label: "Macro Market Segment Name"
     description: "Report Market Segment"
     type: string
     sql: ${TABLE}.report_marketsegment ;;
   }
 
-  dimension: sub_market_segment_name {
+  dimension: micro_market_segment_name {
     view_label: "Room"
-    label: "Market Segment Description"
+    label: "Micro Market Segment Name"
     description: "Market Segment Description"
     type: string
     sql: ${TABLE}.market_segment_description ;;
@@ -119,21 +111,38 @@ view: inntopia_res_property_f {
     sql: ${TABLE}.unit_type ;;
   }
 
-  dimension: rate_plan_description {
+  dimension: room_to_charge_name {
     view_label: "Room"
-    label: "Rate Plan Description"
-    description: "Rate Plan Description"
+    label: "Room To Charge"
+    description: "Room Type to Charge"
     type: string
-    sql: ${TABLE}.unit_type ;;
+    sql: ${TABLE}.price_basis ;;
   }
 
-  dimension: rate_plan_group {
+  dimension: rate_plan_description {
     view_label: "Room"
-    label: "Rate Plan Group"
-    description: "Rate Plan Group"
+    label: "Rate Code"
+    description: "Rate Plan Description"
     type: string
-    sql: ${TABLE}.unit_type ;;
+    sql: ${TABLE}.rate_plan_description ;;
   }
+
+  dimension: agency_name {
+    view_label: "Room"
+    label: "Agency Name"
+    description: "Agency Name"
+    type: string
+    sql: ${TABLE}.agency_name ;;
+  }
+
+  dimension: group_name {
+    view_label: "Room"
+    label: "Company Name"
+    description: "Group Name"
+    type: string
+    sql: ${TABLE}.agency_name ;;
+  }
+
   dimension: iata_no{
     view_label: "Room"
     label: "Iata Number"

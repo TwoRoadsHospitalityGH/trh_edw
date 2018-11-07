@@ -2,114 +2,159 @@ view: inntopia_dimcustomer {
   sql_table_name: PRAW_inntopia.dbo.dimcustomer ;;
     dimension:  CUSTOMERKEY {
     sql: ${TABLE}.CUSTOMERKEY ;;
+    hidden:  yes
     }
     dimension:  FAMILYKEY {
     sql: ${TABLE}.FAMILYKEY ;;
+    hidden:  yes
     }
-    dimension:  ISHOH {
-    sql: ${TABLE}.ISHOH ;;
+  dimension: ISHOH {
+    view_label: "Customer"
+    label: "Head of Household? Y/N"
+    description: "Customer Head of Household? Y/N"
+    type: string
+    sql: IIf(${TABLE}.ISHOH =1, "Y","N") ;;
     }
-    dimension:  FIRSTNAME {
-    sql: ${TABLE}.FIRSTNAME ;;
+    dimension: FIRSTNAME {
+      view_label: "Customer"
+      label: "First Name"
+      description: "Customer First Name"
+      type: string
+      sql: ${TABLE}.FIRSTNAME ;;
     }
-    dimension:  LASTNAME {
-    sql: ${TABLE}.LASTNAME ;;
+    dimension: LASTNAME {
+      view_label: "Customer"
+      label: "Last Name"
+      description: "Customer Last Name"
+      type: string
+      sql: ${TABLE}.LASTTNAME ;;
     }
-    dimension:  BIRTHDATE {
-    sql: ${TABLE}.BIRTHDATE ;;
+    dimension: GENDER {
+      view_label: "Customer"
+      label: "Gender"
+      description: "Customer Gender"
+      type: string
+      sql: ${TABLE}.GENDER ;;
     }
-    dimension:  GENDER {
-    sql: ${TABLE}.GENDER ;;
-    }
-    dimension:  FULLADDRESS {
+    dimension: FULLADDRESS {
+      view_label: "Customer"
+      label: "Address"
+      description: "Customer Address"
+      type: string
     sql: ${TABLE}.FULLADDRESS ;;
     }
-    dimension:  CITY {
-    sql: ${TABLE}.CITY ;;
+    dimension: CITY {
+      view_label: "Customer"
+      label: "City"
+      description: "Customer City"
+      type: string
+      sql: ${TABLE}.CITY ;;
     }
-    dimension:  STATE {
+    dimension: STATE {
+    view_label: "Customer"
+    label: "State Abbrev"
+    description: "Customer State Abbreviation"
+    type: string
     sql: ${TABLE}.STATE ;;
     }
-    dimension:  POSTALCODE {
-    sql: ${TABLE}.POSTALCODE ;;
+    dimension: ZIP5 {
+      view_label: "Customer"
+      label: "Zip Code"
+      description: "Customer Zip Code"
+      type: zipcode
+      sql: ${TABLE}.ZIP5 ;;
     }
-    dimension:  ZIP5 {
-    sql: ${TABLE}.ZIP5 ;;
+    dimension: SUBREGION {
+      view_label: "Customer"
+      label: "Sub Region"
+      description: "Customer Sub Region"
+      type: string
+      sql: ${TABLE}.SUBREGION ;;
     }
-    dimension:  COUNTY {
-    sql: ${TABLE}.COUNTY ;;
+    dimension: REGION {
+      view_label: "Customer"
+      label: "Region"
+      description: "Customer Region"
+      type: string
+      sql: ${TABLE}.REGION ;;
     }
-    dimension:  MSA {
-    sql: ${TABLE}.MSA ;;
+    dimension: COUNTRY {
+      view_label: "Customer"
+      label: "Country"
+      description: "Customer Country"
+      type: string
+      sql: ${TABLE}.COUNTRY ;;
     }
-    dimension:  SUBREGION {
-    sql: ${TABLE}.SUBREGION ;;
+    dimension: ISMAILABLE {
+      view_label: "Customer"
+      label: "Mailable? Y/N"
+      description: "Is Customer Mailable?"
+      type: string
+      sql: IIf(${TABLE}.ISMAILABLE =1, "Y","N") ;;
     }
-    dimension:  REGION {
-    sql: ${TABLE}.REGION ;;
+    dimension: ISEMAILABLE {
+      view_label: "Customer"
+      label: "Emailable? Y/N"
+      description: "Is Customer Emailable?"
+      type: string
+      sql: IIf(${TABLE}.ISEMAILABLE =1, "Y","N") ;;
     }
-    dimension:  COUNTRY {
-    sql: ${TABLE}.COUNTRY ;;
+    dimension: ISPHONEABLE {
+      view_label: "Customer"
+      label: "Phoneable? Y/N"
+      description: "Is Customer Phoneable?"
+      type: string
+      sql: IIf(${TABLE}.ISPHONEABLE =1, "Y","N") ;;
     }
-    dimension:  MAJORAIRPORTCODE {
-    sql: ${TABLE}.MAJORAIRPORTCODE ;;
+    dimension: AGE {
+      view_label: "Customer"
+      label: "Age"
+      description: "Customer Age"
+      type: number
+      sql: ${TABLE}.AGE ;;
     }
-    dimension:  NEARESTAIRPORTCODE {
-    sql: ${TABLE}.NEARESTAIRPORTCODE ;;
+    dimension: age_tier{
+      view_label: "Customer"
+      label: "Age Tier"
+      description: "Customer Age Tier"
+      type: tier
+      tiers: [0, 20, 30, 40, 50, 70, 100]
+      style: relational
+      sql: ${AGE} ;;
+  }
+    dimension: LATTITUDE {
+      view_label: "Customer"
+      label: "Lattitude"
+      description: "Customer Lattitude"
+      type: number
+      sql: ${TABLE}.LATITUDE ;;
     }
-    dimension:  ISMAILABLE {
-    sql: ${TABLE}.ISMAILABLE ;;
+    dimension: LONGITUDE {
+      view_label: "Customer"
+      label: "Longitude"
+      description: "Customer Longitude"
+      type: number
+      sql: ${TABLE}.LONGITUDE ;;
     }
-    dimension:  AREACODE {
-    sql: ${TABLE}.AREACODE ;;
-    }
-    dimension:  PHONENUMBER {
-    sql: ${TABLE}.PHONENUMBER ;;
-    }
-    dimension:  ISPHONEABLE {
-    sql: ${TABLE}.ISPHONEABLE ;;
-    }
-    dimension:  CREATEDATE {
-    sql: ${TABLE}.CREATEDATE ;;
-    }
-    dimension:  AGE {
-    sql: ${TABLE}.AGE ;;
-    }
-    dimension:  ISPRIMARYEMAILCONTACT {
-    sql: ${TABLE}.ISPRIMARYEMAILCONTACT ;;
-    }
-    dimension:  LATITUDE {
-    sql: ${TABLE}.LATITUDE ;;
-    }
-    dimension:  LONGITUDE {
-    sql: ${TABLE}.LONGITUDE ;;
-    }
-    dimension:  ORIGIN {
-    sql: ${TABLE}.ORIGIN ;;
-    }
-    dimension:  UPDATEDATE {
-    sql: ${TABLE}.UPDATEDATE ;;
-    }
-    dimension:  RESENDFLAG {
-    sql: ${TABLE}.RESENDFLAG ;;
-    }
-    dimension:  TITLE {
-    sql: ${TABLE}.TITLE ;;
-    }
+
 #---------------------------------------------------------------------
 #----MEASURES---------
 #---------------------------------------------------------------------
     measure: record_cnt {
       label: "Customer Count"
       description: "Count of distinct customers"
-      view_label: "  Measures"
       type: number
     sql: count(distinct ${CUSTOMERKEY}) ;;
     }
     measure: avg_customer_age{
       label: "Avg Age"
       description: "Average Customer Age"
-      view_label: "  Measures"
       type: average
     }
+    measure: family_cnt {
+      label: "Family Count"
+    description: "Count of distinct family's"
+    type: number
+    sql: count(distinct ${FAMILYKEY}) ;;
+  }
 }

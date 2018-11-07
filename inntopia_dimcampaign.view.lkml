@@ -43,7 +43,7 @@ view: inntopia_dimcampaign {
   #---------------------------------------------------------------
 
   measure: received_cnt {
-    label: "Received Count"
+    label: "Received"
     description: "Count of campagins received"
     view_label: "  Measures"
     type: sum
@@ -51,7 +51,7 @@ view: inntopia_dimcampaign {
   }
 
   measure:  isblocked {
-    label: "Blocked Count"
+    label: "Blocked"
     description: "Count of campagins blocked"
     view_label: "  Measures"
     type: sum
@@ -59,7 +59,7 @@ view: inntopia_dimcampaign {
   }
 
   measure:  isopened {
-    label: "Opened Count"
+    label: "Opened"
     description: "Count of campagins opened"
     view_label: "  Measures"
     type: sum
@@ -67,7 +67,7 @@ view: inntopia_dimcampaign {
   }
 
   measure:  isclicked {
-    label: "Clicked Count"
+    label: "Clicked"
     description: "Count of campagins clicked"
     view_label: "  Measures"
     type: sum
