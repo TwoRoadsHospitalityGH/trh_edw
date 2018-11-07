@@ -39,18 +39,16 @@ view: inntopia_dimcampaign {
   #----MEASURES-------------------------------------
   #---------------------------------------------------------------
 
-  measure: received_cnt {
-    label: "Received"
-    description: "Count of campagins received"
-    view_label: "  Measures"
+  measure: sent_cnt {
+    label: "Ttl Sent"
+    description: "Count of campagins sent"
     type: sum
     sql:  ${TABLE}.ISRECEIVED ;;
   }
 
   measure:  isblocked {
     label: "Blocked"
-    description: "Count of campagins blocked"
-    view_label: "  Measures"
+    description: "Count of Campaigns blocked"
     type: sum
     sql: ${TABLE}.ISBLOCKED ;;
   }
@@ -58,7 +56,6 @@ view: inntopia_dimcampaign {
   measure:  isopened {
     label: "Opened"
     description: "Count of campagins opened"
-    view_label: "  Measures"
     type: sum
     sql: ${TABLE}.ISOPENED ;;
   }
@@ -66,8 +63,32 @@ view: inntopia_dimcampaign {
   measure:  isclicked {
     label: "Clicked"
     description: "Count of campagins clicked"
-    view_label: "  Measures"
     type: sum
     sql: ${TABLE}.ISCLICKED ;;
+  }
+
+  measure: subscriber_cnt{
+    label: "Subscriber Count"
+    description: "Count of distinct emails"
+    type: count_distinct
+    sql:  ${TABLE}.EMAILADDRESS ;;
+  }
+
+  measure: open_rate {
+    label: "Open Rate"
+    description: "Opens/Sends"
+    sql: ${isopened}/${sent_cnt} ;;
+  }
+
+  measure: click_rate{
+      label: "Click Rate"
+      description: "Clicks/Opens"
+      sql:  ${isclicked}/${isopened} ;;
+  }
+
+  measure: click_rate_sends{
+    label: "Click Rate (Sends)"
+    description: "Clicks/Sends"
+    sql:  ${isclicked}/${sent_cnt} ;;
   }
 }
