@@ -33,14 +33,14 @@ view: kpi_classification_dm {
     label: "Classification Code"
     type: max
     sql: ${TABLE}.class_cd ;;
-    hidden: yes
+    hidden: no
   }
 
   measure: class_cd_min {
     label: "Classification Code - Min"
     type: min
     sql: ${TABLE}.class_cd ;;
-    hidden: yes
+    hidden: no
   }
 
 
