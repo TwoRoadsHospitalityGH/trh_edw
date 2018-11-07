@@ -20,46 +20,56 @@ view: inntopia_dimevent {
       sql: ${TABLE}.FAMILYKEY ;;
       hidden: yes
     }
-    dimension:  EVENTSTATE {
-      sql: ${TABLE}.EVENTSTATE ;;
-    }
-    dimension:  PURCHASEDATE {
-    sql: ${TABLE}.PURCHASEDATE ;;
+    dimension:  PURCHASEDATE_SID {
+      sql: utl..udf_date_to_julian(${TABLE}.PURCHASEDATE) ;;
+      hidden:  yes
     }
     dimension:  PURCHASELOCATIONDESCRIPTION {
-    sql: ${TABLE}.PURCHASELOCATIONDESCRIPTION ;;
+      view_label: "Purchase"
+      label: "Purchase Description"
+      description: "Purchase Location Description"
+      type: string
+      sql: ${TABLE}.PURCHASELOCATIONDESCRIPTION ;;
     }
     dimension:  PURCHASELOCATIONTYPE {
-    sql: ${TABLE}.PURCHASELOCATIONTYPE ;;
+      view_label: "Purchase"
+      label: "Purchase Location Type"
+      description: "Purchase Location Type"
+      type: string
+      sql: ${TABLE}.PURCHASELOCATIONTYPE ;;
     }
-    dimension:  PURCHASERESORTDETAIL {
-    sql: ${TABLE}.PURCHASERESORTDETAIL ;;
-    }
-    dimension:  PURCHASERESORT {
-    sql: ${TABLE}.PURCHASERESORT ;;
-    }
-    dimension:  EVENTDATE {
-    sql: ${TABLE}.EVENTDATE ;;
+    dimension:  EVENTDATE_SID {
+      sql: utl..udf_date_to_julian(${TABLE}.EVENTDATE) ;;
+      hidden:  yes
     }
     dimension:  EVENTLOCATIONDESCRIPTION {
-    sql: ${TABLE}.EVENTLOCATIONDESCRIPTION ;;
+      view_label: "Event"
+      label: "Event Location Description"
+      description: "Event Location Description"
+      type:  string
+      sql: ${TABLE}.EVENTLOCATIONDESCRIPTION ;;
     }
     dimension:  EVENTLOCATIONTYPE {
-    sql: ${TABLE}.EVENTLOCATIONTYPE ;;
-    }
-    dimension:  EVENTRESORTDETAIL {
-    sql: ${TABLE}.EVENTRESORTDETAIL ;;
-    }
-    dimension:  EVENTRESORT {
-    sql: ${TABLE}.EVENTRESORT ;;
+      view_label: "Event"
+      label: "Event Location Type"
+      description: "Event Location Type"
+      type:  string
+      sql: ${TABLE}.EVENTLOCATIONTYPE ;;
     }
     dimension:  PRODUCTKEY {
-    sql: ${TABLE}.PRODUCTKEY ;;
+      view_label: "Product"
+      label: "Product Key"
+      description: "Source System Product Key"
+      type:  string
+      sql: ${TABLE}.PRODUCTSOURCESYSTEMKEY ;;
     }
     dimension:  PRODUCTDESCRIPTION {
-    sql: ${TABLE}.PRODUCTDESCRIPTION ;;
+      view_label: "Product"
+      label: "Product Description"
+      description: "Product Description"
+      type:  string
+      sql: ${TABLE}.PRODUCTDESCRIPTION ;;
     }
-
 
   #----------------------------------------------------------------------
   #---measures---
@@ -88,4 +98,24 @@ view: inntopia_dimevent {
       type: sum
     sql: ${TABLE}.QUANTITY ;;
     }
+
+    measure: customer_cnt  {
+      hidden: yes
+      type: count_distinct
+      sql: ${TABLE}.CUSTOMERKEY ;;
+    }
+
+    measure:  customer_spend{
+      label: "Rev/Customer"
+      description: "Total Revenue Spent/Customer"
+      value_format_name: usd_0
+      sql: ${EVENTAMOUNT}/${customer_cnt} ;;
+  }
+
+    measure:  customer_room_night{
+      label: "Rm Bkd/Customer"
+      description: "Room Booked/Customer"
+      value_format_name: decimal_1
+      sql: ${QUANTITY}/${customer_cnt} ;;
+  }
 }
