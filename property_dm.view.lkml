@@ -169,7 +169,7 @@ view: property_dm {
     label: "Regional Sales Leader"
     description: "Regional Sales Leader."
     type: string
-    sql: ${TABLE}.regional_rm_ldr_full_name ;;
+    sql: ${TABLE}.regional_sales_ldr_full_name ;;
   }
 
   dimension: phone_no {
@@ -233,6 +233,41 @@ view: property_dm {
     description: "Indication of MIH eligible property."
     type: yesno
     sql: ${TABLE}.mih_eligible_bt = 1 ;;
+  }
+
+  dimension: gl_entity_id {
+    label: "GL Entities ID"
+    description: "GL Entity ID."
+    type: string
+    sql: ${TABLE}.oracle_entity_str ;;
+  }
+
+  dimension: tripadvisor_id {
+    label: "Trip Advisor ID"
+    description: "Trip Advisor ID."
+    type: string
+    sql: ${TABLE}.tripadvisor_id_str ;;
+  }
+
+  dimension: revinate_guest_id {
+    label: "Revinate Guest ID"
+    description: "Revinate Guest ID."
+    type: string
+    sql: ${TABLE}.revinate_guest_id_str ;;
+  }
+
+  dimension: revinate_meeting_id {
+    label: "Revinate Meeting ID"
+    description: "Revinate Meeting ID."
+    type: string
+    sql: ${TABLE}.revinate_meeting_id_str ;;
+  }
+
+  dimension: str_id {
+    label: "STR #"
+    description: "Smith Travel Census Number."
+    type: string
+    sql: ${TABLE}.str_id_str ;;
   }
 
 
