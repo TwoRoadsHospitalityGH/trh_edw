@@ -165,6 +165,13 @@ view: property_dm {
     sql: ${TABLE}.regional_rm_ldr_full_name ;;
   }
 
+  dimension: regional_sales_ldr_full_name {
+    label: "Regional Sales Leader"
+    description: "Regional Sales Leader."
+    type: string
+    sql: ${TABLE}.regional_rm_ldr_full_name ;;
+  }
+
   dimension: phone_no {
     label: "Phone Number"
     description: "Property phone number."

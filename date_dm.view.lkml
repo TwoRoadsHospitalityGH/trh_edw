@@ -97,6 +97,13 @@ view: date_dm {
     allow_fill: no
   }
 
+  dimension: month_and_year {
+    type: string
+    label: "Month and Year"
+    description: "Month and Year"
+    sql: concat(concat(${month_name}, ', '), ${year}) ;;
+    }
+
   #
   # restrict to up through prior month
   #
