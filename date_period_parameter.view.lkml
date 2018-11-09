@@ -17,7 +17,7 @@ view: date_period_parameter {
     hidden: yes
   }
 
-  parameter: available_months {
+  parameter: available_timeperiod {
     label: "Available Timeframe"
     type: string
     allowed_value: {label: "Prior Month" value: "prior_month"}

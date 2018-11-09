@@ -236,8 +236,8 @@ view: property_dm {
   }
 
   dimension: gl_entity_id {
-    label: "GL Entities ID"
-    description: "GL Entity ID."
+    label: "GL Entities"
+    description: "GL Entity."
     type: string
     sql: ${TABLE}.oracle_entity_str ;;
   }
