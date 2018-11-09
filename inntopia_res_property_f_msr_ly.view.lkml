@@ -9,7 +9,7 @@ view: inntopia_res_property_f_msr_ly {
   #-------------------------------------------------------------------------------------------
 
   dimension: tyly_bt {
-    sql: $inntopia_res_property_f.ly_bt} ;;
+    sql: ${inntopia_res_property_f.ly_bt} ;;
     hidden: yes
   }
 
