@@ -74,7 +74,7 @@ view: inntopia_res_property_f {
 
   dimension: customerkey {
     type: number
-    sql: ${TABLE}.customerkey ;;
+    sql: ${TABLE}.customer_key ;;
     hidden: yes
   }
 
