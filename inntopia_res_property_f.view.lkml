@@ -29,7 +29,7 @@ view: inntopia_res_property_f {
 
   dimension: booking_date_sid {
     type: number
-    sql: ${TABLE}.bookeddate_sid ;;
+    sql: ${TABLE}.bookingdate_sid ;;
     hidden: yes
   }
 
