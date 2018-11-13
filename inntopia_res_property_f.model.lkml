@@ -64,8 +64,6 @@ explore: inntopia_res_property_f {
     relationship: many_to_one
   }
 
-
-
   join: property_dm {
     from: property_dm
     view_label: " Property"
@@ -74,4 +72,10 @@ explore: inntopia_res_property_f {
     relationship: many_to_one
   }
 
+  join: inntopia_dimcustomer {
+    view_label: "  Measures"
+    sql_on: ${inntopia_res_property_f.customerkey} = ${inntopia_dimcustomer.CUSTOMERKEY} ;;
+    type: inner
+    relationship: many_to_one
+  }
 }

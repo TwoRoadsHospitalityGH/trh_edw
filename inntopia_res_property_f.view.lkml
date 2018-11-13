@@ -72,6 +72,12 @@ view: inntopia_res_property_f {
     hidden: yes
   }
 
+  dimension: customerkey {
+    type: number
+    sql: ${TABLE}.customerkey ;;
+    hidden: yes
+  }
+
   dimension: market_segment_name {
     view_label: "Room"
     label: "Macro Market Segment Name"
