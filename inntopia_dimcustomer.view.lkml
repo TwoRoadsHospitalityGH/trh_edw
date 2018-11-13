@@ -27,7 +27,7 @@ view: inntopia_dimcustomer {
       label: "Last Name"
       description: "Customer Last Name"
       type: string
-      sql: ${TABLE}.LASTTNAME ;;
+      sql: ${TABLE}.LASTNAME ;;
     }
     dimension: GENDER {
       view_label: "Customer"
