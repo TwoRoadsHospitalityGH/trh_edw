@@ -162,5 +162,14 @@ view: inntopia_res_property_f {
     hidden: yes
   }
 
+  dimension: room_number{
+    view_label: "Room"
+    label: "Room Number"
+    description: "Room Number"
+    type: string
+    sql: ${TABLE}.room_number ;;
+  }
+
+
 
 }
