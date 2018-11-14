@@ -6,7 +6,7 @@ view: date_period_parameter {
          date_sid
         ,cal_dt
       from
-        table( utl..udtf_period_date_dm( {% parameter available_months %} ) )
+        table( utl..udtf_period_date_dm( {% parameter available_timeperiod %} ) )
 
           ;;
   }
