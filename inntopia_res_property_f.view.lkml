@@ -170,6 +170,13 @@ view: inntopia_res_property_f {
     sql: ${TABLE}.room_number ;;
   }
 
+  dimension: reservation_status{
+    view_label: "Room"
+    label: "Reservation Status"
+    description: "Reservation Status"
+    type: string
+    sql: ${TABLE}.level ;;
+  }
 
 
 }
