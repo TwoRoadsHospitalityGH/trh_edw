@@ -38,6 +38,12 @@ view: inntopia_campaign_property_f {
     view_label: "Campaign"
   }
 
+  dimension:  EMAILADDRESS {
+    sql: ${TABLE}.EMAILADDRESS ;;
+    label: "Email Address"
+    view_label: "Campaign"
+  }
+
   dimension: ISHOH {
     view_label: "Customer"
     label: "Head of Household? Y/N"
@@ -141,7 +147,7 @@ view: inntopia_campaign_property_f {
     label: "Age"
     description: "Customer Age"
     type: number
-    sql: ${TABLE}.AGE ;;
+    sql: ${TABLE}.age ;;
   }
   dimension: age_tier{
     view_label: "Customer"
@@ -184,6 +190,32 @@ view: inntopia_campaign_property_f {
   dimension:  LASTEVENTDATE_SID {
     hidden: yes
     sql: utl..udf_date_to_julian(${TABLE}.lasteventdate) ;;
+  }
+  #-------------------------------------------------------------------------------------------
+  #-- dimensions
+  #-------------------------------------------------------------------------------------------
+  dimension: sent_cnt {
+    type: number
+    sql:  ${TABLE}.ISRECEIVED ;;
+    hidden:  yes
+  }
+
+  dimension:  isblocked {
+    type: number
+    sql: ${TABLE}.ISBLOCKED ;;
+    hidden: yes
+  }
+
+  dimension:  isopened {
+    type: number
+    sql: ${TABLE}.ISOPENED ;;
+    hidden: yes
+  }
+
+  dimension:  isclicked {
+    type: number
+    sql: ${TABLE}.ISCLICKED ;;
+    hidden: yes
   }
 
 }

@@ -27,35 +27,35 @@ view: inntopia_campaign_property_f_msr_ty {
     label: "Ttl Sent"
     description: "Count of campaigns sent"
     type: sum
-    sql:  ${TABLE}.isreceived ;;
+    sql:  ${inntopia_campaign_property_f.sent_cnt} * ${tyly_bt} ;;
   }
 
   measure:  isblocked {
     label: "Blocked"
     description: "Count of campaigns blocked"
     type: sum
-    sql: ${TABLE}.isblocked ;;
+    sql: ${inntopia_campaign_property_f.isblocked} * ${tyly_bt};;
   }
 
   measure:  isopened {
     label: "Opened"
     description: "Count of campagins opened"
     type: sum
-    sql: ${TABLE}.isopened ;;
+    sql: ${inntopia_campaign_property_f.isopened} * ${tyly_bt};;
   }
 
   measure:  isclicked {
     label: "Clicked"
     description: "Count of campagins clicked"
     type: sum
-    sql: ${TABLE}.isclicked ;;
+    sql: ${inntopia_campaign_property_f.isclicked} * ${tyly_bt} ;;
   }
 
   measure: subscriber_cnt{
     label: "Subscriber Count"
     description: "Count of distinct emails"
     type: count_distinct
-    sql:  ${TABLE}.emailaddress ;;
+    sql:  iff( ${tyly_bt} = 1, ${inntopia_campaign_property_f.EMAILADDRESS}, to_number( null ) ) ;;
   }
 
   measure: open_rate {
@@ -84,20 +84,20 @@ view: inntopia_campaign_property_f_msr_ty {
   measure: record_cnt {
     label: "Customer Count"
     description: "Count of distinct customers"
-    type: number
-    sql: count(distinct ${TABLE}.customerkey) ;;
+    type: count_distinct
+    sql:  iff( ${tyly_bt} = 1, ${inntopia_campaign_property_f.CUSTOMERKEY}, to_number( null ) ) ;;
   }
   measure: avg_customer_age{
     label: "Avg Age"
     description: "Average Customer Age"
     type: average
-    sql:  ${TABLE}.age ;;
+    sql:  ${inntopia_campaign_property_f.AGE} * ${tyly_bt} ;;
   }
   measure: family_cnt {
     label: "Family Count"
     description: "Count of distinct family's"
-    type: number
-    sql: count(distinct ${TABLE}.familykey) ;;
+    type: count_distinct
+    sql: iff( ${tyly_bt} = 1, ${inntopia_campaign_property_f.FAMILYKEY}, to_number( null ) ) ;;
   }
 
 }
