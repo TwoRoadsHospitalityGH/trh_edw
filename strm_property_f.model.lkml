@@ -53,10 +53,10 @@ explore: str_property_v {
     relationship: many_to_one
   }
 
-  join: date_month_parameter{
-    from:  date_month_parameter
+  join: date_period_parameter{
+    from:  date_period_parameter
     view_label: "  Date"
-    sql_on: ${date_month_parameter.date_sid} = ${str_property_v.date_sid} ;;
+    sql_on: ${date_period_parameter.date_sid} = ${str_property_v.date_sid} ;;
     type: inner
     relationship: many_to_one
   }
