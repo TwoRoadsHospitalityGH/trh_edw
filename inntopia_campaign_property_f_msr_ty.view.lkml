@@ -58,8 +58,8 @@ view: inntopia_campaign_property_f_msr_ty {
     sql:  iff( ${tyly_bt} = 1, ${inntopia_campaign_property_f.EMAILADDRESS}, to_number( null ) ) ;;
   }
 
-  measure: subscriptions_cnt{
-    label: "Subscriptions"
+  measure: campaigns_cnt{
+    label: "Campaigns"
     description: "Count of distinct emails/campaigns"
     type: count_distinct
     sql:  iff( ${tyly_bt} = 1,concat( ${inntopia_campaign_property_f.EMAILADDRESS}, ${inntopia_campaign_property_f.dimcampaignid}), to_number( null ) ) ;;
