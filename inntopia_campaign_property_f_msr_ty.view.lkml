@@ -24,7 +24,7 @@ view: inntopia_campaign_property_f_msr_ty {
   #---------------------------------------------------------------
 
   measure: sent_cnt {
-    label: "Ttl Sent"
+    label: "Campaigns"
     description: "Count of campaigns sent"
     type: sum
     sql:  ${inntopia_campaign_property_f.sent_cnt} * ${tyly_bt} ;;
@@ -52,10 +52,17 @@ view: inntopia_campaign_property_f_msr_ty {
   }
 
   measure: subscriber_cnt{
-    label: "Subscriber Count"
+    label: "Subscribers"
     description: "Count of distinct emails"
     type: count_distinct
     sql:  iff( ${tyly_bt} = 1, ${inntopia_campaign_property_f.EMAILADDRESS}, to_number( null ) ) ;;
+  }
+
+  measure: subscriptions_cnt{
+    label: "Subscriptions"
+    description: "Count of distinct emails/campaigns"
+    type: count_distinct
+    sql:  iff( ${tyly_bt} = 1,concat( ${inntopia_campaign_property_f.EMAILADDRESS}, ${inntopia_campaign_property_f.dimcampaignid}), to_number( null ) ) ;;
   }
 
   measure: open_rate {
@@ -82,7 +89,7 @@ view: inntopia_campaign_property_f_msr_ty {
     sql:  ${isclicked}/${sent_cnt} ;;
   }
   measure: record_cnt {
-    label: "Customer Count"
+    label: "Customers"
     description: "Count of distinct customers"
     type: count_distinct
     sql:  iff( ${tyly_bt} = 1, ${inntopia_campaign_property_f.CUSTOMERKEY}, to_number( null ) ) ;;
@@ -94,7 +101,7 @@ view: inntopia_campaign_property_f_msr_ty {
     sql:  ${inntopia_campaign_property_f.AGE} * ${tyly_bt} ;;
   }
   measure: family_cnt {
-    label: "Family Count"
+    label: "Familys"
     description: "Count of distinct family's"
     type: count_distinct
     sql: iff( ${tyly_bt} = 1, ${inntopia_campaign_property_f.FAMILYKEY}, to_number( null ) ) ;;
