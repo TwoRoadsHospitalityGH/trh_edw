@@ -72,6 +72,7 @@ view: property_dm {
     description: "Property city."
     type: string
     sql: ${TABLE}.CITY_NAME ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: state_province_cd {
@@ -86,6 +87,7 @@ view: property_dm {
     description: "Property State/Province."
     type: string
     sql: ${TABLE}.STATE_PROVINCE_NAME ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: zip_cd {
@@ -93,6 +95,7 @@ view: property_dm {
     description: "Property zip code"
     type: string
     sql: ${TABLE}.ZIP_CD ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: property_lat {
@@ -120,6 +123,7 @@ view: property_dm {
     description: "Property country."
     type: string
     sql: ${TABLE}.COUNTRY_NAME ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: region_name {
@@ -149,6 +153,7 @@ view: property_dm {
     description: "Regoinal operations leader."
     type: string
     sql: ${TABLE}.regional_ops_ldr_full_name ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: regional_fnc_ldr_full_name {
@@ -156,6 +161,7 @@ view: property_dm {
     description: "Regional financial leader."
     type: string
     sql: ${TABLE}.regional_fnc_ldr_full_name ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: regional_rev_mngr_full_name {
@@ -163,6 +169,7 @@ view: property_dm {
     description: "Regional Revenue Manager."
     type: string
     sql: ${TABLE}.regional_rm_ldr_full_name ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: regional_sales_ldr_full_name {
@@ -170,6 +177,7 @@ view: property_dm {
     description: "Regional Sales Leader."
     type: string
     sql: ${TABLE}.regional_sales_ldr_full_name ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: phone_no {
@@ -317,7 +325,13 @@ view: property_dm {
       property_name,
       ownership_group_name,
       marketing_name,
-      region_name
+      evp_full_last_first,
+      regional_fnc_ldr_full_name,
+      regional_rev_mngr_full_name,
+      regional_sales_ldr_full_name,
+      region_name,
+      state_province_name,
+      city_name
     ]
   }
 }
