@@ -315,9 +315,6 @@ view: property_dm {
     fields: [
       brand_name,
       property_name,
-      gl_account_dm.seg2_department_name,
-      gl_account_dm.seg2_subdepartment_name,
-      date_dm.fiscal_period_label,
       ownership_group_name,
       marketing_name,
       region_name
