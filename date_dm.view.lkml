@@ -31,6 +31,7 @@ view: date_dm {
     description: "Day"
     convert_tz: no
     sql: ${cal_dt} ;;
+    drill_fields: [year, quarter, month, week, date]
     allow_fill: no
   }
 
@@ -50,8 +51,8 @@ view: date_dm {
     description: "Month"
     convert_tz: no
     sql: ${cal_dt} ;;
+    drill_fields: [week, date, day_of_week]
     allow_fill: no
-    drill_fields: [week,date]
   }
 
   dimension: month_num {
@@ -78,7 +79,7 @@ view: date_dm {
     description: "Quarter of year."
     convert_tz: no
     sql: ${cal_dt} ;;
-    drill_fields: [month,week,date]
+    drill_fields: [month, week, date, day_of_week]
     allow_fill: no
   }
 
@@ -98,7 +99,7 @@ view: date_dm {
     convert_tz: no
     sql: ${cal_dt} ;;
     allow_fill: no
-    drill_fields: [quarter,month,week,date]
+    drill_fields: [quarter, month, week, date, day_of_week]
     }
 
   dimension: month_and_year {
