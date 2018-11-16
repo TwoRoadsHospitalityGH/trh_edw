@@ -195,14 +195,14 @@ view: date_dm {
     label: "Date Range"
     description: "Dates included in selection. Monthly data will be represented as the first of each month."
     type: string
-    sql:  concat(concat(to_char(min(${cal_dt}), 'mon dd, yy'), ' - ') , to_char(max(${cal_dt}), 'mon dd, yy') ) ;;
+    sql:  concat(concat(to_char(min(${cal_dt}), 'mon dd, ''yy'), ' - ') , to_char(max(${cal_dt}), 'mon dd, ''yy') ) ;;
   }
 
   measure: month_range {
     label: "Month Range"
     description: "Month included in selection."
     type: string
-    sql:  concat(concat(to_char(min(${cal_dt}), 'mon yy'), ' - ') , to_char(max(${cal_dt}), 'mon yy') ) ;;
+    sql:  concat(concat(to_char(min(${cal_dt}), 'mon ''yy'), ' - ') , to_char(max(${cal_dt}), 'mon ''yy') ) ;;
   }
 
 
