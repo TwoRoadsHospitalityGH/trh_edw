@@ -69,7 +69,7 @@ view: inntopia_res_property_f_msr_ty {
     label: "LOS Avg"
     description: "Avg Length of Stay"
     type: average_distinct
-    sql: ${tyly_bt} ;;
+    sql: iif(${tyly_bt} = 1, datediff(day,${inntopia_res_property_f.arrival_dt},${inntopia_res_property_f.departure_dt}),to_number( null ) )  ;;
     value_format_name: decimal_0
   }
 
@@ -77,7 +77,7 @@ view: inntopia_res_property_f_msr_ty {
     label: "Lead Time Avg"
     description: "Lead Time Avg"
     type: average_distinct
-    sql: ${tyly_bt} ;;
+    sql: iif(${tyly_bt} = 1, datediff(day,${inntopia_res_property_f.booking_dt},${inntopia_res_property_f.arrival_dt}),to_number( null ) ) ;;
     value_format_name: decimal_0
   }
 

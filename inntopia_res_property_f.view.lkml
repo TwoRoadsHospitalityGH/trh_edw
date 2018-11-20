@@ -60,6 +60,25 @@ view: inntopia_res_property_f {
   #-------------------------------------------------------------------------------------------
   #-- dimensions
   #-------------------------------------------------------------------------------------------
+
+  dimension: booking_dt {
+    type: date
+    sql: ${TABLE}.booking_dt ;;
+    hidden: yes
+  }
+
+  dimension: arrival_dt {
+    type: date
+    sql: ${TABLE}.arrival_dt ;;
+    hidden: yes
+  }
+
+  dimension: departure_dt {
+    type: date
+    sql: ${TABLE}.departure_dt ;;
+    hidden: yes
+  }
+
   dimension: ty_bt {
     type: number
     sql: ${TABLE}.ty_bt ;;
