@@ -56,10 +56,27 @@ view: inntopia_res_property_f_msr_ty {
     sql: iff( ${tyly_bt} = 1, ${inntopia_res_property_f.avg_daily_rate}, to_decimal( null ) );;
     value_format_name: usd
   }
+
   measure: rooms_booked_cnt {
     label: "Rms Bkd"
     description: "Rooms Booked"
     type: sum
+    sql: ${tyly_bt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: length_of_stay_avg {
+    label: "LOS Avg"
+    description: "Avg Length of Stay"
+    type: average_distinct
+    sql: ${tyly_bt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: lead_time_avg {
+    label: "Lead Time Avg"
+    description: "Lead Time Avg"
+    type: average_distinct
     sql: ${tyly_bt} ;;
     value_format_name: decimal_0
   }
