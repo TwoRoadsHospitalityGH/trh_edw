@@ -1,0 +1,94 @@
+view: str_property_v_toly_seg {
+  derived_table: {
+    sql: select 1 as key_no ;;
+  }
+
+  dimension: key_no {
+    primary_key: yes
+    type: number
+    sql: ${TABLE}.key_no ;;
+    hidden: yes
+  }
+
+  #--------------------------------------------------------------------------------
+  #-- property to LY: occ, adr, revpar, etc
+  #--------------------------------------------------------------------------------
+  measure: property_occupancy_rate_pct_toly {
+    label: "Rms Occ %  Pr Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_occupancy_rate_pct}, ${str_property_v_ly_seg.property_occupancy_rate_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_adr_amt_toly {
+    label: "ADR  Pr Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_adr_amt}, ${str_property_v_ly_seg.property_adr_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_revpar_amt_toly {
+    label: "RevPAR  Pr Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_revpar_amt}, ${str_property_v_ly_seg.property_revpar_amt} );;
+    value_format_name: percent_1
+  }
+
+  #--------------------------------------------------------------------------------
+  #-- property indexes to compset to LY
+  #--------------------------------------------------------------------------------
+  measure: property_occ_index_pct_toly {
+    label: "Rms Occ % Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_occ_index_pct}, ${str_property_v_ly_seg.property_occ_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_adr_index_pct_toly {
+    label: "ADR Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_adr_index_pct}, ${str_property_v_ly_seg.property_adr_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_revpar_index_pct_toly {
+    label: "RevPAR Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_revpar_index_pct}, ${str_property_v_ly_seg.property_revpar_index_pct} );;
+    value_format_name: percent_1
+  }
+
+  #--------------------------------------------------------------------------------
+  #-- compset to LY: occ, adr, revpar, etc
+  #--------------------------------------------------------------------------------
+  measure: compset_occupancy_rate_pct_toly {
+    label: "Rms Occ % Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${str_property_v_ty_seg.compset_occupancy_rate_pct}, ${str_property_v_ly_seg.compset_occupancy_rate_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: compset_adr_amt_toly {
+    label: "ADR Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${str_property_v_ty_seg.compset_adr_amt}, ${str_property_v_ly_seg.compset_adr_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: compset_revpar_amt_toly {
+    label: "RevPAR Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${str_property_v_ty_seg.compset_revpar_amt}, ${str_property_v_ly_seg.compset_revpar_amt} );;
+    value_format_name: percent_1
+  }
+
+}
