@@ -197,5 +197,13 @@ view: inntopia_res_property_f {
     sql: ${TABLE}.level ;;
   }
 
+  dimension: agency_location{
+    view_label: "Room"
+    label: "Agency Location"
+    description: "Agency Location"
+    type: string
+    sql: ${TABLE}.agency_location ;;
+  }
+
 
 }
