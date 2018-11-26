@@ -1,6 +1,5 @@
 connection: "edw"
 include: "*.view"         # include all views in this project
-# include: "*.dashboard"
 
 label: "STR Daily (old)"
 
