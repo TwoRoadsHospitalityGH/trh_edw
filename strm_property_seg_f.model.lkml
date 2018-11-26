@@ -1,6 +1,6 @@
 connection: "edw"
 include: "*.view"         # include all views in this project
-include: "str_monthly*.dashboard"
+#include: "str_monthly*.dashboard"
 
 label: "STR Monthly"
 
