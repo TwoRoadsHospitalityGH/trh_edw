@@ -1,4 +1,4 @@
-view: str_property_v_ty_seg {
+view: str_property_seg_v_ty {
   derived_table: {
     sql: select 1 as key_no ;;
   }
@@ -15,7 +15,7 @@ view: str_property_v_ty_seg {
   #-------------------------------------------------------------------------------------------
 
   dimension: tyly_bt {
-    sql: ${str_property_v_seg.ty_bt} ;;
+    sql: ${str_property_seg_v.ty_bt} ;;
     hidden: yes
   }
 
@@ -39,7 +39,7 @@ view: str_property_v_ty_seg {
     label: " Properties"
     description: "Distinct count of properties."
     type: count_distinct
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.property_key}, to_number( null ) ) ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.property_key}, to_number( null ) ) ;;
     value_format_name: decimal_0
   }
 
@@ -54,8 +54,8 @@ view: str_property_v_ty_seg {
     label: "Rms Avail  Pr"
     description: "Rooms Available Property"
     type: sum_distinct
-    sql_distinct_key: ${str_property_v_seg.period_key} ;;
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.property_room_avail_cnt}, 0 ) ;;
+    sql_distinct_key: ${str_property_seg_v.period_key} ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.property_room_avail_cnt}, 0 ) ;;
     value_format_name: decimal_0
   }
 
@@ -63,7 +63,7 @@ view: str_property_v_ty_seg {
     label: "Rms Occ  Pr"
     description: "Rooms Occupied Property"
     type: sum
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.property_room_sold_cnt}, to_number( null ) ) ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.property_room_sold_cnt}, to_number( null ) ) ;;
     value_format_name: decimal_0
   }
 
@@ -78,7 +78,7 @@ view: str_property_v_ty_seg {
     label: "Rev Rms $  Pr"
     description: "Revenue Rooms $ Property"
     type: sum
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.property_room_rev_amt}, to_number( null ) ) ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.property_room_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -86,7 +86,7 @@ view: str_property_v_ty_seg {
     label: "Rev RB&E $  Pr"
     description: "Revenue RB&E $ Property"
     type: sum
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.property_rbe_rev_amt}, to_number( null ) ) ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.property_rbe_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -94,7 +94,7 @@ view: str_property_v_ty_seg {
     label: "Rev Other $  Pr"
     description: "Revenue Other $ Property"
     type: sum
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.property_room_other_rev_amt}, to_number( null ) ) ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.property_room_other_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -102,7 +102,7 @@ view: str_property_v_ty_seg {
     label: "Rev $  Pr"
     description: "Revenue $ Property"
     type: sum
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.property_rev_amt}, to_number( null ) ) ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.property_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -221,8 +221,8 @@ view: str_property_v_ty_seg {
     label: "Rms Avail Cs"
     description: "Rooms Available Compset"
     type: sum_distinct
-    sql_distinct_key: ${str_property_v_seg.period_key} ;;
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.compset_room_avail_cnt}, 0 ) ;;
+    sql_distinct_key: ${str_property_seg_v.period_key} ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.compset_room_avail_cnt}, 0 ) ;;
     value_format_name: decimal_0
   }
 
@@ -230,7 +230,7 @@ view: str_property_v_ty_seg {
     label: "Rms Occ Cs"
     description: "Rooms Occupied Compset"
     type: sum
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.compset_room_sold_cnt}, to_number( null ) ) ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.compset_room_sold_cnt}, to_number( null ) ) ;;
     value_format_name: decimal_0
   }
 
@@ -238,7 +238,7 @@ view: str_property_v_ty_seg {
     label: "Rev Rms $ Cs"
     description: "Revenue Rooms $ Compset"
     type: sum
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.compset_room_rev_amt}, to_number( null ) ) ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.compset_room_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -246,7 +246,7 @@ view: str_property_v_ty_seg {
     label: "Rev RB&E $ Cs"
     description: "Revenue RB&E $ Compset"
     type: sum
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.compset_rbe_rev_amt}, to_number( null ) ) ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.compset_rbe_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -254,7 +254,7 @@ view: str_property_v_ty_seg {
     label: "Rev Other $ Cs"
     description: "Revenue Other $ Compset"
     type: sum
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.compset_room_other_rev_amt}, to_number( null ) ) ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.compset_room_other_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -262,7 +262,7 @@ view: str_property_v_ty_seg {
     label: "Rev $ Cs"
     description: "Revenue $ Compset"
     type: sum
-    sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.compset_rev_amt}, to_number( null ) ) ;;
+    sql: iff( ${tyly_bt} = 1, ${str_property_seg_v.compset_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 

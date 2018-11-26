@@ -1,4 +1,4 @@
-view: str_property_v_toly_seg {
+view: str_property_seg_v_toly {
   derived_table: {
     sql: select 1 as key_no ;;
   }
@@ -17,7 +17,7 @@ view: str_property_v_toly_seg {
     label: "Rev Rms $  Pr Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${str_property_v_ty_seg.property_room_rev_amt} - ${str_property_v_ly_seg.property_room_rev_amt} ;;
+    sql: ${str_property_seg_v_ty.property_room_rev_amt} - ${str_property_seg_v_ly.property_room_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -25,7 +25,7 @@ view: str_property_v_toly_seg {
     label: "Rev Rms $  Pr Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_room_rev_amt}, ${str_property_v_ly_seg.property_room_rev_amt} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_room_rev_amt}, ${str_property_seg_v_ly.property_room_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -33,7 +33,7 @@ view: str_property_v_toly_seg {
     label: "Rev RB&E $  Pr Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${str_property_v_ty_seg.property_rbe_rev_amt} - ${str_property_v_ly_seg.property_rbe_rev_amt} ;;
+    sql: ${str_property_seg_v_ty.property_rbe_rev_amt} - ${str_property_seg_v_ly.property_rbe_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -41,7 +41,7 @@ view: str_property_v_toly_seg {
     label: "Rev RB&E $  Pr Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_rbe_rev_amt}, ${str_property_v_ly_seg.property_rbe_rev_amt} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_rbe_rev_amt}, ${str_property_seg_v_ly.property_rbe_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -49,7 +49,7 @@ view: str_property_v_toly_seg {
     label: "Rev Other $  Pr Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${str_property_v_ty_seg.property_room_other_rev_amt} - ${str_property_v_ly_seg.property_room_other_rev_amt} ;;
+    sql: ${str_property_seg_v_ty.property_room_other_rev_amt} - ${str_property_seg_v_ly.property_room_other_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -57,7 +57,7 @@ view: str_property_v_toly_seg {
     label: "Rev Other $  Pr Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_room_other_rev_amt}, ${str_property_v_ly_seg.property_room_other_rev_amt} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_room_other_rev_amt}, ${str_property_seg_v_ly.property_room_other_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -65,7 +65,7 @@ view: str_property_v_toly_seg {
     label: "Rev $  Pr Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${str_property_v_ty_seg.property_rev_amt} - ${str_property_v_ly_seg.property_rev_amt} ;;
+    sql: ${str_property_seg_v_ty.property_rev_amt} - ${str_property_seg_v_ly.property_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -73,7 +73,7 @@ view: str_property_v_toly_seg {
     label: "Rev $  Pr Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_rev_amt}, ${str_property_v_ly_seg.property_rev_amt} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_rev_amt}, ${str_property_seg_v_ly.property_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -81,7 +81,7 @@ view: str_property_v_toly_seg {
     label: "Rms Occ  Pr Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${str_property_v_ty_seg.property_room_sold_cnt} - ${str_property_v_ly_seg.property_room_sold_cnt} ;;
+    sql: ${str_property_seg_v_ty.property_room_sold_cnt} - ${str_property_seg_v_ly.property_room_sold_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -89,7 +89,7 @@ view: str_property_v_toly_seg {
     label: "Rms Occ  Pr Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_room_sold_cnt}, ${str_property_v_ly_seg.property_room_sold_cnt} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_room_sold_cnt}, ${str_property_seg_v_ly.property_room_sold_cnt} );;
     value_format_name: percent_1
   }
 
@@ -97,7 +97,7 @@ view: str_property_v_toly_seg {
     label: "Rms Occ %  Pr Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_occupancy_rate_pct}, ${str_property_v_ly_seg.property_occupancy_rate_pct} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_occupancy_rate_pct}, ${str_property_seg_v_ly.property_occupancy_rate_pct} );;
     value_format_name: percent_1
   }
 
@@ -105,7 +105,7 @@ view: str_property_v_toly_seg {
     label: "ADR  Pr Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${str_property_v_ty_seg.property_adr_amt} - ${str_property_v_ly_seg.property_adr_amt} ;;
+    sql: ${str_property_seg_v_ty.property_adr_amt} - ${str_property_seg_v_ly.property_adr_amt} ;;
     value_format_name: usd
   }
 
@@ -113,7 +113,7 @@ view: str_property_v_toly_seg {
     label: "ADR  Pr Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_adr_amt}, ${str_property_v_ly_seg.property_adr_amt} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_adr_amt}, ${str_property_seg_v_ly.property_adr_amt} );;
     value_format_name: percent_1
   }
 
@@ -121,7 +121,7 @@ view: str_property_v_toly_seg {
     label: "RevPAR  Pr Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${str_property_v_ty_seg.property_revpar_amt} - ${str_property_v_ly_seg.property_revpar_amt} ;;
+    sql: ${str_property_seg_v_ty.property_revpar_amt} - ${str_property_seg_v_ly.property_revpar_amt} ;;
     value_format_name: usd
   }
 
@@ -129,7 +129,7 @@ view: str_property_v_toly_seg {
     label: "RevPAR  Pr Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_revpar_amt}, ${str_property_v_ly_seg.property_revpar_amt} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_revpar_amt}, ${str_property_seg_v_ly.property_revpar_amt} );;
     value_format_name: percent_1
   }
 
@@ -137,7 +137,7 @@ view: str_property_v_toly_seg {
     label: "TRevPAR  Pr Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${str_property_v_ty_seg.property_trevpar_amt} - ${str_property_v_ly_seg.property_trevpar_amt} ;;
+    sql: ${str_property_seg_v_ty.property_trevpar_amt} - ${str_property_seg_v_ly.property_trevpar_amt} ;;
     value_format_name: usd
   }
 
@@ -145,7 +145,7 @@ view: str_property_v_toly_seg {
     label: "TRevPAR  Pr Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_trevpar_amt}, ${str_property_v_ly_seg.property_trevpar_amt} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_trevpar_amt}, ${str_property_seg_v_ly.property_trevpar_amt} );;
     value_format_name: percent_1
   }
 
@@ -156,7 +156,7 @@ view: str_property_v_toly_seg {
     label: "Rms Occ % Index:Cs Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_occ_index_pct}, ${str_property_v_ly_seg.property_occ_index_pct} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_occ_index_pct}, ${str_property_seg_v_ly.property_occ_index_pct} );;
     value_format_name: percent_1
   }
 
@@ -164,7 +164,7 @@ view: str_property_v_toly_seg {
     label: "ADR Index:Cs Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_adr_index_pct}, ${str_property_v_ly_seg.property_adr_index_pct} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_adr_index_pct}, ${str_property_seg_v_ly.property_adr_index_pct} );;
     value_format_name: percent_1
   }
 
@@ -172,7 +172,7 @@ view: str_property_v_toly_seg {
     label: "RevPAR Index:Cs Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_revpar_index_pct}, ${str_property_v_ly_seg.property_revpar_index_pct} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_revpar_index_pct}, ${str_property_seg_v_ly.property_revpar_index_pct} );;
     value_format_name: percent_1
   }
 
@@ -180,7 +180,7 @@ view: str_property_v_toly_seg {
     label: "TRevPAR Index:Cs Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.property_trevpar_index_pct}, ${str_property_v_ly_seg.property_trevpar_index_pct} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_trevpar_index_pct}, ${str_property_seg_v_ly.property_trevpar_index_pct} );;
     value_format_name: percent_1
   }
 
@@ -191,7 +191,7 @@ view: str_property_v_toly_seg {
     label: "Rms Occ % Cs Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.compset_occupancy_rate_pct}, ${str_property_v_ly_seg.compset_occupancy_rate_pct} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.compset_occupancy_rate_pct}, ${str_property_seg_v_ly.compset_occupancy_rate_pct} );;
     value_format_name: percent_1
   }
 
@@ -199,7 +199,7 @@ view: str_property_v_toly_seg {
     label: "ADR Cs Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.compset_adr_amt}, ${str_property_v_ly_seg.compset_adr_amt} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.compset_adr_amt}, ${str_property_seg_v_ly.compset_adr_amt} );;
     value_format_name: percent_1
   }
 
@@ -207,7 +207,7 @@ view: str_property_v_toly_seg {
     label: "RevPAR Cs Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${str_property_v_ty_seg.compset_revpar_amt}, ${str_property_v_ly_seg.compset_revpar_amt} );;
+    sql: utl..udf_percent_var( ${str_property_seg_v_ty.compset_revpar_amt}, ${str_property_seg_v_ly.compset_revpar_amt} );;
     value_format_name: percent_1
   }
 

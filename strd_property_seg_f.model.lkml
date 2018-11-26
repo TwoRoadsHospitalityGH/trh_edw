@@ -1,19 +1,19 @@
 connection: "edw"
 include: "*.view"         # include all views in this project
-#include: "*.dashboard"
+include: "str_daily*.dashboard"
 
-label: "STR Monthly"
+label: "STR Daily"
 
 datagroup: model_caching_dg {
-  sql_trigger: select max( dw_update_dt ) from pedw.dev.strm_property_seg_f ;;
+  sql_trigger: select max( dw_update_dt ) from pedw.dev.strd_property_seg_f ;;
   max_cache_age: "8 hours"
 }
 
-explore: str_property_v_seg {
-  from: str_property_v_seg
-  sql_table_name: pedw.fact.strm_property_seg_f ;;
+explore: str_property_seg_v {
+  from: str_property_seg_v
+  sql_table_name: pedw.fact.strd_property_seg_f ;;
   group_label: "Property"
-  label: "STR Monthly"
+  label: "STR Daily"
   persist_with: model_caching_dg
   case_sensitive: no
 
@@ -24,27 +24,27 @@ explore: str_property_v_seg {
 
   join: user_property_fdm {
     from:  user_property_fdm
-    sql_on: ${user_property_fdm.property_key} = ${str_property_v_seg.property_key} ;;
+    sql_on: ${user_property_fdm.property_key} = ${str_property_seg_v.property_key} ;;
     type: inner
     relationship: many_to_one
   }
 
-  join: str_property_v_ty_seg {
-    from: str_property_v_ty_seg
+  join: str_property_seg_v_ty {
+    from: str_property_seg_v_ty
     view_label: "    TY"
     type: cross
     relationship: one_to_one
   }
 
-  join: str_property_v_ly_seg {
-    from: str_property_v_ly_seg
+  join: str_property_seg_v_ly {
+    from: str_property_seg_v_ly
     view_label: "   LY"
     type: cross
     relationship: one_to_one
   }
 
-  join: str_property_v_toly_seg {
-    from: str_property_v_toly_seg
+  join: str_property_seg_v_toly {
+    from: str_property_seg_v_toly
     view_label: "    TY"
     type: cross
     relationship: one_to_one
@@ -53,7 +53,7 @@ explore: str_property_v_seg {
   join: date_dm {
     from: date_dm
     view_label: "  Date"
-    sql_on: ${date_dm.date_sid} = ${str_property_v_seg.date_sid};;
+    sql_on: ${date_dm.date_sid} = ${str_property_seg_v.date_sid};;
     type: inner
     relationship: many_to_one
   }
@@ -61,7 +61,7 @@ explore: str_property_v_seg {
   join: property_dm {
     from: property_dm
     view_label: " Property"
-    sql_on: ${property_dm.property_key} = ${str_property_v_seg.property_key} ;;
+    sql_on: ${property_dm.property_key} = ${str_property_seg_v.property_key} ;;
     type: inner
     relationship: many_to_one
   }

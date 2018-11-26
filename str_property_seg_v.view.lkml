@@ -1,4 +1,4 @@
-view: str_property_v_seg {
+view: str_property_seg_v {
   sql_table_name: pedw.fact.strm_property_seg_f ;;
 
   #-------------------------------------------------------------------------------------------
