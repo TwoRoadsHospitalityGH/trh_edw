@@ -5,13 +5,13 @@ include: "*.view"         # include all views in this project
 label: "STR Daily"
 
 datagroup: model_caching_dg {
-  sql_trigger: select max( dw_update_dt ) from pedw.dev.strd_property_f_seg ;;
+  sql_trigger: select max( dw_update_dt ) from pedw.dev.strd_property_seg_f ;;
   max_cache_age: "8 hours"
 }
 
 explore: str_property_v_seg {
   from: str_property_v_seg
-  sql_table_name: pedw.fact.strd_property_f_seg ;;
+  sql_table_name: pedw.fact.strd_property_seg_f ;;
   group_label: "Property"
   label: "STR Daily"
   persist_with: model_caching_dg

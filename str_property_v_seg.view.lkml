@@ -1,5 +1,5 @@
 view: str_property_v_seg {
-  sql_table_name: pedw.fact.strm_property_f_seg ;;
+  sql_table_name: pedw.fact.strm_property_seg_f ;;
 
   #-------------------------------------------------------------------------------------------
   #-- Keys
