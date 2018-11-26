@@ -43,12 +43,22 @@ view: str_property_v_seg {
     hidden: yes
   }
 
+  dimension: segment_sort_no {
+    view_label: "Segment"
+    label: "Segment Sort No"
+    description: "Segment Sort Number"
+    type: string
+    sql: ${TABLE}.segment_sort_no ;;
+    hidden: yes
+  }
+
   dimension: segment_name {
     view_label: "Segment"
     label: "Segment Name"
     description: "Segment Name"
     type: string
     sql: ${TABLE}.segment_name ;;
+    order_by_field: segment_sort_no
   }
 
   #-------------------------------------------------------------------------------------------

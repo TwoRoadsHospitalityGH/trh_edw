@@ -1,5 +1,6 @@
 connection: "edw"
-include: "*.view"         # include all views in this project
+include: "*dm.view"         # include all views in this project
+include: "*seg.view"
 
 label: "STR Monthly SEG"
 

@@ -43,6 +43,13 @@ view: str_property_v_ty_seg {
     value_format_name: decimal_0
   }
 
+  measure: property_room_avail_sp {
+    label: "Rms Avail  :"
+    description: "Blank space separator."
+    type: string
+    sql: ' ' ;;
+  }
+
   measure: property_room_avail_cnt {
     label: "Rms Avail  Pr"
     description: "Rooms Available Property"
@@ -58,6 +65,13 @@ view: str_property_v_ty_seg {
     type: sum
     sql: iff( ${tyly_bt} = 1, ${str_property_v_seg.property_room_sold_cnt}, to_number( null ) ) ;;
     value_format_name: decimal_0
+  }
+
+  measure: property_rev_sp {
+    label: "Rev  :"
+    description: "Blank space separator."
+    type: string
+    sql: ' ' ;;
   }
 
   measure: property_room_rev_amt {
@@ -95,6 +109,13 @@ view: str_property_v_ty_seg {
   #--------------------------------------------------------------------------------
   #-- property calcs: occ, adr, revpar, etc
   #--------------------------------------------------------------------------------
+  measure: property_occupancy_sp {
+    label: "Rms Occ  :"
+    description: "Blank space separator."
+    type: string
+    sql: ' ' ;;
+  }
+
   measure: property_occupancy_rate_pct {
     label: "Rms Occ %  Pr"
     description: "Rooms Occupancy Rate % Property
@@ -102,6 +123,13 @@ view: str_property_v_ty_seg {
     type: number
     sql: utl..udf_divide( ${property_room_sold_cnt}, ${property_room_avail_cnt} );;
     value_format_name: percent_1
+  }
+
+  measure: property_adr_sp {
+    label: "ADR  :"
+    description: "Blank space separator."
+    type: string
+    sql: ' ' ;;
   }
 
   measure: property_adr_amt {
@@ -113,12 +141,35 @@ view: str_property_v_ty_seg {
     value_format_name: usd
   }
 
+  measure: property_revpar_sp {
+    label: "RevPAR  :"
+    description: "Blank space separator."
+    type: string
+    sql: ' ' ;;
+  }
+
   measure: property_revpar_amt {
     label: "RevPAR  Pr"
     description: "Revenue Per Available Room Property
     Rev Rms / Rms Avail"
     type: number
     sql: utl..udf_divide( ${property_room_rev_amt}, ${property_room_avail_cnt} );;
+    value_format_name: usd
+  }
+
+  measure: property_trevpar_sp {
+    label: "TRevPAR  :"
+    description: "Blank space separator."
+    type: string
+    sql: ' ' ;;
+  }
+
+  measure: property_trevpar_amt {
+    label: "TRevPAR  Pr"
+    description: "Total Revenue Per Available Room Property
+    Rev / Rms Avail"
+    type: number
+    sql: utl..udf_divide( ${property_rev_amt}, ${property_room_avail_cnt} );;
     value_format_name: usd
   }
 
@@ -151,6 +202,15 @@ view: str_property_v_ty_seg {
     Pr RevPAR / Cs RevPAR"
     type: number
     sql: utl..udf_divide( ${property_revpar_amt}, ${compset_revpar_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_trevpar_index_pct {
+    label: "TRevPAR Index:Cs"
+    description: "TRevPAR Index to Compset
+    Pr TRevPAR / Cs TRevPAR"
+    type: number
+    sql: utl..udf_divide( ${property_trevpar_amt}, ${compset_trevpar_amt} );;
     value_format_name: percent_1
   }
 
@@ -233,6 +293,15 @@ view: str_property_v_ty_seg {
     Rev Rms / Rms Avail"
     type: number
     sql: utl..udf_divide( ${compset_room_rev_amt}, ${compset_room_avail_cnt} );;
+    value_format_name: usd
+  }
+
+  measure: compset_trevpar_amt {
+    label: "TRevPAR Cs"
+    description: "Total Revenue Per Available Room Compset
+    Rev / Rms Avail"
+    type: number
+    sql: utl..udf_divide( ${compset_rev_amt}, ${compset_room_avail_cnt} );;
     value_format_name: usd
   }
 
