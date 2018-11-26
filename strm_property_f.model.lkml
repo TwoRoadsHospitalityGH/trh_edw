@@ -1,7 +1,7 @@
 connection: "edw"
 include: "*.view"         # include all views in this project
 
-label: "STR Monthly"
+label: "STR Monthly (old)"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.dev.strm_property_f ;;
@@ -11,8 +11,8 @@ datagroup: model_caching_dg {
 explore: str_property_v {
   from: str_property_v
   sql_table_name: pedw.fact.strm_property_f ;;
-  group_label: "Property"
-  label: "STR Monthly"
+  group_label: "***Development***"
+  label: "STR Monthly (old)"
   persist_with: model_caching_dg
   view_label: "    Measures"
 

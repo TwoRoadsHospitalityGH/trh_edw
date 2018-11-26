@@ -2,7 +2,7 @@ connection: "edw"
 include: "*dm.view"         # include all views in this project
 include: "*seg.view"
 
-label: "STR Monthly SEG"
+label: "STR Monthly (new)"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.dev.strm_property_f_seg ;;
@@ -12,8 +12,8 @@ datagroup: model_caching_dg {
 explore: str_property_v_seg {
   from: str_property_v_seg
   sql_table_name: pedw.fact.strm_property_f_seg ;;
-  group_label: "***Development***"
-  label: "STR Monthly SEG"
+  group_label: "Property"
+  label: "STR Monthly (new)"
   persist_with: model_caching_dg
   case_sensitive: no
 

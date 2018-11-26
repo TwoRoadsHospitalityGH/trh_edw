@@ -2,7 +2,7 @@ connection: "edw"
 include: "*.view"         # include all views in this project
 # include: "*.dashboard"
 
-label: "STR Daily"
+label: "STR Daily (old)"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.dev.strd_property_f ;;
@@ -12,8 +12,8 @@ datagroup: model_caching_dg {
 explore: str_property_v {
   from: str_property_v
   sql_table_name: pedw.fact.strd_property_f ;;
-  group_label: "Property"
-  label: "STR Daily"
+  group_label: "***Development***"
+  label: "STR Daily (old)"
   persist_with: model_caching_dg
   view_label: "    Measures"
 

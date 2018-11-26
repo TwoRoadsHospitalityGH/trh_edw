@@ -1,7 +1,7 @@
 connection: "edw"
 include: "*.view"         # include all views in this project
 
-label: "STR Daily SEG"
+label: "STR Daily (new)"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.dev.strd_property_f_seg ;;
@@ -11,8 +11,8 @@ datagroup: model_caching_dg {
 explore: str_property_v_seg {
   from: str_property_v_seg
   sql_table_name: pedw.fact.strd_property_f_seg ;;
-  group_label: "***Development***"
-  label: "STR Daily SEG"
+  group_label: "Property"
+  label: "STR Daily (new)"
   persist_with: model_caching_dg
   case_sensitive: no
 
