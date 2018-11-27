@@ -22,15 +22,10 @@ view: inntopia_event_property_f_msr_ty {
   #----------------------------------------------------------------------
   #---measures---
   #----------------------------------------------------------------------
-  measure:  Countall{
-    label: "Count(*)"
-    description: "count all"
-    type: count
-    hidden: yes
-  }
+
   measure:  event_cnt {
-    label: "Event Count"
-    description: "Count of distinct events."
+    label: "Events"
+    description: "Count of distinct events"
     type: count_distinct
     sql:iff( ${tyly_bt} = 1,  ${inntopia_event_property_f.EVENTID}, to_number( null ) ) ;;
   }
@@ -49,7 +44,8 @@ view: inntopia_event_property_f_msr_ty {
   }
 
   measure: customer_cnt  {
-    hidden: yes
+    label: "Customers"
+    description: "Count of distinct customers"
     type: count_distinct
     sql:iff( ${tyly_bt} = 1,  ${inntopia_event_property_f.CUSTOMERKEY}, to_number( null ) ) ;;
   }
