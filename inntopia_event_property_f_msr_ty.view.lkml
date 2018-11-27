@@ -44,7 +44,8 @@ view: inntopia_event_property_f_msr_ty {
   }
 
   measure: customer_cnt  {
-    hidden: yes
+    label: "Customers"
+    description: "Count of distinct customers"
     type: count_distinct
     sql:iff( ${tyly_bt} = 1,  ${inntopia_event_property_f.CUSTOMERKEY}, to_number( null ) ) ;;
   }

@@ -30,7 +30,7 @@ view: inntopia_event_property_f_msr_toly {
   }
 
   measure: revenue_pct_toly {
-    label: " Revenues TY:LY - var %"
+    label: " Rev/TRev TY:LY - var %"
     description: "(TY - LY) / LY"
     type: number
     sql: utl..udf_percent_var(  ${inntopia_event_property_f_msr_ty.rev_amt}, ${inntopia_event_property_f_msr_ly.rev_amt} );;
@@ -38,7 +38,7 @@ view: inntopia_event_property_f_msr_toly {
   }
 
   measure: room_pct_toly {
-    label: " Rooms TY:LY - var %"
+    label: " Rm Bkd TY:LY - var %"
     description: "(TY - LY) / LY"
     type: number
     sql: utl..udf_percent_var(  ${inntopia_event_property_f_msr_ty.room_amt}, ${inntopia_event_property_f_msr_ly.room_amt} );;
