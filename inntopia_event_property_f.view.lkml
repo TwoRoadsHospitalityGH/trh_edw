@@ -1,5 +1,18 @@
 view: inntopia_event_property_f {
   sql_table_name: pedw.dev.inntopia_event_property_f ;;
+
+  dimension:  property_key {
+    sql: ${TABLE}.property_key ;;
+    hidden:  yes
+  }
+  dimension:  ty_bt {
+    sql: ${TABLE}.ty_bt ;;
+    hidden:  yes
+  }
+  dimension:  ly_bt {
+    sql: ${TABLE}.ly_bt ;;
+    hidden:  yes
+  }
   dimension:  EVENTID {
     sql: ${TABLE}.EVENTID ;;
     hidden:  yes
@@ -74,49 +87,32 @@ view: inntopia_event_property_f {
   #----------------------------------------------------------------------
   #---measures---
   #----------------------------------------------------------------------
-  measure:  Countall{
-    label: "Count(*)"
-    description: "count all"
-    type: count
-    hidden: yes
-  }
-  measure:  event_count {
-    label: "Event Count"
-    description: "Count of distinct events."
-    type: count_distinct
+
+  dimension:  event_count {
     sql: ${EVENTID} ;;
+    hidden:  yes
   }
-  measure:  EVENTAMOUNT {
-    label: "Rev/TRev"
-    description: "Total Portolio Revenue"
-    type: sum
+  dimension:  EVENTAMOUNT {
     value_format_name: usd_0
     sql: ${TABLE}.EVENTAMOUNT ;;
+    hidden:  yes
   }
-  measure:  QUANTITY {
-    label: "Rm Bkd"
-    description: "Room Nights Actual & OTB"
-    type: sum
+  dimension:  QUANTITY {
     sql: ${TABLE}.QUANTITY ;;
-  }
-
-  measure: customer_cnt  {
     hidden: yes
-    type: count_distinct
+  }
+  dimension: customer_cnt  {
+    hidden: yes
     sql: ${TABLE}.CUSTOMERKEY ;;
   }
-
-  measure:  customer_spend{
-    label: "Rev/Customer"
-    description: "Total Revenue Spent/Customer"
+  dimension:  customer_spend{
     value_format_name: usd_0
     sql: ${EVENTAMOUNT}/${customer_cnt} ;;
+    hidden: yes
   }
-
-  measure:  customer_room_night{
-    label: "Rm Bkd/Customer"
-    description: "Room Booked/Customer"
+  dimension:  customer_room_night{
     value_format_name: decimal_1
     sql: ${QUANTITY}/${customer_cnt} ;;
+    hidden:  yes
   }
 }
