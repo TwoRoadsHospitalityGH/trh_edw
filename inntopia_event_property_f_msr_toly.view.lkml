@@ -14,7 +14,7 @@ view: inntopia_event_property_f_msr_toly {
   #-- actual to LY
   #--------------------------------------------------------------------------------
   measure: event_cnt_pct_toly {
-    label: "Event TY:LY - var %"
+    label: "Events TY:LY - var %"
     description: "(TY - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${inntopia_event_property_f_msr_ty.event_cnt}, ${inntopia_event_property_f_msr_ly.event_cnt} );;
@@ -22,7 +22,7 @@ view: inntopia_event_property_f_msr_toly {
   }
 
   measure: customer_cnt_pct_toly {
-    label: "Customer TY:LY - var %"
+    label: "Customers TY:LY - var %"
     description: "(TY - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${inntopia_event_property_f_msr_ty.customer_cnt}, ${inntopia_event_property_f_msr_ly.customer_cnt} );;
@@ -30,7 +30,7 @@ view: inntopia_event_property_f_msr_toly {
   }
 
   measure: revenue_pct_toly {
-    label: " Revenue TY:LY - var %"
+    label: " Revenues TY:LY - var %"
     description: "(TY - LY) / LY"
     type: number
     sql: utl..udf_percent_var(  ${inntopia_event_property_f_msr_ty.rev_amt}, ${inntopia_event_property_f_msr_ly.rev_amt} );;
