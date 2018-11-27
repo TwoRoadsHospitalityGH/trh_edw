@@ -9,22 +9,22 @@ view: mm_property_kpi_f {
     hidden: yes
   }
 
-  measure: max_month_name {
-    type: max
-    sql:  ${date_dm.month_name} ;;
-    hidden: yes
-  }
+   measure: max_month_name {
+     type: max
+     sql:  ${date_dm.month_name} ;;
+     hidden: yes
+   }
 
-  measure: max_year {
-    type: max
-    sql:  ${date_dm.year} ;;
+   measure: max_year {
+     type: max
+     sql:  ${date_dm.year} ;;
     hidden: yes
-  }
+   }
 
-  measure: month_name_year {
-    sql: concat(concat(concat(concat(${max_month_name}, ', '),  ${max_year}), ' - '), ${listagg}) ;;
-    hidden: yes
-  }
+   measure: month_name_year {
+     sql: concat(concat(concat(concat(${max_month_name}, ', '),  ${max_year}), ' - '), ${listagg}) ;;
+     hidden: yes
+   }
 
 # keys
 

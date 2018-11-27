@@ -52,6 +52,8 @@ explore: inntopia_campaign_property_f {
     from: date_dm
     view_label: " First Opened Date"
     sql_on: ${first_open_date_dm.date_sid} = ${inntopia_campaign_property_f.FIRSTOPENEDDATE_SID}  ;;
+    sql_where: {% parameter first_open_date_dm.available_timeperiod %} = ''
+    or utl..udf_period_trunc_dt( {% parameter first_open_date_dm.available_timeperiod %}, ${first_open_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter first_open_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
@@ -59,6 +61,8 @@ explore: inntopia_campaign_property_f {
     from: date_dm
     view_label: " First Clicked Date"
     sql_on: ${first_click_date_dm.date_sid} = ${inntopia_campaign_property_f.FIRSTCLICKEDDATE_SID} ;;
+    sql_where: {% parameter first_click_date_dm.available_timeperiod %} = ''
+    or utl..udf_period_trunc_dt( {% parameter first_click_date_dm.available_timeperiod %}, ${first_click_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter first_click_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
@@ -66,6 +70,8 @@ explore: inntopia_campaign_property_f {
     from: date_dm
     view_label: " Last Event Date"
     sql_on: ${last_event_date_dm.date_sid} = ${inntopia_campaign_property_f.LASTEVENTDATE_SID} ;;
+    sql_where: {% parameter last_event_date_dm.available_timeperiod %} = ''
+    or utl..udf_period_trunc_dt( {% parameter last_event_date_dm.available_timeperiod %}, ${last_event_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter last_event_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
@@ -73,6 +79,8 @@ explore: inntopia_campaign_property_f {
     from: date_dm
     view_label: " Mailing Sent Date"
     sql_on: ${mailing_sent_date_dm.date_sid} = ${inntopia_campaign_property_f.MAILINGSENTDATE_SID} ;;
+    sql_where: {% parameter mailing_sent_date_dm.available_timeperiod %} = ''
+    or utl..udf_period_trunc_dt( {% parameter mailing_sent_date_dm.available_timeperiod %}, ${mailing_sent_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter mailing_sent_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }

@@ -26,6 +26,8 @@ explore: inntopia_dimevent {
     from: date_dm
     view_label: " Event Date"
     sql_on: ${date_dm.date_sid} = ${inntopia_dimevent.EVENTDATE_SID}  ;;
+    sql_where: {% parameter date_dm.available_timeperiod %} = ''
+      or utl..udf_period_trunc_dt( {% parameter date_dm.available_timeperiod %}, ${date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
@@ -34,6 +36,8 @@ explore: inntopia_dimevent {
     from: date_dm
     view_label: " Purchase Date"
     sql_on: ${purchase_date_dm.date_sid} = ${inntopia_dimevent.PURCHASEDATE_SID}  ;;
+    sql_where: {% parameter date_dm.available_timeperiod %} = ''
+    or utl..udf_period_trunc_dt( {% parameter date_dm.available_timeperiod %}, ${date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }

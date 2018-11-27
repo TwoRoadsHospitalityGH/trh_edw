@@ -1,5 +1,32 @@
 view: date_dm {
-  sql_table_name: pedw.fact.DATE_DM ;;
+
+ sql_table_name: pedw.fact.date_dm ;;
+
+  parameter: available_timeperiod {
+    label: "Available Timeframe"
+    type: string
+    allowed_value: {label: "Prior Month" value: "prior_month"}
+    allowed_value: {label: "Prior Month Last Year" value: "ly_prior_month"}
+    allowed_value: {label: "Prior Year" value: "prior_year"}
+    allowed_value: {label: "Prior Quarter" value: "prior_quarter"}
+    allowed_value: {label: "Current Month" value: "current_month"}
+    allowed_value: {label: "Current Month Last Year" value: "ly_current_month"}
+    allowed_value: {label: "Current Year" value: "current_year"}
+    allowed_value: {label: "Current Quarter" value: "current_quarter"}
+    allowed_value: {label: "January" value: "jan"}
+    allowed_value: {label: "Febraury" value: "feb"}
+    allowed_value: {label: "March" value: "mar"}
+    allowed_value: {label: "April" value: "apr"}
+    allowed_value: {label: "May" value: "may"}
+    allowed_value: {label: "June" value: "jun"}
+    allowed_value: {label: "July" value: "jul"}
+    allowed_value: {label: "August" value: "aug"}
+    allowed_value: {label: "September" value: "sep"}
+    allowed_value: {label: "October" value: "oct"}
+    allowed_value: {label: "November" value: "nov"}
+    allowed_value: {label: "December" value: "dec"}
+    }
+
 
   dimension: date_sid {
     sql:  ${TABLE}.DATE_SID ;;
@@ -100,14 +127,14 @@ view: date_dm {
     sql: ${cal_dt} ;;
     allow_fill: no
     drill_fields: [quarter, month, week, date, day_of_week]
-    }
+  }
 
   dimension: month_and_year {
     type: string
     label: "Month and Year"
     description: "Month and Year"
     sql: concat(concat(${month_name}, ', '), ${year}) ;;
-    }
+  }
 
   #
   # restrict to up through prior month

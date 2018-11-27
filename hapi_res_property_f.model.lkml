@@ -52,6 +52,8 @@ explore: hapi_res_property_f_v {
     from: date_dm
     view_label: "  Booked Date"
     sql_on: ${booked_date_dm.date_sid} = ${hapi_res_property_f_v.booked_date_sid};;
+    sql_where: {% parameter booked_date_dm.available_timeperiod %} = ''
+      or utl..udf_period_trunc_dt( {% parameter booked_date_dm.available_timeperiod %}, ${booked_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter booked_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
@@ -60,6 +62,8 @@ explore: hapi_res_property_f_v {
     from: date_dm
     view_label: "  Stay Date"
     sql_on: ${stay_date_dm.date_sid} = ${hapi_res_property_f_v.stay_date_sid};;
+    sql_where: {% parameter booked_date_dm.available_timeperiod %} = ''
+      or utl..udf_period_trunc_dt( {% parameter booked_date_dm.available_timeperiod %}, ${stay_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter booked_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }

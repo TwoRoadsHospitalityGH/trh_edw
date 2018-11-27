@@ -26,6 +26,8 @@ explore: inntopia_dimlodging {
     from: date_dm
     view_label: " Booking Date"
     sql_on: ${book_date_dm.date_sid} = ${inntopia_dimlodging.BOOKINGDATE_SID}  ;;
+    sql_where: {% parameter book_date_dm.available_timeperiod %} = ''
+      or utl..udf_period_trunc_dt( {% parameter book_date_dm.available_timeperiod %}, ${book_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter book_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
@@ -33,6 +35,8 @@ explore: inntopia_dimlodging {
     from: date_dm
     view_label: " Cancellation Date"
     sql_on: ${cancel_date_dm.date_sid} = ${inntopia_dimlodging.CANCELLATIONDATE_SID}  ;;
+    sql_where: {% parameter cancel_date_dm.available_timeperiod %} = ''
+      or utl..udf_period_trunc_dt( {% parameter cancel_date_dm.available_timeperiod %}, ${cancel_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter cancel_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
@@ -40,6 +44,8 @@ explore: inntopia_dimlodging {
     from: date_dm
     view_label: " Arrival Date"
     sql_on: ${arrival_date_dm.date_sid} = ${inntopia_dimlodging.ARRIVALDATE_SID}  ;;
+    sql_where: {% parameter arrival_date_dm.available_timeperiod %} = ''
+      or utl..udf_period_trunc_dt( {% parameter arrival_date_dm.available_timeperiod %}, ${arrival_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter arrival_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }

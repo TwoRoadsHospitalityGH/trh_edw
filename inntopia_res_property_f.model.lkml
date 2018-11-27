@@ -52,6 +52,8 @@ explore: inntopia_res_property_f {
     from: date_dm
     view_label: "  Stay Date"
     sql_on: ${stay_date_dm.date_sid} = ${inntopia_res_property_f.stay_date_sid};;
+    sql_where: {% parameter stay_date_dm.available_timeperiod %} = ''
+      or utl..udf_period_trunc_dt( {% parameter stay_date_dm.available_timeperiod %}, ${stay_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter stay_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
@@ -60,6 +62,8 @@ explore: inntopia_res_property_f {
     from: date_dm
     view_label: "  Booking Date"
     sql_on: ${booking_date_dm.date_sid} = ${inntopia_res_property_f.booking_date_sid};;
+    sql_where: {% parameter booking_date_dm.available_timeperiod %} = ''
+      or utl..udf_period_trunc_dt( {% parameter booking_date_dm.available_timeperiod %}, ${booking_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter booking_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
