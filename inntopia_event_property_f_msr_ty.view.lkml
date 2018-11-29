@@ -51,14 +51,14 @@ view: inntopia_event_property_f_msr_ty {
   }
 
   measure:  customer_spend{
-    label: "Rev/Customer"
+    label: "Rev/Customer "
     description: "Total Revenue Spent/Customer"
     value_format_name: usd_0
     sql: ${rev_amt}/${customer_cnt} ;;
   }
 
   measure:  customer_room_night{
-    label: "Rm Bkd/Customer"
+    label: "Rm Bkd/Customer "
     description: "Room Booked/Customer"
     value_format_name: decimal_1
     sql: ${room_amt}/${customer_cnt} ;;

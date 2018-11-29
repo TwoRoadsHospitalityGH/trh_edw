@@ -76,7 +76,7 @@ view: inntopia_event_property_f_msr_toly {
   }
 
   measure: customer_spend_pct_toly {
-    label: " Customer/Rev TY:LY - var %"
+    label: "Rev/Customer TY:LY - var %"
     description: "(TY - LY) / LY"
     type: number
     sql: utl..udf_percent_var(  ${inntopia_event_property_f_msr_ty.customer_spend}, ${inntopia_event_property_f_msr_ly.customer_spend} );;
@@ -84,10 +84,26 @@ view: inntopia_event_property_f_msr_toly {
   }
 
   measure: customer_spend_toly {
-    label: " Customer/Rev TY:LY - var"
+    label: "Rev/Customer TY:LY - var"
     description: "TY - LY"
     type: number
     sql:  ${inntopia_event_property_f_msr_ty.customer_spend} - ${inntopia_event_property_f_msr_ly.customer_spend} ;;
+    value_format_name: percent_1
+  }
+
+  measure: customer_room_night_pct_toly {
+    label: "Rm Bkd/Customer TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var(  ${inntopia_event_property_f_msr_ty.customer_room_night}, ${inntopia_event_property_f_msr_ly.customer_room_night} );;
+    value_format_name: percent_1
+  }
+
+  measure: customer_room_night_toly {
+    label: "Rm Bkd/Customer TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql:  ${inntopia_event_property_f_msr_ty.customer_room_night} - ${inntopia_event_property_f_msr_ly.customer_room_night} ;;
     value_format_name: percent_1
   }
 
