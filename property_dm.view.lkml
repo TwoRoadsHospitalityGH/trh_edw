@@ -45,6 +45,13 @@ view: property_dm {
     hidden: yes
   }
 
+  dimension: management_company_name {
+    label: "Management Company"
+    description: "Name of company managing the property."
+    type: string
+    sql: ${TABLE}.management_company_name ;;
+  }
+
   dimension: brand_cd {
     label: "Brand Abbreviation"
     description: "Abbreviation of brand name."
