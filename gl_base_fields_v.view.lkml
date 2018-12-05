@@ -24,6 +24,11 @@ view: gl_base_fields_v {
   #-- dimensions
   #-------------------------------------------------------------------------------------------
 
+  dimension: measure_bt {
+    sql: select 1 ;;
+    hidden: yes
+  }
+
   dimension: act_bt {
     type: number
     sql: ${TABLE}.act_bt ;;

@@ -1,6 +1,13 @@
-view: gl_raw_v {
+view: gl_balances_act {
   derived_table: {
     sql: select 1 as key_no ;;
+  }
+
+  dimension: key_no {
+    primary_key: yes
+    type: number
+    sql: ${TABLE}.key_no ;;
+    hidden: yes
   }
 
   #-------------------------------------------------------------------------------------------
@@ -23,6 +30,15 @@ view: gl_raw_v {
   dimension: gl_posting_type_cd {
     type: string
     sql: ${TABLE}.gl_posting_type_cd ;;
+    hidden: yes
+  }
+
+  #-------------------------------------------------------------------------------------------
+  #-- Dimensions
+  #-------------------------------------------------------------------------------------------
+
+  dimension: measure_bt {
+    sql: ${gl_base_fields_v.act_bt} ;;
     hidden: yes
   }
 
