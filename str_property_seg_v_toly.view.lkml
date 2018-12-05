@@ -13,6 +13,7 @@ view: str_property_seg_v_toly {
   #--------------------------------------------------------------------------------
   #-- property to LY: occ, adr, revpar, etc
   #--------------------------------------------------------------------------------
+
   measure: property_room_rev_amt_toly_v {
     label: "Rev Rms $  Pr Act:LY - var"
     description: "Actual - LY"

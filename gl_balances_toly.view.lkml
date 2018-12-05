@@ -1,4 +1,4 @@
-view: gl_balances_act {
+view: gl_balances_toly {
   derived_table: {
     sql: select 1 as key_no ;;
   }
@@ -10,45 +10,13 @@ view: gl_balances_act {
     hidden: yes
   }
 
-  #-------------------------------------------------------------------------------------------
-  #-- Keys
-  #-------------------------------------------------------------------------------------------
+  #--------------------------------------------------------------------------------
+  #-- actual to LY: rev, AGOP, rooms_revenue, rbe,
+  #--------------------------------------------------------------------------------
 
-  dimension: property_key {
-    type:  number
-    sql: ${TABLE}.property_key ;;
-    hidden: yes
-  }
-
-  dimension: date_sid {
+  measure: revenue_toly_v {
     type: number
-    value_format_name: id
-    sql: ${TABLE}.date_sid ;;
-    hidden: yes
-  }
-
-  dimension: gl_posting_type_cd {
-    type: string
-    sql: ${TABLE}.gl_posting_type_cd ;;
-    hidden: yes
-  }
-
-  #-------------------------------------------------------------------------------------------
-  #-- Dimensions
-  #-------------------------------------------------------------------------------------------
-
-  dimension: measure_bt {
-    sql: ${gl_base_fields_v.act_bt} ;;
-    hidden: yes
-  }
-
-  #-------------------------------------------------------------------------------------------
-  #-- Measures
-  #-------------------------------------------------------------------------------------------
-
-  measure: revenue {
-    type: sum
-    sql: ${TABLE}.rev_amt ;;
+    sql: ${gl_balances_act.revenue} - ${gl_balances_ly.revenue} ;;
     value_format_name: usd_0
   }
 
