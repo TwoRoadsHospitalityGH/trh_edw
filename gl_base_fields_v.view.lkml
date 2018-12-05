@@ -1,11 +1,5 @@
-view: gl_raw_v {
-  derived_table: {
-    sql: select 1 as key_no ;;
-  }
-
-  #-------------------------------------------------------------------------------------------
-  #-- Keys
-  #-------------------------------------------------------------------------------------------
+view: gl_base_fields_v {
+  sql_table_name: pedw.dev.glm_property_f ;;
 
   dimension: property_key {
     type:  number
@@ -27,61 +21,62 @@ view: gl_raw_v {
   }
 
   #-------------------------------------------------------------------------------------------
-  #-- Measures
+  #-- dimensions
   #-------------------------------------------------------------------------------------------
 
-  measure: revenue {
-    type: sum
+  dimension: revenue {
+    type: number
     sql: ${TABLE}.rev_amt ;;
     value_format_name: usd_0
   }
 
-  measure: AGOP {
-    type: sum
+  dimension: AGOP {
+    type: number
     sql: ${TABLE}.agop_amt ;;
     value_format_name: usd_0
   }
 
-  measure: rooms_revenue {
-    type: sum
+  dimension: rooms_revenue {
+    type: number
     sql: ${TABLE}.rooms_rev_amt ;;
     value_format_name: usd_0
   }
 
-  measure: rbe_revenue {
-    type: sum
+  dimension: rbe_revenue {
+    type: number
     sql: ${TABLE}.rbe_rev_amt ;;
     value_format_name: usd_0
   }
 
-  measure: rbe_banquet_revenue {
-    type: sum
+  dimension: rbe_banquet_revenue {
+    type: number
     sql: ${TABLE}.rbe_banquet_rev_amt ;;
     value_format_name: usd_0
   }
 
-  measure: rbe_catering_revenue {
-    type: sum
+  dimension: rbe_catering_revenue {
+    type: number
     sql: ${TABLE}.rbe_catering_rev_amt ;;
     value_format_name: usd_0
   }
 
-  measure: rbe_outlet_revenue {
-    type: sum
+  dimension: rbe_outlet_revenue {
+    type: number
     sql: ${TABLE}.rbe_outlet_rev_amt ;;
     value_format_name: usd_0
   }
 
-  measure: rbe_conference_services_revenue {
-    type: sum
+  dimension: rbe_conference_services_revenue {
+    type: number
     sql: ${TABLE}.rbe_conference_services_rev_amt ;;
     value_format_name: usd_0
   }
 
-  measure: rbe_other_revenue {
-    type: sum
+  dimension: rbe_other_revenue {
+    type: number
     sql: ${TABLE}.rbe_other_rev_amt ;;
     value_format_name: usd_0
   }
 
-}
+
+  }
