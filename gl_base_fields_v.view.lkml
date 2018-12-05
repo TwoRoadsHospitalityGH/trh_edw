@@ -24,6 +24,30 @@ view: gl_base_fields_v {
   #-- dimensions
   #-------------------------------------------------------------------------------------------
 
+  dimension: act_bt {
+    type: number
+    sql: ${TABLE}.act_bt ;;
+    hidden: yes
+  }
+
+  dimension: act_ly_bt {
+    type: number
+    sql: ${TABLE}.act_ly_bt ;;
+    hidden: yes
+  }
+
+  dimension: bdgt_bt {
+    type: number
+    sql: ${TABLE}.bdgt_bt ;;
+    hidden: yes
+  }
+
+  dimension: fcst30_bt {
+    type: number
+    sql: ${TABLE}.fcst30_bt ;;
+    hidden: yes
+  }
+
   dimension: revenue {
     type: number
     sql: ${TABLE}.rev_amt ;;
