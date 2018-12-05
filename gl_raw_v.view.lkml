@@ -52,52 +52,34 @@ view: gl_raw_v {
     value_format_name: usd_0
   }
 
-#   measure: revenue {
-#     type: sum
-#     sql: ${TABLE}.rev_amount ;;
-#     value_format_name: usd_0
-#   }
-#
-#   measure: revenue {
-#     type: sum
-#     sql: ${TABLE}.rev_amount ;;
-#     value_format_name: usd_0
-#   }
-#
-#   measure: revenue {
-#     type: sum
-#     sql: ${TABLE}.rev_amount ;;
-#     value_format_name: usd_0
-#   }
-#
-#   measure: revenue {
-#     type: sum
-#     sql: ${TABLE}.rev_amount ;;
-#     value_format_name: usd_0
-#   }
-#
-#   measure: revenue {
-#     type: sum
-#     sql: ${TABLE}.rev_amount ;;
-#     value_format_name: usd_0
-#   }
-#
-#   measure: revenue {
-#     type: sum
-#     sql: ${TABLE}.rev_amount ;;
-#     value_format_name: usd_0
-#   }
-#
-#   measure: revenue {
-#     type: sum
-#     sql: ${TABLE}.rev_amount ;;
-#     value_format_name: usd_0
-#   }
-#
-#   measure: revenue {
-#     type: sum
-#     sql: ${TABLE}.rev_amount ;;
-#     value_format_name: usd_0
-#   }
+  measure: rbe_banquet_revenue {
+    type: sum
+    sql: ${TABLE}.rbe_banquet_rev_amt ;;
+    value_format_name: usd_0
+  }
+
+  measure: rbe_catering_revenue {
+    type: sum
+    sql: ${TABLE}.rbe_catering_rev_amt ;;
+    value_format_name: usd_0
+  }
+
+  measure: rbe_outlet_revenue {
+    type: sum
+    sql: ${TABLE}.rbe_outlet_rev_amt ;;
+    value_format_name: usd_0
+  }
+
+  measure: rbe_conference_services_revenue {
+    type: sum
+    sql: ${TABLE}.rbe_conference_services_rev_amt ;;
+    value_format_name: usd_0
+  }
+
+  measure: rbe_other_revenue {
+    type: sum
+    sql: ${TABLE}.rbe_other_rev_amt ;;
+    value_format_name: usd_0
+  }
 
 }
