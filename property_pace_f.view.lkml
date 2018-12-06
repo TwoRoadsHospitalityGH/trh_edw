@@ -49,7 +49,7 @@ view: property_pace_f {
   measure:  room_rev_stly{
     sql: ${TABLE}.room_rev_stly ;;
     value_format_name: usd_0
-    label: "Rev Rms STLY"
+    label: "Rev Rms $ STLY"
     description: "Room Revenue (Same Time Last Year)"
     type: sum
   }
@@ -87,7 +87,7 @@ view: property_pace_f {
   measure:  prosp_roomrev{
     sql: ${TABLE}.prosp_roomrev ;;
     value_format_name: usd_0
-    label: "Rev Rms Prospect"
+    label: "Rev Rms $ Prospect"
     description: "Prospect Room Revenue"
     type: sum
   }
@@ -95,7 +95,7 @@ view: property_pace_f {
   measure:  prosp_roomrev_stly{
     sql: ${TABLE}.prosp_roomrev_stly ;;
     value_format_name: usd_0
-    label: "Rev Rms Prospect STLY"
+    label: "Rev Rms $ Prospect STLY"
     description: "Prospect Room Revenue (Same Time Last Year)"
     type: sum
   }
@@ -133,7 +133,7 @@ view: property_pace_f {
   measure:  tent_roomrev{
     sql: ${TABLE}.tent_roomrev ;;
     value_format_name: usd_0
-    label: "Rev Rms Tentative"
+    label: "Rev Rms $ Tentative"
     description: "Tentative Room Revenue "
     type: sum
   }
@@ -141,7 +141,7 @@ view: property_pace_f {
   measure:  tent_roomrev_stly{
     sql: ${TABLE}.tent_roomrev_stly ;;
     value_format_name: usd_0
-    label: "Rev Rms Tentative STLY"
+    label: "Rev Rms $ Tentative STLY"
     description: "Tentative Room (Same Time Last Year)"
     type: sum
   }
@@ -179,7 +179,7 @@ view: property_pace_f {
   measure:  budg_roomrev{
     sql: ${TABLE}.budg_roomrev ;;
     value_format_name: usd_0
-    label: "Rev Rm Bdgt"
+    label: "Rev Rm $ Bdgt"
     description: "Budget Room Revenue"
     type: sum
   }
@@ -211,7 +211,7 @@ view: property_pace_f {
   measure:  act_fcst_roomsold{
     sql: ${TABLE}.act_fcst_roomsold ;;
     value_format_name: decimal_0
-    label: "Rev Rms Act:Fcst"
+    label: "Rev Rms $ Act:Fcst"
     description: "Act/Fcst Room Revenue"
     type: sum
   }
