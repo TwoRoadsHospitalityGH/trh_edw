@@ -1,4 +1,4 @@
-view: gl_balances_act {
+view: glm_property_f_ty {
   derived_table: {
     sql: select 1 as key_no ;;
   }
@@ -38,7 +38,7 @@ view: gl_balances_act {
   #-------------------------------------------------------------------------------------------
 
   dimension: measure_bt {
-    sql: ${gl_base_fields_v.act_bt} ;;
+    sql: ${glm_property_f.act_bt} ;;
     hidden: yes
   }
 
@@ -46,66 +46,66 @@ view: gl_balances_act {
   #-- Measures
   #-------------------------------------------------------------------------------------------
 
-  measure: revenue {
+  measure: rev_amt {
     label: "Rev"
     type: sum
-    sql:  iff( ${measure_bt} = 1, ${gl_base_fields_v.revenue}, to_number( null ) ) ;;
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: AGOP {
     label: "AGOP"
     type: sum
-    sql:  iff( ${measure_bt} = 1, ${gl_base_fields_v.AGOP}, to_number( null ) ) ;;
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.AGOP}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
-  measure: rooms_revenue {
-    label: "Rms Rev"
+  measure: rooms_rev_amt {
+    label: "Rev Rms"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${gl_base_fields_v.rooms_revenue}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.rooms_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
-  measure: rbe_revenue {
-    label: "RBE Rev"
+  measure: rbe_rev_amt {
+    label: "Rev RBE"
     type: sum
-    sql:  iff( ${measure_bt} = 1, ${gl_base_fields_v.rbe_revenue}, to_number( null ) ) ;;
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.rbe_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
-  measure: rbe_banquet_revenue {
-    label: "RBE Banquet Rev"
+  measure: rbe_banquet_rev_amt {
+    label: "RBE Rev Banquet"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${gl_base_fields_v.rbe_banquet_revenue}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_banquet_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
-  measure: rbe_catering_revenue {
-    label: "RBE Catering Rev"
+  measure: rbe_catering_rev_amt {
+    label: "RBE Rev Catering"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${gl_base_fields_v.rbe_catering_revenue}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_catering_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
-  measure: rbe_outlet_revenue {
-    label: "RBE Outlet Rev"
+  measure: rbe_outlet_rev_amt {
+    label: "RBE Rev Outlet"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${gl_base_fields_v.rbe_outlet_revenue}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_outlet_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
-  measure: rbe_conference_services_revenue {
-    label: "RBE Conference Services Rev"
+  measure: rbe_conference_services_rev_amt {
+    label: "RBE Rev Conference Services"
     type: sum
-    sql: sql: iff( ${measure_bt} = 1, ${gl_base_fields_v.rbe_conference_services_revenue}, to_number( null ) ) ;;
+    sql: sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_conference_services_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
-  measure: rbe_other_revenue {
-    label: "RBE Other Rev"
+  measure: rbe_other_rev_amt {
+    label: "RBE Rev Other"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${gl_base_fields_v.rbe_other_revenue}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_other_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 

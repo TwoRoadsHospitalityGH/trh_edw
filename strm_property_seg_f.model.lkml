@@ -5,7 +5,7 @@ include: "*.view"         # include all views in this project
 label: "STR Monthly"
 
 datagroup: model_caching_dg {
-  sql_trigger: select max( dw_update_dt ) from pedw.dev.strm_property_seg_f ;;
+  sql_trigger: select max( dw_update_dt ) from pedw.fact.strm_property_seg_f ;;
   max_cache_age: "8 hours"
 }
 

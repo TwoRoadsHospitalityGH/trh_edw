@@ -11,14 +11,14 @@ view: gl_balances_toly {
   }
 
   #--------------------------------------------------------------------------------
-  #-- actual to LY: rev, AGOP, rooms_revenue, rbe
+  #-- actual to LY: rev, AGOP, rooms_rev_amt, rbe
   #--------------------------------------------------------------------------------
 
-  measure: revenue_toly_v {
+  measure: rev_amt_toly_v {
     label: "Rev Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${gl_balances_act.revenue} - ${gl_balances_ly.revenue} ;;
+    sql: ${glm_property_f_ty.rev_amt} - ${glm_property_f_ly.rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -26,55 +26,55 @@ view: gl_balances_toly {
     label: "AGOP Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${gl_balances_act.AGOP} - ${gl_balances_ly.AGOP} ;;
+    sql: ${glm_property_f_ty.AGOP} - ${glm_property_f_ly.AGOP} ;;
     value_format_name: decimal_0
   }
 
-  measure: rooms_revenue_toly_v {
+  measure: rooms_rev_amt_toly_v {
     label: "Rms Rev Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${gl_balances_act.rooms_revenue} - ${gl_balances_ly.rooms_revenue} ;;
+    sql: ${glm_property_f_ty.rooms_rev_amt} - ${glm_property_f_ly.rooms_rev_amt} ;;
     value_format_name: decimal_0
   }
 
-  measure: rbe_revenue_toly_v {
+  measure: rbe_rev_amt_toly_v {
     label: "RBE Rev Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${gl_balances_act.rbe_revenue} - ${gl_balances_ly.rbe_revenue} ;;
+    sql: ${glm_property_f_ty.rbe_rev_amt} - ${glm_property_f_ly.rbe_rev_amt} ;;
     value_format_name: decimal_0
   }
 
-  measure: rbe_banquet_revenue_toly_v {
+  measure: rbe_banquet_rev_amt_toly_v {
     label: "RBE Banquet Rev Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${gl_balances_act.rbe_banquet_revenue} - ${gl_balances_ly.rbe_banquet_revenue} ;;
+    sql: ${glm_property_f_ty.rbe_banquet_rev_amt} - ${glm_property_f_ly.rbe_banquet_rev_amt} ;;
     value_format_name: decimal_0
   }
 
   measure: rbe_catering_toly_v {
-    label: "RBE Catering Revenue Act:LY - var"
+    label: "RBE Catering rev_amt Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${gl_balances_act.rbe_catering_revenue} - ${gl_balances_ly.rbe_catering_revenue} ;;
+    sql: ${glm_property_f_ty.rbe_catering_rev_amt} - ${glm_property_f_ly.rbe_catering_rev_amt} ;;
     value_format_name: decimal_0
   }
 
-  measure: rbe_outlet_revenue_toly_v {
+  measure: rbe_outlet_rev_amt_toly_v {
     label: "RBE Outlet Rev Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${gl_balances_act.rbe_outlet_revenue} - ${gl_balances_ly.rbe_outlet_revenue} ;;
+    sql: ${glm_property_f_ty.rbe_outlet_rev_amt} - ${glm_property_f_ly.rbe_outlet_rev_amt} ;;
     value_format_name: decimal_0
   }
 
-  measure: rbe_other_revenue_toly_v {
+  measure: rbe_other_rev_amt_toly_v {
     label: "RBE Other Rev Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${gl_balances_act.rbe_other_revenue} - ${gl_balances_ly.rbe_other_revenue} ;;
+    sql: ${glm_property_f_ty.rbe_other_rev_amt} - ${glm_property_f_ly.rbe_other_rev_amt} ;;
     value_format_name: decimal_0
   }
 }

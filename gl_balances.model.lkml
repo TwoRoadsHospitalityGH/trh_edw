@@ -11,8 +11,8 @@ datagroup: model_caching_dg {
 }
 
 
-explore: gl_base_fields_v {
-    from: gl_base_fields_v
+explore: glm_property_f {
+    from: glm_property_f
     sql_table_name: pedw.dev.glm_property_f ;;
     group_label: "***Development***"
     label: "Monthly GL Balances"
@@ -20,22 +20,22 @@ explore: gl_base_fields_v {
     case_sensitive: no
 
 
-  join: gl_balances_act {
-    from: gl_balances_act
+  join: glm_property_f_ty {
+    from: glm_property_f_ty
     view_label: "     Act"
     type: cross
     relationship: one_to_one
   }
 
-  join: gl_balances_ly {
-    from: gl_balances_ly
+  join: glm_property_f_ly {
+    from: glm_property_f_ly
     view_label: "    LY"
     type: cross
     relationship: one_to_one
   }
 
-  join: gl_balances_bdgt {
-    from: gl_balances_bdgt
+  join: glm_property_f_bdgt {
+    from: glm_property_f_bdgt
     view_label: "  Bdgt"
     type: cross
     relationship: one_to_one
@@ -48,8 +48,8 @@ explore: gl_base_fields_v {
     relationship: one_to_one
   }
 
-  join: gl_balances_tobdgt {
-    from: gl_balances_tobdgt
+  join: glm_property_f_tobdgt {
+    from: glm_property_f_tobdgt
     view_label: "     Act"
     type: cross
     relationship: one_to_one
@@ -58,7 +58,7 @@ explore: gl_base_fields_v {
   join: date_dm {
     from: date_dm
     view_label: "  Date"
-    sql_on: ${date_dm.date_sid} = ${gl_base_fields_v.date_sid};;
+    sql_on: ${date_dm.date_sid} = ${glm_property_f.date_sid};;
     sql_where: {% parameter date_dm.available_timeperiod %} = ''
       or utl..udf_period_trunc_dt( {% parameter date_dm.available_timeperiod %}, ${date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter date_dm.available_timeperiod %}  ) ;;
     type: inner
@@ -68,7 +68,7 @@ explore: gl_base_fields_v {
   join: property_dm {
     from: property_dm
     view_label: " Property"
-    sql_on: ${property_dm.property_key} = ${gl_base_fields_v.property_key} ;;
+    sql_on: ${property_dm.property_key} = ${glm_property_f.property_key} ;;
     type: inner
     relationship: many_to_one
   }
