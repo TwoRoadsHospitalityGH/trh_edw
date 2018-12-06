@@ -8,7 +8,4 @@ view: gl_balances_ly {
     hidden: yes
   }
 
-
-
-
 }
