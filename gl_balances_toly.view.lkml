@@ -15,7 +15,7 @@ view: gl_balances_toly {
   #--------------------------------------------------------------------------------
 
   measure: revenue_toly_v {
-    label: "Revenue Act:LY - var"
+    label: "Rev Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${gl_balances_act.revenue} - ${gl_balances_ly.revenue} ;;
@@ -31,7 +31,7 @@ view: gl_balances_toly {
   }
 
   measure: rooms_revenue_toly_v {
-    label: "Rooms Revenue Act:LY - var"
+    label: "Rms Rev Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${gl_balances_act.rooms_revenue} - ${gl_balances_ly.rooms_revenue} ;;
@@ -39,7 +39,7 @@ view: gl_balances_toly {
   }
 
   measure: rbe_revenue_toly_v {
-    label: "RBE Revenue Act:LY - var"
+    label: "RBE Rev Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${gl_balances_act.rbe_revenue} - ${gl_balances_ly.rbe_revenue} ;;
@@ -47,7 +47,7 @@ view: gl_balances_toly {
   }
 
   measure: rbe_banquet_revenue_toly_v {
-    label: "RBE Banquet Revenue Act:LY - var"
+    label: "RBE Banquet Rev Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${gl_balances_act.rbe_banquet_revenue} - ${gl_balances_ly.rbe_banquet_revenue} ;;
@@ -63,7 +63,7 @@ view: gl_balances_toly {
   }
 
   measure: rbe_outlet_revenue_toly_v {
-    label: "RBE Outlet Revenue Act:LY - var"
+    label: "RBE Outlet Rev Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${gl_balances_act.rbe_outlet_revenue} - ${gl_balances_ly.rbe_outlet_revenue} ;;
@@ -71,7 +71,7 @@ view: gl_balances_toly {
   }
 
   measure: rbe_other_revenue_toly_v {
-    label: "RBE Other Revenue Act:LY - var"
+    label: "RBE Other Rev Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${gl_balances_act.rbe_other_revenue} - ${gl_balances_ly.rbe_other_revenue} ;;

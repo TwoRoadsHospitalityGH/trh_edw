@@ -16,7 +16,7 @@ view: gl_balances_tobdgt {
     #--------------------------------------------------------------------------------
 
     measure: revenue_tobdgt_v {
-      label: "Revenue Act:Bdgt - var"
+      label: "Rev Act:Bdgt - var"
       description: "Actual - Bdgt"
       type: number
       sql: ${gl_balances_act.revenue} - ${gl_balances_bdgt.revenue} ;;
@@ -32,7 +32,7 @@ view: gl_balances_tobdgt {
     }
 
     measure: rooms_revenue_tobdgt_v {
-      label: "Rooms Revenue Act:Bdgt - var"
+      label: "Rms Rev Act:Bdgt - var"
       description: "Actual - Bdgt"
       type: number
       sql: ${gl_balances_act.rooms_revenue} - ${gl_balances_bdgt.rooms_revenue} ;;
@@ -40,7 +40,7 @@ view: gl_balances_tobdgt {
     }
 
     measure: rbe_revenue_tobdgt_v {
-      label: "RBE Revenue Act:Bdgt - var"
+      label: "RBE Rev Act:Bdgt - var"
       description: "Actual - Bdgt"
       type: number
       sql: ${gl_balances_act.rbe_revenue} - ${gl_balances_bdgt.rbe_revenue} ;;
@@ -48,7 +48,7 @@ view: gl_balances_tobdgt {
     }
 
     measure: rbe_banquet_revenue_tobdgt_v {
-      label: "RBE Banquet Revenue Act:Bdgt - var"
+      label: "RBE Banquet Rev Act:Bdgt - var"
       description: "Actual - Bdgt"
       type: number
       sql: ${gl_balances_act.rbe_banquet_revenue} - ${gl_balances_bdgt.rbe_banquet_revenue} ;;
@@ -56,7 +56,7 @@ view: gl_balances_tobdgt {
     }
 
     measure: rbe_catering_tobdgt_v {
-      label: "RBE Catering Revenue Act:Bdgt - var"
+      label: "RBE Catering Rev Act:Bdgt - var"
       description: "Actual - Bdgt"
       type: number
       sql: ${gl_balances_act.rbe_catering_revenue} - ${gl_balances_bdgt.rbe_catering_revenue} ;;
@@ -64,7 +64,7 @@ view: gl_balances_tobdgt {
     }
 
     measure: rbe_outlet_revenue_tobdgt_v {
-      label: "RBE Outlet Revenue Act:Bdgt - var"
+      label: "RBE Outlet Rev Act:Bdgt - var"
       description: "Actual - Bdgt"
       type: number
       sql: ${gl_balances_act.rbe_outlet_revenue} - ${gl_balances_bdgt.rbe_outlet_revenue} ;;
@@ -72,7 +72,7 @@ view: gl_balances_tobdgt {
     }
 
     measure: rbe_other_revenue_tobdgt_v {
-      label: "RBE Other Revenue Act:Bdgt - var"
+      label: "RBE Other Rev Act:Bdgt - var"
       description: "Actual - Bdgt"
       type: number
       sql: ${gl_balances_act.rbe_other_revenue} - ${gl_balances_bdgt.rbe_other_revenue} ;;

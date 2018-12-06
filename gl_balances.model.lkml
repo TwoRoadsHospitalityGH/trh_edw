@@ -22,35 +22,35 @@ explore: gl_base_fields_v {
 
   join: gl_balances_act {
     from: gl_balances_act
-    view_label: "    TY"
+    view_label: "     Act"
     type: cross
     relationship: one_to_one
   }
 
   join: gl_balances_ly {
     from: gl_balances_ly
-    view_label: "   LY"
+    view_label: "    LY"
     type: cross
     relationship: one_to_one
   }
 
   join: gl_balances_bdgt {
     from: gl_balances_bdgt
-    view_label: " Bdgt"
+    view_label: "  Bdgt"
     type: cross
     relationship: one_to_one
   }
 
   join: gl_balances_toly {
     from: gl_balances_toly
-    view_label: "    TY"
+    view_label: "     Act"
     type: cross
     relationship: one_to_one
   }
 
   join: gl_balances_tobdgt {
     from: gl_balances_tobdgt
-    view_label: "    TY"
+    view_label: "     Act"
     type: cross
     relationship: one_to_one
   }
