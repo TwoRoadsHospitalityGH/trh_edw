@@ -179,7 +179,7 @@ view: property_pace_f {
   measure:  budg_roomrev{
     sql: ${TABLE}.budg_roomrev ;;
     value_format_name: usd_0
-    label: "Rev Rm $ Bdgt"
+    label: "Rev Rms $ Bdgt"
     description: "Budget Room Revenue"
     type: sum
   }
@@ -202,7 +202,7 @@ view: property_pace_f {
   measure:  act_fcst_roomrev{
     sql: ${TABLE}.act_fcst_roomrev ;;
     value_format_name: usd_0
-    label: "Rms Bkd Act:Fcst"
+    label: "Rms Bkd Fcst"
     description: "Act/Fcst Room Sold"
     type: sum
 
@@ -211,7 +211,7 @@ view: property_pace_f {
   measure:  act_fcst_roomsold{
     sql: ${TABLE}.act_fcst_roomsold ;;
     value_format_name: decimal_0
-    label: "Rev Rms $ Act:Fcst"
+    label: "Rev Rms $ Fcst"
     description: "Act/Fcst Room Revenue"
     type: sum
   }
@@ -219,7 +219,7 @@ view: property_pace_f {
   measure:  act_fcst_adr{
     sql: ${act_fcst_roomrev}/${act_fcst_roomsold} ;;
     value_format_name: decimal_0
-    label: "ADR Act:Fcst"
+    label: "ADR Fcst"
     description: "Act/Fcst ADR"
   }
 
