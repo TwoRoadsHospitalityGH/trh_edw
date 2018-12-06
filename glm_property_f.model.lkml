@@ -15,7 +15,7 @@ explore: glm_property_f {
     from: glm_property_f
     sql_table_name: pedw.dev.glm_property_f ;;
     group_label: "***Development***"
-    label: "Monthly GL Balances"
+    label: "Monthly GL Balances (dev)"
     persist_with: model_caching_dg
     case_sensitive: no
 
