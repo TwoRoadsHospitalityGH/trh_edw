@@ -22,7 +22,7 @@ explore: glm_property_f {
 
   join: glm_property_f_ty {
     from: glm_property_f_ty
-    view_label: "     Act"
+    view_label: "     TY"
     type: cross
     relationship: one_to_one
   }
@@ -43,14 +43,14 @@ explore: glm_property_f {
 
   join: gl_balances_toly {
     from: gl_balances_toly
-    view_label: "     Act"
+    view_label: "     TY"
     type: cross
     relationship: one_to_one
   }
 
   join: glm_property_f_tobdgt {
     from: glm_property_f_tobdgt
-    view_label: "     Act"
+    view_label: "     TY"
     type: cross
     relationship: one_to_one
   }
