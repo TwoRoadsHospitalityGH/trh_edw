@@ -41,8 +41,8 @@ explore: glm_property_f {
     relationship: one_to_one
   }
 
-  join: gl_balances_toly {
-    from: gl_balances_toly
+  join: glm_property_f_toly {
+    from: glm_property_f_toly
     view_label: "     TY"
     type: cross
     relationship: one_to_one

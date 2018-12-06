@@ -1,4 +1,4 @@
-view: gl_balances_toly {
+view: glm_property_f_toly {
   derived_table: {
     sql: select 1 as key_no ;;
   }
