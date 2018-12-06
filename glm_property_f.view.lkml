@@ -1,4 +1,4 @@
-view: gl_base_fields_v {
+view: glm_property_f {
   sql_table_name: pedw.dev.glm_property_f ;;
 
   dimension: property_key {
@@ -53,7 +53,7 @@ view: gl_base_fields_v {
     hidden: yes
   }
 
-  dimension: revenue {
+  dimension: rev_amt {
     type: number
     sql: ${TABLE}.rev_amt ;;
     value_format_name: usd_0
@@ -67,49 +67,49 @@ view: gl_base_fields_v {
     hidden: yes
   }
 
-  dimension: rooms_revenue {
+  dimension: rooms_rev_amt {
     type: number
     sql: ${TABLE}.rooms_rev_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
 
-  dimension: rbe_revenue {
+  dimension: rbe_rev_amt {
     type: number
     sql: ${TABLE}.rbe_rev_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
 
-  dimension: rbe_banquet_revenue {
+  dimension: rbe_banquet_rev_amt {
     type: number
     sql: ${TABLE}.rbe_banquet_rev_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
 
-  dimension: rbe_catering_revenue {
+  dimension: rbe_catering_rev_amt {
     type: number
     sql: ${TABLE}.rbe_catering_rev_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
 
-  dimension: rbe_outlet_revenue {
+  dimension: rbe_outlet_rev_amt {
     type: number
     sql: ${TABLE}.rbe_outlet_rev_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
 
-  dimension: rbe_conference_services_revenue {
+  dimension: rbe_conference_services_rev_amt {
     type: number
     sql: ${TABLE}.rbe_conference_services_rev_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
 
-  dimension: rbe_other_revenue {
+  dimension: rbe_other_rev_amt {
     type: number
     sql: ${TABLE}.rbe_other_rev_amt ;;
     value_format_name: usd_0
