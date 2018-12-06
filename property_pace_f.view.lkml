@@ -28,8 +28,8 @@ view: property_pace_f {
   dimension: market_nm {
     sql: ${TABLE}.market_nm ;;
     view_label: "Pace Detail"
-    label: "Market Segment Name"
-    description: "Market Segment Name"
+    label: "Reservation Segment Name"
+    description: "Reservation Segment Name"
     type: string
 
   }
