@@ -47,56 +47,65 @@ view: gl_balances_act {
   #-------------------------------------------------------------------------------------------
 
   measure: revenue {
+    label: "Rev"
     type: sum
-    sql: ${TABLE}.rev_amt ;;
+    sql:  iff( ${measure_bt} = 1, ${gl_base_fields_v.revenue}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: AGOP {
+    label: "AGOP"
     type: sum
-    sql: ${TABLE}.agop_amt ;;
+    sql:  iff( ${measure_bt} = 1, ${gl_base_fields_v.AGOP}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rooms_revenue {
+    label: "Rms Rev"
     type: sum
-    sql: ${TABLE}.rooms_rev_amt ;;
+    sql: iff( ${measure_bt} = 1, ${gl_base_fields_v.rooms_revenue}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_revenue {
+    label: "RBE Rev"
     type: sum
-    sql: ${TABLE}.rbe_rev_amt ;;
+    sql:  iff( ${measure_bt} = 1, ${gl_base_fields_v.rbe_revenue}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_banquet_revenue {
+    label: "RBE Banquet Rev"
     type: sum
-    sql: ${TABLE}.rbe_banquet_rev_amt ;;
+    sql: iff( ${measure_bt} = 1, ${gl_base_fields_v.rbe_banquet_revenue}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_catering_revenue {
+    label: "RBE Catering Rev"
     type: sum
-    sql: ${TABLE}.rbe_catering_rev_amt ;;
+    sql: iff( ${measure_bt} = 1, ${gl_base_fields_v.rbe_catering_revenue}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_outlet_revenue {
+    label: "RBE Outlet Rev"
     type: sum
-    sql: ${TABLE}.rbe_outlet_rev_amt ;;
+    sql: iff( ${measure_bt} = 1, ${gl_base_fields_v.rbe_outlet_revenue}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_conference_services_revenue {
+    label: "RBE Conference Services Rev"
     type: sum
-    sql: ${TABLE}.rbe_conference_services_rev_amt ;;
+    sql: sql: iff( ${measure_bt} = 1, ${gl_base_fields_v.rbe_conference_services_revenue}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_other_revenue {
+    label: "RBE Other Rev"
     type: sum
-    sql: ${TABLE}.rbe_other_rev_amt ;;
+    sql: iff( ${measure_bt} = 1, ${gl_base_fields_v.rbe_other_revenue}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
