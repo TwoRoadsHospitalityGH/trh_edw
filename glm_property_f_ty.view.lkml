@@ -75,35 +75,35 @@ view: glm_property_f_ty {
   }
 
   measure: rbe_banquet_rev_amt {
-    label: "RBE Rev Banquet"
+    label: "Rev RBE Banquet"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_banquet_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_catering_rev_amt {
-    label: "RBE Rev Catering"
+    label: "Rev RBE Catering"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_catering_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_outlet_rev_amt {
-    label: "RBE Rev Outlet"
+    label: "Rev RBE Outlet"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_outlet_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_conference_services_rev_amt {
-    label: "RBE Rev Conference Services"
+    label: "Rev RBE Conference Services"
     type: sum
     sql: sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_conference_services_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_other_rev_amt {
-    label: "RBE Rev Other"
+    label: "Rev RBE Other"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_other_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0

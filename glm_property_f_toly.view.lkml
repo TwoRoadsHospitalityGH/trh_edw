@@ -31,7 +31,7 @@ view: glm_property_f_toly {
   }
 
   measure: rooms_rev_amt_toly_v {
-    label: "Rms Rev Act:LY - var"
+    label: "Rev Rms Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rooms_rev_amt} - ${glm_property_f_ly.rooms_rev_amt} ;;
@@ -39,7 +39,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_rev_amt_toly_v {
-    label: "RBE Rev Act:LY - var"
+    label: "Rev RBE Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_rev_amt} - ${glm_property_f_ly.rbe_rev_amt} ;;
@@ -47,7 +47,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_banquet_rev_amt_toly_v {
-    label: "RBE Banquet Rev Act:LY - var"
+    label: "Rev RBE Banquet Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_banquet_rev_amt} - ${glm_property_f_ly.rbe_banquet_rev_amt} ;;
@@ -55,7 +55,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_catering_toly_v {
-    label: "RBE Catering rev_amt Act:LY - var"
+    label: "Rev RBE Catering Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_catering_rev_amt} - ${glm_property_f_ly.rbe_catering_rev_amt} ;;
@@ -63,7 +63,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_outlet_rev_amt_toly_v {
-    label: "RBE Outlet Rev Act:LY - var"
+    label: "Rev RBE Outlet Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_outlet_rev_amt} - ${glm_property_f_ly.rbe_outlet_rev_amt} ;;
@@ -71,7 +71,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_other_rev_amt_toly_v {
-    label: "RBE Other Rev Act:LY - var"
+    label: "Rev RBE Other Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_other_rev_amt} - ${glm_property_f_ly.rbe_other_rev_amt} ;;
