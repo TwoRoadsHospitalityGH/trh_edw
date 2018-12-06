@@ -1,4 +1,4 @@
-view: gl_balances_ty {
+view: gl_balances_act {
   derived_table: {
     sql: select 1 as key_no ;;
   }
