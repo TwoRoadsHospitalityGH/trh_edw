@@ -113,8 +113,8 @@ view: property_pace_f {
   measure:  act_fcst_roomrev{
     sql: ${TABLE}.act_fcst_roomrev ;;
     value_format_name: usd_0
-    label: "Rms Bkd Fcst"
-    description: "Act/Fcst Room Sold"
+    label: "Rev Rms $ Fcst"
+    description: "Act/Fcst Room Revenue"
     type: sum
 
   }
@@ -122,8 +122,8 @@ view: property_pace_f {
   measure:  act_fcst_roomsold{
     sql: ${TABLE}.act_fcst_roomsold ;;
     value_format_name: decimal_0
-    label: "Rev Rms $ Fcst"
-    description: "Act/Fcst Room Revenue"
+    label: "Rms Bkd Fcst"
+    description: "Act/Fcst Room Sold"
     type: sum
   }
 
