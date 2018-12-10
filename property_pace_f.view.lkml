@@ -400,6 +400,7 @@ view: property_pace_f {
   #-------------------------------------------------------------------------------------------
   measure:  roomrev_var_ly{
     sql: (${room_rev} - ${room_rev_stly}) ;;
+    type: number
     value_format_name: decimal_0
     label: "Rev Rms $ Act:LY - var"
     description: "(TY - LY)"
@@ -407,6 +408,7 @@ view: property_pace_f {
 
   measure:  roomrev_var_budg{
     sql: (${room_rev} - ${budg_roomrev}) ;;
+    type: number
     value_format_name: decimal_0
     label: "Rev Rms $ Act:Fcst - var"
     description: "(TY - LY)"
@@ -414,6 +416,7 @@ view: property_pace_f {
 
   measure:  roomrev_var_fcst{
     sql: (${room_rev} - ${act_fcst_roomrev}) ;;
+    type: number
     value_format_name: decimal_0
     label: "Rev Rms $ Act:Bdgt - var"
     description: "(TY - LY)"
@@ -421,6 +424,7 @@ view: property_pace_f {
 
   measure:  roomsold_var_ly{
     sql: (${roomsold} - ${roomsold_stly}) ;;
+    type: number
     value_format_name: decimal_0
     label: "Rms Bkd Act:LY - var"
     description: "(TY - LY)"
@@ -428,6 +432,7 @@ view: property_pace_f {
 
   measure:  roomsold_var_budg{
     sql: (${roomsold} - ${budg_roomsold}) ;;
+    type: number
     value_format_name: decimal_0
     label: "Rms Bkd Act:Fcst - var"
     description: "(TY - LY)"
@@ -435,6 +440,7 @@ view: property_pace_f {
 
   measure:  roomsold_var_fcst{
     sql: (${roomsold} - ${act_fcst_roomsold}) ;;
+    type: number
     value_format_name: decimal_0
     label: "Rms Bkd Act:Bdgt - var"
     description: "(TY - LY)"
@@ -442,6 +448,7 @@ view: property_pace_f {
 
   measure:  adr_var_ly{
     sql: (${room_adr} - ${room_adr_stly}) ;;
+    type: number
     value_format_name: decimal_0
     label: "ADR Act:LY - var"
     description: "(TY - LY)"
@@ -449,6 +456,7 @@ view: property_pace_f {
 
   measure:  adr_var_budg{
     sql: (${room_adr} - ${budg_adr}) ;;
+    type: number
     value_format_name: decimal_0
     label: "ADR Act:Fcst - var"
     description: "(TY - LY)"
@@ -456,6 +464,7 @@ view: property_pace_f {
 
   measure:  adr_var_fcst{
     sql: (${room_adr} - ${act_fcst_adr}) ;;
+    type: number
     value_format_name: decimal_0
     label: "ADR Act:Bdgt - var"
     description: "(TY - LY)"
