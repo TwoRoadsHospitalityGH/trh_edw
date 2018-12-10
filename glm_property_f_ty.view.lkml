@@ -98,7 +98,7 @@ view: glm_property_f_ty {
   measure: rbe_conference_services_rev_amt {
     label: "Rev RBE Conference Services"
     type: sum
-    sql: sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_conference_services_rev_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_conference_services_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 

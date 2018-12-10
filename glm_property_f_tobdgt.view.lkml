@@ -63,6 +63,14 @@ view: glm_property_f_tobdgt {
       value_format_name: decimal_0
     }
 
+  measure: rbe_conference_services_rev_amt_tobdgt_v {
+    label: "Rev RBE Conference Services Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.rbe_conference_services_rev_amt} - ${glm_property_f_bdgt.rbe_conference_services_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
     measure: rbe_outlet_rev_amt_tobdgt_v {
       label: "Rev RBE Outlet Act:Bdgt - var"
       description: "Actual - Bdgt"

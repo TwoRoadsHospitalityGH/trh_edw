@@ -62,6 +62,14 @@ view: glm_property_f_toly {
     value_format_name: decimal_0
   }
 
+  measure: rbe_conference_services_toly_v {
+    label: "Rev RBE Conference Services Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.rbe_conference_services_rev_amt} - ${glm_property_f_ly.rbe_conference_services_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: rbe_outlet_rev_amt_toly_v {
     label: "Rev RBE Outlet Act:LY - var"
     description: "Actual - LY"
