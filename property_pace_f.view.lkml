@@ -72,6 +72,7 @@ view: property_pace_f {
 
   measure:  room_adr{
     sql: ${room_rev}/${roomsold} ;;
+    type: number
     value_format_name: usd_0
     label: "ADR"
     description: "Average Daily Rate"
@@ -79,6 +80,7 @@ view: property_pace_f {
 
   measure:  room_adr_stly{
     sql: ${room_rev_stly}/${roomsold_stly} ;;
+    type: number
     value_format_name: usd_0
     label: "ADR LY"
     description: "ADR (Same Time Last Year)"
@@ -102,6 +104,7 @@ view: property_pace_f {
 
   measure:  budg_adr{
     sql: ${budg_roomrev}/${budg_roomsold};;
+    type: number
     value_format_name: usd_0
     label: "ADR Bdgt"
     description: "Budget ADR"
@@ -126,6 +129,7 @@ view: property_pace_f {
 
   measure:  act_fcst_adr{
     sql: ${act_fcst_roomrev}/${act_fcst_roomsold} ;;
+    type: number
     value_format_name: usd_0
     label: "ADR Fcst"
     description: "Act/Fcst ADR"
@@ -153,6 +157,7 @@ view: property_pace_f {
 
   measure:  prosp_roomrev_var_perc{
     sql: utl..udf_percent_var((${prosp_roomrev}),(${prosp_roomrev_stly})) ;;
+    type: number
     value_format_name: percent_1
     label: "Rev Rms $ Prospect Act:LY - % var"
     description: "(TY - LY)/TY"
@@ -160,6 +165,7 @@ view: property_pace_f {
 
   measure:  prosp_roomrev_var{
     sql: (${prosp_roomrev})-(${prosp_roomrev_stly}) ;;
+    type: number
     value_format_name: usd_0
     label: "Rev Rms $ Prospect Act:LY - var"
     description: "(TY - LY)"
@@ -183,6 +189,7 @@ view: property_pace_f {
 
   measure:  prosp_roomsold_var_perc{
     sql: utl..udf_percent_var((${prosp_roomsold}),(${prosp_roomsold_stly})) ;;
+    type: number
     value_format_name: percent_1
     label: "Rms Bkd Prospect Act:LY - % var"
     description: "(TY - LY)/TY"
@@ -190,6 +197,7 @@ view: property_pace_f {
 
   measure:  prosp_roomsold_var{
     sql: (${prosp_roomsold})-(${prosp_roomsold_stly}) ;;
+    type: number
     value_format_name: decimal_0
     label: "Rms Bkd Prospect Act:LY - var"
     description: "(TY - LY)"
@@ -197,6 +205,7 @@ view: property_pace_f {
 
   measure:  prosp_adr{
     sql: ${prosp_roomrev}/${prosp_roomsold} ;;
+    type: number
     value_format_name: usd_0
     label: "ADR Prospect"
     description: "Prospect Average Daily Rate"
@@ -204,6 +213,7 @@ view: property_pace_f {
 
   measure:  prosp_adr_stly{
     sql: ${prosp_roomrev_stly}/${prosp_roomsold_stly} ;;
+    type: number
     value_format_name: usd_0
     label: "ADR Prospect LY"
     description: "Prospect Average Daily Rate (Same Time Last Year)"
@@ -211,6 +221,7 @@ view: property_pace_f {
 
   measure:  prosp_adr_var_perc{
     sql: utl..udf_percent_var((${prosp_roomrev}/${prosp_roomsold}),(${prosp_roomrev_stly}/${prosp_roomsold_stly})) ;;
+    type: number
     value_format_name: percent_1
     label: "ADR Prospect Act:LY - % var"
     description: "(TY - LY)/TY"
@@ -218,6 +229,7 @@ view: property_pace_f {
 
   measure:  prosp_adr_var{
     sql: (${prosp_roomrev}/${prosp_roomsold})-(${prosp_roomrev_stly}/${prosp_roomsold_stly}) ;;
+    type: number
     value_format_name: usd_0
     label: "ADR Prospect Act:LY - var"
     description: "(TY - LY)"
@@ -252,6 +264,7 @@ view: property_pace_f {
 
   measure:  tent_roomrev_var{
     sql: (${tent_roomrev})-(${tent_roomrev_stly}) ;;
+    type: number
     value_format_name: usd_0
     label: "Rev Rms $ Tentative Act:LY - var"
     description: "(TY - LY)"
@@ -275,6 +288,7 @@ view: property_pace_f {
 
   measure:  tent_roomsold_var_perc{
     sql: utl..udf_percent_var((${tent_roomsold}),(${tent_roomsold_stly})) ;;
+    type: number
     value_format_name: percent_1
     label: "Rms Bkd Tentative Act:LY - % var"
     description: "(TY - LY)/TY"
@@ -282,6 +296,7 @@ view: property_pace_f {
 
   measure:  tent_roomsold_var{
     sql: (${tent_roomsold})-(${tent_roomsold_stly}) ;;
+    type: number
     value_format_name: decimal_0
     label: "Rms Bkd Tentative Act:LY - var"
     description: "(TY - LY)"
@@ -289,6 +304,7 @@ view: property_pace_f {
 
   measure:  tent_adr{
     sql: ${tent_roomrev}/${tent_roomsold} ;;
+    type: number
     value_format_name: usd_0
     label: "ADR Tentative"
     description: "Tentative ADR"
@@ -296,6 +312,7 @@ view: property_pace_f {
 
   measure:  tent_adr_stly{
     sql: ${tent_roomrev_stly}/${tent_roomsold_stly} ;;
+    type: number
     value_format_name: usd_0
     label: "ADR Tentative LY"
     description: "Tentative Average Daily Rate (Same Time Last Year)"
@@ -303,6 +320,7 @@ view: property_pace_f {
 
   measure:  tent_adr_var_perc{
     sql: utl..udf_percent_var((${tent_roomrev}/${tent_roomsold}),(${tent_roomrev_stly}/${tent_roomsold_stly})) ;;
+    type: number
     value_format_name: percent_1
     label: "ADR Tentative Act:LY - % var"
     description: "(TY - LY)/TY"
@@ -310,6 +328,7 @@ view: property_pace_f {
 
   measure:  tent_adr_var{
     sql: (${tent_roomrev}/${tent_roomsold})-(${tent_roomrev_stly}/${tent_roomsold_stly}) ;;
+    type: number
     value_format_name: usd_0
     label: "ADR Tentative Act:LY - var"
     description: "(TY - LY)"
