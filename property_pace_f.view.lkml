@@ -323,65 +323,66 @@ view: property_pace_f {
 
   measure:  roomrev_var_perc_ly{
     sql: utl..udf_percent_var(${room_rev},${room_rev_stly}) ;;
-    value_format_name: percent_1
     label: "Rev Rms $ Act:LY - % var"
     description: "(TY - LY)/TY"
+    value_format_name: percent_1
   }
+
 
   measure:  roomrev_var_perc_budg{
     sql: utl..udf_percent_var(${room_rev},${budg_roomrev}) ;;
-    value_format_name: percent_1
     label: "Rev Rms $ Act:Fcst - % var"
     description: "(TY - LY)/TY"
+    value_format_name: percent_1
   }
 
   measure:  roomrev_var_perc_fcst{
     sql: utl..udf_percent_var(${room_rev},${act_fcst_roomrev}) ;;
-    value_format_name: percent_1
     label: "Rev Rms $ Act:Bdgt - % var"
     description: "(TY - LY)/TY"
+    value_format_name: percent_1
   }
 
   measure:  roomsold_var_perc_ly{
     sql: utl..udf_percent_var(${roomsold},${roomsold_stly}) ;;
-    value_format_name: percent_1
     label: "Rms Bkd Act:LY - % var"
     description: "(TY - LY)/TY"
+    value_format_name: percent_1
   }
 
   measure:  roomsold_var_perc_budg{
     sql: utl..udf_percent_var(${roomsold},${budg_roomsold}) ;;
-    value_format_name: percent_1
     label: "Rms Bkd Act:Fcst - % var"
     description: "(TY - LY)/TY"
+    value_format_name: percent_1
   }
 
   measure:  roomsold_var_perc_fcst{
     sql: utl..udf_percent_var(${roomsold},${act_fcst_roomsold}) ;;
-    value_format_name: percent_1
     label: "Rms Bkd Act:Bdgt - % var"
     description: "(TY - LY)/TY"
+    value_format_name: percent_1
   }
 
   measure:  adr_var_perc_ly{
     sql: utl..udf_percent_var(${room_adr},${room_adr_stly}) ;;
-    value_format_name: percent_1
     label: "ADR Act:LY - % var"
     description: "(TY - LY)/TY"
+    value_format_name: percent_1
   }
 
   measure:  adr_var_perc_budg{
     sql: utl..udf_percent_var(${room_adr},${budg_adr}) ;;
-    value_format_name: percent_1
     label: "ADR Act:Fcst - % var"
     description: "(TY - LY)/TY"
+    value_format_name: percent_1
   }
 
   measure:  adr_var_perc_fcst{
     sql: utl..udf_percent_var(${room_adr},${act_fcst_adr}) ;;
-    value_format_name: percent_1
     label: "ADR Act:Bdgt - % var"
     description: "(TY - LY)/TY"
+    value_format_name: percent_1
   }
 
 
