@@ -79,7 +79,7 @@ view: property_pace_f {
   }
 
   measure:  room_adr_stly{
-    sql: ${room_rev_stly}/${roomsold_stly} ;;
+    sql: ${room_rev_stly}/nullif(${roomsold_stly},0) ;;
     type: number
     value_format_name: usd_0
     label: "ADR LY"
@@ -103,7 +103,7 @@ view: property_pace_f {
   }
 
   measure:  budg_adr{
-    sql: ${budg_roomrev}/${budg_roomsold};;
+    sql: ${budg_roomrev}/nullif(${budg_roomsold},0);;
     type: number
     value_format_name: usd_0
     label: "ADR Bdgt"
@@ -128,7 +128,7 @@ view: property_pace_f {
   }
 
   measure:  act_fcst_adr{
-    sql: ${act_fcst_roomrev}/${act_fcst_roomsold} ;;
+    sql: ${act_fcst_roomrev}/nullif(${act_fcst_roomsold},0) ;;
     type: number
     value_format_name: usd_0
     label: "ADR Fcst"
@@ -204,7 +204,7 @@ view: property_pace_f {
   }
 
   measure:  prosp_adr{
-    sql: ${prosp_roomrev}/${prosp_roomsold} ;;
+    sql: ${prosp_roomrev}/nullif(${prosp_roomsold},0) ;;
     type: number
     value_format_name: usd_0
     label: "ADR Prospect"
@@ -212,7 +212,7 @@ view: property_pace_f {
   }
 
   measure:  prosp_adr_stly{
-    sql: ${prosp_roomrev_stly}/${prosp_roomsold_stly} ;;
+    sql: ${prosp_roomrev_stly}/nullif(${prosp_roomsold_stly},0) ;;
     type: number
     value_format_name: usd_0
     label: "ADR Prospect LY"
@@ -220,7 +220,7 @@ view: property_pace_f {
   }
 
   measure:  prosp_adr_var_perc{
-    sql: utl..udf_percent_var((${prosp_roomrev}/${prosp_roomsold}),(${prosp_roomrev_stly}/${prosp_roomsold_stly})) ;;
+    sql: utl..udf_percent_var((${prosp_roomrev}/nullif(${prosp_roomsold},0)),(${prosp_roomrev_stly}/nullif(${prosp_roomsold_stly},0))) ;;
     type: number
     value_format_name: percent_1
     label: "ADR Prospect Act:LY - % var"
@@ -228,7 +228,7 @@ view: property_pace_f {
   }
 
   measure:  prosp_adr_var{
-    sql: (${prosp_roomrev}/${prosp_roomsold})-(${prosp_roomrev_stly}/${prosp_roomsold_stly}) ;;
+    sql: (${prosp_roomrev}/nullif(${prosp_roomsold},0))-(${prosp_roomrev_stly}/nullif(${prosp_roomsold_stly},0)) ;;
     type: number
     value_format_name: usd_0
     label: "ADR Prospect Act:LY - var"
@@ -304,7 +304,7 @@ view: property_pace_f {
   }
 
   measure:  tent_adr{
-    sql: ${tent_roomrev}/${tent_roomsold} ;;
+    sql: ${tent_roomrev}/nullif(${tent_roomsold},0) ;;
     type: number
     value_format_name: usd_0
     label: "ADR Tentative"
@@ -312,7 +312,7 @@ view: property_pace_f {
   }
 
   measure:  tent_adr_stly{
-    sql: ${tent_roomrev_stly}/${tent_roomsold_stly} ;;
+    sql: ${tent_roomrev_stly}/nullif(${tent_roomsold_stly},0) ;;
     type: number
     value_format_name: usd_0
     label: "ADR Tentative LY"
@@ -320,7 +320,7 @@ view: property_pace_f {
   }
 
   measure:  tent_adr_var_perc{
-    sql: utl..udf_percent_var((${tent_roomrev}/${tent_roomsold}),(${tent_roomrev_stly}/${tent_roomsold_stly})) ;;
+    sql: utl..udf_percent_var((${tent_roomrev}/nullif(${tent_roomsold},0)),(${tent_roomrev_stly}/nullif(${tent_roomsold_stly},0))) ;;
     type: number
     value_format_name: percent_1
     label: "ADR Tentative Act:LY - % var"
@@ -328,7 +328,7 @@ view: property_pace_f {
   }
 
   measure:  tent_adr_var{
-    sql: (${tent_roomrev}/${tent_roomsold})-(${tent_roomrev_stly}/${tent_roomsold_stly}) ;;
+    sql: (${tent_roomrev}/nullif(${tent_roomsold},0))-(${tent_roomrev_stly}/nullif(${tent_roomsold_stly},0)) ;;
     type: number
     value_format_name: usd_0
     label: "ADR Tentative Act:LY - var"
