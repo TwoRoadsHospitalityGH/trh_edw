@@ -325,6 +325,7 @@ view: property_pace_f {
     sql: utl..udf_percent_var(${room_rev},${room_rev_stly}) ;;
     label: "Rev Rms $ Act:LY - % var"
     description: "(TY - LY)/TY"
+    type: number
     value_format_name: percent_1
   }
 
@@ -333,6 +334,7 @@ view: property_pace_f {
     sql: utl..udf_percent_var(${room_rev},${budg_roomrev}) ;;
     label: "Rev Rms $ Act:Fcst - % var"
     description: "(TY - LY)/TY"
+    type: number
     value_format_name: percent_1
   }
 
@@ -340,6 +342,7 @@ view: property_pace_f {
     sql: utl..udf_percent_var(${room_rev},${act_fcst_roomrev}) ;;
     label: "Rev Rms $ Act:Bdgt - % var"
     description: "(TY - LY)/TY"
+    type: number
     value_format_name: percent_1
   }
 
@@ -347,6 +350,7 @@ view: property_pace_f {
     sql: utl..udf_percent_var(${roomsold},${roomsold_stly}) ;;
     label: "Rms Bkd Act:LY - % var"
     description: "(TY - LY)/TY"
+    type: number
     value_format_name: percent_1
   }
 
@@ -354,6 +358,7 @@ view: property_pace_f {
     sql: utl..udf_percent_var(${roomsold},${budg_roomsold}) ;;
     label: "Rms Bkd Act:Fcst - % var"
     description: "(TY - LY)/TY"
+    type: number
     value_format_name: percent_1
   }
 
@@ -361,6 +366,7 @@ view: property_pace_f {
     sql: utl..udf_percent_var(${roomsold},${act_fcst_roomsold}) ;;
     label: "Rms Bkd Act:Bdgt - % var"
     description: "(TY - LY)/TY"
+    type: number
     value_format_name: percent_1
   }
 
@@ -368,6 +374,7 @@ view: property_pace_f {
     sql: utl..udf_percent_var(${room_adr},${room_adr_stly}) ;;
     label: "ADR Act:LY - % var"
     description: "(TY - LY)/TY"
+    type: number
     value_format_name: percent_1
   }
 
@@ -375,6 +382,7 @@ view: property_pace_f {
     sql: utl..udf_percent_var(${room_adr},${budg_adr}) ;;
     label: "ADR Act:Fcst - % var"
     description: "(TY - LY)/TY"
+    type: number
     value_format_name: percent_1
   }
 
@@ -382,6 +390,7 @@ view: property_pace_f {
     sql: utl..udf_percent_var(${room_adr},${act_fcst_adr}) ;;
     label: "ADR Act:Bdgt - % var"
     description: "(TY - LY)/TY"
+    type: number
     value_format_name: percent_1
   }
 
