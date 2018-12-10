@@ -257,6 +257,7 @@ view: property_pace_f {
 
   measure:  tent_roomrev_var_perc{
     sql: utl..udf_percent_var((${tent_roomrev}),(${tent_roomrev_stly})) ;;
+    type: number
     value_format_name: percent_1
     label: "Rev Rms $ Tentative Act:LY - % var"
     description: "(TY - LY)/TY"
@@ -420,7 +421,7 @@ view: property_pace_f {
   measure:  roomrev_var_ly{
     sql: (${room_rev} - ${room_rev_stly}) ;;
     type: number
-    value_format_name: decimal_0
+    value_format_name: usd_0
     label: "Rev Rms $ Act:LY - var"
     description: "(TY - LY)"
   }
@@ -428,7 +429,7 @@ view: property_pace_f {
   measure:  roomrev_var_budg{
     sql: (${room_rev} - ${budg_roomrev}) ;;
     type: number
-    value_format_name: decimal_0
+    value_format_name: usd_0
     label: "Rev Rms $ Act:Fcst - var"
     description: "(TY - LY)"
   }
@@ -436,7 +437,7 @@ view: property_pace_f {
   measure:  roomrev_var_fcst{
     sql: (${room_rev} - ${act_fcst_roomrev}) ;;
     type: number
-    value_format_name: decimal_0
+    value_format_name: usd_0
     label: "Rev Rms $ Act:Bdgt - var"
     description: "(TY - LY)"
   }
@@ -468,7 +469,7 @@ view: property_pace_f {
   measure:  adr_var_ly{
     sql: (${room_adr} - ${room_adr_stly}) ;;
     type: number
-    value_format_name: decimal_0
+    value_format_name: usd_0
     label: "ADR Act:LY - var"
     description: "(TY - LY)"
   }
@@ -476,7 +477,7 @@ view: property_pace_f {
   measure:  adr_var_budg{
     sql: (${room_adr} - ${budg_adr}) ;;
     type: number
-    value_format_name: decimal_0
+    value_format_name: usd_0
     label: "ADR Act:Fcst - var"
     description: "(TY - LY)"
   }
@@ -484,7 +485,7 @@ view: property_pace_f {
   measure:  adr_var_fcst{
     sql: (${room_adr} - ${act_fcst_adr}) ;;
     type: number
-    value_format_name: decimal_0
+    value_format_name: usd_0
     label: "ADR Act:Bdgt - var"
     description: "(TY - LY)"
   }
