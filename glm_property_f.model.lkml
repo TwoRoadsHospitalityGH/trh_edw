@@ -22,56 +22,56 @@ explore: glm_property_f {
 
   join: glm_property_f_ty {
     from: glm_property_f_ty
-    view_label: "     TY"
+    view_label: "      TY"
     type: cross
     relationship: one_to_one
   }
 
   join: glm_property_f_ly {
     from: glm_property_f_ly
-    view_label: "    LY"
+    view_label: "     LY"
     type: cross
     relationship: one_to_one
   }
 
   join: glm_property_f_bdgt {
     from: glm_property_f_bdgt
-    view_label: "  Bdgt"
+    view_label: "   Bdgt"
     type: cross
     relationship: one_to_one
   }
 
   join: glm_property_f_fcst30 {
     from: glm_property_f_fcst30
-    view_label: "     Fcst"
+    view_label: "   Fcst"
     type: cross
     relationship: one_to_one
   }
 
   join: glm_property_f_toly {
     from: glm_property_f_toly
-    view_label: "     TY"
+    view_label: "      TY"
     type: cross
     relationship: one_to_one
   }
 
   join: glm_property_f_tobdgt {
     from: glm_property_f_tobdgt
-    view_label: "     TY"
+    view_label: "      TY"
     type: cross
     relationship: one_to_one
   }
 
   join: glm_property_f_tofcst30 {
     from: glm_property_f_tofcst30
-    view_label: "      Fcst"
+    view_label: "      TY"
     type: cross
     relationship: one_to_one
   }
 
   join: date_dm {
     from: date_dm
-    view_label: "  Date"
+    view_label: " Date"
     sql_on: ${date_dm.date_sid} = ${glm_property_f.date_sid};;
     sql_where: {% parameter date_dm.available_timeperiod %} = ''
       or utl..udf_period_trunc_dt( {% parameter date_dm.available_timeperiod %}, ${date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter date_dm.available_timeperiod %}  ) ;;
