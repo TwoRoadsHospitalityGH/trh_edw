@@ -43,7 +43,7 @@ explore: glm_property_f {
 
   join: glm_property_f_fcst30 {
     from: glm_property_f_fcst30
-    view_label: "  Fcst"
+    view_label: "     Fcst"
     type: cross
     relationship: one_to_one
   }
@@ -64,7 +64,7 @@ explore: glm_property_f {
 
   join: glm_property_f_tofcst30 {
     from: glm_property_f_tofcst30
-    view_label: "     Fcst"
+    view_label: "      Fcst"
     type: cross
     relationship: one_to_one
   }
