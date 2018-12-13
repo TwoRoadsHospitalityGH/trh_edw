@@ -37,6 +37,12 @@ view: str_property_seg_v {
     hidden: yes
   }
 
+  dimension: space_str {
+    type: string
+    sql: '-----' ;;
+    hidden: yes
+  }
+
   dimension: ly_bt {
     type: number
     sql: ${TABLE}.ly_bt ;;

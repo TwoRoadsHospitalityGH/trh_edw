@@ -47,7 +47,7 @@ view: str_property_seg_v_ty {
     label: "Rms Avail  :"
     description: "Blank space separator."
     type: string
-    sql: ' ' ;;
+    sql: ${str_property_seg_v.space_str} ;;
   }
 
   measure: property_room_avail_cnt {
@@ -71,7 +71,7 @@ view: str_property_seg_v_ty {
     label: "Rev  :"
     description: "Blank space separator."
     type: string
-    sql: ' ' ;;
+    sql: ${str_property_seg_v.space_str} ;;
   }
 
   measure: property_room_rev_amt {
@@ -113,7 +113,7 @@ view: str_property_seg_v_ty {
     label: "Rms Occ  :"
     description: "Blank space separator."
     type: string
-    sql: ' ' ;;
+    sql: ${str_property_seg_v.space_str} ;;
   }
 
   measure: property_occupancy_rate_pct {
@@ -129,7 +129,7 @@ view: str_property_seg_v_ty {
     label: "ADR  :"
     description: "Blank space separator."
     type: string
-    sql: ' ' ;;
+    sql: ${str_property_seg_v.space_str} ;;
   }
 
   measure: property_adr_amt {
@@ -145,7 +145,7 @@ view: str_property_seg_v_ty {
     label: "RevPAR  :"
     description: "Blank space separator."
     type: string
-    sql: ' ' ;;
+    sql: ${str_property_seg_v.space_str} ;;
   }
 
   measure: property_revpar_amt {
@@ -161,7 +161,7 @@ view: str_property_seg_v_ty {
     label: "TRevPAR  :"
     description: "Blank space separator."
     type: string
-    sql: ' ' ;;
+    sql: ${str_property_seg_v.space_str} ;;
   }
 
   measure: property_trevpar_amt {
