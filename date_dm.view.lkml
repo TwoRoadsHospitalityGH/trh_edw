@@ -145,7 +145,7 @@ view: date_dm {
     description: "Within the current month."
     type: yesno
     sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( day, -1, current_date() ) );;
-    hidden: no
+    hidden: yes
   }
 
   filter: current_period_qtd {
@@ -153,7 +153,7 @@ view: date_dm {
     description: "Quarter-to-Date."
     type: yesno
     sql: date_trunc( quarter, ${cal_dt} ) = date_trunc( quarter, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
-    hidden: no
+    hidden: yes
   }
 
   filter: current_period_ytd {
@@ -161,7 +161,7 @@ view: date_dm {
     description: "Year-to-Date."
     type: yesno
     sql: date_trunc( year, ${cal_dt} ) = date_trunc( year, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
-    hidden: no
+    hidden: yes
   }
 
   filter: prior_month {
@@ -169,7 +169,7 @@ view: date_dm {
     description: "Prior month."
     type: yesno
     sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
-    hidden: no
+    hidden: yes
   }
 
   filter: current_period_wtd {
@@ -177,7 +177,7 @@ view: date_dm {
     description: "Within the current week."
     type: yesno
     sql: ${cal_dt} < current_date() and date_trunc( week, ${cal_dt} ) = date_trunc( week, dateadd( day, -1, current_date() ) );;
-    hidden: no
+    hidden: yes
   }
 
   filter: last_completed_mo {
@@ -185,7 +185,7 @@ view: date_dm {
     description: "Last complete month."
     type: yesno
     sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -1, current_date() ) );;
-    hidden: no
+    hidden: yes
   }
 
   filter: cal_ptd_bt {
@@ -193,6 +193,7 @@ view: date_dm {
     description: "Restrict to Completed Periods Only"
     type: yesno
     sql: ${TABLE}.cal_ptd_bt = 1 ;;
+    hidden:  yes
   }
 
   #
