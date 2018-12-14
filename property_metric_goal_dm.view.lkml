@@ -29,7 +29,7 @@ view: property_metric_goal_dm {
   dimension: status_cd  {
     type: string
     sql: ${TABLE}.status_cd ;;
-    hidden: yes
+    hidden: no
   }
 
   measure: goal_val_base  {
@@ -89,11 +89,11 @@ view: property_metric_goal_dm {
     html: {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1' %}
             {{ rendered_value }}
           {% elsif {{performance_metric_dm.value_format_str_m._value}} == 'decimal_1' %}
-            {{ goal_val_d1._rendered_value }}
+            {{ above_goal_val_d1._rendered_value }}
           {% elsif {{performance_metric_dm.value_format_str_m._value}} == 'decimal_2' %}
-            {{ goal_val_d2._rendered_value }}
+            {{ above_goal_val_d2._rendered_value }}
           {% endif %};;
-    required_fields:[goal_val_d1, goal_val_d2, goal_val_id]
+    required_fields:[above_goal_val_d1, above_goal_val_d2, above_goal_val_id]
   }
 
   measure: below_goal_m  {
@@ -107,11 +107,11 @@ view: property_metric_goal_dm {
     html: {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1' %}
             {{ rendered_value }}
           {% elsif {{performance_metric_dm.value_format_str_m._value}} == 'decimal_1' %}
-            {{ goal_val_d1._rendered_value }}
+            {{ below_goal_val_d1._rendered_value }}
           {% elsif {{performance_metric_dm.value_format_str_m._value}} == 'decimal_2' %}
-            {{ goal_val_d2._rendered_value }}
+            {{ below_goal_val_d2._rendered_value }}
           {% endif %};;
-    required_fields:[goal_val_d1, goal_val_d2, goal_val_id]
+    required_fields:[below_goal_val_d1, below_goal_val_d2, below_goal_val_id]
   }
 
   dimension: goal_val_base_d  {

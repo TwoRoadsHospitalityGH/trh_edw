@@ -3,171 +3,169 @@ view: inntopia_dimlodging {
 
     dimension:  EVENTID {
       sql: ${TABLE}.EVENTID ;;
+      hidden:  yes
     }
 
     dimension:  SOURCESYSTEMCODE  {
       sql: ${TABLE}.SOURCESYSTEMCODE ;;
     }
 
-    dimension:  SOURCEDESCRIPTION  {
-      sql: ${TABLE}.SOURCEDESCRIPTION ;;
-    }
-
     dimension:  CUSTOMERKEY  {
       sql: ${TABLE}.CUSTOMERKEY ;;
+      hidden:  yes
     }
 
     dimension:  FAMILYKEY  {
       sql: ${TABLE}.FAMILYKEY ;;
+      hidden:  yes
     }
 
-    dimension:  EVENTSTATEKEY  {
-      sql: ${TABLE}.EVENTSTATEKEY ;;
+    dimension:  BOOKINGDATE_SID  {
+      sql: utl..udf_date_to_julian(${TABLE}.BOOKINGDATE) ;;
+      hidden: yes
     }
 
-    dimension:  EVENTSTATE  {
-      sql: ${TABLE}.EVENTSTATE ;;
+    dimension: CANCELLATIONDATE_SID {
+      sql: utl..udf_date_to_julian(${TABLE}.CANCELLATIONDATE) ;;
+      hidden: yes
     }
 
-    dimension:  BOOKINGDATE  {
-      sql: ${TABLE}.BOOKINGDATE ;;
+    dimension: ARRIVALDATE_SID {
+      sql:utl..udf_date_to_julian(${TABLE}.ARRIVALDATE) ;;
+      hidden:  yes
     }
 
-    dimension:  IATANUMBER  {
-      sql: ${TABLE}.IATANUMBER ;;
+    dimension: DEPARTUREDATE_SID {
+      sql:utl..udf_date_to_julian(${TABLE}.DEPARTUREDATE) ;;
+      hidden:  yes
     }
 
-    dimension: LOCATIONSOURCESYSTEMKEY {
-      sql: ${TABLE}.LOCATIONSOURCESYSTEMKEY ;;
-    }
-
-    dimension: LOCATIONDESCRIPTION {
-      sql: ${TABLE}.LOCATIONDESCRIPTION ;;
-    }
-
-    dimension: RESORTDETAIL {
-      sql: ${TABLE}.RESORTDETAIL ;;
-    }
-
-    dimension: RESORT {
-      sql: ${TABLE}.RESORT ;;
-    }
 
     dimension: SOURCEOFBUSINESSDESCRIPTION {
       sql: ${TABLE}.SOURCEOFBUSINESSDESCRIPTION;;
-      label: "SourceChannelDetail"
+      label: "Source Channel Detail"
+      view_label: "Reservation"
     }
 
     dimension: SOURCEOFBUSINESSGROUP {
       sql: ${TABLE}.SOURCEOFBUSINESSGROUP ;;
-      label: "SourceChannelGroup"
+      label: "Source Channel Group"
+      view_label: "Reservation"
     }
 
     dimension: RATEPLANDESCRIPTION {
       sql: ${TABLE}.RATEPLANDESCRIPTION ;;
-      label: "RatePlanDetail"
+      label: "Rate Code Description"
+      view_label: "Reservation"
     }
 
-    dimension: RATEPLANGROUP {
-      sql: ${TABLE}.RATEPLANGROUP ;;
-      label: "RatePlanGroup"
+    dimension: RATEPLANSOURCESYSTEMKEY {
+      sql: ${TABLE}.RATEPLANSOURCESYSTEMKEY ;;
+      label: "Rate Code"
+      view_label: "Reservation"
     }
 
     dimension: CENREZID {
       sql: ${TABLE}.CENREZID ;;
-      label: "ReservationID"
+      label: "Reservation ID"
+      view_label: "Reservation"
     }
 
     dimension: MARKETSEGMENTDESCRIPTION {
       sql: ${TABLE}.MARKETSEGMENTDESCRIPTION ;;
-      label: "MarketSegmentDetail"
-    }
-
-    dimension: LOCALCURRENCYCODE {
-      sql: ${TABLE}.LOCALCURRENCYCODE ;;
-    }
-
-    dimension: SOURCESYSTEMCUSTOMERKEY {
-      sql: ${TABLE}.SOURCESYSTEMCUSTOMERKEY ;;
+      label: "Market Segment Detail"
+      view_label: "Reservation"
     }
 
     dimension: AGENCYCONTACT {
       sql: ${TABLE}.AGENCYCONTACT ;;
+      view_label: "Reservation"
+      label: "Agency Contact"
     }
 
     dimension: AGENCYLOCATION {
       sql: ${TABLE}.AGENCYLOCATION ;;
+      view_label: "Reservation"
+      label: "Agency Location"
     }
 
     dimension: AGENCYNAME {
       sql: ${TABLE}.AGENCYNAME ;;
+      view_label: "Reservation"
+      label: "Agency Name"
     }
 
     dimension: GROUPCODE {
       sql: ${TABLE}.GROUPCODE ;;
-    }
-
-    dimension: GROUPCONTACT {
-      sql: ${TABLE}.GROUPCONTACT ;;
+      view_label: "Reservation"
+      label: "Group Code"
     }
 
     dimension: GROUPLOCATION {
       sql: ${TABLE}.GROUPLOCATION ;;
+      view_label: "Reservation"
+      label: "Group Location"
     }
 
     dimension: GROUPNAME {
       sql: ${TABLE}.GROUPNAME ;;
+      view_label: "Reservation"
+      label: "Group Name"
     }
-
 
     dimension: LEVEL {
       sql: ${TABLE}.LEVEL ;;
-    }
-
-
-    dimension: RESERVATIONGUESTNAME {
-      sql: ${TABLE}.RESERVATIONGUESTNAME ;;
+      view_label: "Reservation"
+      label: "Reservation Status"
     }
 
     dimension: ROOMNUMBER {
       sql: ${TABLE}.ROOMNUMBER ;;
-    }
-
-    dimension: UNITRATING {
-      sql: ${TABLE}.UNITRATING ;;
+      view_label: "Reservation"
     }
 
     dimension: UNITTYPE {
       sql: ${TABLE}.UNITTYPE ;;
+      view_label: "Reservation"
+      label: "Room Type"
     }
 
     dimension: UNITTYPEDESCRIPTION {
       sql: ${TABLE}.UNITTYPEDESCRIPTION ;;
-    }
-
-    dimension: BRAND {
-      sql: ${TABLE}.BRAND ;;
+      view_label: "Reservation"
+      label: "Room Type Description"
     }
 
     dimension: HOTELID {
       sql: ${TABLE}.HOTELID ;;
+      hidden:  yes
     }
 
     dimension: PRICEBASISDESCRIPTION {
       sql: ${TABLE}.PRICEBASISDESCRIPTION ;;
+      view_label: "Reservation"
+      label: "Rate Code Charged Descripton"
     }
+
+  dimension: PRICEBASIS {
+    sql: ${TABLE}.PRICEBASIS ;;
+    view_label: "Reservation"
+    label: "Rate Code Charged"
+  }
+
 
     dimension: REPORTMARKETSEGMENT {
       sql: ${TABLE}.REPORTMARKETSEGMENT ;;
-      label: "MarketSegmentGroup"
+      label: "Market Segment Group"
+      view_label: "Reservation"
     }
 
-    dimension: CANCELLATIONDATE {
-      sql: ${TABLE}.CANCELLATIONDATE ;;
-    }
-
-    dimension: ARRIVALDATE {
-    sql: ${TABLE}.ARRIVALDATE ;;
+    dimension: lead_time_tier{
+      type: tier
+      tiers: [0, 5, 10, 40, 50, 70, 100]
+      sql: ${TABLE}.LEADTIME ;;
+      label: "Lead Time Tier"
+      view_label: "Reservation"
     }
 
 #-----------------------------------------------------------------------------
@@ -207,31 +205,63 @@ view: inntopia_dimlodging {
       sql: ${TABLE}.CHILDRENINPARTY ;;
     }
 
-    measure:  LODGINGAMOUNT{
-      label: "Lodging Amount"
-      description: "Revenue amount in lodging"
+    measure:  ADR {
+      label: "ADR"
+      description: "Average Daily Rate"
       view_label: "  Measures"
+      type: average
+      sql: ${TABLE}.AVGDAILYRATE;;
+      value_format_name: usd_0
+    }
+
+    measure:  LODGINGNIGHTS  {
+      label: "Rms Bkd"
+      description: "Room Nights Actual + OTB"
+      type: sum
+      sql: ${TABLE}.LODGINGNIGHTS ;;
+    }
+
+    measure:  LODGINGREV{
+      label: "Rev/Rm Rev"
+      description: "Total Room Revenue"
+      value_format_name: usd_0
+      type: sum
+      sql: ${TABLE}.LODGINGNIGHTS*${TABLE}.AVGDAILYRATE ;;
+    }
+
+    measure:  LODGINGAMOUNT{
+      label: "Rev/TRev"
+      description: "Total Portfolio Revenue"
       value_format_name: usd_0
       type: sum
       sql: ${TABLE}.LODGINGAMOUNT ;;
     }
 
-    measure:  LODGINGNIGHTS  {
-      label: "Lodging Nights"
-      description: "Room nights in lodging"
-      view_label: "  Measures"
-      type: sum
-      sql: ${TABLE}.LODGINGNIGHTS ;;
+    measure: customer_cnt  {
+      hidden: yes
+      type: count_distinct
+      sql: ${TABLE}.CUSTOMERKEY ;;
+      }
+
+    measure:  customer_spend{
+      label: "Rev/Customer"
+      description: "Total Revenue Spent/Customer"
+      value_format_name: usd_0
+      sql: ${LODGINGAMOUNT}/${customer_cnt} ;;
     }
 
-    measure:  ADR {
-      label: "ADR"
-      description: "Average Daily Rate"
-      view_label: "  Measures"
-      type: number
-      sql: utl..udf_divide( ${LODGINGAMOUNT}, ${LODGINGNIGHTS});;
+    measure:  customer_room_spend{
+      label: "RmRev/Customer"
+      description: "Room Revenue Spent/Customer"
       value_format_name: usd_0
-  }
+      sql: ${LODGINGREV}/${customer_cnt} ;;
+    }
 
+    measure:  customer_room_night{
+      label: "Rm Bkd/Customer"
+      description: "Room Booked/Customer"
+      value_format_name: decimal_1
+      sql: ${LODGINGNIGHTS}/${customer_cnt} ;;
+    }
 
   }

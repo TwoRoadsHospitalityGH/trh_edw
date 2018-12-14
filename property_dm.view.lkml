@@ -45,6 +45,13 @@ view: property_dm {
     hidden: yes
   }
 
+  dimension: management_company_name {
+    label: "Management Company"
+    description: "Name of company managing the property."
+    type: string
+    sql: ${TABLE}.management_company_name ;;
+  }
+
   dimension: brand_cd {
     label: "Brand Abbreviation"
     description: "Abbreviation of brand name."
@@ -72,6 +79,7 @@ view: property_dm {
     description: "Property city."
     type: string
     sql: ${TABLE}.CITY_NAME ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: state_province_cd {
@@ -86,6 +94,7 @@ view: property_dm {
     description: "Property State/Province."
     type: string
     sql: ${TABLE}.STATE_PROVINCE_NAME ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: zip_cd {
@@ -93,6 +102,7 @@ view: property_dm {
     description: "Property zip code"
     type: string
     sql: ${TABLE}.ZIP_CD ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: property_lat {
@@ -120,6 +130,7 @@ view: property_dm {
     description: "Property country."
     type: string
     sql: ${TABLE}.COUNTRY_NAME ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: region_name {
@@ -149,6 +160,7 @@ view: property_dm {
     description: "Regoinal operations leader."
     type: string
     sql: ${TABLE}.regional_ops_ldr_full_name ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: regional_fnc_ldr_full_name {
@@ -156,6 +168,23 @@ view: property_dm {
     description: "Regional financial leader."
     type: string
     sql: ${TABLE}.regional_fnc_ldr_full_name ;;
+    drill_fields: [property_ds*]
+  }
+
+  dimension: regional_rev_mngr_full_name {
+    label: "Regional Rev Mngr"
+    description: "Regional Revenue Manager."
+    type: string
+    sql: ${TABLE}.regional_rm_ldr_full_name ;;
+    drill_fields: [property_ds*]
+  }
+
+  dimension: regional_sales_ldr_full_name {
+    label: "Regional Sales Leader"
+    description: "Regional Sales Leader."
+    type: string
+    sql: ${TABLE}.regional_sales_ldr_full_name ;;
+    drill_fields: [property_ds*]
   }
 
   dimension: phone_no {
@@ -221,6 +250,41 @@ view: property_dm {
     sql: ${TABLE}.mih_eligible_bt = 1 ;;
   }
 
+  dimension: gl_entity_id {
+    label: "GL Entities"
+    description: "GL Entity."
+    type: string
+    sql: ${TABLE}.oracle_entity_str ;;
+  }
+
+  dimension: tripadvisor_id {
+    label: "Trip Advisor ID"
+    description: "Trip Advisor ID."
+    type: string
+    sql: ${TABLE}.tripadvisor_id_str ;;
+  }
+
+  dimension: revinate_guest_id {
+    label: "Revinate Guest ID"
+    description: "Revinate Guest ID."
+    type: string
+    sql: ${TABLE}.revinate_guest_id_str ;;
+  }
+
+  dimension: revinate_meeting_id {
+    label: "Revinate Meeting ID"
+    description: "Revinate Meeting ID."
+    type: string
+    sql: ${TABLE}.revinate_meeting_id_str ;;
+  }
+
+  dimension: str_id {
+    label: "STR #"
+    description: "Smith Travel Census Number."
+    type: string
+    sql: ${TABLE}.str_id_str ;;
+  }
+
 
  #   filters
 
@@ -266,12 +330,15 @@ view: property_dm {
     fields: [
       brand_name,
       property_name,
-      gl_account_dm.seg2_department_name,
-      gl_account_dm.seg2_subdepartment_name,
-      date_dm.fiscal_period_label,
       ownership_group_name,
       marketing_name,
-      region_name
+      evp_full_last_first,
+      regional_fnc_ldr_full_name,
+      regional_rev_mngr_full_name,
+      regional_sales_ldr_full_name,
+      region_name,
+      state_province_name,
+      city_name
     ]
   }
 }

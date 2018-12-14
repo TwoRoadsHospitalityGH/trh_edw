@@ -146,18 +146,26 @@ view: performance_metric_dm {
   }
 
   filter: gs_rpt_bt{
-    label: "Guest Metric"
-    description: "Is included within guest metrics."
+    label: "Guest Metrics"
+    description: "Guest metrics."
     type: yesno
     sql: ${TABLE}.gs_rpt_bt = 1  ;;
     hidden: no
   }
 
   filter: ms_rpt_bt{
-    label: "Meeting Metric"
-    description: "Is included within meeting metrics."
+    label: "Meeting Metrics"
+    description: "Meeting metrics."
     type: yesno
     sql: ${TABLE}.ms_rpt_bt = 1  ;;
+    hidden: no
+  }
+
+  filter: gsms_rpt_bt{
+    label: "Guest & Meeting Metrics"
+    description: "Guest and meeting metrics."
+    type: yesno
+    sql: ${TABLE}.gs_rpt_bt = 1 or ${TABLE}.ms_rpt_bt = 1  ;;
     hidden: no
   }
 

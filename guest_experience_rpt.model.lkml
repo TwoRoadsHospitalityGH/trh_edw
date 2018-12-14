@@ -9,15 +9,15 @@ datagroup: model_caching_dg {
 }
 
 explore: guest_experience_rpt {
-  group_label: "***Alpha Releases***"
-  label: "Revinate Detail (alpha)"
+  group_label: "Property"
+  label: "Revinate Detail"
   persist_with: model_caching_dg
   view_label: "    Measures"
   case_sensitive: no
 
   access_filter: {
     field: user_property_fdm.user_id
-    user_attribute: atmp_userid
+    user_attribute: looker_ldap_user_id
   }
 
   join: user_property_fdm {
@@ -31,25 +31,55 @@ explore: guest_experience_rpt {
     from: date_dm
     view_label: "  Date Response"
     sql_on: ${response_date_dm.date_sid} = ${guest_experience_rpt.response_date_sid};;
+    sql_where: {% parameter response_date_dm.available_timeperiod %} = ''
+      or utl..udf_period_trunc_dt( {% parameter response_date_dm.available_timeperiod %}, ${response_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter response_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
+#
+#   join: response_date_dm {
+#     from: date_dm
+#     view_label: "  Date Response"
+#     sql_on: ${response_date_dm.date_sid} = ${guest_experience_rpt.response_date_sid};;
+#     type: inner
+#     relationship: many_to_one
+#   }
 
   join: checkin_date_dm {
     from: date_dm
     view_label: "  Date Checkin"
     sql_on: ${checkin_date_dm.date_sid} = ${guest_experience_rpt.checkin_date_sid};;
+    sql_where: {% parameter checkin_date_dm.available_timeperiod %} = ''
+      or utl..udf_period_trunc_dt( {% parameter checkin_date_dm.available_timeperiod %}, ${checkin_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter checkin_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
+#
+#   join: checkin_date_dm {
+#     from: date_dm
+#     view_label: "  Date Checkin"
+#     sql_on: ${checkin_date_dm.date_sid} = ${guest_experience_rpt.checkin_date_sid};;
+#     type: inner
+#     relationship: many_to_one
+#   }
 
   join: checkout_date_dm {
     from: date_dm
     view_label: "  Date Checkout"
     sql_on: ${checkout_date_dm.date_sid} = ${guest_experience_rpt.checkout_date_sid};;
+    sql_where: {% parameter checkout_date_dm.available_timeperiod %} = ''
+      or utl..udf_period_trunc_dt( {% parameter checkout_date_dm.available_timeperiod %}, ${checkout_date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter checkout_date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
+#
+#   join: checkout_date_dm {
+#     from: date_dm
+#     view_label: "  Date Checkout"
+#     sql_on: ${checkout_date_dm.date_sid} = ${guest_experience_rpt.checkout_date_sid};;
+#     type: inner
+#     relationship: many_to_one
+#   }
 
   join: property_dm {
     from: property_dm

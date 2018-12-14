@@ -1,5 +1,32 @@
 view: date_dm {
-  sql_table_name: pedw.fact.DATE_DM ;;
+
+ sql_table_name: pedw.fact.date_dm ;;
+
+  parameter: available_timeperiod {
+    label: "Available Timeframe"
+    type: string
+    allowed_value: {label: "Prior Month" value: "prior_month"}
+    allowed_value: {label: "Prior Month Last Year" value: "ly_prior_month"}
+    allowed_value: {label: "Prior Year" value: "prior_year"}
+    allowed_value: {label: "Prior Quarter" value: "prior_quarter"}
+    allowed_value: {label: "Current Month" value: "current_month"}
+    allowed_value: {label: "Current Month Last Year" value: "ly_current_month"}
+    allowed_value: {label: "Current Year" value: "current_year"}
+    allowed_value: {label: "Current Quarter" value: "current_quarter"}
+    allowed_value: {label: "January" value: "jan"}
+    allowed_value: {label: "Febraury" value: "feb"}
+    allowed_value: {label: "March" value: "mar"}
+    allowed_value: {label: "April" value: "apr"}
+    allowed_value: {label: "May" value: "may"}
+    allowed_value: {label: "June" value: "jun"}
+    allowed_value: {label: "July" value: "jul"}
+    allowed_value: {label: "August" value: "aug"}
+    allowed_value: {label: "September" value: "sep"}
+    allowed_value: {label: "October" value: "oct"}
+    allowed_value: {label: "November" value: "nov"}
+    allowed_value: {label: "December" value: "dec"}
+    }
+
 
   dimension: date_sid {
     sql:  ${TABLE}.DATE_SID ;;
@@ -31,6 +58,7 @@ view: date_dm {
     description: "Day"
     convert_tz: no
     sql: ${cal_dt} ;;
+    drill_fields: [year, quarter, month, week, date]
     allow_fill: no
   }
 
@@ -40,6 +68,7 @@ view: date_dm {
     description: "Week"
     convert_tz: no
     sql: ${cal_dt} ;;
+    drill_fields: [date, day_of_week]
     allow_fill: no
   }
 
@@ -49,6 +78,7 @@ view: date_dm {
     description: "Month"
     convert_tz: no
     sql: ${cal_dt} ;;
+    drill_fields: [week, date, day_of_week]
     allow_fill: no
   }
 
@@ -76,6 +106,7 @@ view: date_dm {
     description: "Quarter of year."
     convert_tz: no
     sql: ${cal_dt} ;;
+    drill_fields: [month, week, date, day_of_week]
     allow_fill: no
   }
 
@@ -95,6 +126,14 @@ view: date_dm {
     convert_tz: no
     sql: ${cal_dt} ;;
     allow_fill: no
+    drill_fields: [quarter, month, week, date, day_of_week]
+  }
+
+  dimension: month_and_year {
+    type: string
+    label: "Month and Year"
+    description: "Month and Year"
+    sql: concat(concat(${month_name}, ', '), ${year}) ;;
   }
 
   #
@@ -106,7 +145,7 @@ view: date_dm {
     description: "Within the current month."
     type: yesno
     sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( day, -1, current_date() ) );;
-    hidden: no
+    hidden: yes
   }
 
   filter: current_period_qtd {
@@ -114,7 +153,7 @@ view: date_dm {
     description: "Quarter-to-Date."
     type: yesno
     sql: date_trunc( quarter, ${cal_dt} ) = date_trunc( quarter, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
-    hidden: no
+    hidden: yes
   }
 
   filter: current_period_ytd {
@@ -122,7 +161,7 @@ view: date_dm {
     description: "Year-to-Date."
     type: yesno
     sql: date_trunc( year, ${cal_dt} ) = date_trunc( year, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
-    hidden: no
+    hidden: yes
   }
 
   filter: prior_month {
@@ -130,7 +169,7 @@ view: date_dm {
     description: "Prior month."
     type: yesno
     sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
-    hidden: no
+    hidden: yes
   }
 
   filter: current_period_wtd {
@@ -138,7 +177,7 @@ view: date_dm {
     description: "Within the current week."
     type: yesno
     sql: ${cal_dt} < current_date() and date_trunc( week, ${cal_dt} ) = date_trunc( week, dateadd( day, -1, current_date() ) );;
-    hidden: no
+    hidden: yes
   }
 
   filter: last_completed_mo {
@@ -146,7 +185,7 @@ view: date_dm {
     description: "Last complete month."
     type: yesno
     sql: date_trunc( month, ${cal_dt} ) = date_trunc( month, dateadd( month, -1, current_date() ) );;
-    hidden: no
+    hidden: yes
   }
 
   filter: cal_ptd_bt {
@@ -154,6 +193,7 @@ view: date_dm {
     description: "Restrict to Completed Periods Only"
     type: yesno
     sql: ${TABLE}.cal_ptd_bt = 1 ;;
+    hidden:  yes
   }
 
   #
@@ -188,7 +228,14 @@ view: date_dm {
     label: "Date Range"
     description: "Dates included in selection. Monthly data will be represented as the first of each month."
     type: string
-    sql:  concat(concat(to_char(min(${cal_dt}), 'mon dd, yy'), ' - ') , to_char(max(${cal_dt}), 'mon dd, yy') ) ;;
+    sql:  concat(concat(to_char(min(${cal_dt}), 'mon dd, ''yy'), ' - ') , to_char(max(${cal_dt}), 'mon dd, ''yy') ) ;;
+  }
+
+  measure: month_range {
+    label: "Month Range"
+    description: "Month included in selection."
+    type: string
+    sql:  concat(concat(to_char(min(${cal_dt}), 'mon ''yy'), ' - ') , to_char(max(${cal_dt}), 'mon ''yy') ) ;;
   }
 
 
