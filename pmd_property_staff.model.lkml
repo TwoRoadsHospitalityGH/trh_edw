@@ -34,6 +34,12 @@ explore: pmd_dim_staff {
     relationship: many_to_one
   }
 
+  join: pmd_dim_staff_property_lnk {
+    from:  pmd_dim_staff_property
+    sql_on: ${user_property_fdm.property_key} = ${property_dm.property_key} ;;
+    type: inner
+    relationship: many_to_one
+  }
 
   join: property_dm {
     from: property_dm
@@ -43,12 +49,7 @@ explore: pmd_dim_staff {
     relationship: many_to_one
   }
 
-  join: pmd_dim_staff_property_lnk {
-    from:  pmd_dim_staff_property
-    sql_on: ${user_property_fdm.property_key} = ${property_dm.property_key} ;;
-    type: inner
-    relationship: many_to_one
-  }
+
 
   join: user_property_fdm {
     from:  user_property_fdm
