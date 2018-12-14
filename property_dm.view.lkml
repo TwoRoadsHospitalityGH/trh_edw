@@ -205,42 +205,42 @@ view: property_dm {
   }
 
   dimension: golfclubhouse_cnt {
-    label: "Golf Clubhouse"
+    label: "Golf Clubhouses"
     description: "Number of golf clubhouses."
     type: number
     sql: ${TABLE}.GOLFCLUBHOUSE_CNT ;;
   }
 
   dimension: golfcourse_cnt {
-    label: "Golf Course"
+    label: "Golf Courses"
     description: "Number of golf courses."
     type: number
     sql: ${TABLE}.GOLFCOURSE_CNT ;;
   }
 
   dimension:  restaurant_cnt {
-    label: "Restaurant"
+    label: "Restaurants"
     description: "Number of restaurants."
     type: number
     sql: ${TABLE}.RESTAURANT_CNT ;;
   }
 
   dimension: bar_lounge_cnt {
-    label: "Bar/Lounge"
+    label: "Bars/Lounges"
     description: "Number of bars or lounges."
     type: number
     sql: ${TABLE}.BAR_LOUNGE_CNT ;;
   }
 
   dimension: poolside_cnt {
-    label: "Poolside"
+    label: "Poolsides"
     description: "Number of poolsides."
     type: number
     sql: ${TABLE}.POOLSIDE_CNT ;;
   }
 
   dimension: cafe_cnt {
-    label: "Cafe"
+    label: "Cafes"
     description: "Number of cafes."
     type: number
     sql: ${TABLE}.CAFE_CNT ;;
