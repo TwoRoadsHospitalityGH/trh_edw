@@ -155,6 +155,118 @@ view: property_dm {
     sql: ${TABLE}.ownership_group_name ;;
   }
 
+  dimension: meeting_space_indoor_square_feet_amt {
+    label: "Square Feet - Meeting Space - Indoor"
+    description: "Indoor meeting space square footage."
+    type: number
+    sql: ${TABLE}.MEETING_SPACE_INDOOR_SQUARE_FEET_AMT ;;
+  }
+
+  dimension: meeting_space_outdoor_square_feet_amt {
+    label: "Square Feet - Meeting Space - Outdoor"
+    description: "Outdoor meeting space square footage."
+    type: number
+    sql: ${TABLE}.MEETING_SPACE_OUTDOOR_SQUARE_FEET_AMT ;;
+  }
+
+  dimension: total_meeting_space_square_feet_amt {
+    label: "Square Feet - Meeting Space - Indoor/Outdoor"
+    description: "Outdoor meeting space square footage."
+    type: number
+    sql: ${TABLE}.TOTAL_MEETING_SPACE_SQUARE_FEET_AMT ;;
+  }
+
+  dimension: room_cnt {
+    label: "Rms"
+    description: "Number of rooms."
+    type: number
+    sql: ${TABLE}.ROOM_CNT ;;
+  }
+
+  dimension: spa_square_feet_amt {
+    label: "Square Feet - Spa "
+    description: "Spa square footage."
+    type: number
+    sql: ${TABLE}.SPA_SQUARE_FEET_AMT ;;
+  }
+
+  dimension: treatment_rooms_cnt {
+    label: "Treatment Rms"
+    description: "Number of treatment rooms."
+    type: number
+    sql: ${TABLE}.TREATMENT_ROOM_CNT ;;
+  }
+
+  dimension: rooftop_cnt {
+    label: "Rooftop"
+    description: "Number of rooftops."
+    type: number
+    sql: ${TABLE}.ROOFTOP_CNT ;;
+  }
+
+  dimension: golfclubhouse_cnt {
+    label: "Golf Clubhouse"
+    description: "Number of golf clubhouses."
+    type: number
+    sql: ${TABLE}.GOLFCLUBHOUSE_CNT ;;
+  }
+
+  dimension: golfcourse_cnt {
+    label: "Golf Course"
+    description: "Number of golf courses."
+    type: number
+    sql: ${TABLE}.GOLFCOURSE_CNT ;;
+  }
+
+  dimension:  restaurant_cnt {
+    label: "Restaurant"
+    description: "Number of restaurants."
+    type: number
+    sql: ${TABLE}.RESTAURANT_CNT ;;
+  }
+
+  dimension: bar_lounge_cnt {
+    label: "Bar/Lounge"
+    description: "Number of bars or lounges."
+    type: number
+    sql: ${TABLE}.BAR_LOUNGE_CNT ;;
+  }
+
+  dimension: poolside_cnt {
+    label: "Poolside"
+    description: "Number of poolsides."
+    type: number
+    sql: ${TABLE}.POOLSIDE_CNT ;;
+  }
+
+  dimension: cafe_cnt {
+    label: "Cafe"
+    description: "Number of cafes."
+    type: number
+    sql: ${TABLE}.CAFE_CNT ;;
+  }
+
+  dimension: total_outlet_cnt {
+    label: "Total Outlets"
+    description: "Number of total outlets."
+    type: number
+    sql: ${TABLE}.TOTAL_OUTLET_CNT ;;
+  }
+
+  dimension: four_diamond_amt {
+    label: "4 Diamond"
+    description: "Diamond rating."
+    type: number
+    sql: ${TABLE}.FOUR_DIAMOND_AMT ;;
+  }
+
+  dimension: five_star_amt {
+    label: "5 Star"
+    description: "Star rating."
+    type: number
+    sql: ${TABLE}.FIVE_STAR_AMT ;;
+  }
+
   dimension: evp_full_last_first {
     label: "Regional Ops Leader"
     description: "Regoinal operations leader."
@@ -248,6 +360,13 @@ view: property_dm {
     description: "Indication of MIH eligible property."
     type: yesno
     sql: ${TABLE}.mih_eligible_bt = 1 ;;
+  }
+
+  dimension: union_workforce_bt {
+    label: "Union Workforce"
+    description: "Indication of Union workforce property."
+    type: yesno
+    sql: ${TABLE}.union_workforce_bt = 1 ;;
   }
 
   dimension: gl_entity_id {
