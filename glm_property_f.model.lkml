@@ -3,7 +3,7 @@ connection: "edw"
 include: "*.view.lkml"                       # include all views in this project
 
 
-label: "Monthly GL Balances"
+label: "GL Monthly"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.dev.glm_property_f ;;
@@ -15,10 +15,22 @@ explore: glm_property_f {
     from: glm_property_f
     sql_table_name: pedw.dev.glm_property_f ;;
     group_label: "***Development***"
-    label: "Monthly GL Balances (dev)"
+    label: "GL Monthly (dev)"
     persist_with: model_caching_dg
     case_sensitive: no
 
+
+  access_filter: {
+    field: user_property_fdm.user_id
+    user_attribute: looker_ldap_user_id
+  }
+
+  join: user_property_fdm {
+    from:  user_property_fdm
+    sql_on: ${user_property_fdm.property_key} = ${glm_property_f.property_key} ;;
+    type: inner
+    relationship: many_to_one
+  }
 
   join: glm_property_f_ty {
     from: glm_property_f_ty
