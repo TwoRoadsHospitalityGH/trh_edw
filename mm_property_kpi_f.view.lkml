@@ -224,8 +224,8 @@ view: mm_property_kpi_f {
 
   measure: measure_kpi {
     type: number
-    label: "Metric Value"
-    description: "Metric amount."
+    label: "Score"
+    description: "Metric score/value"
     value_format_name: percent_1
     sql:  ${kpi_val_base} ;;
     html: <!-- exceed  -->
