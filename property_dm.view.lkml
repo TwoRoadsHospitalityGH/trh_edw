@@ -254,14 +254,14 @@ view: property_dm {
   }
 
   dimension: four_diamond_amt {
-    label: "4 Diamond"
+    label: "Diamond Rating"
     description: "Diamond rating."
     type: number
     sql: ${TABLE}.FOUR_DIAMOND_AMT ;;
   }
 
   dimension: five_star_amt {
-    label: "5 Star"
+    label: "Star Rating"
     description: "Star rating."
     type: number
     sql: ${TABLE}.FIVE_STAR_AMT ;;
