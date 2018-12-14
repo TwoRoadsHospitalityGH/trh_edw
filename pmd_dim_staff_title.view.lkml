@@ -1,5 +1,5 @@
 view: pmd_dim_staff_title {
-  sql_table_name: praw_pmd.dbo.dimpropertytitle ;;
+  sql_table_name: praw_pmd.dbo.dimpropertystafftitle ;;
 
 # Keys
 

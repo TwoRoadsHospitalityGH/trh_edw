@@ -5,7 +5,7 @@ view: pmd_dim_staff {
 
   dimension: property_staff_key{
     type: number
-    sql: ${TABLE}.propertystaffey ;;
+    sql: ${TABLE}.propertystaffkey ;;
     hidden: yes
   }
 
