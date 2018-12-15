@@ -3,7 +3,7 @@ view: date_dm {
  sql_table_name: pedw.fact.date_dm ;;
 
   parameter: available_timeperiod {
-    label: "Available Timeframe"
+    label: "Timeframe"
     type: string
     allowed_value: {label: "Prior Month" value: "prior_month"}
     allowed_value: {label: "Prior Month Last Year" value: "ly_prior_month"}
@@ -131,9 +131,10 @@ view: date_dm {
 
   dimension: month_and_year {
     type: string
-    label: "Month and Year"
+    label: "Month, Year"
     description: "Month and Year"
     sql: concat(concat(${month_name}, ', '), ${year}) ;;
+    order_by_field: month
   }
 
   #
