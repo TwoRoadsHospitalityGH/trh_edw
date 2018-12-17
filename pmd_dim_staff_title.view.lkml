@@ -15,8 +15,8 @@ view: pmd_dim_staff_title {
   #--------------------------------------------------------------------------------
   dimension: staff_title {
     view_label: "Employee"
-    label: "Department"
-    description: "Employee Department"
+    label: "Title"
+    description: "Employee Title"
     type: string
     sql: ${TABLE}.stafftitle ;;
   }
