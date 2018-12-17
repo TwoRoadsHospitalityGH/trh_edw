@@ -34,21 +34,19 @@ explore: pmd_dim_staff {
     relationship: many_to_one
   }
 
-  join: pmd_dim_staff_property_lnk {
-    from:  pmd_dim_staff_property
-    sql_on: ${user_property_fdm.property_key} = ${property_dm.property_key} ;;
-    type: inner
-    relationship: many_to_one
+  join: pmd_staff_property_lnk {
+      from: pmd_dim_staff_property
+      sql_on: ${pmd_staff_property_lnk.property_staff_key} = ${pmd_dim_staff.property_staff_key} ;;
+      relationship: many_to_one
   }
 
   join: property_dm {
     from: property_dm
     view_label: " Property"
-    sql_on: ${property_dm.property_key} = ${pmd_dim_staff_property_lnk.property_key} ;;
+    sql_on: ${property_dm.property_key} = ${pmd_staff_property_lnk.property_key} ;;
     type: inner
-    relationship: many_to_one
+    relationship: one_to_many
   }
-
 
 
   join: user_property_fdm {
