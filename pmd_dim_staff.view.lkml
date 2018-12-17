@@ -60,7 +60,7 @@ view: pmd_dim_staff {
     label: "Phone"
     description: "Phone"
     type: string
-    sql: ${TABLE}.phone ;;
+    sql: concat(concat(concat(concat(left(${TABLE}.phone,3),'-'),substring(${TABLE}.phone,4,3)),'-'),right(${TABLE}.phone,4)) ;;
   }
 
   dimension: ext {
@@ -76,7 +76,7 @@ view: pmd_dim_staff {
     label: "Cell Phone"
     description: "Cell Phone"
     type: string
-    sql: ${TABLE}.cellphone ;;
+    sql: concat(concat(concat(concat(left(${TABLE}.cellphone,3),'-'),substring(${TABLE}.cellphone,4,3)),'-'),right(${TABLE}.cellphone,4)) ;;
   }
 
   dimension: emailaddress {
@@ -92,6 +92,6 @@ view: pmd_dim_staff {
     label: "Regional Y/N"
     description: "Regional Y/N"
     type: yesno
-    sql: IIf(${TABLE}.isregional=1,"Yes","No") ;;
+    sql: ${TABLE}.isregional ;;
   }
 }
