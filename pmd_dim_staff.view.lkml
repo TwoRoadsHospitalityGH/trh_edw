@@ -41,6 +41,12 @@ view: pmd_dim_staff {
     sql: ${TABLE}.lastname ;;
   }
 
+  dimension: full_name  {
+    view_label: "Employee"
+    label: "Full Name"
+    sql: concat(concat(${TABLE}.firstname," "),${TABLE}.lastname)  ;;
+  }
+
   dimension: middle_name {
     view_label: "Employee"
     label: "Middle Name"
@@ -85,7 +91,7 @@ view: pmd_dim_staff {
     view_label: "Employee"
     label: "Regional Y/N"
     description: "Regional Y/N"
-    type: string
+    type: yesno
     sql: ${TABLE}.isregional ;;
   }
 }
