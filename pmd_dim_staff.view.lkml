@@ -92,6 +92,6 @@ view: pmd_dim_staff {
     label: "Regional Y/N"
     description: "Regional Y/N"
     type: yesno
-    sql: ${TABLE}.isregional ;;
+    sql: IIf(${TABLE}.isregional=1,"Yes","No") ;;
   }
 }
