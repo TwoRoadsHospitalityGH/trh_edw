@@ -44,7 +44,7 @@ view: pmd_dim_staff {
   dimension: full_name  {
     view_label: "Employee"
     label: "Full Name"
-    sql: concat(concat(${TABLE}.firstname," "),${TABLE}.lastname)  ;;
+    sql: concat(concat(${TABLE}.firstname,' '),${TABLE}.lastname)  ;;
   }
 
   dimension: middle_name {
