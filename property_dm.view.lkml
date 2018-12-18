@@ -67,6 +67,13 @@ view: property_dm {
     drill_fields: [property_ds*]
   }
 
+  dimension: full_address {
+    label: "Full Address"
+    description: "Property address includng city/state/zip."
+    type: string
+    sql: concat(concat(concat(concat(concat(concat(${TABLE}.ADDRESS,' '),${TABLE}.CITY_NAME),' ,'),${TABLE}.STATE_PROVINCE_CD),' '),${TABLE}.ZIP_CD) ;;
+  }
+
   dimension: address {
     label: "Address"
     description: "Property address."
