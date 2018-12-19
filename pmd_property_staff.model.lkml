@@ -15,10 +15,6 @@ explore: pmd_dim_staff {
   persist_with: model_caching_dg
   case_sensitive: no
 
-  access_filter: {
-    field: user_property_fdm.user_id
-    user_attribute: looker_ldap_user_id
-  }
 
   join: pmd_dim_staff_dept {
     from:  pmd_dim_staff_dept
@@ -48,11 +44,4 @@ explore: pmd_dim_staff {
     relationship: one_to_many
   }
 
-
-  join: user_property_fdm {
-    from:  user_property_fdm
-    sql_on: ${user_property_fdm.property_key} = ${property_dm_staff.property_key} ;;
-    type: inner
-    relationship: many_to_one
-  }
 }
