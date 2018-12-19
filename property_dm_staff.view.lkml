@@ -319,10 +319,18 @@ view: property_dm_staff {
 # Measures
 #-----------------------------------------------------------------------------------------
 
-  dimension: meeting_space_indoor_square_feet_amt {
+  measure: property_cnt {
+    label: "Property Count"
+    description: "Property Count."
+    type: count_distinct
+    sql: ${TABLE}.PROPERTY_KEY ;;
+    hidden: no
+  }
+
+  measure: meeting_space_indoor_square_feet_amt {
     label: "Square Feet - Meeting Space - Indoor"
     description: "Indoor meeting space square footage."
-    type: number
+    type: sum
     sql: ${TABLE}.MEETING_SPACE_INDOOR_SQUARE_FEET_AMT ;;
   }
 
