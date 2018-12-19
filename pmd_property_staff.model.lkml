@@ -4,7 +4,7 @@ include: "*.view"         # include all views in this project
 label: "Property Staff"
 
 datagroup: model_caching_dg {
-  sql_trigger: select max( dw_update_dt ) from pedw_pmd.dbo.dimpropertystaff ;;
+  sql_trigger: select max( dw_update_dt ) from pedw.fact.property_dm ;;
   max_cache_age: "8 hours"
 }
 
