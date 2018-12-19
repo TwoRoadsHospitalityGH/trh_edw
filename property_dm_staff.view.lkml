@@ -4,6 +4,7 @@ view: property_dm_staff {
   dimension: property_key {
     label: "Property Key PMD"
     description: "Property Code within PMD."
+    primary_key: yes
     type: number
     sql: ${TABLE}.PROPERTY_KEY ;;
     hidden: no
