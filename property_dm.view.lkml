@@ -4,6 +4,7 @@ view: property_dm {
   dimension: property_key {
     label: "Property Key PMD"
     description: "Property Code within PMD."
+    primary_key: yes
     type: number
     sql: ${TABLE}.PROPERTY_KEY ;;
     hidden: no
@@ -163,27 +164,31 @@ view: property_dm {
   }
 
   dimension: meeting_space_indoor_square_feet_amt {
-    label: "Square Feet - Meeting Space - Indoor"
+    view_label: " Property Stats"
+    label: "Meeting Spuare Feet - Indoor"
     description: "Indoor meeting space square footage."
     type: number
     sql: ${TABLE}.MEETING_SPACE_INDOOR_SQUARE_FEET_AMT ;;
   }
 
   dimension: meeting_space_outdoor_square_feet_amt {
-    label: "Square Feet - Meeting Space - Outdoor"
+    view_label: " Property Stats"
+    label: "Meeting Spuare Feet - Outdoor"
     description: "Outdoor meeting space square footage."
     type: number
     sql: ${TABLE}.MEETING_SPACE_OUTDOOR_SQUARE_FEET_AMT ;;
   }
 
   dimension: total_meeting_space_square_feet_amt {
-    label: "Square Feet - Meeting Space - Indoor/Outdoor"
+    view_label: " Property Stats"
+    label: "Meeting Spuare Feet - Indoor/Outdoor"
     description: "Outdoor meeting space square footage."
     type: number
     sql: ${TABLE}.TOTAL_MEETING_SPACE_SQUARE_FEET_AMT ;;
   }
 
   dimension: room_cnt {
+    view_label: " Property Stats"
     label: "Rms"
     description: "Number of rooms."
     type: number
@@ -191,27 +196,31 @@ view: property_dm {
   }
 
   dimension: spa_square_feet_amt {
-    label: "Square Feet - Spa "
+    view_label: " Property Stats"
+    label: "Spa - Square Feet "
     description: "Spa square footage."
     type: number
     sql: ${TABLE}.SPA_SQUARE_FEET_AMT ;;
   }
 
   dimension: treatment_rooms_cnt {
-    label: "Treatment Rms"
+    view_label: " Property Stats"
+    label: "Spa - Treatment Rms"
     description: "Number of treatment rooms."
     type: number
     sql: ${TABLE}.TREATMENT_ROOM_CNT ;;
   }
 
   dimension: rooftop_cnt {
-    label: "Rooftop"
+    view_label: " Property Stats"
+    label: "Outlet - Rooftop"
     description: "Number of rooftops."
     type: number
     sql: ${TABLE}.ROOFTOP_CNT ;;
   }
 
   dimension: golfclubhouse_cnt {
+    view_label: " Property Stats"
     label: "Golf Clubhouses"
     description: "Number of golf clubhouses."
     type: number
@@ -219,6 +228,7 @@ view: property_dm {
   }
 
   dimension: golfcourse_cnt {
+    view_label: " Property Stats"
     label: "Golf Courses"
     description: "Number of golf courses."
     type: number
@@ -226,35 +236,40 @@ view: property_dm {
   }
 
   dimension:  restaurant_cnt {
-    label: "Restaurants"
+    view_label: " Property Stats"
+    label: "Outlet Restaurants"
     description: "Number of restaurants."
     type: number
     sql: ${TABLE}.RESTAURANT_CNT ;;
   }
 
   dimension: bar_lounge_cnt {
-    label: "Bars/Lounges"
+    view_label: " Property Stats"
+    label: "Outlet Bars/Lounges"
     description: "Number of bars or lounges."
     type: number
     sql: ${TABLE}.BAR_LOUNGE_CNT ;;
   }
 
   dimension: poolside_cnt {
-    label: "Poolsides"
+    view_label: " Property Stats"
+    label: "Outlet Poolsides"
     description: "Number of poolsides."
     type: number
     sql: ${TABLE}.POOLSIDE_CNT ;;
   }
 
   dimension: cafe_cnt {
-    label: "Cafes"
+    view_label: " Property Stats"
+    label: "Outlet Cafes"
     description: "Number of cafes."
     type: number
     sql: ${TABLE}.CAFE_CNT ;;
   }
 
   dimension: total_outlet_cnt {
-    label: "Total Outlets"
+    view_label: " Property Stats"
+    label: "Outlets"
     description: "Number of total outlets."
     type: number
     sql: ${TABLE}.TOTAL_OUTLET_CNT ;;
@@ -410,6 +425,133 @@ view: property_dm {
     type: string
     sql: ${TABLE}.str_id_str ;;
   }
+
+
+#-----------------------------------------------------------------------------------------
+# Measures
+#-----------------------------------------------------------------------------------------
+
+  measure: m_property_cnt {
+    view_label: " Property Stats"
+    label: "Ttl Property Count"
+    description: "Total Property Count"
+    type: count_distinct
+    sql: ${TABLE}.PROPERTY_KEY ;;
+    hidden: no
+  }
+
+  measure: m_meeting_space_indoor_square_feet_amt {
+    view_label: " Property Stats"
+    label: "Ttl Meeting - Square Feet - Indoor"
+    description: "Total Summed Indoor meeting space square footage."
+    type: sum
+    sql: ${TABLE}.MEETING_SPACE_INDOOR_SQUARE_FEET_AMT ;;
+  }
+
+  measure: m_meeting_space_outdoor_square_feet_amt {
+    view_label: " Property Stats"
+    label: "Ttl Meeting Square Feet  - Outdoor"
+    description: "Total Summed Outdoor meeting space square footage."
+    type: sum
+    sql: ${TABLE}.MEETING_SPACE_OUTDOOR_SQUARE_FEET_AMT ;;
+  }
+
+  measure: m_total_meeting_space_square_feet_amt {
+    view_label: " Property Stats"
+    label: "Ttl Meeting Square Feet - Indoor/Outdoor"
+    description: "Total Summed Outdoor meeting space square footage."
+    type: sum
+    sql: ${TABLE}.TOTAL_MEETING_SPACE_SQUARE_FEET_AMT ;;
+  }
+
+  measure: m_room_cnt {
+    view_label: " Property Stats"
+    label: "Ttl Rms"
+    description: "Total Summed Number of rooms."
+    type: sum
+    sql: ${TABLE}.ROOM_CNT ;;
+  }
+
+  measure: m_spa_square_feet_amt {
+    view_label: " Property Stats"
+    label: "Ttl Spa - Square Feet "
+    description: "Total Summed Spa square footage."
+    type: sum
+    sql: ${TABLE}.SPA_SQUARE_FEET_AMT ;;
+  }
+
+  measure: m_treatment_rooms_cnt {
+    view_label: " Property Stats"
+    label: "Ttl Spa - Treatment Rms"
+    description: "Total Summed Number of treatment rooms."
+    type: sum
+    sql: ${TABLE}.TREATMENT_ROOM_CNT ;;
+  }
+
+  measure: m_rooftop_cnt {
+    view_label: " Property Stats"
+    label: "Ttl Outlet - Rooftop"
+    description: "Total Summed Number of rooftops."
+    type: sum
+    sql: ${TABLE}.ROOFTOP_CNT ;;
+  }
+
+  measure: m_golfclubhouse_cnt {
+    view_label: " Property Stats"
+    label: "Golf - Clubhouses"
+    description: "Total Summed Number of golf clubhouses."
+    type: sum
+    sql: ${TABLE}.GOLFCLUBHOUSE_CNT ;;
+  }
+
+  measure: m_golfcourse_cnt {
+    view_label: " Property Stats"
+    label: "Golf - Courses"
+    description: "Total Summed Number of golf courses."
+    type: sum
+    sql: ${TABLE}.GOLFCOURSE_CNT ;;
+  }
+
+  measure:  m_restaurant_cnt {
+    view_label: " Property Stats"
+    label: "Ttl Outlet Restaurants"
+    description: "Total Summed Number of restaurants."
+    type: sum
+    sql: ${TABLE}.RESTAURANT_CNT ;;
+  }
+
+  measure: m_bar_lounge_cnt {
+    view_label: " Property Stats"
+    label: "Ttl Outlet Bars/Lounges"
+    description: "Total Summed Number of bars or lounges."
+    type: sum
+    sql: ${TABLE}.BAR_LOUNGE_CNT ;;
+  }
+
+  measure: m_poolside_cnt {
+    view_label: " Property Stats"
+    label: "Ttl Outlet Poolsides"
+    description: "Total Summed Number of poolsides."
+    type: sum
+    sql: ${TABLE}.POOLSIDE_CNT ;;
+  }
+
+  measure: m_cafe_cnt {
+    view_label: " Property Stats"
+    label: "Ttl Outlet Cafes"
+    description: "Total SummedNumber of cafes."
+    type: sum
+    sql: ${TABLE}.CAFE_CNT ;;
+  }
+
+  measure: m_total_outlet_cnt {
+    view_label: " Property Stats"
+    label: "Ttl Outlets"
+    description: "Total Summed Number of total outlets."
+    type: sum
+    sql: ${TABLE}.TOTAL_OUTLET_CNT ;;
+  }
+
 
 
  #   filters

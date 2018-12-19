@@ -36,10 +36,10 @@ explore: pmd_dim_staff {
       relationship: many_to_one
   }
 
-  join: property_dm_staff {
-    from: property_dm_staff
+  join: property_dm {
+    from: property_dm
     view_label: " Property"
-    sql_on: ${property_dm_staff.property_key} = ${pmd_staff_property_lnk.property_key} ;;
+    sql_on: ${property_dm.property_key} = ${pmd_staff_property_lnk.property_key} ;;
     type: inner
     relationship: one_to_many
   }
