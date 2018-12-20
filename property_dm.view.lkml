@@ -213,7 +213,7 @@ view: property_dm {
 
   dimension: rooftop_cnt {
     view_label: " Property Stats"
-    label: "Outlet - Rooftop"
+    label: "Outlet Rooftop"
     description: "Number of rooftops."
     type: number
     sql: ${TABLE}.ROOFTOP_CNT ;;
@@ -490,7 +490,7 @@ view: property_dm {
 
   measure: m_rooftop_cnt {
     view_label: " Property Stats"
-    label: "Ttl Outlet - Rooftop"
+    label: "Ttl Outlet Rooftop"
     description: "Total Summed Number of rooftops."
     type: sum
     sql: ${TABLE}.ROOFTOP_CNT ;;
