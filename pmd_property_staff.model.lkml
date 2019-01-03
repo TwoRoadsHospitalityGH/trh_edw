@@ -44,4 +44,11 @@ explore: pmd_dim_staff {
     relationship: one_to_many
   }
 
+  always_filter: {
+    filters:{
+      field: property_dm.active_fl
+      value: "yes"
+    }
+    }
+
 }
