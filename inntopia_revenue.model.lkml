@@ -4,7 +4,7 @@ include: "*.view"         # include all views in this project
 label: "Inntopia"
 
 datagroup: model_caching_dg {
-  sql_trigger: select max( dw_update_dt ) from pedw.dev.inntopia_event_f ;;
+  sql_trigger: select max( dw_update_dt ) from pedw.dev.inntopia_event_property_f ;;
   max_cache_age: "8 hours"
 }
 

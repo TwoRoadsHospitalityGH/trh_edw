@@ -4,7 +4,7 @@ include: "*.view"         # include all views in this project
 label: "Revintel"
 
 datagroup: model_caching_dg {
-  sql_trigger: select max( dw_update_dt ) from praw.main.two_roads_extract ;;
+  sql_trigger: select max( dw_update_dt ) from praw_revintel.main.two_roads_extract ;;
   max_cache_age: "8 hours"
 }
 
