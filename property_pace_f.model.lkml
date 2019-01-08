@@ -1,7 +1,7 @@
 connection: "edw"
 include: "*.view"         # include all views in this project
 
-label: "Property Pace (uat)"
+label: "Portfolio Pace (uat)"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.fact.property_pace_f ;;
@@ -10,7 +10,7 @@ datagroup: model_caching_dg {
 
 explore: property_pace_f {
   group_label: "***User Acceptance Testing***"
-  label: "Property Pace (uat)"
+  label: "Portfolio Pace (uat)"
   view_label: "  Measures"
   persist_with: model_caching_dg
   case_sensitive: no
