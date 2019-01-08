@@ -11,8 +11,8 @@ datagroup: model_caching_dg {
 explore: inntopia_res_property_f {
   from: inntopia_res_property_f
   sql_table_name: pedw.dev.inntopia_res_property_f ;;
-  group_label: "***User Acceptance Testing***"
-  label: "Property Pace Inntopia (uat)"
+  group_label: "***Development***"
+  label: "Property Pace Inntopia (dev)"
   persist_with: model_caching_dg
 
   access_filter: {
