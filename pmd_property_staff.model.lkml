@@ -1,7 +1,7 @@
 connection: "edw"
 include: "*.view"         # include all views in this project
 
-label: "Property Staff"
+label: "Property Contacts"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.fact.property_dm ;;
@@ -10,7 +10,7 @@ datagroup: model_caching_dg {
 
 explore: pmd_dim_staff {
   group_label: "Property"
-  label: "Property Staff"
+  label: "Property Contacts"
   view_label: "  Employee"
   persist_with: model_caching_dg
   case_sensitive: no
