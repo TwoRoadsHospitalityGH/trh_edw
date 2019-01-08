@@ -9,7 +9,7 @@ datagroup: model_caching_dg {
 }
 
 explore: pmd_dim_staff {
-  group_label: "***Development***"
+  group_label: "Property"
   label: "Property Staff"
   view_label: "  Employee"
   persist_with: model_caching_dg
@@ -48,6 +48,10 @@ explore: pmd_dim_staff {
     filters:{
       field: property_dm.active_fl
       value: "yes"
+    }
+    filters:{
+    field: property_dm.management_company_name
+    value: "CoralTree"
     }
     }
 
