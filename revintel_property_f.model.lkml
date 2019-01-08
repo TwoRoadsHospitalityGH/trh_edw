@@ -4,7 +4,7 @@ include: "*.view.lkml"                       # include all views in this project
 label: "Property Pace (uat)"
 
 datagroup: model_caching_dg {
-  sql_trigger: select max( dw_update_dt ) from pedw.dev.revintel_property_f ;;
+  sql_trigger: select max( dw_update_dt ) from pedw.fact.revintel_property_f ;;
   max_cache_age: "8 hours"
 }
 

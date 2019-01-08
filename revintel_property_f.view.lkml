@@ -1,5 +1,5 @@
 view: revintel_property_f {
-  sql_table_name: pedw.dev.hapi_res_property_f  ;;
+  sql_table_name: pedw.fact.revintel_property_f  ;;
 
   #-------------------------------------------------------------------------------------------
   #-- Keys
