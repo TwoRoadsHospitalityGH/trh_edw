@@ -419,7 +419,7 @@ view: property_pace_f {
   #-- # Vairance
   #-------------------------------------------------------------------------------------------
   measure:  roomrev_var_ly{
-    sql: (${room_rev} - ${room_rev_stly}) ;;
+    sql: (${room_rev} - ifnull(${room_rev_stly},0)) ;;
     type: number
     value_format_name: usd_0
     label: "Rev Rms $ Act:LY - var"
@@ -427,7 +427,7 @@ view: property_pace_f {
   }
 
   measure:  roomrev_var_budg{
-    sql: (${room_rev} - ${budg_roomrev}) ;;
+    sql: (${room_rev} - ifnull(${budg_roomrev},0)) ;;
     type: number
     value_format_name: usd_0
     label: "Rev Rms $ Act:Fcst - var"
@@ -435,7 +435,7 @@ view: property_pace_f {
   }
 
   measure:  roomrev_var_fcst{
-    sql: (${room_rev} - ${act_fcst_roomrev}) ;;
+    sql: (${room_rev} - ifnull(${act_fcst_roomrev},0)) ;;
     type: number
     value_format_name: usd_0
     label: "Rev Rms $ Act:Bdgt - var"
@@ -443,7 +443,7 @@ view: property_pace_f {
   }
 
   measure:  roomsold_var_ly{
-    sql: (${roomsold} - ${roomsold_stly}) ;;
+    sql: (${roomsold} - ifnull(${roomsold_stly},0)) ;;
     type: number
     value_format_name: decimal_0
     label: "Rms Bkd Act:LY - var"
@@ -451,7 +451,7 @@ view: property_pace_f {
   }
 
   measure:  roomsold_var_budg{
-    sql: (${roomsold} - ${budg_roomsold}) ;;
+    sql: (${roomsold} - ifnull(${budg_roomsold},0)) ;;
     type: number
     value_format_name: decimal_0
     label: "Rms Bkd Act:Fcst - var"
@@ -459,7 +459,7 @@ view: property_pace_f {
   }
 
   measure:  roomsold_var_fcst{
-    sql: (${roomsold} - ${act_fcst_roomsold}) ;;
+    sql: (${roomsold} -ifnull( ${act_fcst_roomsold},0)) ;;
     type: number
     value_format_name: decimal_0
     label: "Rms Bkd Act:Bdgt - var"
@@ -467,7 +467,7 @@ view: property_pace_f {
   }
 
   measure:  adr_var_ly{
-    sql: (${room_adr} - ${room_adr_stly}) ;;
+    sql: (${room_adr} - ifnull(${room_adr_stly},0)) ;;
     type: number
     value_format_name: usd_0
     label: "ADR Act:LY - var"
@@ -475,7 +475,7 @@ view: property_pace_f {
   }
 
   measure:  adr_var_budg{
-    sql: (${room_adr} - ${budg_adr}) ;;
+    sql: (${room_adr} - ifnull(${budg_adr},0)) ;;
     type: number
     value_format_name: usd_0
     label: "ADR Act:Fcst - var"
@@ -483,7 +483,7 @@ view: property_pace_f {
   }
 
   measure:  adr_var_fcst{
-    sql: (${room_adr} - ${act_fcst_adr}) ;;
+    sql: (${room_adr} - ifnull(${act_fcst_adr},0)) ;;
     type: number
     value_format_name: usd_0
     label: "ADR Act:Bdgt - var"
