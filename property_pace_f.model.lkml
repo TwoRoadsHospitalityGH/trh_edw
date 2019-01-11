@@ -42,4 +42,12 @@ explore: property_pace_f {
     type: inner
     relationship: many_to_one
   }
+
+  always_filter: {
+    filters: {
+      field: property_dm.management_company_name
+      value: "CoralTree"
+    }
+  }
+
 }

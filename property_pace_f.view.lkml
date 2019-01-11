@@ -376,7 +376,7 @@ view: property_pace_f {
 
   measure:  roomsold_var_perc_budg{
     sql: utl..udf_percent_var(${roomsold},${budg_roomsold}) ;;
-    label: "Rms Bkd Act:Fcst - % var"
+    label: "Rms Bkd Act:Budg - % var"
     description: "(TY - LY)/TY"
     type: number
     value_format_name: percent_1
@@ -384,7 +384,7 @@ view: property_pace_f {
 
   measure:  roomsold_var_perc_fcst{
     sql: utl..udf_percent_var(${roomsold},${act_fcst_roomsold}) ;;
-    label: "Rms Bkd Act:Bdgt - % var"
+    label: "Rms Bkd Act:Fcst - % var"
     description: "(TY - LY)/TY"
     type: number
     value_format_name: percent_1
@@ -400,7 +400,7 @@ view: property_pace_f {
 
   measure:  adr_var_perc_budg{
     sql: utl..udf_percent_var(${room_adr},${budg_adr}) ;;
-    label: "ADR Act:Fcst - % var"
+    label: "ADR Act:Budg - % var"
     description: "(TY - LY)/TY"
     type: number
     value_format_name: percent_1
@@ -408,7 +408,7 @@ view: property_pace_f {
 
   measure:  adr_var_perc_fcst{
     sql: utl..udf_percent_var(${room_adr},${act_fcst_adr}) ;;
-    label: "ADR Act:Bdgt - % var"
+    label: "ADR Act:Fcst - % var"
     description: "(TY - LY)/TY"
     type: number
     value_format_name: percent_1
