@@ -9,7 +9,7 @@ datagroup: model_caching_dg {
 }
 
 explore: mm_property_fc_f {
-  group_label: "Portfolio"
+  group_label: "***Development***"
   label: "Focus Critical Metrics"
   persist_with: model_caching_dg
   view_label: "    Measures"
