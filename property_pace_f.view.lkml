@@ -120,7 +120,7 @@ view: property_pace_f {
   }
 
   measure:  act_fcst_roomsold{
-    sql: ${TABLE}.act_fcst_roomsold ;;
+    sql: ${TABLE}.act_fcst_roomsold;;
     value_format_name: decimal_0
     label: "Rms Bkd Fcst"
     description: "Act/Fcst Room Sold"
