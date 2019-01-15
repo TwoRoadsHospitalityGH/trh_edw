@@ -1,5 +1,5 @@
 view: mm_property_fc_f {
-  sql_table_name: pedw.dev.mm_property_fc_f_wrk ;;
+  sql_table_name: pedw.dev.mm_property_fc_f ;;
 
 # filters
 

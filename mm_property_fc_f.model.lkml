@@ -4,7 +4,7 @@ include: "*.view"         # include all views in this project
 label: "Focus Critcial Metrics"
 
 datagroup: model_caching_dg {
-  sql_trigger: select max( dw_update_dt ) from pedw.dev.mm_property_fc_f_wrk ;;
+  sql_trigger: select max( dw_update_dt ) from pedw.dev.mm_property_fc_f ;;
   max_cache_age: "8 hours"
 }
 
