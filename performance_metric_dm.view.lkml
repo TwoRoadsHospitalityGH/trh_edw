@@ -169,6 +169,14 @@ view: performance_metric_dm {
     hidden: no
   }
 
+  filter: fc_rpt_bt{
+    label: "Focus Critical Metrics"
+    description: "Focus and Critical metrics."
+    type: yesno
+    sql: ${TABLE}.fc_rpt_bt = 1 ;;
+    hidden: no
+  }
+
   dimension: max_possible_str{
     label: "Maximum Points Available"
     type: string
