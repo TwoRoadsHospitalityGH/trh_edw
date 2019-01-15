@@ -18,13 +18,6 @@ explore: mm_property_fc_f {
 #      user_attribute: atmp_userid
 #    }
 
-  always_filter: {
-    filters: {
-      field: period_type_dm.period_type_name
-      value: "YTD"
-    }
-  }
-
 
   join: performance_metric_dm {
     view_label: "Metric"
