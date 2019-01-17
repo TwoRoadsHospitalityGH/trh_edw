@@ -1,12 +1,3 @@
----
-navigation:
-- bsc_doc
-- fsc_doc
-- section: My Section Name
----
-
-
-
 
 # Balanced Scorecard Training
 
