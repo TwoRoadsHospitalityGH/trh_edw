@@ -1,10 +1,7 @@
 ---
-navigation: true
-- test_doc
-- document: document_two
-label: Customized Label for Document Two
-- section: My Section Name
-- document_three
+navigation:
+- bsc_doc
+- fsc_doc
 ---
 
 
