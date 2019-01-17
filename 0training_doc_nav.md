@@ -1,3 +1,5 @@
+
+---
 navigation:
 - section: Looker Top Reports
 - bsc_doc
