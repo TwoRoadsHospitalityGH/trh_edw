@@ -16,6 +16,7 @@ view: period_type_dm {
     hidden: no
     }
 
+
 # note: this filter is intended to be used with the ytd filter
 
 # or other date filter to isolate a year and provide a view of
