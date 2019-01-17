@@ -4,7 +4,6 @@ navigation:
 - fsc_doc
   label: Customized Label for Document Two
 - section: My Section Name
-- document_three
 ---
 
 
