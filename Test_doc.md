@@ -1,5 +1,5 @@
 ---
-navigation:
+navigation: true
 - test_doc
 - document: document_two
 label: Customized Label for Document Two
