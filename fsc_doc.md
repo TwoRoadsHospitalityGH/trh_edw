@@ -19,3 +19,16 @@ navigation:
    - **Brand**
    - **Active Property** Currently a part of CoralTree portfolio
    - **Management Company** Used to filter between CoralTree, Hyatt, TwoRoads
+
+### Metrics
+   - **Finance Scorecard Rank**
+   - **Finance Scorecard Score**
+   - **Rev Act:Bgt %**
+   - **AGOP Act:Bdg %**
+   - **Flow Act:Opt %**
+   - **AGOP Fcst:Act - % var**
+   - **Rev Fcst:Act Rms - % var**
+   - **Rev Fcst:Act RB&E - % var**
+   - **Rev Fcst:Act - % var**
+   - **Internal Audit Score**
+   - **AR Act:Total 60day %**
