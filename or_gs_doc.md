@@ -3,17 +3,17 @@ navigation:
   - section: Looker Top Reports
   - bsc_doc
   - fsc_doc
+  - or_gs_doc
 ---
 
-# Finance Scorecard Doc
+# Online Reputation & Guests Survey Doc
 
 
 ### Purpose
-   - To encourage competition and comradery between properties in the portfolio using financial goal objectives.
+   - Goal tracking for Guest Metrics to understand guest experience and expectations for CoralTree
 
 ### Filters
    - **Timeframe** Time period in which the data is pulled
-   - **Metric Aggregation** Aggregation of the Timefame pulled ( YTD, MTD, QTD )
    - **MIH Eligible**  Eligible for corporate goal tracking
    - **Regional Operations Leader**
    - **Brand**
