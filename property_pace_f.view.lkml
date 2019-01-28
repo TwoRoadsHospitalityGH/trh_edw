@@ -610,7 +610,7 @@ view: property_pace_f {
     value_format_name: usd_0
     view_label: "  TY"
     label: "Rev Rms $ Reach STLY:STLY - pickup"
-    description: "(Act:LY - STLY Pickup)"
+    description: "((Act-STLY) + STLY Pickup)"
   }
 
   measure:  roomrev_reach_budget{
@@ -619,7 +619,7 @@ view: property_pace_f {
     value_format_name: usd_0
     view_label: "  TY"
     label: "Rev Rms $ Reach Budg:STLY - pickup"
-    description: "(Act:Budg - STLY Pickup)"
+    description: "((Act -Budg) + STLY Pickup)"
   }
 
   measure:  roomrev_reach_fcst{
@@ -628,7 +628,7 @@ view: property_pace_f {
     value_format_name: usd_0
     view_label: "  TY"
     label: "Rev Rms $ Reach Fcst:STLY - pickup"
-    description: "(Act:Fcst - STLY Pickup)"
+    description: "((Act -Fcst) + STLY Pickup)"
   }
 
   measure:  roomsold_reach_stly{
@@ -637,7 +637,7 @@ view: property_pace_f {
     value_format_name: usd_0
     view_label: "  TY"
     label: "Rms Bkd Reach STLY:STLY - pickup"
-    description: "(Act:LY - STLY Pickup)"
+    description: "((Act-STLY) + STLY Pickup)"
   }
 
   measure:  roomsold_reach_budget{
@@ -646,7 +646,7 @@ view: property_pace_f {
     value_format_name: usd_0
     view_label: "  TY"
     label: "Rms Bkd Reach Budg:STLY - pickup"
-    description: "(Act:Budg - STLY Pickup)"
+    description: "((Act -Budg) + STLY Pickup)"
   }
 
   measure:  roomsold_reach_fcst{
@@ -655,7 +655,7 @@ view: property_pace_f {
     value_format_name: usd_0
     view_label: "  TY"
     label: "Rms Bkd Reach Fcst:STLY - pickup"
-    description: "(Act:Fcst - STLY Pickup)"
+    description: "((Act -Fcst) + STLY Pickup)"
   }
 
   measure:  adr_reach_stly{
@@ -664,7 +664,7 @@ view: property_pace_f {
     value_format_name: usd_0
     view_label: "  TY"
     label: "ADR Reach STLY:STLY - pickup"
-    description: "(Act:LY - STLY Pickup)"
+    description: "((Act-STLY) + STLY Pickup)"
   }
 
   measure:  adr_reach_budget{
@@ -673,7 +673,7 @@ view: property_pace_f {
     value_format_name: usd_0
     view_label: "  TY"
     label: "ADR Reach Budg:STLY - pickup"
-    description: "(Act:Budg - STLY Pickup)"
+    description: "((Act -Budg) + STLY Pickup)"
   }
 
   measure:  adr_reach_fcst{
@@ -682,6 +682,6 @@ view: property_pace_f {
     value_format_name: usd_0
     view_label: "  TY"
     label: "ADR Reach Fcst:STLY - pickup"
-    description: "(Act:Fcst - STLY Pickup)"
+    description: "((Act -Fcst) + STLY Pickup)"
   }
 }
