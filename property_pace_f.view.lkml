@@ -623,7 +623,7 @@ view: property_pace_f {
   }
 
   measure:  roomrev_reach_fcst{
-    sql: (${roomrev_var_fcst} - ifnull(${roomrev_pickup_stly},0)) ;;
+    sql: (${roomrev_var_fcst} + ifnull(${roomrev_pickup_stly},0)) ;;
     type: number
     value_format_name: usd_0
     view_label: "  TY"
@@ -650,7 +650,7 @@ view: property_pace_f {
   }
 
   measure:  roomsold_reach_fcst{
-    sql: (${roomsold_var_fcst} - ifnull(${roomsold_pickup_stly},0)) ;;
+    sql: (${roomsold_var_fcst} + ifnull(${roomsold_pickup_stly},0)) ;;
     type: number
     value_format_name: usd_0
     view_label: "  TY"
@@ -677,7 +677,7 @@ view: property_pace_f {
   }
 
   measure:  adr_reach_fcst{
-    sql: (${adr_var_fcst} - ifnull(${adr_pickup_stly},0)) ;;
+    sql: (${adr_var_fcst} + ifnull(${adr_pickup_stly},0)) ;;
     type: number
     value_format_name: usd_0
     view_label: "  TY"
