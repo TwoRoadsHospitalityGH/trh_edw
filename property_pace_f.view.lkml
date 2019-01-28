@@ -49,8 +49,16 @@ view: property_pace_f {
   measure:  room_rev_stly{
     sql: ${TABLE}.room_rev_stly ;;
     value_format_name: usd_0
-    label: "Rev Rms $ LY"
+    label: "Rev Rms $ STLY"
     description: "Room Revenue (Same Time Last Year)"
+    type: sum
+  }
+
+  measure:  room_rev_ly{
+    sql: ${TABLE}.act_roomrev_ly ;;
+    value_format_name: usd_0
+    label: "Rev Rms $ LY"
+    description: "Room Revenue ( Last Year)"
     type: sum
   }
 
@@ -65,8 +73,16 @@ view: property_pace_f {
   measure:  roomsold_stly{
     sql: ${TABLE}.roomsold_stly ;;
     value_format_name: decimal_0
-    label: "Rms Bkd LY"
+    label: "Rms Bkd STLY"
     description: "Room Booked (Same Time Last Year)"
+    type: sum
+  }
+
+  measure:  roomsold_ly{
+    sql: ${TABLE}.act_roomssold_ly ;;
+    value_format_name: decimal_0
+    label: "Rms Bkd LY"
+    description: "Room Booked (Last Year)"
     type: sum
   }
 
@@ -82,9 +98,17 @@ view: property_pace_f {
     sql: utl..udf_divide(${room_rev_stly},${roomsold_stly}) ;;
     type: number
     value_format_name: usd_0
-    label: "ADR LY"
+    label: "ADR STLY"
     description: "ADR (Same Time Last Year)"
   }
+
+  measure:  room_adr_ly{
+    sql: utl..udf_divide(${room_rev_ly},${roomsold_ly}) ;;
+    type: number
+    value_format_name: usd_0
+    label: "ADR LY"
+    description: "ADR (Last Year)"
+    }
 
   measure:  budg_roomrev{
     sql: ${TABLE}.budg_roomrev ;;
@@ -343,8 +367,8 @@ view: property_pace_f {
 
   measure:  roomrev_var_perc_ly{
     sql: utl..udf_percent_var(${room_rev},${room_rev_stly}) ;;
-    label: "Rev Rms $ Act:LY - % var"
-    description: "(TY - LY)/TY"
+    label: "Rev Rms $ Act:STLY - % var"
+    description: "(TY - STLY)/TY"
     type: number
     value_format_name: percent_1
   }
@@ -352,24 +376,24 @@ view: property_pace_f {
 
   measure:  roomrev_var_perc_budg{
     sql: utl..udf_percent_var(${room_rev},${budg_roomrev}) ;;
-    label: "Rev Rms $ Act:Fcst - % var"
-    description: "(TY - LY)/TY"
+    label: "Rev Rms $ Act:Budg - % var"
+    description: "(TY - Budg)/TY"
     type: number
     value_format_name: percent_1
   }
 
   measure:  roomrev_var_perc_fcst{
     sql: utl..udf_percent_var(${room_rev},${act_fcst_roomrev}) ;;
-    label: "Rev Rms $ Act:Bdgt - % var"
-    description: "(TY - LY)/TY"
+    label: "Rev Rms $ Act:Fcst - % var"
+    description: "(TY - Fcst)/TY"
     type: number
     value_format_name: percent_1
   }
 
   measure:  roomsold_var_perc_ly{
     sql: utl..udf_percent_var(${roomsold},${roomsold_stly}) ;;
-    label: "Rms Bkd Act:LY - % var"
-    description: "(TY - LY)/TY"
+    label: "Rms Bkd Act:STLY - % var"
+    description: "(TY - STLY)/TY"
     type: number
     value_format_name: percent_1
   }
@@ -377,7 +401,7 @@ view: property_pace_f {
   measure:  roomsold_var_perc_budg{
     sql: utl..udf_percent_var(${roomsold},${budg_roomsold}) ;;
     label: "Rms Bkd Act:Budg - % var"
-    description: "(TY - LY)/TY"
+    description: "(TY - Budg)/TY"
     type: number
     value_format_name: percent_1
   }
@@ -385,15 +409,15 @@ view: property_pace_f {
   measure:  roomsold_var_perc_fcst{
     sql: utl..udf_percent_var(${roomsold},${act_fcst_roomsold}) ;;
     label: "Rms Bkd Act:Fcst - % var"
-    description: "(TY - LY)/TY"
+    description: "(TY - Fcst)/TY"
     type: number
     value_format_name: percent_1
   }
 
   measure:  adr_var_perc_ly{
     sql: utl..udf_percent_var(${room_adr},${room_adr_stly}) ;;
-    label: "ADR Act:LY - % var"
-    description: "(TY - LY)/TY"
+    label: "ADR Act:STLY - % var"
+    description: "(TY - STLY)/TY"
     type: number
     value_format_name: percent_1
   }
@@ -401,7 +425,7 @@ view: property_pace_f {
   measure:  adr_var_perc_budg{
     sql: utl..udf_percent_var(${room_adr},${budg_adr}) ;;
     label: "ADR Act:Budg - % var"
-    description: "(TY - LY)/TY"
+    description: "(TY - Bdgt)/TY"
     type: number
     value_format_name: percent_1
   }
@@ -409,7 +433,7 @@ view: property_pace_f {
   measure:  adr_var_perc_fcst{
     sql: utl..udf_percent_var(${room_adr},${act_fcst_adr}) ;;
     label: "ADR Act:Fcst - % var"
-    description: "(TY - LY)/TY"
+    description: "(TY - Fcst)/TY"
     type: number
     value_format_name: percent_1
   }
@@ -422,7 +446,7 @@ view: property_pace_f {
     sql: (${room_rev} - ifnull(${room_rev_stly},0)) ;;
     type: number
     value_format_name: usd_0
-    label: "Rev Rms $ Act:LY - var"
+    label: "Rev Rms $ Act:STLY - var"
     description: "(TY - LY)"
   }
 
@@ -431,7 +455,7 @@ view: property_pace_f {
     type: number
     value_format_name: usd_0
     label: "Rev Rms $ Act:Fcst - var"
-    description: "(TY - LY)"
+    description: "(TY - Fcst)"
   }
 
   measure:  roomrev_var_fcst{
@@ -439,15 +463,15 @@ view: property_pace_f {
     type: number
     value_format_name: usd_0
     label: "Rev Rms $ Act:Bdgt - var"
-    description: "(TY - LY)"
+    description: "(TY - Bdgt)"
   }
 
   measure:  roomsold_var_ly{
     sql: (${roomsold} - ifnull(${roomsold_stly},0)) ;;
     type: number
     value_format_name: decimal_0
-    label: "Rms Bkd Act:LY - var"
-    description: "(TY - LY)"
+    label: "Rms Bkd Act:STLY - var"
+    description: "(TY - STLY)"
   }
 
   measure:  roomsold_var_budg{
@@ -455,7 +479,7 @@ view: property_pace_f {
     type: number
     value_format_name: decimal_0
     label: "Rms Bkd Act:Fcst - var"
-    description: "(TY - LY)"
+    description: "(TY - Fcst)"
   }
 
   measure:  roomsold_var_fcst{
@@ -463,15 +487,15 @@ view: property_pace_f {
     type: number
     value_format_name: decimal_0
     label: "Rms Bkd Act:Bdgt - var"
-    description: "(TY - LY)"
+    description: "(TY - Bdgt)"
   }
 
   measure:  adr_var_ly{
     sql: (${room_adr} - ifnull(${room_adr_stly},0)) ;;
     type: number
     value_format_name: usd_0
-    label: "ADR Act:LY - var"
-    description: "(TY - LY)"
+    label: "ADR Act:STLY - var"
+    description: "(TY - STLY)"
   }
 
   measure:  adr_var_budg{
@@ -479,7 +503,7 @@ view: property_pace_f {
     type: number
     value_format_name: usd_0
     label: "ADR Act:Fcst - var"
-    description: "(TY - LY)"
+    description: "(TY - Fcst)"
   }
 
   measure:  adr_var_fcst{
@@ -487,7 +511,108 @@ view: property_pace_f {
     type: number
     value_format_name: usd_0
     label: "ADR Act:Bdgt - var"
-    description: "(TY - LY)"
+    description: "(TY - Bdgt)"
   }
 
+  #-------------------------------------------------------------------------------------------
+  #-- # STLY Pickup
+  #-------------------------------------------------------------------------------------------
+  measure:  roomrev_pickup_stly{
+    sql: (${room_rev_ly} - ifnull(${room_rev_stly},0)) ;;
+    type: number
+    value_format_name: usd_0
+    label: "Rev Rms $ Pickup LY:STLY - var"
+    description: "(Act:LY - STLY)"
+  }
+
+  measure:  roomsold_pickup_stly{
+    sql: (${roomsold_ly} - ifnull(${roomsold_stly},0)) ;;
+    type: number
+    value_format_name: usd_0
+    label: "Rms Sold Pickup LY:STLY - var"
+    description: "(Act:LY - STLY)"
+  }
+
+  measure:  adr_pickup_stly{
+    sql: (${room_adr_ly} - ifnull(${room_adr_stly},0)) ;;
+    type: number
+    value_format_name: usd_0
+    label: "ADR Pickup LY:STLY - var"
+    description: "(Act:LY - STLY)"
+  }
+
+  #-------------------------------------------------------------------------------------------
+  #-- # Reach
+  #-------------------------------------------------------------------------------------------
+  measure:  roomrev_reach_stly{
+    sql: (${roomrev_var_ly} + ifnull(${roomrev_pickup_stly},0)) ;;
+    type: number
+    value_format_name: usd_0
+    label: "Rev Rms $ Reach STLY:STLY - pickup"
+    description: "(Act:LY - STLY Pickup)"
+  }
+
+  measure:  roomrev_reach_budget{
+    sql: (${roomrev_var_budg} + ifnull(${roomrev_pickup_stly},0)) ;;
+    type: number
+    value_format_name: usd_0
+    label: "Rev Rms $ Reach Budg:STLY - pickup"
+    description: "(Act:Budg - STLY Pickup)"
+  }
+
+  measure:  roomrev_reach_fcst{
+    sql: (${roomrev_var_fcst} - ifnull(${roomrev_pickup_stly},0)) ;;
+    type: number
+    value_format_name: usd_0
+    label: "Rev Rms $ Reach Fcst:STLY - pickup"
+    description: "(Act:Fcst - STLY Pickup)"
+  }
+
+  measure:  roomsold_reach_stly{
+    sql: (${roomsold_var_ly} + ifnull(${roomsold_pickup_stly},0)) ;;
+    type: number
+    value_format_name: usd_0
+    label: "Rms Bkd Reach STLY:STLY - pickup"
+    description: "(Act:LY - STLY Pickup)"
+  }
+
+  measure:  roomsold_reach_budget{
+    sql: (${roomsold_var_budg} + ifnull(${roomsold_pickup_stly},0)) ;;
+    type: number
+    value_format_name: usd_0
+    label: "Rms Bkd Reach Budg:STLY - pickup"
+    description: "(Act:Budg - STLY Pickup)"
+  }
+
+  measure:  roomsold_reach_fcst{
+    sql: (${roomsold_var_fcst} - ifnull(${roomsold_pickup_stly},0)) ;;
+    type: number
+    value_format_name: usd_0
+    label: "Rms Bkd Reach Fcst:STLY - pickup"
+    description: "(Act:Fcst - STLY Pickup)"
+  }
+
+  measure:  adr_reach_stly{
+    sql: (${adr_var_ly} + ifnull(${adr_pickup_stly},0)) ;;
+    type: number
+    value_format_name: usd_0
+    label: "ADR Reach STLY:STLY - pickup"
+    description: "(Act:LY - STLY Pickup)"
+  }
+
+  measure:  adr_reach_budget{
+    sql: (${adr_var_budg} + ifnull(${adr_pickup_stly},0)) ;;
+    type: number
+    value_format_name: usd_0
+    label: "ADR Reach Budg:STLY - pickup"
+    description: "(Act:Budg - STLY Pickup)"
+  }
+
+  measure:  adr_reach_fcst{
+    sql: (${adr_var_fcst} - ifnull(${adr_pickup_stly},0)) ;;
+    type: number
+    value_format_name: usd_0
+    label: "ADR Reach Fcst:STLY - pickup"
+    description: "(Act:Fcst - STLY Pickup)"
+  }
 }
