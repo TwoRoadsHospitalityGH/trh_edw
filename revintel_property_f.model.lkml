@@ -9,8 +9,8 @@ datagroup: model_caching_dg {
 }
 
 explore: revintel_property_f {
-  group_label: "***Development***"
-  label: "Revintel Property (dev)"
+  group_label: "***User Acceptance Testing***"
+  label: "Revintel Property (uat)"
   view_label: "  Measures"
   persist_with: model_caching_dg
   case_sensitive: no
