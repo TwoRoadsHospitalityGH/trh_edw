@@ -183,7 +183,7 @@ view: mm_property_fc_f {
     value_format_name: percent_1
     sql:  ${kpi_val_base} ;;
     html: <!-- na -->
-          {% elsif {{kpi_classification_dm.class_cd._value}} == 'na'
+          {% if {{kpi_classification_dm.class_cd._value}} == 'na'
                 and {{kpi_classification_dm.class_cd_min._value}} == 'na' %}
             {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1'
                   and {{kpi_classification_dm.class_cd_min._value}} == 'na' %}
