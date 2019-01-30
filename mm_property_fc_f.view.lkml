@@ -104,41 +104,6 @@ view: mm_property_fc_f {
     hidden: yes
   }
 
-  measure: property_goal_cnt_pct {
-    label: "Goal Above/Below - Ops Leader %"
-    description: "Percent of properties above or below goal by regional operations leader."
-    type: number
-    sql: utl..udf_divide(${property_cnt},  ${property_cnt_over_goal}) ;;
-    value_format_name: percent_1
-    hidden: no
-    html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
-  }
-
-  measure: property_finance_cnt {
-    label: "Regional Finance Leader Properties"
-    description: "Count of distinct properties with goals."
-    type: count_distinct
-    sql: iff( ${property_metric_goal_dm.status_cd} = 'NA', to_number(NULL), ${property_key}) ;;
-    value_format: "0"
-    hidden: yes
-  }
-
-  measure: property_cnt_over_finance_goal {
-    type: number
-    sql: sum( ${property_goal_cnt} ) over( partition by ${performance_metric_dm.metric_name}, ${property_dm.regional_fnc_ldr_full_name} ) ;;
-    hidden: yes
-  }
-
-  measure: property_goal_cnt_pct_fin {
-    label: "Goal Above/Below - Fnc Leader %"
-    description: "Percent of properties above or below goal by regional finance leader."
-    type: number
-    sql: utl..udf_divide(${property_cnt},  ${property_cnt_over_finance_goal}) ;;
-    value_format_name: percent_1
-    hidden: no
-    html: <div style="background-color: #AARRGGBB; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div> ;;
-  }
-
   measure: property_brand_cnt {
     label: "Brand Properties"
     description: "Count of distinct properties within each brand."
@@ -217,55 +182,7 @@ view: mm_property_fc_f {
     description: "Metric score/value"
     value_format_name: percent_1
     sql:  ${kpi_val_base} ;;
-    html: <!-- exceed  -->
-          {% if {{kpi_classification_dm.class_cd._value}} == 'exceed'
-                  and {{kpi_classification_dm.class_cd_min._value}} == 'exceed' %}
-            {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1'
-                  and {{kpi_classification_dm.class_cd_min._value}} == 'exceed' %}
-              <div style="background-color: #63BE7B; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
-            {% elsif {{performance_metric_dm.value_format_str_m._value}} == 'decimal_1'
-                  and {{kpi_classification_dm.class_cd_min._value}} == 'exceed'%}
-              <div style="background-color: #63BE7B; font-size:100%; color:black; text-align:center">{{ kpi_val_d1._rendered_value }}</div>
-            {% else %}
-              <div style="background-color: #63BE7B; font-size:100%; color:black; text-align:center">{{ kpi_val_d2._rendered_value }}</div>
-            {% endif %}
-          <!-- above  -->
-          {% elsif {{kpi_classification_dm.class_cd._value}} == 'above'
-                  and {{kpi_classification_dm.class_cd_min._value}} == 'above' %}
-            {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1'
-                  and {{kpi_classification_dm.class_cd_min._value}} == 'above' %}
-              <div style="background-color: #C3DA81; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
-            {% elsif {{performance_metric_dm.value_format_str_m._value}} == 'decimal_1'
-                  and {{kpi_classification_dm.class_cd_min._value}} == 'above' %}
-              <div style="background-color: #C3DA81; font-size:100%; color:black; text-align:center">{{ kpi_val_d1._rendered_value }}</div>
-            {% else %}
-              <div style="background-color: #C3DA81; font-size:100%; color:black; text-align:center">{{ kpi_val_d2._rendered_value }}</div>
-            {% endif %}
-          <!-- below -->
-          {% elsif {{kpi_classification_dm.class_cd._value}} == 'below'
-                  and {{kpi_classification_dm.class_cd_min._value}} == 'below' %}
-            {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1'
-                  and {{kpi_classification_dm.class_cd_min._value}} == 'below' %}
-              <div style="background-color: #FDD27F; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
-            {% elsif {{performance_metric_dm.value_format_str_m._value}} == 'decimal_1'
-                  and {{kpi_classification_dm.class_cd_min._value}} == 'below' %}
-              <div style="background-color: #FDD27F; font-size:100%; color:black; text-align:center">{{ kpi_val_d1._rendered_value }}</div>
-            {% else %}
-              <div style="background-color: #FDD27F; font-size:100%; color:black; text-align:center">{{ kpi_val_d2._rendered_value }}</div>
-            {% endif %}
-          <!-- atrisk -->
-          {% elsif {{kpi_classification_dm.class_cd._value}} == 'atrisk'
-                and {{kpi_classification_dm.class_cd_min._value}} == 'atrisk' %}
-            {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1'
-                  and {{kpi_classification_dm.class_cd_min._value}} == 'atrisk' %}
-              <div style="background-color: #F87B6E; font-size:100%; color:black; text-align:center">{{ rendered_value }}</div>
-            {% elsif {{performance_metric_dm.value_format_str_m._value}} == 'decimal_1'
-                  and {{kpi_classification_dm.class_cd_min._value}} == 'atrisk' %}
-              <div style="background-color: #F87B6E; font-size:100%; color:black; text-align:center">{{ kpi_val_d1._rendered_value }}</div>
-            {% else %}
-              <div style="background-color: #F87B6E; font-size:100%; color:black; text-align:center">{{ kpi_val_d2._rendered_value }}</div>
-            {% endif %}
-          <!-- na -->
+    html: <!-- na -->
           {% elsif {{kpi_classification_dm.class_cd._value}} == 'na'
                 and {{kpi_classification_dm.class_cd_min._value}} == 'na' %}
             {% if {{performance_metric_dm.value_format_str_m._value}} == 'percent_1'
