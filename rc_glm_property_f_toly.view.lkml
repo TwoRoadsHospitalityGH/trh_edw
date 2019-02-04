@@ -967,4 +967,121 @@ view: rc_glm_property_f_toly {
     value_format_name: decimal_2
   }
 
+
+
+
+  #-- Occupancy
+
+  measure: occupied_room_pct_toly_v {
+    label: "Rms Occ % Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.occupied_room_pct} - ${rc_glm_property_f_ly.occupied_room_pct} );;
+    value_format_name: percent_1
+  }
+
+  #-- ADR
+
+  measure: adr_amt_toly_v {
+    label: "ADR $ Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.adr_amt} - ${rc_glm_property_f_ly.adr_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: adr_transient_amt_toly_v {
+    label: "ADR Transient $ Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.adr_transient_amt} - ${rc_glm_property_f_ly.adr_transient_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: adr_group_amt_toly_v {
+    label: "ADR Group $ Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.adr_group_amt} - ${rc_glm_property_f_ly.adr_group_amt} );;
+    value_format_name: decimal_2
+  }
+
+  #-- Room nights
+
+  measure: room_night_transient_pct_toly_v {
+    label: "Rms Night Transient % Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.room_night_transient_pct} - ${rc_glm_property_f_ly.room_night_transient_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: room_night_group_pct_toly_v {
+    label: "Rms Night Group % Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.room_night_group_pct} - ${rc_glm_property_f_ly.room_night_group_pct} );;
+    value_format_name: percent_1
+  }
+
+  #-- Rev PAR
+
+  measure: rev_par_amt_toly_v {
+    label: "Rev PAR $ Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.rev_par_amt} - ${rc_glm_property_f_ly.rev_par_amt} );;
+    value_format_name: decimal_2
+  }
+
+  #-- Avg check
+
+  measure: rbe_check_avg_amt_toly_v {
+    label: "Cvrs RB&E Avg $ Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.rbe_check_avg_amt} - ${rc_glm_property_f_ly.rbe_check_avg_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: rbe_banquet_check_avg_amt_toly_v {
+    label: "Cvrs RB&E Banquet Avg $ Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.rbe_banquet_check_avg_amt} - ${rc_glm_property_f_ly.rbe_banquet_check_avg_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: rbe_catering_check_avg_amt_toly_v {
+    label: "Cvrs RB&E Catering Avg $ Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.rbe_catering_check_avg_amt} - ${rc_glm_property_f_ly.rbe_catering_check_avg_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: rbe_outlet_check_avg_amt_toly_v {
+    label: "Cvrs RB&E Outlet Avg $ Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.rbe_outlet_check_avg_amt} - ${rc_glm_property_f_ly.rbe_outlet_check_avg_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: rbe_room_service_check_avg_amt_toly_v {
+    label: "Cvrs RB&E Room Service Avg $ Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.rbe_room_service_check_avg_amt} - ${rc_glm_property_f_ly.rbe_room_service_check_avg_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: rbe_other_check_avg_amt_toly_v {
+    label: "Cvrs RB&E Other Avg $ Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${rc_glm_property_f_ty.rbe_other_check_avg_amt} - ${rc_glm_property_f_ly.rbe_other_check_avg_amt} );;
+    value_format_name: decimal_2
+  }
+
 }
