@@ -23,11 +23,19 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
-  measure: AGOP_amt_tofcst30_v {
+  measure: agop_amt_tofcst30_v {
     label: "AGOP Act:Fcst30 - var"
     description: "Actual - Fcst30"
     type: number
-    sql: ${glm_property_f_ty.AGOP} - ${glm_property_f_fcst30.AGOP} ;;
+    sql: ${glm_property_f_ty.agop_amt} - ${glm_property_f_fcst30.agop_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: gop_amt_tofcst30_v {
+    label: "GOP Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.gop_amt} - ${glm_property_f_fcst30.gop_amt} ;;
     value_format_name: decimal_0
   }
 

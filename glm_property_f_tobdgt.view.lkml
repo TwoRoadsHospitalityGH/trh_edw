@@ -23,11 +23,19 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: AGOP_amt_tobdgt_v {
+  measure: agop_amt_tobdgt_v {
     label: "AGOP Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.AGOP} - ${glm_property_f_bdgt.AGOP} ;;
+    sql: ${glm_property_f_ty.agop_amt} - ${glm_property_f_bdgt.agop_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: gop_amt_tobdgt_v {
+    label: "GOP Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.gop_amt} - ${glm_property_f_bdgt.gop_amt} ;;
     value_format_name: decimal_0
   }
 

@@ -60,9 +60,16 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: AGOP {
+  dimension: agop_amt {
     type: number
     sql: ${TABLE}.agop_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: gop_amt {
+    type: number
+    sql: ${TABLE}.gop_amt ;;
     value_format_name: usd_0
     hidden: yes
   }

@@ -53,10 +53,17 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: AGOP {
+  measure: agop_amt {
     label: "AGOP $"
     type: sum
-    sql:  iff( ${measure_bt} = 1, ${glm_property_f.AGOP}, to_number( null ) ) ;;
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.agop_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: gop_amt {
+    label: "GOP $"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.gop_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 

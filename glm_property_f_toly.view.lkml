@@ -22,11 +22,19 @@ view: glm_property_f_toly {
     value_format_name: decimal_0
   }
 
-  measure: AGOP_toly_v {
+  measure: agop_amt_toly_v {
     label: "AGOP Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${glm_property_f_ty.AGOP} - ${glm_property_f_ly.AGOP} ;;
+    sql: ${glm_property_f_ty.agop_amt} - ${glm_property_f_ly.agop_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: gop_amt_toly_v {
+    label: "GOP Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.gop_amt} - ${glm_property_f_ly.gop_amt} ;;
     value_format_name: decimal_0
   }
 
