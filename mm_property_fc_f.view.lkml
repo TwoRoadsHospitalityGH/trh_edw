@@ -21,16 +21,27 @@ view: mm_property_fc_f {
   measure: budget_agop_amt {
     label: "AGOP Budg"
     description: "AGOP Budget"
-    type: number
-    sql: max(${TABLE}.budget_agop_amt) ;;
+    type: sum
+    value_format_name: usd_0
+    sql: ${TABLE}.budget_agop_amt ;;
     hidden: no
   }
 
   measure: fcst_agop_amt {
     label: "AGOP Fcst"
     description: "AGOP Forecast"
-    type: number
-    sql: max(${TABLE}.fcst_agop_amt) ;;
+    type: sum
+    value_format_name: usd_0
+    sql: ${TABLE}.fcst_agop_amt ;;
+    hidden: no
+  }
+
+  measure: fc_budget_agop_pct {
+    label: "AGOP Fcst:Act %"
+    description: "AGOP Fcst:Act %"
+    type: sum
+    value_format_name: percent_1
+    sql: ${TABLE}.fc_budget_agop_pct ;;
     hidden: no
   }
 
@@ -56,15 +67,6 @@ view: mm_property_fc_f {
     description: "Total Revenue Forecast"
     type: number
     sql: max(${TABLE}.fcst_rev_amt) ;;
-    hidden: no
-  }
-
-  measure: fc_budget_agop_pct {
-    label: "AGOP Fcst:Act %"
-    description: "AGOP Fcst:Act %"
-    type: number
-    value_format_name: percent_1
-    sql: max(${TABLE}.fc_budget_agop_pct) ;;
     hidden: no
   }
 
