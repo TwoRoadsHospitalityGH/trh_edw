@@ -22,6 +22,8 @@ explore: mm_property_fc_f {
     from: date_dm
     view_label: "  Date"
     sql_on: ${date_dm.date_sid} = ${mm_property_fc_f.month_date_sid};;
+    sql_where: {% parameter date_dm.available_timeperiod %} = ''
+    or utl..udf_period_trunc_dt( {% parameter date_dm.available_timeperiod %}, ${date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter date_dm.available_timeperiod %}  ) ;;
     type: inner
     relationship: many_to_one
   }
