@@ -18,8 +18,6 @@ explore: mm_property_fc_f {
 #      user_attribute: atmp_userid
 #    }
 
-
-
   join: date_dm {
     from: date_dm
     view_label: "  Date"
@@ -30,13 +28,11 @@ explore: mm_property_fc_f {
     relationship: many_to_one
   }
 
-
   join: property_dm {
     view_label: " Property"
     sql_on: ${mm_property_fc_f.property_key} = ${property_dm.property_key} ;;
     type: inner
     relationship: many_to_one
   }
-
 
 }
