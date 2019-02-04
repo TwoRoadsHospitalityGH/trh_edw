@@ -137,6 +137,13 @@ view: mm_property_fc_f {
     hidden: no
   }
 
+  measure: fa_agop_pct {
+    label: "AGOP Forecast Accuracy Score"
+    description: "Forecast Accuracy"
+    type: number
+    sql: max(${TABLE}.fa_agop_pct) ;;
+    hidden: no
+  }
 
 
 
