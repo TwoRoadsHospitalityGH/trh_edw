@@ -14,8 +14,8 @@ datagroup: model_caching_dg {
 explore: glm_property_f {
     from: glm_property_f
     sql_table_name: pedw.dev.glm_property_f ;;
-    group_label: "***Development***"
-    label: "GL Monthly (dev)"
+    group_label: "***User Acceptance Testing***"
+    label: "GL Monthly (uat)"
     persist_with: model_caching_dg
     case_sensitive: no
 
