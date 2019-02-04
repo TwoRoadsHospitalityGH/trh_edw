@@ -1,5 +1,5 @@
-view: glm_property_f {
-  sql_table_name: pedw.dev.glm_property_f ;;
+view: rc_glm_property_f {
+  sql_table_name: pedw.dev.rc_glm_property_f ;;
 
   dimension: property_key {
     type:  number
