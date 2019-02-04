@@ -1,19 +1,5 @@
 view: mm_property_fc_f {
-  sql_table_name: pedw.fact.mm_property_fc_f ;;
-
-# filters
-
-  measure: max_month_name {
-    type: max
-    sql:  ${date_dm.month_name} ;;
-    hidden: yes
-  }
-
-  measure: max_year {
-    type: max
-    sql:  ${date_dm.year} ;;
-    hidden: yes
-  }
+  sql_table_name: pedw.dev.mm_property_fc_f ;;
 
 # keys
 
