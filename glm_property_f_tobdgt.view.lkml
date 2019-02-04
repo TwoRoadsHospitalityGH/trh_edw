@@ -976,4 +976,126 @@ view: glm_property_f_tobdgt {
 
 
 
+
+
+
+
+
+
+
+
+  #-- Occupancy
+
+  measure: occupied_room_pct_tobdgt_v {
+    label: "Rms Occ % Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.occupied_room_pct} - ${glm_property_f_fcst30.occupied_room_pct} );;
+    value_format_name: percent_1
+  }
+
+  #-- ADR
+
+  measure: adr_amt_tobdgt_v {
+    label: "ADR $ Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.adr_amt} - ${glm_property_f_fcst30.adr_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: adr_transient_amt_tobdgt_v {
+    label: "ADR Transient $ Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.adr_transient_amt} - ${glm_property_f_fcst30.adr_transient_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: adr_group_amt_tobdgt_v {
+    label: "ADR Group $ Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.adr_group_amt} - ${glm_property_f_fcst30.adr_group_amt} );;
+    value_format_name: decimal_2
+  }
+
+  #-- Room nights
+
+  measure: room_night_transient_pct_tobdgt_v {
+    label: "Rms Night Transient % Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.room_night_transient_pct} - ${glm_property_f_fcst30.room_night_transient_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: room_night_group_pct_tobdgt_v {
+    label: "Rms Night Group % Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.room_night_group_pct} - ${glm_property_f_fcst30.room_night_group_pct} );;
+    value_format_name: percent_1
+  }
+
+  #-- Rev PAR
+
+  measure: rev_par_amt_tobdgt_v {
+    label: "Rev PAR $ Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rev_par_amt} - ${glm_property_f_fcst30.rev_par_amt} );;
+    value_format_name: decimal_2
+  }
+
+  #-- Avg check
+
+  measure: rbe_check_avg_amt_tobdgt_v {
+    label: "Cvrs RB&E Avg $ Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_check_avg_amt} - ${glm_property_f_fcst30.rbe_check_avg_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: rbe_banquet_check_avg_amt_tobdgt_v {
+    label: "Cvrs RB&E Banquet Avg $ Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_banquet_check_avg_amt} - ${glm_property_f_fcst30.rbe_banquet_check_avg_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: rbe_catering_check_avg_amt_tobdgt_v {
+    label: "Cvrs RB&E Catering Avg $ Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_catering_check_avg_amt} - ${glm_property_f_fcst30.rbe_catering_check_avg_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: rbe_outlet_check_avg_amt_tobdgt_v {
+    label: "Cvrs RB&E Outlet Avg $ Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_outlet_check_avg_amt} - ${glm_property_f_fcst30.rbe_outlet_check_avg_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: rbe_room_service_check_avg_amt_tobdgt_v {
+    label: "Cvrs RB&E Room Service Avg $ Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_room_service_check_avg_amt} - ${glm_property_f_fcst30.rbe_room_service_check_avg_amt} );;
+    value_format_name: decimal_2
+  }
+
+  measure: rbe_other_check_avg_amt_tobdgt_v {
+    label: "Cvrs RB&E Other Avg $ Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_other_check_avg_amt} - ${glm_property_f_fcst30.rbe_other_check_avg_amt} );;
+    value_format_name: decimal_2
+  }
+
 }
