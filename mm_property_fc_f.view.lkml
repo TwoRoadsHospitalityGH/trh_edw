@@ -52,6 +52,7 @@ view: mm_property_fc_f {
     label: "Rev/TRev Fcst:Act %"
     description: "Rev/TRev Fcst:Act %t"
     type: number
+    value_format_name: percent_1
     sql: max(${TABLE}.fc_budget_rev_pct) ;;
     hidden: no
   }
@@ -76,6 +77,7 @@ view: mm_property_fc_f {
     label: "AGOP Fcst:Act %"
     description: "AGOP Fcst:Act %"
     type: number
+    value_format_name: percent_1
     sql: max(${TABLE}.fc_budget_agop_pct) ;;
     hidden: no
   }
@@ -84,6 +86,7 @@ view: mm_property_fc_f {
     label: "CY Rev PAR $ Index:Cs "
     description: "Rev PAR $ Index:Cs "
     type: number
+    value_format_name: percent_2
     sql: max(${TABLE}.ty_property_rpi_no) ;;
     hidden: no
   }
@@ -92,6 +95,7 @@ view: mm_property_fc_f {
     label: "PY Rev PAR $ Index:Cs "
     description: "PY Rev PAR $ Index:Cs "
     type: number
+    value_format_name: percent_1
     sql: max(${TABLE}.ly_property_rpi_no) ;;
     hidden: no
   }
@@ -100,6 +104,7 @@ view: mm_property_fc_f {
     label: "Rev PAR Index Act:LY Compset "
     description: "Rev PAR Index Act:LY Compset "
     type: number
+    value_format_name: percent_1
     sql: max(${TABLE}.property_rpi_yoy_var_no) ;;
     hidden: no
   }
