@@ -20,7 +20,7 @@ view: mm_property_fc_f {
   dimension: fc_budget_agop_pct_class_cd {
     label: "AGOP Class Code"
     description: "AGOP Budget/Fcst Class Code"
-    group_label: "NoCritical/Critical"
+    view_label: "NonCritical/Critical"
     type: string
     sql: ${TABLE}.fc_budget_agop_pct_class_cd ;;
     hidden: no
@@ -29,7 +29,7 @@ view: mm_property_fc_f {
   dimension: fc_budget_rev_pct_class_cd {
     label: "Rev/TRev Class Code"
     description: "Rev/TRev Budget/Fcst Class Code"
-    group_label: "NoCritical/Critical"
+    view_label: "NoCritical/Critical"
     type: string
     sql: ${TABLE}.fc_budget_rev_pct_class_cd ;;
     hidden: no
@@ -38,7 +38,7 @@ view: mm_property_fc_f {
   dimension: property_rpi_yoy_var_no_class_cd {
     label: "RPI Class Code"
     description: "RPI Budget/Fcst Class Code"
-    group_label: "NoCritical/Critical"
+    view_label: "NoCritical/Critical"
     type: string
     sql: ${TABLE}.property_rpi_yoy_var_no_class_cd ;;
     hidden: no
