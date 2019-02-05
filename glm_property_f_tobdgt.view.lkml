@@ -998,7 +998,23 @@ view: glm_property_f_tobdgt {
     label: "Rms Occ % Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.occupied_room_pct} - ${glm_property_f_fcst30.occupied_room_pct} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.occupied_room_pct} - ${glm_property_f_bdgt.occupied_room_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: occupied_group_room_pct_tobdgt_v {
+    label: "Rms Occ % Group Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.occupied_group_room_pct} - ${glm_property_f_bdgt.occupied_group_room_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: occupied_transient_room_pct_tobdgt_v {
+    label: "Rms Occ % Transient Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.occupied_transient_room_pct} - ${glm_property_f_bdgt.occupied_transient_room_pct} );;
     value_format_name: percent_1
   }
 
@@ -1008,7 +1024,7 @@ view: glm_property_f_tobdgt {
     label: "ADR $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.adr_amt} - ${glm_property_f_fcst30.adr_amt} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.adr_amt} - ${glm_property_f_bdgt.adr_amt} );;
     value_format_name: decimal_2
   }
 
@@ -1016,7 +1032,7 @@ view: glm_property_f_tobdgt {
     label: "ADR Transient $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.adr_transient_amt} - ${glm_property_f_fcst30.adr_transient_amt} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.adr_transient_amt} - ${glm_property_f_bdgt.adr_transient_amt} );;
     value_format_name: decimal_2
   }
 
@@ -1024,7 +1040,7 @@ view: glm_property_f_tobdgt {
     label: "ADR Group $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.adr_group_amt} - ${glm_property_f_fcst30.adr_group_amt} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.adr_group_amt} - ${glm_property_f_bdgt.adr_group_amt} );;
     value_format_name: decimal_2
   }
 
@@ -1034,7 +1050,7 @@ view: glm_property_f_tobdgt {
     label: "Rms Night Transient % Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.room_night_transient_pct} - ${glm_property_f_fcst30.room_night_transient_pct} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.room_night_transient_pct} - ${glm_property_f_bdgt.room_night_transient_pct} );;
     value_format_name: percent_1
   }
 
@@ -1042,7 +1058,7 @@ view: glm_property_f_tobdgt {
     label: "Rms Night Group % Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.room_night_group_pct} - ${glm_property_f_fcst30.room_night_group_pct} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.room_night_group_pct} - ${glm_property_f_bdgt.room_night_group_pct} );;
     value_format_name: percent_1
   }
 
@@ -1052,7 +1068,7 @@ view: glm_property_f_tobdgt {
     label: "Rev PAR $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.rev_par_amt} - ${glm_property_f_fcst30.rev_par_amt} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.rev_par_amt} - ${glm_property_f_bdgt.rev_par_amt} );;
     value_format_name: decimal_2
   }
 
@@ -1062,7 +1078,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Avg $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.rbe_check_avg_amt} - ${glm_property_f_fcst30.rbe_check_avg_amt} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_check_avg_amt} - ${glm_property_f_bdgt.rbe_check_avg_amt} );;
     value_format_name: decimal_2
   }
 
@@ -1070,7 +1086,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Banquet Avg $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.rbe_banquet_check_avg_amt} - ${glm_property_f_fcst30.rbe_banquet_check_avg_amt} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_banquet_check_avg_amt} - ${glm_property_f_bdgt.rbe_banquet_check_avg_amt} );;
     value_format_name: decimal_2
   }
 
@@ -1078,7 +1094,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Catering Avg $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.rbe_catering_check_avg_amt} - ${glm_property_f_fcst30.rbe_catering_check_avg_amt} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_catering_check_avg_amt} - ${glm_property_f_bdgt.rbe_catering_check_avg_amt} );;
     value_format_name: decimal_2
   }
 
@@ -1086,7 +1102,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Outlet Avg $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.rbe_outlet_check_avg_amt} - ${glm_property_f_fcst30.rbe_outlet_check_avg_amt} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_outlet_check_avg_amt} - ${glm_property_f_bdgt.rbe_outlet_check_avg_amt} );;
     value_format_name: decimal_2
   }
 
@@ -1094,7 +1110,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Room Service Avg $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.rbe_room_service_check_avg_amt} - ${glm_property_f_fcst30.rbe_room_service_check_avg_amt} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_room_service_check_avg_amt} - ${glm_property_f_bdgt.rbe_room_service_check_avg_amt} );;
     value_format_name: decimal_2
   }
 
@@ -1102,7 +1118,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Other Avg $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.rbe_other_check_avg_amt} - ${glm_property_f_fcst30.rbe_other_check_avg_amt} );;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_other_check_avg_amt} - ${glm_property_f_bdgt.rbe_other_check_avg_amt} );;
     value_format_name: decimal_2
   }
 

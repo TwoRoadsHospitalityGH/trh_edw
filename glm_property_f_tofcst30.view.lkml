@@ -994,6 +994,22 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
+  measure: occupied_group_room_pct_tofcst30_v {
+    label: "Rms Occ % Group Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.occupied_group_room_pct} - ${glm_property_f_fcst30.occupied_group_room_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: occupied_transient_room_pct_tofcst30_v {
+    label: "Rms Occ % Transient Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.occupied_transient_room_pct} - ${glm_property_f_fcst30.occupied_transient_room_pct} );;
+    value_format_name: percent_1
+  }
+
   #-- ADR
 
   measure: adr_amt_tofcst30_v {

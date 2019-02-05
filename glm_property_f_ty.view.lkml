@@ -890,6 +890,21 @@ view: glm_property_f_ty {
     value_format_name: percent_1
   }
 
+  measure: occupied_group_room_pct {
+    label: "Rms Occ % Group "
+    type: number
+    sql: utl..udf_divide( ${occupied_group_room_cnt}, ${net_avail_room_cnt} );;
+    value_format_name: percent_1
+  }
+
+  measure: occupied_transient_room_pct {
+    label: "Rms Occ % Transient"
+    type: number
+    sql: utl..udf_divide( ${occupied_transient_room_cnt}, ${net_avail_room_cnt} );;
+    value_format_name: percent_1
+  }
+
+
   #-- ADR
 
   measure: adr_amt {

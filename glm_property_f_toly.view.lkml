@@ -989,6 +989,22 @@ view: glm_property_f_toly {
     value_format_name: percent_1
   }
 
+  measure: occupied_group_room_pct_toly_v {
+    label: "Rms Occ % Group Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.occupied_group_room_pct} - ${glm_property_f_ly.occupied_group_room_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: occupied_transient_room_pct_toly_v {
+    label: "Rms Occ % Transient Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.occupied_transient_room_pct} - ${glm_property_f_ly.occupied_transient_room_pct} );;
+    value_format_name: percent_1
+  }
+
   #-- ADR
 
   measure: adr_amt_toly_v {
