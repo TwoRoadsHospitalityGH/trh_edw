@@ -1061,7 +1061,23 @@ view: glm_property_f_tofcst30 {
     description: "Actual - Fcst30"
     type: number
     sql: utl..udf_divide( ${glm_property_f_ty.rev_par_amt} - ${glm_property_f_fcst30.rev_par_amt} );;
-    value_format_name: decimal_2
+    value_format_name: usd_0
+  }
+
+  measure: rev_par_group_amt_tofcst30_v {
+    label: "Rev PAR $ Group Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rev_par_group_amt} - ${glm_property_f_fcst30.rev_par_group_amt} );;
+    value_format_name: usd_0
+  }
+
+  measure: rev_par_transient_amt_tofcst30_v {
+    label: "Rev PAR $ Transient Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rev_par_transient_amt} - ${glm_property_f_fcst30.rev_par_transient_amt} );;
+    value_format_name: usd_0
   }
 
   #-- Avg check

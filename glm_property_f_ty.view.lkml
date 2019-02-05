@@ -953,6 +953,20 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  measure: rev_par_group_amt {
+    label: "Rev PAR $ Group"
+    type: number
+    sql: utl..udf_divide( ${group_room_rev_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: rev_par_transient_amt {
+    label: "Rev PAR $ Transient"
+    type: number
+    sql: utl..udf_divide( ${transient_room_rev_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
   #-- Rev POR
 
   measure: rev_por_amt {

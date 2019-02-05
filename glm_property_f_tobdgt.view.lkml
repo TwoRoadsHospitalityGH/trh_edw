@@ -1069,7 +1069,23 @@ view: glm_property_f_tobdgt {
     description: "Actual - Bdgt"
     type: number
     sql: utl..udf_divide( ${glm_property_f_ty.rev_par_amt} - ${glm_property_f_bdgt.rev_par_amt} );;
-    value_format_name: decimal_2
+    value_format_name: usd_0
+  }
+
+  measure: rev_par_group_amt_tobdgt_v {
+    label: "Rev PAR $ Group Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rev_par_group_amt} - ${glm_property_f_bdgt.rev_par_group_amt} );;
+    value_format_name: usd_0
+  }
+
+  measure: rev_par_transient_amt_tobdgt_v {
+    label: "Rev PAR $ Transient Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rev_par_transient_amt} - ${glm_property_f_bdgt.rev_par_transient_amt} );;
+    value_format_name: usd_0
   }
 
   #-- Avg check
