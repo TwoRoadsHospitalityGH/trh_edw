@@ -691,7 +691,7 @@ view: property_pace_f {
   measure:  roomrev_reach_stly_perc{
     sql:utl..udf_percent_var(${roomrev_reach_stly},${room_rev}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: percent_1
     view_label: "  TY"
     label: "Rev Rms $ Reach STLY:STLY % - pickup"
     description: "((Act-STLY) + STLY Pickup)"
@@ -700,7 +700,7 @@ view: property_pace_f {
   measure:  roomrev_reach_budget_perc{
     sql:utl..udf_percent_var(${roomrev_reach_budget},${room_rev}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: percent_1
     view_label: "  TY"
     label: "Rev Rms $ Reach Budg:STLY % - pickup"
     description: "((Act -Budg) + STLY Pickup)"
@@ -709,7 +709,7 @@ view: property_pace_f {
   measure:  roomrev_reach_fcst_perc{
     sql: utl..udf_percent_var(${roomrev_reach_stly},${room_rev}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: percent_1
     view_label: "  TY"
     label: "Rev Rms $ Reach Fcst:STLY % - pickup"
     description: "((Act -Fcst) + STLY Pickup)"
