@@ -993,7 +993,7 @@ view: glm_property_f_ty {
 
   #-- Payroll /Rev
   measure: payroll_rev_pct {
-    label: "Payroll Rev %"
+    label: "Payroll /Rev %"
     type: number
     sql: utl..udf_divide( ${payroll_amt}, ${rev_amt} );;
     value_format_name: percent_1
@@ -1007,5 +1007,87 @@ view: glm_property_f_ty {
     ${arrival_cnt} );;
     value_format_name: decimal_1
   }
+
+  #-- Payroll Rev %
+
+  measure: room_payroll_rev_pct {
+    label: "Payroll /Rev Rms %"
+    type: number
+    sql: utl..udf_divide( ${room_payroll_amt}, ${room_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_payroll_rev_pct {
+    label: "Payroll /Rev RB&E %"
+    type: number
+    sql: utl..udf_divide( ${rbe_payroll_amt}, ${rbe_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: spa_payroll_rev_pct {
+    label: "Payroll /Rev Spa %"
+    type: number
+    sql: utl..udf_divide( ${spa_payroll_amt}, ${spa_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: golf_payroll_rev_pct {
+    label: "Payroll /Rev Golf %"
+    type: number
+    sql: utl..udf_divide( ${golf_payroll_amt}, ${golf_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: fitness_recreation_payroll_rev_pct {
+    label: "Payroll /Rev Fitness & Rec %"
+    type: number
+    sql: utl..udf_divide( ${fitness_recreation_payroll_amt}, ${fitness_recreation_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: parking_transportation_payroll_rev_pct {
+    label: "Payroll /Rev Parking & Trans %"
+    type: number
+    sql: utl..udf_divide( ${parking_transportation_payroll_amt}, ${parking_transportation_rev_amt} );;
+    value_format_name: usd_0
+  }
+
+  measure: telecom_payroll_rev_pct {
+    label: "Payroll /Rev Telecom %"
+    type: number
+    sql: utl..udf_divide( ${telecom_payroll_amt}, ${telecom_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: retail_payroll_rev_pct {
+    label: "Payroll /Rev Retail %"
+    type: number
+    sql: utl..udf_divide( ${retail_payroll_amt}, ${retail_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: other_operations_payroll_rev_pct {
+    label: "Payroll /Rev Other Op. Dept. %"
+    type: number
+    sql: utl..udf_divide( ${other_operations_payroll_amt}, ${other_operations_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_mgmt_payroll_rev_pct {
+    label: "Payroll /Rev Mgmt Srvcs %"
+    type: number
+    sql: utl..udf_divide( ${property_mgmt_payroll_amt}, ${property_mgmt_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: misc_payroll_rev_pct {
+    label: "Payroll /Rev Rentals & Other %"
+    type: number
+    sql: utl..udf_divide( ${misc_payroll_amt}, ${misc_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+
+
 
 }

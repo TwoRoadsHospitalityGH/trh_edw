@@ -1098,4 +1098,114 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_2
   }
 
+
+
+  #-- Payroll /Rev
+  measure: payroll_rev_pct_tofcst30_v {
+    label: "Payroll /Rev Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.payroll_rev_pct} - ${glm_property_f_fcst30.payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  #-- Avg length of stay
+  measure: length_of_stay_avg_amt_tofcst30_v {
+    label: "Stay Length Avg Night Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.length_of_stay_avg_amt} - ${glm_property_f_fcst30.length_of_stay_avg_amt} );;
+    value_format_name: decimal_1
+  }
+
+  #-- Payroll Rev %
+
+  measure: room_payroll_rev_pct_tofcst30_v {
+    label: "Payroll /Rev Rms Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.room_payroll_rev_pct} - ${glm_property_f_fcst30.room_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_payroll_rev_pct_tofcst30_v {
+    label: "Payroll /Rev RB&E Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_payroll_rev_pct} - ${glm_property_f_fcst30.rbe_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: spa_payroll_rev_pct_tofcst30_v {
+    label: "Payroll /Rev Spa Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.spa_payroll_rev_pct} - ${glm_property_f_fcst30.spa_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: golf_payroll_rev_pct_tofcst30_v {
+    label: "Payroll /Rev Golf Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.golf_payroll_rev_pct} - ${glm_property_f_fcst30.golf_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: fitness_recreation_payroll_rev_pct_tofcst30_v {
+    label: "Payroll /Rev Fitness & Rec Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.fitness_recreation_payroll_rev_pct} - ${glm_property_f_fcst30.fitness_recreation_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: parking_transportation_payroll_rev_pct_tofcst30_v {
+    label: "Payroll /Rev Parking & Trans Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.parking_transportation_payroll_rev_pct - ${glm_property_f_fcst30.parking_transportation_payroll_rev_pct} );;
+    value_format_name: usd_0
+  }
+
+  measure: telecom_payroll_rev_pct_tofcst30_v {
+    label: "Payroll /Rev Telecom Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.telecom_payroll_rev_pct} - ${glm_property_f_fcst30.telecom_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: retail_payroll_rev_pct_tofcst30_v {
+    label: "Payroll /Rev Retail Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.retail_payroll_rev_pct} - ${glm_property_f_fcst30.retail_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: other_operations_payroll_rev_pct_tofcst30_v {
+    label: "Payroll /Rev Other Op. Dept. Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.other_operations_payroll_rev_pct} - ${glm_property_f_fcst30.other_operations_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_mgmt_payroll_rev_pct_tofcst30_v {
+    label: "Payroll /Rev Mgmt Srvcs Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.property_mgmt_payroll_rev_pct} - ${glm_property_f_fcst30.property_mgmt_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: misc_payroll_rev_pct_tofcst30_v {
+    label: "Payroll /Rev Rentals & Other % Act:LY - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.misc_payroll_rev_pct} - ${glm_property_f_fcst30.misc_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
 }

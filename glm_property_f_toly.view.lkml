@@ -1094,4 +1094,115 @@ view: glm_property_f_toly {
   }
 
 
+
+
+  #-- Payroll /Rev
+  measure: payroll_rev_pct_toly_v {
+    label: "Payroll /Rev Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.payroll_rev_pct} - ${glm_property_f_ly.payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  #-- Avg length of stay
+  measure: length_of_stay_avg_amt_toly_v {
+    label: "Stay Length Avg Night Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.length_of_stay_avg_amt} - ${glm_property_f_ly.length_of_stay_avg_amt} );;
+    value_format_name: decimal_1
+  }
+
+  #-- Payroll Rev %
+
+  measure: room_payroll_rev_pct_toly_v {
+    label: "Payroll /Rev Rms Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.room_payroll_rev_pct} - ${glm_property_f_ly.room_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_payroll_rev_pct_toly_v {
+    label: "Payroll /Rev RB&E Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_payroll_rev_pct} - ${glm_property_f_ly.rbe_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: spa_payroll_rev_pct_toly_v {
+    label: "Payroll /Rev Spa Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.spa_payroll_rev_pct} - ${glm_property_f_ly.spa_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: golf_payroll_rev_pct_toly_v {
+    label: "Payroll /Rev Golf Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.golf_payroll_rev_pct} - ${glm_property_f_ly.golf_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: fitness_recreation_payroll_rev_pct_toly_v {
+    label: "Payroll /Rev Fitness & Rec Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.fitness_recreation_payroll_rev_pct} - ${glm_property_f_ly.fitness_recreation_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: parking_transportation_payroll_rev_pct_toly_v {
+    label: "Payroll /Rev Parking & Trans Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.parking_transportation_payroll_rev_pct - ${glm_property_f_ly.parking_transportation_payroll_rev_pct} );;
+    value_format_name: usd_0
+  }
+
+  measure: telecom_payroll_rev_pct_toly_v {
+    label: "Payroll /Rev Telecom Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.telecom_payroll_rev_pct} - ${glm_property_f_ly.telecom_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: retail_payroll_rev_pct_toly_v {
+    label: "Payroll /Rev Retail Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.retail_payroll_rev_pct} - ${glm_property_f_ly.retail_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: other_operations_payroll_rev_pct_toly_v {
+    label: "Payroll /Rev Other Op. Dept. Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.other_operations_payroll_rev_pct} - ${glm_property_f_ly.other_operations_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_mgmt_payroll_rev_pct_toly_v {
+    label: "Payroll /Rev Mgmt Srvcs Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.property_mgmt_payroll_rev_pct} - ${glm_property_f_ly.property_mgmt_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: misc_payroll_rev_pct_toly_v {
+    label: "Payroll /Rev Rentals & Other % Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.misc_payroll_rev_pct} - ${glm_property_f_ly.misc_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+
 }

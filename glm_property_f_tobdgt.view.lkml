@@ -1106,4 +1106,113 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_2
   }
 
+
+  #-- Payroll /Rev
+  measure: payroll_rev_pct_bdgt_v {
+    label: "Payroll /Rev Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.payroll_rev_pct} - ${glm_property_f_bdgt.payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  #-- Avg length of stay
+  measure: length_of_stay_avg_amt_bdgt_v {
+    label: "Stay Length Avg Night Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.length_of_stay_avg_amt} - ${glm_property_f_bdgt.length_of_stay_avg_amt} );;
+    value_format_name: decimal_1
+  }
+
+  #-- Payroll Rev %
+
+  measure: room_payroll_rev_pct_bdgt_v {
+    label: "Payroll /Rev Rms Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.room_payroll_rev_pct} - ${glm_property_f_bdgt.room_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_payroll_rev_pct_bdgt_v {
+    label: "Payroll /Rev RB&E Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_payroll_rev_pct} - ${glm_property_f_bdgt.rbe_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: spa_payroll_rev_pct_bdgt_v {
+    label: "Payroll /Rev Spa Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.spa_payroll_rev_pct} - ${glm_property_f_bdgt.spa_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: golf_payroll_rev_pct_bdgt_v {
+    label: "Payroll /Rev Golf Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.golf_payroll_rev_pct} - ${glm_property_f_bdgt.golf_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: fitness_recreation_payroll_rev_pct_bdgt_v {
+    label: "Payroll /Rev Fitness & Rec Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.fitness_recreation_payroll_rev_pct} - ${glm_property_f_bdgt.fitness_recreation_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: parking_transportation_payroll_rev_pct_bdgt_v {
+    label: "Payroll /Rev Parking & Trans Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.parking_transportation_payroll_rev_pct - ${glm_property_f_bdgt.parking_transportation_payroll_rev_pct} );;
+    value_format_name: usd_0
+  }
+
+  measure: telecom_payroll_rev_pct_bdgt_v {
+    label: "Payroll /Rev Telecom Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.telecom_payroll_rev_pct} - ${glm_property_f_bdgt.telecom_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: retail_payroll_rev_pct_bdgt_v {
+    label: "Payroll /Rev Retail Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.retail_payroll_rev_pct} - ${glm_property_f_bdgt.retail_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: other_operations_payroll_rev_pct_bdgt_v {
+    label: "Payroll /Rev Other Op. Dept. Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.other_operations_payroll_rev_pct} - ${glm_property_f_bdgt.other_operations_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_mgmt_payroll_rev_pct_bdgt_v {
+    label: "Payroll /Rev Mgmt Srvcs Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.property_mgmt_payroll_rev_pct} - ${glm_property_f_bdgt.property_mgmt_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: misc_payroll_rev_pct_bdgt_v {
+    label: "Payroll /Rev Rentals & Other % Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.misc_payroll_rev_pct} - ${glm_property_f_bdgt.misc_payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
 }
