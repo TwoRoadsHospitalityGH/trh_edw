@@ -690,7 +690,7 @@ view: property_pace_f {
   #-------------------------------------------------------------------------------------------
 
   measure:  roomrev_reach_stly_perc{
-    sql:utl..udf_percent_var(${roomrev_reach_stly},${roomrev_pickup_stly}) ;;
+    sql:utl..udf_percent_var(${roomrev_reach_stly},${roomrev_pickup_stly}) -1 ;;
     type: number
     value_format_name: percent_1
     view_label: "  TY"
