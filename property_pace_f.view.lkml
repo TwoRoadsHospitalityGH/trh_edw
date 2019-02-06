@@ -686,17 +686,9 @@ view: property_pace_f {
   }
 
   #-------------------------------------------------------------------------------------------
-  #-- # Reach
+  #-- # Reach Variance
   #-------------------------------------------------------------------------------------------
 
-  measure:  roomrev_reach_stly_perc{
-    sql:utl..udf_percent_var((${room_rev} + ${roomrev_pickup_stly}),${room_rev});;
-    type: number
-    value_format_name: percent_1
-    view_label: "  TY"
-    label: "Rev Rms $ Reach STLY:STLY % - pickup"
-    description: "((Act -Budg) + STLY Pickup)"
-  }
 
   measure:  roomrev_reach_fcst_perc{
     sql: utl..udf_percent_var((${room_rev} + ${roomrev_pickup_stly}),${act_fcst_roomrev})  ;;
