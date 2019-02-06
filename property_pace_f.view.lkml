@@ -699,7 +699,7 @@ view: property_pace_f {
   }
 
   measure:  roomrev_reach_fcst_perc{
-    sql: utl..udf_percent_var(${roomrev_reach_fcst},${roomrev_pickup_stly})  ;;
+    sql: utl..udf_percent_var((${act_fcst_roomrev} - ${roomrev_reach_fcst}),${roomrev_pickup_stly})  ;;
     type: number
     value_format_name: percent_1
     view_label: "  TY"
@@ -708,7 +708,7 @@ view: property_pace_f {
   }
 
   measure:  roomrev_reach_budg_perc{
-    sql: utl..udf_percent_var(${roomrev_reach_budget},${roomrev_pickup_stly}) ;;
+    sql: utl..udf_percent_var((${budg_roomrev} - ${roomrev_reach_budget}),${roomrev_pickup_stly}) ;;
     type: number
     value_format_name: percent_1
     view_label: "  TY"
