@@ -684,4 +684,28 @@ view: property_pace_f {
     label: "ADR Reach Fcst:STLY - pickup"
     description: "((Act -Fcst) + STLY Pickup)"
   }
+
+  #-------------------------------------------------------------------------------------------
+  #-- # Reach Variance
+  #-------------------------------------------------------------------------------------------
+
+
+  measure:  roomrev_reach_fcst_perc{
+    sql: utl..udf_percent_var((${roomrev_var_fcst}),${roomrev_reach_fcst}) -1   ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  TY"
+    label: "Rev Rms $ Reach Fcst:STLY % - pickup"
+    description: "((Act -Fcst) + STLY Pickup)"
+  }
+
+  measure:  roomrev_reach_budg_perc{
+    sql: utl..udf_percent_var((${roomrev_var_budg}),${roomrev_reach_budget}) -1  ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  TY"
+    label: "Rev Rms $ Reach Budg:STLY % - pickup"
+    description: "((Act -Fcst) + STLY Pickup)"
+  }
+
 }
