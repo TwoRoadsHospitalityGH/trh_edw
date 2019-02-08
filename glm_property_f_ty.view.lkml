@@ -415,6 +415,192 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  #-- Other Expenses Rev Pct (Out of Dept Revenue)
+
+  measure: room_other_exp_rev_pct {
+    label: "Exp /Rev Other Rms %"
+    type: number
+    sql: utl..udf_divide( ${room_other_exp_amt}, ${room_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_other_exp_rev_pct {
+    label: "Exp /Rev Other RB&E %"
+    type: number
+    sql: utl..udf_divide( ${rbe_other_exp_amt}, ${rbe_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: spa_other_exp_rev_pct {
+    label: "Exp /Rev Other Spa %"
+    type: number
+    sql: utl..udf_divide( ${spa_other_exp_amt}, ${spa_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: golf_other_exp_rev_pct {
+    label: "Exp /Rev Other Golf %"
+    type: number
+    sql: utl..udf_divide( ${golf_other_exp_amt}, ${golf_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: fitness_recreation_other_exp_rev_pct {
+    label: "Exp /Rev Other Fitness & Rec %"
+    type: number
+    sql: utl..udf_divide( ${fitness_recreation_other_exp_amt}, ${fitness_recreation_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: parking_transportation_other_exp_rev_pct {
+    label: "Exp /Rev Other Parking & Trans %"
+    type: number
+    sql: utl..udf_divide( ${parking_transportation_other_exp_amt}, ${parking_transportation_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: telecom_other_exp_rev_pct {
+    label: "Exp /Rev Other Telecom %"
+    type: number
+    sql: utl..udf_divide( ${telecom_other_exp_amt}, ${telecom_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: retail_other_exp_rev_pct {
+    label: "Exp /Rev Other Retail %"
+    type: number
+    sql: utl..udf_divide( ${retail_other_exp_amt}, ${retail_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: other_operations_other_exp_rev_pct {
+    label: "Exp /Rev Other Other Op. Dept. %"
+    type: number
+    sql: utl..udf_divide( ${other_operations_other_exp_amt}, ${other_operations_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_mgmt_other_exp_rev_pct {
+    label: "Exp /Rev Other Mgmt Srvcs %"
+    type: number
+    sql: utl..udf_divide( ${property_mgmt_other_exp_amt}, ${property_mgmt_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  #-- Other Expenses Rev Pct (Out of Total Revenue)
+
+  measure: other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other %"
+    type: number
+    sql: utl..udf_divide( ${other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: room_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other Rms %"
+    type: number
+    sql: utl..udf_divide( ${room_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other RB&E %"
+    type: number
+    sql: utl..udf_divide( ${rbe_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: spa_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other Spa %"
+    type: number
+    sql: utl..udf_divide( ${spa_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: golf_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other Golf %"
+    type: number
+    sql: utl..udf_divide( ${golf_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: fitness_recreation_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other Fitness & Rec %"
+    type: number
+    sql: utl..udf_divide( ${fitness_recreation_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: parking_transportation_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other Parking & Trans %"
+    type: number
+    sql: utl..udf_divide( ${parking_transportation_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: telecom_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other Telecom %"
+    type: number
+    sql: utl..udf_divide( ${telecom_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: retail_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other Retail %"
+    type: number
+    sql: utl..udf_divide( ${retail_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: other_operations_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other Other Op. Dept. %"
+    type: number
+    sql: utl..udf_divide( ${other_operations_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_mgmt_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other Mgmt Srvcs %"
+    type: number
+    sql: utl..udf_divide( ${property_mgmt_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: administrative_general_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other A&G %"
+    type: number
+    sql: utl..udf_divide( ${administrative_general_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: information_technology_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other IT %"
+    type: number
+    sql: utl..udf_divide( ${information_technology_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: sales_marketing_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other S&M %"
+    type: number
+    sql: utl..udf_divide( ${sales_marketing_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_operations_maintenance_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other R&M %"
+    type: number
+    sql: utl..udf_divide( ${property_operations_maintenance_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: misc_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other Rentals & Other %"
+    type: number
+    sql: utl..udf_divide( ${misc_other_exp_amt}, ${misc_rev_amt} );;
+    value_format_name: percent_1
+  }
+
   #-- Payroll
 
   measure: payroll_amt {
@@ -528,6 +714,87 @@ view: glm_property_f_ty {
     sql: iff( ${measure_bt} = 1, ${glm_property_f.misc_payroll_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
+
+
+  #-- Payroll Rev %
+
+  measure: room_payroll_rev_pct {
+    label: "Payroll /Rev Rms %"
+    type: number
+    sql: utl..udf_divide( ${room_payroll_amt}, ${room_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_payroll_rev_pct {
+    label: "Payroll /Rev RB&E %"
+    type: number
+    sql: utl..udf_divide( ${rbe_payroll_amt}, ${rbe_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: spa_payroll_rev_pct {
+    label: "Payroll /Rev Spa %"
+    type: number
+    sql: utl..udf_divide( ${spa_payroll_amt}, ${spa_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: golf_payroll_rev_pct {
+    label: "Payroll /Rev Golf %"
+    type: number
+    sql: utl..udf_divide( ${golf_payroll_amt}, ${golf_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: fitness_recreation_payroll_rev_pct {
+    label: "Payroll /Rev Fitness & Rec %"
+    type: number
+    sql: utl..udf_divide( ${fitness_recreation_payroll_amt}, ${fitness_recreation_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: parking_transportation_payroll_rev_pct {
+    label: "Payroll /Rev Parking & Trans %"
+    type: number
+    sql: utl..udf_divide( ${parking_transportation_payroll_amt}, ${parking_transportation_rev_amt} );;
+    value_format_name: usd_0
+  }
+
+  measure: telecom_payroll_rev_pct {
+    label: "Payroll /Rev Telecom %"
+    type: number
+    sql: utl..udf_divide( ${telecom_payroll_amt}, ${telecom_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: retail_payroll_rev_pct {
+    label: "Payroll /Rev Retail %"
+    type: number
+    sql: utl..udf_divide( ${retail_payroll_amt}, ${retail_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: other_operations_payroll_rev_pct {
+    label: "Payroll /Rev Other Op. Dept. %"
+    type: number
+    sql: utl..udf_divide( ${other_operations_payroll_amt}, ${other_operations_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_mgmt_payroll_rev_pct {
+    label: "Payroll /Rev Mgmt Srvcs %"
+    type: number
+    sql: utl..udf_divide( ${property_mgmt_payroll_amt}, ${property_mgmt_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: misc_payroll_rev_pct {
+    label: "Payroll /Rev Rentals & Other %"
+    type: number
+    sql: utl..udf_divide( ${misc_payroll_amt}, ${misc_rev_amt} );;
+    value_format_name: percent_1
+  }
+
 
   #-- Covers
 
@@ -865,6 +1132,94 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  #-- Cost to Rev %
+
+  measure: cost_of_sales_rev_pct {
+    label: "COS /Rev %"
+    type: number
+    sql: utl..udf_divide( ${cost_of_sales_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: room_cost_of_sales_rev_pct {
+    label: "COS /Rev Rms %"
+    type: number
+    sql: utl..udf_divide( ${room_cost_of_sales_amt}, ${room_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_cost_of_sales_rev_pct {
+    label: "COS /Rev RB&E %"
+    type: number
+    sql: utl..udf_divide( ${rbe_cost_of_sales_amt}, ${rbe_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: spa_cost_of_sales_rev_pct {
+    label: "COS /Rev Spa %"
+    type: number
+    sql: utl..udf_divide( ${spa_cost_of_sales_amt}, ${spa_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: golf_cost_of_sales_rev_pct {
+    label: "COS /Rev Golf %"
+    type: number
+    sql: utl..udf_divide( ${golf_cost_of_sales_amt}, ${golf_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: fitness_recreation_cost_of_sales_rev_pct {
+    label: "COS /Rev Fitness & Rec %"
+    type: number
+    sql: utl..udf_divide( ${fitness_recreation_cost_of_sales_amt}, ${fitness_recreation_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: parking_transportation_cost_of_sales_rev_pct {
+    label: "COS /Rev Parking & Trans %"
+    type: number
+    sql: utl..udf_divide( ${parking_transportation_cost_of_sales_amt}, ${parking_transportation_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: telecom_cost_of_sales_rev_pct {
+    label: "COS /Rev Telecom %"
+    type: number
+    sql: utl..udf_divide( ${telecom_cost_of_sales_amt}, ${telecom_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: retail_cost_of_sales_rev_pct {
+    label: "COS /Rev Retail %"
+    type: number
+    sql: utl..udf_divide( ${retail_cost_of_sales_amt}, ${retail_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: other_operations_cost_of_sales_rev_pct {
+    label: "COS /Rev Other Op. Dept. %"
+    type: number
+    sql: utl..udf_divide( ${other_operations_cost_of_sales_amt}, ${other_operations_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_mgmt_cost_of_sales_rev_pct {
+    label: "COS /Rev Mgmt Srvcs %"
+    type: number
+    sql: utl..udf_divide( ${property_mgmt_cost_of_sales_amt}, ${property_mgmt_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: misc_cost_of_sales_rev_pct {
+    label: "COS /Rev Rentals & Other %"
+    type: number
+    sql: utl..udf_divide( ${misc_cost_of_sales_amt}, ${misc_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+
+
   #-- Avg Rev per Spa Treatment / Golf Round
 
   measure: spa_rev_treatment_avg_amt {
@@ -1036,86 +1391,6 @@ view: glm_property_f_ty {
     ${arrival_cnt} );;
     value_format_name: decimal_1
   }
-
-  #-- Payroll Rev %
-
-  measure: room_payroll_rev_pct {
-    label: "Payroll /Rev Rms %"
-    type: number
-    sql: utl..udf_divide( ${room_payroll_amt}, ${room_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: rbe_payroll_rev_pct {
-    label: "Payroll /Rev RB&E %"
-    type: number
-    sql: utl..udf_divide( ${rbe_payroll_amt}, ${rbe_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: spa_payroll_rev_pct {
-    label: "Payroll /Rev Spa %"
-    type: number
-    sql: utl..udf_divide( ${spa_payroll_amt}, ${spa_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: golf_payroll_rev_pct {
-    label: "Payroll /Rev Golf %"
-    type: number
-    sql: utl..udf_divide( ${golf_payroll_amt}, ${golf_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: fitness_recreation_payroll_rev_pct {
-    label: "Payroll /Rev Fitness & Rec %"
-    type: number
-    sql: utl..udf_divide( ${fitness_recreation_payroll_amt}, ${fitness_recreation_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: parking_transportation_payroll_rev_pct {
-    label: "Payroll /Rev Parking & Trans %"
-    type: number
-    sql: utl..udf_divide( ${parking_transportation_payroll_amt}, ${parking_transportation_rev_amt} );;
-    value_format_name: usd_0
-  }
-
-  measure: telecom_payroll_rev_pct {
-    label: "Payroll /Rev Telecom %"
-    type: number
-    sql: utl..udf_divide( ${telecom_payroll_amt}, ${telecom_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: retail_payroll_rev_pct {
-    label: "Payroll /Rev Retail %"
-    type: number
-    sql: utl..udf_divide( ${retail_payroll_amt}, ${retail_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: other_operations_payroll_rev_pct {
-    label: "Payroll /Rev Other Op. Dept. %"
-    type: number
-    sql: utl..udf_divide( ${other_operations_payroll_amt}, ${other_operations_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: property_mgmt_payroll_rev_pct {
-    label: "Payroll /Rev Mgmt Srvcs %"
-    type: number
-    sql: utl..udf_divide( ${property_mgmt_payroll_amt}, ${property_mgmt_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: misc_payroll_rev_pct {
-    label: "Payroll /Rev Rentals & Other %"
-    type: number
-    sql: utl..udf_divide( ${misc_payroll_amt}, ${misc_rev_amt} );;
-    value_format_name: percent_1
-  }
-
 
 
 
