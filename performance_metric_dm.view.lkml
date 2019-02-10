@@ -145,6 +145,22 @@ view: performance_metric_dm {
     hidden: no
   }
 
+  filter: rbe_bt{
+    label: "RBE Balanced Scorecard"
+    description: "Is included within RBE Balanced Scorecard"
+    type: yesno
+    sql: ${TABLE}.bsc_rpt_bt = 1  ;;
+    hidden: no
+  }
+
+  dimension: rbe_weight_no{
+    label: "Weighting - RBE Balanced Scorecard Metric"
+    description: "Weight applied to metric within RBE Balanced Scorecard"
+    type: number
+    sql: ${TABLE}.rbe_rpt_weight_no  ;;
+    hidden: no
+  }
+
   filter: gs_rpt_bt{
     label: "Guest Metrics"
     description: "Guest metrics."
