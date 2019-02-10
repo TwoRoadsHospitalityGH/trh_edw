@@ -149,7 +149,7 @@ view: performance_metric_dm {
     label: "RBE Balanced Scorecard"
     description: "Is included within RBE Balanced Scorecard"
     type: yesno
-    sql: ${TABLE}.bsc_rpt_bt = 1  ;;
+    sql: ${TABLE}.rbe_rpt_bt = 1  ;;
     hidden: no
   }
 
