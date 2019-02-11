@@ -13,10 +13,17 @@ explore: mm_property_fc_f {
   label: "Focus Critical Metrics"
   persist_with: model_caching_dg
   view_label: "    Measures"
-#   access_filter: {
-#      field: user_property_fdm.user_id
-#      user_attribute: atmp_userid
-#    }
+  access_filter: {
+    field: user_property_fdm.user_id
+    user_attribute: looker_ldap_user_id
+  }
+
+  join: user_property_fdm {
+    from:  user_property_fdm
+    sql_on: ${user_property_fdm.property_key} = ${mm_property_fc_f.property_key} ;;
+    type: inner
+    relationship: many_to_one
+  }
 
   join: date_dm {
     from: date_dm
