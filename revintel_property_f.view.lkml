@@ -367,7 +367,7 @@ view: revintel_property_f {
     type: number
     value_format_name: decimal_0
     view_label: "  CY"
-    label: "Rms Bkd LY:STLY - pickup"
+    label: "Rms Bkd LY:STLY - Pickup"
     description: "(LY - STLY)"
   }
 
@@ -376,7 +376,7 @@ view: revintel_property_f {
     type: number
     value_format_name: usd_0
     view_label: "  CY"
-    label: "Rev Rms $ LY:STLY - pickup"
+    label: "Rev Rms $ LY:STLY - Pickup"
     description: "(LY - STLY)"
   }
 
@@ -385,7 +385,7 @@ view: revintel_property_f {
     type: number
     value_format_name: usd_0
     view_label: "  CY"
-    label: "ADR LY:STLY - pickup"
+    label: "ADR LY:STLY - Pickup"
     description: "(LY - STLY)"
   }
 
@@ -393,6 +393,32 @@ view: revintel_property_f {
 #-- Measures reach to ly
 #-------------------------------------------------------------------------------------------
 
+  measure:  rooms_stly_reach{
+    sql: (${rooms_stly_pickup}( + (${rooms_var}) ;;
+    type: number
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd CY:STLY - Reach"
+    description: "(STLY pickup + Act:LY - var)"
+  }
+
+  measure:  room_rev_stly_reach{
+    sql: (${room_rev_stly_pickup}) + (${room_rev_var}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev Rms $ LY:STLY - Reach"
+    description: "(STLY pickup + Act:LY - var)"
+  }
+
+  measure:  room_adr_stly_reach{
+    sql: utl..udf_percent_var((${room_rev_stly_reach}),(${rooms_stly_reach})) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "ADR LY:STLY - Reach"
+    description: "(STLY pickup + Act:LY - var)"
+  }
 
 
 
