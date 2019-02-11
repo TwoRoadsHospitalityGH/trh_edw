@@ -166,11 +166,11 @@ view: revintel_property_f {
   }
 
   #-------------------------------------------------------------------------------------------
-  #-- Measures LY
+  #-- Measures STLY
   #-------------------------------------------------------------------------------------------
 
-  measure:  py_rooms{
-    sql: ${TABLE}.py_rooms ;;
+  measure:  stly_rooms{
+    sql: ${TABLE}.stly_rooms ;;
     value_format_name: decimal_0
     view_label: "  STLY"
     label: "Rms Bkd"
@@ -178,8 +178,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  py_room_rev{
-    sql: ${TABLE}.py_room_rev ;;
+  measure:  stly_room_rev{
+    sql: ${TABLE}.stly_room_rev ;;
     value_format_name: usd_0
     view_label: "  STLY"
     label: "Rev Rms $"
@@ -187,8 +187,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  py_food_rev{
-    sql: ${TABLE}.py_food_rev ;;
+  measure:  stly_food_rev{
+    sql: ${TABLE}.stly_food_rev ;;
     value_format_name: usd_0
     view_label: "  STLY"
     label: "Rev Food $"
@@ -196,8 +196,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  py_other_rev{
-    sql: ${TABLE}.py_other_rev ;;
+  measure:  stly_other_rev{
+    sql: ${TABLE}.stly_other_rev ;;
     value_format_name: usd_0
     view_label: "  STLY"
     label: "Rev Other $"
@@ -205,11 +205,60 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  py_room_adr{
-    sql: utl..udf_divide(${py_room_rev},${py_rooms}) ;;
+  measure:  stly_room_adr{
+    sql: utl..udf_divide(${stly_room_rev},${stly_rooms}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  STLY"
+    label: "ADR"
+    description: "Average Daily Rate"
+  }
+
+#-------------------------------------------------------------------------------------------
+  #-- Measures LY
+  #-------------------------------------------------------------------------------------------
+
+  measure:  ly_rooms{
+    sql: ${TABLE}.ly_rooms ;;
+    value_format_name: decimal_0
+    view_label: "  LY"
+    label: "Rms Bkd"
+    description: "LY Room Booked"
+    type: sum
+  }
+
+  measure:  ly_room_rev{
+    sql: ${TABLE}.ly_room_rev ;;
+    value_format_name: usd_0
+    view_label: "  LY"
+    label: "Rev Rms $"
+    description: "LY Room Revenue"
+    type: sum
+  }
+
+  measure:  ly_food_rev{
+    sql: ${TABLE}.ly_food_rev ;;
+    value_format_name: usd_0
+    view_label: "  LY"
+    label: "Rev Food $"
+    description: "LY Food Revenue"
+    type: sum
+  }
+
+  measure:  ly_other_rev{
+    sql: ${TABLE}.ly_other_rev ;;
+    value_format_name: usd_0
+    view_label: "  LY"
+    label: "Rev Other $"
+    description: "LY Other Revenue"
+    type: sum
+  }
+
+  measure:  ly_room_adr{
+    sql: utl..udf_divide(${ly_room_rev},${ly_rooms}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  LY"
     label: "ADR"
     description: "Average Daily Rate"
   }
@@ -220,93 +269,128 @@ view: revintel_property_f {
   #-------------------------------------------------------------------------------------------
 
   measure:  rooms_var_perc{
-    sql: utl..udf_percent_var((${cy_rooms}),(${py_rooms})) ;;
+    sql: utl..udf_percent_var((${cy_rooms}),(${stly_rooms})) ;;
     type: number
     value_format_name: percent_1
     view_label: "  CY"
-    label: "Rms Bkd Act:LY - % var"
-    description: "(TY - LY)/TY"
+    label: "Rms Bkd Act:STLY - % var"
+    description: "(TY - STLY)/TY"
   }
 
   measure:  rooms_var{
-    sql: (${cy_rooms})-(${py_rooms}) ;;
+    sql: (${cy_rooms})-(${stly_rooms}) ;;
     type: number
     value_format_name: decimal_0
     view_label: "  CY"
-    label: "Rms Bkd Act:LY - var"
-    description: "(TY - LY)"
+    label: "Rms Bkd Act:STLY - var"
+    description: "(TY - STLY)"
   }
 
   measure:  room_rev_var_perc{
-    sql: utl..udf_percent_var((${cy_room_rev}),(${py_room_rev})) ;;
+    sql: utl..udf_percent_var((${cy_room_rev}),(${stly_room_rev})) ;;
     type: number
     value_format_name: percent_1
     view_label: "  CY"
-    label: "Rev Rms $ Act:LY - % var"
-    description: "(TY - LY)/TY"
+    label: "Rev Rms $ Act:STLY - % var"
+    description: "(TY - STLY)/TY"
   }
 
   measure:  room_rev_var{
-    sql: (${cy_room_rev})-(${py_room_rev}) ;;
+    sql: (${cy_room_rev})-(${stly_room_rev}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  CY"
-    label: "Rev Rms $ Act:LY - var"
-    description: "(TY - LY)"
+    label: "Rev Rms $ Act:STLY - var"
+    description: "(TY - STLY)"
   }
 
   measure:  food_rev_var_perc{
-    sql: utl..udf_percent_var((${cy_food_rev}),(${py_food_rev})) ;;
+    sql: utl..udf_percent_var((${cy_food_rev}),(${stly_food_rev})) ;;
     type: number
     value_format_name: percent_1
     view_label: "  CY"
-    label: "Rev Food $ Act:LY - % var"
-    description: "(TY - LY)/TY"
+    label: "Rev Food $ Act:STLY - % var"
+    description: "(TY - STLY)/TY"
   }
 
   measure:  food_rev_var{
-    sql: (${cy_food_rev})-(${py_food_rev}) ;;
+    sql: (${cy_food_rev})-(${stly_food_rev}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  CY"
-    label: "Rev Food $ Act:LY - var"
-    description: "(TY - LY)"
+    label: "Rev Food $ Act:STLY - var"
+    description: "(TY - STLY)"
   }
 
   measure:  other_rev_var_perc{
-    sql: utl..udf_percent_var((${cy_other_rev}),(${py_other_rev})) ;;
+    sql: utl..udf_percent_var((${cy_other_rev}),(${stly_other_rev})) ;;
     type: number
     value_format_name: percent_1
     view_label: "  CY"
-    label: "Rev Other $ Act:LY - % var"
-    description: "(TY - LY)/TY"
+    label: "Rev Other $ Act:STLY - % var"
+    description: "(TY - STLY)/TY"
   }
 
   measure:  other_rev_var{
-    sql: (${cy_other_rev})-(${py_other_rev}) ;;
+    sql: (${cy_other_rev})-(${stly_other_rev}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  CY"
-    label: "Rev Other $ Act:LY - var"
-    description: "(TY - LY)"
+    label: "Rev Other $ Act:STLY - var"
+    description: "(TY - STLY)"
   }
 
   measure:  room_adr_var_perc{
-    sql: utl..udf_percent_var((${cy_room_adr}),(${py_room_adr})) ;;
+    sql: utl..udf_percent_var((${cy_room_adr}),(${stly_room_adr})) ;;
     type: number
     value_format_name: percent_1
     view_label: "  CY"
-    label: "ADR Act:LY - % var"
-    description: "(TY - LY)/TY"
+    label: "ADR Act:STLY - % var"
+    description: "(TY - STLY)/TY"
   }
 
   measure:  room_adr_var{
-    sql: (${cy_room_adr})-(${py_room_adr}) ;;
+    sql: (${cy_room_adr})-(${stly_room_adr}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  CY"
-    label: "ADR Act:LY - var"
-    description: "(TY - LY)"
+    label: "ADR Act:STLY - var"
+    description: "(TY - STLY)"
   }
+
+  #-------------------------------------------------------------------------------------------
+  #-- Measures stly pickup
+  #-------------------------------------------------------------------------------------------
+
+  measure:  rooms_stly_pickup{
+    sql: (${ly_rooms})-(${stly_rooms}) ;;
+    type: number
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd LY:STLY - pickup"
+    description: "(LY - STLY)"
+  }
+
+  measure:  room_rev_stly_pickup{
+    sql: (${ly_room_rev})-(${stly_room_rev}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev Rms $ LY:STLY - pickup"
+    description: "(LY - STLY)"
+  }
+
+  measure:  room_adr_stly_pickup{
+    sql: utl..udf_percent_var((${room_rev_stly_pickup}),(${rooms_stly_pickup})) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "ADR LY:STLY - pickup"
+    description: "(LY - STLY)"
+  }
+
+
+
+
 
   }
