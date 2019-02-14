@@ -37,7 +37,7 @@ view: revintel_property_rate_code_f {
   }
 
   dimension: lkp_rate_code_nm {
-    sql: ${TABLE}.rate_code_nm ;;
+    sql: ${TABLE}.lkp_rate_code_nm ;;
     view_label: "Reservation Detail"
     label: "Lookup Rate Code Name"
     description: "Lookup Rate Code Name"
@@ -45,7 +45,7 @@ view: revintel_property_rate_code_f {
   }
 
   dimension: account_nm {
-    sql: ${TABLE}.rate_code_nm ;;
+    sql: ${TABLE}.account_nm ;;
     view_label: "Reservation Detail"
     label: "Account Name"
     description: "Account Name"

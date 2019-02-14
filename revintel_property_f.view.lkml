@@ -93,7 +93,7 @@ view: revintel_property_f {
   }
 
   dimension: business_unit_nm {
-    sql: ${TABLE}.company_nm ;;
+    sql: ${TABLE}.business_unit_nm ;;
     view_label: "Reservation Detail"
     label: "Business Unit"
     description: "Busines Unit Name"
@@ -101,7 +101,7 @@ view: revintel_property_f {
   }
 
   dimension: rate_code {
-    sql: ${TABLE}.company_nm ;;
+    sql: ${TABLE}.rate_code;;
     view_label: "Reservation Detail"
     label: "Rate Code"
     description: "Rate Code Number"
@@ -109,7 +109,7 @@ view: revintel_property_f {
   }
 
   dimension: rate_code_nm {
-    sql: ${TABLE}.company_nm ;;
+    sql: ${TABLE}.rate_code_nm ;;
     view_label: "Reservation Detail"
     label: "Rate Code"
     description: "Rate Code Name"
