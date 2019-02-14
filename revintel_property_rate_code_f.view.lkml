@@ -22,7 +22,7 @@ view: revintel_property_rate_code_f {
 
   dimension: rate_code {
     sql: ${TABLE}.rate_code ;;
-    view_label: "Reservation Detail"
+    view_label: "Rate Code Detail"
     label: "Rate Code"
     description: "Rate Code Number"
     type: string
@@ -30,7 +30,7 @@ view: revintel_property_rate_code_f {
 
   dimension: rate_code_nm {
     sql: ${TABLE}.rate_code_nm ;;
-    view_label: "Reservation Detail"
+    view_label: "Rate Code Detail"
     label: "Rate Code"
     description: "Rate Code Name"
     type: string
@@ -38,7 +38,7 @@ view: revintel_property_rate_code_f {
 
   dimension: lkp_rate_code_nm {
     sql: ${TABLE}.lkp_rate_code_nm ;;
-    view_label: "Reservation Detail"
+    view_label: "Rate Code Detail"
     label: "Lookup Rate Code Name"
     description: "Lookup Rate Code Name"
     type: string
@@ -46,7 +46,7 @@ view: revintel_property_rate_code_f {
 
   dimension: account_nm {
     sql: ${TABLE}.account_nm ;;
-    view_label: "Reservation Detail"
+    view_label: "Rate Code Detail"
     label: "Account Name"
     description: "Account Name"
     type: string
