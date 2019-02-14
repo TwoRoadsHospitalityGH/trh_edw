@@ -398,6 +398,13 @@ view: property_dm {
     sql: ${TABLE}.oracle_entity_str ;;
   }
 
+  dimension: rbe_rpt_applicable_bt {
+    label: "RBE Reporting"
+    description: "Indication of inclusion in RBE reporting."
+    type: yesno
+    sql: ${TABLE}.rbe_rpt_applicable_bt = 1 ;;
+  }
+
   dimension: tripadvisor_id {
     label: "Trip Advisor ID"
     description: "Trip Advisor ID."
