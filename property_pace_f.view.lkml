@@ -504,8 +504,8 @@ view: property_pace_f {
     type: number
     value_format_name: usd_0
     view_label: "  TY"
-    label: "Rev Rms $ Act:Fcst - var"
-    description: "(TY - Fcst)"
+    label: "Rev Rms $ Act:Bdgt - var"
+    description: "(TY - Bdgt)"
   }
 
   measure:  roomrev_var_fcst{
@@ -513,8 +513,8 @@ view: property_pace_f {
     type: number
     value_format_name: usd_0
     view_label: "  TY"
-    label: "Rev Rms $ Act:Bdgt - var"
-    description: "(TY - Bdgt)"
+    label: "Rev Rms $ Act:Fcst - var"
+    description: "(TY - Fcst)"
   }
 
   measure:  roomsold_var_ly{
