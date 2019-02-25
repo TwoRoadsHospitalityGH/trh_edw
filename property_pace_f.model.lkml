@@ -29,7 +29,7 @@ explore: property_pace_f {
 
   join: date_dm{
     from: date_dm
-    view_label: " Stay Date"
+    view_label: "Stay Date"
     sql_on: ${date_dm.date_sid} = ${property_pace_f.pace_date_sid}  ;;
     type: inner
     relationship: many_to_one
@@ -37,7 +37,7 @@ explore: property_pace_f {
 
   join: property_dm {
     from: property_dm
-    view_label: " Property"
+    view_label: "Property"
     sql_on: ${property_dm.property_key} = ${property_pace_f.property_key} ;;
     type: inner
     relationship: many_to_one

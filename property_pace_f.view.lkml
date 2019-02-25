@@ -329,7 +329,7 @@ view: property_pace_f {
   measure:  tent_roomsold{
     sql: ${TABLE}.tent_roomsold ;;
     value_format_name: decimal_0
-    view_label: "  STLY"
+    view_label: " STLY"
     label: "Rms Bkd Tentative"
     description: "Tentative Room Sold"
     type: sum
@@ -375,7 +375,7 @@ view: property_pace_f {
     sql: utl..udf_divide(${tent_roomrev_stly},${tent_roomsold_stly}) ;;
     type: number
     value_format_name: usd_0
-    view_label: "  STLY"
+    view_label: " STLY"
     label: "ADR Tentative LY"
     description: "Tentative Average Daily Rate (Same Time Last Year)"
   }
