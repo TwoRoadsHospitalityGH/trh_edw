@@ -586,7 +586,7 @@ view: property_pace_f {
   measure:  roomsold_pickup_stly{
     sql: (${roomsold_ly} - ifnull(${roomsold_stly},0)) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: decimal_0
     view_label: "  TY"
     label: "Rms Sold Pickup LY:STLY - var"
     description: "(Act:LY - STLY)"
@@ -634,7 +634,7 @@ view: property_pace_f {
   measure:  roomsold_reach_stly{
     sql: (${roomsold_var_ly} + ifnull(${roomsold_pickup_stly},0)) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: decimal_0
     view_label: "  TY"
     label: "Rms Bkd Reach STLY:STLY - pickup"
     description: "((Act-STLY) + STLY Pickup)"
@@ -643,7 +643,7 @@ view: property_pace_f {
   measure:  roomsold_reach_budget{
     sql: (${roomsold_var_budg} + ifnull(${roomsold_pickup_stly},0)) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: decimal_0
     view_label: "  TY"
     label: "Rms Bkd Reach Budg:STLY - pickup"
     description: "((Act -Budg) + STLY Pickup)"
@@ -652,7 +652,7 @@ view: property_pace_f {
   measure:  roomsold_reach_fcst{
     sql: (${roomsold_var_fcst} + ifnull(${roomsold_pickup_stly},0)) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: decimal_0
     view_label: "  TY"
     label: "Rms Bkd Reach Fcst:STLY - pickup"
     description: "((Act -Fcst) + STLY Pickup)"
