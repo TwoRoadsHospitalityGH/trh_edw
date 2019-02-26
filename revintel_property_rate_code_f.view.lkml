@@ -31,7 +31,7 @@ view: revintel_property_rate_code_f {
   dimension: rate_code_nm {
     sql: ${TABLE}.rate_code_nm ;;
     view_label: "Rate Code Detail"
-    label: "Rate Code"
+    label: "Rate Code Name"
     description: "Rate Code Name"
     type: string
   }
