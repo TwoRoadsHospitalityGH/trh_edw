@@ -4,7 +4,7 @@ include: "*.view.lkml"                       # include all views in this project
 label: "Revintel Property Rate Code (uat)"
 
 datagroup: model_caching_dg {
-  sql_trigger: select max( dw_update_dt ) from pedw.dev.revintel_property_rate_code_f ;;
+  sql_trigger: select max( dw_update_dt ) from pedw.fact.revintel_property_rate_code_f ;;
   max_cache_age: "8 hours"
 }
 

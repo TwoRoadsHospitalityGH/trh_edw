@@ -1,5 +1,5 @@
 view: revintel_property_rate_code_f {
-  sql_table_name: pedw.dev.revintel_property_rate_code_f  ;;
+  sql_table_name: pedw.fact.revintel_property_rate_code_f  ;;
 
   #-------------------------------------------------------------------------------------------
   #-- Keys
