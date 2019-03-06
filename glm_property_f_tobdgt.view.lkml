@@ -1413,6 +1413,14 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: contract_room_rev_amt_tobdgt_v {
+    label: "Rev Rms Contract Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.contract_room_rev_amt - ${glm_property_f_bdgt.contract_room_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
 #-- Group/Transient % var
 
 
@@ -1429,6 +1437,14 @@ view: glm_property_f_tobdgt {
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.group_room_rev_amt - ${glm_property_f_bdgt.group_room_rev_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: contract_room_rev_amt_tobdgt {
+    label: "Rev Rms Contract Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.contract_room_rev_amt - ${glm_property_f_bdgt.contract_room_rev_amt}) ;;
     value_format_name: percent_1
   }
 

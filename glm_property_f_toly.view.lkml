@@ -1223,6 +1223,14 @@ view: glm_property_f_toly {
     value_format_name: decimal_0
   }
 
+  measure: occupied_contract_room_cnt_toly_v {
+    label: "Rms Occ Contract Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.occupied_contract_room_cnt} - ${glm_property_f_ly.occupied_contract_room_cnt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: avail_room_cnt_toly_v {
     label: "Rms Avail Act:LY - var"
     description: "Actual - LY"
@@ -1266,6 +1274,22 @@ view: glm_property_f_toly {
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.group_room_rev_amt - ${glm_property_f_ly.group_room_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: contract_room_rev_amt_toly_v {
+    label: "Rev Rms Contract Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.contract_room_rev_amt - ${glm_property_f_ly.contract_room_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: no_show_room_rev_amt_toly_v {
+    label: "Rev Rms No Show Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.no_show_room_rev_amt - ${glm_property_f_ly.no_show_room_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1372,6 +1396,14 @@ view: glm_property_f_toly {
     value_format_name: percent_1
   }
 
+  measure: occupied_contract_room_cnt_toly {
+    label: "Rms Occ Contract Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_contract_room_cnt}, ${glm_property_f_ly.occupied_contract_room_cnt}) ;;
+    value_format_name: percent_1
+  }
+
   measure: avail_room_cnt_toly {
     label: "Rms Avail Act:LY - var %"
     description: "(Actual - LY) / LY"
@@ -1415,6 +1447,14 @@ view: glm_property_f_toly {
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.group_room_rev_amt - ${glm_property_f_ly.group_room_rev_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: contract_room_rev_amt_toly {
+    label: "Rev Rms Contract Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.contract_room_rev_amt - ${glm_property_f_ly.contract_room_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1972,6 +2012,14 @@ view: glm_property_f_toly {
     value_format_name: percent_1
   }
 
+  measure: occupied_contract_room_pct_toly_v {
+    label: "Rms Occ % Contract Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.occupied_contract_room_pct} - ${glm_property_f_ly.occupied_contract_room_pct} ;;
+    value_format_name: percent_1
+  }
+
 #-- Occupancy % var
 
 
@@ -1996,6 +2044,14 @@ view: glm_property_f_toly {
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_transient_room_pct}, ${glm_property_f_ly.occupied_transient_room_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: occupied_contract_room_pct_toly {
+    label: "Rms Occ % Contract Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_contract_room_pct}, ${glm_property_f_ly.occupied_contract_room_pct} );;
     value_format_name: percent_1
   }
 

@@ -667,6 +667,18 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: contract_room_rev_amt {
+    type: number
+    sql: ${TABLE}.contract_room_rev_amt ;;
+    hidden: yes
+  }
+
+  dimension: no_show_room_rev_amt {
+    type: number
+    sql: ${TABLE}.no_show_room_rev_amt ;;
+    hidden: yes
+  }
+
   #-- Profit
 
   dimension: profit_amt {

@@ -1296,6 +1296,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: occupied_contract_room_cnt_tofcst30_v {
+    label: "Rms Occ Contract Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.occupied_contract_room_cnt} - ${glm_property_f_fcst30.occupied_contract_room_cnt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: avail_room_cnt_tofcst30_v {
     label: "Rms Avail Act:Fcst30 - var"
     description: "Actual - Fcst30"
@@ -1343,6 +1351,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: contract_room_rev_amt_tofcst30_v {
+    label: "Rev Rms Contract Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.contract_room_rev_amt} - ${glm_property_f_fcst30.contract_room_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
 
   #-- Rooms % var
 
@@ -1375,6 +1391,14 @@ view: glm_property_f_tofcst30 {
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_group_room_cnt}, ${glm_property_f_fcst30.occupied_group_room_cnt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: occupied_contract_room_cnt_tofcst30 {
+    label: "Rms Occ Contract Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_contract_room_cnt}, ${glm_property_f_fcst30.occupied_contract_room_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1422,6 +1446,14 @@ view: glm_property_f_tofcst30 {
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.group_room_rev_amt}, ${glm_property_f_fcst30.group_room_rev_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: contract_room_rev_amt_tofcst30 {
+    label: "Rev Rms Contract Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.contract_room_rev_amt}, ${glm_property_f_fcst30.contract_room_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1978,6 +2010,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
+  measure: occupied_contract_room_pct_tofcst30_v {
+    label: "Rms Occ % Contract Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.occupied_contract_room_pct} - ${glm_property_f_fcst30.occupied_contract_room_pct} ;;
+    value_format_name: percent_1
+  }
+
 
   #-- Occupancy % var
 
@@ -2002,6 +2042,14 @@ view: glm_property_f_tofcst30 {
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_transient_room_pct}, ${glm_property_f_fcst30.occupied_transient_room_pct}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: occupied_contract_room_pct_tofcst30 {
+    label: "Rms Occ % Contract Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_contract_room_pct}, ${glm_property_f_fcst30.occupied_contract_room_pct}) ;;
     value_format_name: percent_1
   }
 

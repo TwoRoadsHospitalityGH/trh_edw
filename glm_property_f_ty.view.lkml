@@ -880,6 +880,12 @@ view: glm_property_f_ty {
     sql: iff( ${measure_bt} = 1, ${glm_property_f.occupied_group_room_cnt}, to_number( null ) ) ;;
   }
 
+  measure: occupied_contract_room_cnt {
+    label: "Rms Occ Contract"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.occupied_contract_room_cnt}, to_number( null ) ) ;;
+  }
+
   measure: avail_room_cnt {
     label: "Rms Avail"
     type: sum
@@ -916,6 +922,18 @@ view: glm_property_f_ty {
     label: "Rev Rms Group $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.group_room_rev_amt}, to_number( null ) ) ;;
+  }
+
+  measure: contract_room_rev_amt {
+    label: "Rev Rms Contract $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.contract_room_rev_amt}, to_number( null ) ) ;;
+  }
+
+  measure: no_show_room_rev_amt {
+    label: "Rev Rms No Show $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.no_show_room_rev_amt}, to_number( null ) ) ;;
   }
 
   #-- Profit
@@ -1259,6 +1277,13 @@ view: glm_property_f_ty {
     value_format_name: percent_1
   }
 
+  measure: occupied_contract_room_pct {
+    label: "Rms Occ % Contract"
+    type: number
+    sql: utl..udf_divide( ${occupied_contract_room_cnt}, ${net_avail_room_cnt} );;
+    value_format_name: percent_1
+  }
+
 
   #-- ADR
 
@@ -1387,7 +1412,7 @@ view: glm_property_f_ty {
   measure: length_of_stay_avg_amt {
     label: "Stay Length Avg Night"
     type: number
-    sql: utl..udf_divide( ${occupied_transient_room_cnt} + ${occupied_group_room_cnt} + ${occupied_owner_room_cnt} + ${comp_room_cnt},
+    sql: utl..udf_divide( ${occupied_transient_room_cnt} + ${occupied_group_room_cnt} + ${occupied_contract_room_cnt} + ${occupied_owner_room_cnt} + ${comp_room_cnt},
     ${arrival_cnt} );;
     value_format_name: decimal_1
   }
