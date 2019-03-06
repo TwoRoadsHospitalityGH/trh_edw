@@ -1421,6 +1421,14 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: no_show_room_rev_amt_tobdgt_v {
+    label: "Rev Rms No Show Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.no_show_room_rev_amt - ${glm_property_f_bdgt.no_show_room_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
 #-- Group/Transient % var
 
 

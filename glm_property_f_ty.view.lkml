@@ -936,6 +936,12 @@ view: glm_property_f_ty {
     sql: iff( ${measure_bt} = 1, ${glm_property_f.no_show_room_rev_amt}, to_number( null ) ) ;;
   }
 
+  measure: service_charge_room_rev_amt {
+    label: "Rev Rms Srvc Charge $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.service_charge_room_rev_amt}, to_number( null ) ) ;;
+  }
+
   #-- Profit
 
   measure: profit_amt {

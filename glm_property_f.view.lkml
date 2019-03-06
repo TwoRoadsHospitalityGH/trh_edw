@@ -679,6 +679,12 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: service_charge_room_rev_amt {
+    type: number
+    sql: ${TABLE}.service_charge_room_rev_amt ;;
+    hidden: yes
+  }
+
   #-- Profit
 
   dimension: profit_amt {

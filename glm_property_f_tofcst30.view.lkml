@@ -1359,6 +1359,22 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: no_show_room_rev_amt_tofcst30_v {
+    label: "Rev Rms No show Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.no_show_room_rev_amt} - ${glm_property_f_fcst30.no_show_room_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: service_charge_room_rev_amt_tofcst30_v {
+    label: "Rev Rms Srvc Charge Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.service_charge_room_rev_amt} - ${glm_property_f_fcst30.service_charge_room_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
 
   #-- Rooms % var
 
