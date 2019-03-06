@@ -942,6 +942,13 @@ view: glm_property_f_ty {
     sql: iff( ${measure_bt} = 1, ${glm_property_f.service_charge_incl_room_rev_amt}, to_number( null ) ) ;;
   }
 
+  # does not include no shows and does include service charges with seg4 0000
+  measure: other_room_rev_amt {
+    label: "Rev Rms Other $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_room_rev_amt}, to_number( null ) ) ;;
+  }
+
   #-- Profit
 
   measure: profit_amt {

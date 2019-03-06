@@ -691,6 +691,12 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: other_room_rev_amt {
+    type: number
+    sql: ${TABLE}.other_room_rev_amt ;;
+    hidden: yes
+  }
+
   #-- Profit
 
   dimension: profit_amt {
