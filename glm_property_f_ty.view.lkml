@@ -916,30 +916,35 @@ view: glm_property_f_ty {
     label: "Rev Rms Transient $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.transient_room_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
   }
 
   measure: group_room_rev_amt {
     label: "Rev Rms Group $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.group_room_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
   }
 
   measure: contract_room_rev_amt {
     label: "Rev Rms Contract $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.contract_room_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
   }
 
   measure: no_show_room_rev_amt {
     label: "Rev Rms No Show $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.no_show_room_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
   }
 
   measure: service_charge_incl_room_rev_amt {
     label: "Rev Rms Srvc Charge $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.service_charge_incl_room_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
   }
 
   # does not include no shows and does include service charges with seg4 0000
@@ -947,6 +952,7 @@ view: glm_property_f_ty {
     label: "Rev Rms Other $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.other_room_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
   }
 
   #-- Profit
