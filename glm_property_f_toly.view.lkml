@@ -1293,11 +1293,11 @@ view: glm_property_f_toly {
     value_format_name: decimal_0
   }
 
-  measure: service_charge_room_rev_amt_toly_v {
+  measure: service_charge_incl_room_rev_amt_toly_v {
     label: "Rev Rms Srvc Charge Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${glm_property_f_ty.service_charge_room_rev_amt - ${glm_property_f_ly.service_charge_room_rev_amt} ;;
+    sql: ${glm_property_f_ty.service_charge_incl_room_rev_amt - ${glm_property_f_ly.service_charge_incl_room_rev_amt} ;;
     value_format_name: decimal_0
   }
 

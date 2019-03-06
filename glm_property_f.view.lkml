@@ -681,7 +681,13 @@ view: glm_property_f {
 
   dimension: service_charge_room_rev_amt {
     type: number
-    sql: ${TABLE}.service_charge_room_rev_amt ;;
+    sql: ${TABLE}.service_charge_incl_room_rev_amt ;;
+    hidden: yes
+  }
+
+  dimension: service_charge_incl_room_rev_amt {
+    type: number
+    sql: ${TABLE}.service_charge_incl_room_rev_amt ;;
     hidden: yes
   }
 
