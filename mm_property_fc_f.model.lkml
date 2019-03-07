@@ -9,8 +9,8 @@ datagroup: model_caching_dg {
 }
 
 explore: mm_property_fc_f {
-  group_label: "***Development***"
-  label: "Focus Critical Metrics"
+  group_label: "***User Acceptance Testing***"
+  label: "Focus Critical Metrics (uat)"
   persist_with: model_caching_dg
   view_label: "    Measures"
   access_filter: {
