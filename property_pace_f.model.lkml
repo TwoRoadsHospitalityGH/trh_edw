@@ -9,8 +9,11 @@ datagroup: model_caching_dg {
 }
 
 explore: property_pace_f {
-  group_label: "***User Acceptance Testing***"
-  label: "Portfolio Pace (uat)"
+  description: "**Actual/Forecast/Budget data from Oracle
+                **OTB data from RevIntel or MK14's
+                **MK14's updated bi monthly"
+  group_label: "Portfolio"
+  label: "Portfolio Pace"
   view_label: "  Measures"
   persist_with: model_caching_dg
   case_sensitive: no
