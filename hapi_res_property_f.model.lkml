@@ -11,8 +11,8 @@ datagroup: model_caching_dg {
 explore: hapi_res_property_f_v {
   from: hapi_res_property_f_v
   sql_table_name: pedw.dev.hapi_res_property_f ;;
-  group_label: "Property"
-  label: "Reservations-HAPI"
+  group_label: "***User Acceptance Testing***"
+  label: "Reservations-HAPI (uat)"
   persist_with: model_caching_dg
 
   access_filter: {
