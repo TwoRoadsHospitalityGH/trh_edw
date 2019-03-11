@@ -1847,6 +1847,22 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: food_rbe_cost_of_sales_amt_tobdgt_v {
+    label: "COS RB&E Food Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.food_rbe_cost_of_sales_amt} - ${glm_property_f_bdgt.food_rbe_cost_of_sales_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: beverage_rbe_cost_of_sales_amt_tobdgt_v {
+    label: "COS RB&E Beverage Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.beverage_rbe_cost_of_sales_amt} - ${glm_property_f_bdgt.beverage_rbe_cost_of_sales_amt} ;;
+    value_format_name: decimal_0
+  }
+
 #-- Cost % var
 
 
@@ -1943,6 +1959,22 @@ view: glm_property_f_tobdgt {
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.misc_cost_of_sales_amt}, ${glm_property_f_bdgt.misc_cost_of_sales_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: food_rbe_cost_of_sales_amt_tobdgt {
+    label: "COS RB&E Food Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_cost_of_sales_amt}, ${glm_property_f_bdgt.food_rbe_cost_of_sales_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: beverage_rbe_cost_of_sales_amt_tobdgt {
+    label: "COS RB&E Beverage Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_cost_of_sales_amt}, ${glm_property_f_bdgt.beverage_rbe_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 

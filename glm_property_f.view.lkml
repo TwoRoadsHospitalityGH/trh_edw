@@ -53,6 +53,12 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: fcst60_bt {
+    type: number
+    sql: ${TABLE}.fcst60_bt ;;
+    hidden: yes
+  }
+
   dimension: rev_amt {
     type: number
     sql: ${TABLE}.rev_amt ;;
@@ -949,6 +955,20 @@ view: glm_property_f {
   dimension: misc_cost_of_sales_amt {
     type: number
     sql: ${TABLE}.misc_cost_of_sales_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: food_rbe_cost_of_sales_amt {
+    type: number
+    sql: ${TABLE}.food_rbe_cost_of_sales_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: beverage_rbe_cost_of_sales_amt {
+    type: number
+    sql: ${TABLE}.beverage_rbe_cost_of_sales_amt ;;
     value_format_name: usd_0
     hidden: yes
   }

@@ -1169,6 +1169,20 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  measure: food_rbe_cost_of_sales_amt {
+    label: "COS RB&E Food $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.food_rbe_cost_of_sales_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: beverage_rbe_cost_of_sales_amt {
+    label: "COS RB&E Beverage $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.beverage_rbe_cost_of_sales_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
   #-- Cost to Rev %
 
   measure: cost_of_sales_rev_pct {

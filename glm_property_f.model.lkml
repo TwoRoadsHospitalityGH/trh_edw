@@ -55,7 +55,14 @@ explore: glm_property_f {
 
   join: glm_property_f_fcst30 {
     from: glm_property_f_fcst30
-    view_label: "   Fcst"
+    view_label: "   Fcst 30"
+    type: cross
+    relationship: one_to_one
+  }
+
+  join: glm_property_f_fcst60 {
+    from: glm_property_f_fcst60
+    view_label: "   Fcst 60"
     type: cross
     relationship: one_to_one
   }
@@ -76,6 +83,13 @@ explore: glm_property_f {
 
   join: glm_property_f_tofcst30 {
     from: glm_property_f_tofcst30
+    view_label: "      TY"
+    type: cross
+    relationship: one_to_one
+  }
+
+  join: glm_property_f_tofcst60 {
+    from: glm_property_f_tofcst60
     view_label: "      TY"
     type: cross
     relationship: one_to_one

@@ -1857,6 +1857,22 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: food_rbe_cost_of_sales_amt_tofcst30_v {
+    label: "COS RB&E Food Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.food_rbe_cost_of_sales_amt} - ${glm_property_f_fcst30.food_rbe_cost_of_sales_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: beverage_rbe_cost_of_sales_amt_tofcst30_v {
+    label: "COS RB&E Beverage Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.beverage_rbe_cost_of_sales_amt} - ${glm_property_f_fcst30.beverage_rbe_cost_of_sales_amt} ;;
+    value_format_name: decimal_0
+  }
+
   #-- Avg Rev per Spa Treatment / Golf Round
 
   measure: spa_rev_treatment_avg_amt_tofcst30_v {
