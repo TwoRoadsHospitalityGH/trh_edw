@@ -113,6 +113,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: rbe_outlet_other_rev_amt_tofcst30_v {
+    label: "Rev RB&E Outlet Other Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.rbe_outlet_other_rev_amt} - ${glm_property_f_fcst30.rbe_outlet_other_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: spa_rev_amt_tofcst30_v {
     label: "Rev Spa Act:Fcst30 - var"
     description: "Actual - Fcst30"
@@ -281,6 +289,14 @@ view: glm_property_f_tofcst30 {
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_other_rev_amt}, ${glm_property_f_fcst30.rbe_other_rev_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_outlet_other_rev_amt_tofcst30 {
+    label: "Rev RB&E Outlet Other Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_other_rev_amt}, ${glm_property_f_fcst30.rbe_outlet_other_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1561,6 +1577,14 @@ view: glm_property_f_tofcst30 {
     description: "Actual - Fcst30"
     type: number
     sql: ${glm_property_f_ty.rbe_other_profit_amt} - ${glm_property_f_fcst30.rbe_other_profit_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_outlet_other_profit_amt_tofcst30_v {
+    label: "Profit RB&E Outlet Other Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.rbe_outlet_other_profit_amt} - ${glm_property_f_fcst30.rbe_outlet_other_profit_amt} ;;
     value_format_name: decimal_0
   }
 

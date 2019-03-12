@@ -130,6 +130,13 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  measure: rbe_outlet_other_rev_amt {
+    label: "Rev RB&E Outlet Other $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_outlet_other_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
   measure: spa_rev_amt {
     label: "Rev Spa $"
     type: sum
@@ -1031,6 +1038,13 @@ view: glm_property_f_ty {
     label: "Profit RB&E Other $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_other_profit_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: rbe_outlet_other_profit_amt {
+    label: "Profit RB&E Outlet Other $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_outlet_other_profit_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 

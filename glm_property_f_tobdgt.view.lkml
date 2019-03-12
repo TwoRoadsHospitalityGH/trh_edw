@@ -149,6 +149,14 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: rbe_outlet_other_rev_amt_tobdgt_v {
+    label: "Rev RB&E Outlet Other Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.rbe_outlet_other_rev_amt} - ${glm_property_f_bdgt.rbe_outlet_other_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: spa_rev_amt_tobdgt_v {
     label: "Rev Spa Act:Bdgt - var"
     description: "Actual - Bdgt"
@@ -277,6 +285,14 @@ view: glm_property_f_tobdgt {
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_other_rev_amt}, ${glm_property_f_bdgt.rbe_other_rev_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_outlet_other_rev_amt_tobdgt {
+    label: "Rev RB&E Outlet Other Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_other_rev_amt}, ${glm_property_f_bdgt.rbe_outlet_other_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1535,6 +1551,14 @@ view: glm_property_f_tobdgt {
     description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.rbe_other_profit_amt} - ${glm_property_f_bdgt.rbe_other_profit_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_outlet_other_profit_amt_tobdgt_v {
+    label: "Profit RB&E Outlet Other Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.rbe_outlet_other_profit_amt} - ${glm_property_f_bdgt.rbe_outlet_other_profit_amt} ;;
     value_format_name: decimal_0
   }
 
