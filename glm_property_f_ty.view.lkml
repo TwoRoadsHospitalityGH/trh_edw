@@ -109,6 +109,13 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  measure: rbe_banquet_catering_conference_services_rev_amt {
+    label: "Rev RB&E Banquet Catering Conference Services $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_banquet_catering_conference_services_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
   measure: rbe_room_service_rev_amt {
     label: "Rev RB&E Room Service $"
     type: sum
@@ -1003,6 +1010,13 @@ view: glm_property_f_ty {
     label: "Profit RB&E Conference Services $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_conference_services_profit_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: rbe_banquet_catering_conference_services_profit_amt {
+    label: "Profit RB&E Banquet Catering Conference Services $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_banquet_catering_conference_services_profit_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 

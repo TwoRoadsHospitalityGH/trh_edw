@@ -81,6 +81,14 @@ view: glm_property_f_tofcst60 {
     value_format_name: decimal_0
   }
 
+  measure: rbe_banquet_catering_conference_services_rev_amt_tofcst60_v {
+    label: "Rev RB&E Banquet Catering Conference Services Act:Fcst60 - var"
+    description: "Actual - Fcst60"
+    type: number
+    sql: ${glm_property_f_ty.rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_f_fcst60.rbe_banquet_catering_conference_services_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: rbe_outlet_rev_amt_tofcst60_v {
     label: "Rev RB&E Outlet Act:Fcst60 - var"
     description: "Actual - Fcst60"
@@ -1513,6 +1521,14 @@ view: glm_property_f_tofcst60 {
     description: "Actual - Fcst60"
     type: number
     sql: ${glm_property_f_ty.rbe_conference_services_profit_amt} - ${glm_property_f_fcst60.rbe_conference_services_profit_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_banquet_catering_conference_services_profit_amt_tofcst60_v {
+    label: "Profit RB&E Banquet Catering Conference Services Act:Fcst60 - var"
+    description: "Actual - Fcst60"
+    type: number
+    sql: ${glm_property_f_ty.rbe_banquet_catering_conference_services_profit_amt} - ${glm_property_f_fcst60.rbe_banquet_catering_conference_services_profit_amt} ;;
     value_format_name: decimal_0
   }
 

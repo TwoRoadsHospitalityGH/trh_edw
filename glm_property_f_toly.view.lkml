@@ -80,6 +80,14 @@ view: glm_property_f_toly {
     value_format_name: decimal_0
   }
 
+  measure: rbe_banquet_catering_conference_services_rev_toly_v {
+    label: "Rev RB&E Banquet Catering Conference Services Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_f_ly.rbe_banquet_catering_conference_services_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: rbe_outlet_rev_amt_toly_v {
     label: "Rev RB&E Outlet Act:LY - var"
     description: "Actual - LY"
@@ -1513,6 +1521,14 @@ view: glm_property_f_toly {
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_conference_services_profit_amt} - ${glm_property_f_ly.rbe_conference_services_profit_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_banquet_catering_conference_services_profit_amt_toly_v {
+    label: "Profit RB&E Banquet Catering Conference Services Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.rbe_banquet_catering_conference_services_profit_amt} - ${glm_property_f_ly.rbe_banquet_catering_conference_services_profit_amt} ;;
     value_format_name: decimal_0
   }
 

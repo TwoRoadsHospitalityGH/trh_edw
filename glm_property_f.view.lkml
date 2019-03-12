@@ -125,6 +125,13 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: rbe_banquet_catering_conference_services_rev_amt {
+    type: number
+    sql: ${TABLE}.rbe_catering_rev_amt + ${TABLE}.rbe_outlet_rev_amt + ${TABLE}.rbe_conference_services_rev_amt;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   dimension: rbe_room_service_rev_amt {
     type: number
     sql: ${TABLE}.rbe_room_service_rev_amt ;;
@@ -750,6 +757,13 @@ view: glm_property_f {
   dimension: rbe_conference_services_profit_amt {
     type: number
     sql: ${TABLE}.rbe_conference_services_profit_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: rbe_banquet_catering_conference_services_profit_amt {
+    type: number
+    sql: ${TABLE}.rbe_banquet_catering_conference_services_profit_amt ;;
     value_format_name: usd_0
     hidden: yes
   }

@@ -81,6 +81,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: rbe_banquet_catering_conference_services_rev_amt_tofcst30_v {
+    label: "Rev RB&E Conference Services Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_f_fcst30.rbe_banquet_catering_conference_services_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: rbe_outlet_rev_amt_tofcst30_v {
     label: "Rev RB&E Outlet Act:Fcst30 - var"
     description: "Actual - Fcst30"
@@ -241,6 +249,14 @@ view: glm_property_f_tofcst30 {
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_conference_services_rev_amt}, ${glm_property_f_fcst30.rbe_conference_services_rev_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_banquet_catering_conference_services_rev_amt_tofcst30 {
+    label: "Rev RB&E Banquet Catering Conference Services Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_banquet_catering_conference_services_rev_amt}, ${glm_property_f_fcst30.rbe_banquet_catering_conference_services_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1513,6 +1529,14 @@ view: glm_property_f_tofcst30 {
     description: "Actual - Fcst30"
     type: number
     sql: ${glm_property_f_ty.rbe_conference_services_profit_amt} - ${glm_property_f_fcst30.rbe_conference_services_profit_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_banquet_catering_conference_services_profit_amt_tofcst30_v {
+    label: "Profit RB&E Banquet Catering Conference Services Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.rbe_banquet_catering_conference_services_profit_amt} - ${glm_property_f_fcst30.rbe_banquet_catering_conference_services_profit_amt} ;;
     value_format_name: decimal_0
   }
 

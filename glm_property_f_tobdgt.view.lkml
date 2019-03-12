@@ -117,6 +117,14 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: rbe_banquet_catering_conference_services_rev_amt_tobdgt_v {
+    label: "Rev RB&E Banquet Catering Conference Services Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_f_bdgt.rbe_banquet_catering_conference_services_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: rbe_outlet_rev_amt_tobdgt_v {
     label: "Rev RB&E Outlet Act:Bdgt - var"
     description: "Actual - Bdgt"
