@@ -207,6 +207,13 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  measure: nonoperating_realty_airport_rev_amt {
+    label: "Rev Nonoperating Realty Airport $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_airport_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
   #-- Expenses
 
   measure: exp_amt {
@@ -318,6 +325,13 @@ view: glm_property_f_ty {
     label: "Exp Rentals & Other $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.misc_exp_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_realty_airport_exp_amt {
+    label: "Exp Nonoperating Realty Airport $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_airport_exp_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -433,6 +447,13 @@ view: glm_property_f_ty {
     label: "Exp Other Rentals & Other $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.misc_other_exp_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_realty_airport_other_exp_amt {
+    label: "Exp Other Nonoperating Realty Airport $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_airport_other_exp_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -733,6 +754,13 @@ view: glm_property_f_ty {
     label: "Payroll Rentals & Other $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.misc_payroll_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_realty_airport_payroll_amt {
+    label: "Payroll Nonoperating Realty Airport $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_airport_payroll_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -1125,6 +1153,13 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  measure: nonoperating_realty_airport_profit_amt {
+    label: "Profit Nonoperating Realty Airport $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_airport_profit_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
   #-- Cost
 
   measure: cost_of_sales_amt {
@@ -1208,6 +1243,13 @@ view: glm_property_f_ty {
     label: "COS Rentals & Other $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.misc_cost_of_sales_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_realty_airport_cost_of_sales_amt {
+    label: "COS Nonoperating Realty Airport $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_airport_cost_of_sales_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 

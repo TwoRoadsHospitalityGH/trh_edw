@@ -237,6 +237,14 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: nonoperating_realty_airport_rev_amt_tobdgt_v {
+    label: "Rev Nonoperating Realty Airport Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.nonoperating_realty_airport_rev_amt} - ${glm_property_f_bdgt.nonoperating_realty_airport_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
 #-- RB&E rev % var
 
 
@@ -384,6 +392,15 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
+  measure: nonoperating_realty_airport_rev_amt_tobdgt {
+    label: "Rev Nonoperating Realty Airport Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_airport_rev_amt}, ${glm_property_f_bdgt.nonoperating_realty_airport_rev_amt}) ;;
+    value_format_name: percent_1
+  }
+
+
   #-- Expenses
 
   measure: exp_amt_tobdgt_v {
@@ -511,6 +528,14 @@ view: glm_property_f_tobdgt {
     description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.misc_exp_amt} - ${glm_property_f_bdgt.misc_exp_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: nonoperating_realty_airport_exp_amt_tobdgt_v {
+    label: "Exp Nonoperating Realty Airport Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.nonoperating_realty_airport_exp_amt} - ${glm_property_f_bdgt.nonoperating_realty_airport_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -644,6 +669,14 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
+  measure: nonoperating_realty_airport_exp_amt_tobdgt {
+    label: "Exp Nonoperating Realty Airport Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_airport_exp_amt}, ${glm_property_f_bdgt.nonoperating_realty_airport_exp_amt}) ;;
+    value_format_name: percent_1
+  }
+
   #-- Other Expenses
 
   measure: other_exp_amt_tobdgt_v {
@@ -774,6 +807,13 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: nonoperating_realty_airport_other_exp_amt_tobdgt_v {
+    label: "Exp Other Nonoperating Realty Airport Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.nonoperating_realty_airport_other_exp_amt} - ${glm_property_f_bdgt.nonoperating_realty_airport_other_exp_amt} ;;
+    value_format_name: decimal_0
+  }
 
   #-- Other Expenses % var
 
@@ -902,6 +942,14 @@ view: glm_property_f_tobdgt {
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.misc_other_exp_amt}, ${glm_property_f_bdgt.misc_other_exp_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_realty_airport_other_exp_amt_tobdgt {
+    label: "Exp Other Nonoperating Realty Airport Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_airport_other_exp_amt}, ${glm_property_f_bdgt.nonoperating_realty_airport_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1035,6 +1083,14 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: nonoperating_realty_airport_payroll_amt_tobdgt_v {
+    label: "Payroll Nonoperating Realty Airport Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.nonoperating_realty_airport_payroll_amt} - ${glm_property_f_bdgt.nonoperating_realty_airport_payroll_amt} ;;
+    value_format_name: decimal_0
+  }
+
 #-- Payroll % var
 
 
@@ -1163,6 +1219,14 @@ view: glm_property_f_tobdgt {
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.misc_payroll_amt}, ${glm_property_f_bdgt.misc_payroll_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_realty_airport_payroll_amt_tobdgt {
+    label: "Payroll Nonoperating Realty Airport Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_airport_payroll_amt}, ${glm_property_f_bdgt.nonoperating_realty_airport_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1658,6 +1722,14 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: nonoperating_realty_airport_profit_amt_tobdgt_v {
+    label: "Profit Nonoperating Realty Airport Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.nonoperating_realty_airport_profit_amt} - ${glm_property_f_bdgt.nonoperating_realty_airport_profit_amt} ;;
+    value_format_name: decimal_0
+  }
+
 #-- Profit % var
 
 
@@ -1813,6 +1885,14 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
+  measure: nonoperating_realty_airport_profit_amt_tobdgt {
+    label: "Profit Nonoperating Realty Airport Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_airport_profit_amt}, ${glm_property_f_bdgt.nonoperating_realty_airport_profit_amt}) ;;
+    value_format_name: percent_1
+  }
+
   #-- Cost
 
   measure: cost_of_sales_amt_tobdgt_v {
@@ -1908,6 +1988,14 @@ view: glm_property_f_tobdgt {
     description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.misc_cost_of_sales_amt} - ${glm_property_f_bdgt.misc_cost_of_sales_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: nonoperating_realty_airport_cost_of_sales_amt_tobdgt_v {
+    label: "COS Nonoperating Realty Airport Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.nonoperating_realty_airport_cost_of_sales_amt} - ${glm_property_f_bdgt.nonoperating_realty_airport_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2023,6 +2111,14 @@ view: glm_property_f_tobdgt {
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.misc_cost_of_sales_amt}, ${glm_property_f_bdgt.misc_cost_of_sales_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_realty_airport_cost_of_sales_amt_tobdgt {
+    label: "COS Nonoperating Realty Airport Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_airport_cost_of_sales_amt}, ${glm_property_f_bdgt.nonoperating_realty_airport_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2498,6 +2594,7 @@ view: glm_property_f_tobdgt {
     sql: ${glm_property_f_ty.misc_payroll_rev_pct} - ${glm_property_f_bdgt.misc_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
+
 
 #-- Payroll Rev % var
 

@@ -223,6 +223,13 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: nonoperating_realty_airport_rev_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_realty_airport_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   #-- Expenses
 
   dimension: exp_amt {
@@ -333,6 +340,13 @@ view: glm_property_f {
   dimension: misc_exp_amt {
     type: number
     sql: ${TABLE}.misc_exp_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: nonoperating_realty_airport_exp_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_realty_airport_exp_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -452,6 +466,13 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: nonoperating_realty_airport_other_exp_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_realty_airport_other_exp_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   #-- Payroll
 
   dimension: payroll_amt {
@@ -562,6 +583,13 @@ view: glm_property_f {
   dimension: misc_payroll_amt {
     type: number
     sql: ${TABLE}.misc_payroll_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: nonoperating_realty_airport_payroll_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_realty_airport_payroll_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -873,6 +901,13 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: nonoperating_realty_airport_profit_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_realty_airport_profit_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   #-- Cost
 
   dimension: cost_of_sales_amt {
@@ -997,6 +1032,13 @@ view: glm_property_f {
   dimension: misc_cost_of_sales_amt {
     type: number
     sql: ${TABLE}.misc_cost_of_sales_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: nonoperating_realty_airport_cost_of_sales_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_realty_airport_cost_of_sales_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
