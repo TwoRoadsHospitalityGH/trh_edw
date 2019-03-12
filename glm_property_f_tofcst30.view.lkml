@@ -169,6 +169,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: spa_fitness_recreation_rev_amt_tofcst30_v {
+    label: "Rev Spa Fitness & Rec Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.spa_fitness_recreation_rev_amt} - ${glm_property_f_fcst30.spa_fitness_recreation_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: other_operations_rev_amt_tofcst30_v {
     label: "Rev Other Op. Dept. Act:Fcst30 - var"
     description: "Actual - Fcst30"
@@ -345,6 +353,14 @@ view: glm_property_f_tofcst30 {
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_rev_amt}, ${glm_property_f_fcst30.retail_rev_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: spa_fitness_recreation_rev_amt_tofcst30 {
+    label: "Rev Spa Fitness & Rec Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.spa_fitness_recreation_rev_amt}, ${glm_property_f_fcst30.spa_fitness_recreation_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1636,6 +1652,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: spa_fitness_recreation_profit_amt_tofcst30_v {
+    label: "Profit Spa Fitness & Rec Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.spa_fitness_recreation_profit_amt} - ${glm_property_f_fcst30.spa_fitness_recreation_profit_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: other_operations_profit_amt_tofcst30_v {
     label: "Profit Other Op. Dept. Act:Fcst30 - var"
     description: "Actual - Fcst30"
@@ -1780,6 +1804,14 @@ view: glm_property_f_tofcst30 {
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_profit_amt}, ${glm_property_f_fcst30.retail_profit_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: spa_fitness_recreation_profit_amt_tofcst30 {
+    label: "Profit Spa Fitness & Rec Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.spa_fitness_recreation_profit_amt}, ${glm_property_f_fcst30.spa_fitness_recreation_profit_amt}) ;;
     value_format_name: percent_1
   }
 

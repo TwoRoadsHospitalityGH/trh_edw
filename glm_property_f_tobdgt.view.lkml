@@ -205,6 +205,14 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: spa_fitness_recreation_rev_amt_tobdgt_v {
+    label: "Rev Spa Fitness & Rec Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.spa_fitness_recreation_rev_amt} - ${glm_property_f_bdgt.spa_fitness_recreation_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: other_operations_rev_amt_tobdgt_v {
     label: "Rev Other Op. Dept. Act:Bdgt - var"
     description: "Actual - Bdgt"
@@ -341,6 +349,14 @@ view: glm_property_f_tobdgt {
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_rev_amt}, ${glm_property_f_bdgt.retail_rev_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: spa_fitness_recreation_rev_amt_tobdgt {
+    label: "Rev Spa Fitness & Rec Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.spa_fitness_recreation_rev_amt}, ${glm_property_f_bdgt.spa_fitness_recreation_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1610,6 +1626,14 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: spa_fitness_recreation_profit_amt_tobdgt_v {
+    label: "Profit Spa Fitness & Rec Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.spa_fitness_recreation_profit_amt} - ${glm_property_f_bdgt.spa_fitness_recreation_profit_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: other_operations_profit_amt_tobdgt_v {
     label: "Profit Other Op. Dept. Act:Bdgt - var"
     description: "Actual - Bdgt"
@@ -1754,6 +1778,14 @@ view: glm_property_f_tobdgt {
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_profit_amt}, ${glm_property_f_bdgt.retail_profit_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: spa_fitness_recreation_profit_amt_tobdgt {
+    label: "Profit Spa Fitness & Rec Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.spa_fitness_recreation_profit_amt}, ${glm_property_f_bdgt.spa_fitness_recreation_profit_amt}) ;;
     value_format_name: percent_1
   }
 

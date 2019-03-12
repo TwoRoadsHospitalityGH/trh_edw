@@ -179,6 +179,13 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  measure: spa_fitness_recreation_rev_amt {
+    label: "Rev Spa Fitness & Rec $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.spa_fitness_recreation_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
   measure: other_operations_rev_amt {
     label: "Rev Other Op. Dept. $"
     type: sum
@@ -1087,6 +1094,13 @@ view: glm_property_f_ty {
     label: "Profit Retail $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.retail_profit_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: spa_fitness_recreation_profit_amt {
+    label: "Profit Spa Fitness & Rec $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.spa_fitness_recreation_profit_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 

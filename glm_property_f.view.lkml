@@ -195,6 +195,13 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: spa_fitness_recreation_rev_amt {
+    type: number
+    sql: ${TABLE}.spa_fitness_recreation_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   dimension: other_operations_rev_amt {
     type: number
     sql: ${TABLE}.other_operations_rev_amt ;;
@@ -834,6 +841,13 @@ view: glm_property_f {
   dimension: retail_profit_amt {
     type: number
     sql: ${TABLE}.retail_profit_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: spa_fitness_recreation_profit_amt {
+    type: number
+    sql: ${TABLE}.spa_fitness_recreation_profit_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
