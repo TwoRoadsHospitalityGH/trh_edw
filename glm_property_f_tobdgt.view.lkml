@@ -213,11 +213,11 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: other_operations_rev_amt_tobdgt_v {
+  measure: other_operated_rev_amt_tobdgt_v {
     label: "Rev Other Op. Dept. Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.other_operations_rev_amt} - ${glm_property_f_bdgt.other_operations_rev_amt} ;;
+    sql: ${glm_property_f_ty.other_operated_rev_amt} - ${glm_property_f_bdgt.other_operated_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -360,11 +360,11 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  measure: other_operations_rev_amt_tobdgt {
+  measure: other_operated_rev_amt_tobdgt {
     label: "Rev Other Op. Dept. Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_rev_amt}, ${glm_property_f_bdgt.other_operations_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_rev_amt}, ${glm_property_f_bdgt.other_operated_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -458,11 +458,11 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: other_operations_exp_amt_tobdgt_v {
+  measure: other_operated_exp_amt_tobdgt_v {
     label: "Exp Other Op. Dept. Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.other_operations_exp_amt} - ${glm_property_f_bdgt.other_operations_exp_amt} ;;
+    sql: ${glm_property_f_ty.other_operated_exp_amt} - ${glm_property_f_bdgt.other_operated_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -588,11 +588,11 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  measure: other_operations_exp_amt_tobdgt {
+  measure: other_operated_exp_amt_tobdgt {
     label: "Exp Other Op. Dept. Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_exp_amt}, ${glm_property_f_bdgt.other_operations_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_exp_amt}, ${glm_property_f_bdgt.other_operated_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -718,11 +718,11 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: other_operations_other_exp_amt_tobdgt_v {
+  measure: other_operated_other_exp_amt_tobdgt_v {
     label: "Exp Other Other Op. Dept. Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.other_operations_other_exp_amt} - ${glm_property_f_bdgt.other_operations_other_exp_amt} ;;
+    sql: ${glm_property_f_ty.other_operated_other_exp_amt} - ${glm_property_f_bdgt.other_operated_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -849,11 +849,11 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  measure: other_operations_other_exp_amt_tobdgt {
+  measure: other_operated_other_exp_amt_tobdgt {
     label: "Exp Other Other Op. Dept. Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_other_exp_amt}, ${glm_property_f_bdgt.other_operations_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_other_exp_amt}, ${glm_property_f_bdgt.other_operated_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -979,11 +979,11 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: other_operations_payroll_amt_tobdgt_v {
+  measure: other_operated_payroll_amt_tobdgt_v {
     label: "Payroll Other Op. Dept. Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.other_operations_payroll_amt} - ${glm_property_f_bdgt.other_operations_payroll_amt} ;;
+    sql: ${glm_property_f_ty.other_operated_payroll_amt} - ${glm_property_f_bdgt.other_operated_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1110,11 +1110,11 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  measure: other_operations_payroll_amt_tobdgt {
+  measure: other_operated_payroll_amt_tobdgt {
     label: "Payroll Other Op. Dept. Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_payroll_amt}, ${glm_property_f_bdgt.other_operations_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_payroll_amt}, ${glm_property_f_bdgt.other_operated_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1634,11 +1634,11 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: other_operations_profit_amt_tobdgt_v {
+  measure: other_operated_profit_amt_tobdgt_v {
     label: "Profit Other Op. Dept. Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.other_operations_profit_amt} - ${glm_property_f_bdgt.other_operations_profit_amt} ;;
+    sql: ${glm_property_f_ty.other_operated_profit_amt} - ${glm_property_f_bdgt.other_operated_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1789,11 +1789,11 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  measure: other_operations_profit_amt_tobdgt {
+  measure: other_operated_profit_amt_tobdgt {
     label: "Profit Other Op. Dept. Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_profit_amt}, ${glm_property_f_bdgt.other_operations_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_profit_amt}, ${glm_property_f_bdgt.other_operated_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1887,11 +1887,11 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: other_operations_cost_of_sales_amt_tobdgt_v {
+  measure: other_operated_cost_of_sales_amt_tobdgt_v {
     label: "COS Other Op. Dept. Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.other_operations_cost_of_sales_amt} - ${glm_property_f_bdgt.other_operations_cost_of_sales_amt} ;;
+    sql: ${glm_property_f_ty.other_operated_cost_of_sales_amt} - ${glm_property_f_bdgt.other_operated_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2002,11 +2002,11 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  measure: other_operations_cost_of_sales_amt_tobdgt {
+  measure: other_operated_cost_of_sales_amt_tobdgt {
     label: "COS Other Op. Dept. Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_cost_of_sales_amt}, ${glm_property_f_bdgt.other_operations_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_cost_of_sales_amt}, ${glm_property_f_bdgt.other_operated_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2475,11 +2475,11 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  measure: other_operations_payroll_rev_pct_tobdgt_v {
+  measure: other_operated_payroll_rev_pct_tobdgt_v {
     label: "Payroll /Rev Other Op. Dept. Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.other_operations_payroll_rev_pct} - ${glm_property_f_bdgt.other_operations_payroll_rev_pct} ;;
+    sql: ${glm_property_f_ty.other_operated_payroll_rev_pct} - ${glm_property_f_bdgt.other_operated_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 
@@ -2566,11 +2566,11 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  measure: other_operations_payroll_rev_pct_tobdgt {
+  measure: other_operated_payroll_rev_pct_tobdgt {
     label: "Payroll /Rev Other Op. Dept. Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_payroll_rev_pct}, ${glm_property_f_bdgt.other_operations_payroll_rev_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_payroll_rev_pct}, ${glm_property_f_bdgt.other_operated_payroll_rev_pct}) ;;
     value_format_name: percent_1
   }
 

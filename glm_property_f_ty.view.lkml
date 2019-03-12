@@ -186,10 +186,10 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: other_operations_rev_amt {
+  measure: other_operated_rev_amt {
     label: "Rev Other Op. Dept. $"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operations_rev_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operated_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -272,10 +272,10 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: other_operations_exp_amt {
+  measure: other_operated_exp_amt {
     label: "Exp Other Op. Dept. $"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operations_exp_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operated_exp_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -387,10 +387,10 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: other_operations_other_exp_amt {
+  measure: other_operated_other_exp_amt {
     label: "Exp Other Other Op. Dept. $"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operations_other_exp_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operated_other_exp_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -494,10 +494,10 @@ view: glm_property_f_ty {
     value_format_name: percent_1
   }
 
-  measure: other_operations_other_exp_rev_pct {
+  measure: other_operated_other_exp_rev_pct {
     label: "Exp /Rev Other Other Op. Dept. %"
     type: number
-    sql: utl..udf_divide( ${other_operations_other_exp_amt}, ${other_operations_rev_amt} );;
+    sql: utl..udf_divide( ${other_operated_other_exp_amt}, ${other_operated_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -573,10 +573,10 @@ view: glm_property_f_ty {
     value_format_name: percent_1
   }
 
-  measure: other_operations_other_exp_ttl_rev_pct {
+  measure: other_operated_other_exp_ttl_rev_pct {
     label: "Exp /TRev Other Other Op. Dept. %"
     type: number
-    sql: utl..udf_divide( ${other_operations_other_exp_amt}, ${rev_amt} );;
+    sql: utl..udf_divide( ${other_operated_other_exp_amt}, ${rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -687,10 +687,10 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: other_operations_payroll_amt {
+  measure: other_operated_payroll_amt {
     label: "Payroll Other Op. Dept. $"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operations_payroll_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operated_payroll_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -795,10 +795,10 @@ view: glm_property_f_ty {
     value_format_name: percent_1
   }
 
-  measure: other_operations_payroll_rev_pct {
+  measure: other_operated_payroll_rev_pct {
     label: "Payroll /Rev Other Op. Dept. %"
     type: number
-    sql: utl..udf_divide( ${other_operations_payroll_amt}, ${other_operations_rev_amt} );;
+    sql: utl..udf_divide( ${other_operated_payroll_amt}, ${other_operated_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -1104,10 +1104,10 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: other_operations_profit_amt {
+  measure: other_operated_profit_amt {
     label: "Profit Other Op. Dept. $"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operations_profit_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operated_profit_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -1190,10 +1190,10 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: other_operations_cost_of_sales_amt {
+  measure: other_operated_cost_of_sales_amt {
     label: "COS Other Op. Dept. $"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operations_cost_of_sales_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operated_cost_of_sales_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -1290,10 +1290,10 @@ view: glm_property_f_ty {
     value_format_name: percent_1
   }
 
-  measure: other_operations_cost_of_sales_rev_pct {
+  measure: other_operated_cost_of_sales_rev_pct {
     label: "COS /Rev Other Op. Dept. %"
     type: number
-    sql: utl..udf_divide( ${other_operations_cost_of_sales_amt}, ${other_operations_rev_amt} );;
+    sql: utl..udf_divide( ${other_operated_cost_of_sales_amt}, ${other_operated_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -1488,7 +1488,7 @@ view: glm_property_f_ty {
     label: "Stay Length Avg Night"
     type: number
     sql: utl..udf_divide( ${occupied_transient_room_cnt} + ${occupied_group_room_cnt} + ${occupied_contract_room_cnt} + ${occupied_owner_room_cnt} + ${comp_room_cnt},
-    ${arrival_cnt} );;
+      ${arrival_cnt} );;
     value_format_name: decimal_1
   }
 

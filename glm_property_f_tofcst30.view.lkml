@@ -177,11 +177,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
-  measure: other_operations_rev_amt_tofcst30_v {
+  measure: other_operated_rev_amt_tofcst30_v {
     label: "Rev Other Op. Dept. Act:Fcst30 - var"
     description: "Actual - Fcst30"
     type: number
-    sql: ${glm_property_f_ty.other_operations_rev_amt} - ${glm_property_f_fcst30.other_operations_rev_amt} ;;
+    sql: ${glm_property_f_ty.other_operated_rev_amt} - ${glm_property_f_fcst30.other_operated_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -364,11 +364,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
-  measure: other_operations_rev_amt_tofcst30 {
+  measure: other_operated_rev_amt_tofcst30 {
     label: "Rev Other Op. Dept. Act:Fcst30 - var %"
     description: "(Actual - Fcst30) / Fcst30"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_rev_amt}, ${glm_property_f_fcst30.other_operations_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_rev_amt}, ${glm_property_f_fcst30.other_operated_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -462,11 +462,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
-  measure: other_operations_exp_amt_tofcst30_v {
+  measure: other_operated_exp_amt_tofcst30_v {
     label: "Exp Other Op. Dept. Act:Fcst30 - var"
     description: "Actual - Fcst30"
     type: number
-    sql: ${glm_property_f_ty.other_operations_exp_amt} - ${glm_property_f_fcst30.other_operations_exp_amt} ;;
+    sql: ${glm_property_f_ty.other_operated_exp_amt} - ${glm_property_f_fcst30.other_operated_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -593,11 +593,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
-  measure: other_operations_exp_amt_tofcst30 {
+  measure: other_operated_exp_amt_tofcst30 {
     label: "Exp Other Op. Dept. Act:Fcst30 - var %"
     description: "(Actual - Fcst30) / Fcst30"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_exp_amt}, ${glm_property_f_fcst30.other_operations_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_exp_amt}, ${glm_property_f_fcst30.other_operated_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -723,11 +723,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
-  measure: other_operations_other_exp_amt_tofcst30_v {
+  measure: other_operated_other_exp_amt_tofcst30_v {
     label: "Exp Other Other Op. Dept. Act:Fcst30 - var"
     description: "Actual - Fcst30"
     type: number
-    sql: ${glm_property_f_ty.other_operations_other_exp_amt} - ${glm_property_f_fcst30.other_operations_other_exp_amt} ;;
+    sql: ${glm_property_f_ty.other_operated_other_exp_amt} - ${glm_property_f_fcst30.other_operated_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -853,11 +853,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
-  measure: other_operations_other_exp_amt_tofcst30 {
+  measure: other_operated_other_exp_amt_tofcst30 {
     label: "Exp Other Other Op. Dept. Act:Fcst30 - var %"
     description: "(Actual - Fcst30) / Fcst30"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_other_exp_amt}, ${glm_property_f_fcst30.other_operations_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_other_exp_amt}, ${glm_property_f_fcst30.other_operated_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -983,11 +983,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
-  measure: other_operations_payroll_amt_tofcst30_v {
+  measure: other_operated_payroll_amt_tofcst30_v {
     label: "Payroll Other Op. Dept. Act:Fcst30 - var"
     description: "Actual - Fcst30"
     type: number
-    sql: ${glm_property_f_ty.other_operations_payroll_amt} - ${glm_property_f_fcst30.other_operations_payroll_amt} ;;
+    sql: ${glm_property_f_ty.other_operated_payroll_amt} - ${glm_property_f_fcst30.other_operated_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1115,11 +1115,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
-  measure: other_operations_payroll_amt_tofcst30 {
+  measure: other_operated_payroll_amt_tofcst30 {
     label: "Payroll Other Op. Dept. Act:Fcst30 - var %"
     description: "(Actual - Fcst30) / Fcst30"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_payroll_amt}, ${glm_property_f_fcst30.other_operations_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_payroll_amt}, ${glm_property_f_fcst30.other_operated_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1660,11 +1660,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
-  measure: other_operations_profit_amt_tofcst30_v {
+  measure: other_operated_profit_amt_tofcst30_v {
     label: "Profit Other Op. Dept. Act:Fcst30 - var"
     description: "Actual - Fcst30"
     type: number
-    sql: ${glm_property_f_ty.other_operations_profit_amt} - ${glm_property_f_fcst30.other_operations_profit_amt} ;;
+    sql: ${glm_property_f_ty.other_operated_profit_amt} - ${glm_property_f_fcst30.other_operated_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1815,11 +1815,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
-  measure: other_operations_profit_amt_tofcst30 {
+  measure: other_operated_profit_amt_tofcst30 {
     label: "Profit Other Op. Dept. Act:Fcst30 - var %"
     description: "(Actual - Fcst30) / Fcst30"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_profit_amt}, ${glm_property_f_fcst30.other_operations_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_profit_amt}, ${glm_property_f_fcst30.other_operated_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1913,11 +1913,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
-  measure: other_operations_cost_of_sales_amt_tofcst30_v {
+  measure: other_operated_cost_of_sales_amt_tofcst30_v {
     label: "COS Other Op. Dept. Act:Fcst30 - var"
     description: "Actual - Fcst30"
     type: number
-    sql: ${glm_property_f_ty.other_operations_cost_of_sales_amt} - ${glm_property_f_fcst30.other_operations_cost_of_sales_amt} ;;
+    sql: ${glm_property_f_ty.other_operated_cost_of_sales_amt} - ${glm_property_f_fcst30.other_operated_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2046,11 +2046,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
-  measure: other_operations_cost_of_sales_amt_tofcst30 {
+  measure: other_operated_cost_of_sales_amt_tofcst30 {
     label: "COS Other Op. Dept. Act:Fcst30 - var %"
     description: "(Actual - Fcst30) / Fcst30"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operations_cost_of_sales_amt}, ${glm_property_f_fcst30.other_operations_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_cost_of_sales_amt}, ${glm_property_f_fcst30.other_operated_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2505,11 +2505,11 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
-  measure: other_operations_payroll_rev_pct_tofcst30_v {
+  measure: other_operated_payroll_rev_pct_tofcst30_v {
     label: "Payroll /Rev Other Op. Dept. Act:LY - var"
     description: "Actual - Fcst30"
     type: number
-    sql: ${glm_property_f_ty.other_operations_payroll_rev_pct} - ${glm_property_f_fcst30.other_operations_payroll_rev_pct} ;;
+    sql: ${glm_property_f_ty.other_operated_payroll_rev_pct} - ${glm_property_f_fcst30.other_operated_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 

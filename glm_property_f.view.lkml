@@ -202,9 +202,9 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: other_operations_rev_amt {
+  dimension: other_operated_rev_amt {
     type: number
-    sql: ${TABLE}.other_operations_rev_amt ;;
+    sql: ${TABLE}.other_operated_rev_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -288,9 +288,9 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: other_operations_exp_amt {
+  dimension: other_operated_exp_amt {
     type: number
-    sql: ${TABLE}.other_operations_exp_amt ;;
+    sql: ${TABLE}.other_operated_exp_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -403,9 +403,9 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: other_operations_other_exp_amt {
+  dimension: other_operated_other_exp_amt {
     type: number
-    sql: ${TABLE}.other_operations_other_exp_amt ;;
+    sql: ${TABLE}.other_operated_other_exp_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -517,9 +517,9 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: other_operations_payroll_amt {
+  dimension: other_operated_payroll_amt {
     type: number
-    sql: ${TABLE}.other_operations_payroll_amt ;;
+    sql: ${TABLE}.other_operated_payroll_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -852,9 +852,9 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: other_operations_profit_amt {
+  dimension: other_operated_profit_amt {
     type: number
-    sql: ${TABLE}.other_operations_profit_amt ;;
+    sql: ${TABLE}.other_operated_profit_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -980,9 +980,9 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: other_operations_cost_of_sales_amt {
+  dimension: other_operated_cost_of_sales_amt {
     type: number
-    sql: ${TABLE}.other_operations_cost_of_sales_amt ;;
+    sql: ${TABLE}.other_operated_cost_of_sales_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
