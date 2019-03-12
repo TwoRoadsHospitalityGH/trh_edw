@@ -127,7 +127,7 @@ view: glm_property_f {
 
   dimension: rbe_banquet_catering_conference_services_rev_amt {
     type: number
-    sql: ${TABLE}.rbe_catering_rev_amt + ${TABLE}.rbe_outlet_rev_amt + ${TABLE}.rbe_conference_services_rev_amt;;
+    sql: ${TABLE}.rbe_banquet_catering_conference_services_rev_amt;;
     value_format_name: usd_0
     hidden: yes
   }
