@@ -230,6 +230,13 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: nonoperating_util_rev_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_util_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   #-- Expenses
 
   dimension: exp_amt {
@@ -347,6 +354,13 @@ view: glm_property_f {
   dimension: nonoperating_realty_airport_exp_amt {
     type: number
     sql: ${TABLE}.nonoperating_realty_airport_exp_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: nonoperating_util_exp_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_util_exp_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -473,6 +487,13 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: nonoperating_util_other_exp_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_util_other_exp_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   #-- Payroll
 
   dimension: payroll_amt {
@@ -590,6 +611,13 @@ view: glm_property_f {
   dimension: nonoperating_realty_airport_payroll_amt {
     type: number
     sql: ${TABLE}.nonoperating_realty_airport_payroll_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: nonoperating_util_payroll_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_util_payroll_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -908,6 +936,13 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: nonoperating_util_profit_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_util_profit_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   #-- Cost
 
   dimension: cost_of_sales_amt {
@@ -1039,6 +1074,13 @@ view: glm_property_f {
   dimension: nonoperating_realty_airport_cost_of_sales_amt {
     type: number
     sql: ${TABLE}.nonoperating_realty_airport_cost_of_sales_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: nonoperating_util_cost_of_sales_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_util_cost_of_sales_amt ;;
     value_format_name: usd_0
     hidden: yes
   }

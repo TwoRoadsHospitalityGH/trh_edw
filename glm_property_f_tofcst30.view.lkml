@@ -209,6 +209,15 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: nonoperating_util_rev_amt_tofcst30_v {
+    label: "Rev Nonoperating Utility Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.nonoperating_util_rev_amt} - ${glm_property_f_fcst30.nonoperating_util_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
+
 #-- Rev % var
 
 
@@ -404,6 +413,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
+  measure: nonoperating_util_rev_amt_tofcst30 {
+    label: "Rev Nonoperating Utility Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_rev_amt}, ${glm_property_f_fcst30.nonoperating_util_rev_amt}) ;;
+    value_format_name: percent_1
+  }
+
   #-- Expenses
 
   measure: exp_amt_tofcst30_v {
@@ -542,6 +559,13 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: nonoperating_util_exp_amt_tofcst30_v {
+    label: "Exp Nonoperating Utility Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.nonoperating_util_exp_amt} - ${glm_property_f_fcst30.nonoperating_util_exp_amt} ;;
+    value_format_name: decimal_0
+  }
 
   #-- Expenses % var
 
@@ -678,6 +702,14 @@ view: glm_property_f_tofcst30 {
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_airport_exp_amt}, ${glm_property_f_fcst30.nonoperating_realty_airport_exp_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_util_exp_amt_tofcst30 {
+    label: "Exp Nonoperating Utility Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_exp_amt}, ${glm_property_f_fcst30.nonoperating_util_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -819,6 +851,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: nonoperating_util_other_exp_amt_tofcst30_v {
+    label: "Exp Other Nonoperating Utility Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.nonoperating_util_other_exp_amt} - ${glm_property_f_fcst30.nonoperating_util_other_exp_amt} ;;
+    value_format_name: decimal_0
+  }
+
   #-- Other Expenses % var
 
   measure: other_exp_amt_tofcst30 {
@@ -954,6 +994,14 @@ view: glm_property_f_tofcst30 {
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_airport_other_exp_amt}, ${glm_property_f_fcst30.nonoperating_realty_airport_other_exp_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_util_other_exp_amt_tofcst30 {
+    label: "Exp Other Nonoperating Utility Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_other_exp_amt}, ${glm_property_f_fcst30.nonoperating_util_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1095,6 +1143,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: nonoperating_util_payroll_amt_tofcst30_v {
+    label: "Payroll Nonoperating Utility Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.nonoperating_util_payroll_amt} - ${glm_property_f_fcst30.nonoperating_util_payroll_amt} ;;
+    value_format_name: decimal_0
+  }
+
 
   #-- Payroll % var
 
@@ -1231,6 +1287,14 @@ view: glm_property_f_tofcst30 {
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_airport_payroll_amt}, ${glm_property_f_fcst30.nonoperating_realty_airport_payroll_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_util_payroll_amt_tofcst30 {
+    label: "Payroll Nonoperating Utility Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_payroll_amt}, ${glm_property_f_fcst30.nonoperating_util_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1755,6 +1819,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: nonoperating_util_profit_amt_tofcst30_v {
+    label: "Profit Nonoperating Utility Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.nonoperating_util_profit_amt} - ${glm_property_f_fcst30.nonoperating_util_profit_amt} ;;
+    value_format_name: decimal_0
+  }
+
   #-- Profit % var
 
   measure: profit_amt_tofcst30 {
@@ -1917,6 +1989,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
+  measure: nonoperating_util_profit_amt_tofcst30 {
+    label: "Profit Nonoperating Utility Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_profit_amt}, ${glm_property_f_fcst30.nonoperating_util_profit_amt}) ;;
+    value_format_name: percent_1
+  }
+
   #-- Cost
 
   measure: cost_of_sales_amt_tofcst30_v {
@@ -2020,6 +2100,14 @@ view: glm_property_f_tofcst30 {
     description: "Actual - Fcst30"
     type: number
     sql: ${glm_property_f_ty.nonoperating_realty_airport_cost_of_sales_amt} - ${glm_property_f_fcst30.nonoperating_realty_airport_cost_of_sales_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: nonoperating_util_cost_of_sales_amt_tofcst30_v {
+    label: "COS Nonoperating Utility Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.nonoperating_util_cost_of_sales_amt} - ${glm_property_f_fcst30.nonoperating_util_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2161,6 +2249,14 @@ view: glm_property_f_tofcst30 {
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_airport_cost_of_sales_amt}, ${glm_property_f_fcst30.nonoperating_realty_airport_cost_of_sales_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_util_cost_of_sales_amt_tofcst30 {
+    label: "COS Nonoperating Utility Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_cost_of_sales_amt}, ${glm_property_f_fcst30.nonoperating_util_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
