@@ -148,7 +148,7 @@ view: glm_property_f {
 
   dimension: rbe_outlet_other_rev_amt {
     type: number
-    sql: ${TABLE}.rbe_other_rev_amt ;;
+    sql: ${TABLE}.rbe_outlet_other_rev_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
