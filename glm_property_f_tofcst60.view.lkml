@@ -1819,6 +1819,14 @@ view: glm_property_f_tofcst60 {
     value_format_name: decimal_0
   }
 
+  measure: undistributed_profit_amt_tofcst60_v {
+    label: "Profit Undistributed Act:Fcst60 - var"
+    description: "Actual - Fcst60"
+    type: number
+    sql: ${glm_property_f_ty.undistributed_profit_amt} - ${glm_property_f_fcst60.undistributed_profit_amt} ;;
+    value_format_name: decimal_0
+  }
+
   #-- Profit % var
 
   measure: profit_amt_tofcst60 {
@@ -1994,6 +2002,14 @@ view: glm_property_f_tofcst60 {
     description: "(Actual - Fcst60) / Fcst60"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_profit_amt}, ${glm_property_f_fcst60.nonoperating_util_profit_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: undistributed_profit_amt_tofcst60 {
+    label: "Profit Undistributed Act:Fcst60 - var %"
+    description: "(Actual - Fcst60) / Fcst60"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.undistributed_profit_amt}, ${glm_property_f_fcst60.undistributed_profit_amt}) ;;
     value_format_name: percent_1
   }
 

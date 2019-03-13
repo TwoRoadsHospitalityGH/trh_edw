@@ -237,6 +237,7 @@ view: glm_property_f {
     hidden: yes
   }
 
+
   #-- Expenses
 
   dimension: exp_amt {
@@ -939,6 +940,13 @@ view: glm_property_f {
   dimension: nonoperating_util_profit_amt {
     type: number
     sql: ${TABLE}.nonoperating_util_profit_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: undistributed_profit_amt {
+    type: number
+    sql: ${TABLE}.undistributed_profit_amt ;;
     value_format_name: usd_0
     hidden: yes
   }

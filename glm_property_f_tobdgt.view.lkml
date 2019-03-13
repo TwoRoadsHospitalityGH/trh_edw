@@ -1802,6 +1802,14 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: undistributed_profit_amt_tobdgt_v {
+    label: "Profit Undistributed Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.undistributed_profit_amt} - ${glm_property_f_bdgt.undistributed_profit_amt} ;;
+    value_format_name: decimal_0
+  }
+
 #-- Profit % var
 
 
@@ -1970,6 +1978,14 @@ view: glm_property_f_tobdgt {
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_profit_amt}, ${glm_property_f_bdgt.nonoperating_util_profit_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: undistributed_profit_amt_tobdgt {
+    label: "Profit Undistributed Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.undistributed_profit_amt}, ${glm_property_f_bdgt.undistributed_profit_amt}) ;;
     value_format_name: percent_1
   }
 

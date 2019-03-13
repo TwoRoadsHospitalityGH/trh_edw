@@ -1803,6 +1803,14 @@ view: glm_property_f_toly {
     value_format_name: decimal_0
   }
 
+  measure: undistributed_profit_amt_toly_v {
+    label: "Profit Nonoperating Utility Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.undistributed_profit_amt} - ${glm_property_f_ly.undistributed_profit_amt} ;;
+    value_format_name: decimal_0
+  }
+
 #-- Profit % var
 
 
@@ -1979,6 +1987,14 @@ view: glm_property_f_toly {
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_profit_amt}, ${glm_property_f_ly.nonoperating_util_profit_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: undistributed_profit_amt_toly {
+    label: "Profit Undistributed Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.undistributed_profit_amt}, ${glm_property_f_ly.undistributed_profit_amt}) ;;
     value_format_name: percent_1
   }
 

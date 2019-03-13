@@ -1195,6 +1195,13 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  measure: undistributed_profit_amt {
+    label: "Profit Undistributed $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.undistributed_profit_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
   #-- Cost
 
   measure: cost_of_sales_amt {
