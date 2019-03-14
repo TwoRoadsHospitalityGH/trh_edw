@@ -165,6 +165,33 @@ view: revintel_property_f {
     description: "Average Daily Rate"
   }
 
+  measure: cy_room_ttl_perc {
+    view_label: "  CY"
+    label: "Rms Bkd - % Mix"
+    description: "Percent of total value."
+    type: percent_of_total
+    sql: ${cy_rooms} ;;
+    hidden: no
+    }
+
+  measure: cy_rev_ttl_perc {
+    view_label: "  CY"
+    label: "Rev Rms $ - % Mix"
+    description: "Percent of total value."
+    type: percent_of_total
+    sql: ${cy_room_rev} ;;
+    hidden: no
+    }
+
+  measure: cy_adr_ttl_perc {
+    view_label: "  CY"
+    label: "ADR - % Mix"
+    description: "Percent of total value."
+    type: percent_of_total
+    sql: utl..udf_divide(${cy_room_rev},${cy_rooms}) ;;
+    hidden: no
+  }
+
   #-------------------------------------------------------------------------------------------
   #-- Measures STLY
   #-------------------------------------------------------------------------------------------
@@ -214,6 +241,32 @@ view: revintel_property_f {
     description: "Average Daily Rate"
   }
 
+  measure: stly_room_ttl_perc {
+    view_label: "  STLY"
+    label: "Rms Bkd - % Mix"
+    description: "Percent of total value."
+    type: percent_of_total
+    sql: ${stly_rooms} ;;
+    hidden: no
+  }
+
+  measure: stly_rev_ttl_perc {
+    view_label: "  STLY"
+    label: "Rev Rms $ - % Mix"
+    description: "Percent of total value."
+    type: percent_of_total
+    sql: ${stly_room_rev} ;;
+    hidden: no
+  }
+
+  measure: stly_adr_ttl_perc {
+    view_label: "  STLY"
+    label: "ADR - % Mix"
+    description: "Percent of total value."
+    type: percent_of_total
+    sql: utl..udf_divide(${stly_room_rev},${stly_rooms}) ;;
+    hidden: no
+  }
 #-------------------------------------------------------------------------------------------
   #-- Measures LY
   #-------------------------------------------------------------------------------------------
@@ -261,6 +314,33 @@ view: revintel_property_f {
     view_label: "  LY"
     label: "ADR"
     description: "Average Daily Rate"
+  }
+
+  measure: ly_room_ttl_perc {
+    view_label: "  LY"
+    label: "Rms Bkd - % Mix"
+    description: "Percent of total value."
+    type: percent_of_total
+    sql: ${ly_rooms} ;;
+    hidden: no
+  }
+
+  measure: ly_rev_ttl_perc {
+    view_label: "  LY"
+    label: "Rev Rms $ - % Mix"
+    description: "Percent of total value."
+    type: percent_of_total
+    sql: ${ly_room_rev} ;;
+    hidden: no
+  }
+
+  measure: ly_adr_ttl_perc {
+    view_label: "  LY"
+    label: "ADR - % Mix"
+    description: "Percent of total value."
+    type: percent_of_total
+    sql: utl..udf_divide(${ly_room_rev},${ly_rooms}) ;;
+    hidden: no
   }
 
 
