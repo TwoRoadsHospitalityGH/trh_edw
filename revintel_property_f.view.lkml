@@ -167,7 +167,7 @@ view: revintel_property_f {
 
   measure: cy_room_ttl_perc {
     view_label: "  CY"
-    label: "Rms Bkd -% Mix"
+    label: "Rms Bkd - % Mix"
     description: "Percent of total value."
     type: percent_of_total
     sql: ${cy_rooms} ;;
@@ -176,7 +176,7 @@ view: revintel_property_f {
 
   measure: cy_rev_ttl_perc {
     view_label: "  CY"
-    label: "Rev Rms $ -% Mix"
+    label: "Rev Rms $ - % Mix"
     description: "Percent of total value."
     type: percent_of_total
     sql: ${cy_room_rev} ;;
@@ -185,7 +185,7 @@ view: revintel_property_f {
 
   measure: cy_adr_ttl_perc {
     view_label: "  CY"
-    label: "ADR -% Mix"
+    label: "ADR - % Mix"
     description: "Percent of total value."
     type: percent_of_total
     sql: utl..udf_divide(${cy_room_rev},${cy_rooms}) ;;
@@ -243,7 +243,7 @@ view: revintel_property_f {
 
   measure: stly_room_ttl_perc {
     view_label: "  STLY"
-    label: "Rms Bkd -% Mix"
+    label: "Rms Bkd - % Mix"
     description: "Percent of total value."
     type: percent_of_total
     sql: ${stly_rooms} ;;
@@ -252,7 +252,7 @@ view: revintel_property_f {
 
   measure: stly_rev_ttl_perc {
     view_label: "  STLY"
-    label: "Rev Rms $ -% Mix"
+    label: "Rev Rms $ - % Mix"
     description: "Percent of total value."
     type: percent_of_total
     sql: ${stly_room_rev} ;;
@@ -261,7 +261,7 @@ view: revintel_property_f {
 
   measure: stly_adr_ttl_perc {
     view_label: "  STLY"
-    label: "ADR -% Mix"
+    label: "ADR - % Mix"
     description: "Percent of total value."
     type: percent_of_total
     sql: utl..udf_divide(${stly_room_rev},${stly_rooms}) ;;
@@ -318,7 +318,7 @@ view: revintel_property_f {
 
   measure: ly_room_ttl_perc {
     view_label: "  LY"
-    label: "Rms Bkd -% Mix"
+    label: "Rms Bkd - % Mix"
     description: "Percent of total value."
     type: percent_of_total
     sql: ${ly_rooms} ;;
@@ -327,7 +327,7 @@ view: revintel_property_f {
 
   measure: ly_rev_ttl_perc {
     view_label: "  LY"
-    label: "Rev Rms $ -% Mix"
+    label: "Rev Rms $ - % Mix"
     description: "Percent of total value."
     type: percent_of_total
     sql: ${ly_room_rev} ;;
@@ -336,7 +336,7 @@ view: revintel_property_f {
 
   measure: ly_adr_ttl_perc {
     view_label: "  LY"
-    label: "ADR -% Mix"
+    label: "ADR - % Mix"
     description: "Percent of total value."
     type: percent_of_total
     sql: utl..udf_divide(${ly_room_rev},${ly_rooms}) ;;
