@@ -242,7 +242,7 @@ view: revintel_property_f {
   }
 
   measure: stly_room_ttl_perc {
-    view_label: "  CY"
+    view_label: "  STLY"
     label: "Rms Bkd -% Mix"
     description: "Percent of total value."
     type: percent_of_total
@@ -251,7 +251,7 @@ view: revintel_property_f {
   }
 
   measure: stly_rev_ttl_perc {
-    view_label: "  CY"
+    view_label: "  STLY"
     label: "Rev Rms $ -% Mix"
     description: "Percent of total value."
     type: percent_of_total
@@ -260,7 +260,7 @@ view: revintel_property_f {
   }
 
   measure: stly_adr_ttl_perc {
-    view_label: "  CY"
+    view_label: "  STLY"
     label: "ADR -% Mix"
     description: "Percent of total value."
     type: percent_of_total
@@ -317,7 +317,7 @@ view: revintel_property_f {
   }
 
   measure: ly_room_ttl_perc {
-    view_label: "  CY"
+    view_label: "  LY"
     label: "Rms Bkd -% Mix"
     description: "Percent of total value."
     type: percent_of_total
@@ -326,7 +326,7 @@ view: revintel_property_f {
   }
 
   measure: ly_rev_ttl_perc {
-    view_label: "  CY"
+    view_label: "  LY"
     label: "Rev Rms $ -% Mix"
     description: "Percent of total value."
     type: percent_of_total
@@ -335,7 +335,7 @@ view: revintel_property_f {
   }
 
   measure: ly_adr_ttl_perc {
-    view_label: "  CY"
+    view_label: "  LY"
     label: "ADR -% Mix"
     description: "Percent of total value."
     type: percent_of_total
