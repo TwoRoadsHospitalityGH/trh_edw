@@ -25,6 +25,14 @@ view: glm_property_f_tofcst60 {
     value_format_name: decimal_0
   }
 
+  measure: rev_abs_amt_tofcst60_v {
+    label: "Rev Abs Act:Fcst60 - var"
+    description: "Abs(Actual - Fcst60)"
+    type: number
+    sql: abs(${glm_property_f_ty.rev_amt} - ${glm_property_f_fcst60.rev_amt}) ;;
+    value_format_name: decimal_0
+  }
+
   measure: agop_amt_tofcst60_v {
     label: "AGOP Act:Fcst60 - var"
     description: "Actual - Fcst60"
