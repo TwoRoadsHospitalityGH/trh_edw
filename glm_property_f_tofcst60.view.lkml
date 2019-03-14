@@ -37,7 +37,7 @@ view: glm_property_f_tofcst60 {
     label: "AGOP Abs Act:Fcst60 - var"
     description: "Actual - Fcst60"
     type: number
-    sql: ${glm_property_f_ty.agop_abs_amt} - ${glm_property_f_fcst60.agop_abs_amt} ;;
+    sql: abs(${glm_property_f_ty.agop_amt} - ${glm_property_f_fcst60.agop_amt}) ;;
     value_format_name: decimal_0
   }
 
