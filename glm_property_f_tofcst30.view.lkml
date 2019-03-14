@@ -33,6 +33,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: agop_abs_amt_tofcst30_v {
+    label: "AGOP Abs Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.agop_abs_amt} - ${glm_property_f_fcst30.agop_abs_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: gop_amt_tofcst30_v {
     label: "GOP Act:Fcst30 - var"
     description: "Actual - Fcst30"

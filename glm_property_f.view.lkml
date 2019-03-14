@@ -73,6 +73,13 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: agop_abs_amt {
+    type: number
+    sql: ${TABLE}.agop_abs_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   dimension: gop_amt {
     type: number
     sql: ${TABLE}.gop_amt ;;

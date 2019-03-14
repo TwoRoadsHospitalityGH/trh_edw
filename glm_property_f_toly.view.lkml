@@ -32,6 +32,14 @@ view: glm_property_f_toly {
     value_format_name: decimal_0
   }
 
+  measure: agop_abs_amt_toly_v {
+    label: "AGOP Abs Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.agop_abs_amt} - ${glm_property_f_ly.agop_abs_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: gop_amt_toly_v {
     label: "GOP Act:LY - var"
     description: "Actual - LY"
