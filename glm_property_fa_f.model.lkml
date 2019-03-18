@@ -1,16 +1,16 @@
 connection: "edw"
 include: "*.view"         # include all views in this project
 
-label: "Flow Metrics"
+label: "Forecast Accuracy Metrics"
 
 datagroup: model_caching_dg {
-  sql_trigger: select max( dw_update_dt ) from pedw.fact.glm_property_flow_f ;;
+  sql_trigger: select max( dw_update_dt ) from pedw.fact.glm_property_fa_f ;;
   max_cache_age: "8 hours"
 }
 
-explore: glm_property_flow_f {
+explore: glm_property_fa_f {
   group_label: "***User Acceptance Testing***"
-  label: "Flow Metrics (uat)"
+  label: "Forecast Accuracy Metrics (uat)"
   persist_with: model_caching_dg
   view_label: "    Measures"
 #   access_filter: {
@@ -26,16 +26,23 @@ explore: glm_property_flow_f {
   }
 
 
-  join: glm_property_flow_f_ty {
-    from: glm_property_flow_f_ty
+  join: glm_property_fa_f_ty {
+    from: glm_property_fa_f_ty
     view_label: "      TY"
     type: cross
     relationship: one_to_one
   }
 
-  join: glm_property_flow_f_bdgt {
-    from: glm_property_flow_f_bdgt
-    view_label: "   Bdgt"
+  join: glm_property_fa_f_fcst30 {
+    from: glm_property_fa_f_fcst30
+    view_label: "   Fcst 30"
+    type: cross
+    relationship: one_to_one
+  }
+
+  join: glm_property_fa_f_fcst60 {
+    from: glm_property_fa_f_fcst60
+    view_label: "   Fcst 60"
     type: cross
     relationship: one_to_one
   }
@@ -43,7 +50,7 @@ explore: glm_property_flow_f {
   join: date_dm {
     from: date_dm
     view_label: "  Date"
-    sql_on: ${date_dm.date_sid} = ${glm_property_flow_f.month_date_sid};;
+    sql_on: ${date_dm.date_sid} = ${glm_property_fa_f.month_date_sid};;
     sql_where: {% parameter date_dm.available_timeperiod %} = ''
       or utl..udf_period_trunc_dt( {% parameter date_dm.available_timeperiod %}, ${date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter date_dm.available_timeperiod %}  ) ;;
     type: inner
@@ -78,14 +85,14 @@ explore: glm_property_flow_f {
 
   join: period_type_dm {
     view_label: "Aggregation Type"
-    sql_on: ${period_type_dm.period_type_shk} = ${glm_property_flow_f.period_type_shk} ;;
+    sql_on: ${period_type_dm.period_type_shk} = ${glm_property_fa_f.period_type_shk} ;;
     type: inner
     relationship: many_to_one
   }
 
   join: property_dm {
     view_label: " Property"
-    sql_on: ${glm_property_flow_f.property_key} = ${property_dm.property_key} ;;
+    sql_on: ${glm_property_fa_f.property_key} = ${property_dm.property_key} ;;
     type: inner
     relationship: many_to_one
   }
