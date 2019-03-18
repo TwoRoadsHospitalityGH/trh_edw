@@ -60,12 +60,12 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: agop_abs_amt {
-    label: "AGOP Abs $"
-    type: sum
-    sql:  iff( ${measure_bt} = 1, ${glm_property_f.agop_abs_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
+  #measure: agop_abs_amt {
+  #  label: "AGOP Abs $"
+  #  type: sum
+  #  sql:  iff( ${measure_bt} = 1, ${glm_property_f.agop_abs_amt}, to_number( null ) ) ;;
+  #  value_format_name: usd_0
+  #}
 
   measure: gop_amt {
     label: "GOP $"
@@ -116,12 +116,12 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: rbe_banquet_catering_conference_services_rev_amt {
-    label: "Rev RB&E Banquet Catering Conference Services $"
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_banquet_catering_conference_services_rev_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
+  #measure: rbe_banquet_catering_conference_services_rev_amt {
+  #  label: "Rev RB&E Banquet Catering Conference Services $"
+  #  type: sum
+  #  sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_banquet_catering_conference_services_rev_amt}, to_number( null ) ) ;;
+  #  value_format_name: usd_0
+  #}
 
   measure: rbe_room_service_rev_amt {
     label: "Rev RB&E Room Service $"
@@ -137,12 +137,12 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: rbe_outlet_other_rev_amt {
-    label: "Rev RB&E Outlet Other $"
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_outlet_other_rev_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
+  #measure: rbe_outlet_other_rev_amt {
+  #  label: "Rev RB&E Outlet Other $"
+  #  type: sum
+  #  sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_outlet_other_rev_amt}, to_number( null ) ) ;;
+  #  value_format_name: usd_0
+  #}
 
   measure: spa_rev_amt {
     label: "Rev Spa $"
@@ -186,12 +186,12 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: spa_fitness_recreation_rev_amt {
-    label: "Rev Spa Fitness & Rec $"
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.spa_fitness_recreation_rev_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
+  #measure: spa_fitness_recreation_rev_amt {
+  #  label: "Rev Spa Fitness & Rec $"
+  #  type: sum
+  #  sql: iff( ${measure_bt} = 1, ${glm_property_f.spa_fitness_recreation_rev_amt}, to_number( null ) ) ;;
+  #  value_format_name: usd_0
+  #}
 
   measure: other_operated_rev_amt {
     label: "Rev Other Op. Dept. $"
@@ -214,10 +214,17 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: nonoperating_realty_airport_rev_amt {
-    label: "Rev Nonoperating Realty Airport $"
+  measure: nonoperating_realty_rev_amt {
+    label: "Rev Nonoperating Realty $"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_airport_rev_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_airport_rev_amt {
+    label: "Rev Nonoperating Airport $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_airport_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -342,10 +349,17 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: nonoperating_realty_airport_exp_amt {
+  measure: nonoperating_realty_exp_amt {
     label: "Exp Nonoperating Realty Airport $"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_airport_exp_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_exp_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_airport_exp_amt {
+    label: "Exp Nonoperating Airport $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_airport_exp_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -471,10 +485,17 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: nonoperating_realty_airport_other_exp_amt {
-    label: "Exp Other Nonoperating Realty Airport $"
+  measure: nonoperating_realty_other_exp_amt {
+    label: "Exp Other Nonoperating Realty $"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_airport_other_exp_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_other_exp_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_airport_other_exp_amt {
+    label: "Exp Other Nonoperating Airport $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_airport_other_exp_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -785,10 +806,17 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: nonoperating_realty_airport_payroll_amt {
-    label: "Payroll Nonoperating Realty Airport $"
+  measure: nonoperating_realty_payroll_amt {
+    label: "Payroll Nonoperating Realty $"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_airport_payroll_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_payroll_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_airport_payroll_amt {
+    label: "Payroll Nonoperating Airport $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_airport_payroll_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -1090,12 +1118,12 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: rbe_banquet_catering_conference_services_profit_amt {
-    label: "Profit RB&E Banquet Catering Conference Services $"
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_banquet_catering_conference_services_profit_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
+  #measure: rbe_banquet_catering_conference_services_profit_amt {
+  #  label: "Profit RB&E Banquet Catering Conference Services $"
+  #  type: sum
+  #  sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_banquet_catering_conference_services_profit_amt}, to_number( null ) ) ;;
+  #  value_format_name: usd_0
+  #}
 
   measure: rbe_room_service_profit_amt {
     label: "Profit RB&E Room Service $"
@@ -1111,12 +1139,12 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: rbe_outlet_other_profit_amt {
-    label: "Profit RB&E Outlet Other $"
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_outlet_other_profit_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
+  #measure: rbe_outlet_other_profit_amt {
+  #  label: "Profit RB&E Outlet Other $"
+  #  type: sum
+  #  sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_outlet_other_profit_amt}, to_number( null ) ) ;;
+  #  value_format_name: usd_0
+  #}
 
   measure: spa_profit_amt {
     label: "Profit Spa $"
@@ -1160,12 +1188,12 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: spa_fitness_recreation_profit_amt {
-    label: "Profit Spa Fitness & Rec $"
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.spa_fitness_recreation_profit_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
+  #measure: spa_fitness_recreation_profit_amt {
+  #  label: "Profit Spa Fitness & Rec $"
+  #  type: sum
+  #  sql: iff( ${measure_bt} = 1, ${glm_property_f.spa_fitness_recreation_profit_amt}, to_number( null ) ) ;;
+  #  value_format_name: usd_0
+  #}
 
   measure: other_operated_profit_amt {
     label: "Profit Other Op. Dept. $"
@@ -1188,10 +1216,17 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: nonoperating_realty_airport_profit_amt {
-    label: "Profit Nonoperating Realty Airport $"
+  measure: nonoperating_realty_profit_amt {
+    label: "Profit Nonoperating Realty $"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_airport_profit_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_profit_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_airport_profit_amt {
+    label: "Profit Nonoperating Airport $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_airport_profit_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -1295,10 +1330,17 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
-  measure: nonoperating_realty_airport_cost_of_sales_amt {
-    label: "COS Nonoperating Realty airport $"
+  measure: nonoperating_realty_cost_of_sales_amt {
+    label: "COS Nonoperating Realty $"
     type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_airport_cost_of_sales_amt}, to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_realty_cost_of_sales_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_airport_cost_of_sales_amt {
+    label: "COS Nonoperating Airport $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_airport_cost_of_sales_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 

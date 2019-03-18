@@ -73,12 +73,12 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: agop_abs_amt {
-    type: number
-    sql: ${TABLE}.agop_abs_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
+  #dimension: agop_abs_amt {
+  #  type: number
+  #  sql: ${TABLE}.agop_abs_amt ;;
+  #  value_format_name: usd_0
+  #  hidden: yes
+  #}
 
   dimension: gop_amt {
     type: number
@@ -153,12 +153,12 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: rbe_outlet_other_rev_amt {
-    type: number
-    sql: ${TABLE}.rbe_outlet_other_rev_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
+  #dimension: rbe_outlet_other_rev_amt {
+  #  type: number
+  #  sql: ${TABLE}.rbe_outlet_other_rev_amt ;;
+  #  value_format_name: usd_0
+  #  hidden: yes
+  #}
 
   dimension: spa_rev_amt {
     type: number
@@ -230,9 +230,16 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: nonoperating_realty_airport_rev_amt {
+  dimension: nonoperating_realty_rev_amt {
     type: number
-    sql: ${TABLE}.nonoperating_realty_airport_rev_amt ;;
+    sql: ${TABLE}.nonoperating_realty_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: nonoperating_airport_rev_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_airport_rev_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -359,9 +366,16 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: nonoperating_realty_airport_exp_amt {
+  dimension: nonoperating_realty_exp_amt {
     type: number
-    sql: ${TABLE}.nonoperating_realty_airport_exp_amt ;;
+    sql: ${TABLE}.nonoperating_realty_exp_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: nonoperating_airport_exp_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_airport_exp_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -488,9 +502,16 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: nonoperating_realty_airport_other_exp_amt {
+  dimension: nonoperating_realty_other_exp_amt {
     type: number
-    sql: ${TABLE}.nonoperating_realty_airport_other_exp_amt ;;
+    sql: ${TABLE}.nonoperating_realty_other_exp_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: nonoperating_airport_other_exp_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_airport_other_exp_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -616,9 +637,16 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: nonoperating_realty_airport_payroll_amt {
+  dimension: nonoperating_realty_payroll_amt {
     type: number
-    sql: ${TABLE}.nonoperating_realty_airport_payroll_amt ;;
+    sql: ${TABLE}.nonoperating_realty_payroll_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: nonoperating_airport_payroll_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_airport_payroll_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -832,12 +860,12 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: rbe_outlet_other_profit_amt {
-    type: number
-    sql: ${TABLE}.rbe_outlet_other_profit_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
+  #dimension: rbe_outlet_other_profit_amt {
+  #  type: number
+  #  sql: ${TABLE}.rbe_outlet_other_profit_amt ;;
+  #  value_format_name: usd_0
+  #  hidden: yes
+  #}
 
   dimension: rbe_conference_services_profit_amt {
     type: number
@@ -846,12 +874,12 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: rbe_banquet_catering_conference_services_profit_amt {
-    type: number
-    sql: ${TABLE}.rbe_banquet_catering_conference_services_profit_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
+  #dimension: rbe_banquet_catering_conference_services_profit_amt {
+  #  type: number
+  #  sql: ${TABLE}.rbe_banquet_catering_conference_services_profit_amt ;;
+  #  value_format_name: usd_0
+  #  hidden: yes
+  #}
 
   dimension: rbe_room_service_profit_amt {
     type: number
@@ -909,12 +937,12 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: spa_fitness_recreation_profit_amt {
-    type: number
-    sql: ${TABLE}.spa_fitness_recreation_profit_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
+  #dimension: spa_fitness_recreation_profit_amt {
+  #  type: number
+  #  sql: ${TABLE}.spa_fitness_recreation_profit_amt ;;
+  #  value_format_name: usd_0
+  #  hidden: yes
+  #}
 
   dimension: other_operated_profit_amt {
     type: number
@@ -937,9 +965,16 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: nonoperating_realty_airport_profit_amt {
+  dimension: nonoperating_realty_profit_amt {
     type: number
-    sql: ${TABLE}.nonoperating_realty_airport_profit_amt ;;
+    sql: ${TABLE}.nonoperating_realty_profit_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: nonoperating_airport_profit_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_airport_profit_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -1086,9 +1121,9 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: nonoperating_realty_airport_cost_of_sales_amt {
+  dimension: nonoperating_airport_cost_of_sales_amt {
     type: number
-    sql: ${TABLE}.nonoperating_realty_airport_cost_of_sales_amt ;;
+    sql: ${TABLE}.nonoperating_airport_cost_of_sales_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
@@ -1096,6 +1131,13 @@ view: glm_property_f {
   dimension: nonoperating_util_cost_of_sales_amt {
     type: number
     sql: ${TABLE}.nonoperating_util_cost_of_sales_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: nonoperating_realty_cost_of_sales_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_realty_cost_of_sales_amt ;;
     value_format_name: usd_0
     hidden: yes
   }
