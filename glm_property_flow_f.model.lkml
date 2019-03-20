@@ -9,7 +9,7 @@ datagroup: model_caching_dg {
 }
 
 explore: glm_property_flow_f {
-  group_label: "***Portfolio***"
+  group_label: "Portfolio"
   label: "Flow Metrics"
   persist_with: model_caching_dg
   view_label: "    Measures"
