@@ -9,8 +9,8 @@ datagroup: model_caching_dg {
 }
 
 explore: glm_property_fa_f {
-  group_label: "***User Acceptance Testing***"
-  label: "Forecast Accuracy Metrics (uat)"
+  group_label: "Portfolio"
+  label: "Forecast Accuracy Metrics"
   persist_with: model_caching_dg
   view_label: "    Measures"
 
