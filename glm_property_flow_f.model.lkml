@@ -13,10 +13,18 @@ explore: glm_property_flow_f {
   label: "Flow Metrics (uat)"
   persist_with: model_caching_dg
   view_label: "    Measures"
-#   access_filter: {
-#      field: user_property_fdm.user_id
-#      user_attribute: atmp_userid
-#    }
+
+  access_filter: {
+    field: user_property_fdm.user_id
+    user_attribute: looker_ldap_user_id
+  }
+
+  join: user_property_fdm {
+    from:  user_property_fdm
+    sql_on: ${user_property_fdm.property_key} = ${glm_property_flow_f.property_key} ;;
+    type: inner
+    relationship: many_to_one
+  }
 
   always_filter: {
     filters: {
