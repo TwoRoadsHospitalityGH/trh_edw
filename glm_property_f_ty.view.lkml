@@ -144,6 +144,120 @@ view: glm_property_f_ty {
   #  value_format_name: usd_0
   #}
 
+
+  measure: food_rbe_rev_amt {
+    label: "Rev Food RB&E $"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.food_rbe_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: food_rbe_banquet_rev_amt {
+    label: "Rev Food RB&E Banquet $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.food_rbe_banquet_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: food_rbe_catering_rev_amt {
+    label: "Rev Food RB&E Catering $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.food_rbe_catering_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: food_rbe_outlet_rev_amt {
+    label: "Rev Food RB&E Outlet $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.food_rbe_outlet_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: food_rbe_conference_services_rev_amt {
+    label: "Rev Food RB&E Conference Services $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.food_rbe_conference_services_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  #measure: food_rbe_banquet_catering_conference_services_rev_amt {
+  #  label: "Rev Food RB&E Banquet Catering Conference Services $"
+  #  type: sum
+  #  sql: iff( ${measure_bt} = 1, ${glm_property_f.food_rbe_banquet_catering_conference_services_rev_amt}, to_number( null ) ) ;;
+  #  value_format_name: usd_0
+  #}
+
+  measure: food_rbe_room_service_rev_amt {
+    label: "Rev Food RB&E Room Service $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.food_rbe_room_service_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: food_rbe_other_rev_amt {
+    label: "Rev Food RB&E Other $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.food_rbe_other_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+
+  measure: beverage_rbe_rev_amt {
+    label: "Rev Beverage RB&E $"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.beverage_rbe_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: beverage_rbe_banquet_rev_amt {
+    label: "Rev Beverage RB&E Banquet $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.beverage_rbe_banquet_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: beverage_rbe_catering_rev_amt {
+    label: "Rev Beverage RB&E Catering $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.beverage_rbe_catering_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: beverage_rbe_outlet_rev_amt {
+    label: "Rev Beverage RB&E Outlet $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.beverage_rbe_outlet_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: beverage_rbe_conference_services_rev_amt {
+    label: "Rev Beverage RB&E Conference Services $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.beverage_rbe_conference_services_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  #measure: beverage_rbe_banquet_catering_conference_services_rev_amt {
+  #  label: "Rev Beverage RB&E Banquet Catering Conference Services $"
+  #  type: sum
+  #  sql: iff( ${measure_bt} = 1, ${glm_property_f.beverage_rbe_banquet_catering_conference_services_rev_amt}, to_number( null ) ) ;;
+  #  value_format_name: usd_0
+  #}
+
+  measure: beverage_rbe_room_service_rev_amt {
+    label: "Rev Beverage RB&E Room Service $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.beverage_rbe_room_service_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: beverage_rbe_other_rev_amt {
+    label: "Rev Beverage RB&E Other $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.beverage_rbe_other_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
   measure: spa_rev_amt {
     label: "Rev Spa $"
     type: sum

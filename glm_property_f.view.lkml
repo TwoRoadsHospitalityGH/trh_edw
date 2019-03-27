@@ -160,6 +160,106 @@ view: glm_property_f {
   #  hidden: yes
   #}
 
+
+  dimension: food_rbe_rev_amt {
+    type: number
+    sql: ${TABLE}.food_rbe_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: food_rbe_banquet_rev_amt {
+    type: number
+    sql: ${TABLE}.food_rbe_banquet_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: food_rbe_catering_rev_amt {
+    type: number
+    sql: ${TABLE}.food_rbe_catering_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: food_rbe_outlet_rev_amt {
+    type: number
+    sql: ${TABLE}.food_rbe_outlet_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: food_rbe_conference_services_rev_amt {
+    type: number
+    sql: ${TABLE}.food_rbe_conference_services_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: food_rbe_room_service_rev_amt {
+    type: number
+    sql: ${TABLE}.food_rbe_room_service_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: food_rbe_other_rev_amt {
+    type: number
+    sql: ${TABLE}.food_rbe_other_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+
+  dimension: beverage_rbe_rev_amt {
+    type: number
+    sql: ${TABLE}.beverage_rbe_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: beverage_rbe_banquet_rev_amt {
+    type: number
+    sql: ${TABLE}.beverage_rbe_banquet_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: beverage_rbe_catering_rev_amt {
+    type: number
+    sql: ${TABLE}.beverage_rbe_catering_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: beverage_rbe_outlet_rev_amt {
+    type: number
+    sql: ${TABLE}.beverage_rbe_outlet_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: beverage_rbe_conference_services_rev_amt {
+    type: number
+    sql: ${TABLE}.beverage_rbe_conference_services_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: beverage_rbe_room_service_rev_amt {
+    type: number
+    sql: ${TABLE}.beverage_rbe_room_service_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: beverage_rbe_other_rev_amt {
+    type: number
+    sql: ${TABLE}.beverage_rbe_other_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   dimension: spa_rev_amt {
     type: number
     sql: ${TABLE}.spa_rev_amt ;;
