@@ -1,4 +1,14 @@
-view: rpi_property_f_toly {
+view: rpi_property_f_toly{
+  derived_table: {
+    sql: select 1 as key_no ;;
+  }
+
+  dimension: key_no {
+    primary_key: yes
+    type: number
+    sql: ${TABLE}.key_no ;;
+    hidden: yes
+  }
   #--------------------------------------------------------------------------------
   #-- property to LY: occ, adr, revpar, etc
   #--------------------------------------------------------------------------------
