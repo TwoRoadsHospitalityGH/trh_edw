@@ -10,7 +10,7 @@ datagroup: model_caching_dg {
 
 explore: rpi_property_f {
   from: rpi_property_f
-  sql_table_name: pedw.fact.rpi_property_f ;;
+  sql_table_name: pedw.dev.rpi_property_f ;;
   group_label: "***Development***"
   label: "RPI Monthly Forecast (dev)"
   persist_with: model_caching_dg

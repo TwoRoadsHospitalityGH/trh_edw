@@ -95,6 +95,14 @@ view: rpi_property_f_toly {
     value_format_name: percent_1
   }
 
+  measure: property_trevpar_index_pct_toly {
+    label: "TRevPAR Index:Cs Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${rpi_property_f_ty.property_revpar_index_pct}, ${rpi_property_f_ly.property_revpar_index_pct} );;
+    value_format_name: percent_1
+  }
+
 
 
   #--------------------------------------------------------------------------------
