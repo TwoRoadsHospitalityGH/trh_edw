@@ -7,8 +7,8 @@ view: rpi_property_f_ly {
     #-- dimensions
     #-------------------------------------------------------------------------------------------
 
-    dimension: ly_date_sid {
-      sql: ${rpi_property_f.ly_date_sid} ;;
-      hidden: yes
-    }
+  dimension: tyly_bt {
+    sql: ${rpi_property_f.ly_bt} ;;
+    hidden: yes
+  }
   }

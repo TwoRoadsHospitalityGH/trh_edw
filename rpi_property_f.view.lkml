@@ -1,5 +1,5 @@
 view: rpi_property_f {
-  sql_table_name: pedw.fact.revintel_property_rate_code_f  ;;
+  sql_table_name: pedw.dev.rpi_property_f  ;;
 
   #-------------------------------------------------------------------------------------------
   #-- Keys
@@ -16,11 +16,18 @@ view: rpi_property_f {
     hidden: yes
   }
 
-  dimension: ly_date_sid {
+  dimension: ty_bt {
     type: number
-    sql: ${TABLE}.ly_date_sid ;;
+    sql: ${TABLE}.ty_bt ;;
     hidden: yes
   }
+
+  dimension: ly_bt {
+    type: number
+    sql: ${TABLE}.ly_bt ;;
+    hidden: yes
+  }
+
 
   #-------------------------------------------------------------------------------------------
   #-- Dimensions
@@ -37,7 +44,7 @@ view: rpi_property_f {
     hidden: yes
   }
 
-  dimension: property_rev_amt {
+  dimension: property_room_rev_amt {
     type: number
     sql: ${TABLE}.property_rev_amt ;;
     hidden: yes
@@ -59,7 +66,7 @@ view: rpi_property_f {
     hidden: yes
   }
 
-  dimension: compset_rev_amt {
+  dimension: compset_room_rev_amt {
     type: number
     sql: ${TABLE}.compset_rev_amt ;;
     hidden: yes
