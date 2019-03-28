@@ -51,7 +51,7 @@ view: rpi_property_f {
 
   dimension: property_room_rev_amt {
     type: number
-    sql: ${TABLE}.property_rev_amt ;;
+    sql: ${TABLE}.property_room_rev_amt ;;
     hidden: yes
   }
 
@@ -73,7 +73,7 @@ view: rpi_property_f {
 
   dimension: compset_room_rev_amt {
     type: number
-    sql: ${TABLE}.compset_rev_amt ;;
+    sql: ${TABLE}.compset_room_rev_amt ;;
     hidden: yes
   }
 
