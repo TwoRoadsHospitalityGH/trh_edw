@@ -11,6 +11,11 @@ view: rpi_property_f {
     hidden: yes
   }
 
+  dimension: period_key {
+    sql: ${TABLE}.period_key ;;
+    hidden: yes
+  }
+
   dimension: date_sid {
     sql: ${TABLE}.date_sid ;;
     hidden: yes

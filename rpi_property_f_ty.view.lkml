@@ -27,7 +27,7 @@ view: rpi_property_f_ty {
     label: " Properties"
     description: "Distinct count of properties."
     type: count_distinct
-    sql: iff( ${tyly_bt} = 1, ${rpi_property_f.property_key}, to_number( null ) ) ;;
+    sql: iff( ${tyly_bt} = 1, ${rpi_property_f.period_key}, to_number( null ) ) ;;
     value_format_name: decimal_0
   }
 
@@ -127,7 +127,7 @@ view: rpi_property_f_ty {
     label: "Rms Avail Cs"
     description: "Rooms Available Compset"
     type: sum_distinct
-    sql_distinct_key: ${rpi_property_f.property_key} ;;
+    sql_distinct_key: ${rpi_property_f.period_key} ;;
     sql: iff( ${tyly_bt} = 1, ${rpi_property_f.compset_room_avail_cnt}, 0 ) ;;
     value_format_name: decimal_0
   }
