@@ -2740,6 +2740,14 @@ view: glm_property_f_toly {
     value_format_name: decimal_2
   }
 
+  measure: adr_contract_amt_toly_v {
+    label: "ADR Contract $ Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.adr_contract_amt} - ${glm_property_f_ly.adr_contract_amt} ;;
+    value_format_name: decimal_2
+  }
+
   #-- ADR % var
 
   measure: adr_amt_toly {
@@ -2763,6 +2771,14 @@ view: glm_property_f_toly {
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.adr_group_amt}, ${glm_property_f_ly.adr_group_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: adr_contract_amt_toly {
+    label: "ADR Contract $ Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.adr_contract_amt}, ${glm_property_f_ly.adr_contract_amt} );;
     value_format_name: percent_1
   }
 

@@ -1627,14 +1627,21 @@ view: glm_property_f_ty {
     label: "ADR Transient $"
     type: number
     sql: utl..udf_divide( ${transient_room_rev_amt}, ${occupied_transient_room_cnt} );;
-    value_format_name: decimal_2
+    value_format_name: usd_0
   }
 
   measure: adr_group_amt {
     label: "ADR Group $"
     type: number
     sql: utl..udf_divide( ${group_room_rev_amt}, ${occupied_group_room_cnt} );;
-    value_format_name: decimal_2
+    value_format_name: usd_0
+  }
+
+  measure: adr_contract_amt {
+    label: "ADR Contract $"
+    type: number
+    sql: utl..udf_divide( ${contract_room_rev_amt}, ${occupied_contract_room_cnt} );;
+    value_format_name: usd_0
   }
 
   #-- Room nights
