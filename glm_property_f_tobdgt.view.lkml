@@ -99,6 +99,14 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
+  measure: other_rev_amt_tobdgt {
+    label: "Rev Other Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_rev_amt}, ${glm_property_f_bdgt.other_rev_amt}) ;;
+    value_format_name: percent_1
+  }
+
   #-- RB&E rev
 
   measure: rbe_rev_amt_tobdgt_v {

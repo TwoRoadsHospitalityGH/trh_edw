@@ -405,6 +405,14 @@ view: glm_property_f_toly {
     value_format_name: percent_1
   }
 
+  measure: other_rev_amt_toly {
+    label: "Rev Other Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_rev_amt}, ${glm_property_f_ly.other_rev_amt} );;
+    value_format_name: percent_1
+  }
+
   measure: rbe_rev_amt_toly {
     label: "Rev RB&E Act:LY - var %"
     description: "(Actual - LY) / LY"

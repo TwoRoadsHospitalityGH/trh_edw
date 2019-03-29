@@ -414,6 +414,14 @@ view: glm_property_f_tofcst60 {
     value_format_name: percent_1
   }
 
+  measure: other_rev_amt_tofcst60 {
+    label: "Rev Other Act:Fcst60 - var %"
+    description: "(Actual - Fcst60) / Fcst60"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_rev_amt}, ${glm_property_f_fcst60.other_rev_amt}) ;;
+    value_format_name: percent_1
+  }
+
   measure: rbe_rev_amt_tofcst60 {
     label: "Rev RB&E Act:Fcst60 - var %"
     description: "(Actual - Fcst60) / Fcst60"
