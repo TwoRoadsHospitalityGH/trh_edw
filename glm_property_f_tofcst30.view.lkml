@@ -65,6 +65,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: other_rev_amt_tofcst30_v {
+    label: "Rev Other Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.other_rev_amt} - ${glm_property_f_fcst30.other_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: rbe_rev_amt_tofcst30_v {
     label: "Rev RB&E Act:Fcst30 - var"
     description: "Actual - Fcst30"

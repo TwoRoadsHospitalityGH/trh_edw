@@ -81,6 +81,13 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  measure: other_rev_amt {
+    label: "Rev Other $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.other_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
   measure: rbe_rev_amt {
     label: "Rev RB&E $"
     type: sum
@@ -1680,6 +1687,13 @@ view: glm_property_f_ty {
     label: "Rev PAR $ Transient"
     type: number
     sql: utl..udf_divide( ${transient_room_rev_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: rev_par_contract_amt {
+    label: "Rev PAR $ Contract"
+    type: number
+    sql: utl..udf_divide( ${contract_room_rev_amt}, ${net_avail_room_cnt} );;
     value_format_name: usd_0
   }
 

@@ -97,6 +97,13 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: other_rev_amt {
+    type: number
+    sql: ${TABLE}.other_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   dimension: rbe_rev_amt {
     type: number
     sql: ${TABLE}.rbe_rev_amt ;;

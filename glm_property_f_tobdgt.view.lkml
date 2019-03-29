@@ -57,6 +57,14 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: other_rev_amt_tobdgt_v {
+    label: "Rev Other Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.other_rev_amt} - ${glm_property_f_bdgt.other_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+
   #-- Rev % var
 
   measure: rev_amt_tobdgt {
