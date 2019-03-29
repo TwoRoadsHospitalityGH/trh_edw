@@ -1573,14 +1573,14 @@ view: glm_property_f_ty {
     label: "Rev /Trtmnt Spa $"
     type: number
     sql: utl..udf_divide( ${spa_rev_amt}, ${spa_treatment_cnt} );;
-    value_format_name: decimal_2
+    value_format_name: usd_0
   }
 
   measure: golf_rev_round_avg_amt {
     label: "Rev /Rnd Golf $"
     type: number
     sql: utl..udf_divide( ${golf_rev_amt}, ${golf_round_cnt} );;
-    value_format_name: decimal_2
+    value_format_name: usd_0
   }
 
   #-- Occupancy
