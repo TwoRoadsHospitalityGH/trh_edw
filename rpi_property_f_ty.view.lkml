@@ -27,7 +27,8 @@ view: rpi_property_f_ty {
     label: " Properties"
     description: "Distinct count of properties."
     type: count_distinct
-    sql: iff( ${tyly_bt} = 1, ${rpi_property_f.period_key}, to_number( null ) ) ;;
+    sql_distinct_key: ${rpi_property_f.property_key} ;;
+    sql: iff( ${tyly_bt} = 1, ${rpi_property_f.property_key}, to_number( null ) ) ;;
     value_format_name: decimal_0
   }
 
@@ -35,7 +36,7 @@ view: rpi_property_f_ty {
     label: "Rms Avail  Pr"
     description: "Rooms Available Property"
     type: sum_distinct
-    sql_distinct_key: ${rpi_property_f.property_key} ;;
+    sql_distinct_key: ${rpi_property_f.period_key} ;;
     sql: iff( ${tyly_bt} = 1, ${rpi_property_f.property_room_avail_cnt}, 0 ) ;;
     value_format_name: decimal_0
   }
@@ -88,37 +89,6 @@ view: rpi_property_f_ty {
   }
 
 
-  #--------------------------------------------------------------------------------
-  #-- property indexes to compset
-  #--------------------------------------------------------------------------------
-  measure: property_occ_index_pct {
-    label: "Rms Occ % Index:Cs"
-    description: "Rooms Occupancy Rate %
-    Index to Compset
-    Pr Rms Occ % / Cs Rms Occ %"
-    type: number
-    sql: utl..udf_divide( ${property_occupancy_rate_pct}, ${compset_occupancy_rate_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: property_adr_index_pct {
-    label: "ADR Index:Cs"
-    description: "Average Daily Rate
-    Index to Compset
-    Pr ADR / Cs ADR"
-    type: number
-    sql: utl..udf_divide( ${property_adr_amt}, ${compset_adr_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: property_revpar_index_pct {
-    label: "RevPAR Index:Cs"
-    description: "RevPAR Index to Compset
-    Pr RevPAR / Cs RevPAR"
-    type: number
-    sql: utl..udf_divide( ${property_revpar_amt}, ${compset_revpar_amt} );;
-    value_format_name: percent_1
-  }
 
   #--------------------------------------------------------------------------------
   #-- compset
@@ -176,6 +146,38 @@ view: rpi_property_f_ty {
     type: number
     sql: utl..udf_divide( ${compset_room_rev_amt}, ${compset_room_avail_cnt} );;
     value_format_name: usd
+  }
+
+  #--------------------------------------------------------------------------------
+  #-- property indexes to compset
+  #--------------------------------------------------------------------------------
+  measure: property_occ_index_pct {
+    label: "Rms Occ % Index:Cs"
+    description: "Rooms Occupancy Rate %
+    Index to Compset
+    Pr Rms Occ % / Cs Rms Occ %"
+    type: number
+    sql: utl..udf_divide( ${property_occupancy_rate_pct}, ${compset_occupancy_rate_pct} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_adr_index_pct {
+    label: "ADR Index:Cs"
+    description: "Average Daily Rate
+    Index to Compset
+    Pr ADR / Cs ADR"
+    type: number
+    sql: utl..udf_divide( ${property_adr_amt}, ${compset_adr_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: property_revpar_index_pct {
+    label: "RevPAR Index:Cs"
+    description: "RevPAR Index to Compset
+    Pr RevPAR / Cs RevPAR"
+    type: number
+    sql: utl..udf_divide( ${property_revpar_amt}, ${compset_revpar_amt} );;
+    value_format_name: percent_1
   }
 
 }
