@@ -25,7 +25,7 @@ view: date_month_parameter {
     allowed_value: {label: "Current Month" value: "current_month"}
     allowed_value: {label: "Current Month Last Year" value: "ly_current_month"}
     allowed_value: {label: "January" value: "jan"}
-    allowed_value: {label: "Febraury" value: "feb"}
+    allowed_value: {label: "February" value: "feb"}
     allowed_value: {label: "March" value: "mar"}
     allowed_value: {label: "April" value: "apr"}
     allowed_value: {label: "May" value: "may"}
