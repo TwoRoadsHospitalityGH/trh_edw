@@ -1263,5 +1263,76 @@ view: glm_property_f {
     hidden: yes
   }
 
+  #-- Rental property splits
+  dimension: room_rental_mgmt_2_19_rev_amt {
+    type: number
+    sql: ${TABLE}.room_rental_mgmt_2_19_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: avail_room_rental_mgmt_2_19_cnt {
+    type: number
+    sql: ${TABLE}.avail_room_rental_mgmt_2_19_cnt ;;
+    hidden: yes
+  }
+
+  dimension: occupied_owner_room_rental_mgmt_2_19_cnt {
+    type: number
+    sql: ${TABLE}.occupied_owner_room_rental_mgmt_2_19_cnt ;;
+    hidden: yes
+  }
+
+  dimension: net_avail_room_rental_mgmt_2_19_cnt {
+    type: number
+    sql: ${TABLE}.net_avail_room_rental_mgmt_2_19_cnt ;;
+    hidden: yes
+  }
+
+  dimension: occupied_room_rental_mgmt_2_19_cnt {
+    type: number
+    sql: ${TABLE}.occupied_room_rental_mgmt_2_19_cnt ;;
+    hidden: yes
+  }
+
+  dimension: transient_room_rental_mgmt_2_19_rev_amt {
+    type: number
+    sql: ${TABLE}.transient_room_rental_mgmt_2_19_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: group_room_rental_mgmt_2_19_rev_amt {
+    type: number
+    sql: ${TABLE}.group_room_rental_mgmt_2_19_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: contract_room_rental_mgmt_2_19_rev_amt {
+    type: number
+    sql: ${TABLE}.contract_room_rental_mgmt_2_19_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+  dimension: occupied_transient_room_rental_mgmt_2_19_cnt {
+    type: number
+    sql: ${TABLE}.occupied_transient_room_rental_mgmt_2_19_cnt ;;
+    hidden: yes
+  }
+
+  dimension: occupied_group_room_rental_mgmt_2_19_cnt {
+    type: number
+    sql: ${TABLE}.occupied_group_room_rental_mgmt_2_19_cnt ;;
+    hidden: yes
+  }
+
+  dimension: occupied_contract_room_rental_mgmt_2_19_cnt {
+    type: number
+    sql: ${TABLE}.occupied_contract_room_rental_mgmt_2_19_cnt ;;
+    hidden: yes
+  }
+
+
 
 }

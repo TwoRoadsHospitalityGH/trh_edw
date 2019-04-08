@@ -3108,4 +3108,86 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
+  #-- Rental property splits
+
+  measure: room_rental_mgmt_2_19_rev_amt_tofcst30_v {
+    label: "Rev Rms Rental Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_fcst30.room_rental_mgmt_2_19_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+  measure: avail_room_rental_mgmt_2_19_cnt_tofcst30_v {
+    label: "Rms Avail Rental Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.avail_room_rental_mgmt_2_19_cnt} - ${glm_property_f_fcst30.avail_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
+  measure: occupied_owner_room_rental_mgmt_2_19_cnt_tofcst30_v {
+    label: "Rms Occ Owner Rental Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.occupied_owner_room_rental_mgmt_2_19_cnt} - ${glm_property_f_fcst30.occupied_owner_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
+  measure: net_avail_room_rental_mgmt_2_19_cnt_tofcst30_v {
+    label: "Rms Avail Net Rental Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.net_avail_room_rental_mgmt_2_19_cnt} - ${glm_property_f_fcst30.net_avail_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
+  measure: occupied_room_rental_mgmt_2_19_cnt_tofcst30_v {
+    label: "Rms Occ Rental Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.occupied_room_rental_mgmt_2_19_cnt} - ${glm_property_f_fcst30.occupied_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
+  measure: transient_room_rental_mgmt_2_19_rev_amt_tofcst30_v {
+    label: "Rev Rms Transient Rental Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.transient_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_fcst30.transient_room_rental_mgmt_2_19_rev_amt} ;;
+    value_format_name: usd_0
+  }
+  measure: group_room_rental_mgmt_2_19_rev_amt_tofcst30_v {
+    label: "Rev Rms Group Rental Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql:${glm_property_f_ty.group_room_rental_mgmt_2_19_rev_amt - ${glm_property_f_fcst30.group_room_rental_mgmt_2_19_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+  measure: contract_room_rental_mgmt_2_19_rev_amt_tofcst30_v {
+    label: "Rev Rms Contract Rental Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.contract_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_fcst30.contract_room_rental_mgmt_2_19_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+  measure: occupied_transient_room_rental_mgmt_2_19_cnt_tofcst30_v {
+    label: "Rms Occ Transient Rental Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql:  ${glm_property_f_ty.occupied_transient_room_rental_mgmt_2_19_cnt} - ${glm_property_f_fcst30.occupied_transient_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
+  measure: occupied_group_room_rental_mgmt_2_19_cnt_tofcst30_v {
+    label: "Rms Occ Group Rental Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.occupied_group_room_rental_mgmt_2_19_cnt} - ${glm_property_f_fcst30.occupied_group_room_rental_mgmt_2_19_cnt} );;
+    value_format_name: decimal_0
+  }
+  measure: occupied_contract_room_rental_mgmt_2_19_cnt_tofcst30_v {
+    label: "Rms Occ Contract Rental Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.occupied_contract_room_rental_mgmt_2_19_cnt} - ${glm_property_f_fcst30.occupied_contract_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
+
+
+
 }

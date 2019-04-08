@@ -3099,13 +3099,92 @@ view: glm_property_f_toly {
   }
 
   measure: misc_payroll_rev_pct_toly_v {
-    label: "Payroll /Rev Rentals & Other % Act:LY - var"
+    label: "Payroll /Rev Rentals & Other Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: utl..udf_divide( ${glm_property_f_ty.misc_payroll_rev_pct} - ${glm_property_f_ly.misc_payroll_rev_pct} );;
     value_format_name: percent_1
   }
 
+  #-- Rental property splits
+
+  measure: room_rental_mgmt_2_19_rev_amt_toly_v {
+    label: "Rev Rms Rental Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_ly.room_rental_mgmt_2_19_rev_amt};;
+    value_format_name: decimal_0
+  }
+  measure: avail_room_rental_mgmt_2_19_cnt_toly_v {
+    label: "Rms Avail Rental Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.avail_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.avail_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
+  measure: occupied_owner_room_rental_mgmt_2_19_cnt_toly_v {
+    label: "Rms Occ Owner Rental Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.occupied_owner_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.occupied_owner_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
+  measure: net_avail_room_rental_mgmt_2_19_cnt_toly_v {
+    label: "Rms Avail Net Rental Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.net_avail_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.net_avail_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
+  measure: occupied_room_rental_mgmt_2_19_cnt_toly_v {
+    label: "Rms Occ Rental Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.occupied_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.occupied_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
+  measure: transient_room_rental_mgmt_2_19_rev_amt_toly_v {
+    label: "Rev Rms Transient Rental Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.transient_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_ly.transient_room_rental_mgmt_2_19_rev_amt} ;;
+    value_format_name: usd_0
+  }
+  measure: group_room_rental_mgmt_2_19_rev_amt_toly_v {
+    label: "Rev Rms Group Rental Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.group_room_rental_mgmt_2_19_rev_amt - ${glm_property_f_ly.group_room_rental_mgmt_2_19_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+  measure: contract_room_rental_mgmt_2_19_rev_amt_toly_v {
+    label: "Rev Rms Contract Rental Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.contract_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_ly.contract_room_rental_mgmt_2_19_rev_amt} ;;
+    value_format_name: decimal_0
+  }
+  measure: occupied_transient_room_rental_mgmt_2_19_cnt_toly_v {
+    label: "Rms Occ Transient Rental Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.occupied_transient_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.occupied_transient_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
+  measure: occupied_group_room_rental_mgmt_2_19_cnt_toly_v {
+    label: "Rms Occ Group Rental Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.occupied_group_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.occupied_group_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
+  measure: occupied_contract_room_rental_mgmt_2_19_cnt_toly_v {
+    label: "Rms Occ Contract Rental Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.occupied_contract_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.occupied_contract_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+  }
 
 
 }

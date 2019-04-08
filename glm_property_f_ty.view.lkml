@@ -1767,6 +1767,76 @@ view: glm_property_f_ty {
     value_format_name: decimal_1
   }
 
+  #-- Rental property splits
+  measure: room_rental_mgmt_2_19_rev_amt {
+    label: "Rev Rms Rental $"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.room_rental_mgmt_2_19_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
 
+  measure: avail_room_rental_mgmt_2_19_cnt {
+    label: "Rms Avail Rental"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.avail_room_rental_mgmt_2_19_cnt}, to_number( null ) ) ;;
+  }
+
+  measure: occupied_owner_room_rental_mgmt_2_19_cnt {
+    label: "Rms Occ Owner Rental"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.occupied_owner_room_rental_mgmt_2_19_cnt}, to_number( null ) ) ;;
+  }
+
+  measure: net_avail_room_rental_mgmt_2_19_cnt {
+    label: "Rms Avail Net Rental"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.net_avail_room_rental_mgmt_2_19_cnt}, to_number( null ) ) ;;
+  }
+
+  measure: occupied_room_rental_mgmt_2_19_cnt {
+    label: "Rms Occ Rental"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.occupied_room_rental_mgmt_2_19_cnt}, to_number( null ) ) ;;
+  }
+
+  measure: transient_room_rental_mgmt_2_19_rev_amt{
+    label: "Rev Rms Transient Rental $"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.transient_room_rental_mgmt_2_19_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: group_room_rental_mgmt_2_19_rev_amt {
+    label: "Rev Rms Group Rental $"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.group_room_rental_mgmt_2_19_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: contract_room_rental_mgmt_2_19_rev_amt {
+    label: "Rev Rms Contract Rental $"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.contract_room_rental_mgmt_2_19_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: occupied_transient_room_rental_mgmt_2_19_cnt {
+    label: "Rms Occ Transient Rental"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.occupied_transient_room_rental_mgmt_2_19_cnt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: occupied_group_room_rental_mgmt_2_19_cnt {
+    label: "Rms Occ Group Rental"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.occupied_group_room_rental_mgmt_2_19_cnt}, to_number( null ) ) ;;
+  }
+
+  measure: occupied_contract_room_rental_mgmt_2_19_cnt {
+    label: "Rms Occ Contract Rental"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.occupied_contract_room_rental_mgmt_2_19_cnt}, to_number( null ) ) ;;
+  }
 
 }
