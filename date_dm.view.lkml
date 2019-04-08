@@ -14,7 +14,7 @@ view: date_dm {
     allowed_value: {label: "Current Year" value: "current_year"}
     allowed_value: {label: "Current Quarter" value: "current_quarter"}
     allowed_value: {label: "January" value: "jan"}
-    allowed_value: {label: "Febraury" value: "feb"}
+    allowed_value: {label: "February" value: "feb"}
     allowed_value: {label: "March" value: "mar"}
     allowed_value: {label: "April" value: "apr"}
     allowed_value: {label: "May" value: "may"}
