@@ -948,6 +948,13 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  measure: rbe_outlet_payroll_amt {
+    label: "Payroll RB&E Outlet $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_outlet_payroll_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
 
   #-- Payroll Rev %
 
@@ -1025,6 +1032,13 @@ view: glm_property_f_ty {
     label: "Payroll /Rev Rentals & Other %"
     type: number
     sql: utl..udf_divide( ${misc_payroll_amt}, ${misc_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_outlet_payroll_rev_pct {
+    label: "Payroll /Rev RB&E Outlet %"
+    type: number
+    sql: utl..udf_divide( ${rbe_outlet_payroll_amt}, ${rbe_outlet_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -1483,6 +1497,13 @@ view: glm_property_f_ty {
     label: "COS RB&E Beverage $"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.beverage_rbe_cost_of_sales_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: rbe_outlet_cost_of_sales_amt {
+    label: "COS RB&E Outlet $"
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_outlet_cost_of_sales_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 

@@ -1450,6 +1450,14 @@ view: glm_property_f_toly {
     value_format_name: decimal_0
   }
 
+  measure: rbe_outlet_payroll_amt_toly_v {
+    label: "Payroll RB&E Outlet Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.rbe_outlet_payroll_amt} - ${glm_property_f_ly.rbe_outlet_payroll_amt} ;;
+    value_format_name: decimal_0
+  }
+
 #-- Payroll % var
 
   measure: payroll_amt_toly {
@@ -1601,6 +1609,14 @@ view: glm_property_f_toly {
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_payroll_amt}, ${glm_property_f_ly.nonoperating_util_payroll_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_outlet_payroll_amt_toly {
+    label: "Payroll RB&E Outlet Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_payroll_amt}, ${glm_property_f_ly.rbe_outlet_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2481,6 +2497,14 @@ view: glm_property_f_toly {
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.beverage_rbe_cost_of_sales_amt} - ${glm_property_f_ly.beverage_rbe_cost_of_sales_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_outlet_cost_of_sales_amt_toly_v {
+    label: "COS RB&E Outlet Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.rbe_outlet_cost_of_sales_amt} - ${glm_property_f_ly.rbe_outlet_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 

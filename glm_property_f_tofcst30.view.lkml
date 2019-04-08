@@ -1484,6 +1484,14 @@ view: glm_property_f_tofcst30 {
     value_format_name: decimal_0
   }
 
+  measure: rbe_outlet_payroll_amt_tofcst30 {
+    label: "Payroll RB&E Outlet Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_payroll_amt}, ${glm_property_f_fcst30.rbe_outlet_payroll_amt}) ;;
+    value_format_name: percent_1
+  }
+
 
   #-- Payroll % var
 
@@ -2505,6 +2513,14 @@ view: glm_property_f_tofcst30 {
     description: "Actual - Fcst30"
     type: number
     sql: ${glm_property_f_ty.beverage_rbe_cost_of_sales_amt} - ${glm_property_f_fcst30.beverage_rbe_cost_of_sales_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_outlet_cost_of_sales_amt_tofcst30_v {
+    label: "COS RB&E Outlet Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.rbe_outlet_cost_of_sales_amt} - ${glm_property_f_ly.rbe_outlet_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 

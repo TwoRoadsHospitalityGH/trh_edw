@@ -765,6 +765,13 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: rbe_outlet_payroll_amt {
+    type: number
+    sql: ${TABLE}.rbe_outlet_payroll_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   #-- Covers
 
   dimension: rbe_cover_cnt {

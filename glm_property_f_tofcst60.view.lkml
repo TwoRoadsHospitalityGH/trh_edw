@@ -1474,6 +1474,14 @@ view: glm_property_f_tofcst60 {
     value_format_name: decimal_0
   }
 
+  measure: rbe_outlet_payroll_amt_tofcst60_v {
+    label: "Payroll RB&E Outlet Act:Fcst60 - var"
+    description: "Actual - Fcst60"
+    type: number
+    sql: ${glm_property_f_ty.rbe_outlet_payroll_amt} - ${glm_property_f_fcst60.rbe_outlet_payroll_amt} ;;
+    value_format_name: decimal_0
+  }
+
 
   #-- Payroll % var
 
@@ -1626,6 +1634,14 @@ view: glm_property_f_tofcst60 {
     description: "(Actual - Fcst60) / Fcst60"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_payroll_amt}, ${glm_property_f_fcst60.nonoperating_util_payroll_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_outlet_payroll_amt_tofcst60 {
+    label: "Payroll RB&E Outlet Act:Fcst60 - var %"
+    description: "(Actual - Fcst60) / Fcst60"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_payroll_amt}, ${glm_property_f_fcst60.rbe_outlet_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2503,6 +2519,14 @@ view: glm_property_f_tofcst60 {
     description: "Actual - Fcst60"
     type: number
     sql: ${glm_property_f_ty.beverage_rbe_cost_of_sales_amt} - ${glm_property_f_fcst60.beverage_rbe_cost_of_sales_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_outlet_cost_of_sales_amt_tofcst60_v {
+    label: "COS RB&E Outlet Act:Fcst60 - var"
+    description: "Actual - Fcst60"
+    type: number
+    sql: ${glm_property_f_ty.rbe_outlet_cost_of_sales_amt} - ${glm_property_f_ly.rbe_outlet_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
