@@ -1,7 +1,7 @@
 connection: "edw"
 
 include: "*.view.lkml"                       # include all views in this project
-label: "Property Pace (uat)"
+label: "Revintel Property (uat)"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.fact.revintel_property_f ;;
