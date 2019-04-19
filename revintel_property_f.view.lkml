@@ -23,7 +23,7 @@ view: revintel_property_f {
   dimension: major_market_nm {
     sql: ${TABLE}.major_market_nm ;;
     view_label: "Reservation Detail"
-    label: "Major Market Segemnt"
+    label: "Major Market Segement"
     description: "Major Market Segment Name"
     type: string
   }
