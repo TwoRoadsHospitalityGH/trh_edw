@@ -603,7 +603,7 @@ view: property_dm {
   filter: management_company_name_bt {
     label: "Management Company"
     type: yesno
-    sql: iff( ${TABLE}.management_company_name = 'CoralTree' then 1 else 0 end ) = 1 ;;
+    sql: iff( ${TABLE}.management_company_name = 'CoralTree', 1, 0 ) = 1 ;;
     hidden: yes
   }
 
