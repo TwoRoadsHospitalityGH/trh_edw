@@ -618,8 +618,8 @@ view: property_pace_f {
     type: number
     value_format_name: usd_0
     view_label: "  TY"
-    label: "Rev Rms $ Reach Budg:STLY - pickup"
-    description: "((Act -Budg) + STLY Pickup)"
+    label: "Rev Rms $ Reach Bdgt:STLY - pickup"
+    description: "((Act -Bdgt) + STLY Pickup)"
   }
 
   measure:  roomrev_reach_fcst{
@@ -645,8 +645,8 @@ view: property_pace_f {
     type: number
     value_format_name: decimal_0
     view_label: "  TY"
-    label: "Rms Bkd Reach Budg:STLY - pickup"
-    description: "((Act -Budg) + STLY Pickup)"
+    label: "Rms Bkd Reach Bdgt:STLY - pickup"
+    description: "((Act -Bdgt) + STLY Pickup)"
   }
 
   measure:  roomsold_reach_fcst{
@@ -672,8 +672,8 @@ view: property_pace_f {
     type: number
     value_format_name: usd_0
     view_label: "  TY"
-    label: "ADR Reach Budg:STLY - pickup"
-    description: "((Act -Budg) + STLY Pickup)"
+    label: "ADR Reach Bdgt:STLY - pickup"
+    description: "((Act -Bdgt) + STLY Pickup)"
   }
 
   measure:  adr_reach_fcst{
