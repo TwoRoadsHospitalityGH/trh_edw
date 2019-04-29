@@ -23,7 +23,7 @@ view: revintel_property_f {
   dimension: major_market_nm {
     sql: ${TABLE}.major_market_nm ;;
     view_label: "Reservation Detail"
-    label: "Major Market Segemnt"
+    label: "Major Market Segment"
     description: "Major Market Segment Name"
     type: string
   }
@@ -31,7 +31,7 @@ view: revintel_property_f {
   dimension: minor_market_nm {
     sql: ${TABLE}.minor_market_nm ;;
     view_label: "Reservation Detail"
-    label: "Minor Market Segemnt"
+    label: "Minor Market Segment"
     description: "Minor Market Segment Name"
     type: string
   }

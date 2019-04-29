@@ -600,6 +600,14 @@ view: property_dm {
     hidden: yes
   }
 
+  filter: management_company_name_bt {
+    label: "Management Company"
+    type: yesno
+    sql: iff( ${TABLE}.management_company_name = 'CoralTree', 1, 0 ) = 1 ;;
+    hidden: yes
+  }
+
+
   # ----- Sets of fields for drilling ------
   set: property_ds {
     fields: [

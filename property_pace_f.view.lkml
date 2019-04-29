@@ -416,8 +416,8 @@ view: property_pace_f {
 
   measure:  roomrev_var_perc_budg{
     sql: utl..udf_percent_var(${room_rev},${budg_roomrev}) ;;
-    label: "Rev Rms $ Act:Budg - % var"
-    description: "(TY - Budg)/TY"
+    label: "Rev Rms $ Act:Bdgt - % var"
+    description: "(TY - Bdgt)/TY"
     view_label: "  TY"
     type: number
     value_format_name: percent_1
@@ -443,8 +443,8 @@ view: property_pace_f {
 
   measure:  roomsold_var_perc_budg{
     sql: utl..udf_percent_var(${roomsold},${budg_roomsold}) ;;
-    label: "Rms Bkd Act:Budg - % var"
-    description: "(TY - Budg)/TY"
+    label: "Rms Bkd Act:Bdgt - % var"
+    description: "(TY - Bdgt)/TY"
     view_label: "  TY"
     type: number
     value_format_name: percent_1
@@ -470,7 +470,7 @@ view: property_pace_f {
 
   measure:  adr_var_perc_budg{
     sql: utl..udf_percent_var(${room_adr},${budg_adr}) ;;
-    label: "ADR Act:Budg - % var"
+    label: "ADR Act:Bdgt - % var"
     description: "(TY - Bdgt)/TY"
     view_label: "  TY"
     type: number
@@ -618,8 +618,8 @@ view: property_pace_f {
     type: number
     value_format_name: usd_0
     view_label: "  TY"
-    label: "Rev Rms $ Reach Budg:STLY - pickup"
-    description: "((Act -Budg) + STLY Pickup)"
+    label: "Rev Rms $ Reach Bdgt:STLY - pickup"
+    description: "((Act -Bdgt) + STLY Pickup)"
   }
 
   measure:  roomrev_reach_fcst{
@@ -645,8 +645,8 @@ view: property_pace_f {
     type: number
     value_format_name: decimal_0
     view_label: "  TY"
-    label: "Rms Bkd Reach Budg:STLY - pickup"
-    description: "((Act -Budg) + STLY Pickup)"
+    label: "Rms Bkd Reach Bdgt:STLY - pickup"
+    description: "((Act -Bdgt) + STLY Pickup)"
   }
 
   measure:  roomsold_reach_fcst{
@@ -672,8 +672,8 @@ view: property_pace_f {
     type: number
     value_format_name: usd_0
     view_label: "  TY"
-    label: "ADR Reach Budg:STLY - pickup"
-    description: "((Act -Budg) + STLY Pickup)"
+    label: "ADR Reach Bdgt:STLY - pickup"
+    description: "((Act -Bdgt) + STLY Pickup)"
   }
 
   measure:  adr_reach_fcst{
