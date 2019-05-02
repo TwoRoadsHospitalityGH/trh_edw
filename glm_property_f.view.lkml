@@ -59,6 +59,12 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: fcst_bt {
+    type: number
+    sql: ${TABLE}.fcst_bt ;;
+    hidden: yes
+  }
+
   dimension: rev_amt {
     type: number
     sql: ${TABLE}.rev_amt ;;

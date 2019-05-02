@@ -53,6 +53,13 @@ explore: glm_property_f {
     relationship: one_to_one
   }
 
+  join: glm_property_f_fcst {
+    from: glm_property_f_fcst
+    view_label: "   Fcst & Actual"
+    type: cross
+    relationship: one_to_one
+  }
+
   join: glm_property_f_fcst30 {
     from: glm_property_f_fcst30
     view_label: "   Fcst 30"
