@@ -55,7 +55,7 @@ explore: glm_property_f {
 
   join: glm_property_f_fcst {
     from: glm_property_f_fcst
-    view_label: "   Fcst & Actual"
+    view_label: "   Fcst Future"
     type: cross
     relationship: one_to_one
   }
@@ -84,6 +84,13 @@ explore: glm_property_f {
   join: glm_property_f_tobdgt {
     from: glm_property_f_tobdgt
     view_label: "      TY"
+    type: cross
+    relationship: one_to_one
+  }
+
+  join: glm_property_f_lytofcst {
+    from: glm_property_f_lytofcst
+    view_label: "     LY"
     type: cross
     relationship: one_to_one
   }
