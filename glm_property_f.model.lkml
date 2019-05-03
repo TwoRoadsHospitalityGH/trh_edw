@@ -53,12 +53,12 @@ explore: glm_property_f {
     relationship: one_to_one
   }
 
-  join: glm_property_f_fcst {
-    from: glm_property_f_fcst
-    view_label: "   Fcst Future"
-    type: cross
-    relationship: one_to_one
-  }
+  #join: glm_property_f_fcst {
+  #  from: glm_property_f_fcst
+  #  view_label: "   Fcst Future"
+  #  type: cross
+  #  relationship: one_to_one
+  #}
 
   join: glm_property_f_fcst30 {
     from: glm_property_f_fcst30
@@ -88,12 +88,12 @@ explore: glm_property_f {
     relationship: one_to_one
   }
 
-  join: glm_property_f_lytofcst {
-    from: glm_property_f_lytofcst
-    view_label: "     LY"
-    type: cross
-    relationship: one_to_one
-  }
+  #join: glm_property_f_lytofcst {
+  #  from: glm_property_f_lytofcst
+  #  view_label: "     LY"
+  #  type: cross
+  #  relationship: one_to_one
+  #}
 
   join: glm_property_f_tofcst30 {
     from: glm_property_f_tofcst30

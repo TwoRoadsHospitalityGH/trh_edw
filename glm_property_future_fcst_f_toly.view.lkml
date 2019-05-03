@@ -1,4 +1,4 @@
-view: glm_property_f_lytofcst {
+view: glm_property_future_fcst_f_toly {
 
   derived_table: {
     sql: select 1 as key_no ;;
@@ -21,7 +21,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rev_amt} - ${glm_property_f_ly.rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rev_amt} - ${glm_property_future_fcst_f_ly.rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -29,7 +29,7 @@ view: glm_property_f_lytofcst {
   #  label: "Rev Abs Fcst:LY - var"
   #  description: "Abs(Fcst - LY)"
   #  type: number
-  #  sql: abs(${glm_property_f_ly.rev_amt} - ${glm_property_f_ly.rev_amt}) ;;
+  #  sql: abs(${glm_property_future_fcst_f_ly.rev_amt} - ${glm_property_future_fcst_f_ly.rev_amt}) ;;
   #  value_format_name: decimal_0
   #}
 
@@ -37,7 +37,7 @@ view: glm_property_f_lytofcst {
     label: "AGOP Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.agop_amt} - ${glm_property_f_ly.agop_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.agop_amt} - ${glm_property_future_fcst_f_ly.agop_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -45,7 +45,7 @@ view: glm_property_f_lytofcst {
   #  label: "AGOP Abs Fcst:LY - var"
   #  description: "Fcst - LY"
   #  type: number
-  #  sql: abs(${glm_property_f_ly.agop_amt} - ${glm_property_f_ly.agop_amt}) ;;
+  #  sql: abs(${glm_property_future_fcst_f_ly.agop_amt} - ${glm_property_future_fcst_f_ly.agop_amt}) ;;
   #  value_format_name: decimal_0
   #}
 
@@ -53,7 +53,7 @@ view: glm_property_f_lytofcst {
     label: "GOP Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.gop_amt} - ${glm_property_f_ly.gop_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.gop_amt} - ${glm_property_future_fcst_f_ly.gop_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -61,7 +61,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Rms Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.room_rev_amt} - ${glm_property_f_ly.room_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.room_rev_amt} - ${glm_property_future_fcst_f_ly.room_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -69,7 +69,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.other_rev_amt} - ${glm_property_f_ly.other_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.other_rev_amt} - ${glm_property_future_fcst_f_ly.other_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -77,7 +77,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_rev_amt} - ${glm_property_f_ly.rbe_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_rev_amt} - ${glm_property_future_fcst_f_ly.rbe_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -85,7 +85,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Banquet Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_banquet_rev_amt} - ${glm_property_f_ly.rbe_banquet_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_banquet_rev_amt} - ${glm_property_future_fcst_f_ly.rbe_banquet_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -93,7 +93,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Catering Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_catering_rev_amt} - ${glm_property_f_ly.rbe_catering_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_catering_rev_amt} - ${glm_property_future_fcst_f_ly.rbe_catering_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -101,7 +101,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Conference Services Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_conference_services_rev_amt} - ${glm_property_f_ly.rbe_conference_services_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_conference_services_rev_amt} - ${glm_property_future_fcst_f_ly.rbe_conference_services_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -109,7 +109,7 @@ view: glm_property_f_lytofcst {
   #  label: "Rev RB&E Banquet Catering Conference Services Fcst:LY - var"
   #  description: "Fcst - LY"
   #  type: number
-  #  sql: ${glm_property_f_fcst.rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_f_ly.rbe_banquet_catering_conference_services_rev_amt} ;;
+  #  sql: ${glm_property_future_fcst_f_fcstact.rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_future_fcst_f_ly.rbe_banquet_catering_conference_services_rev_amt} ;;
   #  value_format_name: decimal_0
   #}
 
@@ -117,7 +117,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Outlet Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_outlet_rev_amt} - ${glm_property_f_ly.rbe_outlet_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_outlet_rev_amt} - ${glm_property_future_fcst_f_ly.rbe_outlet_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -125,7 +125,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Room Service Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_other_rev_amt} - ${glm_property_f_ly.rbe_room_service_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_other_rev_amt} - ${glm_property_future_fcst_f_ly.rbe_room_service_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -133,7 +133,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_other_rev_amt} - ${glm_property_f_ly.rbe_other_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_other_rev_amt} - ${glm_property_future_fcst_f_ly.rbe_other_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -141,7 +141,7 @@ view: glm_property_f_lytofcst {
   #  label: "Rev RB&E Outlet Other Fcst:LY - var"
   #  description: "Fcst - LY"
   #  type: number
-  #  sql: ${glm_property_f_fcst.rbe_outlet_other_rev_amt} - ${glm_property_f_ly.rbe_outlet_other_rev_amt} ;;
+  #  sql: ${glm_property_future_fcst_f_fcstact.rbe_outlet_other_rev_amt} - ${glm_property_future_fcst_f_ly.rbe_outlet_other_rev_amt} ;;
   #  value_format_name: decimal_0
   #}
 
@@ -150,7 +150,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.food_rbe_rev_amt} - ${glm_property_f_ly.food_rbe_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.food_rbe_rev_amt} - ${glm_property_future_fcst_f_ly.food_rbe_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -158,7 +158,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Banquet Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.food_rbe_banquet_rev_amt} - ${glm_property_f_ly.food_rbe_banquet_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.food_rbe_banquet_rev_amt} - ${glm_property_future_fcst_f_ly.food_rbe_banquet_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -166,7 +166,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Catering Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.food_rbe_catering_rev_amt} - ${glm_property_f_ly.food_rbe_catering_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.food_rbe_catering_rev_amt} - ${glm_property_future_fcst_f_ly.food_rbe_catering_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -174,7 +174,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Conference Services Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.food_rbe_conference_services_rev_amt} - ${glm_property_f_ly.food_rbe_conference_services_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.food_rbe_conference_services_rev_amt} - ${glm_property_future_fcst_f_ly.food_rbe_conference_services_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -182,7 +182,7 @@ view: glm_property_f_lytofcst {
   #  label: "Rev Food RB&E Banquet Catering Conference Services Fcst:LY - var"
   #  description: "Fcst - LY"
   #  type: number
-  #  sql: ${glm_property_f_fcst.food_rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_f_ly.food_rbe_banquet_catering_conference_services_rev_amt} ;;
+  #  sql: ${glm_property_future_fcst_f_fcstact.food_rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_future_fcst_f_ly.food_rbe_banquet_catering_conference_services_rev_amt} ;;
   #  value_format_name: decimal_0
   #}
 
@@ -190,7 +190,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Outlet Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.food_rbe_outlet_rev_amt} - ${glm_property_f_ly.food_rbe_outlet_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.food_rbe_outlet_rev_amt} - ${glm_property_future_fcst_f_ly.food_rbe_outlet_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -198,7 +198,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Room Service Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.food_rbe_other_rev_amt} - ${glm_property_f_ly.food_rbe_room_service_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.food_rbe_other_rev_amt} - ${glm_property_future_fcst_f_ly.food_rbe_room_service_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -206,7 +206,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.food_rbe_other_rev_amt} - ${glm_property_f_ly.food_rbe_other_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.food_rbe_other_rev_amt} - ${glm_property_future_fcst_f_ly.food_rbe_other_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -215,7 +215,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.beverage_rbe_rev_amt} - ${glm_property_f_ly.beverage_rbe_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.beverage_rbe_rev_amt} - ${glm_property_future_fcst_f_ly.beverage_rbe_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -223,7 +223,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Banquet Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.beverage_rbe_banquet_rev_amt} - ${glm_property_f_ly.beverage_rbe_banquet_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.beverage_rbe_banquet_rev_amt} - ${glm_property_future_fcst_f_ly.beverage_rbe_banquet_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -231,7 +231,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Catering Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.beverage_rbe_catering_rev_amt} - ${glm_property_f_ly.beverage_rbe_catering_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.beverage_rbe_catering_rev_amt} - ${glm_property_future_fcst_f_ly.beverage_rbe_catering_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -239,7 +239,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Conference Services Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.beverage_rbe_conference_services_rev_amt} - ${glm_property_f_ly.beverage_rbe_conference_services_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.beverage_rbe_conference_services_rev_amt} - ${glm_property_future_fcst_f_ly.beverage_rbe_conference_services_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -247,7 +247,7 @@ view: glm_property_f_lytofcst {
   #  label: "Rev Beverage RB&E Banquet Catering Conference Services Fcst:LY - var"
   #  description: "Fcst - LY"
   #  type: number
-  #  sql: ${glm_property_f_fcst.beverage_rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_f_ly.beverage_rbe_banquet_catering_conference_services_rev_amt} ;;
+  #  sql: ${glm_property_future_fcst_f_fcstact.beverage_rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_future_fcst_f_ly.beverage_rbe_banquet_catering_conference_services_rev_amt} ;;
   #  value_format_name: decimal_0
   #}
 
@@ -255,7 +255,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Outlet Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.beverage_rbe_outlet_rev_amt} - ${glm_property_f_ly.beverage_rbe_outlet_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.beverage_rbe_outlet_rev_amt} - ${glm_property_future_fcst_f_ly.beverage_rbe_outlet_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -263,7 +263,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Room Service Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.beverage_rbe_other_rev_amt} - ${glm_property_f_ly.beverage_rbe_room_service_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.beverage_rbe_other_rev_amt} - ${glm_property_future_fcst_f_ly.beverage_rbe_room_service_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -271,7 +271,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.beverage_rbe_other_rev_amt} - ${glm_property_f_ly.beverage_rbe_other_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.beverage_rbe_other_rev_amt} - ${glm_property_future_fcst_f_ly.beverage_rbe_other_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -279,7 +279,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Spa Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.spa_rev_amt} - ${glm_property_f_ly.spa_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.spa_rev_amt} - ${glm_property_future_fcst_f_ly.spa_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -287,7 +287,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Golf Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.golf_rev_amt} - ${glm_property_f_ly.golf_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.golf_rev_amt} - ${glm_property_future_fcst_f_ly.golf_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -295,7 +295,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Fitness & Rec Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.fitness_recreation_rev_amt} - ${glm_property_f_ly.fitness_recreation_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.fitness_recreation_rev_amt} - ${glm_property_future_fcst_f_ly.fitness_recreation_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -303,7 +303,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Parking & Trans Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.parking_transportation_rev_amt} - ${glm_property_f_ly.parking_transportation_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.parking_transportation_rev_amt} - ${glm_property_future_fcst_f_ly.parking_transportation_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -311,7 +311,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Telecom Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.telecom_rev_amt} - ${glm_property_f_ly.telecom_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.telecom_rev_amt} - ${glm_property_future_fcst_f_ly.telecom_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -319,7 +319,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Retail Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.retail_rev_amt} - ${glm_property_f_ly.retail_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.retail_rev_amt} - ${glm_property_future_fcst_f_ly.retail_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -327,7 +327,7 @@ view: glm_property_f_lytofcst {
   #  label: "Rev Spa Fitness & Rec Fcst:LY - var"
   #  description: "Fcst - LY"
   #  type: number
-  #  sql: ${glm_property_f_fcst.spa_fitness_recreation_rev_amt} - ${glm_property_f_ly.spa_fitness_recreation_rev_amt} ;;
+  #  sql: ${glm_property_future_fcst_f_fcstact.spa_fitness_recreation_rev_amt} - ${glm_property_future_fcst_f_ly.spa_fitness_recreation_rev_amt} ;;
   #  value_format_name: decimal_0
   #}
 
@@ -335,7 +335,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Other Op. Dept. Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.other_operated_rev_amt} - ${glm_property_f_ly.other_operated_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.other_operated_rev_amt} - ${glm_property_future_fcst_f_ly.other_operated_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -343,7 +343,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Mgmt Srvcs Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.property_mgmt_rev_amt} - ${glm_property_f_ly.property_mgmt_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.property_mgmt_rev_amt} - ${glm_property_future_fcst_f_ly.property_mgmt_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -351,7 +351,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Rentals & Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.misc_rev_amt} - ${glm_property_f_ly.misc_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.misc_rev_amt} - ${glm_property_future_fcst_f_ly.misc_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -359,7 +359,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Nonoperating Realty Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_realty_rev_amt} - ${glm_property_f_ly.nonoperating_realty_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_realty_rev_amt} - ${glm_property_future_fcst_f_ly.nonoperating_realty_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -367,7 +367,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Nonoperating Airport Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_airport_rev_amt} - ${glm_property_f_ly.nonoperating_airport_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_airport_rev_amt} - ${glm_property_future_fcst_f_ly.nonoperating_airport_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -375,7 +375,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Nonoperating Utility Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_util_rev_amt} - ${glm_property_f_ly.nonoperating_util_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_util_rev_amt} - ${glm_property_future_fcst_f_ly.nonoperating_util_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -386,7 +386,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rev_amt}, ${glm_property_f_ly.rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rev_amt}, ${glm_property_future_fcst_f_ly.rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -394,7 +394,7 @@ view: glm_property_f_lytofcst {
     label: "AGOP Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.agop_amt}, ${glm_property_f_ly.agop_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.agop_amt}, ${glm_property_future_fcst_f_ly.agop_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -402,7 +402,7 @@ view: glm_property_f_lytofcst {
     label: "GOP Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.gop_amt}, ${glm_property_f_ly.gop_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.gop_amt}, ${glm_property_future_fcst_f_ly.gop_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -410,7 +410,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Rms Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.room_rev_amt}, ${glm_property_f_ly.room_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.room_rev_amt}, ${glm_property_future_fcst_f_ly.room_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -418,7 +418,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.other_rev_amt}, ${glm_property_f_ly.other_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.other_rev_amt}, ${glm_property_future_fcst_f_ly.other_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -426,7 +426,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_rev_amt}, ${glm_property_f_ly.rbe_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_rev_amt}, ${glm_property_future_fcst_f_ly.rbe_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -434,7 +434,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Banquet Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_banquet_rev_amt}, ${glm_property_f_ly.rbe_banquet_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_banquet_rev_amt}, ${glm_property_future_fcst_f_ly.rbe_banquet_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -442,7 +442,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Catering Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_catering_rev_amt}, ${glm_property_f_ly.rbe_catering_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_catering_rev_amt}, ${glm_property_future_fcst_f_ly.rbe_catering_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -450,7 +450,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Conference Services Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_conference_services_rev_amt}, ${glm_property_f_ly.rbe_conference_services_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_conference_services_rev_amt}, ${glm_property_future_fcst_f_ly.rbe_conference_services_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -458,7 +458,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Outlet Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_outlet_rev_amt}, ${glm_property_f_ly.rbe_outlet_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_outlet_rev_amt}, ${glm_property_future_fcst_f_ly.rbe_outlet_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -466,7 +466,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Room Service Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_other_rev_amt}, ${glm_property_f_ly.rbe_room_service_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_other_rev_amt}, ${glm_property_future_fcst_f_ly.rbe_room_service_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -474,7 +474,7 @@ view: glm_property_f_lytofcst {
     label: "Rev RB&E Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_other_rev_amt}, ${glm_property_f_ly.rbe_other_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_other_rev_amt}, ${glm_property_future_fcst_f_ly.rbe_other_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -482,7 +482,7 @@ view: glm_property_f_lytofcst {
   #  label: "Rev RB&E Outlet Other Fcst:LY - var %"
   #  description: "(Fcst - LY) / LY"
   #  type: number
-  #  sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_outlet_other_rev_amt}, ${glm_property_f_ly.rbe_outlet_other_rev_amt}) ;;
+  #  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_outlet_other_rev_amt}, ${glm_property_future_fcst_f_ly.rbe_outlet_other_rev_amt}) ;;
   #  value_format_name: percent_1
   #}
 
@@ -491,7 +491,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.food_rbe_rev_amt}, ${glm_property_f_ly.food_rbe_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.food_rbe_rev_amt}, ${glm_property_future_fcst_f_ly.food_rbe_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -499,7 +499,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Banquet Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.food_rbe_banquet_rev_amt}, ${glm_property_f_ly.food_rbe_banquet_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.food_rbe_banquet_rev_amt}, ${glm_property_future_fcst_f_ly.food_rbe_banquet_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -507,7 +507,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Catering Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.food_rbe_catering_rev_amt}, ${glm_property_f_ly.food_rbe_catering_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.food_rbe_catering_rev_amt}, ${glm_property_future_fcst_f_ly.food_rbe_catering_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -515,7 +515,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Conference Services Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.food_rbe_conference_services_rev_amt}, ${glm_property_f_ly.food_rbe_conference_services_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.food_rbe_conference_services_rev_amt}, ${glm_property_future_fcst_f_ly.food_rbe_conference_services_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -523,7 +523,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Outlet Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.food_rbe_outlet_rev_amt}, ${glm_property_f_ly.food_rbe_outlet_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.food_rbe_outlet_rev_amt}, ${glm_property_future_fcst_f_ly.food_rbe_outlet_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -531,7 +531,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Room Service Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.food_rbe_other_rev_amt}, ${glm_property_f_ly.food_rbe_room_service_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.food_rbe_other_rev_amt}, ${glm_property_future_fcst_f_ly.food_rbe_room_service_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -539,7 +539,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Food RB&E Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.food_rbe_other_rev_amt}, ${glm_property_f_ly.food_rbe_other_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.food_rbe_other_rev_amt}, ${glm_property_future_fcst_f_ly.food_rbe_other_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -548,7 +548,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.beverage_rbe_rev_amt}, ${glm_property_f_ly.beverage_rbe_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.beverage_rbe_rev_amt}, ${glm_property_future_fcst_f_ly.beverage_rbe_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -556,7 +556,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Banquet Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.beverage_rbe_banquet_rev_amt}, ${glm_property_f_ly.beverage_rbe_banquet_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.beverage_rbe_banquet_rev_amt}, ${glm_property_future_fcst_f_ly.beverage_rbe_banquet_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -564,7 +564,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Catering Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.beverage_rbe_catering_rev_amt}, ${glm_property_f_ly.beverage_rbe_catering_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.beverage_rbe_catering_rev_amt}, ${glm_property_future_fcst_f_ly.beverage_rbe_catering_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -572,7 +572,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Conference Services Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.beverage_rbe_conference_services_rev_amt}, ${glm_property_f_ly.beverage_rbe_conference_services_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.beverage_rbe_conference_services_rev_amt}, ${glm_property_future_fcst_f_ly.beverage_rbe_conference_services_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -580,7 +580,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Outlet Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.beverage_rbe_outlet_rev_amt}, ${glm_property_f_ly.beverage_rbe_outlet_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.beverage_rbe_outlet_rev_amt}, ${glm_property_future_fcst_f_ly.beverage_rbe_outlet_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -588,7 +588,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Room Service Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.beverage_rbe_other_rev_amt}, ${glm_property_f_ly.beverage_rbe_room_service_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.beverage_rbe_other_rev_amt}, ${glm_property_future_fcst_f_ly.beverage_rbe_room_service_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -596,7 +596,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Beverage RB&E Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.beverage_rbe_other_rev_amt}, ${glm_property_f_ly.beverage_rbe_other_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.beverage_rbe_other_rev_amt}, ${glm_property_future_fcst_f_ly.beverage_rbe_other_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -604,7 +604,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Spa Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.spa_rev_amt}, ${glm_property_f_ly.spa_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.spa_rev_amt}, ${glm_property_future_fcst_f_ly.spa_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -612,7 +612,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Golf Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.golf_rev_amt}, ${glm_property_f_ly.golf_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.golf_rev_amt}, ${glm_property_future_fcst_f_ly.golf_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -620,7 +620,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Fitness & Rec Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.fitness_recreation_rev_amt}, ${glm_property_f_ly.fitness_recreation_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.fitness_recreation_rev_amt}, ${glm_property_future_fcst_f_ly.fitness_recreation_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -628,7 +628,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Parking & Trans Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.parking_transportation_rev_amt}, ${glm_property_f_ly.parking_transportation_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.parking_transportation_rev_amt}, ${glm_property_future_fcst_f_ly.parking_transportation_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -636,7 +636,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Telecom Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.telecom_rev_amt}, ${glm_property_f_ly.telecom_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.telecom_rev_amt}, ${glm_property_future_fcst_f_ly.telecom_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -644,7 +644,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Retail Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.retail_rev_amt}, ${glm_property_f_ly.retail_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.retail_rev_amt}, ${glm_property_future_fcst_f_ly.retail_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -652,7 +652,7 @@ view: glm_property_f_lytofcst {
   #  label: "Rev Spa Fitness & Rec Fcst:LY - var %"
   #  description: "(Fcst - LY) / LY"
   #  type: number
-  #  sql: utl..udf_percent_var( ${glm_property_f_fcst.spa_fitness_recreation_rev_amt}, ${glm_property_f_ly.spa_fitness_recreation_rev_amt}) ;;
+  #  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.spa_fitness_recreation_rev_amt}, ${glm_property_future_fcst_f_ly.spa_fitness_recreation_rev_amt}) ;;
   #  value_format_name: percent_1
   #}
 
@@ -660,7 +660,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Other Op. Dept. Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.other_operated_rev_amt}, ${glm_property_f_ly.other_operated_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.other_operated_rev_amt}, ${glm_property_future_fcst_f_ly.other_operated_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -668,7 +668,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Mgmt Srvcs Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.property_mgmt_rev_amt}, ${glm_property_f_ly.property_mgmt_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.property_mgmt_rev_amt}, ${glm_property_future_fcst_f_ly.property_mgmt_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -676,7 +676,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Rentals & Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.misc_rev_amt}, ${glm_property_f_ly.misc_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.misc_rev_amt}, ${glm_property_future_fcst_f_ly.misc_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -684,7 +684,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Nonoperating Realty Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_realty_rev_amt}, ${glm_property_f_ly.nonoperating_realty_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_realty_rev_amt}, ${glm_property_future_fcst_f_ly.nonoperating_realty_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -692,7 +692,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Nonoperating Airport Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_airport_rev_amt}, ${glm_property_f_ly.nonoperating_airport_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_airport_rev_amt}, ${glm_property_future_fcst_f_ly.nonoperating_airport_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -700,7 +700,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Nonoperating Utility Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_util_rev_amt}, ${glm_property_f_ly.nonoperating_util_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_util_rev_amt}, ${glm_property_future_fcst_f_ly.nonoperating_util_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -710,7 +710,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.exp_amt} - ${glm_property_f_ly.exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.exp_amt} - ${glm_property_future_fcst_f_ly.exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -718,7 +718,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Rms Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.room_exp_amt} - ${glm_property_f_ly.room_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.room_exp_amt} - ${glm_property_future_fcst_f_ly.room_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -726,7 +726,7 @@ view: glm_property_f_lytofcst {
     label: "Exp RB&E Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_exp_amt} - ${glm_property_f_ly.rbe_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_exp_amt} - ${glm_property_future_fcst_f_ly.rbe_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -734,7 +734,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Spa Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.spa_exp_amt} - ${glm_property_f_ly.spa_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.spa_exp_amt} - ${glm_property_future_fcst_f_ly.spa_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -742,7 +742,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Golf Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.golf_exp_amt} - ${glm_property_f_ly.golf_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.golf_exp_amt} - ${glm_property_future_fcst_f_ly.golf_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -750,7 +750,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Fitness & Rec Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.fitness_recreation_exp_amt} - ${glm_property_f_ly.fitness_recreation_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.fitness_recreation_exp_amt} - ${glm_property_future_fcst_f_ly.fitness_recreation_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -758,7 +758,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Parking & Trans Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.parking_transportation_exp_amt} - ${glm_property_f_ly.parking_transportation_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.parking_transportation_exp_amt} - ${glm_property_future_fcst_f_ly.parking_transportation_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -766,7 +766,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Telecom Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.telecom_exp_amt} - ${glm_property_f_ly.telecom_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.telecom_exp_amt} - ${glm_property_future_fcst_f_ly.telecom_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -774,7 +774,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Retail Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.retail_exp_amt} - ${glm_property_f_ly.retail_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.retail_exp_amt} - ${glm_property_future_fcst_f_ly.retail_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -782,7 +782,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Op. Dept. Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.other_operated_exp_amt} - ${glm_property_f_ly.other_operated_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.other_operated_exp_amt} - ${glm_property_future_fcst_f_ly.other_operated_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -790,7 +790,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Mgmt Srvcs Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.property_mgmt_exp_amt} - ${glm_property_f_ly.property_mgmt_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.property_mgmt_exp_amt} - ${glm_property_future_fcst_f_ly.property_mgmt_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -798,7 +798,7 @@ view: glm_property_f_lytofcst {
     label: "Exp A&G Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.administrative_general_exp_amt} - ${glm_property_f_ly.administrative_general_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.administrative_general_exp_amt} - ${glm_property_future_fcst_f_ly.administrative_general_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -806,7 +806,7 @@ view: glm_property_f_lytofcst {
     label: "Exp IT Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.information_technology_exp_amt} - ${glm_property_f_ly.information_technology_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.information_technology_exp_amt} - ${glm_property_future_fcst_f_ly.information_technology_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -814,7 +814,7 @@ view: glm_property_f_lytofcst {
     label: "Exp S&M Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.sales_marketing_exp_amt} - ${glm_property_f_ly.sales_marketing_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.sales_marketing_exp_amt} - ${glm_property_future_fcst_f_ly.sales_marketing_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -822,7 +822,7 @@ view: glm_property_f_lytofcst {
     label: "Exp R&M Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.property_operations_maintenance_exp_amt} - ${glm_property_f_ly.property_operations_maintenance_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.property_operations_maintenance_exp_amt} - ${glm_property_future_fcst_f_ly.property_operations_maintenance_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -830,7 +830,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Rentals & Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.misc_exp_amt} - ${glm_property_f_ly.misc_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.misc_exp_amt} - ${glm_property_future_fcst_f_ly.misc_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -838,7 +838,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Nonoperating Realty Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_realty_exp_amt} - ${glm_property_f_ly.nonoperating_realty_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_realty_exp_amt} - ${glm_property_future_fcst_f_ly.nonoperating_realty_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -846,7 +846,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Nonoperating Airport Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_airport_exp_amt} - ${glm_property_f_ly.nonoperating_airport_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_airport_exp_amt} - ${glm_property_future_fcst_f_ly.nonoperating_airport_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -854,7 +854,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Nonoperating Utility Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_util_exp_amt} - ${glm_property_f_ly.nonoperating_util_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_util_exp_amt} - ${glm_property_future_fcst_f_ly.nonoperating_util_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -865,7 +865,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.exp_amt}, ${glm_property_f_ly.exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.exp_amt}, ${glm_property_future_fcst_f_ly.exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -873,7 +873,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Rms Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.room_exp_amt}, ${glm_property_f_ly.room_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.room_exp_amt}, ${glm_property_future_fcst_f_ly.room_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -881,7 +881,7 @@ view: glm_property_f_lytofcst {
     label: "Exp RB&E Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_exp_amt}, ${glm_property_f_ly.rbe_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_exp_amt}, ${glm_property_future_fcst_f_ly.rbe_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -889,7 +889,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Spa Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.spa_exp_amt}, ${glm_property_f_ly.spa_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.spa_exp_amt}, ${glm_property_future_fcst_f_ly.spa_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -897,7 +897,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Golf Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.golf_exp_amt}, ${glm_property_f_ly.golf_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.golf_exp_amt}, ${glm_property_future_fcst_f_ly.golf_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -905,7 +905,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Fitness & Rec Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.fitness_recreation_exp_amt}, ${glm_property_f_ly.fitness_recreation_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.fitness_recreation_exp_amt}, ${glm_property_future_fcst_f_ly.fitness_recreation_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -913,7 +913,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Parking & Trans Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.parking_transportation_exp_amt}, ${glm_property_f_ly.parking_transportation_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.parking_transportation_exp_amt}, ${glm_property_future_fcst_f_ly.parking_transportation_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -921,7 +921,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Telecom Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.telecom_exp_amt}, ${glm_property_f_ly.telecom_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.telecom_exp_amt}, ${glm_property_future_fcst_f_ly.telecom_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -929,7 +929,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Retail Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.retail_exp_amt}, ${glm_property_f_ly.retail_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.retail_exp_amt}, ${glm_property_future_fcst_f_ly.retail_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -937,7 +937,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Op. Dept. Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.other_operated_exp_amt}, ${glm_property_f_ly.other_operated_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.other_operated_exp_amt}, ${glm_property_future_fcst_f_ly.other_operated_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -945,7 +945,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Mgmt Srvcs Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.property_mgmt_exp_amt}, ${glm_property_f_ly.property_mgmt_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.property_mgmt_exp_amt}, ${glm_property_future_fcst_f_ly.property_mgmt_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -953,7 +953,7 @@ view: glm_property_f_lytofcst {
     label: "Exp A&G Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.administrative_general_exp_amt}, ${glm_property_f_ly.administrative_general_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.administrative_general_exp_amt}, ${glm_property_future_fcst_f_ly.administrative_general_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -961,7 +961,7 @@ view: glm_property_f_lytofcst {
     label: "Exp IT Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.information_technology_exp_amt}, ${glm_property_f_ly.information_technology_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.information_technology_exp_amt}, ${glm_property_future_fcst_f_ly.information_technology_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -969,7 +969,7 @@ view: glm_property_f_lytofcst {
     label: "Exp S&M Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.sales_marketing_exp_amt}, ${glm_property_f_ly.sales_marketing_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.sales_marketing_exp_amt}, ${glm_property_future_fcst_f_ly.sales_marketing_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -977,7 +977,7 @@ view: glm_property_f_lytofcst {
     label: "Exp R&M Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.property_operations_maintenance_exp_amt}, ${glm_property_f_ly.property_operations_maintenance_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.property_operations_maintenance_exp_amt}, ${glm_property_future_fcst_f_ly.property_operations_maintenance_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -985,7 +985,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Rentals & Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.misc_exp_amt}, ${glm_property_f_ly.misc_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.misc_exp_amt}, ${glm_property_future_fcst_f_ly.misc_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -993,7 +993,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Nonoperating Realty Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_realty_exp_amt}, ${glm_property_f_ly.nonoperating_realty_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_realty_exp_amt}, ${glm_property_future_fcst_f_ly.nonoperating_realty_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1001,7 +1001,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Nonoperating Airport Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_airport_exp_amt}, ${glm_property_f_ly.nonoperating_airport_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_airport_exp_amt}, ${glm_property_future_fcst_f_ly.nonoperating_airport_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1009,7 +1009,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Nonoperating Utility Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_util_exp_amt}, ${glm_property_f_ly.nonoperating_util_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_util_exp_amt}, ${glm_property_future_fcst_f_ly.nonoperating_util_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1019,7 +1019,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.other_exp_amt} - ${glm_property_f_ly.other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.other_exp_amt} - ${glm_property_future_fcst_f_ly.other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1027,7 +1027,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Rms Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.room_other_exp_amt} - ${glm_property_f_ly.room_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.room_other_exp_amt} - ${glm_property_future_fcst_f_ly.room_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1035,7 +1035,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other RB&E Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_other_exp_amt} - ${glm_property_f_ly.rbe_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_other_exp_amt} - ${glm_property_future_fcst_f_ly.rbe_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1043,7 +1043,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Spa Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.spa_other_exp_amt} - ${glm_property_f_ly.spa_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.spa_other_exp_amt} - ${glm_property_future_fcst_f_ly.spa_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1051,7 +1051,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Golf Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.golf_other_exp_amt} - ${glm_property_f_ly.golf_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.golf_other_exp_amt} - ${glm_property_future_fcst_f_ly.golf_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1059,7 +1059,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Fitness & Rec Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.fitness_recreation_other_exp_amt} - ${glm_property_f_ly.fitness_recreation_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.fitness_recreation_other_exp_amt} - ${glm_property_future_fcst_f_ly.fitness_recreation_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1067,7 +1067,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Parking & Trans Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.parking_transportation_other_exp_amt} - ${glm_property_f_ly.parking_transportation_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.parking_transportation_other_exp_amt} - ${glm_property_future_fcst_f_ly.parking_transportation_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1075,7 +1075,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Telecom Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.telecom_other_exp_amt} - ${glm_property_f_ly.telecom_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.telecom_other_exp_amt} - ${glm_property_future_fcst_f_ly.telecom_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1083,7 +1083,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Retail Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.retail_other_exp_amt} - ${glm_property_f_ly.retail_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.retail_other_exp_amt} - ${glm_property_future_fcst_f_ly.retail_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1091,7 +1091,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Other Op. Dept. Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.other_operated_other_exp_amt} - ${glm_property_f_ly.other_operated_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.other_operated_other_exp_amt} - ${glm_property_future_fcst_f_ly.other_operated_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1099,7 +1099,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Mgmt Srvcs Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.property_mgmt_other_exp_amt} - ${glm_property_f_ly.property_mgmt_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.property_mgmt_other_exp_amt} - ${glm_property_future_fcst_f_ly.property_mgmt_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1107,7 +1107,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other A&G Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.administrative_general_other_exp_amt} - ${glm_property_f_ly.administrative_general_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.administrative_general_other_exp_amt} - ${glm_property_future_fcst_f_ly.administrative_general_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1115,7 +1115,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other IT Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.information_technology_other_exp_amt} - ${glm_property_f_ly.information_technology_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.information_technology_other_exp_amt} - ${glm_property_future_fcst_f_ly.information_technology_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1123,7 +1123,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other S&M Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.sales_marketing_other_exp_amt} - ${glm_property_f_ly.sales_marketing_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.sales_marketing_other_exp_amt} - ${glm_property_future_fcst_f_ly.sales_marketing_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1131,7 +1131,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other R&M Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.property_operations_maintenance_other_exp_amt} - ${glm_property_f_ly.property_operations_maintenance_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.property_operations_maintenance_other_exp_amt} - ${glm_property_future_fcst_f_ly.property_operations_maintenance_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1139,7 +1139,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Rentals & Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.misc_other_exp_amt} - ${glm_property_f_ly.misc_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.misc_other_exp_amt} - ${glm_property_future_fcst_f_ly.misc_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1147,7 +1147,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Nonoperating Realty Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_realty_other_exp_amt} - ${glm_property_f_ly.nonoperating_realty_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_realty_other_exp_amt} - ${glm_property_future_fcst_f_ly.nonoperating_realty_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1155,7 +1155,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Nonoperating Airport Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_airport_other_exp_amt} - ${glm_property_f_ly.nonoperating_airport_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_airport_other_exp_amt} - ${glm_property_future_fcst_f_ly.nonoperating_airport_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1163,7 +1163,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Nonoperating Utility Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_util_other_exp_amt} - ${glm_property_f_ly.nonoperating_util_other_exp_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_util_other_exp_amt} - ${glm_property_future_fcst_f_ly.nonoperating_util_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1173,7 +1173,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.other_exp_amt}, ${glm_property_f_ly.other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.other_exp_amt}, ${glm_property_future_fcst_f_ly.other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1181,7 +1181,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Rms Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.room_other_exp_amt}, ${glm_property_f_ly.room_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.room_other_exp_amt}, ${glm_property_future_fcst_f_ly.room_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1189,7 +1189,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other RB&E Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_other_exp_amt}, ${glm_property_f_ly.rbe_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_other_exp_amt}, ${glm_property_future_fcst_f_ly.rbe_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1197,7 +1197,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Spa Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.spa_other_exp_amt}, ${glm_property_f_ly.spa_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.spa_other_exp_amt}, ${glm_property_future_fcst_f_ly.spa_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1205,7 +1205,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Golf Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.golf_other_exp_amt}, ${glm_property_f_ly.golf_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.golf_other_exp_amt}, ${glm_property_future_fcst_f_ly.golf_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1213,7 +1213,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Fitness & Rec Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.fitness_recreation_other_exp_amt}, ${glm_property_f_ly.fitness_recreation_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.fitness_recreation_other_exp_amt}, ${glm_property_future_fcst_f_ly.fitness_recreation_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1221,7 +1221,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Parking & Trans Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.parking_transportation_other_exp_amt}, ${glm_property_f_ly.parking_transportation_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.parking_transportation_other_exp_amt}, ${glm_property_future_fcst_f_ly.parking_transportation_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1229,7 +1229,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Telecom Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.telecom_other_exp_amt}, ${glm_property_f_ly.telecom_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.telecom_other_exp_amt}, ${glm_property_future_fcst_f_ly.telecom_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1237,7 +1237,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Retail Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.retail_other_exp_amt}, ${glm_property_f_ly.retail_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.retail_other_exp_amt}, ${glm_property_future_fcst_f_ly.retail_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1245,7 +1245,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Other Op. Dept. Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.other_operated_other_exp_amt}, ${glm_property_f_ly.other_operated_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.other_operated_other_exp_amt}, ${glm_property_future_fcst_f_ly.other_operated_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1253,7 +1253,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Mgmt Srvcs Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.property_mgmt_other_exp_amt}, ${glm_property_f_ly.property_mgmt_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.property_mgmt_other_exp_amt}, ${glm_property_future_fcst_f_ly.property_mgmt_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1261,7 +1261,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other A&G Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.administrative_general_other_exp_amt}, ${glm_property_f_ly.administrative_general_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.administrative_general_other_exp_amt}, ${glm_property_future_fcst_f_ly.administrative_general_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1269,7 +1269,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other IT Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.information_technology_other_exp_amt}, ${glm_property_f_ly.information_technology_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.information_technology_other_exp_amt}, ${glm_property_future_fcst_f_ly.information_technology_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1277,7 +1277,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other S&M Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.sales_marketing_other_exp_amt}, ${glm_property_f_ly.sales_marketing_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.sales_marketing_other_exp_amt}, ${glm_property_future_fcst_f_ly.sales_marketing_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1285,7 +1285,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other R&M Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.property_operations_maintenance_other_exp_amt}, ${glm_property_f_ly.property_operations_maintenance_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.property_operations_maintenance_other_exp_amt}, ${glm_property_future_fcst_f_ly.property_operations_maintenance_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1293,7 +1293,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Rentals & Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.misc_other_exp_amt}, ${glm_property_f_ly.misc_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.misc_other_exp_amt}, ${glm_property_future_fcst_f_ly.misc_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1301,7 +1301,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Nonoperating Realty Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_realty_other_exp_amt}, ${glm_property_f_ly.nonoperating_realty_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_realty_other_exp_amt}, ${glm_property_future_fcst_f_ly.nonoperating_realty_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1309,7 +1309,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Nonoperating Airport Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_airport_other_exp_amt}, ${glm_property_f_ly.nonoperating_airport_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_airport_other_exp_amt}, ${glm_property_future_fcst_f_ly.nonoperating_airport_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1317,7 +1317,7 @@ view: glm_property_f_lytofcst {
     label: "Exp Other Nonoperating Utility Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_util_other_exp_amt}, ${glm_property_f_ly.nonoperating_util_other_exp_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_util_other_exp_amt}, ${glm_property_future_fcst_f_ly.nonoperating_util_other_exp_amt}) ;;
     value_format_name: percent_1
   }
   #-- Payroll
@@ -1326,7 +1326,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.payroll_amt} - ${glm_property_f_ly.payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.payroll_amt} - ${glm_property_future_fcst_f_ly.payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1334,7 +1334,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Rms Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.room_payroll_amt} - ${glm_property_f_ly.room_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.room_payroll_amt} - ${glm_property_future_fcst_f_ly.room_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1342,7 +1342,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll RB&E Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_payroll_amt} - ${glm_property_f_ly.rbe_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_payroll_amt} - ${glm_property_future_fcst_f_ly.rbe_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1350,7 +1350,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Spa Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.spa_payroll_amt} - ${glm_property_f_ly.spa_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.spa_payroll_amt} - ${glm_property_future_fcst_f_ly.spa_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1358,7 +1358,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Golf Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.golf_payroll_amt} - ${glm_property_f_ly.golf_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.golf_payroll_amt} - ${glm_property_future_fcst_f_ly.golf_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1366,7 +1366,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Fitness & Rec Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.fitness_recreation_payroll_amt} - ${glm_property_f_ly.fitness_recreation_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.fitness_recreation_payroll_amt} - ${glm_property_future_fcst_f_ly.fitness_recreation_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1374,7 +1374,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Parking & Trans Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.parking_transportation_payroll_amt} - ${glm_property_f_ly.parking_transportation_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.parking_transportation_payroll_amt} - ${glm_property_future_fcst_f_ly.parking_transportation_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1382,7 +1382,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Telecom Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.telecom_payroll_amt} - ${glm_property_f_ly.telecom_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.telecom_payroll_amt} - ${glm_property_future_fcst_f_ly.telecom_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1390,7 +1390,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Retail Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.retail_payroll_amt} - ${glm_property_f_ly.retail_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.retail_payroll_amt} - ${glm_property_future_fcst_f_ly.retail_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1398,7 +1398,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Other Op. Dept. Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.other_operated_payroll_amt} - ${glm_property_f_ly.other_operated_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.other_operated_payroll_amt} - ${glm_property_future_fcst_f_ly.other_operated_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1406,7 +1406,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Mgmt Srvcs Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.property_mgmt_payroll_amt} - ${glm_property_f_ly.property_mgmt_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.property_mgmt_payroll_amt} - ${glm_property_future_fcst_f_ly.property_mgmt_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1414,7 +1414,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll A&G Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.administrative_general_payroll_amt} - ${glm_property_f_ly.administrative_general_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.administrative_general_payroll_amt} - ${glm_property_future_fcst_f_ly.administrative_general_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1422,7 +1422,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll IT Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.information_technology_payroll_amt} - ${glm_property_f_ly.information_technology_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.information_technology_payroll_amt} - ${glm_property_future_fcst_f_ly.information_technology_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1430,7 +1430,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll S&M Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.sales_marketing_payroll_amt} - ${glm_property_f_ly.sales_marketing_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.sales_marketing_payroll_amt} - ${glm_property_future_fcst_f_ly.sales_marketing_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1438,7 +1438,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll R&M Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.property_operations_maintenance_payroll_amt} - ${glm_property_f_ly.property_operations_maintenance_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.property_operations_maintenance_payroll_amt} - ${glm_property_future_fcst_f_ly.property_operations_maintenance_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1446,7 +1446,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Rentals & Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.misc_payroll_amt} - ${glm_property_f_ly.misc_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.misc_payroll_amt} - ${glm_property_future_fcst_f_ly.misc_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1454,7 +1454,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Nonoperating Realty Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_realty_payroll_amt} - ${glm_property_f_ly.nonoperating_realty_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_realty_payroll_amt} - ${glm_property_future_fcst_f_ly.nonoperating_realty_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1462,7 +1462,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Nonoperating Airport Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_airport_payroll_amt} - ${glm_property_f_ly.nonoperating_airport_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_airport_payroll_amt} - ${glm_property_future_fcst_f_ly.nonoperating_airport_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1470,7 +1470,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Nonoperating Utility Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_util_payroll_amt} - ${glm_property_f_ly.nonoperating_util_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_util_payroll_amt} - ${glm_property_future_fcst_f_ly.nonoperating_util_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1478,7 +1478,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll RB&E Outlet Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_outlet_payroll_amt} - ${glm_property_f_ly.rbe_outlet_payroll_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_outlet_payroll_amt} - ${glm_property_future_fcst_f_ly.rbe_outlet_payroll_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1489,7 +1489,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.payroll_amt}, ${glm_property_f_ly.payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.payroll_amt}, ${glm_property_future_fcst_f_ly.payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1497,7 +1497,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Rms Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.room_payroll_amt}, ${glm_property_f_ly.room_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.room_payroll_amt}, ${glm_property_future_fcst_f_ly.room_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1505,7 +1505,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll RB&E Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_payroll_amt}, ${glm_property_f_ly.rbe_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_payroll_amt}, ${glm_property_future_fcst_f_ly.rbe_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1513,7 +1513,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Spa Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.spa_payroll_amt}, ${glm_property_f_ly.spa_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.spa_payroll_amt}, ${glm_property_future_fcst_f_ly.spa_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1521,7 +1521,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Golf Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.golf_payroll_amt}, ${glm_property_f_ly.golf_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.golf_payroll_amt}, ${glm_property_future_fcst_f_ly.golf_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1529,7 +1529,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Fitness & Rec Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.fitness_recreation_payroll_amt}, ${glm_property_f_ly.fitness_recreation_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.fitness_recreation_payroll_amt}, ${glm_property_future_fcst_f_ly.fitness_recreation_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1537,7 +1537,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Parking & Trans Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.parking_transportation_payroll_amt}, ${glm_property_f_ly.parking_transportation_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.parking_transportation_payroll_amt}, ${glm_property_future_fcst_f_ly.parking_transportation_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1545,7 +1545,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Telecom Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.telecom_payroll_amt}, ${glm_property_f_ly.telecom_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.telecom_payroll_amt}, ${glm_property_future_fcst_f_ly.telecom_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1553,7 +1553,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Retail Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.retail_payroll_amt}, ${glm_property_f_ly.retail_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.retail_payroll_amt}, ${glm_property_future_fcst_f_ly.retail_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1561,7 +1561,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Other Op. Dept. Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.other_operated_payroll_amt}, ${glm_property_f_ly.other_operated_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.other_operated_payroll_amt}, ${glm_property_future_fcst_f_ly.other_operated_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1569,7 +1569,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Mgmt Srvcs Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.property_mgmt_payroll_amt}, ${glm_property_f_ly.property_mgmt_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.property_mgmt_payroll_amt}, ${glm_property_future_fcst_f_ly.property_mgmt_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1577,7 +1577,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll A&G Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.administrative_general_payroll_amt}, ${glm_property_f_ly.administrative_general_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.administrative_general_payroll_amt}, ${glm_property_future_fcst_f_ly.administrative_general_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1585,7 +1585,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll IT Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.information_technology_payroll_amt}, ${glm_property_f_ly.information_technology_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.information_technology_payroll_amt}, ${glm_property_future_fcst_f_ly.information_technology_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1593,7 +1593,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll S&M Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.sales_marketing_payroll_amt}, ${glm_property_f_ly.sales_marketing_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.sales_marketing_payroll_amt}, ${glm_property_future_fcst_f_ly.sales_marketing_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1601,7 +1601,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll R&M Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.property_operations_maintenance_payroll_amt}, ${glm_property_f_ly.property_operations_maintenance_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.property_operations_maintenance_payroll_amt}, ${glm_property_future_fcst_f_ly.property_operations_maintenance_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1609,7 +1609,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Rentals & Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.misc_payroll_amt}, ${glm_property_f_ly.misc_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.misc_payroll_amt}, ${glm_property_future_fcst_f_ly.misc_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1617,7 +1617,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Nonoperating Airport Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_airport_payroll_amt}, ${glm_property_f_ly.nonoperating_airport_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_airport_payroll_amt}, ${glm_property_future_fcst_f_ly.nonoperating_airport_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1625,7 +1625,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Nonoperating Realty Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_realty_payroll_amt}, ${glm_property_f_ly.nonoperating_realty_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_realty_payroll_amt}, ${glm_property_future_fcst_f_ly.nonoperating_realty_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1633,7 +1633,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll Nonoperating Utility Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_util_payroll_amt}, ${glm_property_f_ly.nonoperating_util_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_util_payroll_amt}, ${glm_property_future_fcst_f_ly.nonoperating_util_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1641,7 +1641,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll RB&E Outlet Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_outlet_payroll_amt}, ${glm_property_f_ly.rbe_outlet_payroll_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_outlet_payroll_amt}, ${glm_property_future_fcst_f_ly.rbe_outlet_payroll_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1651,7 +1651,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_cover_cnt} - ${glm_property_f_ly.rbe_cover_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_cover_cnt} - ${glm_property_future_fcst_f_ly.rbe_cover_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1659,7 +1659,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Banquet Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_banquet_cover_cnt} - ${glm_property_f_ly.rbe_banquet_cover_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_banquet_cover_cnt} - ${glm_property_future_fcst_f_ly.rbe_banquet_cover_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1667,7 +1667,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Catering Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_catering_cover_cnt} - ${glm_property_f_ly.rbe_catering_cover_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_catering_cover_cnt} - ${glm_property_future_fcst_f_ly.rbe_catering_cover_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1676,7 +1676,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Outlet Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_outlet_cover_cnt} - ${glm_property_f_ly.rbe_outlet_cover_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_outlet_cover_cnt} - ${glm_property_future_fcst_f_ly.rbe_outlet_cover_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1684,7 +1684,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Room Service Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_other_cover_cnt} - ${glm_property_f_ly.rbe_room_service_cover_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_other_cover_cnt} - ${glm_property_future_fcst_f_ly.rbe_room_service_cover_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1692,7 +1692,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_other_cover_cnt} - ${glm_property_f_ly.rbe_other_cover_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_other_cover_cnt} - ${glm_property_future_fcst_f_ly.rbe_other_cover_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1703,7 +1703,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_cover_cnt}, ${glm_property_f_ly.rbe_cover_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_cover_cnt}, ${glm_property_future_fcst_f_ly.rbe_cover_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1711,7 +1711,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Banquet Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_banquet_cover_cnt}, ${glm_property_f_ly.rbe_banquet_cover_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_banquet_cover_cnt}, ${glm_property_future_fcst_f_ly.rbe_banquet_cover_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1719,7 +1719,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Catering Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_catering_cover_cnt}, ${glm_property_f_ly.rbe_catering_cover_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_catering_cover_cnt}, ${glm_property_future_fcst_f_ly.rbe_catering_cover_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1727,7 +1727,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Outlet Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_outlet_cover_cnt}, ${glm_property_f_ly.rbe_outlet_cover_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_outlet_cover_cnt}, ${glm_property_future_fcst_f_ly.rbe_outlet_cover_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1735,7 +1735,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Room Service Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_other_cover_cnt}, ${glm_property_f_ly.rbe_room_service_cover_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_other_cover_cnt}, ${glm_property_future_fcst_f_ly.rbe_room_service_cover_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1743,7 +1743,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_other_cover_cnt}, ${glm_property_f_ly.rbe_other_cover_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_other_cover_cnt}, ${glm_property_future_fcst_f_ly.rbe_other_cover_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1753,7 +1753,7 @@ view: glm_property_f_lytofcst {
     label: "Trtmnts Spa Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.spa_treatment_cnt} - ${glm_property_f_ly.spa_treatment_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.spa_treatment_cnt} - ${glm_property_future_fcst_f_ly.spa_treatment_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1761,7 +1761,7 @@ view: glm_property_f_lytofcst {
     label: "Rnds Golf Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.golf_round_cnt} - ${glm_property_f_ly.golf_round_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.golf_round_cnt} - ${glm_property_future_fcst_f_ly.golf_round_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1772,7 +1772,7 @@ view: glm_property_f_lytofcst {
     label: "Trtmnts Spa Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.spa_treatment_cnt}, ${glm_property_f_ly.spa_treatment_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.spa_treatment_cnt}, ${glm_property_future_fcst_f_ly.spa_treatment_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1780,7 +1780,7 @@ view: glm_property_f_lytofcst {
     label: "Rnds Golf Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.golf_round_cnt}, ${glm_property_f_ly.golf_round_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.golf_round_cnt}, ${glm_property_future_fcst_f_ly.golf_round_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1790,7 +1790,7 @@ view: glm_property_f_lytofcst {
     label: "Arrivals Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.arrival_cnt} - ${glm_property_f_ly.arrival_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.arrival_cnt} - ${glm_property_future_fcst_f_ly.arrival_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1798,7 +1798,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_room_cnt} - ${glm_property_f_ly.occupied_room_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_room_cnt} - ${glm_property_future_fcst_f_ly.occupied_room_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1806,7 +1806,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ Transient Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_transient_room_cnt} - ${glm_property_f_ly.occupied_transient_room_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_transient_room_cnt} - ${glm_property_future_fcst_f_ly.occupied_transient_room_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1814,7 +1814,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ Group Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_group_room_cnt} - ${glm_property_f_ly.occupied_group_room_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_group_room_cnt} - ${glm_property_future_fcst_f_ly.occupied_group_room_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1822,7 +1822,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ Contract Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_contract_room_cnt} - ${glm_property_f_ly.occupied_contract_room_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_contract_room_cnt} - ${glm_property_future_fcst_f_ly.occupied_contract_room_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1830,7 +1830,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Avail Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.avail_room_cnt} - ${glm_property_f_ly.avail_room_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.avail_room_cnt} - ${glm_property_future_fcst_f_ly.avail_room_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1838,7 +1838,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ Owner Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_owner_room_cnt} - ${glm_property_f_ly.occupied_owner_room_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_owner_room_cnt} - ${glm_property_future_fcst_f_ly.occupied_owner_room_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1846,14 +1846,14 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ Comp Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.comp_room_cnt - ${glm_property_f_ly.comp_room_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.comp_room_cnt - ${glm_property_future_fcst_f_ly.comp_room_cnt} ;;
     value_format_name: decimal_0
   }
 
   measure: net_avail_room_cnt_tofcst_v {
     label: "Rms Avail Net Fcst:LY - var"
     type: number
-    sql: ${glm_property_f_fcst.net_avail_room_cnt - ${glm_property_f_ly.net_avail_room_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.net_avail_room_cnt - ${glm_property_future_fcst_f_ly.net_avail_room_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1861,7 +1861,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Rms Transient Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.transient_room_rev_amt} - ${glm_property_f_ly.transient_room_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.transient_room_rev_amt} - ${glm_property_future_fcst_f_ly.transient_room_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1869,7 +1869,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Rms Group Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.group_room_rev_amt} - ${glm_property_f_ly.group_room_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.group_room_rev_amt} - ${glm_property_future_fcst_f_ly.group_room_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1877,7 +1877,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Rms Contract Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.contract_room_rev_amt} - ${glm_property_f_ly.contract_room_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.contract_room_rev_amt} - ${glm_property_future_fcst_f_ly.contract_room_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1885,7 +1885,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Rms No show Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.no_show_room_rev_amt} - ${glm_property_f_ly.no_show_room_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.no_show_room_rev_amt} - ${glm_property_future_fcst_f_ly.no_show_room_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -1897,7 +1897,7 @@ view: glm_property_f_lytofcst {
     label: "Arrivals Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.arrival_cnt}, ${glm_property_f_ly.arrival_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.arrival_cnt}, ${glm_property_future_fcst_f_ly.arrival_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1905,7 +1905,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.occupied_room_cnt}, ${glm_property_f_ly.occupied_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.occupied_room_cnt}, ${glm_property_future_fcst_f_ly.occupied_room_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1913,7 +1913,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ Transient Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.occupied_transient_room_cnt}, ${glm_property_f_ly.occupied_transient_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.occupied_transient_room_cnt}, ${glm_property_future_fcst_f_ly.occupied_transient_room_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1921,7 +1921,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ Group Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.occupied_group_room_cnt}, ${glm_property_f_ly.occupied_group_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.occupied_group_room_cnt}, ${glm_property_future_fcst_f_ly.occupied_group_room_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1929,7 +1929,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ Contract Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.occupied_contract_room_cnt}, ${glm_property_f_ly.occupied_contract_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.occupied_contract_room_cnt}, ${glm_property_future_fcst_f_ly.occupied_contract_room_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1937,7 +1937,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Avail Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.avail_room_cnt}, ${glm_property_f_ly.avail_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.avail_room_cnt}, ${glm_property_future_fcst_f_ly.avail_room_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1945,7 +1945,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ Owner Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.occupied_owner_room_cnt}, ${glm_property_f_ly.occupied_owner_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.occupied_owner_room_cnt}, ${glm_property_future_fcst_f_ly.occupied_owner_room_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1953,14 +1953,14 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ Comp Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.comp_room_cnt - ${glm_property_f_ly.comp_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.comp_room_cnt - ${glm_property_future_fcst_f_ly.comp_room_cnt}) ;;
     value_format_name: percent_1
   }
 
   measure: net_avail_room_cnt_tofcst {
     label: "Rms Avail Net Fcst:LY - var %"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.net_avail_room_cnt - ${glm_property_f_ly.net_avail_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.net_avail_room_cnt - ${glm_property_future_fcst_f_ly.net_avail_room_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1968,7 +1968,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Rms Transient Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.transient_room_rev_amt}, ${glm_property_f_ly.transient_room_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.transient_room_rev_amt}, ${glm_property_future_fcst_f_ly.transient_room_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1976,7 +1976,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Rms Group Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.group_room_rev_amt}, ${glm_property_f_ly.group_room_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.group_room_rev_amt}, ${glm_property_future_fcst_f_ly.group_room_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1984,7 +1984,7 @@ view: glm_property_f_lytofcst {
     label: "Rev Rms Contract Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.contract_room_rev_amt}, ${glm_property_f_ly.contract_room_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.contract_room_rev_amt}, ${glm_property_future_fcst_f_ly.contract_room_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1994,7 +1994,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.profit_amt} - ${glm_property_f_ly.profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.profit_amt} - ${glm_property_future_fcst_f_ly.profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2002,7 +2002,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Rms Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.room_profit_amt} - ${glm_property_f_ly.room_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.room_profit_amt} - ${glm_property_future_fcst_f_ly.room_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2010,7 +2010,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_profit_amt} - ${glm_property_f_ly.rbe_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_profit_amt} - ${glm_property_future_fcst_f_ly.rbe_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2018,7 +2018,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Banquet Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_banquet_profit_amt} - ${glm_property_f_ly.rbe_banquet_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_banquet_profit_amt} - ${glm_property_future_fcst_f_ly.rbe_banquet_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2026,7 +2026,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Catering Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_catering_profit_amt} - ${glm_property_f_ly.rbe_catering_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_catering_profit_amt} - ${glm_property_future_fcst_f_ly.rbe_catering_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2034,7 +2034,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Conference Services Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_conference_services_profit_amt} - ${glm_property_f_ly.rbe_conference_services_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_conference_services_profit_amt} - ${glm_property_future_fcst_f_ly.rbe_conference_services_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2042,7 +2042,7 @@ view: glm_property_f_lytofcst {
   #  label: "Profit RB&E Banquet Catering Conference Services Fcst:LY - var"
   #  description: "Fcst - LY"
   #  type: number
-  #  sql: ${glm_property_f_fcst.rbe_banquet_catering_conference_services_profit_amt} - ${glm_property_f_ly.rbe_banquet_catering_conference_services_profit_amt} ;;
+  #  sql: ${glm_property_future_fcst_f_fcstact.rbe_banquet_catering_conference_services_profit_amt} - ${glm_property_future_fcst_f_ly.rbe_banquet_catering_conference_services_profit_amt} ;;
   #  value_format_name: decimal_0
   #}
 
@@ -2050,7 +2050,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Outlet Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_outlet_profit_amt} - ${glm_property_f_ly.rbe_outlet_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_outlet_profit_amt} - ${glm_property_future_fcst_f_ly.rbe_outlet_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2058,7 +2058,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Room Service Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_other_profit_amt} - ${glm_property_f_ly.rbe_room_service_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_other_profit_amt} - ${glm_property_future_fcst_f_ly.rbe_room_service_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2066,7 +2066,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_other_profit_amt} - ${glm_property_f_ly.rbe_other_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_other_profit_amt} - ${glm_property_future_fcst_f_ly.rbe_other_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2074,7 +2074,7 @@ view: glm_property_f_lytofcst {
   #  label: "Profit RB&E Outlet Other Fcst:LY - var"
   #  description: "Fcst - LY"
   #  type: number
-  #  sql: ${glm_property_f_fcst.rbe_outlet_other_profit_amt} - ${glm_property_f_ly.rbe_outlet_other_profit_amt} ;;
+  #  sql: ${glm_property_future_fcst_f_fcstact.rbe_outlet_other_profit_amt} - ${glm_property_future_fcst_f_ly.rbe_outlet_other_profit_amt} ;;
   #  value_format_name: decimal_0
   #}
 
@@ -2082,7 +2082,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Spa Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.spa_profit_amt} - ${glm_property_f_ly.spa_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.spa_profit_amt} - ${glm_property_future_fcst_f_ly.spa_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2090,7 +2090,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Golf Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.golf_profit_amt} - ${glm_property_f_ly.golf_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.golf_profit_amt} - ${glm_property_future_fcst_f_ly.golf_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2098,7 +2098,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Fitness & Rec Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.fitness_recreation_profit_amt} - ${glm_property_f_ly.fitness_recreation_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.fitness_recreation_profit_amt} - ${glm_property_future_fcst_f_ly.fitness_recreation_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2106,7 +2106,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Parking & Trans Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.parking_transportation_profit_amt} - ${glm_property_f_ly.parking_transportation_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.parking_transportation_profit_amt} - ${glm_property_future_fcst_f_ly.parking_transportation_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2114,7 +2114,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Telecom Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.telecom_profit_amt} - ${glm_property_f_ly.telecom_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.telecom_profit_amt} - ${glm_property_future_fcst_f_ly.telecom_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2122,7 +2122,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Retail Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.retail_profit_amt} - ${glm_property_f_ly.retail_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.retail_profit_amt} - ${glm_property_future_fcst_f_ly.retail_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2130,7 +2130,7 @@ view: glm_property_f_lytofcst {
   #  label: "Profit Spa Fitness & Rec Fcst:LY - var"
   #  description: "Fcst - LY"
   #  type: number
-  #  sql: ${glm_property_f_fcst.spa_fitness_recreation_profit_amt} - ${glm_property_f_ly.spa_fitness_recreation_profit_amt} ;;
+  #  sql: ${glm_property_future_fcst_f_fcstact.spa_fitness_recreation_profit_amt} - ${glm_property_future_fcst_f_ly.spa_fitness_recreation_profit_amt} ;;
   #  value_format_name: decimal_0
   #}
 
@@ -2138,7 +2138,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Other Op. Dept. Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.other_operated_profit_amt} - ${glm_property_f_ly.other_operated_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.other_operated_profit_amt} - ${glm_property_future_fcst_f_ly.other_operated_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2146,7 +2146,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Mgmt Srvcs Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.property_mgmt_profit_amt} - ${glm_property_f_ly.property_mgmt_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.property_mgmt_profit_amt} - ${glm_property_future_fcst_f_ly.property_mgmt_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2154,7 +2154,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Rentals & Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.misc_profit_amt} - ${glm_property_f_ly.misc_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.misc_profit_amt} - ${glm_property_future_fcst_f_ly.misc_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2162,7 +2162,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Nonoperating Realty Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_realty_profit_amt} - ${glm_property_f_ly.nonoperating_realty_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_realty_profit_amt} - ${glm_property_future_fcst_f_ly.nonoperating_realty_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2170,7 +2170,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Nonoperating Airport Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_airport_profit_amt} - ${glm_property_f_ly.nonoperating_airport_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_airport_profit_amt} - ${glm_property_future_fcst_f_ly.nonoperating_airport_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2178,7 +2178,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Nonoperating Utility Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_util_profit_amt} - ${glm_property_f_ly.nonoperating_util_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_util_profit_amt} - ${glm_property_future_fcst_f_ly.nonoperating_util_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2186,7 +2186,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Undistributed Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.undistributed_profit_amt} - ${glm_property_f_ly.undistributed_profit_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.undistributed_profit_amt} - ${glm_property_future_fcst_f_ly.undistributed_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2196,7 +2196,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.profit_amt}, ${glm_property_f_ly.profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.profit_amt}, ${glm_property_future_fcst_f_ly.profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2204,7 +2204,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Rms Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.room_profit_amt}, ${glm_property_f_ly.room_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.room_profit_amt}, ${glm_property_future_fcst_f_ly.room_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2212,7 +2212,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_profit_amt}, ${glm_property_f_ly.rbe_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_profit_amt}, ${glm_property_future_fcst_f_ly.rbe_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2220,7 +2220,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Banquet Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_banquet_profit_amt}, ${glm_property_f_ly.rbe_banquet_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_banquet_profit_amt}, ${glm_property_future_fcst_f_ly.rbe_banquet_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2228,7 +2228,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Catering Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_catering_profit_amt}, ${glm_property_f_ly.rbe_catering_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_catering_profit_amt}, ${glm_property_future_fcst_f_ly.rbe_catering_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2236,7 +2236,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Conference Services Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_conference_services_profit_amt}, ${glm_property_f_ly.rbe_conference_services_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_conference_services_profit_amt}, ${glm_property_future_fcst_f_ly.rbe_conference_services_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2244,7 +2244,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Outlet Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_outlet_profit_amt}, ${glm_property_f_ly.rbe_outlet_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_outlet_profit_amt}, ${glm_property_future_fcst_f_ly.rbe_outlet_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2252,7 +2252,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Room Service Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_other_profit_amt}, ${glm_property_f_ly.rbe_room_service_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_other_profit_amt}, ${glm_property_future_fcst_f_ly.rbe_room_service_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2260,7 +2260,7 @@ view: glm_property_f_lytofcst {
     label: "Profit RB&E Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_other_profit_amt}, ${glm_property_f_ly.rbe_other_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_other_profit_amt}, ${glm_property_future_fcst_f_ly.rbe_other_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2268,7 +2268,7 @@ view: glm_property_f_lytofcst {
   #  label: "Profit RB&E Outlet Other Fcst:LY - var %"
   #  description: "(Fcst - LY) / LY"
   #  type: number
-  #  sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_outlet_other_profit_amt}, ${glm_property_f_ly.rbe_outlet_other_profit_amt}) ;;
+  #  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_outlet_other_profit_amt}, ${glm_property_future_fcst_f_ly.rbe_outlet_other_profit_amt}) ;;
   #  value_format_name: percent_1
   #}
 
@@ -2276,7 +2276,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Spa Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.spa_profit_amt}, ${glm_property_f_ly.spa_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.spa_profit_amt}, ${glm_property_future_fcst_f_ly.spa_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2284,7 +2284,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Golf Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.golf_profit_amt}, ${glm_property_f_ly.golf_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.golf_profit_amt}, ${glm_property_future_fcst_f_ly.golf_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2292,7 +2292,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Fitness & Rec Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.fitness_recreation_profit_amt}, ${glm_property_f_ly.fitness_recreation_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.fitness_recreation_profit_amt}, ${glm_property_future_fcst_f_ly.fitness_recreation_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2300,7 +2300,7 @@ view: glm_property_f_lytofcst {
   #  label: "Profit Spa Fitness & Rec Fcst:LY - var %"
   #  description: "(Fcst - LY) / LY"
   #  type: number
-  #  sql: utl..udf_percent_var( ${glm_property_f_fcst.spa_fitness_recreation_profit_amt}, ${glm_property_f_ly.spa_fitness_recreation_profit_amt}) ;;
+  #  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.spa_fitness_recreation_profit_amt}, ${glm_property_future_fcst_f_ly.spa_fitness_recreation_profit_amt}) ;;
   #  value_format_name: percent_1
   #}
 
@@ -2308,7 +2308,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Parking & Trans Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.parking_transportation_profit_amt}, ${glm_property_f_ly.parking_transportation_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.parking_transportation_profit_amt}, ${glm_property_future_fcst_f_ly.parking_transportation_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2316,7 +2316,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Telecom Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.telecom_profit_amt}, ${glm_property_f_ly.telecom_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.telecom_profit_amt}, ${glm_property_future_fcst_f_ly.telecom_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2324,7 +2324,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Retail Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.retail_profit_amt}, ${glm_property_f_ly.retail_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.retail_profit_amt}, ${glm_property_future_fcst_f_ly.retail_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2332,7 +2332,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Other Op. Dept. Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.other_operated_profit_amt}, ${glm_property_f_ly.other_operated_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.other_operated_profit_amt}, ${glm_property_future_fcst_f_ly.other_operated_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2340,7 +2340,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Mgmt Srvcs Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.property_mgmt_profit_amt}, ${glm_property_f_ly.property_mgmt_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.property_mgmt_profit_amt}, ${glm_property_future_fcst_f_ly.property_mgmt_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2348,7 +2348,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Rentals & Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.misc_profit_amt}, ${glm_property_f_ly.misc_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.misc_profit_amt}, ${glm_property_future_fcst_f_ly.misc_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2356,7 +2356,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Nonoperating Realty Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_realty_profit_amt}, ${glm_property_f_ly.nonoperating_realty_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_realty_profit_amt}, ${glm_property_future_fcst_f_ly.nonoperating_realty_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2364,7 +2364,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Nonoperating Airport Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_airport_profit_amt}, ${glm_property_f_ly.nonoperating_airport_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_airport_profit_amt}, ${glm_property_future_fcst_f_ly.nonoperating_airport_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2372,7 +2372,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Nonoperating Utility Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_util_profit_amt}, ${glm_property_f_ly.nonoperating_util_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_util_profit_amt}, ${glm_property_future_fcst_f_ly.nonoperating_util_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2380,7 +2380,7 @@ view: glm_property_f_lytofcst {
     label: "Profit Undistributed Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.undistributed_profit_amt}, ${glm_property_f_ly.undistributed_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.undistributed_profit_amt}, ${glm_property_future_fcst_f_ly.undistributed_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2390,7 +2390,7 @@ view: glm_property_f_lytofcst {
     label: "COS Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.cost_of_sales_amt} - ${glm_property_f_ly.cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2398,7 +2398,7 @@ view: glm_property_f_lytofcst {
     label: "COS Rms Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.room_cost_of_sales_amt} - ${glm_property_f_ly.room_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.room_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.room_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2406,7 +2406,7 @@ view: glm_property_f_lytofcst {
     label: "COS RB&E Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_cost_of_sales_amt} - ${glm_property_f_ly.rbe_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.rbe_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2414,7 +2414,7 @@ view: glm_property_f_lytofcst {
     label: "COS Spa Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.spa_cost_of_sales_amt} - ${glm_property_f_ly.spa_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.spa_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.spa_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2422,7 +2422,7 @@ view: glm_property_f_lytofcst {
     label: "COS Golf Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.golf_cost_of_sales_amt} - ${glm_property_f_ly.golf_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.golf_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.golf_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2430,7 +2430,7 @@ view: glm_property_f_lytofcst {
     label: "COS Fitness & Rec Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.fitness_recreation_cost_of_sales_amt} - ${glm_property_f_ly.fitness_recreation_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.fitness_recreation_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.fitness_recreation_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2438,7 +2438,7 @@ view: glm_property_f_lytofcst {
     label: "COS Parking & Trans Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.parking_transportation_cost_of_sales_amt} - ${glm_property_f_ly.parking_transportation_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.parking_transportation_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.parking_transportation_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2446,7 +2446,7 @@ view: glm_property_f_lytofcst {
     label: "COS Telecom Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.telecom_cost_of_sales_amt} - ${glm_property_f_ly.telecom_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.telecom_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.telecom_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2454,7 +2454,7 @@ view: glm_property_f_lytofcst {
     label: "COS Retail Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.retail_cost_of_sales_amt} - ${glm_property_f_ly.retail_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.retail_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.retail_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2462,7 +2462,7 @@ view: glm_property_f_lytofcst {
     label: "COS Other Op. Dept. Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.other_operated_cost_of_sales_amt} - ${glm_property_f_ly.other_operated_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.other_operated_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.other_operated_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2470,7 +2470,7 @@ view: glm_property_f_lytofcst {
     label: "COS Mgmt Srvcs Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.property_mgmt_cost_of_sales_amt} - ${glm_property_f_ly.property_mgmt_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.property_mgmt_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.property_mgmt_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2478,7 +2478,7 @@ view: glm_property_f_lytofcst {
     label: "COS Rentals & Other Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.misc_cost_of_sales_amt} - ${glm_property_f_ly.misc_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.misc_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.misc_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2486,7 +2486,7 @@ view: glm_property_f_lytofcst {
     label: "COS Nonoperating Realty Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_realty_cost_of_sales_amt} - ${glm_property_f_ly.nonoperating_realty_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_realty_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.nonoperating_realty_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2494,7 +2494,7 @@ view: glm_property_f_lytofcst {
     label: "COS Nonoperating Airport Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_airport_cost_of_sales_amt} - ${glm_property_f_ly.nonoperating_airport_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_airport_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.nonoperating_airport_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2502,7 +2502,7 @@ view: glm_property_f_lytofcst {
     label: "COS Nonoperating Utility Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.nonoperating_util_cost_of_sales_amt} - ${glm_property_f_ly.nonoperating_util_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.nonoperating_util_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.nonoperating_util_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2510,7 +2510,7 @@ view: glm_property_f_lytofcst {
     label: "COS RB&E Food Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.food_rbe_cost_of_sales_amt} - ${glm_property_f_ly.food_rbe_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.food_rbe_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.food_rbe_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2518,7 +2518,7 @@ view: glm_property_f_lytofcst {
     label: "COS RB&E Beverage Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.beverage_rbe_cost_of_sales_amt} - ${glm_property_f_ly.beverage_rbe_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.beverage_rbe_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.beverage_rbe_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2526,7 +2526,7 @@ view: glm_property_f_lytofcst {
     label: "COS RB&E Outlet Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_outlet_cost_of_sales_amt} - ${glm_property_f_ly.rbe_outlet_cost_of_sales_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_outlet_cost_of_sales_amt} - ${glm_property_future_fcst_f_ly.rbe_outlet_cost_of_sales_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2536,7 +2536,7 @@ view: glm_property_f_lytofcst {
     label: "Rev /Trtmnt Spa LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.spa_rev_treatment_avg_amt} - ${glm_property_f_ly.spa_rev_treatment_avg_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.spa_rev_treatment_avg_amt} - ${glm_property_future_fcst_f_ly.spa_rev_treatment_avg_amt} ;;
     value_format_name: decimal_2
   }
 
@@ -2544,7 +2544,7 @@ view: glm_property_f_lytofcst {
     label: "Rev /Rnd Golf LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.golf_rev_round_avg_amt} - ${glm_property_f_ly.golf_rev_round_avg_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.golf_rev_round_avg_amt} - ${glm_property_future_fcst_f_ly.golf_rev_round_avg_amt} ;;
     value_format_name: decimal_2
   }
 
@@ -2555,7 +2555,7 @@ view: glm_property_f_lytofcst {
     label: "COS Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.cost_of_sales_amt}, ${glm_property_f_ly.cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2563,7 +2563,7 @@ view: glm_property_f_lytofcst {
     label: "COS Rms Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.room_cost_of_sales_amt}, ${glm_property_f_ly.room_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.room_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.room_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2571,7 +2571,7 @@ view: glm_property_f_lytofcst {
     label: "COS RB&E Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_cost_of_sales_amt}, ${glm_property_f_ly.rbe_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.rbe_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2579,7 +2579,7 @@ view: glm_property_f_lytofcst {
     label: "COS Spa Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.spa_cost_of_sales_amt}, ${glm_property_f_ly.spa_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.spa_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.spa_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2587,7 +2587,7 @@ view: glm_property_f_lytofcst {
     label: "COS Golf Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.golf_cost_of_sales_amt}, ${glm_property_f_ly.golf_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.golf_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.golf_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2595,7 +2595,7 @@ view: glm_property_f_lytofcst {
     label: "COS Fitness & Rec Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.fitness_recreation_cost_of_sales_amt}, ${glm_property_f_ly.fitness_recreation_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.fitness_recreation_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.fitness_recreation_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2603,7 +2603,7 @@ view: glm_property_f_lytofcst {
     label: "COS Parking & Trans Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.parking_transportation_cost_of_sales_amt}, ${glm_property_f_ly.parking_transportation_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.parking_transportation_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.parking_transportation_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2611,7 +2611,7 @@ view: glm_property_f_lytofcst {
     label: "COS Telecom Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.telecom_cost_of_sales_amt}, ${glm_property_f_ly.telecom_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.telecom_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.telecom_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2619,7 +2619,7 @@ view: glm_property_f_lytofcst {
     label: "COS Retail Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.retail_cost_of_sales_amt}, ${glm_property_f_ly.retail_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.retail_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.retail_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2627,7 +2627,7 @@ view: glm_property_f_lytofcst {
     label: "COS Other Op. Dept. Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.other_operated_cost_of_sales_amt}, ${glm_property_f_ly.other_operated_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.other_operated_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.other_operated_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2635,7 +2635,7 @@ view: glm_property_f_lytofcst {
     label: "COS Mgmt Srvcs Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.property_mgmt_cost_of_sales_amt}, ${glm_property_f_ly.property_mgmt_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.property_mgmt_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.property_mgmt_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2643,7 +2643,7 @@ view: glm_property_f_lytofcst {
     label: "COS Rentals & Other Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.misc_cost_of_sales_amt}, ${glm_property_f_ly.misc_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.misc_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.misc_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2651,7 +2651,7 @@ view: glm_property_f_lytofcst {
     label: "COS Nonoperating Realty Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_realty_cost_of_sales_amt}, ${glm_property_f_ly.nonoperating_realty_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_realty_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.nonoperating_realty_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2659,7 +2659,7 @@ view: glm_property_f_lytofcst {
     label: "COS Nonoperating Airport Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_airport_cost_of_sales_amt}, ${glm_property_f_ly.nonoperating_airport_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_airport_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.nonoperating_airport_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2667,7 +2667,7 @@ view: glm_property_f_lytofcst {
     label: "COS Nonoperating Utility Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.nonoperating_util_cost_of_sales_amt}, ${glm_property_f_ly.nonoperating_util_cost_of_sales_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.nonoperating_util_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.nonoperating_util_cost_of_sales_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2677,7 +2677,7 @@ view: glm_property_f_lytofcst {
     label: "Rev /Trtmnt Spa LY:LY - var %"
     description: "Fcst - LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.spa_rev_treatment_avg_amt}, ${glm_property_f_ly.spa_rev_treatment_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.spa_rev_treatment_avg_amt}, ${glm_property_future_fcst_f_ly.spa_rev_treatment_avg_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2685,7 +2685,7 @@ view: glm_property_f_lytofcst {
     label: "Rev /Rnd Golf LY:LY - var %"
     description: "Fcst - LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.golf_rev_round_avg_amt}, ${glm_property_f_ly.golf_rev_round_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.golf_rev_round_avg_amt}, ${glm_property_future_fcst_f_ly.golf_rev_round_avg_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2696,7 +2696,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ % Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_room_pct} - ${glm_property_f_ly.occupied_room_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_room_pct} - ${glm_property_future_fcst_f_ly.occupied_room_pct} ;;
     value_format_name: percent_1
   }
 
@@ -2704,7 +2704,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ % Group Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_group_room_pct} - ${glm_property_f_ly.occupied_group_room_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_group_room_pct} - ${glm_property_future_fcst_f_ly.occupied_group_room_pct} ;;
     value_format_name: percent_1
   }
 
@@ -2712,7 +2712,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ % Transient Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_transient_room_pct} - ${glm_property_f_ly.occupied_transient_room_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_transient_room_pct} - ${glm_property_future_fcst_f_ly.occupied_transient_room_pct} ;;
     value_format_name: percent_1
   }
 
@@ -2720,7 +2720,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ % Contract Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_contract_room_pct} - ${glm_property_f_ly.occupied_contract_room_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_contract_room_pct} - ${glm_property_future_fcst_f_ly.occupied_contract_room_pct} ;;
     value_format_name: percent_1
   }
 
@@ -2731,7 +2731,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ % Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.occupied_room_pct}, ${glm_property_f_ly.occupied_room_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.occupied_room_pct}, ${glm_property_future_fcst_f_ly.occupied_room_pct}) ;;
     value_format_name: percent_1
   }
 
@@ -2739,7 +2739,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ % Group Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.occupied_group_room_pct}, ${glm_property_f_ly.occupied_group_room_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.occupied_group_room_pct}, ${glm_property_future_fcst_f_ly.occupied_group_room_pct}) ;;
     value_format_name: percent_1
   }
 
@@ -2747,7 +2747,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ % Transient Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.occupied_transient_room_pct}, ${glm_property_f_ly.occupied_transient_room_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.occupied_transient_room_pct}, ${glm_property_future_fcst_f_ly.occupied_transient_room_pct}) ;;
     value_format_name: percent_1
   }
 
@@ -2755,7 +2755,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Occ % Contract Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.occupied_contract_room_pct}, ${glm_property_f_ly.occupied_contract_room_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.occupied_contract_room_pct}, ${glm_property_future_fcst_f_ly.occupied_contract_room_pct}) ;;
     value_format_name: percent_1
   }
 
@@ -2765,7 +2765,7 @@ view: glm_property_f_lytofcst {
     label: "ADR $ Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.adr_amt} - ${glm_property_f_ly.adr_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.adr_amt} - ${glm_property_future_fcst_f_ly.adr_amt} ;;
     value_format_name: decimal_2
   }
 
@@ -2773,7 +2773,7 @@ view: glm_property_f_lytofcst {
     label: "ADR Transient $ Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.adr_transient_amt} - ${glm_property_f_ly.adr_transient_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.adr_transient_amt} - ${glm_property_future_fcst_f_ly.adr_transient_amt} ;;
     value_format_name: decimal_2
   }
 
@@ -2781,7 +2781,7 @@ view: glm_property_f_lytofcst {
     label: "ADR Group $ Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.adr_group_amt} - ${glm_property_f_ly.adr_group_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.adr_group_amt} - ${glm_property_future_fcst_f_ly.adr_group_amt} ;;
     value_format_name: decimal_2
   }
 
@@ -2791,7 +2791,7 @@ view: glm_property_f_lytofcst {
     label: "ADR $ Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.adr_amt}, ${glm_property_f_ly.adr_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.adr_amt}, ${glm_property_future_fcst_f_ly.adr_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2799,7 +2799,7 @@ view: glm_property_f_lytofcst {
     label: "ADR Transient $ Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.adr_transient_amt}, ${glm_property_f_ly.adr_transient_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.adr_transient_amt}, ${glm_property_future_fcst_f_ly.adr_transient_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2807,7 +2807,7 @@ view: glm_property_f_lytofcst {
     label: "ADR Group $ Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.adr_group_amt}, ${glm_property_f_ly.adr_group_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.adr_group_amt}, ${glm_property_future_fcst_f_ly.adr_group_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2817,7 +2817,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Night Transient % Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.room_night_transient_pct} - ${glm_property_f_ly.room_night_transient_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.room_night_transient_pct} - ${glm_property_future_fcst_f_ly.room_night_transient_pct} ;;
     value_format_name: percent_1
   }
 
@@ -2825,7 +2825,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Night Group % Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.room_night_group_pct} - ${glm_property_f_ly.room_night_group_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.room_night_group_pct} - ${glm_property_future_fcst_f_ly.room_night_group_pct} ;;
     value_format_name: percent_1
   }
 
@@ -2835,7 +2835,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Night Transient % Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.room_night_transient_pct}, ${glm_property_f_ly.room_night_transient_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.room_night_transient_pct}, ${glm_property_future_fcst_f_ly.room_night_transient_pct}) ;;
     value_format_name: percent_1
   }
 
@@ -2843,7 +2843,7 @@ view: glm_property_f_lytofcst {
     label: "Rms Night Group % Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.room_night_group_pct}, ${glm_property_f_ly.room_night_group_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.room_night_group_pct}, ${glm_property_future_fcst_f_ly.room_night_group_pct}) ;;
     value_format_name: percent_1
   }
 
@@ -2853,7 +2853,7 @@ view: glm_property_f_lytofcst {
     label: "Rev PAR $ Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rev_par_amt} - ${glm_property_f_ly.rev_par_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rev_par_amt} - ${glm_property_future_fcst_f_ly.rev_par_amt} ;;
     value_format_name: usd_0
   }
 
@@ -2861,7 +2861,7 @@ view: glm_property_f_lytofcst {
     label: "Rev PAR $ Group Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rev_par_group_amt} - ${glm_property_f_ly.rev_par_group_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rev_par_group_amt} - ${glm_property_future_fcst_f_ly.rev_par_group_amt} ;;
     value_format_name: usd_0
   }
 
@@ -2869,7 +2869,7 @@ view: glm_property_f_lytofcst {
     label: "Rev PAR $ Transient Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rev_par_transient_amt} - ${glm_property_f_ly.rev_par_transient_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rev_par_transient_amt} - ${glm_property_future_fcst_f_ly.rev_par_transient_amt} ;;
     value_format_name: usd_0
   }
 
@@ -2879,7 +2879,7 @@ view: glm_property_f_lytofcst {
     label: "Rev PAR $ Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rev_par_amt}, ${glm_property_f_ly.rev_par_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rev_par_amt}, ${glm_property_future_fcst_f_ly.rev_par_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2887,7 +2887,7 @@ view: glm_property_f_lytofcst {
     label: "Rev PAR $ Group Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rev_par_group_amt}, ${glm_property_f_ly.rev_par_group_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rev_par_group_amt}, ${glm_property_future_fcst_f_ly.rev_par_group_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2895,7 +2895,7 @@ view: glm_property_f_lytofcst {
     label: "Rev PAR $ Transient Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rev_par_transient_amt}, ${glm_property_f_ly.rev_par_transient_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rev_par_transient_amt}, ${glm_property_future_fcst_f_ly.rev_par_transient_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2905,7 +2905,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Avg $ Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_check_avg_amt} - ${glm_property_f_ly.rbe_check_avg_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_check_avg_amt} - ${glm_property_future_fcst_f_ly.rbe_check_avg_amt} ;;
     value_format_name: decimal_2
   }
 
@@ -2913,7 +2913,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Banquet Avg $ Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_banquet_check_avg_amt} - ${glm_property_f_ly.rbe_banquet_check_avg_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_banquet_check_avg_amt} - ${glm_property_future_fcst_f_ly.rbe_banquet_check_avg_amt} ;;
     value_format_name: decimal_2
   }
 
@@ -2921,7 +2921,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Catering Avg $ Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_catering_check_avg_amt} - ${glm_property_f_ly.rbe_catering_check_avg_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_catering_check_avg_amt} - ${glm_property_future_fcst_f_ly.rbe_catering_check_avg_amt} ;;
     value_format_name: decimal_2
   }
 
@@ -2929,7 +2929,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Outlet Avg $ Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_outlet_check_avg_amt} - ${glm_property_f_ly.rbe_outlet_check_avg_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_outlet_check_avg_amt} - ${glm_property_future_fcst_f_ly.rbe_outlet_check_avg_amt} ;;
     value_format_name: decimal_2
   }
 
@@ -2937,7 +2937,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Room Service Avg $ Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_room_service_check_avg_amt} - ${glm_property_f_ly.rbe_room_service_check_avg_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_room_service_check_avg_amt} - ${glm_property_future_fcst_f_ly.rbe_room_service_check_avg_amt} ;;
     value_format_name: decimal_2
   }
 
@@ -2945,7 +2945,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Other Avg $ Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_other_check_avg_amt} - ${glm_property_f_ly.rbe_other_check_avg_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_other_check_avg_amt} - ${glm_property_future_fcst_f_ly.rbe_other_check_avg_amt} ;;
     value_format_name: decimal_2
   }
 
@@ -2956,7 +2956,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Avg $ Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_check_avg_amt}, ${glm_property_f_ly.rbe_check_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_check_avg_amt}, ${glm_property_future_fcst_f_ly.rbe_check_avg_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2964,7 +2964,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Banquet Avg $ Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_banquet_check_avg_amt}, ${glm_property_f_ly.rbe_banquet_check_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_banquet_check_avg_amt}, ${glm_property_future_fcst_f_ly.rbe_banquet_check_avg_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2972,7 +2972,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Catering Avg $ Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_catering_check_avg_amt}, ${glm_property_f_ly.rbe_catering_check_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_catering_check_avg_amt}, ${glm_property_future_fcst_f_ly.rbe_catering_check_avg_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2980,7 +2980,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Outlet Avg $ Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_outlet_check_avg_amt}, ${glm_property_f_ly.rbe_outlet_check_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_outlet_check_avg_amt}, ${glm_property_future_fcst_f_ly.rbe_outlet_check_avg_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2988,7 +2988,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Room Service Avg $ Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_room_service_check_avg_amt}, ${glm_property_f_ly.rbe_room_service_check_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_room_service_check_avg_amt}, ${glm_property_future_fcst_f_ly.rbe_room_service_check_avg_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2996,7 +2996,7 @@ view: glm_property_f_lytofcst {
     label: "Cvrs RB&E Other Avg $ Fcst:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.rbe_other_check_avg_amt}, ${glm_property_f_ly.rbe_other_check_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rbe_other_check_avg_amt}, ${glm_property_future_fcst_f_ly.rbe_other_check_avg_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -3005,7 +3005,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.payroll_rev_pct} - ${glm_property_f_ly.payroll_rev_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.payroll_rev_pct} - ${glm_property_future_fcst_f_ly.payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 
@@ -3015,7 +3015,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev LY:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.payroll_rev_pct}, ${glm_property_f_ly.payroll_rev_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.payroll_rev_pct}, ${glm_property_future_fcst_f_ly.payroll_rev_pct}) ;;
     value_format_name: percent_1
   }
 
@@ -3026,7 +3026,7 @@ view: glm_property_f_lytofcst {
     label: "Stay Length Avg Night LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.length_of_stay_avg_amt} - ${glm_property_f_ly.length_of_stay_avg_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.length_of_stay_avg_amt} - ${glm_property_future_fcst_f_ly.length_of_stay_avg_amt} ;;
     value_format_name: decimal_1
   }
 
@@ -3036,7 +3036,7 @@ view: glm_property_f_lytofcst {
     label: "Stay Length Avg Night LY:LY - var %"
     description: "(Fcst - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_fcst.length_of_stay_avg_amt}, ${glm_property_f_ly.length_of_stay_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.length_of_stay_avg_amt}, ${glm_property_future_fcst_f_ly.length_of_stay_avg_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -3046,7 +3046,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev Rms LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.room_payroll_rev_pct} - ${glm_property_f_ly.room_payroll_rev_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.room_payroll_rev_pct} - ${glm_property_future_fcst_f_ly.room_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 
@@ -3054,7 +3054,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev RB&E LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.rbe_payroll_rev_pct} - ${glm_property_f_ly.rbe_payroll_rev_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.rbe_payroll_rev_pct} - ${glm_property_future_fcst_f_ly.rbe_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 
@@ -3062,7 +3062,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev Spa LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.spa_payroll_rev_pct} - ${glm_property_f_ly.spa_payroll_rev_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.spa_payroll_rev_pct} - ${glm_property_future_fcst_f_ly.spa_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 
@@ -3070,7 +3070,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev Golf LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.golf_payroll_rev_pct} - ${glm_property_f_ly.golf_payroll_rev_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.golf_payroll_rev_pct} - ${glm_property_future_fcst_f_ly.golf_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 
@@ -3078,7 +3078,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev Fitness & Rec LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.fitness_recreation_payroll_rev_pct} - ${glm_property_f_ly.fitness_recreation_payroll_rev_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.fitness_recreation_payroll_rev_pct} - ${glm_property_future_fcst_f_ly.fitness_recreation_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 
@@ -3086,7 +3086,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev Parking & Trans LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.parking_transportation_payroll_rev_pct - ${glm_property_f_ly.parking_transportation_payroll_rev_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.parking_transportation_payroll_rev_pct - ${glm_property_future_fcst_f_ly.parking_transportation_payroll_rev_pct} ;;
     value_format_name: usd_0
   }
 
@@ -3094,7 +3094,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev Telecom LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.telecom_payroll_rev_pct} - ${glm_property_f_ly.telecom_payroll_rev_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.telecom_payroll_rev_pct} - ${glm_property_future_fcst_f_ly.telecom_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 
@@ -3102,7 +3102,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev Retail LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.retail_payroll_rev_pct} - ${glm_property_f_ly.retail_payroll_rev_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.retail_payroll_rev_pct} - ${glm_property_future_fcst_f_ly.retail_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 
@@ -3110,7 +3110,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev Other Op. Dept. LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.other_operated_payroll_rev_pct} - ${glm_property_f_ly.other_operated_payroll_rev_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.other_operated_payroll_rev_pct} - ${glm_property_future_fcst_f_ly.other_operated_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 
@@ -3118,7 +3118,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev Mgmt Srvcs LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.property_mgmt_payroll_rev_pct} - ${glm_property_f_ly.property_mgmt_payroll_rev_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.property_mgmt_payroll_rev_pct} - ${glm_property_future_fcst_f_ly.property_mgmt_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 
@@ -3126,7 +3126,7 @@ view: glm_property_f_lytofcst {
     label: "Payroll /Rev Rentals & Other % LY:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.misc_payroll_rev_pct} - ${glm_property_f_ly.misc_payroll_rev_pct} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.misc_payroll_rev_pct} - ${glm_property_future_fcst_f_ly.misc_payroll_rev_pct} ;;
     value_format_name: percent_1
   }
 
@@ -3138,77 +3138,77 @@ view: glm_property_f_lytofcst {
     label: "Rev Rms Rental Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_ly.room_rental_mgmt_2_19_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.room_rental_mgmt_2_19_rev_amt} - ${glm_property_future_fcst_f_ly.room_rental_mgmt_2_19_rev_amt} ;;
     value_format_name: decimal_0
   }
   measure: avail_room_rental_mgmt_2_19_cnt_tofcst_v {
     label: "Rms Avail Rental Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.avail_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.avail_room_rental_mgmt_2_19_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.avail_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_ly.avail_room_rental_mgmt_2_19_cnt} ;;
     value_format_name: decimal_0
   }
   measure: occupied_owner_room_rental_mgmt_2_19_cnt_tofcst_v {
     label: "Rms Occ Owner Rental Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_owner_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.occupied_owner_room_rental_mgmt_2_19_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_owner_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_ly.occupied_owner_room_rental_mgmt_2_19_cnt} ;;
     value_format_name: decimal_0
   }
   measure: net_avail_room_rental_mgmt_2_19_cnt_tofcst_v {
     label: "Rms Avail Net Rental Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.net_avail_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.net_avail_room_rental_mgmt_2_19_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.net_avail_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_ly.net_avail_room_rental_mgmt_2_19_cnt} ;;
     value_format_name: decimal_0
   }
   measure: occupied_room_rental_mgmt_2_19_cnt_tofcst_v {
     label: "Rms Occ Rental Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.occupied_room_rental_mgmt_2_19_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_ly.occupied_room_rental_mgmt_2_19_cnt} ;;
     value_format_name: decimal_0
   }
   measure: transient_room_rental_mgmt_2_19_rev_amt_tofcst_v {
     label: "Rev Rms Transient Rental Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.transient_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_ly.transient_room_rental_mgmt_2_19_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.transient_room_rental_mgmt_2_19_rev_amt} - ${glm_property_future_fcst_f_ly.transient_room_rental_mgmt_2_19_rev_amt} ;;
     value_format_name: usd_0
   }
   measure: group_room_rental_mgmt_2_19_rev_amt_tofcst_v {
     label: "Rev Rms Group Rental Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.group_room_rental_mgmt_2_19_rev_amt - ${glm_property_f_ly.group_room_rental_mgmt_2_19_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.group_room_rental_mgmt_2_19_rev_amt - ${glm_property_future_fcst_f_ly.group_room_rental_mgmt_2_19_rev_amt} ;;
     value_format_name: decimal_0
   }
   measure: contract_room_rental_mgmt_2_19_rev_amt_tofcst_v {
     label: "Rev Rms Contract Rental Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.contract_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_ly.contract_room_rental_mgmt_2_19_rev_amt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.contract_room_rental_mgmt_2_19_rev_amt} - ${glm_property_future_fcst_f_ly.contract_room_rental_mgmt_2_19_rev_amt} ;;
     value_format_name: decimal_0
   }
   measure: occupied_transient_room_rental_mgmt_2_19_cnt_tofcst_v {
     label: "Rms Occ Transient Rental Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_transient_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.occupied_transient_room_rental_mgmt_2_19_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_transient_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_ly.occupied_transient_room_rental_mgmt_2_19_cnt} ;;
     value_format_name: decimal_0
   }
   measure: occupied_group_room_rental_mgmt_2_19_cnt_tofcst_v {
     label: "Rms Occ Group Rental Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_group_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.occupied_group_room_rental_mgmt_2_19_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_group_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_ly.occupied_group_room_rental_mgmt_2_19_cnt} ;;
     value_format_name: decimal_0
   }
   measure: occupied_contract_room_rental_mgmt_2_19_cnt_tofcst_v {
     label: "Rms Occ Contract Rental Fcst:LY - var"
     description: "Fcst - LY"
     type: number
-    sql: ${glm_property_f_fcst.occupied_contract_room_rental_mgmt_2_19_cnt} - ${glm_property_f_ly.occupied_contract_room_rental_mgmt_2_19_cnt} ;;
+    sql: ${glm_property_future_fcst_f_fcstact.occupied_contract_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_ly.occupied_contract_room_rental_mgmt_2_19_cnt} ;;
     value_format_name: decimal_0
   }
 

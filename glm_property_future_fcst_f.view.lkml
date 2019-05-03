@@ -1,4 +1,4 @@
-view: glm_property_f {
+view: glm_property_future_fcst_f {
   sql_table_name: pedw.fact.glm_property_f ;;
 
   dimension: property_key {
@@ -29,11 +29,11 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: act_bt {
-    type: number
-    sql: ${TABLE}.act_bt ;;
-    hidden: yes
-  }
+  #dimension: act_bt {
+  #  type: number
+  #  sql: ${TABLE}.act_bt ;;
+  #  hidden: yes
+  #}
 
   dimension: act_ly_bt {
     type: number
@@ -47,23 +47,23 @@ view: glm_property_f {
     hidden: yes
   }
 
-  dimension: fcst30_bt {
-    type: number
-    sql: ${TABLE}.fcst30_bt ;;
-    hidden: yes
-  }
-
-  dimension: fcst60_bt {
-    type: number
-    sql: ${TABLE}.fcst60_bt ;;
-    hidden: yes
-  }
-
-  #dimension: fcst_bt {
+  #dimension: fcst30_bt {
   #  type: number
-  #  sql: ${TABLE}.fcst_bt ;;
+  #  sql: ${TABLE}.fcst30_bt ;;
   #  hidden: yes
   #}
+
+  #dimension: fcst60_bt {
+  #  type: number
+  #  sql: ${TABLE}.fcst60_bt ;;
+  #  hidden: yes
+  #}
+
+  dimension: fcst_bt {
+    type: number
+    sql: ${TABLE}.fcst_bt ;;
+    hidden: yes
+  }
 
   dimension: rev_amt {
     type: number
