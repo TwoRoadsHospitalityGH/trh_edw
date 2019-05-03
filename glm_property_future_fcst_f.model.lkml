@@ -94,14 +94,14 @@ explore: glm_property_future_fcst_f {
 
   join: glm_property_future_fcst_f_toly {
     from: glm_property_future_fcst_f_toly
-    view_label: "     Fcst Future"
+    view_label: "   Fcst Future"
     type: cross
     relationship: one_to_one
   }
 
   join: glm_property_future_fcst_f_tobdgt {
     from: glm_property_future_fcst_f_tobdgt
-    view_label: "     Fcst Future"
+    view_label: "   Fcst Future"
     type: cross
     relationship: one_to_one
   }
