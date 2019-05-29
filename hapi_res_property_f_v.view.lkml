@@ -1,5 +1,5 @@
 view: hapi_res_property_f_v {
-  sql_table_name: pedw.dev.hapi_res_property_f ;;
+  sql_table_name: pedw.fact.hapi_res_property_f ;;
 
   #-------------------------------------------------------------------------------------------
   #-- Keys

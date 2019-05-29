@@ -4,13 +4,13 @@ include: "*.view"         # include all views in this project
 label: "Reservations-HAPI (alpha)"
 
 datagroup: model_caching_dg {
-  sql_trigger: select max( dw_update_dt ) from pedw.dev.hapi_res_property_f ;;
+  sql_trigger: select max( dw_update_dt ) from pedw.fact.hapi_res_property_f ;;
   max_cache_age: "8 hours"
 }
 
 explore: hapi_res_property_f_v {
   from: hapi_res_property_f_v
-  sql_table_name: pedw.dev.hapi_res_property_f ;;
+  sql_table_name: pedw.fact.hapi_res_property_f ;;
   group_label: "***User Acceptance Testing***"
   label: "Reservations-HAPI (uat)"
   persist_with: model_caching_dg
