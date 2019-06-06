@@ -2829,6 +2829,14 @@ view: glm_property_f_tofcst60 {
     value_format_name: percent_1
   }
 
+  measure: room_night_contract_pct_tofcst60_v {
+    label: "Rms Night Contract % Act:Fcst60 - var"
+    description: "Actual - Fcst60"
+    type: number
+    sql: ${glm_property_f_ty.room_night_contract_pct} - ${glm_property_f_fcst60.room_night_contract_pct} ;;
+    value_format_name: percent_1
+  }
+
   #-- Room nights % var
 
   measure: room_night_transient_pct_tofcst60 {
@@ -2844,6 +2852,14 @@ view: glm_property_f_tofcst60 {
     description: "(Actual - Fcst60) / Fcst60"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.room_night_group_pct}, ${glm_property_f_fcst60.room_night_group_pct}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: room_night_contract_pct_tofcst60 {
+    label: "Rms Night Contract % Act:Fcst60 - var %"
+    description: "(Actual - Fcst60) / Fcst60"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.room_night_contract_pct}, ${glm_property_f_fcst60.room_night_contract_pct}) ;;
     value_format_name: percent_1
   }
 

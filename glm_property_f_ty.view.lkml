@@ -1688,6 +1688,13 @@ view: glm_property_f_ty {
     value_format_name: percent_1
   }
 
+  measure: room_night_contract_pct {
+    label: "Rms Night Contract %"
+    type: number
+    sql: utl..udf_divide( ${occupied_contract_room_cnt}, ${occupied_room_cnt} );;
+    value_format_name: percent_1
+  }
+
   #-- Rev PAR
 
   measure: rev_par_amt {
