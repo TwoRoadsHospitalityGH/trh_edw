@@ -1955,14 +1955,14 @@ view: glm_property_f_tobdgt {
     label: "Rms Occ Comp Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.comp_room_cnt} - ${glm_property_f_bdgt.comp_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.comp_room_cnt}, ${glm_property_f_bdgt.comp_room_cnt}) ;;
     value_format_name: percent_1
   }
 
   measure: net_avail_room_cnt_tobdgt {
     label: "Rms Avail Net Act:Bdgt - var %"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.net_avail_room_cnt} - ${glm_property_f_bdgt.net_avail_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.net_avail_room_cnt}, ${glm_property_f_bdgt.net_avail_room_cnt}) ;;
     value_format_name: percent_1
   }
 
