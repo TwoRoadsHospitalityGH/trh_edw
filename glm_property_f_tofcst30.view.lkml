@@ -1848,14 +1848,14 @@ view: glm_property_f_tofcst30 {
     label: "Rms Occ Comp Act:Fcst30 - var"
     description: "Actual - Fcst30"
     type: number
-    sql: ${glm_property_f_ty.comp_room_cnt - ${glm_property_f_fcst30.comp_room_cnt} ;;
+    sql: ${glm_property_f_ty.comp_room_cnt} - ${glm_property_f_fcst30.comp_room_cnt} ;;
     value_format_name: decimal_0
   }
 
   measure: net_avail_room_cnt_tofcst30_v {
     label: "Rms Avail Net Act:Fcst30 - var"
     type: number
-    sql: ${glm_property_f_ty.net_avail_room_cnt - ${glm_property_f_fcst30.net_avail_room_cnt} ;;
+    sql: ${glm_property_f_ty.net_avail_room_cnt} - ${glm_property_f_fcst30.net_avail_room_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1955,14 +1955,14 @@ view: glm_property_f_tofcst30 {
     label: "Rms Occ Comp Act:Fcst30 - var %"
     description: "(Actual - Fcst30) / Fcst30"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.comp_room_cnt - ${glm_property_f_fcst30.comp_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.comp_room_cnt} - ${glm_property_f_fcst30.comp_room_cnt}) ;;
     value_format_name: percent_1
   }
 
   measure: net_avail_room_cnt_tofcst30 {
     label: "Rms Avail Net Act:Fcst30 - var %"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.net_avail_room_cnt - ${glm_property_f_fcst30.net_avail_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.net_avail_room_cnt} - ${glm_property_f_fcst30.net_avail_room_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -3188,7 +3188,7 @@ view: glm_property_f_tofcst30 {
     label: "Rev Rms Group Rental Act:Fcst30 - var"
     description: "Actual - Fcst30"
     type: number
-    sql:${glm_property_f_ty.group_room_rental_mgmt_2_19_rev_amt - ${glm_property_f_fcst30.group_room_rental_mgmt_2_19_rev_amt} ;;
+    sql:${glm_property_f_ty.group_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_fcst30.group_room_rental_mgmt_2_19_rev_amt} ;;
     value_format_name: decimal_0
   }
   measure: contract_room_rental_mgmt_2_19_rev_amt_tofcst30_v {

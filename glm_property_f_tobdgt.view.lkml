@@ -3190,7 +3190,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Rms Group Rental Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.group_room_rental_mgmt_2_19_rev_amt - ${glm_property_f_bdgt.group_room_rental_mgmt_2_19_rev_amt} ;;
+    sql: ${glm_property_f_ty.group_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_bdgt.group_room_rental_mgmt_2_19_rev_amt} ;;
     value_format_name: decimal_0
   }
   measure: contract_room_rental_mgmt_2_19_rev_amt_tobdgt_v {

@@ -3194,7 +3194,7 @@ view: glm_property_f_toly {
     label: "Rev Rms Group Rental Act:LY - var"
     description: "Actual - LY"
     type: number
-    sql: ${glm_property_f_ty.group_room_rental_mgmt_2_19_rev_amt - ${glm_property_f_ly.group_room_rental_mgmt_2_19_rev_amt} ;;
+    sql: ${glm_property_f_ty.group_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_ly.group_room_rental_mgmt_2_19_rev_amt} ;;
     value_format_name: decimal_0
   }
   measure: contract_room_rental_mgmt_2_19_rev_amt_toly_v {
