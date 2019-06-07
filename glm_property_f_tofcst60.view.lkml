@@ -1953,14 +1953,14 @@ view: glm_property_f_tofcst60 {
     label: "Rms Occ Comp Act:Fcst60 - var %"
     description: "(Actual - Fcst60) / Fcst60"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.comp_room_cnt} - ${glm_property_f_fcst60.comp_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.comp_room_cnt}, ${glm_property_f_fcst60.comp_room_cnt}) ;;
     value_format_name: percent_1
   }
 
   measure: net_avail_room_cnt_tofcst60 {
     label: "Rms Avail Net Act:Fcst60 - var %"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.net_avail_room_cnt} - ${glm_property_f_fcst60.net_avail_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.net_avail_room_cnt}, ${glm_property_f_fcst60.net_avail_room_cnt}) ;;
     value_format_name: percent_1
   }
 
