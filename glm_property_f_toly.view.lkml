@@ -1930,14 +1930,14 @@ view: glm_property_f_toly {
     label: "Rms Occ Comp Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.comp_room_cnt - ${glm_property_f_ly.comp_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.comp_room_cnt} - ${glm_property_f_ly.comp_room_cnt}) ;;
     value_format_name: percent_1
   }
 
   measure: net_avail_room_cnt_toly {
     label: "Rms Avail Net Act:LY - var %"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.net_avail_room_cnt - ${glm_property_f_ly.net_avail_room_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.net_avail_room_cnt} - ${glm_property_f_ly.net_avail_room_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1945,7 +1945,7 @@ view: glm_property_f_toly {
     label: "Rev Rms Transient Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.transient_room_rev_amt - ${glm_property_f_ly.transient_room_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.transient_room_rev_amt} - ${glm_property_f_ly.transient_room_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1953,7 +1953,7 @@ view: glm_property_f_toly {
     label: "Rev Rms Group Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.group_room_rev_amt - ${glm_property_f_ly.group_room_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.group_room_rev_amt} - ${glm_property_f_ly.group_room_rev_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1961,7 +1961,7 @@ view: glm_property_f_toly {
     label: "Rev Rms Contract Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.contract_room_rev_amt - ${glm_property_f_ly.contract_room_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.contract_room_rev_amt} - ${glm_property_f_ly.contract_room_rev_amt}) ;;
     value_format_name: percent_1
   }
 
