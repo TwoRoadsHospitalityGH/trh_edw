@@ -2915,6 +2915,24 @@ view: glm_property_f_tofcst60 {
     value_format_name: percent_1
   }
 
+  #-- Rev POR
+
+  measure: rev_por_amt_fcst60_v {
+    label: "Rev POR $ Act:Fcst60 - var"
+    description: "Actual - Fcst60"
+    type: number
+    sql: ${glm_property_f_ty.rev_por_amt} - ${glm_property_f_fcst60.rev_por_amt} ;;
+    value_format_name: usd_0
+  }
+
+  measure: rev_por_amt_fcst60 {
+    label: "Rev POR $ Act:Fcst60 - var %"
+    description: "(Actual - Fcst60) / Fcst60"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rev_por_amt}, ${glm_property_f_fcst60.rev_por_amt}) ;;
+    value_format_name: percent_1
+  }
+
   #-- Avg check
 
   measure: rbe_check_avg_amt_tofcst60_v {
