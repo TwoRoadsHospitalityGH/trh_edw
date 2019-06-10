@@ -2899,6 +2899,24 @@ view: glm_property_future_fcst_f_toly {
     value_format_name: percent_1
   }
 
+  #-- Rev POR
+
+  measure: rev_por_amt_tofcst_v {
+    label: "Rev POR $ Fcst:Bdgt - var"
+    description: "Actual - Fcst"
+    type: number
+    sql: ${glm_property_future_fcst_f_fcstact.rev_por_amt} - ${glm_property_future_fcst_f_ly.rev_por_amt} ;;
+    value_format_name: usd_0
+  }
+
+  measure: rev_por_amt_tofcst {
+    label: "Rev POR $ Act:Fcst - var %"
+    description: "(Actual - Fcst) / Fcst"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_fcstact.rev_por_amt}, ${glm_property_future_fcst_f_ly.rev_por_amt}) ;;
+    value_format_name: percent_1
+  }
+
   #-- Avg check
 
   measure: rbe_check_avg_amt_tofcst_v {
