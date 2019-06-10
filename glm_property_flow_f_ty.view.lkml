@@ -727,7 +727,7 @@ view: glm_property_flow_f_ty {
   measure: flow_var_pct {
     label: "Flow %"
     description: "Overall Flow %"
-    type: sum
+    type: average
     sql: ${glm_property_flow_f.flow_var_pct} ;;
     value_format_name: percent_1
   }
