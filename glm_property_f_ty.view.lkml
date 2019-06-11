@@ -1379,6 +1379,22 @@ view: glm_property_f_ty {
     value_format_name: usd_0
   }
 
+  #-- Profit as % to rev
+
+  measure: profit_rev_pct {
+    label: "Profit /TRev %"
+    type: number
+    sql: utl..udf_divide( ${profit_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_profit_rev_pct {
+    label: "Profit /Rev RB&E %"
+    type: number
+    sql: utl..udf_divide( ${rbe_profit_amt}, ${rbe_rev_amt} );;
+    value_format_name: percent_1
+  }
+
   #-- Cost
 
   measure: cost_of_sales_amt {
