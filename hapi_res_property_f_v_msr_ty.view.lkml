@@ -36,7 +36,7 @@ view: hapi_res_property_f_v_msr_ty {
     label: "Reservations"
     description: "Count of distinct reservations"
     type: count_distinct
-    sql: iff( ${tyly_bt} = 1, ${hapi_res_property_f_v.reservation_key}, to_number( null ) );;
+    sql: iff( ${tyly_bt} = 1, ${hapi_res_property_f_v.reservation_key}, to_char( null ) );;
     value_format_name: decimal_0
   }
 
