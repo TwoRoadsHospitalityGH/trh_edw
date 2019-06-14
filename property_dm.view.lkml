@@ -349,6 +349,13 @@ view: property_dm {
     sql: ${TABLE}.transition_dt ;;
   }
 
+  dimension: disposition_dt {
+    label: "Disposition Date"
+    description: "Property outgoing transition date."
+    type: date
+    sql: ${TABLE}.disposition_dt ;;
+  }
+
   dimension: same_store_financial_fl {
     label: "Same Store Financial"
     description: "Indication of same store financials property."
