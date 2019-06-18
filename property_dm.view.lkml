@@ -333,6 +333,7 @@ view: property_dm {
     description: "Property website URL."
     type: string
     sql: ${TABLE}.WEBSITE_URL ;;
+    html: <a href="{{value}}">{{value}}</a> ;;
   }
 
   dimension: opening_dt {
