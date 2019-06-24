@@ -1,5 +1,4 @@
 view: glm_property_f_tobdgt {
-
   derived_table: {
     sql: select 1 as key_no ;;
   }
@@ -12,10 +11,10 @@ view: glm_property_f_tobdgt {
   }
 
   #--------------------------------------------------------------------------------
-  #-- actual to LY: rev, AGOP, rooms_revenue, RB&E
+  #-- actual to Bdgt: rev, AGOP, rooms_rev_amt, RB&E
   #--------------------------------------------------------------------------------
 
-  #-- Rev
+  #-- Rev var
 
   measure: rev_amt_tobdgt_v {
     label: "Rev Act:Bdgt - var"
@@ -25,14 +24,6 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  #measure: rev_abs_amt_tobdgt_v {
-  #  label: "Rev Abs Act:Bdgt - var"
-  #  description: "Abs(Actual - Bdgt)"
-  #  type: number
-  #  sql: abs(${glm_property_f_ty.rev_amt} - ${glm_property_f_bdgt.rev_amt}) ;;
-  #  value_format_name: decimal_0
-  #}
-
   measure: agop_amt_tobdgt_v {
     label: "AGOP Act:Bdgt - var"
     description: "Actual - Bdgt"
@@ -40,14 +31,6 @@ view: glm_property_f_tobdgt {
     sql: ${glm_property_f_ty.agop_amt} - ${glm_property_f_bdgt.agop_amt} ;;
     value_format_name: decimal_0
   }
-
-  #measure: agop_abs_amt_tobdgt_v {
-  #  label: "AGOP Abs Act:Bdgt - var"
-  #  description: "Abs(Actual - Bdgt)"
-  #  type: number
-  #  sql: abs(${glm_property_f_ty.agop_amt} - ${glm_property_f_bdgt.agop_amt}) ;;
-  #  value_format_name: decimal_0
-  #}
 
   measure: gop_amt_tobdgt_v {
     label: "GOP Act:Bdgt - var"
@@ -89,7 +72,7 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: rbe_catering_rev_amt_tobdgt_v {
+  measure: rbe_catering_rev_tobdgt_v {
     label: "Rev RB&E Catering Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
@@ -97,21 +80,13 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: rbe_conference_services_rev_amt_tobdgt_v {
+  measure: rbe_conference_services_rev_tobdgt_v {
     label: "Rev RB&E Conference Services Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.rbe_conference_services_rev_amt} - ${glm_property_f_bdgt.rbe_conference_services_rev_amt} ;;
     value_format_name: decimal_0
   }
-
-  #measure: rbe_banquet_catering_conference_services_rev_amt_tobdgt_v {
-  #  label: "Rev RB&E Conference Services Act:Bdgt - var"
-  #  description: "Actual - Bdgt"
-  #  type: number
-  #  sql: ${glm_property_f_ty.rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_f_bdgt.rbe_banquet_catering_conference_services_rev_amt} ;;
-  #  value_format_name: decimal_0
-  #}
 
   measure: rbe_outlet_rev_amt_tobdgt_v {
     label: "Rev RB&E Outlet Act:Bdgt - var"
@@ -125,7 +100,7 @@ view: glm_property_f_tobdgt {
     label: "Rev RB&E Room Service Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rbe_other_rev_amt} - ${glm_property_f_bdgt.rbe_room_service_rev_amt} ;;
+    sql: ${glm_property_f_ty.rbe_room_service_rev_amt} - ${glm_property_f_bdgt.rbe_room_service_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -136,15 +111,6 @@ view: glm_property_f_tobdgt {
     sql: ${glm_property_f_ty.rbe_other_rev_amt} - ${glm_property_f_bdgt.rbe_other_rev_amt} ;;
     value_format_name: decimal_0
   }
-
-  #measure: rbe_outlet_other_rev_amt_tobdgt_v {
-  #  label: "Rev RB&E Outlet Other Act:Bdgt - var"
-  #  description: "Actual - Bdgt"
-  #  type: number
-  #  sql: ${glm_property_f_ty.rbe_outlet_other_rev_amt} - ${glm_property_f_bdgt.rbe_outlet_other_rev_amt} ;;
-  #  value_format_name: decimal_0
-  #}
-
 
   measure: food_rbe_rev_amt_tobdgt_v {
     label: "Rev Food RB&E Act:Bdgt - var"
@@ -162,7 +128,7 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: food_rbe_catering_rev_amt_tobdgt_v {
+  measure: food_rbe_catering_rev_tobdgt_v {
     label: "Rev Food RB&E Catering Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
@@ -170,21 +136,13 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: food_rbe_conference_services_rev_amt_tobdgt_v {
+  measure: food_rbe_conference_services_rev_tobdgt_v {
     label: "Rev Food RB&E Conference Services Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.food_rbe_conference_services_rev_amt} - ${glm_property_f_bdgt.food_rbe_conference_services_rev_amt} ;;
     value_format_name: decimal_0
   }
-
-  #measure: food_rbe_banquet_catering_conference_services_rev_amt_tobdgt_v {
-  #  label: "Rev Food RB&E Conference Services Act:Bdgt - var"
-  #  description: "Actual - Bdgt"
-  #  type: number
-  #  sql: ${glm_property_f_ty.food_rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_f_bdgt.food_rbe_banquet_catering_conference_services_rev_amt} ;;
-  #  value_format_name: decimal_0
-  #}
 
   measure: food_rbe_outlet_rev_amt_tobdgt_v {
     label: "Rev Food RB&E Outlet Act:Bdgt - var"
@@ -198,7 +156,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Food RB&E Room Service Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.food_rbe_other_rev_amt} - ${glm_property_f_bdgt.food_rbe_room_service_rev_amt} ;;
+    sql: ${glm_property_f_ty.food_rbe_room_service_rev_amt} - ${glm_property_f_bdgt.food_rbe_room_service_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -209,7 +167,6 @@ view: glm_property_f_tobdgt {
     sql: ${glm_property_f_ty.food_rbe_other_rev_amt} - ${glm_property_f_bdgt.food_rbe_other_rev_amt} ;;
     value_format_name: decimal_0
   }
-
 
   measure: beverage_rbe_rev_amt_tobdgt_v {
     label: "Rev Beverage RB&E Act:Bdgt - var"
@@ -227,7 +184,7 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: beverage_rbe_catering_rev_amt_tobdgt_v {
+  measure: beverage_rbe_catering_rev_tobdgt_v {
     label: "Rev Beverage RB&E Catering Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
@@ -235,21 +192,13 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: beverage_rbe_conference_services_rev_amt_tobdgt_v {
+  measure: beverage_rbe_conference_services_rev_tobdgt_v {
     label: "Rev Beverage RB&E Conference Services Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.beverage_rbe_conference_services_rev_amt} - ${glm_property_f_bdgt.beverage_rbe_conference_services_rev_amt} ;;
     value_format_name: decimal_0
   }
-
-  #measure: beverage_rbe_banquet_catering_conference_services_rev_amt_tobdgt_v {
-  #  label: "Rev Beverage RB&E Conference Services Act:Bdgt - var"
-  #  description: "Actual - Bdgt"
-  #  type: number
-  #  sql: ${glm_property_f_ty.beverage_rbe_banquet_catering_conference_services_rev_amt} - ${glm_property_f_bdgt.beverage_rbe_banquet_catering_conference_services_rev_amt} ;;
-  #  value_format_name: decimal_0
-  #}
 
   measure: beverage_rbe_outlet_rev_amt_tobdgt_v {
     label: "Rev Beverage RB&E Outlet Act:Bdgt - var"
@@ -263,7 +212,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Beverage RB&E Room Service Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.beverage_rbe_other_rev_amt} - ${glm_property_f_bdgt.beverage_rbe_room_service_rev_amt} ;;
+    sql: ${glm_property_f_ty.beverage_rbe_room_service_rev_amt} - ${glm_property_f_bdgt.beverage_rbe_room_service_rev_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -323,14 +272,6 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  #measure: spa_fitness_recreation_rev_amt_tobdgt_v {
-  #  label: "Rev Spa Fitness & Rec Act:Bdgt - var"
-  #  description: "Actual - Bdgt"
-  #  type: number
-  #  sql: ${glm_property_f_ty.spa_fitness_recreation_rev_amt} - ${glm_property_f_bdgt.spa_fitness_recreation_rev_amt} ;;
-  #  value_format_name: decimal_0
-  #}
-
   measure: other_operated_rev_amt_tobdgt_v {
     label: "Rev Other Op. Dept. Act:Bdgt - var"
     description: "Actual - Bdgt"
@@ -379,15 +320,13 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-
-#-- Rev % var
-
+  #-- Rev var %
 
   measure: rev_amt_tobdgt {
     label: "Rev Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rev_amt}, ${glm_property_f_bdgt.rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rev_amt}, ${glm_property_f_bdgt.rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -395,7 +334,7 @@ view: glm_property_f_tobdgt {
     label: "AGOP Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.agop_amt}, ${glm_property_f_bdgt.agop_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.agop_amt}, ${glm_property_f_bdgt.agop_amt} );;
     value_format_name: percent_1
   }
 
@@ -403,7 +342,7 @@ view: glm_property_f_tobdgt {
     label: "GOP Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.gop_amt}, ${glm_property_f_bdgt.gop_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.gop_amt}, ${glm_property_f_bdgt.gop_amt} );;
     value_format_name: percent_1
   }
 
@@ -411,7 +350,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Rms Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.room_rev_amt}, ${glm_property_f_bdgt.room_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.room_rev_amt}, ${glm_property_f_bdgt.room_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -419,7 +358,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Other Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_rev_amt}, ${glm_property_f_bdgt.other_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_rev_amt}, ${glm_property_f_bdgt.other_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -427,7 +366,7 @@ view: glm_property_f_tobdgt {
     label: "Rev RB&E Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_rev_amt}, ${glm_property_f_bdgt.rbe_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_rev_amt}, ${glm_property_f_bdgt.rbe_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -435,39 +374,31 @@ view: glm_property_f_tobdgt {
     label: "Rev RB&E Banquet Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_banquet_rev_amt}, ${glm_property_f_bdgt.rbe_banquet_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_banquet_rev_amt}, ${glm_property_f_bdgt.rbe_banquet_rev_amt} );;
     value_format_name: percent_1
   }
 
-  measure: rbe_catering_rev_amt_tobdgt {
+  measure: rbe_catering_rev_tobdgt {
     label: "Rev RB&E Catering Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_catering_rev_amt}, ${glm_property_f_bdgt.rbe_catering_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_catering_rev_amt}, ${glm_property_f_bdgt.rbe_catering_rev_amt} );;
     value_format_name: percent_1
   }
 
-  measure: rbe_conference_services_rev_amt_tobdgt {
+  measure: rbe_conference_services_rev_tobdgt {
     label: "Rev RB&E Conference Services Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_conference_services_rev_amt}, ${glm_property_f_bdgt.rbe_conference_services_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_conference_services_rev_amt}, ${glm_property_f_bdgt.rbe_conference_services_rev_amt} );;
     value_format_name: percent_1
   }
-
-  #measure: rbe_banquet_catering_conference_services_rev_amt_tobdgt {
-  #  label: "Rev RB&E Banquet Catering Conference Services Act:Bdgt - var %"
-  #  description: "(Actual - Bdgt) / Bdgt"
-  #  type: number
-  #  sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_banquet_catering_conference_services_rev_amt}, ${glm_property_f_bdgt.rbe_banquet_catering_conference_services_rev_amt}) ;;
-  #  value_format_name: percent_1
-  #}
 
   measure: rbe_outlet_rev_amt_tobdgt {
     label: "Rev RB&E Outlet Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_rev_amt}, ${glm_property_f_bdgt.rbe_outlet_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_rev_amt}, ${glm_property_f_bdgt.rbe_outlet_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -475,7 +406,7 @@ view: glm_property_f_tobdgt {
     label: "Rev RB&E Room Service Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_other_rev_amt}, ${glm_property_f_bdgt.rbe_room_service_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_room_service_rev_amt}, ${glm_property_f_bdgt.rbe_room_service_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -483,25 +414,15 @@ view: glm_property_f_tobdgt {
     label: "Rev RB&E Other Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_other_rev_amt}, ${glm_property_f_bdgt.rbe_other_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_other_rev_amt}, ${glm_property_f_bdgt.rbe_other_rev_amt} );;
     value_format_name: percent_1
   }
-
-  #measure: rbe_outlet_other_rev_amt_tobdgt {
-  #  label: "Rev RB&E Outlet Other Act:Bdgt - var %"
-  #  description: "(Actual - Bdgt) / Bdgt"
-  #  type: number
-  #  sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_other_rev_amt}, ${glm_property_f_bdgt.rbe_outlet_other_rev_amt}) ;;
-  #  value_format_name: percent_1
-  #}
-
-
 
   measure: food_rbe_rev_amt_tobdgt {
     label: "Rev Food RB&E Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_rev_amt}, ${glm_property_f_bdgt.food_rbe_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_rev_amt}, ${glm_property_f_bdgt.food_rbe_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -509,23 +430,23 @@ view: glm_property_f_tobdgt {
     label: "Rev Food RB&E Banquet Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_banquet_rev_amt}, ${glm_property_f_bdgt.food_rbe_banquet_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_banquet_rev_amt}, ${glm_property_f_bdgt.food_rbe_banquet_rev_amt} );;
     value_format_name: percent_1
   }
 
-  measure: food_rbe_catering_rev_amt_tobdgt {
+  measure: food_rbe_catering_rev_tobdgt {
     label: "Rev Food RB&E Catering Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_catering_rev_amt}, ${glm_property_f_bdgt.food_rbe_catering_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_catering_rev_amt}, ${glm_property_f_bdgt.food_rbe_catering_rev_amt} );;
     value_format_name: percent_1
   }
 
-  measure: food_rbe_conference_services_rev_amt_tobdgt {
+  measure: food_rbe_conference_services_rev_tobdgt {
     label: "Rev Food RB&E Conference Services Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_conference_services_rev_amt}, ${glm_property_f_bdgt.food_rbe_conference_services_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_conference_services_rev_amt}, ${glm_property_f_bdgt.food_rbe_conference_services_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -533,7 +454,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Food RB&E Outlet Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_outlet_rev_amt}, ${glm_property_f_bdgt.food_rbe_outlet_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_outlet_rev_amt}, ${glm_property_f_bdgt.food_rbe_outlet_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -541,7 +462,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Food RB&E Room Service Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_other_rev_amt}, ${glm_property_f_bdgt.food_rbe_room_service_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_room_service_rev_amt}, ${glm_property_f_bdgt.food_rbe_room_service_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -549,16 +470,15 @@ view: glm_property_f_tobdgt {
     label: "Rev Food RB&E Other Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_other_rev_amt}, ${glm_property_f_bdgt.food_rbe_other_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_other_rev_amt}, ${glm_property_f_bdgt.food_rbe_other_rev_amt} );;
     value_format_name: percent_1
   }
-
 
   measure: beverage_rbe_rev_amt_tobdgt {
     label: "Rev Beverage RB&E Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -566,23 +486,23 @@ view: glm_property_f_tobdgt {
     label: "Rev Beverage RB&E Banquet Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_banquet_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_banquet_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_banquet_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_banquet_rev_amt} );;
     value_format_name: percent_1
   }
 
-  measure: beverage_rbe_catering_rev_amt_tobdgt {
+  measure: beverage_rbe_catering_rev_tobdgt {
     label: "Rev Beverage RB&E Catering Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_catering_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_catering_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_catering_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_catering_rev_amt} );;
     value_format_name: percent_1
   }
 
-  measure: beverage_rbe_conference_services_rev_amt_tobdgt {
+  measure: beverage_rbe_conference_services_rev_tobdgt {
     label: "Rev Beverage RB&E Conference Services Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_conference_services_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_conference_services_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_conference_services_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_conference_services_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -590,7 +510,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Beverage RB&E Outlet Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_outlet_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_outlet_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_outlet_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_outlet_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -598,7 +518,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Beverage RB&E Room Service Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_other_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_room_service_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_room_service_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_room_service_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -606,7 +526,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Beverage RB&E Other Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_other_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_other_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_other_rev_amt}, ${glm_property_f_bdgt.beverage_rbe_other_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -614,7 +534,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Spa Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.spa_rev_amt}, ${glm_property_f_bdgt.spa_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.spa_rev_amt}, ${glm_property_f_bdgt.spa_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -622,7 +542,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Golf Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.golf_rev_amt}, ${glm_property_f_bdgt.golf_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.golf_rev_amt}, ${glm_property_f_bdgt.golf_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -630,7 +550,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Fitness & Rec Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.fitness_recreation_rev_amt}, ${glm_property_f_bdgt.fitness_recreation_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.fitness_recreation_rev_amt}, ${glm_property_f_bdgt.fitness_recreation_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -638,7 +558,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Parking & Trans Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.parking_transportation_rev_amt}, ${glm_property_f_bdgt.parking_transportation_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.parking_transportation_rev_amt}, ${glm_property_f_bdgt.parking_transportation_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -646,7 +566,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Telecom Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.telecom_rev_amt}, ${glm_property_f_bdgt.telecom_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.telecom_rev_amt}, ${glm_property_f_bdgt.telecom_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -654,23 +574,15 @@ view: glm_property_f_tobdgt {
     label: "Rev Retail Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.retail_rev_amt}, ${glm_property_f_bdgt.retail_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.retail_rev_amt}, ${glm_property_f_bdgt.retail_rev_amt} );;
     value_format_name: percent_1
   }
-
-  #measure: spa_fitness_recreation_rev_amt_tobdgt {
-  #  label: "Rev Spa Fitness & Rec Act:Bdgt - var %"
-  #  description: "(Actual - Bdgt) / Bdgt"
-  #  type: number
-  #  sql: utl..udf_percent_var( ${glm_property_f_ty.spa_fitness_recreation_rev_amt}, ${glm_property_f_bdgt.spa_fitness_recreation_rev_amt}) ;;
-  #  value_format_name: percent_1
-  #}
 
   measure: other_operated_rev_amt_tobdgt {
     label: "Rev Other Op. Dept. Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_rev_amt}, ${glm_property_f_bdgt.other_operated_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_rev_amt}, ${glm_property_f_bdgt.other_operated_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -678,7 +590,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Mgmt Srvcs Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.property_mgmt_rev_amt}, ${glm_property_f_bdgt.property_mgmt_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.property_mgmt_rev_amt}, ${glm_property_f_bdgt.property_mgmt_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -686,7 +598,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Rentals & Other Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.misc_rev_amt}, ${glm_property_f_bdgt.misc_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.misc_rev_amt}, ${glm_property_f_bdgt.misc_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -694,7 +606,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Nonoperating Realty Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_rev_amt}, ${glm_property_f_bdgt.nonoperating_realty_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_rev_amt}, ${glm_property_f_bdgt.nonoperating_realty_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -702,7 +614,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Nonoperating Airport Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_rev_amt}, ${glm_property_f_bdgt.nonoperating_airport_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_rev_amt}, ${glm_property_f_bdgt.nonoperating_airport_rev_amt} );;
     value_format_name: percent_1
   }
 
@@ -710,11 +622,11 @@ view: glm_property_f_tobdgt {
     label: "Rev Nonoperating Utility Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_rev_amt}, ${glm_property_f_bdgt.nonoperating_util_rev_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_rev_amt}, ${glm_property_f_bdgt.nonoperating_util_rev_amt} );;
     value_format_name: percent_1
   }
 
-  #-- Expenses
+  # -- Expenses
 
   measure: exp_amt_tobdgt_v {
     label: "Exp Act:Bdgt - var"
@@ -749,7 +661,7 @@ view: glm_property_f_tobdgt {
   }
 
   measure: golf_exp_amt_tobdgt_v {
-    label: "Exp Golf Act:Bdgt - var"
+    label: "Exp Golf Other Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.golf_exp_amt} - ${glm_property_f_bdgt.golf_exp_amt} ;;
@@ -868,7 +780,7 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  #-- Expenses % var
+  # -- Expenses % var
 
   measure: exp_amt_tobdgt {
     label: "Exp Act:Bdgt - var %"
@@ -903,7 +815,7 @@ view: glm_property_f_tobdgt {
   }
 
   measure: golf_exp_amt_tobdgt {
-    label: "Exp Golf Act:Bdgt - var %"
+    label: "Exp Golf Other Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.golf_exp_amt}, ${glm_property_f_bdgt.golf_exp_amt}) ;;
@@ -1022,7 +934,7 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  #-- Other Expenses
+  # -- Other Expenses
 
   measure: other_exp_amt_tobdgt_v {
     label: "Exp Other Act:Bdgt - var"
@@ -1176,7 +1088,7 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  #-- Other Expenses % var
+# -- Other Expenses % var
 
   measure: other_exp_amt_tobdgt {
     label: "Exp Other Act:Bdgt - var %"
@@ -1307,7 +1219,7 @@ view: glm_property_f_tobdgt {
   }
 
   measure: nonoperating_realty_other_exp_amt_tobdgt {
-    label: "Exp Other Nonoperating Realty Act:Bdgt - var %"
+    label: "Exp Nonoperating Realty Other Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_other_exp_amt}, ${glm_property_f_bdgt.nonoperating_realty_other_exp_amt}) ;;
@@ -1315,7 +1227,7 @@ view: glm_property_f_tobdgt {
   }
 
   measure: nonoperating_airport_other_exp_amt_tobdgt {
-    label: "Exp Other Nonoperating Airport Act:Bdgt - var %"
+    label: "Exp Nonoperating Airport Other Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_other_exp_amt}, ${glm_property_f_bdgt.nonoperating_airport_other_exp_amt}) ;;
@@ -1323,7 +1235,7 @@ view: glm_property_f_tobdgt {
   }
 
   measure: nonoperating_util_other_exp_amt_tobdgt {
-    label: "Exp Other Nonoperating Utility Act:Bdgt - var %"
+    label: "Exp Nonoperating Utility Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_other_exp_amt}, ${glm_property_f_bdgt.nonoperating_util_other_exp_amt}) ;;
@@ -1349,7 +1261,7 @@ view: glm_property_f_tobdgt {
   }
 
   measure: rbe_payroll_amt_tobdgt_v {
-    label: "Payroll RB&E Act:Bdgt - var"
+    label: "Payroll RB&E Other Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.rbe_payroll_amt} - ${glm_property_f_bdgt.rbe_payroll_amt} ;;
@@ -1365,7 +1277,7 @@ view: glm_property_f_tobdgt {
   }
 
   measure: golf_payroll_amt_tobdgt_v {
-    label: "Payroll Golf Act:Bdgt - var"
+    label: "Payroll RB&E Golf Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.golf_payroll_amt} - ${glm_property_f_bdgt.golf_payroll_amt} ;;
@@ -1492,7 +1404,6 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-
   #-- Payroll % var
 
   measure: payroll_amt_tobdgt {
@@ -1512,7 +1423,7 @@ view: glm_property_f_tobdgt {
   }
 
   measure: rbe_payroll_amt_tobdgt {
-    label: "Payroll RB&E Act:Bdgt - var %"
+    label: "Payroll RB&E Other Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_payroll_amt}, ${glm_property_f_bdgt.rbe_payroll_amt}) ;;
@@ -1528,7 +1439,7 @@ view: glm_property_f_tobdgt {
   }
 
   measure: golf_payroll_amt_tobdgt {
-    label: "Payroll Golf Act:Bdgt - var %"
+    label: "Payroll RB&E Golf Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.golf_payroll_amt}, ${glm_property_f_bdgt.golf_payroll_amt}) ;;
@@ -1647,6 +1558,14 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
+  measure: rbe_outlet_payroll_amt_tobdgt {
+    label: "Payroll RB&E Outlet Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_payroll_amt}, ${glm_property_f_bdgt.rbe_outlet_payroll_amt}) ;;
+    value_format_name: percent_1
+  }
+
   #-- Covers
 
   measure: rbe_cover_cnt_tobdgt_v {
@@ -1665,14 +1584,13 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: rbe_catering_cover_cnt_tobdgt_v {
+  measure: rbe_catering_cover_tobdgt_v {
     label: "Cvrs RB&E Catering Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.rbe_catering_cover_cnt} - ${glm_property_f_bdgt.rbe_catering_cover_cnt} ;;
     value_format_name: decimal_0
   }
-
 
   measure: rbe_outlet_cover_cnt_tobdgt_v {
     label: "Cvrs RB&E Outlet Act:Bdgt - var"
@@ -1686,7 +1604,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Room Service Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rbe_other_cover_cnt} - ${glm_property_f_bdgt.rbe_room_service_cover_cnt} ;;
+    sql: ${glm_property_f_ty.rbe_room_service_cover_cnt} - ${glm_property_f_bdgt.rbe_room_service_cover_cnt} ;;
     value_format_name: decimal_0
   }
 
@@ -1697,7 +1615,6 @@ view: glm_property_f_tobdgt {
     sql: ${glm_property_f_ty.rbe_other_cover_cnt} - ${glm_property_f_bdgt.rbe_other_cover_cnt} ;;
     value_format_name: decimal_0
   }
-
 
   #-- Covers % var
 
@@ -1717,7 +1634,7 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  measure: rbe_catering_cover_cnt_tobdgt {
+  measure: rbe_catering_cover_tobdgt {
     label: "Cvrs RB&E Catering Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
@@ -1737,7 +1654,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Room Service Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_other_cover_cnt}, ${glm_property_f_bdgt.rbe_room_service_cover_cnt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_room_service_cover_cnt}, ${glm_property_f_bdgt.rbe_room_service_cover_cnt}) ;;
     value_format_name: percent_1
   }
 
@@ -1766,7 +1683,6 @@ view: glm_property_f_tobdgt {
     sql: ${glm_property_f_ty.golf_round_cnt} - ${glm_property_f_bdgt.golf_round_cnt} ;;
     value_format_name: decimal_0
   }
-
 
   #-- Treatments % var
 
@@ -1884,14 +1800,20 @@ view: glm_property_f_tobdgt {
   }
 
   measure: no_show_room_rev_amt_tobdgt_v {
-    label: "Rev Rms No show Act:Bdgt - var"
+    label: "Rev Rms No Show Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.no_show_room_rev_amt} - ${glm_property_f_bdgt.no_show_room_rev_amt} ;;
     value_format_name: decimal_0
   }
 
-
+  measure: service_charge_incl_room_rev_amt_tobdgt_v {
+    label: "Rev Rms Srvc Charge Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.service_charge_incl_room_rev_amt} - ${glm_property_f_bdgt.service_charge_incl_room_rev_amt} ;;
+    value_format_name: decimal_0
+  }
 
   #-- Rooms % var
 
@@ -2040,14 +1962,6 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  #measure: rbe_banquet_catering_conference_services_profit_amt_tobdgt_v {
-  #  label: "Profit RB&E Banquet Catering Conference Services Act:Bdgt - var"
-  #  description: "Actual - Bdgt"
-  #  type: number
-  #  sql: ${glm_property_f_ty.rbe_banquet_catering_conference_services_profit_amt} - ${glm_property_f_bdgt.rbe_banquet_catering_conference_services_profit_amt} ;;
-  #  value_format_name: decimal_0
-  #}
-
   measure: rbe_outlet_profit_amt_tobdgt_v {
     label: "Profit RB&E Outlet Act:Bdgt - var"
     description: "Actual - Bdgt"
@@ -2060,7 +1974,7 @@ view: glm_property_f_tobdgt {
     label: "Profit RB&E Room Service Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rbe_other_profit_amt} - ${glm_property_f_bdgt.rbe_room_service_profit_amt} ;;
+    sql: ${glm_property_f_ty.rbe_room_service_profit_amt} - ${glm_property_f_bdgt.rbe_room_service_profit_amt} ;;
     value_format_name: decimal_0
   }
 
@@ -2071,14 +1985,6 @@ view: glm_property_f_tobdgt {
     sql: ${glm_property_f_ty.rbe_other_profit_amt} - ${glm_property_f_bdgt.rbe_other_profit_amt} ;;
     value_format_name: decimal_0
   }
-
-  #measure: rbe_outlet_other_profit_amt_tobdgt_v {
-  #  label: "Profit RB&E Outlet Other Act:Bdgt - var"
-  #  description: "Actual - Bdgt"
-  #  type: number
-  #  sql: ${glm_property_f_ty.rbe_outlet_other_profit_amt} - ${glm_property_f_bdgt.rbe_outlet_other_profit_amt} ;;
-  #  value_format_name: decimal_0
-  #}
 
   measure: spa_profit_amt_tobdgt_v {
     label: "Profit Spa Act:Bdgt - var"
@@ -2127,14 +2033,6 @@ view: glm_property_f_tobdgt {
     sql: ${glm_property_f_ty.retail_profit_amt} - ${glm_property_f_bdgt.retail_profit_amt} ;;
     value_format_name: decimal_0
   }
-
-  #measure: spa_fitness_recreation_profit_amt_tobdgt_v {
-  #  label: "Profit Spa Fitness & Rec Act:Bdgt - var"
-  #  description: "Actual - Bdgt"
-  #  type: number
-  #  sql: ${glm_property_f_ty.spa_fitness_recreation_profit_amt} - ${glm_property_f_bdgt.spa_fitness_recreation_profit_amt} ;;
-  #  value_format_name: decimal_0
-  #}
 
   measure: other_operated_profit_amt_tobdgt_v {
     label: "Profit Other Op. Dept. Act:Bdgt - var"
@@ -2254,7 +2152,7 @@ view: glm_property_f_tobdgt {
     label: "Profit RB&E Room Service Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_other_profit_amt}, ${glm_property_f_bdgt.rbe_room_service_profit_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_room_service_profit_amt}, ${glm_property_f_bdgt.rbe_room_service_profit_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -2313,14 +2211,6 @@ view: glm_property_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_profit_amt}, ${glm_property_f_bdgt.retail_profit_amt}) ;;
     value_format_name: percent_1
   }
-
-  #measure: spa_fitness_recreation_profit_amt_tobdgt {
-  #  label: "Profit Spa Fitness & Rec Act:Bdgt - var %"
-  #  description: "(Actual - Bdgt) / Bdgt"
-  #  type: number
-  #  sql: utl..udf_percent_var( ${glm_property_f_ty.spa_fitness_recreation_profit_amt}, ${glm_property_f_bdgt.spa_fitness_recreation_profit_amt}) ;;
-  #  value_format_name: percent_1
-  #}
 
   measure: other_operated_profit_amt_tobdgt {
     label: "Profit Other Op. Dept. Act:Bdgt - var %"
@@ -2384,7 +2274,7 @@ view: glm_property_f_tobdgt {
     label: "Profit /TRev RB&E % Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.profit_rev_pct}, ${glm_property_f_bdgt.profit_rev_pct});;
+    sql: ${glm_property_f_ty.profit_rev_pct} - ${glm_property_f_bdgt.profit_rev_pct};;
     value_format_name: percent_1
   }
 
@@ -2411,6 +2301,9 @@ view: glm_property_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_profit_rev_pct}, ${glm_property_f_bdgt.rbe_profit_rev_pct});;
     value_format_name: percent_1
   }
+
+
+
 
   #-- Cost
 
@@ -2462,7 +2355,7 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: parking_transportation_cost_of_sales_amt_tobdgt_v {
+  measure: parking_transportation_cost_amt_tobdgt_v {
     label: "COS Parking & Trans Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
@@ -2486,7 +2379,7 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_0
   }
 
-  measure: other_operated_cost_of_sales_amt_tobdgt_v {
+  measure: other_operated_tobdgt_v {
     label: "COS Other Op. Dept. Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
@@ -2561,23 +2454,22 @@ view: glm_property_f_tobdgt {
   #-- Avg Rev per Spa Treatment / Golf Round
 
   measure: spa_rev_treatment_avg_amt_tobdgt_v {
-    label: "Rev /Trtmnt Spa Act:LY - var"
-    description: "Actual - LY"
+    label: "Rev /Trtmnt Spa Act:Bdgt - var"
+    description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.spa_rev_treatment_avg_amt} - ${glm_property_f_bdgt.spa_rev_treatment_avg_amt} ;;
     value_format_name: decimal_2
   }
 
   measure: golf_rev_round_avg_amt_tobdgt_v {
-    label: "Rev /Rnd Golf Act:LY - var"
-    description: "Actual - LY"
+    label: "Rev /Rnd Golf Act:Bdgt - var"
+    description: "Actual - Bdgt"
     type: number
     sql: ${glm_property_f_ty.golf_rev_round_avg_amt} - ${glm_property_f_bdgt.golf_rev_round_avg_amt} ;;
     value_format_name: decimal_2
   }
 
-#-- Cost % var
-
+  #-- Cost % var
 
   measure: cost_of_sales_amt_tobdgt {
     label: "COS Act:Bdgt - var %"
@@ -2627,7 +2519,7 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  measure: parking_transportation_cost_of_sales_amt_tobdgt {
+  measure: parking_transportation_cost_amt_tobdgt {
     label: "COS Parking & Trans Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
@@ -2651,7 +2543,7 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  measure: other_operated_cost_of_sales_amt_tobdgt {
+  measure: other_operated_tobdgt {
     label: "COS Other Op. Dept. Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
@@ -2684,7 +2576,7 @@ view: glm_property_f_tobdgt {
   }
 
   measure: nonoperating_airport_cost_of_sales_amt_tobdgt {
-    label: "COS Nonoperating Airport Act:Bdgt - var %"
+    label: "COS Nonoperating irport Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_cost_of_sales_amt}, ${glm_property_f_bdgt.nonoperating_airport_cost_of_sales_amt}) ;;
@@ -2699,24 +2591,39 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-  #-- Avg Rev per Spa Treatment / Golf Round
+  measure: food_rbe_cost_of_sales_amt_tobdgt {
+    label: "COS RB&E Food Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_cost_of_sales_amt}, ${glm_property_f_bdgt.food_rbe_cost_of_sales_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: beverage_rbe_cost_of_sales_amt_tobdgt {
+    label: "COS RB&E Beverage Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_cost_of_sales_amt}, ${glm_property_f_bdgt.beverage_rbe_cost_of_sales_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  #-- Avg Rev per Spa Treatment / Golf Round % var
 
   measure: spa_rev_treatment_avg_amt_tobdgt {
-    label: "Rev /Trtmnt Spa Act:LY - var %"
-    description: "Actual - LY"
+    label: "Rev /Trtmnt Spa Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.spa_rev_treatment_avg_amt}, ${glm_property_f_bdgt.spa_rev_treatment_avg_amt}) ;;
     value_format_name: percent_1
   }
 
   measure: golf_rev_round_avg_amt_tobdgt {
-    label: "Rev /Rnd Golf Act:LY - var %"
-    description: "Actual - LY"
+    label: "Rev /Rnd Golf Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.golf_rev_round_avg_amt}, ${glm_property_f_bdgt.golf_rev_round_avg_amt}) ;;
     value_format_name: percent_1
   }
-
 
   #-- Occupancy
 
@@ -2752,14 +2659,13 @@ view: glm_property_f_tobdgt {
     value_format_name: percent_1
   }
 
-
   #-- Occupancy % var
 
   measure: occupied_room_pct_tobdgt {
     label: "Rms Occ % Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_room_pct}, ${glm_property_f_bdgt.occupied_room_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_room_pct}, ${glm_property_f_bdgt.occupied_room_pct} );;
     value_format_name: percent_1
   }
 
@@ -2767,7 +2673,7 @@ view: glm_property_f_tobdgt {
     label: "Rms Occ % Group Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_group_room_pct}, ${glm_property_f_bdgt.occupied_group_room_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_group_room_pct}, ${glm_property_f_bdgt.occupied_group_room_pct} );;
     value_format_name: percent_1
   }
 
@@ -2775,7 +2681,7 @@ view: glm_property_f_tobdgt {
     label: "Rms Occ % Transient Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_transient_room_pct}, ${glm_property_f_bdgt.occupied_transient_room_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_transient_room_pct}, ${glm_property_f_bdgt.occupied_transient_room_pct} );;
     value_format_name: percent_1
   }
 
@@ -2783,7 +2689,7 @@ view: glm_property_f_tobdgt {
     label: "Rms Occ % Contract Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_contract_room_pct}, ${glm_property_f_bdgt.occupied_contract_room_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_contract_room_pct}, ${glm_property_f_bdgt.occupied_contract_room_pct} );;
     value_format_name: percent_1
   }
 
@@ -2813,13 +2719,21 @@ view: glm_property_f_tobdgt {
     value_format_name: decimal_2
   }
 
+  measure: adr_contract_amt_tobdgt_v {
+    label: "ADR Contract $ Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: ${glm_property_f_ty.adr_contract_amt} - ${glm_property_f_bdgt.adr_contract_amt} ;;
+    value_format_name: decimal_2
+  }
+
   #-- ADR % var
 
   measure: adr_amt_tobdgt {
     label: "ADR $ Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.adr_amt}, ${glm_property_f_bdgt.adr_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.adr_amt}, ${glm_property_f_bdgt.adr_amt} );;
     value_format_name: percent_1
   }
 
@@ -2827,7 +2741,7 @@ view: glm_property_f_tobdgt {
     label: "ADR Transient $ Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.adr_transient_amt}, ${glm_property_f_bdgt.adr_transient_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.adr_transient_amt}, ${glm_property_f_bdgt.adr_transient_amt} );;
     value_format_name: percent_1
   }
 
@@ -2835,7 +2749,15 @@ view: glm_property_f_tobdgt {
     label: "ADR Group $ Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.adr_group_amt}, ${glm_property_f_bdgt.adr_group_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.adr_group_amt}, ${glm_property_f_bdgt.adr_group_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: adr_contract_amt_tobdgt {
+    label: "ADR Contract $ Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.adr_contract_amt}, ${glm_property_f_bdgt.adr_contract_amt} );;
     value_format_name: percent_1
   }
 
@@ -2871,7 +2793,7 @@ view: glm_property_f_tobdgt {
     label: "Rms Night Transient % Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.room_night_transient_pct}, ${glm_property_f_bdgt.room_night_transient_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.room_night_transient_pct}, ${glm_property_f_bdgt.room_night_transient_pct} );;
     value_format_name: percent_1
   }
 
@@ -2879,7 +2801,7 @@ view: glm_property_f_tobdgt {
     label: "Rms Night Group % Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.room_night_group_pct}, ${glm_property_f_bdgt.room_night_group_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.room_night_group_pct}, ${glm_property_f_bdgt.room_night_group_pct} );;
     value_format_name: percent_1
   }
 
@@ -2887,7 +2809,7 @@ view: glm_property_f_tobdgt {
     label: "Rms Night Contract % Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.room_night_contract_pct}, ${glm_property_f_bdgt.room_night_contract_pct}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.room_night_contract_pct}, ${glm_property_f_bdgt.room_night_contract_pct} );;
     value_format_name: percent_1
   }
 
@@ -2897,7 +2819,7 @@ view: glm_property_f_tobdgt {
     label: "Rev PAR $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rev_par_amt} - ${glm_property_f_bdgt.rev_par_amt} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.rev_par_amt} - ${glm_property_f_bdgt.rev_par_amt} );;
     value_format_name: usd_0
   }
 
@@ -2905,7 +2827,7 @@ view: glm_property_f_tobdgt {
     label: "Rev PAR $ Group Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rev_par_group_amt} - ${glm_property_f_bdgt.rev_par_group_amt} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.rev_par_group_amt} - ${glm_property_f_bdgt.rev_par_group_amt} );;
     value_format_name: usd_0
   }
 
@@ -2913,7 +2835,7 @@ view: glm_property_f_tobdgt {
     label: "Rev PAR $ Transient Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rev_par_transient_amt} - ${glm_property_f_bdgt.rev_par_transient_amt} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.rev_par_transient_amt} - ${glm_property_f_bdgt.rev_par_transient_amt} );;
     value_format_name: usd_0
   }
 
@@ -2923,7 +2845,7 @@ view: glm_property_f_tobdgt {
     label: "Rev PAR $ Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rev_par_amt}, ${glm_property_f_bdgt.rev_par_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rev_par_amt}, ${glm_property_f_bdgt.rev_par_amt} );;
     value_format_name: percent_1
   }
 
@@ -2931,7 +2853,7 @@ view: glm_property_f_tobdgt {
     label: "Rev PAR $ Group Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rev_par_group_amt}, ${glm_property_f_bdgt.rev_par_group_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rev_par_group_amt}, ${glm_property_f_bdgt.rev_par_group_amt} );;
     value_format_name: percent_1
   }
 
@@ -2939,7 +2861,7 @@ view: glm_property_f_tobdgt {
     label: "Rev PAR $ Transient Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rev_par_transient_amt}, ${glm_property_f_bdgt.rev_par_transient_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rev_par_transient_amt}, ${glm_property_f_bdgt.rev_par_transient_amt} );;
     value_format_name: percent_1
   }
 
@@ -2949,7 +2871,7 @@ view: glm_property_f_tobdgt {
     label: "Rev POR $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rev_por_amt} - ${glm_property_f_bdgt.rev_por_amt} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.rev_por_amt} - ${glm_property_f_bdgt.rev_por_amt} );;
     value_format_name: usd_0
   }
 
@@ -2957,7 +2879,7 @@ view: glm_property_f_tobdgt {
     label: "Rev POR $ Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rev_por_amt}, ${glm_property_f_bdgt.rev_por_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rev_por_amt}, ${glm_property_f_bdgt.rev_por_amt} );;
     value_format_name: percent_1
   }
 
@@ -2967,7 +2889,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Avg $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rbe_check_avg_amt} - ${glm_property_f_bdgt.rbe_check_avg_amt} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_check_avg_amt} - ${glm_property_f_bdgt.rbe_check_avg_amt} );;
     value_format_name: decimal_2
   }
 
@@ -2975,7 +2897,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Banquet Avg $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rbe_banquet_check_avg_amt} - ${glm_property_f_bdgt.rbe_banquet_check_avg_amt} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_banquet_check_avg_amt} - ${glm_property_f_bdgt.rbe_banquet_check_avg_amt} );;
     value_format_name: decimal_2
   }
 
@@ -2983,7 +2905,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Catering Avg $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rbe_catering_check_avg_amt} - ${glm_property_f_bdgt.rbe_catering_check_avg_amt} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_catering_check_avg_amt} - ${glm_property_f_bdgt.rbe_catering_check_avg_amt} );;
     value_format_name: decimal_2
   }
 
@@ -2991,7 +2913,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Outlet Avg $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rbe_outlet_check_avg_amt} - ${glm_property_f_bdgt.rbe_outlet_check_avg_amt} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_outlet_check_avg_amt} - ${glm_property_f_bdgt.rbe_outlet_check_avg_amt} );;
     value_format_name: decimal_2
   }
 
@@ -2999,7 +2921,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Room Service Avg $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rbe_room_service_check_avg_amt} - ${glm_property_f_bdgt.rbe_room_service_check_avg_amt} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_room_service_check_avg_amt} - ${glm_property_f_bdgt.rbe_room_service_check_avg_amt} );;
     value_format_name: decimal_2
   }
 
@@ -3007,7 +2929,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Other Avg $ Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rbe_other_check_avg_amt} - ${glm_property_f_bdgt.rbe_other_check_avg_amt} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_other_check_avg_amt} - ${glm_property_f_bdgt.rbe_other_check_avg_amt} );;
     value_format_name: decimal_2
   }
 
@@ -3018,7 +2940,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Avg $ Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_check_avg_amt}, ${glm_property_f_bdgt.rbe_check_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_check_avg_amt}, ${glm_property_f_bdgt.rbe_check_avg_amt} );;
     value_format_name: percent_1
   }
 
@@ -3026,7 +2948,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Banquet Avg $ Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_banquet_check_avg_amt}, ${glm_property_f_bdgt.rbe_banquet_check_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_banquet_check_avg_amt}, ${glm_property_f_bdgt.rbe_banquet_check_avg_amt} );;
     value_format_name: percent_1
   }
 
@@ -3034,7 +2956,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Catering Avg $ Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_catering_check_avg_amt}, ${glm_property_f_bdgt.rbe_catering_check_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_catering_check_avg_amt}, ${glm_property_f_bdgt.rbe_catering_check_avg_amt} );;
     value_format_name: percent_1
   }
 
@@ -3042,7 +2964,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Outlet Avg $ Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_check_avg_amt}, ${glm_property_f_bdgt.rbe_outlet_check_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_check_avg_amt}, ${glm_property_f_bdgt.rbe_outlet_check_avg_amt} );;
     value_format_name: percent_1
   }
 
@@ -3050,7 +2972,7 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Room Service Avg $ Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_room_service_check_avg_amt}, ${glm_property_f_bdgt.rbe_room_service_check_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_room_service_check_avg_amt}, ${glm_property_f_bdgt.rbe_room_service_check_avg_amt} );;
     value_format_name: percent_1
   }
 
@@ -3058,141 +2980,139 @@ view: glm_property_f_tobdgt {
     label: "Cvrs RB&E Other Avg $ Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_other_check_avg_amt}, ${glm_property_f_bdgt.rbe_other_check_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_other_check_avg_amt}, ${glm_property_f_bdgt.rbe_other_check_avg_amt} );;
     value_format_name: percent_1
   }
-
-  #-- Payroll /Rev
-  measure: payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Act:LY - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.payroll_rev_pct} - ${glm_property_f_bdgt.payroll_rev_pct} ;;
-    value_format_name: percent_1
-  }
-
-  #-- Payroll /Rev % var
-
-  measure: payroll_rev_pct_tobdgt {
-    label: "Payroll /Rev Act:LY - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.payroll_rev_pct}, ${glm_property_f_bdgt.payroll_rev_pct}) ;;
-    value_format_name: percent_1
-  }
-
 
   #-- Avg length of stay
 
   measure: length_of_stay_avg_amt_tobdgt_v {
-    label: "Stay Length Avg Night Act:LY - var"
+    label: "Stay Length Avg Night Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.length_of_stay_avg_amt} - ${glm_property_f_bdgt.length_of_stay_avg_amt} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.length_of_stay_avg_amt} - ${glm_property_f_bdgt.length_of_stay_avg_amt} );;
     value_format_name: decimal_1
   }
 
   #-- Avg length of stay % var
 
   measure: length_of_stay_avg_amt_tobdgt {
-    label: "Stay Length Avg Night Act:LY - var %"
+    label: "Stay Length Avg Night Act:Bdgt - var %"
     description: "(Actual - Bdgt) / Bdgt"
     type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.length_of_stay_avg_amt}, ${glm_property_f_bdgt.length_of_stay_avg_amt}) ;;
+    sql: utl..udf_percent_var( ${glm_property_f_ty.length_of_stay_avg_amt}, ${glm_property_f_bdgt.length_of_stay_avg_amt} );;
+    value_format_name: percent_1
+  }
+
+  #-- Payroll /Rev
+
+  measure: payroll_rev_pct_tobdgt_v {
+    label: "Payroll /Rev Act:Bdgt - var"
+    description: "Actual - Bdgt"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.payroll_rev_pct} - ${glm_property_f_bdgt.payroll_rev_pct} );;
+    value_format_name: percent_1
+  }
+
+  #-- Payroll /Rev % var
+
+  measure: payroll_rev_pct_tobdgt {
+    label: "Payroll /Rev Act:Bdgt - var %"
+    description: "(Actual - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.payroll_rev_pct}, ${glm_property_f_bdgt.payroll_rev_pct}) ;;
     value_format_name: percent_1
   }
 
   #-- Payroll Rev %
 
   measure: room_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Rms Act:LY - var"
+    label: "Payroll /Rev Rms Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.room_payroll_rev_pct} - ${glm_property_f_bdgt.room_payroll_rev_pct} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.room_payroll_rev_pct} - ${glm_property_f_bdgt.room_payroll_rev_pct} );;
     value_format_name: percent_1
   }
 
   measure: rbe_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev RB&E Act:LY - var"
+    label: "Payroll /Rev RB&E Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.rbe_payroll_rev_pct} - ${glm_property_f_bdgt.rbe_payroll_rev_pct} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.rbe_payroll_rev_pct} - ${glm_property_f_bdgt.rbe_payroll_rev_pct} );;
     value_format_name: percent_1
   }
 
   measure: spa_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Spa Act:LY - var"
+    label: "Payroll /Rev Spa Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.spa_payroll_rev_pct} - ${glm_property_f_bdgt.spa_payroll_rev_pct} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.spa_payroll_rev_pct} - ${glm_property_f_bdgt.spa_payroll_rev_pct} );;
     value_format_name: percent_1
   }
 
   measure: golf_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Golf Act:LY - var"
+    label: "Payroll /Rev Golf Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.golf_payroll_rev_pct} - ${glm_property_f_bdgt.golf_payroll_rev_pct} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.golf_payroll_rev_pct} - ${glm_property_f_bdgt.golf_payroll_rev_pct} );;
     value_format_name: percent_1
   }
 
   measure: fitness_recreation_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Fitness & Rec Act:LY - var"
+    label: "Payroll /Rev Fitness & Rec Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.fitness_recreation_payroll_rev_pct} - ${glm_property_f_bdgt.fitness_recreation_payroll_rev_pct} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.fitness_recreation_payroll_rev_pct} - ${glm_property_f_bdgt.fitness_recreation_payroll_rev_pct} );;
     value_format_name: percent_1
   }
 
   measure: parking_transportation_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Parking & Trans Act:LY - var"
+    label: "Payroll /Rev Parking & Trans Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.parking_transportation_payroll_rev_pct - ${glm_property_f_bdgt.parking_transportation_payroll_rev_pct} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.parking_transportation_payroll_rev_pct} - ${glm_property_f_bdgt.parking_transportation_payroll_rev_pct} );;
     value_format_name: usd_0
   }
 
   measure: telecom_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Telecom Act:LY - var"
+    label: "Payroll /Rev Telecom Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.telecom_payroll_rev_pct} - ${glm_property_f_bdgt.telecom_payroll_rev_pct} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.telecom_payroll_rev_pct} - ${glm_property_f_bdgt.telecom_payroll_rev_pct} );;
     value_format_name: percent_1
   }
 
   measure: retail_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Retail Act:LY - var"
+    label: "Payroll /Rev Retail Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.retail_payroll_rev_pct} - ${glm_property_f_bdgt.retail_payroll_rev_pct} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.retail_payroll_rev_pct} - ${glm_property_f_bdgt.retail_payroll_rev_pct} );;
     value_format_name: percent_1
   }
 
   measure: other_operated_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Other Op. Dept. Act:LY - var"
+    label: "Payroll /Rev Other Op. Dept. Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.other_operated_payroll_rev_pct} - ${glm_property_f_bdgt.other_operated_payroll_rev_pct} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.other_operated_payroll_rev_pct} - ${glm_property_f_bdgt.other_operated_payroll_rev_pct} );;
     value_format_name: percent_1
   }
 
   measure: property_mgmt_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Mgmt Srvcs Act:LY - var"
+    label: "Payroll /Rev Mgmt Srvcs Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.property_mgmt_payroll_rev_pct} - ${glm_property_f_bdgt.property_mgmt_payroll_rev_pct} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.property_mgmt_payroll_rev_pct} - ${glm_property_f_bdgt.property_mgmt_payroll_rev_pct} );;
     value_format_name: percent_1
   }
 
   measure: misc_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Rentals & Other % Act:LY - var"
+    label: "Payroll /Rev Rentals & Other Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.misc_payroll_rev_pct} - ${glm_property_f_bdgt.misc_payroll_rev_pct} ;;
+    sql: utl..udf_divide( ${glm_property_f_ty.misc_payroll_rev_pct} - ${glm_property_f_bdgt.misc_payroll_rev_pct} );;
     value_format_name: percent_1
   }
-
-
 
   #-- Rental property splits
 
@@ -3200,7 +3120,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Rms Rental Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_bdgt.room_rental_mgmt_2_19_rev_amt} ;;
+    sql: ${glm_property_f_ty.room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_bdgt.room_rental_mgmt_2_19_rev_amt};;
     value_format_name: decimal_0
   }
   measure: avail_room_rental_mgmt_2_19_cnt_tobdgt_v {
@@ -3235,7 +3155,7 @@ view: glm_property_f_tobdgt {
     label: "Rev Rms Transient Rental Act:Bdgt - var"
     description: "Actual - Bdgt"
     type: number
-    sql: ${glm_property_f_ty.transient_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_bdgt.transient_room_rental_mgmt_2_19_rev_amt} );;
+    sql: ${glm_property_f_ty.transient_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_bdgt.transient_room_rental_mgmt_2_19_rev_amt} ;;
     value_format_name: usd_0
   }
   measure: group_room_rental_mgmt_2_19_rev_amt_tobdgt_v {
@@ -3273,7 +3193,6 @@ view: glm_property_f_tobdgt {
     sql: ${glm_property_f_ty.occupied_contract_room_rental_mgmt_2_19_cnt} - ${glm_property_f_bdgt.occupied_contract_room_rental_mgmt_2_19_cnt} ;;
     value_format_name: decimal_0
   }
-
 
 
 }

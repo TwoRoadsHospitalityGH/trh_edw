@@ -37,10 +37,6 @@ view: glm_property_future_fcst_f_fcstact {
   #-- Dimensions
   #-------------------------------------------------------------------------------------------
 
-  #dimension: measure_bt {
-  #  sql: ${glm_property_future_fcst_f.act_bt} ;;
-  #  hidden: yes
-  #}
   dimension: measure_bt {
     sql: ${glm_property_future_fcst_f.fcst_bt} ;;
     hidden: yes
@@ -1383,6 +1379,22 @@ view: glm_property_future_fcst_f_fcstact {
     value_format_name: usd_0
   }
 
+  #-- Profit as % to rev
+
+  measure: profit_rev_pct {
+    label: "Profit /TRev %"
+    type: number
+    sql: utl..udf_divide( ${profit_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_profit_rev_pct {
+    label: "Profit /Rev RB&E %"
+    type: number
+    sql: utl..udf_divide( ${rbe_profit_amt}, ${rbe_rev_amt} );;
+    value_format_name: percent_1
+  }
+
   #-- Cost
 
   measure: cost_of_sales_amt {
@@ -1689,6 +1701,13 @@ view: glm_property_future_fcst_f_fcstact {
     label: "Rms Night Group %"
     type: number
     sql: utl..udf_divide( ${occupied_group_room_cnt}, ${occupied_room_cnt} );;
+    value_format_name: percent_1
+  }
+
+  measure: room_night_contract_pct {
+    label: "Rms Night Contract %"
+    type: number
+    sql: utl..udf_divide( ${occupied_contract_room_cnt}, ${occupied_room_cnt} );;
     value_format_name: percent_1
   }
 
