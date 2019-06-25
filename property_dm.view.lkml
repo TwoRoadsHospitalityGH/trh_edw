@@ -43,7 +43,6 @@ view: property_dm {
     type: string
     sql: ${TABLE}.MARKETING_NAME ;;
     drill_fields: [property_ds*]
-    hidden: yes
   }
 
   dimension: management_company_name {
