@@ -1049,42 +1049,36 @@ view: glm_property_f_ty {
     label: "Cvrs RB&E"
     type: sum
     sql:  iff( ${measure_bt} = 1, ${glm_property_f.rbe_cover_cnt}, to_number( null ) ) ;;
-    value_format_name: usd_0
   }
 
   measure: rbe_banquet_cover_cnt {
     label: "Cvrs RB&E Banquet"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_banquet_cover_cnt}, to_number( null ) ) ;;
-    value_format_name: usd_0
   }
 
   measure: rbe_catering_cover_cnt {
     label: "Cvrs RB&E Catering"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_catering_cover_cnt}, to_number( null ) ) ;;
-    value_format_name: usd_0
   }
 
   measure: rbe_outlet_cover_cnt {
     label: "Cvrs RB&E Outlet"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_outlet_cover_cnt}, to_number( null ) ) ;;
-    value_format_name: usd_0
   }
 
   measure: rbe_room_service_cover_cnt {
     label: "Cvrs RB&E Room Service"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_room_service_cover_cnt}, to_number( null ) ) ;;
-    value_format_name: usd_0
   }
 
   measure: rbe_other_cover_cnt {
     label: "Cvrs RB&E Other"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_other_cover_cnt}, to_number( null ) ) ;;
-    value_format_name: usd_0
   }
 
   #-- Treatments
