@@ -1046,42 +1046,42 @@ view: glm_property_future_fcst_f_fcstact {
   #-- Covers
 
   measure: rbe_cover_cnt {
-    label: "Cvrs RB&E $"
+    label: "Cvrs RB&E"
     type: sum
     sql:  iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_cover_cnt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_banquet_cover_cnt {
-    label: "Cvrs RB&E Banquet $"
+    label: "Cvrs RB&E Banquet"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_banquet_cover_cnt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_catering_cover_cnt {
-    label: "Cvrs RB&E Catering $"
+    label: "Cvrs RB&E Catering"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_catering_cover_cnt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_outlet_cover_cnt {
-    label: "Cvrs RB&E Outlet $"
+    label: "Cvrs RB&E Outlet"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_outlet_cover_cnt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_room_service_cover_cnt {
-    label: "Cvrs RB&E Room Service $"
+    label: "Cvrs RB&E Room Service"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_room_service_cover_cnt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
   measure: rbe_other_cover_cnt {
-    label: "Cvrs RB&E Other $"
+    label: "Cvrs RB&E Other"
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_other_cover_cnt}, to_number( null ) ) ;;
     value_format_name: usd_0
