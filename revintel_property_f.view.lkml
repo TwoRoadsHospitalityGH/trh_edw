@@ -171,6 +171,7 @@ view: revintel_property_f {
     description: "Percent of total value."
     type: percent_of_total
     sql: ${cy_rooms} ;;
+    value_format: "0.0\%"
     hidden: no
     }
 
@@ -180,6 +181,7 @@ view: revintel_property_f {
     description: "Percent of total value."
     type: percent_of_total
     sql: ${cy_room_rev} ;;
+    value_format: "0.0\%"
     hidden: no
     }
 
@@ -247,6 +249,7 @@ view: revintel_property_f {
     description: "Percent of total value."
     type: percent_of_total
     sql: ${stly_rooms} ;;
+    value_format: "0.0\%"
     hidden: no
   }
 
@@ -256,6 +259,7 @@ view: revintel_property_f {
     description: "Percent of total value."
     type: percent_of_total
     sql: ${stly_room_rev} ;;
+    value_format: "0.0\%"
     hidden: no
   }
 
@@ -265,6 +269,7 @@ view: revintel_property_f {
     description: "Percent of total value."
     type: percent_of_total
     sql: utl..udf_divide(${stly_room_rev},${stly_rooms}) ;;
+    value_format: "0.0\%"
     hidden: no
   }
 #-------------------------------------------------------------------------------------------
@@ -322,6 +327,7 @@ view: revintel_property_f {
     description: "Percent of total value."
     type: percent_of_total
     sql: ${ly_rooms} ;;
+    value_format: "0.0\%"
     hidden: no
   }
 
@@ -331,6 +337,7 @@ view: revintel_property_f {
     description: "Percent of total value."
     type: percent_of_total
     sql: ${ly_room_rev} ;;
+    value_format: "0.0\%"
     hidden: no
   }
 
@@ -340,6 +347,7 @@ view: revintel_property_f {
     description: "Percent of total value."
     type: percent_of_total
     sql: utl..udf_divide(${ly_room_rev},${ly_rooms}) ;;
+    value_format: "0.0\%"
     hidden: no
   }
 
