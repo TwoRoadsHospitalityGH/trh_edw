@@ -247,7 +247,6 @@ view: revintel_property_f {
     description: "Percent of total value."
     type: percent_of_total
     sql: ${stly_rooms} ;;
-    value_format_name: percent_1
     hidden: no
   }
 
