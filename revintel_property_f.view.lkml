@@ -132,6 +132,14 @@ view: revintel_property_f {
     type: string
   }
 
+  dimension: iata_cd {
+    sql: ${TABLE}.iata_cd ;;
+    view_label: "Reservation Detail"
+    label: "IATA Code"
+    description: "IATA Code"
+    type: string
+  }
+
   dimension: business_unit_nm {
     sql: ${TABLE}.business_unit_nm ;;
     view_label: "Reservation Detail"
