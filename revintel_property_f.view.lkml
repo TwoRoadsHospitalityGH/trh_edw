@@ -60,6 +60,38 @@ view: revintel_property_f {
     type: string
   }
 
+  dimension: region_nm {
+    sql: ${TABLE}.region_nm ;;
+    view_label: "Reservation Detail"
+    label: "Region"
+    description: "Region Name"
+    type: string
+  }
+
+  dimension: subregion_nm {
+    sql: ${TABLE}.subregion_nm ;;
+    view_label: "Reservation Detail"
+    label: "Subregion"
+    description: "Subregion Name"
+    type: string
+  }
+
+  dimension: country_nm {
+    sql: ${TABLE}.country_nm ;;
+    view_label: "Reservation Detail"
+    label: "Country"
+    description: "Country Name"
+    type: string
+  }
+
+  dimension: state_nm {
+    sql: ${TABLE}.state_nm ;;
+    view_label: "Reservation Detail"
+    label: "State"
+    description: "State Name"
+    type: string
+  }
+
   dimension: major_room_product_nm {
     sql: ${TABLE}.major_room_product_nm ;;
     view_label: "Reservation Detail"
