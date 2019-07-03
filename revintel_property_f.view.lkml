@@ -164,6 +164,14 @@ view: revintel_property_f {
     type: string
   }
 
+  dimension: cy_room_rev_dm {
+    sql: ${TABLE}.cy_room_rev ;;
+    view_label: "Reservation Detail"
+    label: "CY Rev Rms $"
+    description: "CY Rev Rms $"
+    type: number
+  }
+
   #-------------------------------------------------------------------------------------------
   #-- Measures
   #-------------------------------------------------------------------------------------------
