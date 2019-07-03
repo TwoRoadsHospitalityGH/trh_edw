@@ -164,14 +164,13 @@ view: revintel_property_f {
     type: string
   }
 
-  dimension: cy_nonzero_dm {
-    sql: ${TABLE}.cy_rooms + ${TABLE}.cy_room_rev;;
+  dimension: cy_record_fl {
+    sql: iff( ${TABLE}.cy_rooms + ${TABLE}.cy_room_rev != 0, 1, 0 ) = 1;;
     view_label: "Reservation Detail"
     label: "CY Record"
-    description: "CY Rms Bkd and Rev Rms > 0"
-    type: number
+    description: "CY Rms Bkd and Rev Rms != 0"
+    type: yesno
   }
-
 
   #-------------------------------------------------------------------------------------------
   #-- Measures
