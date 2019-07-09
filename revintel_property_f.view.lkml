@@ -221,6 +221,15 @@ view: revintel_property_f {
     hidden: no
   }
 
+  measure: m_minor_channel_name_cnt {
+    view_label: "Reservation Detail Stats"
+    label: "Ttl Minor Channel Count"
+    description: "Total Minor Channel Name Count"
+    type: count_distinct
+    sql: ${TABLE}.minor_channel_nm ;;
+    hidden: no
+  }
+
   #-------------------------------------------------------------------------------------------
   #-- Measures
   #-------------------------------------------------------------------------------------------
