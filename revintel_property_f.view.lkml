@@ -177,7 +177,7 @@ view: revintel_property_f {
   #-------------------------------------------------------------------------------------------
 
   measure: m_agent_cnt {
-    view_label: " Reservation Detail Stats"
+    view_label: "Reservation Detail Stats"
     label: "Ttl Agent Count"
     description: "Total Agent Count"
     type: count_distinct
@@ -186,7 +186,7 @@ view: revintel_property_f {
   }
 
   measure: m_company_cnt {
-    view_label: " Reservation Detail Stats"
+    view_label: "Reservation Detail Stats"
     label: "Ttl Company Count"
     description: "Total Company Count"
     type: count_distinct
@@ -195,7 +195,7 @@ view: revintel_property_f {
   }
 
   measure: m_rate_code_cnt {
-    view_label: " Reservation Detail Stats"
+    view_label: "Reservation Detail Stats"
     label: "Ttl Rate Code Count"
     description: "Total Rate Code Count"
     type: count_distinct
@@ -204,7 +204,7 @@ view: revintel_property_f {
   }
 
   measure: m_room_type_cnt {
-    view_label: " Reservation Detail Stats"
+    view_label: "Reservation Detail Stats"
     label: "Ttl Room Type Count"
     description: "Total Room Type Name Count"
     type: count_distinct
