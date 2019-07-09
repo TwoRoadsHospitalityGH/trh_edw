@@ -212,12 +212,12 @@ view: revintel_property_f {
     hidden: no
   }
 
-  measure: m_state_name_cnt {
+  measure: m_country_name_cnt {
     view_label: "Reservation Detail Stats"
-    label: "Ttl State Count"
-    description: "Total State Name Count"
+    label: "Ttl Country Count"
+    description: "Total Country Name Count"
     type: count_distinct
-    sql: ${TABLE}.state_nm ;;
+    sql: ${TABLE}.country_nm ;;
     hidden: no
   }
 
