@@ -212,6 +212,15 @@ view: revintel_property_f {
     hidden: no
   }
 
+  measure: m_state_name_cnt {
+    view_label: "Reservation Detail Stats"
+    label: "Ttl State Count"
+    description: "Total State Name Count"
+    type: count_distinct
+    sql: ${TABLE}.state_nm ;;
+    hidden: no
+  }
+
   #-------------------------------------------------------------------------------------------
   #-- Measures
   #-------------------------------------------------------------------------------------------
