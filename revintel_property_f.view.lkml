@@ -176,6 +176,14 @@ view: revintel_property_f {
   #-- Measures - Reservation Detail Stats
   #-------------------------------------------------------------------------------------------
 
+  dimension: country_iso2_cd {
+    sql: ${TABLE}.country_nm ;;
+    view_label: "Reservation Detail Stats"
+    label: "Country ISO2"
+    description: "Country ISO Alpha-2 Code"
+    type: string
+  }
+
   measure: m_agent_cnt {
     view_label: "Reservation Detail Stats"
     label: "Ttl Agent Count"
