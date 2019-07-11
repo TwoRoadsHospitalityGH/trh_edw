@@ -182,6 +182,7 @@ view: revintel_property_f {
     label: "Country ISO2"
     description: "Country ISO Alpha-2 Code"
     type: string
+    map_layer_name: countries
   }
 
   measure: m_agent_cnt {
