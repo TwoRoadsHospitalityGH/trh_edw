@@ -177,7 +177,7 @@ view: revintel_property_f {
   #-------------------------------------------------------------------------------------------
 
   dimension: country_iso2_cd {
-    sql: ${TABLE}.country_nm ;;
+    sql: ${TABLE}.country_iso2_cd ;;
     view_label: "Reservation Detail Stats"
     label: "Country ISO2"
     description: "Country ISO Alpha-2 Code"
