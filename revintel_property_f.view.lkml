@@ -37,7 +37,7 @@ view: revintel_property_f {
   }
 
   dimension: contribution_channel_nm {
-    sql: ${TABLE}.major_market_nm ;;
+    sql: ${TABLE}.contribution_channel_nm ;;
     view_label: "Reservation Detail"
     label: "Contribution Channel"
     description: "Contribution Channel Name"
