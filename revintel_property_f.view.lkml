@@ -512,7 +512,7 @@ view: revintel_property_f {
     value_format_name: percent_1
     view_label: "  CY"
     label: "Rms Bkd Act:STLY - % var"
-    description: "(TY - STLY)/TY"
+    description: "(TY - STLY)/STLY"
   }
 
   measure:  rooms_var{
@@ -530,7 +530,7 @@ view: revintel_property_f {
     value_format_name: percent_1
     view_label: "  CY"
     label: "Rev Rms $ Act:STLY - % var"
-    description: "(TY - STLY)/TY"
+    description: "(TY - STLY)/STLY"
   }
 
   measure:  room_rev_var{
@@ -548,7 +548,7 @@ view: revintel_property_f {
     value_format_name: percent_1
     view_label: "  CY"
     label: "Rev Food $ Act:STLY - % var"
-    description: "(TY - STLY)/TY"
+    description: "(TY - STLY)/STLY"
   }
 
   measure:  food_rev_var{
@@ -566,7 +566,7 @@ view: revintel_property_f {
     value_format_name: percent_1
     view_label: "  CY"
     label: "Rev Other $ Act:STLY - % var"
-    description: "(TY - STLY)/TY"
+    description: "(TY - STLY)/STLY"
   }
 
   measure:  other_rev_var{
@@ -584,7 +584,7 @@ view: revintel_property_f {
     value_format_name: percent_1
     view_label: "  CY"
     label: "Rev $ Act:STLY - % var"
-    description: "(TY - STLY)/TY"
+    description: "(TY - STLY)/STLY"
   }
 
   measure:  ttl_rev_var{
@@ -602,7 +602,7 @@ view: revintel_property_f {
     value_format_name: percent_1
     view_label: "  CY"
     label: "ADR Act:STLY - % var"
-    description: "(TY - STLY)/TY"
+    description: "(TY - STLY)/STLY"
   }
 
   measure:  room_adr_var{
