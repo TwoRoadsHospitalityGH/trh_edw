@@ -326,4 +326,53 @@ view: guest_experience_rpt {
         {% endif %};;
   }
 
+  #--------------------------------------------------------------------------------
+  #-- measure stats
+  #--------------------------------------------------------------------------------
+  measure: response_score_min {
+    view_label: "Stats"
+    label: "Score Min"
+    description: "Minimum Score Value"
+    type: min
+    sql: ${answer_score_no} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: response_score_quartile_1 {
+    view_label: "Stats"
+    label: "Score 25th Percentile"
+    description: "25th Percentile (Q1)"
+    type: percentile
+    percentile:  25
+    sql: ${answer_score_no} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: response_score_med {
+    view_label: "Stats"
+    label: "Score Median"
+    description: "Median Score Value (50th Percentile)"
+    type: median
+    sql: ${answer_score_no} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: response_score_quartile_3 {
+    view_label: "Stats"
+    label: "Score 75th Percentile"
+    description: "75th Percentile (Q3)"
+    type: percentile
+    percentile:  55
+    sql: ${answer_score_no} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: response_score_max {
+    view_label: "Stats"
+    label: "Score Max"
+    description: "Maximum Score Value"
+    type: max
+    sql: ${answer_score_no} ;;
+    value_format_name: decimal_0
+  }
 }
