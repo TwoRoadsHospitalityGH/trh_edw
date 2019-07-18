@@ -326,6 +326,18 @@ view: guest_experience_rpt {
         {% endif %};;
   }
 
+  measure: response_cnt_pct_prev {
+    label: "Responses % Prev"
+    description: "Score No"
+    type: percent_of_previous
+    sql: ${response_cnt} ;;
+    value_format: "0.0\%"
+    html:
+        {% if value < 0 %}
+        <font color="red">{{ rendered_value }}</font>
+        {% endif %};;
+  }
+
   #--------------------------------------------------------------------------------
   #-- measure stats
   #--------------------------------------------------------------------------------
@@ -375,4 +387,5 @@ view: guest_experience_rpt {
     sql: ${answer_score_no} ;;
     value_format_name: decimal_0
   }
+
 }
