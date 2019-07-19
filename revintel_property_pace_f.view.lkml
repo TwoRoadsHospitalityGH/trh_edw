@@ -332,6 +332,60 @@ view: revintel_property_pace_f {
   }
 
 
+  measure:  cy_rooms_prior_day {
+    sql: ${TABLE}.cy_rooms_prior_day_pu ;;
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd Prior Day"
+    description: "Rms OTB in Prior Day"
+    type: sum
+  }
+
+  measure:  cy_rooms_prior_day_var {
+    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_prior_day_pu ;;
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd Act:Prior Day"
+    description: "Rms Bkd - Prior Day"
+    type: sum
+  }
+
+  measure:  cy_rooms_prior_7_day {
+    sql: ${TABLE}.cy_rooms_prior_7_day_pu ;;
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd Prior 7 Days"
+    description: "Rms OTB Prior 7 Days"
+    type: sum
+  }
+
+  measure:  cy_rooms_prior_7_day_var {
+    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_prior_7_day_pu ;;
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd Act:Prior 7 Days "
+    description: "Rooms Bkd - Prior 7 Days"
+    type: sum
+  }
+
+  measure:  cy_rooms_mtd {
+    sql: ${TABLE}.cy_rooms_mtd_pu ;;
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd MTD"
+    description: "Rms OTB MTD Start"
+    type: sum
+  }
+
+  measure:  cy_rooms_mtd_var {
+    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_mtd_pu ;;
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd Act:MTD"
+    description: "Rooms Bkd - Prior 7 Days"
+    type: sum
+  }
+
   #-------------------------------------------------------------------------------------------
   #-- Measures STLY
   #-------------------------------------------------------------------------------------------
