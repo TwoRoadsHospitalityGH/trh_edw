@@ -547,6 +547,194 @@ view: revintel_property_segment_pace_f {
     description: "(STLY pickup + Act:LY - var)"
   }
 
+  #-------------------------------------------------------------------------------------------
+  #-- Forecast & Budget
+  #-------------------------------------------------------------------------------------------
 
+  measure:  fcst_room_cnt{
+    sql: ${TABLE}.fcst_room_cnt ;;
+    value_format_name: decimal_0
+    view_label: "  FCST"
+    label: "Rms Bkd"
+    description: "Room Booked"
+    type: sum
+  }
+
+  measure:  fcst_rev_amt{
+    sql: ${TABLE}.fcst_rev_amt ;;
+    value_format_name: usd_0
+    view_label: "  FCST"
+    label: "Rev Rms $"
+    description: "Room Revenue"
+    type: sum
+  }
+
+  measure:  fcst_room_adr{
+    sql: utl..udf_divide(${fcst_rev_amt},${fcst_room_cnt}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  FCST"
+    label: "ADR"
+    description: "Average Daily Rate"
+  }
+
+  measure: fcst_rev_ttl_perc {
+    view_label: "  FCST"
+    label: "Rev Rms $ - % Mix"
+    description: "Percent of total value."
+    type: percent_of_total
+    sql: ${fcst_room_cnt} ;;
+    value_format: "0.0\%"
+    hidden: no
+  }
+
+  measure:  bdgt_room_cnt{
+    sql: ${TABLE}.bdgt_room_cnt ;;
+    value_format_name: decimal_0
+    view_label: "  BDGT"
+    label: "Rms Bkd"
+    description: "Room Booked"
+    type: sum
+  }
+
+  measure:  bdgt_rev_amt{
+    sql: ${TABLE}.bdgt_rev_amt ;;
+    value_format_name: usd_0
+    view_label: "  BDGT"
+    label: "Rev Rms $"
+    description: "Room Revenue"
+    type: sum
+  }
+
+  measure:  bdgt_room_adr{
+    sql: utl..udf_divide(${bdgt_rev_amt},${bdgt_room_cnt}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  BDGT"
+    label: "ADR"
+    description: "Average Daily Rate"
+  }
+
+  measure: bdgt_rev_ttl_perc {
+    view_label: "  BDGT"
+    label: "Rev Rms $ - % Mix"
+    description: "Percent of total value."
+    type: percent_of_total
+    sql: ${bdgt_room_cnt} ;;
+    value_format: "0.0\%"
+    hidden: no
+  }
+
+  #-------------------------------------------------------------------------------------------
+  #-- Measures compare to bdgt and fcst
+  #-------------------------------------------------------------------------------------------
+
+  measure:  fcst_rooms_var_perc{
+    sql: utl..udf_percent_var((${cy_rooms}),(${fcst_room_cnt})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd Act:Fcst - % var"
+    description: "(TY - FCST)/FCST"
+  }
+
+  measure:  fcst_rooms_var{
+    sql: (${cy_rooms})-(${fcst_room_cnt}) ;;
+    type: number
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd Act:Fcst - var"
+    description: "(TY - FCST)"
+  }
+
+  measure:  fcst_room_rev_var_perc{
+    sql: utl..udf_percent_var((${cy_room_rev}),(${fcst_rev_amt})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev Rms $ Act:Fcst - % var"
+    description: "(TY - FCST)/FCST"
+  }
+
+  measure:  fcst_room_rev_var{
+    sql: (${cy_room_rev})-(${fcst_rev_amt}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev Rms $ Act:Fcst - var"
+    description: "(TY - FCST)"
+  }
+
+  measure:  fcst_room_adr_var_perc{
+    sql: utl..udf_percent_var((${cy_room_adr}),(${fcst_room_adr})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "ADR Act:Fcst - % var"
+    description: "(TY - FCST)/FCST"
+  }
+
+  measure:  fcst_room_adr_var{
+    sql: (${cy_room_adr})-(${fcst_room_adr}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "ADR Act:Fcst - var"
+    description: "(TY - FCST)"
+  }
+
+  measure:  bdgt_rooms_var_perc{
+    sql: utl..udf_percent_var((${cy_rooms}),(${bdgt_room_cnt})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd Act:Bdgt - % var"
+    description: "(TY - BDGT)/BDGT"
+  }
+
+  measure:  bdgt_rooms_var{
+    sql: (${cy_rooms})-(${bdgt_room_cnt}) ;;
+    type: number
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd Act:Bdgt - var"
+    description: "(TY - BDGT)"
+  }
+
+  measure:  bdgt_room_rev_var_perc{
+    sql: utl..udf_percent_var((${cy_room_rev}),(${bdgt_rev_amt})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev Rms $ Act:Bdgt - % var"
+    description: "(TY - BDGT)/BDGT"
+  }
+
+  measure:  bdgt_room_rev_var{
+    sql: (${cy_room_rev})-(${bdgt_rev_amt}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev Rms $ Act:Bdgt - var"
+    description: "(TY - BDGT)"
+  }
+
+  measure:  bdgt_room_adr_var_perc{
+    sql: utl..udf_percent_var((${cy_room_adr}),(${bdgt_room_adr})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "ADR Act:Bdgt - % var"
+    description: "(TY - BDGT)/BDGT"
+  }
+
+  measure:  bdgt_room_adr_var{
+    sql: (${cy_room_adr})-(${bdgt_room_adr}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "ADR Act:Bdgt - var"
+    description: "(TY - BDGT)"
+  }
 
 }
