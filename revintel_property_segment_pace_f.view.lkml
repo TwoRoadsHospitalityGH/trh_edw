@@ -179,8 +179,8 @@ view: revintel_property_segment_pace_f {
     type: sum
   }
 
-  measure:  cy_rooms_prior_mtd {
-    sql: ${TABLE}.cy_rooms_prior_mtd_pu ;;
+  measure:  cy_rooms_mtd {
+    sql: ${TABLE}.cy_rooms_mtd_pu ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd MTD"
@@ -188,8 +188,8 @@ view: revintel_property_segment_pace_f {
     type: sum
   }
 
-  measure:  cy_rooms_prior_mtd_var {
-    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_prior_mtd_pu ;;
+  measure:  cy_rooms_mtd_var {
+    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_mtd_pu ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd Act:MTD"
