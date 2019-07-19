@@ -53,9 +53,9 @@ view: date_dm {
   }
 
   dimension: day_of_month_num {
-    type: date_month_num
-    label: "Day of Month Number"
-    description: "Day Number"
+    type: date_day_of_month
+    label: "Day Number"
+    description: "Day of Month Number"
     convert_tz: no
     sql: ${cal_dt} ;;
     drill_fields: [year, quarter, month, week, date]
