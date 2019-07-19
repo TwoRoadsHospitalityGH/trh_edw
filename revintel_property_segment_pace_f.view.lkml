@@ -153,7 +153,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  cy_rooms_prior_day_var {
-    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_prior_day ;;
+    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_prior_day_pu ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd Act:Prior Day"
@@ -171,7 +171,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  cy_rooms_prior_7_day_var {
-    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_prior_7_day ;;
+    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_prior_7_day_pu ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd Act:Prior 7 Days "
@@ -189,7 +189,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  cy_rooms_prior_mtd_var {
-    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_prior_mtd ;;
+    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_prior_mtd_pu ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd Act:MTD"
