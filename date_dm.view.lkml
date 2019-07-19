@@ -52,9 +52,9 @@ view: date_dm {
     allow_fill: no
   }
 
-  dimension: day_of_month {
+  dimension: day_of_month_num {
     type: date_month_num
-    label: "Day of Month"
+    label: "Day of Month Number"
     description: "Day Number"
     convert_tz: no
     sql: ${cal_dt} ;;
