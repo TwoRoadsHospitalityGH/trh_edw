@@ -638,6 +638,24 @@ view: revintel_property_f {
     description: "(TY - STLY)"
   }
 
+  measure:  rev_ttl_perc_var_perc{
+    sql: utl..udf_percent_var(${cy_rev_ttl_perc},${stly_rev_ttl_perc}) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev Rms - % Mix Act:STLY - var"
+    description: "(TY - STLY)"
+  }
+
+  measure:  rev_ttl_perc_var{
+    sql: (${cy_rev_ttl_perc})-(${stly_rev_ttl_perc}) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev Rms - % Mix Act:STLY - var"
+    description: "(TY - STLY)"
+  }
+
   #-------------------------------------------------------------------------------------------
   #-- Measures stly pickup
   #-------------------------------------------------------------------------------------------
