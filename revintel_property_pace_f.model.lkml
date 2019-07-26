@@ -28,7 +28,7 @@ explore: revintel_property_pace_f {
 
     filters: {
       field:  agent_nm_first_letter_grp
-      value: "is any value"
+      value: ""
     }
   }
 
