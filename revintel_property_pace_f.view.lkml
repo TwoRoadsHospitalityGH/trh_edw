@@ -137,6 +137,29 @@ view: revintel_property_pace_f {
     type: string
   }
 
+  dimension: agent_nm_first_letter {
+    sql: initcap( left( ${TABLE}.agent_nm, 1 )) ;;
+    view_label: "Reservation Detail"
+    label: "Agent First Letter"
+    description: "Agent Name First Letter"
+    type: string
+    hidden: yes
+  }
+
+  dimension: agent_nm_first_letter_grp {
+    sql: case
+          when ${agent_nm_first_letter} between 'A' and 'H' then 'A - H'
+          when ${agent_nm_first_letter} between 'I' and 'P' then 'I - P'
+          when ${agent_nm_first_letter} between 'Q' and 'Z' then 'Q - Z'
+          else 'Q - Z'
+         end ;;
+    view_label: "Reservation Detail"
+    label: "Agent First Letter Group"
+    description: "Agent Name First Letter Group"
+    type: string
+    hidden: no
+  }
+
   dimension: iata_cd {
     sql: ${TABLE}.iata_cd ;;
     view_label: "Reservation Detail"
