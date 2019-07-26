@@ -26,10 +26,10 @@ explore: revintel_property_pace_f {
       value: "today"
     }
 
-    filters: {
-      field:  agent_nm_first_letter_grp
-      value: ""
-    }
+    #filters: {
+    #  field:  agent_nm_first_letter_grp
+    #  value: ""
+    #}
   }
 
   join: user_property_fdm {
