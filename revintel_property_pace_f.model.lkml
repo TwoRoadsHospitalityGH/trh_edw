@@ -25,6 +25,11 @@ explore: revintel_property_pace_f {
       field: asof_date_dm.asof_date
       value: "today"
     }
+
+    filters: {
+      field:  agent_nm_first_letter_grp
+      value: "is any value"
+    }
   }
 
   join: user_property_fdm {
