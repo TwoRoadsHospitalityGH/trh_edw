@@ -143,6 +143,7 @@ view: revintel_property_f {
 
   dimension: agent_nm_first_letter_grp {
     sql: case
+          when try_to_number( ${agent_nm_first_letter} ) between 0 and 9 then 'A - H'
           when ${agent_nm_first_letter} between 'A' and 'H' then 'A - H'
           when ${agent_nm_first_letter} between 'I' and 'P' then 'I - P'
           when ${agent_nm_first_letter} between 'Q' and 'Z' then 'Q - Z'
