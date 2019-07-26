@@ -643,8 +643,8 @@ view: revintel_property_f {
     type: number
     value_format_name: percent_1
     view_label: "  CY"
-    label: "Rev Rms - % Mix Act:STLY - var"
-    description: "(TY - STLY)"
+    label: "Rev Rms - % Mix Act:STLY - % var"
+    description: "(TY - STLY)/STLY"
   }
 
   measure:  rev_ttl_perc_var{
