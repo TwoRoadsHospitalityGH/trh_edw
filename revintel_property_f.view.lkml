@@ -347,6 +347,7 @@ view: revintel_property_f {
     description: "Percent of total value."
     type: percent_of_total
     sql: utl..udf_divide(${cy_room_rev},${cy_rooms}) ;;
+    value_format: "0.0\%"
     hidden: no
   }
 
