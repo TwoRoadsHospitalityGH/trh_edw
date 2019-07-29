@@ -303,6 +303,15 @@ view: revintel_property_f {
     type: sum
   }
 
+  measure:  cy_ttl_anc_rev{
+    sql: ${TABLE}.cy_food_rev + ${TABLE}.cy_other_rev ;;
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev Anc $"
+    description: "Ancillary (Food + Other) Revenue"
+    type: sum
+  }
+
   measure:  cy_ttl_rev{
     sql: ${TABLE}.cy_room_rev + ${TABLE}.cy_food_rev + ${TABLE}.cy_other_rev ;;
     value_format_name: usd_0
@@ -391,6 +400,15 @@ view: revintel_property_f {
     type: sum
   }
 
+  measure:  stly_ttl_anc_rev{
+    sql: ${TABLE}.stly_food_rev + ${TABLE}.stly_other_rev ;;
+    value_format_name: usd_0
+    view_label: "  STLY"
+    label: "Rev Anc $"
+    description: "STLY Ancillary (Food + Other) Revenue"
+    type: sum
+  }
+
   measure:  stly_ttl_rev{
     sql: ${TABLE}.stly_room_rev + ${TABLE}.stly_food_rev + ${TABLE}.stly_other_rev ;;
     value_format_name: usd_0
@@ -475,6 +493,15 @@ view: revintel_property_f {
     view_label: "  LY"
     label: "Rev Other $"
     description: "LY Other Revenue"
+    type: sum
+  }
+
+  measure:  ly_ttl_anc_rev{
+    sql: ${TABLE}.ly_food_rev + ${TABLE}.ly_other_rev ;;
+    value_format_name: usd_0
+    view_label: "  LY"
+    label: "Rev Anc $"
+    description: "LY Ancillary (Food + Other) Revenue"
     type: sum
   }
 
