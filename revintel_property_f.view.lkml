@@ -135,11 +135,11 @@ view: revintel_property_f {
   dimension: agent_nm_link_dshbd_agent {
     sql: ${TABLE}.agent_nm ;;
     view_label: "Reservation Detail"
-    label: "Agent Link"
+    label: "Agent"
     description: "Agent Name Link"
     type: string
     html: <a href="/dashboards/399?Agent={{ value }}">{{ value }}</a> ;;
-
+    hidden: yes
   }
 
   dimension: agent_nm_first_letter {
