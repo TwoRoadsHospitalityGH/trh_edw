@@ -130,7 +130,7 @@ view: revintel_property_f {
     label: "Agent"
     description: "Agent Name"
     type: string
-    html: <a href="/dashboards/399?Agent={{ value }}">{{ value }}</a> ;;
+    html: <a href="/dashboards/399?Agent={{ value }}" target="_blank">{{ value }}</a> ;;
   }
 
   dimension: agent_nm_first_letter {
