@@ -60,7 +60,7 @@ view: revintel_property_f {
     view_label: "Reservation Detail"
     label: "Minor Market Segment Sort No"
     description: "Minor Market Segment Sort Number"
-    type: string
+    type: number
   }
 
   dimension: contribution_channel_nm {
