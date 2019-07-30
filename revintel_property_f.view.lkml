@@ -399,6 +399,7 @@ view: revintel_property_f {
     type: percent_of_total
     sql: ${cy_room_rev} ;;
     value_format: "0.0\%"
+    direction: "column"
     hidden: no
     }
 
