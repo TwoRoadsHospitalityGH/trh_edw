@@ -124,6 +124,30 @@ view: revintel_property_f {
     type: string
   }
 
+  dimension: company_nm_first_letter {
+    sql: initcap( left( ${TABLE}.company_nm, 1 )) ;;
+    view_label: "Reservation Detail"
+    label: "Company First Letter"
+    description: "Company Name First Letter"
+    type: string
+    hidden: yes
+  }
+
+  dimension: company_nm_first_letter_grp {
+    sql: case
+          when try_to_number( ${company_nm_first_letter} ) between 0 and 9 then 'A - H'
+          when ${company_nm_first_letter} between 'A' and 'H' then 'A - H'
+          when ${company_nm_first_letter} between 'I' and 'P' then 'I - P'
+          when ${company_nm_first_letter} between 'Q' and 'Z' then 'Q - Z'
+          else 'Q - Z'
+         end ;;
+    view_label: "Reservation Detail"
+    label: "Company First Letter Group"
+    description: "Company Name First Letter Group"
+    type: string
+    hidden: no
+  }
+
   dimension: agent_nm {
     sql: ${TABLE}.agent_nm ;;
     view_label: "Reservation Detail"
