@@ -60,6 +60,33 @@ view: revintel_property_f {
     type: string
   }
 
+  dimension: minor_channel_sort_no {
+    sql: case
+          when ${TABLE}.minor_channel_nm = 'Retail'               then 1
+          when ${TABLE}.minor_channel_nm = 'Net Retail'           then 2
+          when ${TABLE}.minor_channel_nm = 'Qualified Discounts'  then 3
+          when ${TABLE}.minor_channel_nm = 'Government'           then 4
+          when ${TABLE}.minor_channel_nm = 'Packages'             then 5
+          when ${TABLE}.minor_channel_nm = 'Promotions'           then 6
+          when ${TABLE}.minor_channel_nm = 'Opaque'               then 7
+          when ${TABLE}.minor_channel_nm = 'Corporate Negotiated' then 8
+          when ${TABLE}.minor_channel_nm = 'Consortia'            then 9
+          when ${TABLE}.minor_channel_nm = 'Wholesale'            then 10
+          when ${TABLE}.minor_channel_nm = 'Group Entertainment'  then 11
+          when ${TABLE}.minor_channel_nm = 'Group Corporate'      then 12
+          when ${TABLE}.minor_channel_nm = 'Group Citywide'       then 13
+          when ${TABLE}.minor_channel_nm = 'Group Association'    then 14
+          when ${TABLE}.minor_channel_nm = 'Group Government'     then 15
+          when ${TABLE}.minor_channel_nm = 'Group SMERF'          then 16
+          when ${TABLE}.minor_channel_nm = 'Group Tour/Wholesale' then 17
+        else 9999
+      end ;;
+    view_label: "Reservation Detail"
+    label: "Minor Channel"
+    description: "Minor Channel Name"
+    type: string
+  }
+
   dimension: region_nm {
     sql: ${TABLE}.region_nm ;;
     view_label: "Reservation Detail"
