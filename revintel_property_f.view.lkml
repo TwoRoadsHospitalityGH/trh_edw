@@ -389,6 +389,7 @@ view: revintel_property_f {
     type: percent_of_total
     sql: ${cy_rooms} ;;
     value_format: "0.0\%"
+    direction: "column"
     hidden: no
     }
 
@@ -410,6 +411,7 @@ view: revintel_property_f {
     type: percent_of_total
     sql: utl..udf_divide(${cy_room_rev},${cy_rooms}) ;;
     value_format: "0.0\%"
+    direction: "column"
     hidden: no
   }
 
@@ -487,6 +489,7 @@ view: revintel_property_f {
     type: percent_of_total
     sql: ${stly_rooms} ;;
     value_format: "0.0\%"
+    direction: "column"
     hidden: no
   }
 
@@ -497,6 +500,7 @@ view: revintel_property_f {
     type: percent_of_total
     sql: ${stly_room_rev} ;;
     value_format: "0.0\%"
+    direction: "column"
     hidden: no
   }
 
@@ -507,6 +511,7 @@ view: revintel_property_f {
     type: percent_of_total
     sql: utl..udf_divide(${stly_room_rev},${stly_rooms}) ;;
     value_format: "0.0\%"
+    direction: "column"
     hidden: no
   }
 #-------------------------------------------------------------------------------------------
@@ -583,6 +588,7 @@ view: revintel_property_f {
     type: percent_of_total
     sql: ${ly_rooms} ;;
     value_format: "0.0\%"
+    direction: "column"
     hidden: no
   }
 
@@ -593,6 +599,7 @@ view: revintel_property_f {
     type: percent_of_total
     sql: ${ly_room_rev} ;;
     value_format: "0.0\%"
+    direction: "column"
     hidden: no
   }
 
@@ -603,6 +610,7 @@ view: revintel_property_f {
     type: percent_of_total
     sql: utl..udf_divide(${ly_room_rev},${ly_rooms}) ;;
     value_format: "0.0\%"
+    direction: "column"
     hidden: no
   }
 
@@ -718,24 +726,6 @@ view: revintel_property_f {
     label: "ADR Act:STLY - var"
     description: "(TY - STLY)"
   }
-
-  #measure:  rev_ttl_perc_var_perc{
-  #  sql: utl..udf_percent_var(${cy_rev_ttl_perc},${stly_rev_ttl_perc}) ;;
-  #  type: number
-  #  value_format_name: percent_1
-  #  view_label: "  CY"
-  #  label: "Rev Rms - % Mix Act:STLY - % var"
-  #  description: "(TY - STLY)/STLY"
-  #}
-
-  #measure:  rev_ttl_perc_var{
-  #  sql: (${cy_rev_ttl_perc})-(${stly_rev_ttl_perc}) ;;
-  #  type: number
-  #  value_format_name: percent_1
-  #  view_label: "  CY"
-  #  label: "Rev Rms - % Mix Act:STLY - var"
-  #  description: "(TY - STLY)"
-  #}
 
   #-------------------------------------------------------------------------------------------
   #-- Measures stly pickup
