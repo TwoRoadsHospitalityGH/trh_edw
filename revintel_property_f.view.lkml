@@ -20,41 +20,41 @@ view: revintel_property_f {
   #-- Dimensions
   #-------------------------------------------------------------------------------------------
 
-  dimension: major_market_nm {
-    sql: ${TABLE}.major_market_nm ;;
+  dimension: major_market_name {
+    sql: ${TABLE}.major_market_name ;;
     view_label: "Reservation Detail"
     label: "Major Market Segment"
     description: "Major Market Segment Name"
     type: string
   }
 
-  dimension: minor_market_nm {
-    sql: ${TABLE}.minor_market_nm ;;
+  dimension: minor_market_name {
+    sql: ${TABLE}.minor_market_name ;;
     view_label: "Reservation Detail"
     label: "Minor Market Segment"
     description: "Minor Market Segment Name"
     type: string
   }
 
-  dimension: minor_market_nm_sort_no {
+  dimension: minor_market_name_sort_no {
     sql: case
-          when ${TABLE}.minor_market_nm = 'Retail'               then 1
-          when ${TABLE}.minor_market_nm = 'Net Retail'           then 2
-          when ${TABLE}.minor_market_nm = 'Qualified Discounts'  then 3
-          when ${TABLE}.minor_market_nm = 'Government'           then 4
-          when ${TABLE}.minor_market_nm = 'Packages'             then 5
-          when ${TABLE}.minor_market_nm = 'Promotions'           then 6
-          when ${TABLE}.minor_market_nm = 'Opaque'               then 7
-          when ${TABLE}.minor_market_nm = 'Corporate Negotiated' then 8
-          when ${TABLE}.minor_market_nm = 'Consortia'            then 9
-          when ${TABLE}.minor_market_nm = 'Wholesale'            then 10
-          when ${TABLE}.minor_market_nm = 'Group Entertainment'  then 11
-          when ${TABLE}.minor_market_nm = 'Group Corporate'      then 12
-          when ${TABLE}.minor_market_nm = 'Group Citywide'       then 13
-          when ${TABLE}.minor_market_nm = 'Group Association'    then 14
-          when ${TABLE}.minor_market_nm = 'Group Government'     then 15
-          when ${TABLE}.minor_market_nm = 'Group SMERF'          then 16
-          when ${TABLE}.minor_market_nm = 'Group Tour/Wholesale' then 17
+          when ${TABLE}.minor_market_name = 'Retail'               then 1
+          when ${TABLE}.minor_market_name = 'Net Retail'           then 2
+          when ${TABLE}.minor_market_name = 'Qualified Discounts'  then 3
+          when ${TABLE}.minor_market_name = 'Government'           then 4
+          when ${TABLE}.minor_market_name = 'Packages'             then 5
+          when ${TABLE}.minor_market_name = 'Promotions'           then 6
+          when ${TABLE}.minor_market_name = 'Opaque'               then 7
+          when ${TABLE}.minor_market_name = 'Corporate Negotiated' then 8
+          when ${TABLE}.minor_market_name = 'Consortia'            then 9
+          when ${TABLE}.minor_market_name = 'Wholesale'            then 10
+          when ${TABLE}.minor_market_name = 'Group Entertainment'  then 11
+          when ${TABLE}.minor_market_name = 'Group Corporate'      then 12
+          when ${TABLE}.minor_market_name = 'Group Citywide'       then 13
+          when ${TABLE}.minor_market_name = 'Group Association'    then 14
+          when ${TABLE}.minor_market_name = 'Group Government'     then 15
+          when ${TABLE}.minor_market_name = 'Group SMERF'          then 16
+          when ${TABLE}.minor_market_name = 'Group Tour/Wholesale' then 17
         else 9999
       end ;;
     view_label: "Reservation Detail"
@@ -63,96 +63,96 @@ view: revintel_property_f {
     type: number
   }
 
-  dimension: contribution_channel_nm {
-    sql: ${TABLE}.contribution_channel_nm ;;
+  dimension: contribution_channel_name {
+    sql: ${TABLE}.contribution_channel_name ;;
     view_label: "Reservation Detail"
     label: "Contribution Channel"
     description: "Contribution Channel Name"
     type: string
   }
 
-  dimension: major_channel_nm {
-    sql: ${TABLE}.major_Channel_nm ;;
+  dimension: major_channel_name {
+    sql: ${TABLE}.major_Channel_name ;;
     view_label: "Reservation Detail"
     label: "Major Channel"
     description: "Major Channel Name"
     type: string
   }
 
-  dimension: minor_channel_nm {
-    sql: ${TABLE}.minor_channel_nm ;;
+  dimension: minor_channel_name {
+    sql: ${TABLE}.minor_channel_name ;;
     view_label: "Reservation Detail"
     label: "Minor Channel"
     description: "Minor Channel Name"
     type: string
   }
 
-  dimension: region_nm {
-    sql: ${TABLE}.region_nm ;;
+  dimension: region_name {
+    sql: ${TABLE}.region_name ;;
     view_label: "Reservation Detail"
     label: "Region"
     description: "Region Name"
     type: string
   }
 
-  dimension: subregion_nm {
-    sql: ${TABLE}.subregion_nm ;;
+  dimension: subregion_name {
+    sql: ${TABLE}.subregion_name ;;
     view_label: "Reservation Detail"
     label: "Subregion"
     description: "Subregion Name"
     type: string
   }
 
-  dimension: country_nm {
-    sql: ${TABLE}.country_nm ;;
+  dimension: country_name {
+    sql: ${TABLE}.country_name ;;
     view_label: "Reservation Detail"
     label: "Country"
     description: "Country Name"
     type: string
   }
 
-  dimension: state_nm {
-    sql: ${TABLE}.state_nm ;;
+  dimension: state_name {
+    sql: ${TABLE}.state_name ;;
     view_label: "Reservation Detail"
     label: "State"
     description: "State Name"
     type: string
   }
 
-  dimension: major_room_product_nm {
-    sql: ${TABLE}.major_room_product_nm ;;
+  dimension: major_room_product_name {
+    sql: ${TABLE}.major_room_product_name ;;
     view_label: "Reservation Detail"
     label: "Major Room Product"
     description: "Major Room Product Name"
     type: string
   }
 
-  dimension: minor_room_product_nm {
-    sql: ${TABLE}.minor_room_product_nm ;;
+  dimension: minor_room_product_name {
+    sql: ${TABLE}.minor_room_product_name ;;
     view_label: "Reservation Detail"
     label: "Minor Room Product"
     description: "Minor Room Product Name"
     type: string
   }
 
-  dimension: room_type_nm {
-    sql: ${TABLE}.room_type_nm ;;
+  dimension: room_type_name {
+    sql: ${TABLE}.room_type_name ;;
     view_label: "Reservation Detail"
     label: "Room Type"
     description: "Room Type Name"
     type: string
   }
 
-  dimension: company_nm {
-    sql: ${TABLE}.company_nm ;;
+  dimension: company_name {
+    sql: ${TABLE}.company_name ;;
     view_label: "Reservation Detail"
     label: "Company"
     description: "Company Name"
     type: string
   }
 
-  dimension: company_nm_first_letter {
-    sql: initcap( left( ${TABLE}.company_nm, 1 )) ;;
+  dimension: company_name_first_letter {
+    sql: initcap( left( ${TABLE}.company_name, 1 )) ;;
     view_label: "Reservation Detail"
     label: "Company First Letter"
     description: "Company Name First Letter"
@@ -160,12 +160,12 @@ view: revintel_property_f {
     hidden: yes
   }
 
-  dimension: company_nm_first_letter_grp {
+  dimension: company_name_first_letter_grp {
     sql: case
-          when try_to_number( ${company_nm_first_letter} ) between 0 and 9 then 'A - H'
-          when ${company_nm_first_letter} between 'A' and 'H' then 'A - H'
-          when ${company_nm_first_letter} between 'I' and 'P' then 'I - P'
-          when ${company_nm_first_letter} between 'Q' and 'Z' then 'Q - Z'
+          when try_to_number( ${company_name_first_letter} ) between 0 and 9 then 'A - H'
+          when ${company_name_first_letter} between 'A' and 'H' then 'A - H'
+          when ${company_name_first_letter} between 'I' and 'P' then 'I - P'
+          when ${company_name_first_letter} between 'Q' and 'Z' then 'Q - Z'
           else 'Q - Z'
          end ;;
     view_label: "Reservation Detail"
@@ -175,8 +175,8 @@ view: revintel_property_f {
     hidden: no
   }
 
-  dimension: agent_nm {
-    sql: ${TABLE}.agent_nm ;;
+  dimension: agent_name {
+    sql: ${TABLE}.agent_name ;;
     view_label: "Reservation Detail"
     label: "Agent"
     description: "Agent Name"
@@ -184,8 +184,8 @@ view: revintel_property_f {
     html: <a href="/dashboards/399?Agent={{ value }}" target="_blank">{{ value }}</a> ;;
   }
 
-  dimension: agent_nm_first_letter {
-    sql: initcap( left( ${TABLE}.agent_nm, 1 )) ;;
+  dimension: agent_name_first_letter {
+    sql: initcap( left( ${TABLE}.agent_name, 1 )) ;;
     view_label: "Reservation Detail"
     label: "Agent First Letter"
     description: "Agent Name First Letter"
@@ -193,12 +193,12 @@ view: revintel_property_f {
     hidden: yes
   }
 
-  dimension: agent_nm_first_letter_grp {
+  dimension: agent_name_first_letter_grp {
     sql: case
-          when try_to_number( ${agent_nm_first_letter} ) between 0 and 9 then 'A - H'
-          when ${agent_nm_first_letter} between 'A' and 'H' then 'A - H'
-          when ${agent_nm_first_letter} between 'I' and 'P' then 'I - P'
-          when ${agent_nm_first_letter} between 'Q' and 'Z' then 'Q - Z'
+          when try_to_number( ${agent_name_first_letter} ) between 0 and 9 then 'A - H'
+          when ${agent_name_first_letter} between 'A' and 'H' then 'A - H'
+          when ${agent_name_first_letter} between 'I' and 'P' then 'I - P'
+          when ${agent_name_first_letter} between 'Q' and 'Z' then 'Q - Z'
           else 'Q - Z'
          end ;;
     view_label: "Reservation Detail"
@@ -216,8 +216,8 @@ view: revintel_property_f {
     type: string
   }
 
-  dimension: business_unit_nm {
-    sql: ${TABLE}.business_unit_nm ;;
+  dimension: business_unit_name {
+    sql: ${TABLE}.business_unit_name ;;
     view_label: "Reservation Detail"
     label: "Business Unit"
     description: "Busines Unit Name"
@@ -232,8 +232,8 @@ view: revintel_property_f {
     type: string
   }
 
-  dimension: rate_code_nm {
-    sql: ${TABLE}.rate_code_nm ;;
+  dimension: rate_code_name {
+    sql: ${TABLE}.rate_code_name ;;
     view_label: "Reservation Detail"
     label: "Rate Code Name"
     description: "Rate Code Name"
@@ -241,7 +241,7 @@ view: revintel_property_f {
   }
 
   dimension: cy_record_fl {
-    sql: iff( ${TABLE}.cy_rooms + ${TABLE}.cy_room_rev != 0, 1, 0 ) = 1;;
+    sql: iff( ${TABLE}.cy_room_cnt + ${TABLE}.cy_room_rev_amt != 0, 1, 0 ) = 1;;
     view_label: "Reservation Detail"
     label: "CY Record"
     description: "CY Rms Bkd and Rev Rms != 0"
@@ -266,7 +266,7 @@ view: revintel_property_f {
     label: "Ttl Agent Count"
     description: "Total Agent Count"
     type: count_distinct
-    sql: ${TABLE}.agent_nm ;;
+    sql: ${TABLE}.agent_name ;;
     hidden: no
   }
 
@@ -275,7 +275,7 @@ view: revintel_property_f {
     label: "Ttl Company Count"
     description: "Total Company Count"
     type: count_distinct
-    sql: ${TABLE}.company_nm ;;
+    sql: ${TABLE}.company_name ;;
     hidden: no
   }
 
@@ -293,7 +293,7 @@ view: revintel_property_f {
     label: "Ttl Room Type Count"
     description: "Total Room Type Name Count"
     type: count_distinct
-    sql: ${TABLE}.room_type_nm ;;
+    sql: ${TABLE}.room_type_name ;;
     hidden: no
   }
 
@@ -302,7 +302,7 @@ view: revintel_property_f {
     label: "Ttl Country Count"
     description: "Total Country Name Count"
     type: count_distinct
-    sql: ${TABLE}.country_nm ;;
+    sql: ${TABLE}.country_name ;;
     hidden: no
   }
 
@@ -311,7 +311,7 @@ view: revintel_property_f {
     label: "Ttl Minor Channel Count"
     description: "Total Minor Channel Name Count"
     type: count_distinct
-    sql: ${TABLE}.minor_channel_nm ;;
+    sql: ${TABLE}.minor_channel_name ;;
     hidden: no
   }
 
@@ -319,8 +319,8 @@ view: revintel_property_f {
   #-- Measures
   #-------------------------------------------------------------------------------------------
 
-  measure:  cy_rooms{
-    sql: ${TABLE}.cy_rooms ;;
+  measure:  cy_room_cnt{
+    sql: ${TABLE}.cy_room_cnt ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd"
@@ -328,8 +328,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  cy_room_rev{
-    sql: ${TABLE}.cy_room_rev ;;
+  measure:  cy_room_rev_amt{
+    sql: ${TABLE}.cy_room_rev_amt ;;
     value_format_name: usd_0
     view_label: "  CY"
     label: "Rev Rms $"
@@ -337,8 +337,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  cy_food_rev{
-    sql: ${TABLE}.cy_food_rev ;;
+  measure:  cy_food_rev_amt{
+    sql: ${TABLE}.cy_food_rev_amt ;;
     value_format_name: usd_0
     view_label: "  CY"
     label: "Rev Food $"
@@ -346,8 +346,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  cy_other_rev{
-    sql: ${TABLE}.cy_other_rev ;;
+  measure:  cy_other_rev_amt{
+    sql: ${TABLE}.cy_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  CY"
     label: "Rev Other $"
@@ -355,8 +355,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  cy_ttl_anc_rev{
-    sql: ${TABLE}.cy_food_rev + ${TABLE}.cy_other_rev ;;
+  measure:  cy_ttl_anc_rev_amt{
+    sql: ${TABLE}.cy_food_rev_amt + ${TABLE}.cy_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  CY"
     label: "Rev Anc $"
@@ -364,8 +364,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  cy_ttl_rev{
-    sql: ${TABLE}.cy_room_rev + ${TABLE}.cy_food_rev + ${TABLE}.cy_other_rev ;;
+  measure:  cy_ttl_rev_amt{
+    sql: ${TABLE}.cy_room_rev_amt + ${TABLE}.cy_food_rev_amt + ${TABLE}.cy_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  CY"
     label: "Rev $"
@@ -374,7 +374,7 @@ view: revintel_property_f {
   }
 
   measure:  cy_room_adr{
-    sql: utl..udf_divide(${cy_room_rev},${cy_rooms}) ;;
+    sql: utl..udf_divide(${cy_room_rev_amt},${cy_room_cnt}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  CY"
@@ -387,7 +387,7 @@ view: revintel_property_f {
     label: "Rms Bkd - % Mix"
     description: "Percent of total value."
     type: percent_of_total
-    sql: ${cy_rooms} ;;
+    sql: ${cy_room_cnt} ;;
     value_format: "0.0\%"
     direction: "column"
     hidden: no
@@ -398,7 +398,7 @@ view: revintel_property_f {
     label: "Rev Rms $ - % Mix"
     description: "Percent of total value."
     type: percent_of_total
-    sql: ${cy_room_rev} ;;
+    sql: ${cy_room_rev_amt} ;;
     value_format: "0.0\%"
     direction: "column"
     hidden: no
@@ -409,7 +409,7 @@ view: revintel_property_f {
     label: "ADR - % Mix"
     description: "Percent of total value."
     type: percent_of_total
-    sql: utl..udf_divide(${cy_room_rev},${cy_rooms}) ;;
+    sql: utl..udf_divide(${cy_room_rev_amt},${cy_room_cnt}) ;;
     value_format: "0.0\%"
     direction: "column"
     hidden: no
@@ -419,8 +419,8 @@ view: revintel_property_f {
   #-- Measures STLY
   #-------------------------------------------------------------------------------------------
 
-  measure:  stly_rooms{
-    sql: ${TABLE}.stly_rooms ;;
+  measure:  stly_room_cnt{
+    sql: ${TABLE}.stly_room_cnt ;;
     value_format_name: decimal_0
     view_label: "  STLY"
     label: "Rms Bkd"
@@ -428,8 +428,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  stly_room_rev{
-    sql: ${TABLE}.stly_room_rev ;;
+  measure:  stly_room_rev_amt{
+    sql: ${TABLE}.stly_room_rev_amt ;;
     value_format_name: usd_0
     view_label: "  STLY"
     label: "Rev Rms $"
@@ -437,8 +437,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  stly_food_rev{
-    sql: ${TABLE}.stly_food_rev ;;
+  measure:  stly_food_rev_amt{
+    sql: ${TABLE}.stly_food_rev_amt ;;
     value_format_name: usd_0
     view_label: "  STLY"
     label: "Rev Food $"
@@ -446,8 +446,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  stly_other_rev{
-    sql: ${TABLE}.stly_other_rev ;;
+  measure:  stly_other_rev_amt{
+    sql: ${TABLE}.stly_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  STLY"
     label: "Rev Other $"
@@ -455,8 +455,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  stly_ttl_anc_rev{
-    sql: ${TABLE}.stly_food_rev + ${TABLE}.stly_other_rev ;;
+  measure:  stly_ttl_anc_rev_amt{
+    sql: ${TABLE}.stly_food_rev_amt + ${TABLE}.stly_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  STLY"
     label: "Rev Anc $"
@@ -464,8 +464,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  stly_ttl_rev{
-    sql: ${TABLE}.stly_room_rev + ${TABLE}.stly_food_rev + ${TABLE}.stly_other_rev ;;
+  measure:  stly_ttl_rev_amt{
+    sql: ${TABLE}.stly_room_rev_amt + ${TABLE}.stly_food_rev_amt + ${TABLE}.stly_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  STLY"
     label: "Rev $"
@@ -474,7 +474,7 @@ view: revintel_property_f {
   }
 
   measure:  stly_room_adr{
-    sql: utl..udf_divide(${stly_room_rev},${stly_rooms}) ;;
+    sql: utl..udf_divide(${stly_room_rev_amt},${stly_room_cnt}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  STLY"
@@ -487,7 +487,7 @@ view: revintel_property_f {
     label: "Rms Bkd - % Mix"
     description: "Percent of total value."
     type: percent_of_total
-    sql: ${stly_rooms} ;;
+    sql: ${stly_room_cnt} ;;
     value_format: "0.0\%"
     direction: "column"
     hidden: no
@@ -498,7 +498,7 @@ view: revintel_property_f {
     label: "Rev Rms $ - % Mix"
     description: "Percent of total value."
     type: percent_of_total
-    sql: ${stly_room_rev} ;;
+    sql: ${stly_room_rev_amt} ;;
     value_format: "0.0\%"
     direction: "column"
     hidden: no
@@ -509,7 +509,7 @@ view: revintel_property_f {
     label: "ADR - % Mix"
     description: "Percent of total value."
     type: percent_of_total
-    sql: utl..udf_divide(${stly_room_rev},${stly_rooms}) ;;
+    sql: utl..udf_divide(${stly_room_rev_amt},${stly_room_cnt}) ;;
     value_format: "0.0\%"
     direction: "column"
     hidden: no
@@ -518,8 +518,8 @@ view: revintel_property_f {
   #-- Measures LY
   #-------------------------------------------------------------------------------------------
 
-  measure:  ly_rooms{
-    sql: ${TABLE}.ly_rooms ;;
+  measure:  ly_room_cnt{
+    sql: ${TABLE}.ly_room_cnt ;;
     value_format_name: decimal_0
     view_label: "  LY"
     label: "Rms Bkd"
@@ -527,8 +527,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  ly_room_rev{
-    sql: ${TABLE}.ly_room_rev ;;
+  measure:  ly_room_rev_amt{
+    sql: ${TABLE}.ly_room_rev_amt ;;
     value_format_name: usd_0
     view_label: "  LY"
     label: "Rev Rms $"
@@ -536,8 +536,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  ly_food_rev{
-    sql: ${TABLE}.ly_food_rev ;;
+  measure:  ly_food_rev_amt{
+    sql: ${TABLE}.ly_food_rev_amt ;;
     value_format_name: usd_0
     view_label: "  LY"
     label: "Rev Food $"
@@ -545,8 +545,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  ly_other_rev{
-    sql: ${TABLE}.ly_other_rev ;;
+  measure:  ly_other_rev_amt{
+    sql: ${TABLE}.ly_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  LY"
     label: "Rev Other $"
@@ -554,8 +554,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  ly_ttl_anc_rev{
-    sql: ${TABLE}.ly_food_rev + ${TABLE}.ly_other_rev ;;
+  measure:  ly_ttl_anc_rev_amt{
+    sql: ${TABLE}.ly_food_rev_amt + ${TABLE}.ly_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  LY"
     label: "Rev Anc $"
@@ -563,8 +563,8 @@ view: revintel_property_f {
     type: sum
   }
 
-  measure:  ly_ttl_rev{
-    sql: ${TABLE}.ly_room_rev + ${TABLE}.ly_food_rev + ${TABLE}.ly_other_rev ;;
+  measure:  ly_ttl_rev_amt{
+    sql: ${TABLE}.ly_room_rev_amt + ${TABLE}.ly_food_rev_amt + ${TABLE}.ly_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  LY"
     label: "Rev $"
@@ -573,7 +573,7 @@ view: revintel_property_f {
   }
 
   measure:  ly_room_adr{
-    sql: utl..udf_divide(${ly_room_rev},${ly_rooms}) ;;
+    sql: utl..udf_divide(${ly_room_rev_amt},${ly_room_cnt}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  LY"
@@ -586,7 +586,7 @@ view: revintel_property_f {
     label: "Rms Bkd - % Mix"
     description: "Percent of total value."
     type: percent_of_total
-    sql: ${ly_rooms} ;;
+    sql: ${ly_room_cnt} ;;
     value_format: "0.0\%"
     direction: "column"
     hidden: no
@@ -597,7 +597,7 @@ view: revintel_property_f {
     label: "Rev Rms $ - % Mix"
     description: "Percent of total value."
     type: percent_of_total
-    sql: ${ly_room_rev} ;;
+    sql: ${ly_room_rev_amt} ;;
     value_format: "0.0\%"
     direction: "column"
     hidden: no
@@ -608,7 +608,7 @@ view: revintel_property_f {
     label: "ADR - % Mix"
     description: "Percent of total value."
     type: percent_of_total
-    sql: utl..udf_divide(${ly_room_rev},${ly_rooms}) ;;
+    sql: utl..udf_divide(${ly_room_rev_amt},${ly_room_cnt}) ;;
     value_format: "0.0\%"
     direction: "column"
     hidden: no
@@ -620,7 +620,7 @@ view: revintel_property_f {
   #-------------------------------------------------------------------------------------------
 
   measure:  rooms_var_perc{
-    sql: utl..udf_percent_var((${cy_rooms}),(${stly_rooms})) ;;
+    sql: utl..udf_percent_var((${cy_room_cnt}),(${stly_room_cnt})) ;;
     type: number
     value_format_name: percent_1
     view_label: "  CY"
@@ -629,7 +629,7 @@ view: revintel_property_f {
   }
 
   measure:  rooms_var{
-    sql: (${cy_rooms})-(${stly_rooms}) ;;
+    sql: (${cy_room_cnt})-(${stly_room_cnt}) ;;
     type: number
     value_format_name: decimal_0
     view_label: "  CY"
@@ -638,7 +638,7 @@ view: revintel_property_f {
   }
 
   measure:  room_rev_var_perc{
-    sql: utl..udf_percent_var((${cy_room_rev}),(${stly_room_rev})) ;;
+    sql: utl..udf_percent_var((${cy_room_rev_amt}),(${stly_room_rev_amt})) ;;
     type: number
     value_format_name: percent_1
     view_label: "  CY"
@@ -647,7 +647,7 @@ view: revintel_property_f {
   }
 
   measure:  room_rev_var{
-    sql: (${cy_room_rev})-(${stly_room_rev}) ;;
+    sql: (${cy_room_rev_amt})-(${stly_room_rev_amt}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  CY"
@@ -656,7 +656,7 @@ view: revintel_property_f {
   }
 
   measure:  food_rev_var_perc{
-    sql: utl..udf_percent_var((${cy_food_rev}),(${stly_food_rev})) ;;
+    sql: utl..udf_percent_var((${cy_food_rev_amt}),(${stly_food_rev_amt})) ;;
     type: number
     value_format_name: percent_1
     view_label: "  CY"
@@ -665,7 +665,7 @@ view: revintel_property_f {
   }
 
   measure:  food_rev_var{
-    sql: (${cy_food_rev})-(${stly_food_rev}) ;;
+    sql: (${cy_food_rev_amt})-(${stly_food_rev_amt}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  CY"
@@ -674,7 +674,7 @@ view: revintel_property_f {
   }
 
   measure:  other_rev_var_perc{
-    sql: utl..udf_percent_var((${cy_other_rev}),(${stly_other_rev})) ;;
+    sql: utl..udf_percent_var((${cy_other_rev_amt}),(${stly_other_rev_amt})) ;;
     type: number
     value_format_name: percent_1
     view_label: "  CY"
@@ -683,7 +683,7 @@ view: revintel_property_f {
   }
 
   measure:  other_rev_var{
-    sql: (${cy_other_rev})-(${stly_other_rev}) ;;
+    sql: (${cy_other_rev_amt})-(${stly_other_rev_amt}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  CY"
@@ -692,7 +692,7 @@ view: revintel_property_f {
   }
 
   measure:  ttl_rev_var_perc{
-    sql: utl..udf_percent_var((${cy_ttl_rev}),(${stly_ttl_rev})) ;;
+    sql: utl..udf_percent_var((${cy_ttl_rev_amt}),(${stly_ttl_rev_amt})) ;;
     type: number
     value_format_name: percent_1
     view_label: "  CY"
@@ -701,7 +701,7 @@ view: revintel_property_f {
   }
 
   measure:  ttl_rev_var{
-    sql: (${cy_ttl_rev})-(${stly_ttl_rev}) ;;
+    sql: (${cy_ttl_rev_amt})-(${stly_ttl_rev_amt}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  CY"
@@ -732,7 +732,7 @@ view: revintel_property_f {
   #-------------------------------------------------------------------------------------------
 
   measure:  rooms_stly_pickup{
-    sql: (${ly_rooms})-(${stly_rooms}) ;;
+    sql: (${ly_room_cnt})-(${stly_room_cnt}) ;;
     type: number
     value_format_name: decimal_0
     view_label: "  CY"
@@ -741,7 +741,7 @@ view: revintel_property_f {
   }
 
   measure:  room_rev_stly_pickup{
-    sql: (${ly_room_rev})-(${stly_room_rev}) ;;
+    sql: (${ly_room_rev_amt})-(${stly_room_rev_amt}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  CY"
