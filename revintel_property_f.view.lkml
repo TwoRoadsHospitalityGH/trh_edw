@@ -160,7 +160,7 @@ view: revintel_property_f {
     hidden: yes
   }
 
-  dimension: company_name_first_letter_grp {
+  dimension: company_nm_first_letter_grp {
     sql: case
           when try_to_number( ${company_name_first_letter} ) between 0 and 9 then 'A - H'
           when ${company_name_first_letter} between 'A' and 'H' then 'A - H'
@@ -193,7 +193,7 @@ view: revintel_property_f {
     hidden: yes
   }
 
-  dimension: agent_name_first_letter_grp {
+  dimension: agent_nm_first_letter_grp {
     sql: case
           when try_to_number( ${agent_name_first_letter} ) between 0 and 9 then 'A - H'
           when ${agent_name_first_letter} between 'A' and 'H' then 'A - H'
