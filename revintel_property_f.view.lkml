@@ -763,7 +763,7 @@ view: revintel_property_f {
 #-------------------------------------------------------------------------------------------
 
   measure:  rooms_stly_reach{
-    sql: (${rooms_stly_pickup}( + (${rooms_var}) ;;
+    sql: (${rooms_stly_pickup}) + (${rooms_var}) ;;
     type: number
     value_format_name: decimal_0
     view_label: "  CY"
