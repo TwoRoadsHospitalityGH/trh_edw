@@ -44,4 +44,15 @@ explore: revintel_property_f {
     type: inner
     relationship: many_to_one
   }
+
+  join: dt_revintel_avail_rooms {
+    from: dt_revintel_avail_rooms
+    view_label: " Derived"
+    sql_on: ${dt_revintel_avail_rooms.property_key} = ${revintel_property_f.property_key}
+    and ${dt_revintel_avail_rooms.date_sid} = ${revintel_property_f.date_sid}
+    ;;
+    type: inner
+    relationship: many_to_one
+  }
+
   }

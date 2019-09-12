@@ -1,5 +1,5 @@
 view: revintel_property_segment_pace_f {
-  sql_table_name: pedw.dev.revintel_property_segment_pace_f  ;;
+  sql_table_name: pedw.fact.revintel_property_segment_pace_f  ;;
 
   #-------------------------------------------------------------------------------------------
   #-- Keys
@@ -26,7 +26,7 @@ view: revintel_property_segment_pace_f {
   #-------------------------------------------------------------------------------------------
 
   dimension: major_market_nm {
-    sql: ${TABLE}.major_market_nm ;;
+    sql: ${TABLE}.major_market_name ;;
     view_label: "Reservation Detail"
     label: "Major Market Segment"
     description: "Major Market Segment Name"
@@ -34,11 +34,39 @@ view: revintel_property_segment_pace_f {
   }
 
   dimension: minor_market_nm {
-    sql: ${TABLE}.minor_market_nm ;;
+    sql: ${TABLE}.minor_market_name ;;
     view_label: "Reservation Detail"
     label: "Minor Market Segment"
     description: "Minor Market Segment Name"
     type: string
+  }
+
+
+  dimension: minor_market_nm_sort_no {
+    sql: case
+          when ${TABLE}.minor_market_name = 'Retail'               then 1
+          when ${TABLE}.minor_market_name = 'Net Retail'           then 2
+          when ${TABLE}.minor_market_name = 'Qualified Discounts'  then 3
+          when ${TABLE}.minor_market_name = 'Government'           then 4
+          when ${TABLE}.minor_market_name = 'Packages'             then 5
+          when ${TABLE}.minor_market_name = 'Promotions'           then 6
+          when ${TABLE}.minor_market_name = 'Opaque'               then 7
+          when ${TABLE}.minor_market_name = 'Corporate Negotiated' then 8
+          when ${TABLE}.minor_market_name = 'Consortia'            then 9
+          when ${TABLE}.minor_market_name = 'Wholesale'            then 10
+          when ${TABLE}.minor_market_name = 'Group Entertainment'  then 11
+          when ${TABLE}.minor_market_name = 'Group Corporate'      then 12
+          when ${TABLE}.minor_market_name = 'Group Citywide'       then 13
+          when ${TABLE}.minor_market_name = 'Group Association'    then 14
+          when ${TABLE}.minor_market_name = 'Group Government'     then 15
+          when ${TABLE}.minor_market_name = 'Group SMERF'          then 16
+          when ${TABLE}.minor_market_name = 'Group Tour/Wholesale' then 17
+        else 9999
+      end ;;
+    view_label: "Reservation Detail"
+    label: "Minor Market Segment Sort No"
+    description: "Minor Market Segment Sort Number"
+    type: number
   }
 
   ##
@@ -61,7 +89,7 @@ view: revintel_property_segment_pace_f {
   #-------------------------------------------------------------------------------------------
 
   measure:  cy_rooms{
-    sql: ${TABLE}.cy_rooms ;;
+    sql: ${TABLE}.cy_room_cnt ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd"
@@ -70,7 +98,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  cy_room_rev{
-    sql: ${TABLE}.cy_room_rev ;;
+    sql: ${TABLE}.cy_room_rev_amt ;;
     value_format_name: usd_0
     view_label: "  CY"
     label: "Rev Rms $"
@@ -79,7 +107,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  cy_food_rev{
-    sql: ${TABLE}.cy_food_rev ;;
+    sql: ${TABLE}.cy_food_rev_amt ;;
     value_format_name: usd_0
     view_label: "  CY"
     label: "Rev Food $"
@@ -88,7 +116,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  cy_other_rev{
-    sql: ${TABLE}.cy_other_rev ;;
+    sql: ${TABLE}.cy_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  CY"
     label: "Rev Other $"
@@ -97,7 +125,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  cy_ttl_rev{
-    sql: ${TABLE}.cy_room_rev + ${TABLE}.cy_food_rev + ${TABLE}.cy_other_rev ;;
+    sql: ${TABLE}.cy_room_rev_amt + ${TABLE}.cy_food_rev_amt + ${TABLE}.cy_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  CY"
     label: "Rev $"
@@ -143,8 +171,26 @@ view: revintel_property_segment_pace_f {
     hidden: no
   }
 
+  measure:  cy_rooms_bkd_pct{
+    sql: utl..udf_divide(${cy_rooms}, ${dt_revintel_segment_pace_avail_rooms.dt_cy_avail_room_cnt}) ;;
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd %"
+    description: "Rooms Booked / Rooms Available"
+    type: number
+  }
+
+  measure:  cy_rev_par{
+    sql: utl..udf_divide(${cy_room_rev}, ${dt_revintel_segment_pace_avail_rooms.dt_cy_avail_room_cnt}) ;;
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev PAR $"
+    description: "Revenue per Available Room Amount"
+    type: number
+  }
+
   measure:  cy_rooms_prior_day {
-    sql: ${TABLE}.cy_rooms_prior_day_pu ;;
+    sql: ${TABLE}.cy_room_cnt_prior_day ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd Prior Day"
@@ -153,7 +199,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  cy_rooms_prior_day_var {
-    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_prior_day_pu ;;
+    sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_room_cnt_prior_day ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd Act:Prior Day"
@@ -162,7 +208,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  cy_rooms_prior_7_day {
-    sql: ${TABLE}.cy_rooms_prior_7_day_pu ;;
+    sql: ${TABLE}.cy_room_cnt_prior_7_day ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd Prior 7 Days"
@@ -171,7 +217,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  cy_rooms_prior_7_day_var {
-    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_prior_7_day_pu ;;
+    sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_room_cnt_prior_7_day ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd Act:Prior 7 Days "
@@ -179,17 +225,17 @@ view: revintel_property_segment_pace_f {
     type: sum
   }
 
-  measure:  cy_rooms_mtd {
-    sql: ${TABLE}.cy_rooms_mtd_pu ;;
+  measure:  cy_rooms_prior_30_day {
+    sql: ${TABLE}.cy_room_cnt_prior_30_day ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd MTD"
-    description: "Rms OTB MTD Start"
+    description: "Rms OTB Last 30 Day Start"
     type: sum
   }
 
-  measure:  cy_rooms_mtd_var {
-    sql: ${TABLE}.cy_rooms - ${TABLE}.cy_rooms_mtd_pu ;;
+  measure:  cy_rooms_prior_30_day_var {
+    sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_room_cnt_prior_30_day ;;
     value_format_name: decimal_0
     view_label: "  CY"
     label: "Rms Bkd Act:MTD"
@@ -202,7 +248,7 @@ view: revintel_property_segment_pace_f {
   #-------------------------------------------------------------------------------------------
 
   measure:  stly_rooms{
-    sql: ${TABLE}.stly_rooms ;;
+    sql: ${TABLE}.stly_room_cnt ;;
     value_format_name: decimal_0
     view_label: "  STLY"
     label: "Rms Bkd"
@@ -211,7 +257,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  stly_room_rev{
-    sql: ${TABLE}.stly_room_rev ;;
+    sql: ${TABLE}.stly_room_rev_amt ;;
     value_format_name: usd_0
     view_label: "  STLY"
     label: "Rev Rms $"
@@ -220,7 +266,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  stly_food_rev{
-    sql: ${TABLE}.stly_food_rev ;;
+    sql: ${TABLE}.stly_food_rev_amt ;;
     value_format_name: usd_0
     view_label: "  STLY"
     label: "Rev Food $"
@@ -229,7 +275,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  stly_other_rev{
-    sql: ${TABLE}.stly_other_rev ;;
+    sql: ${TABLE}.stly_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  STLY"
     label: "Rev Other $"
@@ -238,7 +284,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  stly_ttl_rev{
-    sql: ${TABLE}.stly_room_rev + ${TABLE}.stly_food_rev + ${TABLE}.stly_other_rev ;;
+    sql: ${TABLE}.stly_room_rev_amt + ${TABLE}.stly_food_rev_amt + ${TABLE}.stly_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  STLY"
     label: "Rev $"
@@ -284,12 +330,32 @@ view: revintel_property_segment_pace_f {
     value_format: "0.0\%"
     hidden: no
   }
+
+  measure:  stly_rooms_bkd_pct{
+    sql: utl..udf_divide(${stly_rooms}, ${dt_revintel_segment_pace_avail_rooms.dt_stly_avail_room_cnt}) ;;
+    value_format_name: percent_1
+    view_label: "  STLY"
+    label: "Rms Bkd %"
+    description: "Rooms Booked / Rooms Available"
+    type: number
+  }
+
+  measure:  stly_rev_par{
+    sql: utl..udf_divide(${stly_room_rev}, ${dt_revintel_segment_pace_avail_rooms.dt_stly_avail_room_cnt}) ;;
+    value_format_name: usd_0
+    view_label: "  STLY"
+    label: "Rev PAR $"
+    description: "Revenue per Available Room Amount"
+    type: number
+  }
+
+
 #-------------------------------------------------------------------------------------------
   #-- Measures LY
   #-------------------------------------------------------------------------------------------
 
   measure:  ly_rooms{
-    sql: ${TABLE}.ly_rooms ;;
+    sql: ${TABLE}.ly_room_cnt ;;
     value_format_name: decimal_0
     view_label: "  LY"
     label: "Rms Bkd"
@@ -298,7 +364,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  ly_room_rev{
-    sql: ${TABLE}.ly_room_rev ;;
+    sql: ${TABLE}.ly_room_rev_amt ;;
     value_format_name: usd_0
     view_label: "  LY"
     label: "Rev Rms $"
@@ -307,7 +373,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  ly_food_rev{
-    sql: ${TABLE}.ly_food_rev ;;
+    sql: ${TABLE}.ly_food_rev_amt ;;
     value_format_name: usd_0
     view_label: "  LY"
     label: "Rev Food $"
@@ -316,7 +382,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  ly_other_rev{
-    sql: ${TABLE}.ly_other_rev ;;
+    sql: ${TABLE}.ly_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  LY"
     label: "Rev Other $"
@@ -325,7 +391,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  ly_ttl_rev{
-    sql: ${TABLE}.ly_room_rev + ${TABLE}.ly_food_rev + ${TABLE}.ly_other_rev ;;
+    sql: ${TABLE}.ly_room_rev_amt + ${TABLE}.ly_food_rev_amt + ${TABLE}.ly_other_rev_amt ;;
     value_format_name: usd_0
     view_label: "  LY"
     label: "Rev $"
@@ -370,6 +436,24 @@ view: revintel_property_segment_pace_f {
     sql: utl..udf_divide(${ly_room_rev},${ly_rooms}) ;;
     value_format: "0.0\%"
     hidden: no
+  }
+
+  measure:  ly_rooms_bkd_pct{
+    sql: utl..udf_divide(${ly_rooms}, ${dt_revintel_segment_pace_avail_rooms.dt_ly_avail_room_cnt}) ;;
+    value_format_name: percent_1
+    view_label: "  LY"
+    label: "Rms Bkd %"
+    description: "Rooms Booked / Rooms Available"
+    type: number
+  }
+
+  measure:  ly_rev_par{
+    sql: utl..udf_divide(${ly_room_rev}, ${dt_revintel_segment_pace_avail_rooms.dt_ly_avail_room_cnt}) ;;
+    value_format_name: usd_0
+    view_label: "  LY"
+    label: "Rev PAR $"
+    description: "Revenue per Available Room Amount"
+    type: number
   }
 
 
@@ -485,6 +569,192 @@ view: revintel_property_segment_pace_f {
     description: "(TY - STLY)"
   }
 
+  measure:  rooms_bkd_pct_var_perc{
+    sql: utl..udf_percent_var((${cy_rooms_bkd_pct}),(${stly_rooms_bkd_pct})) ;;
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd % Act:STLY - % var"
+    description: "(TY - STLY)/STLY"
+    type: number
+  }
+
+  measure:  rooms_bkd_pct_var{
+    sql: (${cy_rooms_bkd_pct})-(${stly_rooms_bkd_pct}) ;;
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd % Act:STLY - var"
+    description: "(TY - STLY)"
+    type: number
+  }
+
+  measure:  rev_par_var_perc{
+    sql: utl..udf_divide(${cy_rev_par}, ${stly_rev_par}) ;;
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev PAR $ Act:STLY - % var"
+    description: "(TY - STLY)/STLY"
+    type: number
+  }
+
+  measure:  rev_par_var{
+    sql: (${cy_rev_par} - ${stly_rev_par}) ;;
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev PAR $ Act:STLY - var"
+    description: "(TY - STLY)"
+    type: number
+  }
+
+
+
+  #-------------------------------------------------------------------------------------------
+  #-- Measures compare to ly
+  #-------------------------------------------------------------------------------------------
+
+  measure:  rooms_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_rooms}),(${ly_rooms})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd Act:LY - % var"
+    description: "(TY - LY)/LY"
+  }
+
+  measure:  rooms_var_toly{
+    sql: (${cy_rooms})-(${ly_rooms}) ;;
+    type: number
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd Act:LY - var"
+    description: "(TY - LY)"
+  }
+
+  measure:  room_rev_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_room_rev}),(${ly_room_rev})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev Rms $ Act:LY - % var"
+    description: "(TY - LY)/LY"
+  }
+
+  measure:  room_rev_var_toly{
+    sql: (${cy_room_rev})-(${ly_room_rev}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev Rms $ Act:LY - var"
+    description: "(TY - LY)"
+  }
+
+  measure:  food_rev_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_food_rev}),(${ly_food_rev})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev Food $ Act:LY - % var"
+    description: "(TY - LY)/LY"
+  }
+
+  measure:  food_rev_var_toly{
+    sql: (${cy_food_rev})-(${ly_food_rev}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev Food $ Act:LY - var"
+    description: "(TY - LY)"
+  }
+
+  measure:  other_rev_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_other_rev}),(${ly_other_rev})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev Other $ Act:LY - % var"
+    description: "(TY - LY)/LY"
+  }
+
+  measure:  other_rev_var_toly{
+    sql: (${cy_other_rev})-(${ly_other_rev}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev Other $ Act:LY - var"
+    description: "(TY - LY)"
+  }
+
+  measure:  ttl_rev_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_ttl_rev}),(${ly_ttl_rev})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev $ Act:LY - % var"
+    description: "(TY - LY)/LY"
+  }
+
+  measure:  ttl_rev_var_toly{
+    sql: (${cy_ttl_rev})-(${ly_ttl_rev}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev $ Act:LY - var"
+    description: "(TY - LY)"
+  }
+
+  measure:  room_adr_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_room_adr}),(${ly_room_adr})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "ADR Act:LY - % var"
+    description: "(TY - LY)/LY"
+  }
+
+  measure:  room_adr_var_toly{
+    sql: (${cy_room_adr})-(${ly_room_adr}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "ADR Act:LY - var"
+    description: "(TY - LY)"
+  }
+
+  measure:  rooms_bkd_pct_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_rooms_bkd_pct}),(${ly_rooms_bkd_pct})) ;;
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd % Act:LY - % var"
+    description: "(TY - LY)/LY"
+    type: number
+  }
+
+  measure:  rooms_bkd_pct_var_toly{
+    sql: (${cy_rooms_bkd_pct})-(${ly_rooms_bkd_pct}) ;;
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd % Act:LY - var"
+    description: "(TY - LY)"
+    type: number
+  }
+
+  measure:  rev_par_var_perc_toly{
+    sql: utl..udf_divide(${cy_rev_par}, ${ly_rev_par}) ;;
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev PAR $ Act:LY - % var"
+    description: "(TY - LY)/LY"
+    type: number
+  }
+
+  measure:  rev_par_var_toly{
+    sql: (${cy_rev_par} - ${ly_rev_par}) ;;
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev PAR $ Act:LY - var"
+    description: "(TY - LY)"
+    type: number
+  }
+
   #-------------------------------------------------------------------------------------------
   #-- Measures stly pickup
   #-------------------------------------------------------------------------------------------
@@ -560,8 +830,8 @@ view: revintel_property_segment_pace_f {
     type: sum
   }
 
-  measure:  fcst_rev_amt{
-    sql: ${TABLE}.fcst_rev_amt ;;
+  measure:  fcst_room_rev_amt{
+    sql: ${TABLE}.fcst_room_rev_amt ;;
     value_format_name: usd_0
     view_label: "  FCST"
     label: "Rev Rms $"
@@ -570,7 +840,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  fcst_room_adr{
-    sql: utl..udf_divide(${fcst_rev_amt},${fcst_room_cnt}) ;;
+    sql: utl..udf_divide(${fcst_room_rev_amt},${fcst_room_cnt}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  FCST"
@@ -588,6 +858,24 @@ view: revintel_property_segment_pace_f {
     hidden: no
   }
 
+  measure:  fcst_rooms_bkd_pct{
+    sql: utl..udf_divide(${fcst_room_cnt}, ${dt_revintel_segment_pace_avail_rooms.dt_fcst_avail_room_cnt}) ;;
+    value_format_name: percent_1
+    view_label: "  FCST"
+    label: "Rms Bkd %"
+    description: "Rooms Booked / Rooms Available"
+    type: number
+  }
+
+  measure:  fcst_rev_par{
+    sql: utl..udf_divide(${fcst_room_rev_amt}, ${dt_revintel_segment_pace_avail_rooms.dt_fcst_avail_room_cnt}) ;;
+    value_format_name: usd_0
+    view_label: "  FCST"
+    label: "Rev PAR $"
+    description: "Revenue per Available Room Amount"
+    type: number
+  }
+
   measure:  bdgt_room_cnt{
     sql: ${TABLE}.bdgt_room_cnt ;;
     value_format_name: decimal_0
@@ -597,8 +885,8 @@ view: revintel_property_segment_pace_f {
     type: sum
   }
 
-  measure:  bdgt_rev_amt{
-    sql: ${TABLE}.bdgt_rev_amt ;;
+  measure:  bdgt_room_rev_amt{
+    sql: ${TABLE}.bdgt_room_rev_amt ;;
     value_format_name: usd_0
     view_label: "  BDGT"
     label: "Rev Rms $"
@@ -607,7 +895,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  bdgt_room_adr{
-    sql: utl..udf_divide(${bdgt_rev_amt},${bdgt_room_cnt}) ;;
+    sql: utl..udf_divide(${bdgt_room_rev_amt},${bdgt_room_cnt}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  BDGT"
@@ -623,6 +911,24 @@ view: revintel_property_segment_pace_f {
     sql: ${bdgt_room_cnt} ;;
     value_format: "0.0\%"
     hidden: no
+  }
+
+  measure:  bdgt_rooms_bkd_pct{
+    sql: utl..udf_divide(${bdgt_room_cnt}, ${dt_revintel_segment_pace_avail_rooms.dt_bdgt_avail_room_cnt}) ;;
+    value_format_name: percent_1
+    view_label: "  BDGT"
+    label: "Rms Bkd %"
+    description: "Rooms Booked / Rooms Available"
+    type: number
+  }
+
+  measure:  bdgt_rev_par{
+    sql: utl..udf_divide(${bdgt_room_rev_amt}, ${dt_revintel_segment_pace_avail_rooms.dt_bdgt_avail_room_cnt}) ;;
+    value_format_name: usd_0
+    view_label: "  BDGT"
+    label: "Rev PAR $"
+    description: "Revenue per Available Room Amount"
+    type: number
   }
 
   #-------------------------------------------------------------------------------------------
@@ -648,7 +954,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  fcst_room_rev_var_perc{
-    sql: utl..udf_percent_var((${cy_room_rev}),(${fcst_rev_amt})) ;;
+    sql: utl..udf_percent_var((${cy_room_rev}),(${fcst_room_rev_amt})) ;;
     type: number
     value_format_name: percent_1
     view_label: "  CY"
@@ -657,7 +963,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  fcst_room_rev_var{
-    sql: (${cy_room_rev})-(${fcst_rev_amt}) ;;
+    sql: (${cy_room_rev})-(${fcst_room_rev_amt}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  CY"
@@ -683,6 +989,24 @@ view: revintel_property_segment_pace_f {
     description: "(TY - FCST)"
   }
 
+  measure:  fcst_rev_par_var_perc{
+    sql: utl..udf_percent_var((${cy_rev_par}),(${fcst_rev_par})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "ADR Act:Fcst - % var"
+    description: "(TY - FCST)/FCST"
+  }
+
+  measure:  fcst_rev_par_var{
+    sql: (${cy_rev_par})-(${fcst_rev_par}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev PAR Act:Fcst - var"
+    description: "(TY - FCST)"
+  }
+
   measure:  bdgt_rooms_var_perc{
     sql: utl..udf_percent_var((${cy_rooms}),(${bdgt_room_cnt})) ;;
     type: number
@@ -702,7 +1026,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  bdgt_room_rev_var_perc{
-    sql: utl..udf_percent_var((${cy_room_rev}),(${bdgt_rev_amt})) ;;
+    sql: utl..udf_percent_var((${cy_room_rev}),(${bdgt_room_rev_amt})) ;;
     type: number
     value_format_name: percent_1
     view_label: "  CY"
@@ -711,7 +1035,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  bdgt_room_rev_var{
-    sql: (${cy_room_rev})-(${bdgt_rev_amt}) ;;
+    sql: (${cy_room_rev})-(${bdgt_room_rev_amt}) ;;
     type: number
     value_format_name: usd_0
     view_label: "  CY"
@@ -735,6 +1059,411 @@ view: revintel_property_segment_pace_f {
     view_label: "  CY"
     label: "ADR Act:Bdgt - var"
     description: "(TY - BDGT)"
+  }
+
+  measure:  bdgt_rev_par_var_perc{
+    sql: utl..udf_percent_var((${cy_rev_par}),(${bdgt_rev_par})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "ADR Act:Bdgt - % var"
+    description: "(TY - BDGT)/BDGT"
+  }
+
+  measure:  bdgt_rev_par_var{
+    sql: (${cy_rev_par})-(${bdgt_rev_par}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev PAR Act:Bdgt - var"
+    description: "(TY - BDGT)"
+  }
+
+
+  # Period Pickup
+
+  measure:  cy_rooms_start{
+    sql: sum( case when ${dt_revintel_segment_pace_pickup_date.dt_start_asof_dt} =
+          ${dt_revintel_segment_pace_pickup_date.asof_dt}
+          then ${TABLE}.cy_room_cnt else 0 end )
+          ;;
+    view_label: "  CY"
+    label: "Rms Bkd Period Start"
+    description: "Rooms booked at start of period"
+    type: number
+    value_format_name: decimal_0
+  }
+
+  measure:  cy_rooms_end{
+    sql: sum( case when ${dt_revintel_segment_pace_pickup_date.dt_end_asof_dt} =
+          ${dt_revintel_segment_pace_pickup_date.asof_dt}
+          then ${TABLE}.cy_room_cnt else 0 end )
+          ;;
+    view_label: "  CY"
+    label: "Rms Bkd Period End"
+    description: "Rooms booked at end of period"
+    type: number
+    value_format_name: decimal_0
+  }
+
+  measure:  cy_rooms_period_pkup{
+    sql: ${cy_rooms_end} - ${cy_rooms_start};;
+    view_label: "  CY"
+    label: "Rms Bkd Period Pickup"
+    description: "Rooms booked between start and end of period"
+    type: number
+    value_format_name: decimal_0
+  }
+
+  measure:  cy_room_rev_start{
+    sql: sum( case when ${dt_revintel_segment_pace_pickup_date.dt_start_asof_dt} =
+          ${dt_revintel_segment_pace_pickup_date.asof_dt}
+          then ${TABLE}.cy_room_rev_amt else 0 end )
+          ;;
+    view_label: "  CY"
+    label: "Rev Rms Period Start"
+    description: "Room revenue at start of period"
+    type: number
+    value_format_name: usd_0
+  }
+
+  measure:  cy_room_rev_end{
+    sql: sum( case when ${dt_revintel_segment_pace_pickup_date.dt_end_asof_dt} =
+          ${dt_revintel_segment_pace_pickup_date.asof_dt}
+          then ${TABLE}.cy_room_rev_amt else 0 end )
+          ;;
+    view_label: "  CY"
+    label: "Rev Rms Period End"
+    description: "Room revenue at end of period"
+    type: number
+    value_format_name: usd_0
+  }
+
+  measure:  cy_room_rev_period_pkup{
+    sql: ${cy_room_rev_end} - ${cy_room_rev_start};;
+    view_label: "  CY"
+    label: "Rev Rms Period Pickup"
+    description: "Room revenue between start and end of period"
+    type: number
+    value_format_name: usd_0
+  }
+
+  measure:  cy_adr_start{
+    sql: utl..udf_divide( ${cy_room_rev_start}, ${cy_rooms_start} ) ;;
+    view_label: "  CY"
+    label: "ADR Period Start"
+    description: "ADR at start of period"
+    type: number
+    value_format_name: usd
+  }
+
+  measure:  cy_adr_end{
+    sql: utl..udf_divide( ${cy_room_rev_end}, ${cy_rooms_end} ) ;;
+    view_label: "  CY"
+    label: "ADR Period End"
+    description: "ADR at end of period"
+    type: number
+    value_format_name: usd
+  }
+
+  measure:  cy_adr_period_pkup{
+    sql: ${cy_adr_end} - ${cy_adr_start};;
+    view_label: "  CY"
+    label: "ADR Period Pickup"
+    description: "ADR between start and end of period"
+    type: number
+    value_format_name: usd
+  }
+
+  measure:  cy_adr_period_room_pkup{
+    sql: utl..udf_divide( ${cy_room_rev_period_pkup}, ${cy_rooms_period_pkup} );;
+    view_label: "  CY"
+    label: "ADR Period Pickup - Rooms"
+    description: "ADR of rooms picked up"
+    type: number
+    value_format_name: usd
+  }
+
+  # fcst pickup
+
+  measure:  fcst_rooms_start{
+    sql: sum( case when ${dt_revintel_segment_pace_pickup_date.dt_start_asof_dt} =
+          ${dt_revintel_segment_pace_pickup_date.asof_dt}
+          then ${TABLE}.fcst_room_cnt else 0 end )
+          ;;
+    view_label: "  FCST"
+    label: "Rms Bkd Period Start"
+    description: "Rooms booked at start of period"
+    type: number
+    value_format_name: decimal_0
+  }
+
+  measure:  fcst_rooms_end{
+    sql: sum( case when ${dt_revintel_segment_pace_pickup_date.dt_end_asof_dt} =
+          ${dt_revintel_segment_pace_pickup_date.asof_dt}
+          then ${TABLE}.fcst_room_cnt else 0 end )
+          ;;
+    view_label: "  FCST"
+    label: "Rms Bkd Period End"
+    description: "Rooms booked at end of period"
+    type: number
+    value_format_name: decimal_0
+  }
+
+  measure:  fcst_rooms_period_pkup{
+    sql: ${fcst_rooms_end} - ${fcst_rooms_start};;
+    view_label: "  FCST"
+    label: "Rms Bkd Period Pickup"
+    description: "Rooms booked between start and end of period"
+    type: number
+    value_format_name: decimal_0
+  }
+
+  measure:  fcst_room_rev_start{
+    sql: sum( case when ${dt_revintel_segment_pace_pickup_date.dt_start_asof_dt} =
+          ${dt_revintel_segment_pace_pickup_date.asof_dt}
+          then ${TABLE}.fcst_room_rev_amt else 0 end )
+          ;;
+    view_label: "  FCST"
+    label: "Rev Rms Period Start"
+    description: "Room revenue at start of period"
+    type: number
+    value_format_name: usd_0
+  }
+
+  measure:  fcst_room_rev_end{
+    sql: sum( case when ${dt_revintel_segment_pace_pickup_date.dt_end_asof_dt} =
+          ${dt_revintel_segment_pace_pickup_date.asof_dt}
+          then ${TABLE}.fcst_room_rev_amt else 0 end )
+          ;;
+    view_label: "  FCST"
+    label: "Rev Rms Period End"
+    description: "Room revenue at end of period"
+    type: number
+    value_format_name: usd_0
+  }
+
+  measure:  fcst_room_rev_period_pkup{
+    sql: ${fcst_room_rev_end} - ${fcst_room_rev_start};;
+    view_label: "  FCST"
+    label: "Rev Rms Period Pickup"
+    description: "Room revenue between start and end of period"
+    type: number
+    value_format_name: usd_0
+  }
+
+  measure:  fcst_adr_start{
+    sql: utl..udf_divide( ${fcst_room_rev_start}, ${fcst_rooms_start} ) ;;
+    view_label: "  FCST"
+    label: "ADR Period Start"
+    description: "ADR at start of period"
+    type: number
+    value_format_name: usd
+  }
+
+  measure:  fcst_adr_end{
+    sql: utl..udf_divide( ${fcst_room_rev_end}, ${fcst_rooms_end} ) ;;
+    view_label: "  FCST"
+    label: "ADR Period End"
+    description: "ADR at end of period"
+    type: number
+    value_format_name: usd
+  }
+
+  measure:  fcst_adr_period_pkup{
+    sql: ${fcst_adr_end} - ${fcst_adr_start};;
+    view_label: "  FCST"
+    label: "ADR Period Pickup"
+    description: "ADR between start and end of period"
+    type: number
+    value_format_name: usd
+  }
+
+  measure:  fcst_adr_period_room_pkup{
+    sql: utl..udf_divide( ${fcst_room_rev_period_pkup}, ${fcst_rooms_period_pkup} );;
+    view_label: "  FCST"
+    label: "ADR Period Pickup - Rooms"
+    description: "ADR of rooms picked up"
+    type: number
+    value_format_name: usd
+  }
+
+  # bdgt pickup
+
+  measure:  bdgt_rooms_start{
+    sql: sum( case when ${dt_revintel_segment_pace_pickup_date.dt_start_asof_dt} =
+          ${dt_revintel_segment_pace_pickup_date.asof_dt}
+          then ${TABLE}.bdgt_room_cnt else 0 end )
+          ;;
+    view_label: "  BDGT"
+    label: "Rms Bkd Period Start"
+    description: "Rooms booked at start of period"
+    type: number
+    value_format_name: decimal_0
+  }
+
+  measure:  bdgt_rooms_end{
+    sql: sum( case when ${dt_revintel_segment_pace_pickup_date.dt_end_asof_dt} =
+          ${dt_revintel_segment_pace_pickup_date.asof_dt}
+          then ${TABLE}.bdgt_room_cnt else 0 end )
+          ;;
+    view_label: "  BDGT"
+    label: "Rms Bkd Period End"
+    description: "Rooms booked at end of period"
+    type: number
+    value_format_name: decimal_0
+  }
+
+  measure:  bdgt_rooms_period_pkup{
+    sql: ${bdgt_rooms_end} - ${bdgt_rooms_start};;
+    view_label: "  BDGT"
+    label: "Rms Bkd Period Pickup"
+    description: "Rooms booked between start and end of period"
+    type: number
+    value_format_name: decimal_0
+  }
+
+  measure:  bdgt_room_rev_start{
+    sql: sum( case when ${dt_revintel_segment_pace_pickup_date.dt_start_asof_dt} =
+          ${dt_revintel_segment_pace_pickup_date.asof_dt}
+          then ${TABLE}.bdgt_room_rev_amt else 0 end )
+          ;;
+    view_label: "  BDGT"
+    label: "Rev Rms Period Start"
+    description: "Room revenue at start of period"
+    type: number
+    value_format_name: usd_0
+  }
+
+  measure:  bdgt_room_rev_end{
+    sql: sum( case when ${dt_revintel_segment_pace_pickup_date.dt_end_asof_dt} =
+          ${dt_revintel_segment_pace_pickup_date.asof_dt}
+          then ${TABLE}.bdgt_room_rev_amt else 0 end )
+          ;;
+    view_label: "  BDGT"
+    label: "Rev Rms Period End"
+    description: "Room revenue at end of period"
+    type: number
+    value_format_name: usd_0
+  }
+
+  measure:  bdgt_room_rev_period_pkup{
+    sql: ${bdgt_room_rev_end} - ${bdgt_room_rev_start};;
+    view_label: "  BDGT"
+    label: "Rev Rms Period Pickup"
+    description: "Room revenue between start and end of period"
+    type: number
+    value_format_name: usd_0
+  }
+
+  measure:  bdgt_adr_start{
+    sql: utl..udf_divide( ${bdgt_room_rev_start}, ${bdgt_rooms_start} ) ;;
+    view_label: "  BDGT"
+    label: "ADR Period Start"
+    description: "ADR at start of period"
+    type: number
+    value_format_name: usd
+  }
+
+  measure:  bdgt_adr_end{
+    sql: utl..udf_divide( ${bdgt_room_rev_end}, ${bdgt_rooms_end} ) ;;
+    view_label: "  BDGT"
+    label: "ADR Period End"
+    description: "ADR at end of period"
+    type: number
+    value_format_name: usd
+  }
+
+  measure:  bdgt_adr_period_pkup{
+    sql: ${bdgt_adr_end} - ${bdgt_adr_start};;
+    view_label: "  BDGT"
+    label: "ADR Period Pickup"
+    description: "ADR between start and end of period"
+    type: number
+    value_format_name: usd
+  }
+
+  measure:  bdgt_adr_period_room_pkup{
+    sql: utl..udf_divide( ${bdgt_room_rev_period_pkup}, ${bdgt_rooms_period_pkup} );;
+    view_label: "  BDGT"
+    label: "ADR Period Pickup - Rooms"
+    description: "ADR of rooms picked up"
+    type: number
+    value_format_name: usd
+  }
+
+ # Compares period end to act
+
+  measure:  bdgt_rooms_period_end_var{
+    sql: (${cy_rooms_end})-(${bdgt_rooms_end}) ;;
+    type: number
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd Period End Act:Bdgt - var"
+    description: "(TY - BDGT)"
+  }
+
+  measure:  bdgt_room_rev_period_end_var{
+    sql: (${cy_room_rev_end})-(${bdgt_room_rev_end}) ;;
+    type: number
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rev Rms Period End Act:Bdgt - var"
+    description: "(TY - BDGT)"
+  }
+
+  measure:  bdgt_room_rev_period_end_var_perc{
+    sql: utl..udf_divide(${bdgt_room_rev_period_end_var},${bdgt_room_rev_end}) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev Rms Period End Act:Bdgt - % var"
+    description: "(TY - BDGT)/BDGT"
+  }
+
+  measure:  bdgt_adr_period_end_var{
+    sql: (${cy_adr_end})-(${bdgt_adr_end}) ;;
+    type: number
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "ADR Period End Act:Bdgt - var"
+    description: "(TY - BDGT)"
+  }
+
+  measure:  fcst_rooms_period_end_var{
+    sql: (${cy_rooms_end})-(${fcst_rooms_end}) ;;
+    type: number
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd Period End Act:Fcst - var"
+    description: "(TY - FCST)"
+  }
+
+  measure:  fcst_room_rev_period_end_var{
+    sql: (${cy_room_rev_end})-(${fcst_room_rev_end}) ;;
+    type: number
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rev Rms Period End Act:Fcst - var"
+    description: "(TY - FCST)"
+  }
+
+  measure:  fcst_room_rev_period_end_var_perc{
+    sql: utl..udf_divide(${fcst_room_rev_period_end_var},${fcst_room_rev_end}) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev Rms Period End Act:Fcst - % var"
+    description: "(TY - FCST)/FCST"
+  }
+
+  measure:  fcst_adr_period_end_var{
+    sql: (${cy_adr_end})-(${fcst_adr_end}) ;;
+    type: number
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "ADR Period End Act:Fcst - var"
+    description: "(TY - FCST)"
   }
 
 }

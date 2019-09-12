@@ -36,7 +36,7 @@ view: revintel_property_f {
     type: string
   }
 
-  dimension: minor_market_name_sort_no {
+  dimension: minor_market_nm_sort_no {
     sql: case
           when ${TABLE}.minor_market_name = 'Retail'               then 1
           when ${TABLE}.minor_market_name = 'Net Retail'           then 2
@@ -149,6 +149,7 @@ view: revintel_property_f {
     label: "Company"
     description: "Company Name"
     type: string
+    html: <a href="/dashboards/410?Company={{ value }}" target="_blank">{{ value }}</a> ;;
   }
 
   dimension: company_name_first_letter {
@@ -245,6 +246,14 @@ view: revintel_property_f {
     view_label: "Reservation Detail"
     label: "CY Record"
     description: "CY Rms Bkd and Rev Rms != 0"
+    type: yesno
+  }
+
+  dimension: sold_out_night_fl {
+    sql: ${TABLE}.sold_out_night_bt = 1 ;;
+    view_label: "Reservation Detail"
+    label: "Sold Out Night"
+    description: "Indication of sold out for that property and day."
     type: yesno
   }
 
@@ -415,6 +424,24 @@ view: revintel_property_f {
     hidden: no
   }
 
+  measure:  cy_rooms_bkd_pct{
+    sql: utl..udf_divide(${cy_rooms}, ${dt_revintel_avail_rooms.dt_cy_avail_room_cnt}) ;;
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd %"
+    description: "Rooms Booked / Rooms Available"
+    type: number
+  }
+
+  measure:  cy_rev_par{
+    sql: utl..udf_divide(${cy_room_rev}, ${dt_revintel_avail_rooms.dt_cy_avail_room_cnt}) ;;
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev PAR $"
+    description: "Revenue per Available Room Amount"
+    type: number
+  }
+
   #-------------------------------------------------------------------------------------------
   #-- Measures STLY
   #-------------------------------------------------------------------------------------------
@@ -514,6 +541,25 @@ view: revintel_property_f {
     direction: "column"
     hidden: no
   }
+
+  measure:  stly_rooms_bkd_pct{
+    sql: utl..udf_divide(${stly_rooms}, ${dt_revintel_avail_rooms.dt_stly_avail_room_cnt}) ;;
+    value_format_name: percent_1
+    view_label: "  STLY"
+    label: "Rms Bkd %"
+    description: "Rooms Booked / Rooms Available"
+    type: number
+  }
+
+  measure:  stly_rev_par{
+    sql: utl..udf_divide(${stly_room_rev}, ${dt_revintel_avail_rooms.dt_stly_avail_room_cnt}) ;;
+    value_format_name: usd_0
+    view_label: "  STLY"
+    label: "Rev PAR $"
+    description: "Revenue per Available Room Amount"
+    type: number
+  }
+
 #-------------------------------------------------------------------------------------------
   #-- Measures LY
   #-------------------------------------------------------------------------------------------
@@ -614,6 +660,23 @@ view: revintel_property_f {
     hidden: no
   }
 
+  measure:  ly_rooms_bkd_pct{
+    sql: utl..udf_divide(${ly_rooms}, ${dt_revintel_avail_rooms.dt_ly_avail_room_cnt}) ;;
+    value_format_name: percent_1
+    view_label: "  LY"
+    label: "Rms Bkd %"
+    description: "Rooms Booked / Rooms Available"
+    type: number
+  }
+
+  measure:  ly_rev_par{
+    sql: utl..udf_divide(${ly_room_rev}, ${dt_revintel_avail_rooms.dt_ly_avail_room_cnt}) ;;
+    value_format_name: usd_0
+    view_label: "  LY"
+    label: "Rev PAR $"
+    description: "Revenue per Available Room Amount"
+    type: number
+  }
 
   #-------------------------------------------------------------------------------------------
   #-- Measures compare to py
@@ -726,6 +789,43 @@ view: revintel_property_f {
     label: "ADR Act:STLY - var"
     description: "(TY - STLY)"
   }
+
+  measure:  rooms_bkd_pct_var_perc{
+    sql: utl..udf_percent_var((${cy_rooms_bkd_pct}),(${stly_rooms_bkd_pct})) ;;
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd % Act:STLY - % var"
+    description: "(TY - STLY)/STLY"
+    type: number
+  }
+
+  measure:  rooms_bkd_pct_var{
+    sql: (${cy_rooms_bkd_pct})-(${stly_rooms_bkd_pct}) ;;
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd % Act:STLY - var"
+    description: "(TY - STLY)"
+    type: number
+  }
+
+  measure:  rev_par_var_perc{
+    sql: utl..udf_divide(${cy_rev_par}, ${stly_rev_par}) ;;
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev PAR $ Act:STLY - % var"
+    description: "(TY - STLY)/STLY"
+    type: number
+  }
+
+  measure:  rev_par_var{
+    sql: (${cy_rev_par} - ${stly_rev_par}) ;;
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev PAR $ Act:STLY - var"
+    description: "(TY - STLY)"
+    type: number
+  }
+
 
   #-------------------------------------------------------------------------------------------
   #-- Measures stly pickup
