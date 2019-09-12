@@ -1,7 +1,7 @@
 connection: "edw"
 
 include: "*.view.lkml"                       # include all views in this project
-label: "Revintel Property Pace (uat)"
+label: "Revintel Property Pace (alpha)"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.fact.revintel_property_pace_f ;;
@@ -11,7 +11,7 @@ datagroup: model_caching_dg {
 explore: dt_revintel_pace_pickup_date {}
 explore: revintel_property_pace_f {
   group_label: "***Development***"
-  label: "Revintel Property Pace (dev)"
+  label: "Revintel Property Pace (alpha)"
   view_label: "  Measures"
   persist_with: model_caching_dg
   case_sensitive: no
