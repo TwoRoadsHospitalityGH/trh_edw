@@ -8,7 +8,7 @@ datagroup: model_caching_dg {
   max_cache_age: "8 hours"
 }
 
-explore: dt_revintel_pace_pickup_date {}
+#explore: dt_revintel_pace_pickup_date {}
 explore: revintel_property_pace_f {
   group_label: "***Development***"
   label: "Revintel Property Pace (alpha)"
