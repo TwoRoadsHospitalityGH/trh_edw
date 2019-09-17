@@ -1,4 +1,4 @@
-view: glm_property_future_fcst_f_fcstact {
+view: glm_property_future_fcst_f_ty {
   derived_table: {
     sql: select 1 as key_no ;;
   }

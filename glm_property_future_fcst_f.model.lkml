@@ -3,7 +3,7 @@ connection: "edw"
 include: "*.view.lkml"                       # include all views in this project
 
 
-label: "GL Monthly Forecast"
+label: "GL Monthly w/ Forecast"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.fact.glm_property_f ;;
@@ -15,9 +15,9 @@ explore: glm_property_future_fcst_f {
   from: glm_property_future_fcst_f
   sql_table_name: pedw.fact.glm_property_f ;;
   group_label: "***User Acceptance Testing***"
-  label: "GL Monthly Forecast (uat)"
-  description: "**Forecasts loaded for current month
-  **Compares to LY and Budget
+  label: "GL Monthly w/ Forecast (uat)"
+  description: "**Includes forecasts loaded in current month
+  **Compares Actuals/Forecast to LY and Budget
   **Past is replaced with actuals
   **Future shows zero if current month forecast not loaded"
   persist_with: model_caching_dg
@@ -57,8 +57,8 @@ explore: glm_property_future_fcst_f {
     relationship: one_to_one
   }
 
-  join: glm_property_future_fcst_f_fcstact {
-    from: glm_property_future_fcst_f_fcstact
+  join: glm_property_future_fcst_f_ty {
+    from: glm_property_future_fcst_f_ty
     view_label: "      Fcst"
     type: cross
     relationship: one_to_one
