@@ -364,6 +364,12 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: undistributed_rev_amt {
+    type: number
+    sql: ${TABLE}.undistributed_util_rev_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
 
   #-- Expenses
 

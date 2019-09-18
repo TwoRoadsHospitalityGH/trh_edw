@@ -17,7 +17,7 @@ view: glm_property_f_toly {
   #-- Rev var
 
   measure: rev_amt_toly_v {
-    label: "Rev Act:LY - var"
+    label: "Rev $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rev_amt} - ${glm_property_f_ly.rev_amt} ;;
@@ -25,7 +25,7 @@ view: glm_property_f_toly {
   }
 
   measure: agop_amt_toly_v {
-    label: "AGOP Act:LY - var"
+    label: "AGOP $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.agop_amt} - ${glm_property_f_ly.agop_amt} ;;
@@ -33,7 +33,7 @@ view: glm_property_f_toly {
   }
 
   measure: gop_amt_toly_v {
-    label: "GOP Act:LY - var"
+    label: "GOP $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.gop_amt} - ${glm_property_f_ly.gop_amt} ;;
@@ -41,7 +41,7 @@ view: glm_property_f_toly {
   }
 
   measure: room_rev_amt_toly_v {
-    label: "Rev Rms Act:LY - var"
+    label: "Rev Rms $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.room_rev_amt} - ${glm_property_f_ly.room_rev_amt} ;;
@@ -49,7 +49,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_rev_amt_toly_v {
-    label: "Rev Other Act:LY - var"
+    label: "Rev Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.other_rev_amt} - ${glm_property_f_ly.other_rev_amt} ;;
@@ -57,7 +57,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_rev_amt_toly_v {
-    label: "Rev RB&E Act:LY - var"
+    label: "Rev RB&E $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_rev_amt} - ${glm_property_f_ly.rbe_rev_amt} ;;
@@ -65,7 +65,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_banquet_rev_amt_toly_v {
-    label: "Rev RB&E Banquet Act:LY - var"
+    label: "Rev RB&E Banquet $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_banquet_rev_amt} - ${glm_property_f_ly.rbe_banquet_rev_amt} ;;
@@ -73,7 +73,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_catering_rev_toly_v {
-    label: "Rev RB&E Catering Act:LY - var"
+    label: "Rev RB&E Catering $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_catering_rev_amt} - ${glm_property_f_ly.rbe_catering_rev_amt} ;;
@@ -81,7 +81,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_conference_services_rev_toly_v {
-    label: "Rev RB&E Conference Services Act:LY - var"
+    label: "Rev RB&E Conference Services $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_conference_services_rev_amt} - ${glm_property_f_ly.rbe_conference_services_rev_amt} ;;
@@ -89,7 +89,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_outlet_rev_amt_toly_v {
-    label: "Rev RB&E Outlet Act:LY - var"
+    label: "Rev RB&E Outlet $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_outlet_rev_amt} - ${glm_property_f_ly.rbe_outlet_rev_amt} ;;
@@ -97,7 +97,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_room_service_rev_amt_toly_v {
-    label: "Rev RB&E Room Service Act:LY - var"
+    label: "Rev RB&E Room Service $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_room_service_rev_amt} - ${glm_property_f_ly.rbe_room_service_rev_amt} ;;
@@ -105,7 +105,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_other_rev_amt_toly_v {
-    label: "Rev RB&E Other Act:LY - var"
+    label: "Rev RB&E Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_other_rev_amt} - ${glm_property_f_ly.rbe_other_rev_amt} ;;
@@ -113,7 +113,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_rev_amt_toly_v {
-    label: "Rev Food RB&E Act:LY - var"
+    label: "Rev Food RB&E $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.food_rbe_rev_amt} - ${glm_property_f_ly.food_rbe_rev_amt} ;;
@@ -121,7 +121,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_banquet_rev_amt_toly_v {
-    label: "Rev Food RB&E Banquet Act:LY - var"
+    label: "Rev Food RB&E Banquet $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.food_rbe_banquet_rev_amt} - ${glm_property_f_ly.food_rbe_banquet_rev_amt} ;;
@@ -129,7 +129,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_catering_rev_toly_v {
-    label: "Rev Food RB&E Catering Act:LY - var"
+    label: "Rev Food RB&E Catering $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.food_rbe_catering_rev_amt} - ${glm_property_f_ly.food_rbe_catering_rev_amt} ;;
@@ -137,7 +137,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_conference_services_rev_toly_v {
-    label: "Rev Food RB&E Conference Services Act:LY - var"
+    label: "Rev Food RB&E Conference Services $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.food_rbe_conference_services_rev_amt} - ${glm_property_f_ly.food_rbe_conference_services_rev_amt} ;;
@@ -145,7 +145,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_outlet_rev_amt_toly_v {
-    label: "Rev Food RB&E Outlet Act:LY - var"
+    label: "Rev Food RB&E Outlet $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.food_rbe_outlet_rev_amt} - ${glm_property_f_ly.food_rbe_outlet_rev_amt} ;;
@@ -153,7 +153,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_room_service_rev_amt_toly_v {
-    label: "Rev Food RB&E Room Service Act:LY - var"
+    label: "Rev Food RB&E Room Service $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.food_rbe_room_service_rev_amt} - ${glm_property_f_ly.food_rbe_room_service_rev_amt} ;;
@@ -161,7 +161,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_other_rev_amt_toly_v {
-    label: "Rev Food RB&E Other Act:LY - var"
+    label: "Rev Food RB&E Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.food_rbe_other_rev_amt} - ${glm_property_f_ly.food_rbe_other_rev_amt} ;;
@@ -169,7 +169,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_rev_amt_toly_v {
-    label: "Rev Beverage RB&E Act:LY - var"
+    label: "Rev Beverage RB&E $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.beverage_rbe_rev_amt} - ${glm_property_f_ly.beverage_rbe_rev_amt} ;;
@@ -177,7 +177,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_banquet_rev_amt_toly_v {
-    label: "Rev Beverage RB&E Banquet Act:LY - var"
+    label: "Rev Beverage RB&E Banquet $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.beverage_rbe_banquet_rev_amt} - ${glm_property_f_ly.beverage_rbe_banquet_rev_amt} ;;
@@ -185,7 +185,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_catering_rev_toly_v {
-    label: "Rev Beverage RB&E Catering Act:LY - var"
+    label: "Rev Beverage RB&E Catering $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.beverage_rbe_catering_rev_amt} - ${glm_property_f_ly.beverage_rbe_catering_rev_amt} ;;
@@ -193,7 +193,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_conference_services_rev_toly_v {
-    label: "Rev Beverage RB&E Conference Services Act:LY - var"
+    label: "Rev Beverage RB&E Conference Services $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.beverage_rbe_conference_services_rev_amt} - ${glm_property_f_ly.beverage_rbe_conference_services_rev_amt} ;;
@@ -201,7 +201,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_outlet_rev_amt_toly_v {
-    label: "Rev Beverage RB&E Outlet Act:LY - var"
+    label: "Rev Beverage RB&E Outlet $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.beverage_rbe_outlet_rev_amt} - ${glm_property_f_ly.beverage_rbe_outlet_rev_amt} ;;
@@ -209,7 +209,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_room_service_rev_amt_toly_v {
-    label: "Rev Beverage RB&E Room Service Act:LY - var"
+    label: "Rev Beverage RB&E Room Service $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.beverage_rbe_room_service_rev_amt} - ${glm_property_f_ly.beverage_rbe_room_service_rev_amt} ;;
@@ -217,7 +217,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_other_rev_amt_toly_v {
-    label: "Rev Beverage RB&E Other Act:LY - var"
+    label: "Rev Beverage RB&E Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.beverage_rbe_other_rev_amt} - ${glm_property_f_ly.beverage_rbe_other_rev_amt} ;;
@@ -225,7 +225,7 @@ view: glm_property_f_toly {
   }
 
   measure: spa_rev_amt_toly_v {
-    label: "Rev Spa Act:LY - var"
+    label: "Rev Spa $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.spa_rev_amt} - ${glm_property_f_ly.spa_rev_amt} ;;
@@ -233,7 +233,7 @@ view: glm_property_f_toly {
   }
 
   measure: golf_rev_amt_toly_v {
-    label: "Rev Golf Act:LY - var"
+    label: "Rev Golf $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.golf_rev_amt} - ${glm_property_f_ly.golf_rev_amt} ;;
@@ -241,7 +241,7 @@ view: glm_property_f_toly {
   }
 
   measure: fitness_recreation_rev_amt_toly_v {
-    label: "Rev Fitness & Rec Act:LY - var"
+    label: "Rev Fitness & Rec $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.fitness_recreation_rev_amt} - ${glm_property_f_ly.fitness_recreation_rev_amt} ;;
@@ -249,7 +249,7 @@ view: glm_property_f_toly {
   }
 
   measure: parking_transportation_rev_amt_toly_v {
-    label: "Rev Parking & Trans Act:LY - var"
+    label: "Rev Parking & Trans $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.parking_transportation_rev_amt} - ${glm_property_f_ly.parking_transportation_rev_amt} ;;
@@ -257,7 +257,7 @@ view: glm_property_f_toly {
   }
 
   measure: telecom_rev_amt_toly_v {
-    label: "Rev Telecom Act:LY - var"
+    label: "Rev Telecom $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.telecom_rev_amt} - ${glm_property_f_ly.telecom_rev_amt} ;;
@@ -265,7 +265,7 @@ view: glm_property_f_toly {
   }
 
   measure: retail_rev_amt_toly_v {
-    label: "Rev Retail Act:LY - var"
+    label: "Rev Retail $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.retail_rev_amt} - ${glm_property_f_ly.retail_rev_amt} ;;
@@ -273,7 +273,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_operated_rev_amt_toly_v {
-    label: "Rev Other Op. Dept. Act:LY - var"
+    label: "Rev Other Op. Dept. $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.other_operated_rev_amt} - ${glm_property_f_ly.other_operated_rev_amt} ;;
@@ -281,7 +281,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_mgmt_rev_amt_toly_v {
-    label: "Rev Mgmt Srvcs Act:LY - var"
+    label: "Rev Mgmt Srvcs $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.property_mgmt_rev_amt} - ${glm_property_f_ly.property_mgmt_rev_amt} ;;
@@ -289,7 +289,7 @@ view: glm_property_f_toly {
   }
 
   measure: misc_rev_amt_toly_v {
-    label: "Rev Rentals & Other Act:LY - var"
+    label: "Rev Rentals & Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.misc_rev_amt} - ${glm_property_f_ly.misc_rev_amt} ;;
@@ -297,7 +297,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_realty_rev_amt_toly_v {
-    label: "Rev Nonoperating Realty Act:LY - var"
+    label: "Rev Nonoperating Realty $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_realty_rev_amt} - ${glm_property_f_ly.nonoperating_realty_rev_amt} ;;
@@ -305,7 +305,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_airport_rev_amt_toly_v {
-    label: "Rev Nonoperating Airport Act:LY - var"
+    label: "Rev Nonoperating Airport $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_airport_rev_amt} - ${glm_property_f_ly.nonoperating_airport_rev_amt} ;;
@@ -313,7 +313,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_util_rev_amt_toly_v {
-    label: "Rev Nonoperating Utility Act:LY - var"
+    label: "Rev Nonoperating Utility $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_util_rev_amt} - ${glm_property_f_ly.nonoperating_util_rev_amt} ;;
@@ -323,7 +323,7 @@ view: glm_property_f_toly {
 #-- Rev var %
 
   measure: rev_amt_toly {
-    label: "Rev Act:LY - var %"
+    label: "Rev $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rev_amt}, ${glm_property_f_ly.rev_amt} );;
@@ -331,7 +331,7 @@ view: glm_property_f_toly {
   }
 
   measure: agop_amt_toly {
-    label: "AGOP Act:LY - var %"
+    label: "AGOP $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.agop_amt}, ${glm_property_f_ly.agop_amt} );;
@@ -339,7 +339,7 @@ view: glm_property_f_toly {
   }
 
   measure: gop_amt_toly {
-    label: "GOP Act:LY - var %"
+    label: "GOP $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.gop_amt}, ${glm_property_f_ly.gop_amt} );;
@@ -347,7 +347,7 @@ view: glm_property_f_toly {
   }
 
   measure: room_rev_amt_toly {
-    label: "Rev Rms Act:LY - var %"
+    label: "Rev Rms $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.room_rev_amt}, ${glm_property_f_ly.room_rev_amt} );;
@@ -355,7 +355,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_rev_amt_toly {
-    label: "Rev Other Act:LY - var %"
+    label: "Rev Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.other_rev_amt}, ${glm_property_f_ly.other_rev_amt} );;
@@ -363,7 +363,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_rev_amt_toly {
-    label: "Rev RB&E Act:LY - var %"
+    label: "Rev RB&E $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_rev_amt}, ${glm_property_f_ly.rbe_rev_amt} );;
@@ -371,7 +371,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_banquet_rev_amt_toly {
-    label: "Rev RB&E Banquet Act:LY - var %"
+    label: "Rev RB&E Banquet $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_banquet_rev_amt}, ${glm_property_f_ly.rbe_banquet_rev_amt} );;
@@ -379,7 +379,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_catering_rev_toly {
-    label: "Rev RB&E Catering Act:LY - var %"
+    label: "Rev RB&E Catering $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_catering_rev_amt}, ${glm_property_f_ly.rbe_catering_rev_amt} );;
@@ -387,7 +387,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_conference_services_rev_toly {
-    label: "Rev RB&E Conference Services Act:LY - var %"
+    label: "Rev RB&E Conference Services $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_conference_services_rev_amt}, ${glm_property_f_ly.rbe_conference_services_rev_amt} );;
@@ -395,7 +395,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_outlet_rev_amt_toly {
-    label: "Rev RB&E Outlet Act:LY - var %"
+    label: "Rev RB&E Outlet $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_rev_amt}, ${glm_property_f_ly.rbe_outlet_rev_amt} );;
@@ -403,7 +403,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_room_service_rev_amt_toly {
-    label: "Rev RB&E Room Service Act:LY - var %"
+    label: "Rev RB&E Room Service $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_room_service_rev_amt}, ${glm_property_f_ly.rbe_room_service_rev_amt} );;
@@ -411,7 +411,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_other_rev_amt_toly {
-    label: "Rev RB&E Other Act:LY - var %"
+    label: "Rev RB&E Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_other_rev_amt}, ${glm_property_f_ly.rbe_other_rev_amt} );;
@@ -420,7 +420,7 @@ view: glm_property_f_toly {
 
 
   measure: food_rbe_rev_amt_toly {
-    label: "Rev Food RB&E Act:LY - var %"
+    label: "Rev Food RB&E $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_rev_amt}, ${glm_property_f_ly.food_rbe_rev_amt} );;
@@ -428,7 +428,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_banquet_rev_amt_toly {
-    label: "Rev Food RB&E Banquet Act:LY - var %"
+    label: "Rev Food RB&E Banquet $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_banquet_rev_amt}, ${glm_property_f_ly.food_rbe_banquet_rev_amt} );;
@@ -436,7 +436,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_catering_rev_toly {
-    label: "Rev Food RB&E Catering Act:LY - var %"
+    label: "Rev Food RB&E Catering $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_catering_rev_amt}, ${glm_property_f_ly.food_rbe_catering_rev_amt} );;
@@ -444,7 +444,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_conference_services_rev_toly {
-    label: "Rev Food RB&E Conference Services Act:LY - var %"
+    label: "Rev Food RB&E Conference Services $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_conference_services_rev_amt}, ${glm_property_f_ly.food_rbe_conference_services_rev_amt} );;
@@ -452,7 +452,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_outlet_rev_amt_toly {
-    label: "Rev Food RB&E Outlet Act:LY - var %"
+    label: "Rev Food RB&E Outlet $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_outlet_rev_amt}, ${glm_property_f_ly.food_rbe_outlet_rev_amt} );;
@@ -460,7 +460,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_room_service_rev_amt_toly {
-    label: "Rev Food RB&E Room Service Act:LY - var %"
+    label: "Rev Food RB&E Room Service $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_room_service_rev_amt}, ${glm_property_f_ly.food_rbe_room_service_rev_amt} );;
@@ -468,7 +468,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_other_rev_amt_toly {
-    label: "Rev Food RB&E Other Act:LY - var %"
+    label: "Rev Food RB&E Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_other_rev_amt}, ${glm_property_f_ly.food_rbe_other_rev_amt} );;
@@ -476,7 +476,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_rev_amt_toly {
-    label: "Rev Beverage RB&E Act:LY - var %"
+    label: "Rev Beverage RB&E $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_rev_amt}, ${glm_property_f_ly.beverage_rbe_rev_amt} );;
@@ -484,7 +484,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_banquet_rev_amt_toly {
-    label: "Rev Beverage RB&E Banquet Act:LY - var %"
+    label: "Rev Beverage RB&E Banquet $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_banquet_rev_amt}, ${glm_property_f_ly.beverage_rbe_banquet_rev_amt} );;
@@ -492,7 +492,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_catering_rev_toly {
-    label: "Rev Beverage RB&E Catering Act:LY - var %"
+    label: "Rev Beverage RB&E Catering $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_catering_rev_amt}, ${glm_property_f_ly.beverage_rbe_catering_rev_amt} );;
@@ -500,7 +500,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_conference_services_rev_toly {
-    label: "Rev Beverage RB&E Conference Services Act:LY - var %"
+    label: "Rev Beverage RB&E Conference Services $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_conference_services_rev_amt}, ${glm_property_f_ly.beverage_rbe_conference_services_rev_amt} );;
@@ -508,7 +508,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_outlet_rev_amt_toly {
-    label: "Rev Beverage RB&E Outlet Act:LY - var %"
+    label: "Rev Beverage RB&E Outlet $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_outlet_rev_amt}, ${glm_property_f_ly.beverage_rbe_outlet_rev_amt} );;
@@ -516,7 +516,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_room_service_rev_amt_toly {
-    label: "Rev Beverage RB&E Room Service Act:LY - var %"
+    label: "Rev Beverage RB&E Room Service $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_room_service_rev_amt}, ${glm_property_f_ly.beverage_rbe_room_service_rev_amt} );;
@@ -524,7 +524,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_other_rev_amt_toly {
-    label: "Rev Beverage RB&E Other Act:LY - var %"
+    label: "Rev Beverage RB&E Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_other_rev_amt}, ${glm_property_f_ly.beverage_rbe_other_rev_amt} );;
@@ -532,7 +532,7 @@ view: glm_property_f_toly {
   }
 
   measure: spa_rev_amt_toly {
-    label: "Rev Spa Act:LY - var %"
+    label: "Rev Spa $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.spa_rev_amt}, ${glm_property_f_ly.spa_rev_amt} );;
@@ -540,7 +540,7 @@ view: glm_property_f_toly {
   }
 
   measure: golf_rev_amt_toly {
-    label: "Rev Golf Act:LY - var %"
+    label: "Rev Golf $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.golf_rev_amt}, ${glm_property_f_ly.golf_rev_amt} );;
@@ -548,7 +548,7 @@ view: glm_property_f_toly {
   }
 
   measure: fitness_recreation_rev_amt_toly {
-    label: "Rev Fitness & Rec Act:LY - var %"
+    label: "Rev Fitness & Rec $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.fitness_recreation_rev_amt}, ${glm_property_f_ly.fitness_recreation_rev_amt} );;
@@ -556,7 +556,7 @@ view: glm_property_f_toly {
   }
 
   measure: parking_transportation_rev_amt_toly {
-    label: "Rev Parking & Trans Act:LY - var %"
+    label: "Rev Parking & Trans $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.parking_transportation_rev_amt}, ${glm_property_f_ly.parking_transportation_rev_amt} );;
@@ -564,7 +564,7 @@ view: glm_property_f_toly {
   }
 
   measure: telecom_rev_amt_toly {
-    label: "Rev Telecom Act:LY - var %"
+    label: "Rev Telecom $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.telecom_rev_amt}, ${glm_property_f_ly.telecom_rev_amt} );;
@@ -572,7 +572,7 @@ view: glm_property_f_toly {
   }
 
   measure: retail_rev_amt_toly {
-    label: "Rev Retail Act:LY - var %"
+    label: "Rev Retail $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_rev_amt}, ${glm_property_f_ly.retail_rev_amt} );;
@@ -580,7 +580,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_operated_rev_amt_toly {
-    label: "Rev Other Op. Dept. Act:LY - var %"
+    label: "Rev Other Op. Dept. $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_rev_amt}, ${glm_property_f_ly.other_operated_rev_amt} );;
@@ -588,7 +588,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_mgmt_rev_amt_toly {
-    label: "Rev Mgmt Srvcs Act:LY - var %"
+    label: "Rev Mgmt Srvcs $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.property_mgmt_rev_amt}, ${glm_property_f_ly.property_mgmt_rev_amt} );;
@@ -596,7 +596,7 @@ view: glm_property_f_toly {
   }
 
   measure: misc_rev_amt_toly {
-    label: "Rev Rentals & Other Act:LY - var %"
+    label: "Rev Rentals & Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.misc_rev_amt}, ${glm_property_f_ly.misc_rev_amt} );;
@@ -604,7 +604,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_realty_rev_amt_toly {
-    label: "Rev Nonoperating Realty Act:LY - var %"
+    label: "Rev Nonoperating Realty $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_rev_amt}, ${glm_property_f_ly.nonoperating_realty_rev_amt} );;
@@ -612,7 +612,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_airport_rev_amt_toly {
-    label: "Rev Nonoperating Airport Act:LY - var %"
+    label: "Rev Nonoperating Airport $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_rev_amt}, ${glm_property_f_ly.nonoperating_airport_rev_amt} );;
@@ -620,7 +620,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_util_rev_amt_toly {
-    label: "Rev Nonoperating Utility Act:LY - var %"
+    label: "Rev Nonoperating Utility $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_rev_amt}, ${glm_property_f_ly.nonoperating_util_rev_amt} );;
@@ -630,7 +630,7 @@ view: glm_property_f_toly {
   # -- Expenses
 
   measure: exp_amt_toly_v {
-    label: "Exp Act:LY - var"
+    label: "Exp $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.exp_amt} - ${glm_property_f_ly.exp_amt} ;;
@@ -638,7 +638,7 @@ view: glm_property_f_toly {
   }
 
   measure: room_exp_amt_toly_v {
-    label: "Exp Rms Act:LY - var"
+    label: "Exp Rms $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.room_exp_amt} - ${glm_property_f_ly.room_exp_amt} ;;
@@ -646,7 +646,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_exp_amt_toly_v {
-    label: "Exp RB&E Act:LY - var"
+    label: "Exp RB&E $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_exp_amt} - ${glm_property_f_ly.rbe_exp_amt} ;;
@@ -654,7 +654,7 @@ view: glm_property_f_toly {
   }
 
   measure: spa_exp_amt_toly_v {
-    label: "Exp Spa Act:LY - var"
+    label: "Exp Spa $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.spa_exp_amt} - ${glm_property_f_ly.spa_exp_amt} ;;
@@ -662,7 +662,7 @@ view: glm_property_f_toly {
   }
 
   measure: golf_exp_amt_toly_v {
-    label: "Exp Golf Other Act:LY - var"
+    label: "Exp Golf Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.golf_exp_amt} - ${glm_property_f_ly.golf_exp_amt} ;;
@@ -670,7 +670,7 @@ view: glm_property_f_toly {
   }
 
   measure: fitness_recreation_exp_amt_toly_v {
-    label: "Exp Fitness & Rec Act:LY - var"
+    label: "Exp Fitness & Rec $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.fitness_recreation_exp_amt} - ${glm_property_f_ly.fitness_recreation_exp_amt} ;;
@@ -678,7 +678,7 @@ view: glm_property_f_toly {
   }
 
   measure: parking_transportation_exp_amt_toly_v {
-    label: "Exp Parking & Trans Act:LY - var"
+    label: "Exp Parking & Trans $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.parking_transportation_exp_amt} - ${glm_property_f_ly.parking_transportation_exp_amt} ;;
@@ -686,7 +686,7 @@ view: glm_property_f_toly {
   }
 
   measure: telecom_exp_amt_toly_v {
-    label: "Exp Telecom Act:LY - var"
+    label: "Exp Telecom $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.telecom_exp_amt} - ${glm_property_f_ly.telecom_exp_amt} ;;
@@ -694,7 +694,7 @@ view: glm_property_f_toly {
   }
 
   measure: retail_exp_amt_toly_v {
-    label: "Exp Retail Act:LY - var"
+    label: "Exp Retail $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.retail_exp_amt} - ${glm_property_f_ly.retail_exp_amt} ;;
@@ -702,7 +702,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_operated_exp_amt_toly_v {
-    label: "Exp Other Op. Dept. Act:LY - var"
+    label: "Exp Other Op. Dept. $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.other_operated_exp_amt} - ${glm_property_f_ly.other_operated_exp_amt} ;;
@@ -710,7 +710,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_mgmt_exp_amt_toly_v {
-    label: "Exp Mgmt Srvcs Act:LY - var"
+    label: "Exp Mgmt Srvcs $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.property_mgmt_exp_amt} - ${glm_property_f_ly.property_mgmt_exp_amt} ;;
@@ -718,7 +718,7 @@ view: glm_property_f_toly {
   }
 
   measure: administrative_general_exp_amt_toly_v {
-    label: "Exp A&G Act:LY - var"
+    label: "Exp A&G $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.administrative_general_exp_amt} - ${glm_property_f_ly.administrative_general_exp_amt} ;;
@@ -726,7 +726,7 @@ view: glm_property_f_toly {
   }
 
   measure: information_technology_exp_amt_toly_v {
-    label: "Exp IT Act:LY - var"
+    label: "Exp IT $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.information_technology_exp_amt} - ${glm_property_f_ly.information_technology_exp_amt} ;;
@@ -734,7 +734,7 @@ view: glm_property_f_toly {
   }
 
   measure: sales_marketing_exp_amt_toly_v {
-    label: "Exp S&M Act:LY - var"
+    label: "Exp S&M $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.sales_marketing_exp_amt} - ${glm_property_f_ly.sales_marketing_exp_amt} ;;
@@ -742,7 +742,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_operations_maintenance_exp_amt_toly_v {
-    label: "Exp R&M Act:LY - var"
+    label: "Exp R&M $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.property_operations_maintenance_exp_amt} - ${glm_property_f_ly.property_operations_maintenance_exp_amt} ;;
@@ -750,7 +750,7 @@ view: glm_property_f_toly {
   }
 
   measure: misc_exp_amt_toly_v {
-    label: "Exp Rentals & Other Act:LY - var"
+    label: "Exp Rentals & Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.misc_exp_amt} - ${glm_property_f_ly.misc_exp_amt} ;;
@@ -758,7 +758,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_realty_exp_amt_toly_v {
-    label: "Exp Nonoperating Realty Act:LY - var"
+    label: "Exp Nonoperating Realty $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_realty_exp_amt} - ${glm_property_f_ly.nonoperating_realty_exp_amt} ;;
@@ -766,7 +766,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_airport_exp_amt_toly_v {
-    label: "Exp Nonoperating Airport Act:LY - var"
+    label: "Exp Nonoperating Airport $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_airport_exp_amt} - ${glm_property_f_ly.nonoperating_airport_exp_amt} ;;
@@ -774,7 +774,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_util_exp_amt_toly_v {
-    label: "Exp Nonoperating Utility Act:LY - var"
+    label: "Exp Nonoperating Utility $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_util_exp_amt} - ${glm_property_f_ly.nonoperating_util_exp_amt} ;;
@@ -784,7 +784,7 @@ view: glm_property_f_toly {
   # -- Expenses % var
 
   measure: exp_amt_toly {
-    label: "Exp Act:LY - var %"
+    label: "Exp $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.exp_amt}, ${glm_property_f_ly.exp_amt}) ;;
@@ -792,7 +792,7 @@ view: glm_property_f_toly {
   }
 
   measure: room_exp_amt_toly {
-    label: "Exp Rms Act:LY - var %"
+    label: "Exp Rms $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.room_exp_amt}, ${glm_property_f_ly.room_exp_amt}) ;;
@@ -800,7 +800,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_exp_amt_toly {
-    label: "Exp RB&E Act:LY - var %"
+    label: "Exp RB&E $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_exp_amt}, ${glm_property_f_ly.rbe_exp_amt}) ;;
@@ -808,7 +808,7 @@ view: glm_property_f_toly {
   }
 
   measure: spa_exp_amt_toly {
-    label: "Exp Spa Act:LY - var %"
+    label: "Exp Spa $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.spa_exp_amt}, ${glm_property_f_ly.spa_exp_amt}) ;;
@@ -816,7 +816,7 @@ view: glm_property_f_toly {
   }
 
   measure: golf_exp_amt_toly {
-    label: "Exp Golf Other Act:LY - var %"
+    label: "Exp Golf Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.golf_exp_amt}, ${glm_property_f_ly.golf_exp_amt}) ;;
@@ -824,7 +824,7 @@ view: glm_property_f_toly {
   }
 
   measure: fitness_recreation_exp_amt_toly {
-    label: "Exp Fitness & Rec Act:LY - var %"
+    label: "Exp Fitness & Rec $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.fitness_recreation_exp_amt}, ${glm_property_f_ly.fitness_recreation_exp_amt}) ;;
@@ -832,7 +832,7 @@ view: glm_property_f_toly {
   }
 
   measure: parking_transportation_exp_amt_toly {
-    label: "Exp Parking & Trans Act:LY - var %"
+    label: "Exp Parking & Trans $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.parking_transportation_exp_amt}, ${glm_property_f_ly.parking_transportation_exp_amt}) ;;
@@ -840,7 +840,7 @@ view: glm_property_f_toly {
   }
 
   measure: telecom_exp_amt_toly {
-    label: "Exp Telecom Act:LY - var %"
+    label: "Exp Telecom $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.telecom_exp_amt}, ${glm_property_f_ly.telecom_exp_amt}) ;;
@@ -848,7 +848,7 @@ view: glm_property_f_toly {
   }
 
   measure: retail_exp_amt_toly {
-    label: "Exp Retail Act:LY - var %"
+    label: "Exp Retail $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_exp_amt}, ${glm_property_f_ly.retail_exp_amt}) ;;
@@ -856,7 +856,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_operated_exp_amt_toly {
-    label: "Exp Other Op. Dept. Act:LY - var %"
+    label: "Exp Other Op. Dept. $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_exp_amt}, ${glm_property_f_ly.other_operated_exp_amt}) ;;
@@ -864,7 +864,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_mgmt_exp_amt_toly {
-    label: "Exp Mgmt Srvcs Act:LY - var %"
+    label: "Exp Mgmt Srvcs $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.property_mgmt_exp_amt}, ${glm_property_f_ly.property_mgmt_exp_amt}) ;;
@@ -872,7 +872,7 @@ view: glm_property_f_toly {
   }
 
   measure: administrative_general_exp_amt_toly {
-    label: "Exp A&G Act:LY - var %"
+    label: "Exp A&G $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.administrative_general_exp_amt}, ${glm_property_f_ly.administrative_general_exp_amt}) ;;
@@ -880,7 +880,7 @@ view: glm_property_f_toly {
   }
 
   measure: information_technology_exp_amt_toly {
-    label: "Exp IT Act:LY - var %"
+    label: "Exp IT $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.information_technology_exp_amt}, ${glm_property_f_ly.information_technology_exp_amt}) ;;
@@ -888,7 +888,7 @@ view: glm_property_f_toly {
   }
 
   measure: sales_marketing_exp_amt_toly {
-    label: "Exp S&M Act:LY - var %"
+    label: "Exp S&M $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.sales_marketing_exp_amt}, ${glm_property_f_ly.sales_marketing_exp_amt}) ;;
@@ -896,7 +896,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_operations_maintenance_exp_amt_toly {
-    label: "Exp R&M Act:LY - var %"
+    label: "Exp R&M $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.property_operations_maintenance_exp_amt}, ${glm_property_f_ly.property_operations_maintenance_exp_amt}) ;;
@@ -904,7 +904,7 @@ view: glm_property_f_toly {
   }
 
   measure: misc_exp_amt_toly {
-    label: "Exp Rentals & Other Act:LY - var %"
+    label: "Exp Rentals & Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.misc_exp_amt}, ${glm_property_f_ly.misc_exp_amt}) ;;
@@ -912,7 +912,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_realty_exp_amt_toly {
-    label: "Exp Nonoperating Realty Act:LY - var %"
+    label: "Exp Nonoperating Realty $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_exp_amt}, ${glm_property_f_ly.nonoperating_realty_exp_amt}) ;;
@@ -920,7 +920,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_airport_exp_amt_toly {
-    label: "Exp Nonoperating Airport Act:LY - var %"
+    label: "Exp Nonoperating Airport $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_exp_amt}, ${glm_property_f_ly.nonoperating_airport_exp_amt}) ;;
@@ -928,7 +928,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_util_exp_amt_toly {
-    label: "Exp Nonoperating Utility Act:LY - var %"
+    label: "Exp Nonoperating Utility $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_exp_amt}, ${glm_property_f_ly.nonoperating_util_exp_amt}) ;;
@@ -938,7 +938,7 @@ view: glm_property_f_toly {
   # -- Other Expenses
 
   measure: other_exp_amt_toly_v {
-    label: "Exp Other Act:LY - var"
+    label: "Exp Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.other_exp_amt} - ${glm_property_f_ly.other_exp_amt} ;;
@@ -946,7 +946,7 @@ view: glm_property_f_toly {
   }
 
   measure: room_other_exp_amt_toly_v {
-    label: "Exp Other Rms Act:LY - var"
+    label: "Exp Other Rms $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.room_other_exp_amt} - ${glm_property_f_ly.room_other_exp_amt} ;;
@@ -954,7 +954,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_other_exp_amt_toly_v {
-    label: "Exp Other RB&E Act:LY - var"
+    label: "Exp Other RB&E $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_other_exp_amt} - ${glm_property_f_ly.rbe_other_exp_amt} ;;
@@ -962,7 +962,7 @@ view: glm_property_f_toly {
   }
 
   measure: spa_other_exp_amt_toly_v {
-    label: "Exp Other Spa Act:LY - var"
+    label: "Exp Other Spa $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.spa_other_exp_amt} - ${glm_property_f_ly.spa_other_exp_amt} ;;
@@ -970,7 +970,7 @@ view: glm_property_f_toly {
   }
 
   measure: golf_other_exp_amt_toly_v {
-    label: "Exp Other Golf Act:LY - var"
+    label: "Exp Other Golf $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.golf_other_exp_amt} - ${glm_property_f_ly.golf_other_exp_amt} ;;
@@ -978,7 +978,7 @@ view: glm_property_f_toly {
   }
 
   measure: fitness_recreation_other_exp_amt_toly_v {
-    label: "Exp Other Fitness & Rec Act:LY - var"
+    label: "Exp Other Fitness & Rec $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.fitness_recreation_other_exp_amt} - ${glm_property_f_ly.fitness_recreation_other_exp_amt} ;;
@@ -986,7 +986,7 @@ view: glm_property_f_toly {
   }
 
   measure: parking_transportation_other_exp_amt_toly_v {
-    label: "Exp Other Parking & Trans Act:LY - var"
+    label: "Exp Other Parking & Trans $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.parking_transportation_other_exp_amt} - ${glm_property_f_ly.parking_transportation_other_exp_amt} ;;
@@ -994,7 +994,7 @@ view: glm_property_f_toly {
   }
 
   measure: telecom_other_exp_amt_toly_v {
-    label: "Exp Other Telecom Act:LY - var"
+    label: "Exp Other Telecom $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.telecom_other_exp_amt} - ${glm_property_f_ly.telecom_other_exp_amt} ;;
@@ -1002,7 +1002,7 @@ view: glm_property_f_toly {
   }
 
   measure: retail_other_exp_amt_toly_v {
-    label: "Exp Other Retail Act:LY - var"
+    label: "Exp Other Retail $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.retail_other_exp_amt} - ${glm_property_f_ly.retail_other_exp_amt} ;;
@@ -1010,7 +1010,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_operated_other_exp_amt_toly_v {
-    label: "Exp Other Other Op. Dept. Act:LY - var"
+    label: "Exp Other Other Op. Dept. $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.other_operated_other_exp_amt} - ${glm_property_f_ly.other_operated_other_exp_amt} ;;
@@ -1018,7 +1018,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_mgmt_other_exp_amt_toly_v {
-    label: "Exp Other Mgmt Srvcs Act:LY - var"
+    label: "Exp Other Mgmt Srvcs $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.property_mgmt_other_exp_amt} - ${glm_property_f_ly.property_mgmt_other_exp_amt} ;;
@@ -1026,7 +1026,7 @@ view: glm_property_f_toly {
   }
 
   measure: administrative_general_other_exp_amt_toly_v {
-    label: "Exp Other A&G Act:LY - var"
+    label: "Exp Other A&G $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.administrative_general_other_exp_amt} - ${glm_property_f_ly.administrative_general_other_exp_amt} ;;
@@ -1034,7 +1034,7 @@ view: glm_property_f_toly {
   }
 
   measure: information_technology_other_exp_amt_toly_v {
-    label: "Exp Other IT Act:LY - var"
+    label: "Exp Other IT $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.information_technology_other_exp_amt} - ${glm_property_f_ly.information_technology_other_exp_amt} ;;
@@ -1042,7 +1042,7 @@ view: glm_property_f_toly {
   }
 
   measure: sales_marketing_other_exp_amt_toly_v {
-    label: "Exp Other S&M Act:LY - var"
+    label: "Exp Other S&M $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.sales_marketing_other_exp_amt} - ${glm_property_f_ly.sales_marketing_other_exp_amt} ;;
@@ -1050,7 +1050,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_operations_maintenance_other_exp_amt_toly_v {
-    label: "Exp Other R&M Act:LY - var"
+    label: "Exp Other R&M $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.property_operations_maintenance_other_exp_amt} - ${glm_property_f_ly.property_operations_maintenance_other_exp_amt} ;;
@@ -1058,7 +1058,7 @@ view: glm_property_f_toly {
   }
 
   measure: misc_other_exp_amt_toly_v {
-    label: "Exp Other Rentals & Other Act:LY - var"
+    label: "Exp Other Rentals & Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.misc_other_exp_amt} - ${glm_property_f_ly.misc_other_exp_amt} ;;
@@ -1066,7 +1066,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_realty_other_exp_amt_toly_v {
-    label: "Exp Other Nonoperating Realty Act:LY - var"
+    label: "Exp Other Nonoperating Realty $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_realty_other_exp_amt} - ${glm_property_f_ly.nonoperating_realty_other_exp_amt} ;;
@@ -1074,7 +1074,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_airport_other_exp_amt_toly_v {
-    label: "Exp Other Nonoperating Airport Act:LY - var"
+    label: "Exp Other Nonoperating Airport $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_airport_other_exp_amt} - ${glm_property_f_ly.nonoperating_airport_other_exp_amt} ;;
@@ -1082,7 +1082,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_util_other_exp_amt_toly_v {
-    label: "Exp Other Nonoperating Utility Act:LY - var"
+    label: "Exp Other Nonoperating Utility $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_util_other_exp_amt} - ${glm_property_f_ly.nonoperating_util_other_exp_amt} ;;
@@ -1092,7 +1092,7 @@ view: glm_property_f_toly {
 # -- Other Expenses % var
 
   measure: other_exp_amt_toly {
-    label: "Exp Other Act:LY - var %"
+    label: "Exp Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.other_exp_amt}, ${glm_property_f_ly.other_exp_amt}) ;;
@@ -1100,7 +1100,7 @@ view: glm_property_f_toly {
   }
 
   measure: room_other_exp_amt_toly {
-    label: "Exp Other Rms Act:LY - var %"
+    label: "Exp Other Rms $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.room_other_exp_amt}, ${glm_property_f_ly.room_other_exp_amt}) ;;
@@ -1108,7 +1108,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_other_exp_amt_toly {
-    label: "Exp Other RB&E Act:LY - var %"
+    label: "Exp Other RB&E $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_other_exp_amt}, ${glm_property_f_ly.rbe_other_exp_amt}) ;;
@@ -1116,7 +1116,7 @@ view: glm_property_f_toly {
   }
 
   measure: spa_other_exp_amt_toly {
-    label: "Exp Other Spa Act:LY - var %"
+    label: "Exp Other Spa $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.spa_other_exp_amt}, ${glm_property_f_ly.spa_other_exp_amt}) ;;
@@ -1124,7 +1124,7 @@ view: glm_property_f_toly {
   }
 
   measure: golf_other_exp_amt_toly {
-    label: "Exp Other Golf Act:LY - var %"
+    label: "Exp Other Golf $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.golf_other_exp_amt}, ${glm_property_f_ly.golf_other_exp_amt}) ;;
@@ -1132,7 +1132,7 @@ view: glm_property_f_toly {
   }
 
   measure: fitness_recreation_other_exp_amt_toly {
-    label: "Exp Other Fitness & Rec Act:LY - var %"
+    label: "Exp Other Fitness & Rec $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.fitness_recreation_other_exp_amt}, ${glm_property_f_ly.fitness_recreation_other_exp_amt}) ;;
@@ -1140,7 +1140,7 @@ view: glm_property_f_toly {
   }
 
   measure: parking_transportation_other_exp_amt_toly {
-    label: "Exp Other Parking & Trans Act:LY - var %"
+    label: "Exp Other Parking & Trans $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.parking_transportation_other_exp_amt}, ${glm_property_f_ly.parking_transportation_other_exp_amt}) ;;
@@ -1148,7 +1148,7 @@ view: glm_property_f_toly {
   }
 
   measure: telecom_other_exp_amt_toly {
-    label: "Exp Other Telecom Act:LY - var %"
+    label: "Exp Other Telecom $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.telecom_other_exp_amt}, ${glm_property_f_ly.telecom_other_exp_amt}) ;;
@@ -1156,7 +1156,7 @@ view: glm_property_f_toly {
   }
 
   measure: retail_other_exp_amt_toly {
-    label: "Exp Other Retail Act:LY - var %"
+    label: "Exp Other Retail $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_other_exp_amt}, ${glm_property_f_ly.retail_other_exp_amt}) ;;
@@ -1164,7 +1164,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_operated_other_exp_amt_toly {
-    label: "Exp Other Other Op. Dept. Act:LY - var %"
+    label: "Exp Other Other Op. Dept. $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_other_exp_amt}, ${glm_property_f_ly.other_operated_other_exp_amt}) ;;
@@ -1172,7 +1172,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_mgmt_other_exp_amt_toly {
-    label: "Exp Other Mgmt Srvcs Act:LY - var %"
+    label: "Exp Other Mgmt Srvcs $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.property_mgmt_other_exp_amt}, ${glm_property_f_ly.property_mgmt_other_exp_amt}) ;;
@@ -1180,7 +1180,7 @@ view: glm_property_f_toly {
   }
 
   measure: administrative_general_other_exp_amt_toly {
-    label: "Exp Other A&G Act:LY - var %"
+    label: "Exp Other A&G $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.administrative_general_other_exp_amt}, ${glm_property_f_ly.administrative_general_other_exp_amt}) ;;
@@ -1188,7 +1188,7 @@ view: glm_property_f_toly {
   }
 
   measure: information_technology_other_exp_amt_toly {
-    label: "Exp Other IT Act:LY - var %"
+    label: "Exp Other IT $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.information_technology_other_exp_amt}, ${glm_property_f_ly.information_technology_other_exp_amt}) ;;
@@ -1196,7 +1196,7 @@ view: glm_property_f_toly {
   }
 
   measure: sales_marketing_other_exp_amt_toly {
-    label: "Exp Other S&M Act:LY - var %"
+    label: "Exp Other S&M $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.sales_marketing_other_exp_amt}, ${glm_property_f_ly.sales_marketing_other_exp_amt}) ;;
@@ -1204,7 +1204,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_operations_maintenance_other_exp_amt_toly {
-    label: "Exp Other R&M Act:LY - var %"
+    label: "Exp Other R&M $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.property_operations_maintenance_other_exp_amt}, ${glm_property_f_ly.property_operations_maintenance_other_exp_amt}) ;;
@@ -1212,7 +1212,7 @@ view: glm_property_f_toly {
   }
 
   measure: misc_other_exp_amt_toly {
-    label: "Exp Other Rentals & Other Act:LY - var %"
+    label: "Exp Other Rentals & Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.misc_other_exp_amt}, ${glm_property_f_ly.misc_other_exp_amt}) ;;
@@ -1220,7 +1220,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_realty_other_exp_amt_toly {
-    label: "Exp Nonoperating Realty Other Act:LY - var %"
+    label: "Exp Nonoperating Realty Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_other_exp_amt}, ${glm_property_f_ly.nonoperating_realty_other_exp_amt}) ;;
@@ -1228,7 +1228,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_airport_other_exp_amt_toly {
-    label: "Exp Nonoperating Airport Other Act:LY - var %"
+    label: "Exp Nonoperating Airport Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_other_exp_amt}, ${glm_property_f_ly.nonoperating_airport_other_exp_amt}) ;;
@@ -1236,7 +1236,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_util_other_exp_amt_toly {
-    label: "Exp Nonoperating Utility Act:LY - var %"
+    label: "Exp Nonoperating Utility $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_other_exp_amt}, ${glm_property_f_ly.nonoperating_util_other_exp_amt}) ;;
@@ -1246,7 +1246,7 @@ view: glm_property_f_toly {
   #-- Payroll
 
   measure: payroll_amt_toly_v {
-    label: "Payroll Act:LY - var"
+    label: "Payroll $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.payroll_amt} - ${glm_property_f_ly.payroll_amt} ;;
@@ -1254,7 +1254,7 @@ view: glm_property_f_toly {
   }
 
   measure: room_payroll_amt_toly_v {
-    label: "Payroll Rms Act:LY - var"
+    label: "Payroll Rms $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.room_payroll_amt} - ${glm_property_f_ly.room_payroll_amt} ;;
@@ -1262,7 +1262,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_payroll_amt_toly_v {
-    label: "Payroll RB&E Other Act:LY - var"
+    label: "Payroll RB&E Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_payroll_amt} - ${glm_property_f_ly.rbe_payroll_amt} ;;
@@ -1270,7 +1270,7 @@ view: glm_property_f_toly {
   }
 
   measure: spa_payroll_amt_toly_v {
-    label: "Payroll Spa Act:LY - var"
+    label: "Payroll Spa $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.spa_payroll_amt} - ${glm_property_f_ly.spa_payroll_amt} ;;
@@ -1278,7 +1278,7 @@ view: glm_property_f_toly {
   }
 
   measure: golf_payroll_amt_toly_v {
-    label: "Payroll RB&E Golf Act:LY - var"
+    label: "Payroll RB&E Golf $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.golf_payroll_amt} - ${glm_property_f_ly.golf_payroll_amt} ;;
@@ -1286,7 +1286,7 @@ view: glm_property_f_toly {
   }
 
   measure: fitness_recreation_payroll_amt_toly_v {
-    label: "Payroll Fitness & Rec Act:LY - var"
+    label: "Payroll Fitness & Rec $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.fitness_recreation_payroll_amt} - ${glm_property_f_ly.fitness_recreation_payroll_amt} ;;
@@ -1294,7 +1294,7 @@ view: glm_property_f_toly {
   }
 
   measure: parking_transportation_payroll_amt_toly_v {
-    label: "Payroll Parking & Trans Act:LY - var"
+    label: "Payroll Parking & Trans $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.parking_transportation_payroll_amt} - ${glm_property_f_ly.parking_transportation_payroll_amt} ;;
@@ -1302,7 +1302,7 @@ view: glm_property_f_toly {
   }
 
   measure: telecom_payroll_amt_toly_v {
-    label: "Payroll Telecom Act:LY - var"
+    label: "Payroll Telecom $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.telecom_payroll_amt} - ${glm_property_f_ly.telecom_payroll_amt} ;;
@@ -1310,7 +1310,7 @@ view: glm_property_f_toly {
   }
 
   measure: retail_payroll_amt_toly_v {
-    label: "Payroll Retail Act:LY - var"
+    label: "Payroll Retail $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.retail_payroll_amt} - ${glm_property_f_ly.retail_payroll_amt} ;;
@@ -1318,7 +1318,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_operated_payroll_amt_toly_v {
-    label: "Payroll Other Op. Dept. Act:LY - var"
+    label: "Payroll Other Op. Dept. $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.other_operated_payroll_amt} - ${glm_property_f_ly.other_operated_payroll_amt} ;;
@@ -1326,7 +1326,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_mgmt_payroll_amt_toly_v {
-    label: "Payroll Mgmt Srvcs Act:LY - var"
+    label: "Payroll Mgmt Srvcs $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.property_mgmt_payroll_amt} - ${glm_property_f_ly.property_mgmt_payroll_amt} ;;
@@ -1334,7 +1334,7 @@ view: glm_property_f_toly {
   }
 
   measure: administrative_general_payroll_amt_toly_v {
-    label: "Payroll A&G Act:LY - var"
+    label: "Payroll A&G $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.administrative_general_payroll_amt} - ${glm_property_f_ly.administrative_general_payroll_amt} ;;
@@ -1342,7 +1342,7 @@ view: glm_property_f_toly {
   }
 
   measure: information_technology_payroll_amt_toly_v {
-    label: "Payroll IT Act:LY - var"
+    label: "Payroll IT $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.information_technology_payroll_amt} - ${glm_property_f_ly.information_technology_payroll_amt} ;;
@@ -1350,7 +1350,7 @@ view: glm_property_f_toly {
   }
 
   measure: sales_marketing_payroll_amt_toly_v {
-    label: "Payroll S&M Act:LY - var"
+    label: "Payroll S&M $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.sales_marketing_payroll_amt} - ${glm_property_f_ly.sales_marketing_payroll_amt} ;;
@@ -1358,7 +1358,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_operations_maintenance_payroll_amt_toly_v {
-    label: "Payroll R&M Act:LY - var"
+    label: "Payroll R&M $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.property_operations_maintenance_payroll_amt} - ${glm_property_f_ly.property_operations_maintenance_payroll_amt} ;;
@@ -1366,7 +1366,7 @@ view: glm_property_f_toly {
   }
 
   measure: misc_payroll_amt_toly_v {
-    label: "Payroll Rentals & Other Act:LY - var"
+    label: "Payroll Rentals & Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.misc_payroll_amt} - ${glm_property_f_ly.misc_payroll_amt} ;;
@@ -1374,7 +1374,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_realty_payroll_amt_toly_v {
-    label: "Payroll Nonoperating Realty Act:LY - var"
+    label: "Payroll Nonoperating Realty $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_realty_payroll_amt} - ${glm_property_f_ly.nonoperating_realty_payroll_amt} ;;
@@ -1382,7 +1382,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_airport_payroll_amt_toly_v {
-    label: "Payroll Nonoperating Airport Act:LY - var"
+    label: "Payroll Nonoperating Airport $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_airport_payroll_amt} - ${glm_property_f_ly.nonoperating_airport_payroll_amt} ;;
@@ -1390,7 +1390,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_util_payroll_amt_toly_v {
-    label: "Payroll Nonoperating Utility Act:LY - var"
+    label: "Payroll Nonoperating Utility $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_util_payroll_amt} - ${glm_property_f_ly.nonoperating_util_payroll_amt} ;;
@@ -1398,7 +1398,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_outlet_payroll_amt_toly_v {
-    label: "Payroll RB&E Outlet Act:LY - var"
+    label: "Payroll RB&E Outlet $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_outlet_payroll_amt} - ${glm_property_f_ly.rbe_outlet_payroll_amt} ;;
@@ -1408,7 +1408,7 @@ view: glm_property_f_toly {
 #-- Payroll % var
 
   measure: payroll_amt_toly {
-    label: "Payroll Act:LY - var %"
+    label: "Payroll $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.payroll_amt}, ${glm_property_f_ly.payroll_amt}) ;;
@@ -1416,7 +1416,7 @@ view: glm_property_f_toly {
   }
 
   measure: room_payroll_amt_toly {
-    label: "Payroll Rms Act:LY - var %"
+    label: "Payroll Rms $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.room_payroll_amt}, ${glm_property_f_ly.room_payroll_amt}) ;;
@@ -1424,7 +1424,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_payroll_amt_toly {
-    label: "Payroll RB&E Other Act:LY - var %"
+    label: "Payroll RB&E Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_payroll_amt}, ${glm_property_f_ly.rbe_payroll_amt}) ;;
@@ -1432,7 +1432,7 @@ view: glm_property_f_toly {
   }
 
   measure: spa_payroll_amt_toly {
-    label: "Payroll Spa Act:LY - var %"
+    label: "Payroll Spa $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.spa_payroll_amt}, ${glm_property_f_ly.spa_payroll_amt}) ;;
@@ -1440,7 +1440,7 @@ view: glm_property_f_toly {
   }
 
   measure: golf_payroll_amt_toly {
-    label: "Payroll RB&E Golf Act:LY - var %"
+    label: "Payroll RB&E Golf $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.golf_payroll_amt}, ${glm_property_f_ly.golf_payroll_amt}) ;;
@@ -1448,7 +1448,7 @@ view: glm_property_f_toly {
   }
 
   measure: fitness_recreation_payroll_amt_toly {
-    label: "Payroll Fitness & Rec Act:LY - var %"
+    label: "Payroll Fitness & Rec $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.fitness_recreation_payroll_amt}, ${glm_property_f_ly.fitness_recreation_payroll_amt}) ;;
@@ -1456,7 +1456,7 @@ view: glm_property_f_toly {
   }
 
   measure: parking_transportation_payroll_amt_toly {
-    label: "Payroll Parking & Trans Act:LY - var %"
+    label: "Payroll Parking & Trans $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.parking_transportation_payroll_amt}, ${glm_property_f_ly.parking_transportation_payroll_amt}) ;;
@@ -1464,7 +1464,7 @@ view: glm_property_f_toly {
   }
 
   measure: telecom_payroll_amt_toly {
-    label: "Payroll Telecom Act:LY - var %"
+    label: "Payroll Telecom $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.telecom_payroll_amt}, ${glm_property_f_ly.telecom_payroll_amt}) ;;
@@ -1472,7 +1472,7 @@ view: glm_property_f_toly {
   }
 
   measure: retail_payroll_amt_toly {
-    label: "Payroll Retail Act:LY - var %"
+    label: "Payroll Retail $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_payroll_amt}, ${glm_property_f_ly.retail_payroll_amt}) ;;
@@ -1480,7 +1480,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_operated_payroll_amt_toly {
-    label: "Payroll Other Op. Dept. Act:LY - var %"
+    label: "Payroll Other Op. Dept. $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_payroll_amt}, ${glm_property_f_ly.other_operated_payroll_amt}) ;;
@@ -1488,7 +1488,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_mgmt_payroll_amt_toly {
-    label: "Payroll Mgmt Srvcs Act:LY - var %"
+    label: "Payroll Mgmt Srvcs $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.property_mgmt_payroll_amt}, ${glm_property_f_ly.property_mgmt_payroll_amt}) ;;
@@ -1496,7 +1496,7 @@ view: glm_property_f_toly {
   }
 
   measure: administrative_general_payroll_amt_toly {
-    label: "Payroll A&G Act:LY - var %"
+    label: "Payroll A&G $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.administrative_general_payroll_amt}, ${glm_property_f_ly.administrative_general_payroll_amt}) ;;
@@ -1504,7 +1504,7 @@ view: glm_property_f_toly {
   }
 
   measure: information_technology_payroll_amt_toly {
-    label: "Payroll IT Act:LY - var %"
+    label: "Payroll IT $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.information_technology_payroll_amt}, ${glm_property_f_ly.information_technology_payroll_amt}) ;;
@@ -1512,7 +1512,7 @@ view: glm_property_f_toly {
   }
 
   measure: sales_marketing_payroll_amt_toly {
-    label: "Payroll S&M Act:LY - var %"
+    label: "Payroll S&M $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.sales_marketing_payroll_amt}, ${glm_property_f_ly.sales_marketing_payroll_amt}) ;;
@@ -1520,7 +1520,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_operations_maintenance_payroll_amt_toly {
-    label: "Payroll R&M Act:LY - var %"
+    label: "Payroll R&M $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.property_operations_maintenance_payroll_amt}, ${glm_property_f_ly.property_operations_maintenance_payroll_amt}) ;;
@@ -1528,7 +1528,7 @@ view: glm_property_f_toly {
   }
 
   measure: misc_payroll_amt_toly {
-    label: "Payroll Rentals & Other Act:LY - var %"
+    label: "Payroll Rentals & Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.misc_payroll_amt}, ${glm_property_f_ly.misc_payroll_amt}) ;;
@@ -1536,7 +1536,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_realty_payroll_amt_toly {
-    label: "Payroll Nonoperating Realty Act:LY - var %"
+    label: "Payroll Nonoperating Realty $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_payroll_amt}, ${glm_property_f_ly.nonoperating_realty_payroll_amt}) ;;
@@ -1544,7 +1544,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_airport_payroll_amt_toly {
-    label: "Payroll Nonoperating Airport Act:LY - var %"
+    label: "Payroll Nonoperating Airport $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_payroll_amt}, ${glm_property_f_ly.nonoperating_airport_payroll_amt}) ;;
@@ -1552,7 +1552,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_util_payroll_amt_toly {
-    label: "Payroll Nonoperating Utility Act:LY - var %"
+    label: "Payroll Nonoperating Utility $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_payroll_amt}, ${glm_property_f_ly.nonoperating_util_payroll_amt}) ;;
@@ -1560,7 +1560,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_outlet_payroll_amt_toly {
-    label: "Payroll RB&E Outlet Act:LY - var %"
+    label: "Payroll RB&E Outlet $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_payroll_amt}, ${glm_property_f_ly.rbe_outlet_payroll_amt}) ;;
@@ -1714,7 +1714,7 @@ view: glm_property_f_toly {
   }
 
   measure: occupied_room_cnt_toly_v {
-    label: "Rms Occ Act:LY - var"
+    label: "Rms Occ  Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.occupied_room_cnt} - ${glm_property_f_ly.occupied_room_cnt} ;;
@@ -1777,7 +1777,7 @@ view: glm_property_f_toly {
   }
 
   measure: transient_room_rev_amt_toly_v {
-    label: "Rev Rms Transient Act:LY - var"
+    label: "Rev Rms Transient $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.transient_room_rev_amt} - ${glm_property_f_ly.transient_room_rev_amt} ;;
@@ -1785,7 +1785,7 @@ view: glm_property_f_toly {
   }
 
   measure: group_room_rev_amt_toly_v {
-    label: "Rev Rms Group Act:LY - var"
+    label: "Rev Rms Group $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.group_room_rev_amt} - ${glm_property_f_ly.group_room_rev_amt} ;;
@@ -1793,7 +1793,7 @@ view: glm_property_f_toly {
   }
 
   measure: contract_room_rev_amt_toly_v {
-    label: "Rev Rms Contract Act:LY - var"
+    label: "Rev Rms Contract $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.contract_room_rev_amt} - ${glm_property_f_ly.contract_room_rev_amt} ;;
@@ -1801,7 +1801,7 @@ view: glm_property_f_toly {
   }
 
   measure: no_show_room_rev_amt_toly_v {
-    label: "Rev Rms No Show Act:LY - var"
+    label: "Rev Rms No Show $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.no_show_room_rev_amt} - ${glm_property_f_ly.no_show_room_rev_amt} ;;
@@ -1809,7 +1809,7 @@ view: glm_property_f_toly {
   }
 
   measure: service_charge_incl_room_rev_amt_toly_v {
-    label: "Rev Rms Srvc Charge Act:LY - var"
+    label: "Rev Rms Srvc Charge $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.service_charge_incl_room_rev_amt} - ${glm_property_f_ly.service_charge_incl_room_rev_amt} ;;
@@ -1827,7 +1827,7 @@ view: glm_property_f_toly {
   }
 
   measure: occupied_room_cnt_toly {
-    label: "Rms Occ Act:LY - var %"
+    label: "Rms Occ  Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.occupied_room_cnt}, ${glm_property_f_ly.occupied_room_cnt}) ;;
@@ -1890,7 +1890,7 @@ view: glm_property_f_toly {
   }
 
   measure: transient_room_rev_amt_toly {
-    label: "Rev Rms Transient Act:LY - var %"
+    label: "Rev Rms Transient $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.transient_room_rev_amt}, ${glm_property_f_ly.transient_room_rev_amt}) ;;
@@ -1898,7 +1898,7 @@ view: glm_property_f_toly {
   }
 
   measure: group_room_rev_amt_toly {
-    label: "Rev Rms Group Act:LY - var %"
+    label: "Rev Rms Group $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.group_room_rev_amt}, ${glm_property_f_ly.group_room_rev_amt}) ;;
@@ -1906,7 +1906,7 @@ view: glm_property_f_toly {
   }
 
   measure: contract_room_rev_amt_toly {
-    label: "Rev Rms Contract Act:LY - var %"
+    label: "Rev Rms Contract $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.contract_room_rev_amt}, ${glm_property_f_ly.contract_room_rev_amt}) ;;
@@ -1916,7 +1916,7 @@ view: glm_property_f_toly {
   #-- Profit
 
   measure: profit_amt_toly_v {
-    label: "Profit Act:LY - var"
+    label: "Profit $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.profit_amt} - ${glm_property_f_ly.profit_amt} ;;
@@ -1924,7 +1924,7 @@ view: glm_property_f_toly {
   }
 
   measure: room_profit_amt_toly_v {
-    label: "Profit Rms Act:LY - var"
+    label: "Profit Rms $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.room_profit_amt} - ${glm_property_f_ly.room_profit_amt} ;;
@@ -1932,7 +1932,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_profit_amt_toly_v {
-    label: "Profit RB&E Act:LY - var"
+    label: "Profit RB&E $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_profit_amt} - ${glm_property_f_ly.rbe_profit_amt} ;;
@@ -1940,7 +1940,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_banquet_profit_amt_toly_v {
-    label: "Profit RB&E Banquet Act:LY - var"
+    label: "Profit RB&E Banquet $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_banquet_profit_amt} - ${glm_property_f_ly.rbe_banquet_profit_amt} ;;
@@ -1948,7 +1948,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_catering_profit_amt_toly_v {
-    label: "Profit RB&E Catering Act:LY - var"
+    label: "Profit RB&E Catering $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_catering_profit_amt} - ${glm_property_f_ly.rbe_catering_profit_amt} ;;
@@ -1956,7 +1956,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_conference_services_profit_amt_toly_v {
-    label: "Profit RB&E Conference Services Act:LY - var"
+    label: "Profit RB&E Conference Services $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_conference_services_profit_amt} - ${glm_property_f_ly.rbe_conference_services_profit_amt} ;;
@@ -1964,7 +1964,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_outlet_profit_amt_toly_v {
-    label: "Profit RB&E Outlet Act:LY - var"
+    label: "Profit RB&E Outlet $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_outlet_profit_amt} - ${glm_property_f_ly.rbe_outlet_profit_amt} ;;
@@ -1972,7 +1972,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_room_service_profit_amt_toly_v {
-    label: "Profit RB&E Room Service Act:LY - var"
+    label: "Profit RB&E Room Service $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_room_service_profit_amt} - ${glm_property_f_ly.rbe_room_service_profit_amt} ;;
@@ -1980,7 +1980,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_other_profit_amt_toly_v {
-    label: "Profit RB&E Other Act:LY - var"
+    label: "Profit RB&E Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_other_profit_amt} - ${glm_property_f_ly.rbe_other_profit_amt} ;;
@@ -1988,7 +1988,7 @@ view: glm_property_f_toly {
   }
 
   measure: spa_profit_amt_toly_v {
-    label: "Profit Spa Act:LY - var"
+    label: "Profit Spa $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.spa_profit_amt} - ${glm_property_f_ly.spa_profit_amt} ;;
@@ -1996,7 +1996,7 @@ view: glm_property_f_toly {
   }
 
   measure: golf_profit_amt_toly_v {
-    label: "Profit Golf Act:LY - var"
+    label: "Profit Golf $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.golf_profit_amt} - ${glm_property_f_ly.golf_profit_amt} ;;
@@ -2004,7 +2004,7 @@ view: glm_property_f_toly {
   }
 
   measure: fitness_recreation_profit_amt_toly_v {
-    label: "Profit Fitness & Rec Act:LY - var"
+    label: "Profit Fitness & Rec $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.fitness_recreation_profit_amt} - ${glm_property_f_ly.fitness_recreation_profit_amt} ;;
@@ -2012,7 +2012,7 @@ view: glm_property_f_toly {
   }
 
   measure: parking_transportation_profit_amt_toly_v {
-    label: "Profit Parking & Trans Act:LY - var"
+    label: "Profit Parking & Trans $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.parking_transportation_profit_amt} - ${glm_property_f_ly.parking_transportation_profit_amt} ;;
@@ -2020,7 +2020,7 @@ view: glm_property_f_toly {
   }
 
   measure: telecom_profit_amt_toly_v {
-    label: "Profit Telecom Act:LY - var"
+    label: "Profit Telecom $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.telecom_profit_amt} - ${glm_property_f_ly.telecom_profit_amt} ;;
@@ -2028,7 +2028,7 @@ view: glm_property_f_toly {
   }
 
   measure: retail_profit_amt_toly_v {
-    label: "Profit Retail Act:LY - var"
+    label: "Profit Retail $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.retail_profit_amt} - ${glm_property_f_ly.retail_profit_amt} ;;
@@ -2036,7 +2036,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_operated_profit_amt_toly_v {
-    label: "Profit Other Op. Dept. Act:LY - var"
+    label: "Profit Other Op. Dept. $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.other_operated_profit_amt} - ${glm_property_f_ly.other_operated_profit_amt} ;;
@@ -2044,7 +2044,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_mgmt_profit_amt_toly_v {
-    label: "Profit Mgmt Srvcs Act:LY - var"
+    label: "Profit Mgmt Srvcs $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.property_mgmt_profit_amt} - ${glm_property_f_ly.property_mgmt_profit_amt} ;;
@@ -2052,7 +2052,7 @@ view: glm_property_f_toly {
   }
 
   measure: misc_profit_amt_toly_v {
-    label: "Profit Rentals & Other Act:LY - var"
+    label: "Profit Rentals & Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.misc_profit_amt} - ${glm_property_f_ly.misc_profit_amt} ;;
@@ -2060,7 +2060,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_realty_profit_amt_toly_v {
-    label: "Profit Nonoperating Realty Act:LY - var"
+    label: "Profit Nonoperating Realty $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_realty_profit_amt} - ${glm_property_f_ly.nonoperating_realty_profit_amt} ;;
@@ -2068,7 +2068,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_airport_profit_amt_toly_v {
-    label: "Profit Nonoperating Airport Act:LY - var"
+    label: "Profit Nonoperating Airport $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_airport_profit_amt} - ${glm_property_f_ly.nonoperating_airport_profit_amt} ;;
@@ -2076,7 +2076,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_util_profit_amt_toly_v {
-    label: "Profit Nonoperating Utility Act:LY - var"
+    label: "Profit Nonoperating Utility $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_util_profit_amt} - ${glm_property_f_ly.nonoperating_util_profit_amt} ;;
@@ -2084,7 +2084,7 @@ view: glm_property_f_toly {
   }
 
   measure: undistributed_profit_amt_toly_v {
-    label: "Profit Undistributed Act:LY - var"
+    label: "Profit Undistributed $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.undistributed_profit_amt} - ${glm_property_f_ly.undistributed_profit_amt} ;;
@@ -2094,7 +2094,7 @@ view: glm_property_f_toly {
   #-- Profit % var
 
   measure: profit_amt_toly {
-    label: "Profit Act:LY - var %"
+    label: "Profit $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.profit_amt}, ${glm_property_f_ly.profit_amt}) ;;
@@ -2102,7 +2102,7 @@ view: glm_property_f_toly {
   }
 
   measure: room_profit_amt_toly {
-    label: "Profit Rms Act:LY - var %"
+    label: "Profit Rms $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.room_profit_amt}, ${glm_property_f_ly.room_profit_amt}) ;;
@@ -2110,7 +2110,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_profit_amt_toly {
-    label: "Profit RB&E Act:LY - var %"
+    label: "Profit RB&E $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_profit_amt}, ${glm_property_f_ly.rbe_profit_amt}) ;;
@@ -2118,7 +2118,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_banquet_profit_amt_toly {
-    label: "Profit RB&E Banquet Act:LY - var %"
+    label: "Profit RB&E Banquet $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_banquet_profit_amt}, ${glm_property_f_ly.rbe_banquet_profit_amt}) ;;
@@ -2126,7 +2126,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_catering_profit_amt_toly {
-    label: "Profit RB&E Catering Act:LY - var %"
+    label: "Profit RB&E Catering $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_catering_profit_amt}, ${glm_property_f_ly.rbe_catering_profit_amt}) ;;
@@ -2134,7 +2134,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_conference_services_profit_amt_toly {
-    label: "Profit RB&E Conference Services Act:LY - var %"
+    label: "Profit RB&E Conference Services $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_conference_services_profit_amt}, ${glm_property_f_ly.rbe_conference_services_profit_amt}) ;;
@@ -2142,7 +2142,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_outlet_profit_amt_toly {
-    label: "Profit RB&E Outlet Act:LY - var %"
+    label: "Profit RB&E Outlet $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_profit_amt}, ${glm_property_f_ly.rbe_outlet_profit_amt}) ;;
@@ -2150,7 +2150,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_room_service_profit_amt_toly {
-    label: "Profit RB&E Room Service Act:LY - var %"
+    label: "Profit RB&E Room Service $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_room_service_profit_amt}, ${glm_property_f_ly.rbe_room_service_profit_amt}) ;;
@@ -2158,7 +2158,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_other_profit_amt_toly {
-    label: "Profit RB&E Other Act:LY - var %"
+    label: "Profit RB&E Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_other_profit_amt}, ${glm_property_f_ly.rbe_other_profit_amt}) ;;
@@ -2166,7 +2166,7 @@ view: glm_property_f_toly {
   }
 
   measure: spa_profit_amt_toly {
-    label: "Profit Spa Act:LY - var %"
+    label: "Profit Spa $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.spa_profit_amt}, ${glm_property_f_ly.spa_profit_amt}) ;;
@@ -2174,7 +2174,7 @@ view: glm_property_f_toly {
   }
 
   measure: golf_profit_amt_toly {
-    label: "Profit Golf Act:LY - var %"
+    label: "Profit Golf $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.golf_profit_amt}, ${glm_property_f_ly.golf_profit_amt}) ;;
@@ -2182,7 +2182,7 @@ view: glm_property_f_toly {
   }
 
   measure: fitness_recreation_profit_amt_toly {
-    label: "Profit Fitness & Rec Act:LY - var %"
+    label: "Profit Fitness & Rec $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.fitness_recreation_profit_amt}, ${glm_property_f_ly.fitness_recreation_profit_amt}) ;;
@@ -2190,7 +2190,7 @@ view: glm_property_f_toly {
   }
 
   measure: parking_transportation_profit_amt_toly {
-    label: "Profit Parking & Trans Act:LY - var %"
+    label: "Profit Parking & Trans $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.parking_transportation_profit_amt}, ${glm_property_f_ly.parking_transportation_profit_amt}) ;;
@@ -2198,7 +2198,7 @@ view: glm_property_f_toly {
   }
 
   measure: telecom_profit_amt_toly {
-    label: "Profit Telecom Act:LY - var %"
+    label: "Profit Telecom $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.telecom_profit_amt}, ${glm_property_f_ly.telecom_profit_amt}) ;;
@@ -2206,7 +2206,7 @@ view: glm_property_f_toly {
   }
 
   measure: retail_profit_amt_toly {
-    label: "Profit Retail Act:LY - var %"
+    label: "Profit Retail $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_profit_amt}, ${glm_property_f_ly.retail_profit_amt}) ;;
@@ -2214,7 +2214,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_operated_profit_amt_toly {
-    label: "Profit Other Op. Dept. Act:LY - var %"
+    label: "Profit Other Op. Dept. $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_profit_amt}, ${glm_property_f_ly.other_operated_profit_amt}) ;;
@@ -2222,7 +2222,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_mgmt_profit_amt_toly {
-    label: "Profit Mgmt Srvcs Act:LY - var %"
+    label: "Profit Mgmt Srvcs $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.property_mgmt_profit_amt}, ${glm_property_f_ly.property_mgmt_profit_amt}) ;;
@@ -2230,7 +2230,7 @@ view: glm_property_f_toly {
   }
 
   measure: misc_profit_amt_toly {
-    label: "Profit Rentals & Other Act:LY - var %"
+    label: "Profit Rentals & Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.misc_profit_amt}, ${glm_property_f_ly.misc_profit_amt}) ;;
@@ -2238,7 +2238,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_realty_profit_amt_toly {
-    label: "Profit Nonoperating Realty Act:LY - var %"
+    label: "Profit Nonoperating Realty $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_profit_amt}, ${glm_property_f_ly.nonoperating_realty_profit_amt}) ;;
@@ -2246,7 +2246,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_airport_profit_amt_toly {
-    label: "Profit Nonoperating Airport Act:LY - var %"
+    label: "Profit Nonoperating Airport $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_profit_amt}, ${glm_property_f_ly.nonoperating_airport_profit_amt}) ;;
@@ -2254,7 +2254,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_util_profit_amt_toly {
-    label: "Profit Nonoperating Utility Act:LY - var %"
+    label: "Profit Nonoperating Utility $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_profit_amt}, ${glm_property_f_ly.nonoperating_util_profit_amt}) ;;
@@ -2262,7 +2262,7 @@ view: glm_property_f_toly {
   }
 
   measure: undistributed_profit_amt_toly {
-    label: "Profit Undistributed Act:LY - var %"
+    label: "Profit Undistributed $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.undistributed_profit_amt}, ${glm_property_f_ly.undistributed_profit_amt}) ;;
@@ -2303,13 +2303,10 @@ view: glm_property_f_toly {
     value_format_name: percent_1
   }
 
-
-
-
   #-- Cost
 
   measure: cost_of_sales_amt_toly_v {
-    label: "COS Act:LY - var"
+    label: "COS $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.cost_of_sales_amt} - ${glm_property_f_ly.cost_of_sales_amt} ;;
@@ -2317,7 +2314,7 @@ view: glm_property_f_toly {
   }
 
   measure: room_cost_of_sales_amt_toly_v {
-    label: "COS Rms Act:LY - var"
+    label: "COS Rms $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.room_cost_of_sales_amt} - ${glm_property_f_ly.room_cost_of_sales_amt} ;;
@@ -2325,7 +2322,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_cost_of_sales_amt_toly_v {
-    label: "COS RB&E Act:LY - var"
+    label: "COS RB&E $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_cost_of_sales_amt} - ${glm_property_f_ly.rbe_cost_of_sales_amt} ;;
@@ -2333,7 +2330,7 @@ view: glm_property_f_toly {
   }
 
   measure: spa_cost_of_sales_amt_toly_v {
-    label: "COS Spa Act:LY - var"
+    label: "COS Spa $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.spa_cost_of_sales_amt} - ${glm_property_f_ly.spa_cost_of_sales_amt} ;;
@@ -2341,7 +2338,7 @@ view: glm_property_f_toly {
   }
 
   measure: golf_cost_of_sales_amt_toly_v {
-    label: "COS Golf Act:LY - var"
+    label: "COS Golf $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.golf_cost_of_sales_amt} - ${glm_property_f_ly.golf_cost_of_sales_amt} ;;
@@ -2349,7 +2346,7 @@ view: glm_property_f_toly {
   }
 
   measure: fitness_recreation_cost_of_sales_amt_toly_v {
-    label: "COS Fitness & Rec Act:LY - var"
+    label: "COS Fitness & Rec $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.fitness_recreation_cost_of_sales_amt} - ${glm_property_f_ly.fitness_recreation_cost_of_sales_amt} ;;
@@ -2357,7 +2354,7 @@ view: glm_property_f_toly {
   }
 
   measure: parking_transportation_cost_amt_toly_v {
-    label: "COS Parking & Trans Act:LY - var"
+    label: "COS Parking & Trans $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.parking_transportation_cost_of_sales_amt} - ${glm_property_f_ly.parking_transportation_cost_of_sales_amt} ;;
@@ -2365,7 +2362,7 @@ view: glm_property_f_toly {
   }
 
   measure: telecom_cost_of_sales_amt_toly_v {
-    label: "COS Telecom Act:LY - var"
+    label: "COS Telecom $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.telecom_cost_of_sales_amt} - ${glm_property_f_ly.telecom_cost_of_sales_amt} ;;
@@ -2373,7 +2370,7 @@ view: glm_property_f_toly {
   }
 
   measure: retail_cost_of_sales_amt_toly_v {
-    label: "COS Retail Act:LY - var"
+    label: "COS Retail $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.retail_cost_of_sales_amt} - ${glm_property_f_ly.retail_cost_of_sales_amt} ;;
@@ -2381,7 +2378,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_operated_toly_v {
-    label: "COS Other Op. Dept. Act:LY - var"
+    label: "COS Other Op. Dept. $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.other_operated_cost_of_sales_amt} - ${glm_property_f_ly.other_operated_cost_of_sales_amt} ;;
@@ -2389,7 +2386,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_mgmt_cost_of_sales_amt_toly_v {
-    label: "COS Mgmt Srvcs Act:LY - var"
+    label: "COS Mgmt Srvcs $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.property_mgmt_cost_of_sales_amt} - ${glm_property_f_ly.property_mgmt_cost_of_sales_amt} ;;
@@ -2397,7 +2394,7 @@ view: glm_property_f_toly {
   }
 
   measure: misc_cost_of_sales_amt_toly_v {
-    label: "COS Rentals & Other Act:LY - var"
+    label: "COS Rentals & Other $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.misc_cost_of_sales_amt} - ${glm_property_f_ly.misc_cost_of_sales_amt} ;;
@@ -2405,7 +2402,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_realty_cost_of_sales_amt_toly_v {
-    label: "COS Nonoperating Realty Act:LY - var"
+    label: "COS Nonoperating Realty $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_realty_cost_of_sales_amt} - ${glm_property_f_ly.nonoperating_realty_cost_of_sales_amt} ;;
@@ -2413,7 +2410,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_airport_cost_of_sales_amt_toly_v {
-    label: "COS Nonoperating Airport Act:LY - var"
+    label: "COS Nonoperating Airport $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_airport_cost_of_sales_amt} - ${glm_property_f_ly.nonoperating_airport_cost_of_sales_amt} ;;
@@ -2421,7 +2418,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_util_cost_of_sales_amt_toly_v {
-    label: "COS Nonoperating Utility Act:LY - var"
+    label: "COS Nonoperating Utility $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.nonoperating_util_cost_of_sales_amt} - ${glm_property_f_ly.nonoperating_util_cost_of_sales_amt} ;;
@@ -2429,7 +2426,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_cost_of_sales_amt_toly_v {
-    label: "COS RB&E Food Act:LY - var"
+    label: "COS RB&E Food $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.food_rbe_cost_of_sales_amt} - ${glm_property_f_ly.food_rbe_cost_of_sales_amt} ;;
@@ -2437,7 +2434,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_cost_of_sales_amt_toly_v {
-    label: "COS RB&E Beverage Act:LY - var"
+    label: "COS RB&E Beverage $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.beverage_rbe_cost_of_sales_amt} - ${glm_property_f_ly.beverage_rbe_cost_of_sales_amt} ;;
@@ -2445,7 +2442,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_outlet_cost_of_sales_amt_toly_v {
-    label: "COS RB&E Outlet Act:LY - var"
+    label: "COS RB&E Outlet $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.rbe_outlet_cost_of_sales_amt} - ${glm_property_f_ly.rbe_outlet_cost_of_sales_amt} ;;
@@ -2473,7 +2470,7 @@ view: glm_property_f_toly {
   #-- Cost % var
 
   measure: cost_of_sales_amt_toly {
-    label: "COS Act:LY - var %"
+    label: "COS $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.cost_of_sales_amt}, ${glm_property_f_ly.cost_of_sales_amt}) ;;
@@ -2481,7 +2478,7 @@ view: glm_property_f_toly {
   }
 
   measure: room_cost_of_sales_amt_toly {
-    label: "COS Rms Act:LY - var %"
+    label: "COS Rms $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.room_cost_of_sales_amt}, ${glm_property_f_ly.room_cost_of_sales_amt}) ;;
@@ -2489,7 +2486,7 @@ view: glm_property_f_toly {
   }
 
   measure: rbe_cost_of_sales_amt_toly {
-    label: "COS RB&E Act:LY - var %"
+    label: "COS RB&E $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_cost_of_sales_amt}, ${glm_property_f_ly.rbe_cost_of_sales_amt}) ;;
@@ -2497,7 +2494,7 @@ view: glm_property_f_toly {
   }
 
   measure: spa_cost_of_sales_amt_toly {
-    label: "COS Spa Act:LY - var %"
+    label: "COS Spa $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.spa_cost_of_sales_amt}, ${glm_property_f_ly.spa_cost_of_sales_amt}) ;;
@@ -2505,7 +2502,7 @@ view: glm_property_f_toly {
   }
 
   measure: golf_cost_of_sales_amt_toly {
-    label: "COS Golf Act:LY - var %"
+    label: "COS Golf $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.golf_cost_of_sales_amt}, ${glm_property_f_ly.golf_cost_of_sales_amt}) ;;
@@ -2513,7 +2510,7 @@ view: glm_property_f_toly {
   }
 
   measure: fitness_recreation_cost_of_sales_amt_toly {
-    label: "COS Fitness & Rec Act:LY - var %"
+    label: "COS Fitness & Rec $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.fitness_recreation_cost_of_sales_amt}, ${glm_property_f_ly.fitness_recreation_cost_of_sales_amt}) ;;
@@ -2521,7 +2518,7 @@ view: glm_property_f_toly {
   }
 
   measure: parking_transportation_cost_amt_toly {
-    label: "COS Parking & Trans Act:LY - var %"
+    label: "COS Parking & Trans $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.parking_transportation_cost_of_sales_amt}, ${glm_property_f_ly.parking_transportation_cost_of_sales_amt}) ;;
@@ -2529,7 +2526,7 @@ view: glm_property_f_toly {
   }
 
   measure: telecom_cost_of_sales_amt_toly {
-    label: "COS Telecom Act:LY - var %"
+    label: "COS Telecom $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.telecom_cost_of_sales_amt}, ${glm_property_f_ly.telecom_cost_of_sales_amt}) ;;
@@ -2537,7 +2534,7 @@ view: glm_property_f_toly {
   }
 
   measure: retail_cost_of_sales_amt_toly {
-    label: "COS Retail Act:LY - var %"
+    label: "COS Retail $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_cost_of_sales_amt}, ${glm_property_f_ly.retail_cost_of_sales_amt}) ;;
@@ -2545,7 +2542,7 @@ view: glm_property_f_toly {
   }
 
   measure: other_operated_toly {
-    label: "COS Other Op. Dept. Act:LY - var %"
+    label: "COS Other Op. Dept. $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_cost_of_sales_amt}, ${glm_property_f_ly.other_operated_cost_of_sales_amt}) ;;
@@ -2553,7 +2550,7 @@ view: glm_property_f_toly {
   }
 
   measure: property_mgmt_cost_of_sales_amt_toly {
-    label: "COS Mgmt Srvcs Act:LY - var %"
+    label: "COS Mgmt Srvcs $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.property_mgmt_cost_of_sales_amt}, ${glm_property_f_ly.property_mgmt_cost_of_sales_amt}) ;;
@@ -2561,7 +2558,7 @@ view: glm_property_f_toly {
   }
 
   measure: misc_cost_of_sales_amt_toly {
-    label: "COS Rentals & Other Act:LY - var %"
+    label: "COS Rentals & Other $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.misc_cost_of_sales_amt}, ${glm_property_f_ly.misc_cost_of_sales_amt}) ;;
@@ -2569,7 +2566,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_realty_cost_of_sales_amt_toly {
-    label: "COS Nonoperating Realty Act:LY - var %"
+    label: "COS Nonoperating Realty $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_cost_of_sales_amt}, ${glm_property_f_ly.nonoperating_realty_cost_of_sales_amt}) ;;
@@ -2577,7 +2574,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_airport_cost_of_sales_amt_toly {
-    label: "COS Nonoperating irport Act:LY - var %"
+    label: "COS Nonoperating irport $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_cost_of_sales_amt}, ${glm_property_f_ly.nonoperating_airport_cost_of_sales_amt}) ;;
@@ -2585,7 +2582,7 @@ view: glm_property_f_toly {
   }
 
   measure: nonoperating_util_cost_of_sales_amt_toly {
-    label: "COS Nonoperating Utility Act:LY - var %"
+    label: "COS Nonoperating Utility $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_cost_of_sales_amt}, ${glm_property_f_ly.nonoperating_util_cost_of_sales_amt}) ;;
@@ -2593,7 +2590,7 @@ view: glm_property_f_toly {
   }
 
   measure: food_rbe_cost_of_sales_amt_toly {
-    label: "COS RB&E Food Act:LY - var %"
+    label: "COS RB&E Food $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.food_rbe_cost_of_sales_amt}, ${glm_property_f_ly.food_rbe_cost_of_sales_amt}) ;;
@@ -2601,7 +2598,7 @@ view: glm_property_f_toly {
   }
 
   measure: beverage_rbe_cost_of_sales_amt_toly {
-    label: "COS RB&E Beverage Act:LY - var %"
+    label: "COS RB&E Beverage $ Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.beverage_rbe_cost_of_sales_amt}, ${glm_property_f_ly.beverage_rbe_cost_of_sales_amt}) ;;
@@ -3118,7 +3115,7 @@ view: glm_property_f_toly {
   #-- Rental property splits
 
   measure: room_rental_mgmt_2_19_rev_amt_toly_v {
-    label: "Rev Rms Rental Act:LY - var"
+    label: "Rev Rms Rental $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_ly.room_rental_mgmt_2_19_rev_amt};;
@@ -3153,21 +3150,21 @@ view: glm_property_f_toly {
     value_format_name: decimal_0
   }
   measure: transient_room_rental_mgmt_2_19_rev_amt_toly_v {
-    label: "Rev Rms Transient Rental Act:LY - var"
+    label: "Rev Rms Transient Rental $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.transient_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_ly.transient_room_rental_mgmt_2_19_rev_amt} ;;
     value_format_name: usd_0
   }
   measure: group_room_rental_mgmt_2_19_rev_amt_toly_v {
-    label: "Rev Rms Group Rental Act:LY - var"
+    label: "Rev Rms Group Rental $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.group_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_ly.group_room_rental_mgmt_2_19_rev_amt} ;;
     value_format_name: decimal_0
   }
   measure: contract_room_rental_mgmt_2_19_rev_amt_toly_v {
-    label: "Rev Rms Contract Rental Act:LY - var"
+    label: "Rev Rms Contract Rental $ Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.contract_room_rental_mgmt_2_19_rev_amt} - ${glm_property_f_ly.contract_room_rental_mgmt_2_19_rev_amt} ;;

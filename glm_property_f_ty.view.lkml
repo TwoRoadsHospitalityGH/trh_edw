@@ -136,7 +136,7 @@ view: glm_property_f_ty {
 
   measure: rbe_other_rev_amt {
     label: "Rev RB&E Other $"
-    description: "Admin Revenue + Kitchen Revenue + Cart Revenue + Minibar Revnue. Segment 2: 500, 580-589, 570-579, 560. Segment 3: 4000-4999."
+    description: "Admin Revenue + Kitchen Revenue + Cart Revenue + Minibar Revenue + Room Service Revenue. Segment 2: 500, 550-589, Segment 3: 4000-4999."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_other_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
@@ -192,7 +192,7 @@ view: glm_property_f_ty {
 
   measure: food_rbe_other_rev_amt {
     label: "Rev Food RB&E Other $"
-    description: "Food Admin Revenue + Food Kitchen Revenue + Food Cart Revenue + Food Minibar Revenue. Segment 2: 500, 580-589, 570-579, 560. Segment 3: 4100-4130."
+    description: "Food Admin Revenue + Food Kitchen Revenue + Food Cart Revenue + Food Minibar Revenue + Food Room Service. Segment 2: 500, 550-589, Segment 3: 4100-4130."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.food_rbe_other_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
@@ -248,7 +248,7 @@ view: glm_property_f_ty {
 
   measure: beverage_rbe_other_rev_amt {
     label: "Rev Beverage RB&E Other $"
-    description: "Beverage Admin Revenue + Beverage Kitchen Revenue + Beverage Cart Revenue + Beverage Minibar Revenue. Segment 2: 500, 580-589, 570-579, 560. Segment 3: 4150-4170."
+    description: "Bev Admin Revenue + Bev Kitchen Revenue + Bev Cart Revenue + Bev Minibar Revenue + Bev Room Service Revenue. Segment 2: 500, 550-589, Segment 3: 4150-4170."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.beverage_rbe_other_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
@@ -304,7 +304,7 @@ view: glm_property_f_ty {
 
   measure: other_operated_rev_amt {
     label: "Rev Other Op. Dept. $"
-    description: "Parking & Trans Revenue + Dry Cleaning Revenue + Telecomm Revenue"
+    description: "Parking & Trans Revenue + Dry Cleaning Revenue + Telecomm Revenue. Segment 2: 710-721, 735-740, Segment 3: 4000-4999."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operated_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
@@ -347,6 +347,14 @@ view: glm_property_f_ty {
     description: "Nonoperating Utility Revenue. Segment 2: 689-699, Segment 3: 4000-4999."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.nonoperating_util_rev_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: undistributed_rev_amt {
+    label: "Rev Undistributed $"
+    description: "Undistributed Revenue. Segment 2: 800-876, Segment 3: 4000-4999."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_f.undistributed_rev_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -426,7 +434,7 @@ view: glm_property_f_ty {
 
   measure: other_operated_exp_amt {
     label: "Exp Other Op. Dept. $"
-    description: "Parking & Trans Expenses + Dry Cleaning Expenses + Telecomm Expenses"
+    description: "Parking & Trans Expenses + Dry Cleaning Expenses + Telecomm Expenses. Segment 2: 710-721, 735-740, Segment 3: 5000-8999."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operated_exp_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
@@ -580,7 +588,7 @@ view: glm_property_f_ty {
 
   measure: other_operated_other_exp_amt {
     label: "Exp Other Other Op. Dept. $"
-    description: "Other Parking & Trans Expenses + Other Dry Cleaning Expenses + Other Telecom Expenses."
+    description: "Other Parking & Trans Expenses + Other Dry Cleaning Expenses + Other Telecom Expenses. Segment 2: 710-721, 735-740, Segment 3: 7000-8999."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operated_other_exp_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
@@ -946,7 +954,7 @@ view: glm_property_f_ty {
 
   measure: other_operated_payroll_amt {
     label: "Payroll Other Op. Dept. $"
-    description: "Parking & Trans Payroll, Dry Cleaning Payroll, Telecom Payroll."
+    description: "Parking & Trans Payroll, Dry Cleaning Payroll, Telecom Payroll. Segment 2: 710-721, 735-740, Segment 3: 6600-6999."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operated_payroll_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
@@ -1171,7 +1179,7 @@ view: glm_property_f_ty {
 
   measure: rbe_other_cover_cnt {
     label: "Cvrs RB&E Other"
-    description: "RB&E Other Covers. Kitchen + Minibar + Cart + Admin."
+    description: "Admin Covers + Kitchen Covers + Cart Covers + Minibar Covers + Room Service Covers. Segment 2: 500, 550-589, Segment 3: 9100-9130."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_other_cover_cnt}, to_number( null ) ) ;;
   }
@@ -1376,7 +1384,7 @@ view: glm_property_f_ty {
 
   measure: rbe_other_profit_amt {
     label: "Profit RB&E Other $"
-    description: "RB&E Other Profit. Admin Profit + Kitchen Profit + Cart Profit + Minibar Profit."
+    description: "Admin Profit + Kitchen Profit + Cart Profit + Minibar Profit + Room Service Profit. Segment 2: 500, 550-589, Segment 3: 4000-8999."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_other_profit_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
@@ -1432,7 +1440,7 @@ view: glm_property_f_ty {
 
   measure: other_operated_profit_amt {
     label: "Profit Other Op. Dept. $"
-    description: "Parking & Trans Profit + Dry Cleaning Profit + Telecom Profit."
+    description: "Parking & Trans Profit + Dry Cleaning Profit + Telecom Profit. Segment 2: 710-721, 735-740, Segment 3: 4000-8999."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operated_profit_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
@@ -1580,7 +1588,7 @@ view: glm_property_f_ty {
 
   measure: other_operated_cost_of_sales_amt {
     label: "COS Other Op. Dept. $"
-    description: "Parking & Trans COS + Dry Cleaning COS + Telecom COS"
+    description: "Parking & Trans COS + Dry Cleaning COS + Telecom COS. Segment 2: 710-721, 735-740, Segment 3: 5000-5999."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_f.other_operated_cost_of_sales_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
