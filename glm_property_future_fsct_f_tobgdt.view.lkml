@@ -1770,6 +1770,7 @@ view: glm_property_future_fcst_f_tobdgt {
 
   measure: net_avail_room_cnt_tobdgt_v {
     label: "Rms Avail Net TY:Bdgt - var"
+    description: "TY - Bdgt"
     type: number
     sql: ${glm_property_future_fcst_f_ty.net_avail_room_cnt} - ${glm_property_future_fcst_f_bdgt.net_avail_room_cnt} ;;
     value_format_name: decimal_0
@@ -1883,6 +1884,7 @@ view: glm_property_future_fcst_f_tobdgt {
 
   measure: net_avail_room_cnt_tobdgt {
     label: "Rms Avail Net TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.net_avail_room_cnt}, ${glm_property_future_fcst_f_bdgt.net_avail_room_cnt}) ;;
     value_format_name: percent_1

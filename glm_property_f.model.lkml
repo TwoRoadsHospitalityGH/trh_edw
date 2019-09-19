@@ -16,6 +16,10 @@ explore: glm_property_f {
     sql_table_name: pedw.fact.glm_property_f ;;
     group_label: "***User Acceptance Testing***"
     label: "GL Monthly (uat)"
+  description: "**Forecast 30 Day and Forecast 60 Day included
+  **Compares Actuals to LY, Budget, Fcst30, Fcst60
+  **No Future Forecast
+  **Used to support scorecard metrics"
     persist_with: model_caching_dg
     case_sensitive: no
 

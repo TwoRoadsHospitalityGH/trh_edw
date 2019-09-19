@@ -1771,6 +1771,7 @@ view: glm_property_f_toly {
 
   measure: net_avail_room_cnt_toly_v {
     label: "Rms Avail Net Act:LY - var"
+    description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.net_avail_room_cnt} - ${glm_property_f_ly.net_avail_room_cnt} ;;
     value_format_name: decimal_0
@@ -1884,6 +1885,7 @@ view: glm_property_f_toly {
 
   measure: net_avail_room_cnt_toly {
     label: "Rms Avail Net Act:LY - var %"
+    description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.net_avail_room_cnt}, ${glm_property_f_ly.net_avail_room_cnt}) ;;
     value_format_name: percent_1

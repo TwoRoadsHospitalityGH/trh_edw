@@ -1770,6 +1770,7 @@ view: glm_property_f_tofcst60 {
 
   measure: net_avail_room_cnt_tofcst60_v {
     label: "Rms Avail Net Act:Fcst60 - var"
+    description: "Actual - Fcst60"
     type: number
     sql: ${glm_property_f_ty.net_avail_room_cnt} - ${glm_property_f_fcst60.net_avail_room_cnt} ;;
     value_format_name: decimal_0
@@ -1883,6 +1884,7 @@ view: glm_property_f_tofcst60 {
 
   measure: net_avail_room_cnt_tofcst60 {
     label: "Rms Avail Net Act:Fcst60 - var %"
+    description: "(Actual - Fcst60) / Fcst60"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.net_avail_room_cnt}, ${glm_property_f_fcst60.net_avail_room_cnt}) ;;
     value_format_name: percent_1

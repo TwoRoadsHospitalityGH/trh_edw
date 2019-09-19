@@ -1770,6 +1770,7 @@ view: glm_property_future_fcst_f_toly {
 
   measure: net_avail_room_cnt_toly_v {
     label: "Rms Avail Net TY:LY - var"
+    description: "TY - LY"
     type: number
     sql: ${glm_property_future_fcst_f_ty.net_avail_room_cnt} - ${glm_property_future_fcst_f_ly.net_avail_room_cnt} ;;
     value_format_name: decimal_0
@@ -1884,13 +1885,13 @@ view: glm_property_future_fcst_f_toly {
 
   measure: net_avail_room_cnt_toly {
     label: "Rms Avail Net TY:LY - var %"
+    description: "(TY - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.net_avail_room_cnt}, ${glm_property_future_fcst_f_ly.net_avail_room_cnt}) ;;
     value_format_name: percent_1
   }
 
   measure: transient_room_rev_amt_toly {
-
     label: "Rev Rms Transient $ TY:LY - var %"
     description: "(TY - LY) / LY"
     type: number
