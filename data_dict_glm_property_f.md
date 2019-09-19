@@ -1,6 +1,7 @@
 # GL Monthly Explore Data Dictionary
 
 Note that anything in the Actuals group has a corresponding Forecast and Budget value (not listed).
+For an Excel version of this Data Dictionary please see [Sharepoint](https://dest1.sharepoint.com/:f:/s/depts/bi/Elif7J3jcoFKmXTUfvWTNIkBlR3mm3yJmXcg-bROPb7aVw?e=hOcBa4).
 
 No  | Group | Metric Type | Metric Label  | Description |
 | ---- | ---- | ------ | ------ | ------ |
