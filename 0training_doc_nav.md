@@ -3,6 +3,9 @@ navigation:
   - section: Looker Top Reports
   - bsc_doc
   - fsc_doc
+  - section: Data Dictionaries
+  - data_dict_glm_property_f
+  - data_dict_glm_property_future_fcst_f
 ---
 
 
