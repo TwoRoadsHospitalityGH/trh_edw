@@ -46,6 +46,13 @@ view: glm_property_future_fcst_f_ty {
   #-- Measures
   #-------------------------------------------------------------------------------------------
 
+  measure: rev_sp {
+    label: "Rev  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
   measure: rev_amt {
     label: "Rev $"
     description: "Revenue Amount. Segment 3: 4000-4999"
@@ -1210,7 +1217,7 @@ view: glm_property_future_fcst_f_ty {
   }
 
   measure: occupied_room_cnt {
-    label: "Rms Occ "
+    label: "Rms Occ   "
     description: "Occupied Rooms. Segment 2: 400-499, Segment 3: 9000-9075."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.occupied_room_cnt}, to_number( null ) ) ;;
@@ -1776,8 +1783,15 @@ view: glm_property_future_fcst_f_ty {
 
   #-- Occupancy
 
+  measure: occ_room_pct_sp {
+    label: "Rms Occ %  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
   measure: occupied_room_pct {
-    label: "Rms Occ %"
+    label: "Rms Occ % "
     description: "Rms Occ / Rms Avail Net"
     type: number
     sql: utl..udf_divide( ${occupied_room_cnt}, ${net_avail_room_cnt} );;
@@ -1809,6 +1823,13 @@ view: glm_property_future_fcst_f_ty {
   }
 
   #-- ADR
+
+  measure: adr_sp {
+    label: "ADR  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
 
   measure: adr_amt {
     label: "ADR $"
@@ -1869,6 +1890,13 @@ view: glm_property_future_fcst_f_ty {
   }
 
   #-- Rev PAR
+
+  measure: rev_par_sp {
+    label: "Rev PAR  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
 
   measure: rev_par_amt {
     label: "Rev PAR $"
