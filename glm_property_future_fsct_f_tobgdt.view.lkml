@@ -2842,6 +2842,14 @@ view: glm_property_future_fcst_f_tobdgt {
     value_format_name: usd_0
   }
 
+  measure: rev_par_contract_amt_tobdgt_v {
+    label: "Rev PAR $ Contract TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rev_par_contract_amt} - ${glm_property_future_fcst_f_bdgt.rev_par_contract_amt} ;;
+    value_format_name: usd_0
+  }
+
   #-- Rev PAR % var
 
   measure: rev_par_amt_tobdgt {
@@ -2865,6 +2873,14 @@ view: glm_property_future_fcst_f_tobdgt {
     description: "(TY - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rev_par_transient_amt}, ${glm_property_future_fcst_f_bdgt.rev_par_transient_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rev_par_contract_amt_tobdgt {
+    label: "Rev PAR $ Contract TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rev_par_contract_amt}, ${glm_property_future_fcst_f_bdgt.rev_par_contract_amt}) ;;
     value_format_name: percent_1
   }
 

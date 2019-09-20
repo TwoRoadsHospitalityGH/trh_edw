@@ -2838,6 +2838,14 @@ view: glm_property_f_tofcst60 {
     value_format_name: usd_0
   }
 
+  measure: rev_par_contract_amt_tofcst60_v {
+    label: "Rev PAR $ Contract Act:Fcst60 - var"
+    description: "Actual - Fcst60"
+    type: number
+    sql: utl..udf_divide( ${glm_property_f_ty.rev_par_contract_amt} - ${glm_property_f_fcst60.rev_par_contract_amt} );;
+    value_format_name: usd_0
+  }
+
   #-- Rev PAR % var
 
   measure: rev_par_amt_tofcst60 {
@@ -2861,6 +2869,14 @@ view: glm_property_f_tofcst60 {
     description: "(Actual - Fcst60) / Fcst60"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rev_par_transient_amt}, ${glm_property_f_fcst60.rev_par_transient_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: rev_par_contract_amt_tofcst60 {
+    label: "Rev PAR $ Contract Act:Fcst60 - var %"
+    description: "(Actual - Fcst60) / Fcst60"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.rev_par_contract_amt}, ${glm_property_f_fcst60.rev_par_contract_amt} );;
     value_format_name: percent_1
   }
 
