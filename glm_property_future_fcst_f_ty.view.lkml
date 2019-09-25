@@ -2106,7 +2106,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs"
     description: "Hours Amount Total. Segment 3: 9600-9815"
     type: sum
-    sql:  iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.hour_amt} ), to_number( null ) ) ;;
+    sql:  iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2114,7 +2114,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Rms "
     description: "Room Hours (Includes Hskpng, Res, FO, Bell, Guest Srvc. Segment 2: 400-499, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.room_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.room_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2122,7 +2122,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs RB&E "
     description: "RB&E Hours. Segment 2: 500-599, Segment 3: 9600-9815."
     type: sum
-    sql:  iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.rbe_hour_amt} ), to_number( null ) ) ;;
+    sql:  iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2130,7 +2130,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs RB&E Banquet "
     description: "RB&E Hours Banquet. Segment 2: 510-515, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.rbe_banquet_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_banquet_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2138,7 +2138,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs RB&E Catering "
     description: "RB&E Hours Catering. Segment 2: 516-518. Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.rbe_catering_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_catering_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2146,7 +2146,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs RB&E Outlet "
     description: "RB&E Outlet Hours. Segment 2: 530-549. Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.rbe_outlet_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_outlet_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2154,7 +2154,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs RB&E Conference Services "
     description: "RB&E Conference Hours. Segment 2: 590-599. Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.rbe_conference_services_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_conference_services_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2162,7 +2162,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs RB&E Restaurant "
     description: "RB&E Restaurant Hours. Segment 2: 540-549. Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.rbe_restaurant_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_restaurant_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2170,7 +2170,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs RB&E Lounge "
     description: "RB&E Lounge Hours. Segment 2: 530-539. Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.rbe_lounge_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_lounge_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2178,7 +2178,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs RB&E Other "
     description: "Admin Hours + Kitchen Hours + Cart Hours + Minibar Hours + Room Service Hours. Segment 2: 500, 550-589, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.rbe_other_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_other_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2186,7 +2186,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Spa "
     description: "Spa Hours. Segment 2: 666, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.spa_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.spa_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2194,7 +2194,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Golf "
     description: "Golf Hours. Segment 2: 610-635. Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.golf_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.golf_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2202,7 +2202,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Fitness & Rec "
     description: "Fitness & Recreation Hours. Segment 2: 650-664, 668-674, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.fitness_recreation_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.fitness_recreation_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2210,7 +2210,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Retail "
     description: "Retail Hours. Segment 2: 750-769, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.retail_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.retail_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2218,7 +2218,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Other Op. Dept. "
     description: "Parking & Trans Hours + Dry Cleaning Hours + Telecomm Hours. Segment 2: 710-721, 735-740, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.other_operated_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.other_operated_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2226,7 +2226,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Mgmt Srvcs "
     description: "Property Management Hours. Segment 2: 770-789, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.property_mgmt_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.property_mgmt_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2234,7 +2234,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Rentals & Other "
     description: "Misc Hours. Segment 2: 790-799, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.misc_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.misc_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2242,7 +2242,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Nonoperating Realty "
     description: "Nonoperating Realty Hours. Segment 2: 681-685, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.nonoperating_realty_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.nonoperating_realty_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2250,7 +2250,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Nonoperating Airport "
     description: "Nonoperating Airport Hours. Segment 2: 680, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.nonoperating_airport_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.nonoperating_airport_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2258,7 +2258,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Nonoperating Utility "
     description: "Nonoperating Utility Hours. Segment 2: 689-699, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.nonoperating_util_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.nonoperating_util_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2266,7 +2266,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Undistributed "
     description: "Undistributed Hours. Segment 2: 800-876, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.undistributed_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.undistributed_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
@@ -2274,7 +2274,7 @@ view: glm_property_future_fcst_f_ty {
     label: "Hrs Allocated "
     description: "Allocated Dept Hours. Segment 2: 920-999, Segment 3: 9600-9815."
     type: sum
-    sql: iff( ${measure_bt} = 1, abs( ${glm_property_future_fcst_f.allocated_hour_amt} ), to_number( null ) ) ;;
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.allocated_hour_amt}, to_number( null ) ) ;;
     value_format_name: decimal_1
   }
 
