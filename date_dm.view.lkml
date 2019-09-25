@@ -250,5 +250,4 @@ view: date_dm {
     sql:  concat(concat(to_char(min(${cal_dt}), 'mon ''yy'), ' - ') , to_char(max(${cal_dt}), 'mon ''yy') ) ;;
   }
 
-
 }

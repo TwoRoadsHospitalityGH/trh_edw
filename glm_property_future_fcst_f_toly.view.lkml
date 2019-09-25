@@ -3211,4 +3211,713 @@ view: glm_property_future_fcst_f_toly {
     value_format_name: decimal_0
   }
 
+  #-- Hours
+
+  measure: hour_amt_toly_v {
+    label: "Hrs TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql:  ${glm_property_future_fcst_f_ty.hour_amt} - ${glm_property_future_fcst_f_ly.hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: room_hour_amt_toly_v {
+    label: "Hrs Rms TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.room_hour_amt} - ${glm_property_future_fcst_f_ly.room_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_hour_amt_toly_v {
+    label: "Hrs RB&E TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql:  ${glm_property_future_fcst_f_ty.rbe_hour_amt} - ${glm_property_future_fcst_f_ly.rbe_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_banquet_hour_amt_toly_v {
+    label: "Hrs RB&E Banquet TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_banquet_hour_amt} - ${glm_property_future_fcst_f_ly.rbe_banquet_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_catering_hour_amt_toly_v {
+    label: "Hrs RB&E Catering TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_catering_hour_amt} - ${glm_property_future_fcst_f_ly.rbe_catering_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_outlet_hour_amt_toly_v {
+    label: "Hrs RB&E Outlet TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_outlet_hour_amt} - ${glm_property_future_fcst_f_ly.rbe_outlet_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_conference_services_hour_amt_toly_v {
+    label: "Hrs RB&E Conference Services TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_conference_services_hour_amt} - ${glm_property_future_fcst_f_ly.rbe_conference_services_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_restaurant_hour_amt_toly_v {
+    label: "Hrs RB&E Restaurant TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_restaurant_hour_amt} - ${glm_property_future_fcst_f_ly.rbe_restaurant_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_lounge_hour_amt_toly_v {
+    label: "Hrs RB&E Lounge TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_lounge_hour_amt} - ${glm_property_future_fcst_f_ly.rbe_lounge_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_other_hour_amt_toly_v {
+    label: "Hrs RB&E Other TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_other_hour_amt} - ${glm_property_future_fcst_f_ly.rbe_other_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: spa_hour_amt_toly_v {
+    label: "Hrs Spa TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.spa_hour_amt} - ${glm_property_future_fcst_f_ly.spa_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: golf_hour_amt_toly_v {
+    label: "Hrs Golf TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.golf_hour_amt} - ${glm_property_future_fcst_f_ly.golf_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: fitness_recreation_hour_amt_toly_v {
+    label: "Hrs Fitness & Rec TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.fitness_recreation_hour_amt} - ${glm_property_future_fcst_f_ly.fitness_recreation_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: retail_hour_amt_toly_v {
+    label: "Hrs Retail TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.retail_hour_amt} - ${glm_property_future_fcst_f_ly.retail_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: other_operated_hour_amt_toly_v {
+    label: "Hrs Other Op. Dept. TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.other_operated_hour_amt} - ${glm_property_future_fcst_f_ly.other_operated_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: property_mgmt_hour_amt_toly_v {
+    label: "Hrs Mgmt Srvcs TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.property_mgmt_hour_amt} - ${glm_property_future_fcst_f_ly.property_mgmt_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: misc_hour_amt_toly_v {
+    label: "Hrs Rentals & Other TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.misc_hour_amt} - ${glm_property_future_fcst_f_ly.misc_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: nonoperating_realty_hour_amt_toly_v {
+    label: "Hrs Nonoperating Realty TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.nonoperating_realty_hour_amt} - ${glm_property_future_fcst_f_ly.nonoperating_realty_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: nonoperating_airport_hour_amt_toly_v {
+    label: "Hrs Nonoperating Airport TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.nonoperating_airport_hour_amt} - ${glm_property_future_fcst_f_ly.nonoperating_airport_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: nonoperating_util_hour_amt_toly_v {
+    label: "Hrs Nonoperating Utility TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.nonoperating_util_hour_amt} - ${glm_property_future_fcst_f_ly.nonoperating_util_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: undistributed_hour_amt_toly_v {
+    label: "Hrs Undistributed TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.undistributed_hour_amt} - ${glm_property_future_fcst_f_ly.undistributed_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: allocated_hour_amt_toly_v {
+    label: "Hrs Allocated TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.allocated_hour_amt} - ${glm_property_future_fcst_f_ly.allocated_hour_amt} ;;
+    value_format_name: decimal_0
+  }
+
+
+  measure: hour_amt_toly {
+    label: "Hrs TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql:  utl..udf_percent_var( ${glm_property_future_fcst_f_ty.hour_amt}, ${glm_property_future_fcst_f_ly.hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: room_hour_amt_toly {
+    label: "Hrs Rms TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.room_hour_amt}, ${glm_property_future_fcst_f_ly.room_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_hour_amt_toly {
+    label: "Hrs RB&E TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql:  utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_hour_amt}, ${glm_property_future_fcst_f_ly.rbe_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_banquet_hour_amt_toly {
+    label: "Hrs RB&E Banquet TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_banquet_hour_amt}, ${glm_property_future_fcst_f_ly.rbe_banquet_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_catering_hour_amt_toly {
+    label: "Hrs RB&E Catering TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_catering_hour_amt}, ${glm_property_future_fcst_f_ly.rbe_catering_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_outlet_hour_amt_toly {
+    label: "Hrs RB&E Outlet TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_outlet_hour_amt}, ${glm_property_future_fcst_f_ly.rbe_outlet_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_conference_services_hour_amt_toly {
+    label: "Hrs RB&E Conference Services TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_conference_services_hour_amt}, ${glm_property_future_fcst_f_ly.rbe_conference_services_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_restaurant_hour_amt_toly {
+    label: "Hrs RB&E Restaurant TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_restaurant_hour_amt}, ${glm_property_future_fcst_f_ly.rbe_restaurant_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_lounge_hour_amt_toly {
+    label: "Hrs RB&E Lounge TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_lounge_hour_amt}, ${glm_property_future_fcst_f_ly.rbe_lounge_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_other_hour_amt_toly {
+    label: "Hrs RB&E Other TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_other_hour_amt}, ${glm_property_future_fcst_f_ly.rbe_other_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: spa_hour_amt_toly {
+    label: "Hrs Spa TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.spa_hour_amt}, ${glm_property_future_fcst_f_ly.spa_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: golf_hour_amt_toly {
+    label: "Hrs Golf TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.golf_hour_amt}, ${glm_property_future_fcst_f_ly.golf_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: fitness_recreation_hour_amt_toly {
+    label: "Hrs Fitness & Rec TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.fitness_recreation_hour_amt}, ${glm_property_future_fcst_f_ly.fitness_recreation_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: retail_hour_amt_toly {
+    label: "Hrs Retail TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.retail_hour_amt}, ${glm_property_future_fcst_f_ly.retail_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: other_operated_hour_amt_toly {
+    label: "Hrs Other Op. Dept. TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.other_operated_hour_amt}, ${glm_property_future_fcst_f_ly.other_operated_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: property_mgmt_hour_amt_toly {
+    label: "Hrs Mgmt Srvcs TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.property_mgmt_hour_amt}, ${glm_property_future_fcst_f_ly.property_mgmt_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: misc_hour_amt_toly {
+    label: "Hrs Rentals & Other TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.misc_hour_amt}, ${glm_property_future_fcst_f_ly.misc_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_realty_hour_amt_toly {
+    label: "Hrs Nonoperating Realty TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_realty_hour_amt}, ${glm_property_future_fcst_f_ly.nonoperating_realty_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_airport_hour_amt_toly {
+    label: "Hrs Nonoperating Airport TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_airport_hour_amt}, ${glm_property_future_fcst_f_ly.nonoperating_airport_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_util_hour_amt_toly {
+    label: "Hrs Nonoperating Utility TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_util_hour_amt}, ${glm_property_future_fcst_f_ly.nonoperating_util_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: undistributed_hour_amt_toly {
+    label: "Hrs Undistributed TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.undistributed_hour_amt}, ${glm_property_future_fcst_f_ly.undistributed_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: allocated_hour_amt_toly {
+    label: "Hrs Allocated TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.allocated_hour_amt}, ${glm_property_future_fcst_f_ly.allocated_hour_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  #-- FTE
+
+  measure: fte_amt_toly_v {
+    label: "FTE TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql:  ${glm_property_future_fcst_f_ty.fte_amt} - ${glm_property_future_fcst_f_ly.fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: room_fte_amt_toly_v {
+    label: "FTE Rms TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.room_fte_amt} - ${glm_property_future_fcst_f_ly.room_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_fte_amt_toly_v {
+    label: "FTE RB&E TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql:  ${glm_property_future_fcst_f_ty.rbe_fte_amt} - ${glm_property_future_fcst_f_ly.rbe_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_banquet_fte_amt_toly_v {
+    label: "FTE RB&E Banquet TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_banquet_fte_amt} - ${glm_property_future_fcst_f_ly.rbe_banquet_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_catering_fte_amt_toly_v {
+    label: "FTE RB&E Catering TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_catering_fte_amt} - ${glm_property_future_fcst_f_ly.rbe_catering_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_outlet_fte_amt_toly_v {
+    label: "FTE RB&E Outlet TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_outlet_fte_amt} - ${glm_property_future_fcst_f_ly.rbe_outlet_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_conference_services_fte_amt_toly_v {
+    label: "FTE RB&E Conference Services TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_conference_services_fte_amt} - ${glm_property_future_fcst_f_ly.rbe_conference_services_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_restaurant_fte_amt_toly_v {
+    label: "FTE RB&E Restaurant TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_restaurant_fte_amt} - ${glm_property_future_fcst_f_ly.rbe_restaurant_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_lounge_fte_amt_toly_v {
+    label: "FTE RB&E Lounge TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_lounge_fte_amt} - ${glm_property_future_fcst_f_ly.rbe_lounge_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: rbe_other_fte_amt_toly_v {
+    label: "FTE RB&E Other TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_other_fte_amt} - ${glm_property_future_fcst_f_ly.rbe_other_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: spa_fte_amt_toly_v {
+    label: "FTE Spa TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.spa_fte_amt} - ${glm_property_future_fcst_f_ly.spa_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: golf_fte_amt_toly_v {
+    label: "FTE Golf TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.golf_fte_amt} - ${glm_property_future_fcst_f_ly.golf_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: fitness_recreation_fte_amt_toly_v {
+    label: "FTE Fitness & Rec TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.fitness_recreation_fte_amt} - ${glm_property_future_fcst_f_ly.fitness_recreation_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: retail_fte_amt_toly_v {
+    label: "FTE Retail TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.retail_fte_amt} - ${glm_property_future_fcst_f_ly.retail_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: other_operated_fte_amt_toly_v {
+    label: "FTE Other Op. Dept. TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.other_operated_fte_amt} - ${glm_property_future_fcst_f_ly.other_operated_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: property_mgmt_fte_amt_toly_v {
+    label: "FTE Mgmt Srvcs TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.property_mgmt_fte_amt} - ${glm_property_future_fcst_f_ly.property_mgmt_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: misc_fte_amt_toly_v {
+    label: "FTE Rentals & Other TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.misc_fte_amt} - ${glm_property_future_fcst_f_ly.misc_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: nonoperating_realty_fte_amt_toly_v {
+    label: "FTE Nonoperating Realty TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.nonoperating_realty_fte_amt} - ${glm_property_future_fcst_f_ly.nonoperating_realty_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: nonoperating_airport_fte_amt_toly_v {
+    label: "FTE Nonoperating Airport TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.nonoperating_airport_fte_amt} - ${glm_property_future_fcst_f_ly.nonoperating_airport_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: nonoperating_util_fte_amt_toly_v {
+    label: "FTE Nonoperating Utility TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.nonoperating_util_fte_amt} - ${glm_property_future_fcst_f_ly.nonoperating_util_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: undistributed_fte_amt_toly_v {
+    label: "FTE Undistributed TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.undistributed_fte_amt} - ${glm_property_future_fcst_f_ly.undistributed_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: allocated_fte_amt_toly_v {
+    label: "FTE Allocated TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.allocated_fte_amt} - ${glm_property_future_fcst_f_ly.allocated_fte_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: fte_amt_toly {
+    label: "FTE TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql:  utl..udf_percent_var( ${glm_property_future_fcst_f_ty.fte_amt}, ${glm_property_future_fcst_f_ly.fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: room_fte_amt_toly {
+    label: "FTE Rms TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.room_fte_amt}, ${glm_property_future_fcst_f_ly.room_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_fte_amt_toly {
+    label: "FTE RB&E TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql:  utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_fte_amt}, ${glm_property_future_fcst_f_ly.rbe_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_banquet_fte_amt_toly {
+    label: "FTE RB&E Banquet TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_banquet_fte_amt}, ${glm_property_future_fcst_f_ly.rbe_banquet_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_catering_fte_amt_toly {
+    label: "FTE RB&E Catering TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_catering_fte_amt}, ${glm_property_future_fcst_f_ly.rbe_catering_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_outlet_fte_amt_toly {
+    label: "FTE RB&E Outlet TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_outlet_fte_amt}, ${glm_property_future_fcst_f_ly.rbe_outlet_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_conference_services_fte_amt_toly {
+    label: "FTE RB&E Conference Services TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_conference_services_fte_amt}, ${glm_property_future_fcst_f_ly.rbe_conference_services_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_restaurant_fte_amt_toly {
+    label: "FTE RB&E Restaurant TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_restaurant_fte_amt}, ${glm_property_future_fcst_f_ly.rbe_restaurant_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_lounge_fte_amt_toly {
+    label: "FTE RB&E Lounge TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_lounge_fte_amt}, ${glm_property_future_fcst_f_ly.rbe_lounge_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_other_fte_amt_toly {
+    label: "FTE RB&E Other TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_other_fte_amt}, ${glm_property_future_fcst_f_ly.rbe_other_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: spa_fte_amt_toly {
+    label: "FTE Spa TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.spa_fte_amt}, ${glm_property_future_fcst_f_ly.spa_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: golf_fte_amt_toly {
+    label: "FTE Golf TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.golf_fte_amt}, ${glm_property_future_fcst_f_ly.golf_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: fitness_recreation_fte_amt_toly {
+    label: "FTE Fitness & Rec TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.fitness_recreation_fte_amt}, ${glm_property_future_fcst_f_ly.fitness_recreation_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: retail_fte_amt_toly {
+    label: "FTE Retail TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.retail_fte_amt}, ${glm_property_future_fcst_f_ly.retail_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: other_operated_fte_amt_toly {
+    label: "FTE Other Op. Dept. TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.other_operated_fte_amt}, ${glm_property_future_fcst_f_ly.other_operated_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: property_mgmt_fte_amt_toly {
+    label: "FTE Mgmt Srvcs TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.property_mgmt_fte_amt}, ${glm_property_future_fcst_f_ly.property_mgmt_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: misc_fte_amt_toly {
+    label: "FTE Rentals & Other TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.misc_fte_amt}, ${glm_property_future_fcst_f_ly.misc_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_realty_fte_amt_toly {
+    label: "FTE Nonoperating Realty TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_realty_fte_amt}, ${glm_property_future_fcst_f_ly.nonoperating_realty_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_airport_fte_amt_toly {
+    label: "FTE Nonoperating Airport TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_airport_fte_amt}, ${glm_property_future_fcst_f_ly.nonoperating_airport_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: nonoperating_util_fte_amt_toly {
+    label: "FTE Nonoperating Utility TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_util_fte_amt}, ${glm_property_future_fcst_f_ly.nonoperating_util_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: undistributed_fte_amt_toly {
+    label: "FTE Undistributed TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.undistributed_fte_amt}, ${glm_property_future_fcst_f_ly.undistributed_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: allocated_fte_amt_toly {
+    label: "FTE Allocated TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.allocated_fte_amt}, ${glm_property_future_fcst_f_ly.allocated_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
 }

@@ -47,18 +47,6 @@ view: glm_property_future_fcst_f {
     hidden: yes
   }
 
-  #dimension: fcst30_bt {
-  #  type: number
-  #  sql: ${TABLE}.fcst30_bt ;;
-  #  hidden: yes
-  #}
-
-  #dimension: fcst60_bt {
-  #  type: number
-  #  sql: ${TABLE}.fcst60_bt ;;
-  #  hidden: yes
-  #}
-
   dimension: fcst_bt {
     type: number
     sql: ${TABLE}.fcst_bt ;;
@@ -78,13 +66,6 @@ view: glm_property_future_fcst_f {
     value_format_name: usd_0
     hidden: yes
   }
-
-  #dimension: agop_abs_amt {
-  #  type: number
-  #  sql: ${TABLE}.agop_abs_amt ;;
-  #  value_format_name: usd_0
-  #  hidden: yes
-  #}
 
   dimension: gop_amt {
     type: number
@@ -166,14 +147,6 @@ view: glm_property_future_fcst_f {
     hidden: yes
   }
 
-  #dimension: rbe_outlet_other_rev_amt {
-  #  type: number
-  #  sql: ${TABLE}.rbe_outlet_other_rev_amt ;;
-  #  value_format_name: usd_0
-  #  hidden: yes
-  #}
-
-
   dimension: food_rbe_rev_amt {
     type: number
     sql: ${TABLE}.food_rbe_rev_amt ;;
@@ -222,7 +195,6 @@ view: glm_property_future_fcst_f {
     value_format_name: usd_0
     hidden: yes
   }
-
 
   dimension: beverage_rbe_rev_amt {
     type: number
@@ -505,7 +477,6 @@ view: glm_property_future_fcst_f {
     value_format_name: usd_0
     hidden: yes
   }
-
 
   #-- Other Expenses
 
@@ -1352,6 +1323,139 @@ view: glm_property_future_fcst_f {
     hidden: yes
   }
 
+  #-- Hours
 
+  dimension: hour_amt {
+
+    type: number
+    sql:  ${TABLE}.hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: room_hour_amt {
+    type: number
+    sql: ${TABLE}.room_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: rbe_hour_amt {
+    type: number
+    sql:  ${TABLE}.rbe_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: rbe_banquet_hour_amt {
+    type: number
+    sql: ${TABLE}.rbe_banquet_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: rbe_catering_hour_amt {
+    type: number
+    sql: ${TABLE}.rbe_catering_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: rbe_outlet_hour_amt {
+    type: number
+    sql: ${TABLE}.rbe_outlet_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: rbe_conference_services_hour_amt {
+    type: number
+    sql: ${TABLE}.rbe_conference_services_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: rbe_restaurant_hour_amt {
+    type: number
+    sql: ${TABLE}.rbe_restaurant_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: rbe_lounge_hour_amt {
+    type: number
+    sql: ${TABLE}.rbe_lounge_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: rbe_other_hour_amt {
+    type: number
+    sql: ${TABLE}.rbe_other_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: spa_hour_amt {
+    type: number
+    sql: ${TABLE}.spa_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: golf_hour_amt {
+    type: number
+    sql: ${TABLE}.golf_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: fitness_recreation_hour_amt {
+    type: number
+    sql: ${TABLE}.fitness_recreation_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: retail_hour_amt {
+    type: number
+    sql: ${TABLE}.retail_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: other_operated_hour_amt {
+    type: number
+    sql: ${TABLE}.other_operated_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: property_mgmt_hour_amt {
+    type: number
+    sql: ${TABLE}.property_mgmt_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: misc_hour_amt {
+    type: number
+    sql: ${TABLE}.misc_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: nonoperating_realty_hour_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_realty_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: nonoperating_airport_hour_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_airport_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: nonoperating_util_hour_amt {
+    type: number
+    sql: ${TABLE}.nonoperating_util_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: undistributed_hour_amt {
+    type: number
+    sql: ${TABLE}.undistributed_hour_amt ;;
+    hidden: yes
+  }
+
+  dimension: allocated_hour_amt {
+    type: number
+    sql: ${TABLE}.allocated_hour_amt ;;
+    hidden: yes
+  }
 
 }

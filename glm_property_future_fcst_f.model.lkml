@@ -36,13 +36,6 @@ explore: glm_property_future_fcst_f {
     relationship: many_to_one
   }
 
-  #join: glm_property_f_ty {
-  #  from: glm_property_f_ty
-  #  view_label: "      TY"
-  #  type: cross
-  #  relationship: one_to_one
-  #}
-
   join: glm_property_future_fcst_f_ly {
     from: glm_property_future_fcst_f_ly
     view_label: "     LY"
@@ -64,34 +57,6 @@ explore: glm_property_future_fcst_f {
     relationship: one_to_one
   }
 
-  #join: glm_property_f_fcst30 {
-  #  from: glm_property_f_fcst30
-  #  view_label: "   Fcst 30"
-  #  type: cross
-  #  relationship: one_to_one
-  #}
-
-  #join: glm_property_f_fcst60 {
-  #  from: glm_property_f_fcst60
-  #  view_label: "   Fcst 60"
-  #  type: cross
-  #  relationship: one_to_one
-  #}
-
-  #join: glm_property_f_toly {
-  #  from: glm_property_f_toly
-  #  view_label: "      TY"
-  #  type: cross
-  #  relationship: one_to_one
-  #}
-
-  #join: glm_property_f_tobdgt {
-  #  from: glm_property_f_tobdgt
-  #  view_label: "      TY"
-  #  type: cross
-  #  relationship: one_to_one
-  #}
-
   join: glm_property_future_fcst_f_toly {
     from: glm_property_future_fcst_f_toly
     view_label: "      TY"
@@ -105,20 +70,6 @@ explore: glm_property_future_fcst_f {
     type: cross
     relationship: one_to_one
   }
-
-  #join: glm_property_f_tofcst30 {
-  #  from: glm_property_f_tofcst30
-  #  view_label: "      TY"
-  #  type: cross
-  #  relationship: one_to_one
-  #}
-
-  #join: glm_property_f_tofcst60 {
-  #  from: glm_property_f_tofcst60
-  #  view_label: "      TY"
-  #  type: cross
-  #  relationship: one_to_one
-  #}
 
   join: date_dm {
     from: date_dm

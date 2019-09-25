@@ -2093,4 +2093,382 @@ view: glm_property_future_fcst_f_ty {
     sql:  iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.occupied_contract_room_rental_mgmt_2_19_cnt}, to_number( null ) ) ;;
   }
 
+  #-- Hours
+
+  measure: hour_sp {
+    label: "Hrs  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
+  measure: hour_amt {
+    label: "Hrs"
+    description: "Hours Amount Total. Segment 3: 9600-9815"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: room_hour_amt {
+    label: "Hrs Rms "
+    description: "Room Hours (Includes Hskpng, Res, FO, Bell, Guest Srvc. Segment 2: 400-499, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.room_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_hour_amt {
+    label: "Hrs RB&E "
+    description: "RB&E Hours. Segment 2: 500-599, Segment 3: 9600-9815."
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_banquet_hour_amt {
+    label: "Hrs RB&E Banquet "
+    description: "RB&E Hours Banquet. Segment 2: 510-515, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_banquet_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_catering_hour_amt {
+    label: "Hrs RB&E Catering "
+    description: "RB&E Hours Catering. Segment 2: 516-518. Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_catering_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_outlet_hour_amt {
+    label: "Hrs RB&E Outlet "
+    description: "RB&E Outlet Hours. Segment 2: 530-549. Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_outlet_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_conference_services_hour_amt {
+    label: "Hrs RB&E Conference Services "
+    description: "RB&E Conference Hours. Segment 2: 590-599. Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_conference_services_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_restaurant_hour_amt {
+    label: "Hrs RB&E Restaurant "
+    description: "RB&E Restaurant Hours. Segment 2: 540-549. Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_restaurant_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_lounge_hour_amt {
+    label: "Hrs RB&E Lounge "
+    description: "RB&E Lounge Hours. Segment 2: 530-539. Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_lounge_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_other_hour_amt {
+    label: "Hrs RB&E Other "
+    description: "Admin Hours + Kitchen Hours + Cart Hours + Minibar Hours + Room Service Hours. Segment 2: 500, 550-589, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_other_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: spa_hour_amt {
+    label: "Hrs Spa "
+    description: "Spa Hours. Segment 2: 666, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.spa_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: golf_hour_amt {
+    label: "Hrs Golf "
+    description: "Golf Hours. Segment 2: 610-635. Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.golf_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: fitness_recreation_hour_amt {
+    label: "Hrs Fitness & Rec "
+    description: "Fitness & Recreation Hours. Segment 2: 650-664, 668-674, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.fitness_recreation_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: retail_hour_amt {
+    label: "Hrs Retail "
+    description: "Retail Hours. Segment 2: 750-769, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.retail_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: other_operated_hour_amt {
+    label: "Hrs Other Op. Dept. "
+    description: "Parking & Trans Hours + Dry Cleaning Hours + Telecomm Hours. Segment 2: 710-721, 735-740, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.other_operated_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: property_mgmt_hour_amt {
+    label: "Hrs Mgmt Srvcs "
+    description: "Property Management Hours. Segment 2: 770-789, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.property_mgmt_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: misc_hour_amt {
+    label: "Hrs Rentals & Other "
+    description: "Misc Hours. Segment 2: 790-799, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.misc_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: nonoperating_realty_hour_amt {
+    label: "Hrs Nonoperating Realty "
+    description: "Nonoperating Realty Hours. Segment 2: 681-685, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.nonoperating_realty_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: nonoperating_airport_hour_amt {
+    label: "Hrs Nonoperating Airport "
+    description: "Nonoperating Airport Hours. Segment 2: 680, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.nonoperating_airport_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: nonoperating_util_hour_amt {
+    label: "Hrs Nonoperating Utility "
+    description: "Nonoperating Utility Hours. Segment 2: 689-699, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.nonoperating_util_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: undistributed_hour_amt {
+    label: "Hrs Undistributed "
+    description: "Undistributed Hours. Segment 2: 800-876, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.undistributed_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  measure: allocated_hour_amt {
+    label: "Hrs Allocated "
+    description: "Allocated Dept Hours. Segment 2: 920-999, Segment 3: 9600-9815."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.allocated_hour_amt}, to_number( null ) ) ;;
+    value_format_name: decimal_1
+  }
+
+  #-- FTE (full-time equivalents)
+
+  measure: fte_sp {
+    label: "FTE  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
+  measure: fte_multiplier {
+    label: "FTE Multiplier"
+    description: "Months in Period * 365/12 * 2080/365"
+    type: number
+    sql:   1 / (( ${date_dm.months} * 1/12 * 365 ) * (( 8 * 5 * 52 ) / 365 ) ) ;;
+    hidden:  yes
+  }
+
+  measure: fte_amt {
+    label: "FTE"
+    description: "Hrs Total / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: room_fte_amt {
+    label: "FTE Rms "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${room_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_fte_amt {
+    label: "FTE RB&E "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${rbe_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_banquet_fte_amt {
+    label: "FTE RB&E Banquet "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${rbe_banquet_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_catering_fte_amt {
+    label: "FTE RB&E Catering "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${rbe_catering_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_outlet_fte_amt {
+    label: "FTE RB&E Outlet "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${rbe_outlet_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_conference_services_fte_amt {
+    label: "FTE RB&E Conference Services "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${rbe_conference_services_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_restaurant_fte_amt {
+    label: "FTE RB&E Restaurant "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${rbe_restaurant_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_lounge_fte_amt {
+    label: "FTE RB&E Lounge "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${rbe_lounge_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: rbe_other_fte_amt {
+    label: "FTE RB&E Other "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${rbe_other_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: spa_fte_amt {
+    label: "FTE Spa "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${spa_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: golf_fte_amt {
+    label: "FTE Golf "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${golf_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: fitness_recreation_fte_amt {
+    label: "FTE Fitness & Rec "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${fitness_recreation_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: retail_fte_amt {
+    label: "FTE Retail "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${retail_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: other_operated_fte_amt {
+    label: "FTE Other Op. Dept. "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${other_operated_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: property_mgmt_fte_amt {
+    label: "FTE Mgmt Srvcs "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${property_mgmt_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: misc_fte_amt {
+    label: "FTE Rentals & Other "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${misc_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: nonoperating_realty_fte_amt {
+    label: "FTE Nonoperating Realty "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${nonoperating_realty_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: nonoperating_airport_fte_amt {
+    label: "FTE Nonoperating Airport "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${nonoperating_airport_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: nonoperating_util_fte_amt {
+    label: "FTE Nonoperating Utility "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${nonoperating_util_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: undistributed_fte_amt {
+    label: "FTE Undistributed "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${undistributed_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
+  measure: allocated_fte_amt {
+    label: "FTE Allocated "
+    description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
+    type: number
+    sql:  ${allocated_hour_amt} * ${fte_multiplier} ;;
+    value_format_name: decimal_1
+  }
+
 }
