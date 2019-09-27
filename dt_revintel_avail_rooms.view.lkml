@@ -35,7 +35,7 @@ view: dt_revintel_avail_rooms {
   measure: dt_cy_avail_room_cnt {
     type: sum
     value_format_name: decimal_0
-    view_label: "  CY"
+    view_label: "   CY"
     label: "Rms Avail"
     description: "Rooms Available"
     sql: ${TABLE}.dt_cy_avail_room_cnt ;;
@@ -64,7 +64,7 @@ view: dt_revintel_avail_rooms {
     sql: utl..udf_percent_var((${dt_cy_avail_room_cnt}),(${dt_stly_avail_room_cnt})) ;;
     type: number
     value_format_name: percent_1
-    view_label: "  CY"
+    view_label: "   CY"
     label: "Rms Avail Act:STLY - % var"
     description: "(TY - STLY)/STLY"
   }
@@ -73,7 +73,7 @@ view: dt_revintel_avail_rooms {
     sql: (${dt_cy_avail_room_cnt})-(${dt_stly_avail_room_cnt}) ;;
     type: number
     value_format_name: decimal_0
-    view_label: "  CY"
+    view_label: "   CY"
     label: "Rms Avail Act:STLY - var"
     description: "(TY - STLY)"
   }
