@@ -88,6 +88,14 @@ view: revintel_property_segment_pace_f {
   #-- Measures
   #-------------------------------------------------------------------------------------------
 
+  measure: cy_sp {
+    view_label: "  CY"
+    label: "     CY  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
   measure:  cy_rooms{
     sql: ${TABLE}.cy_room_cnt ;;
     value_format_name: decimal_0
@@ -247,6 +255,14 @@ view: revintel_property_segment_pace_f {
   #-- Measures STLY
   #-------------------------------------------------------------------------------------------
 
+  measure: stly_sp {
+    view_label: "  STLY"
+    label: "     STLY  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
   measure:  stly_rooms{
     sql: ${TABLE}.stly_room_cnt ;;
     value_format_name: decimal_0
@@ -350,9 +366,17 @@ view: revintel_property_segment_pace_f {
   }
 
 
-#-------------------------------------------------------------------------------------------
+  #-------------------------------------------------------------------------------------------
   #-- Measures LY
   #-------------------------------------------------------------------------------------------
+
+  measure: ly_sp {
+    view_label: "  LY"
+    label: "     LY  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
 
   measure:  ly_rooms{
     sql: ${TABLE}.ly_room_cnt ;;
@@ -821,6 +845,14 @@ view: revintel_property_segment_pace_f {
   #-- Forecast & Budget
   #-------------------------------------------------------------------------------------------
 
+  measure: fcst_sp {
+    view_label: "  FCST"
+    label: "     FCST  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
   measure:  fcst_room_cnt{
     sql: ${TABLE}.fcst_room_cnt ;;
     value_format_name: decimal_0
@@ -874,6 +906,14 @@ view: revintel_property_segment_pace_f {
     label: "Rev PAR $"
     description: "Revenue per Available Room Amount"
     type: number
+  }
+
+  measure: bdgt_sp {
+    view_label: "  BDGT"
+    label: "     BDGT  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
   }
 
   measure:  bdgt_room_cnt{
