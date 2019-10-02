@@ -525,14 +525,14 @@ view: property_pace_f {
     label: "Rms Bkd Act:STLY - var"
     description: "(TY - STLY)"
   }
-
+  #these were switched
   measure:  roomsold_var_budg{
     sql: (${roomsold} - ifnull(${budg_roomsold},0)) ;;
     type: number
     value_format_name: decimal_0
     view_label: "  TY"
-    label: "Rms Bkd Act:Fcst - var"
-    description: "(TY - Fcst)"
+    label: "Rms Bkd Act:Bdgt - var"
+    description: "(TY - Bdgt)"
   }
 
   measure:  roomsold_var_fcst{
@@ -540,8 +540,8 @@ view: property_pace_f {
     type: number
     value_format_name: decimal_0
     view_label: "  TY"
-    label: "Rms Bkd Act:Bdgt - var"
-    description: "(TY - Bdgt)"
+    label: "Rms Bkd Act:Fcst - var"
+    description: "(TY - Fcst)"
   }
 
   measure:  adr_var_ly{
