@@ -328,6 +328,22 @@ view: revintel_property_f {
   #-- Measures
   #-------------------------------------------------------------------------------------------
 
+  measure: cy_sp {
+    view_label: "  CY"
+    label: "     CY  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
+  measure: room_sp {
+    view_label: "  CY"
+    label: "Rms Bkd  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
   measure:  cy_rooms{
     sql: ${TABLE}.cy_room_cnt ;;
     value_format_name: decimal_0
@@ -335,6 +351,14 @@ view: revintel_property_f {
     label: "Rms Bkd"
     description: "Room Booked"
     type: sum
+  }
+
+  measure: room_rev_sp {
+    view_label: "   CY"
+    label: "Rev Rms  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
   }
 
   measure:  cy_room_rev{
@@ -445,6 +469,14 @@ view: revintel_property_f {
   #-------------------------------------------------------------------------------------------
   #-- Measures STLY
   #-------------------------------------------------------------------------------------------
+
+  measure: stly_sp {
+    view_label: "  STLY"
+    label: "     STLY  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
 
   measure:  stly_rooms{
     sql: ${TABLE}.stly_room_cnt ;;
@@ -564,6 +596,14 @@ view: revintel_property_f {
   #-- Measures LY
   #-------------------------------------------------------------------------------------------
 
+  measure: ly_sp {
+    view_label: "  LY"
+    label: "     LY  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
   measure:  ly_rooms{
     sql: ${TABLE}.ly_room_cnt ;;
     value_format_name: decimal_0
@@ -681,6 +721,22 @@ view: revintel_property_f {
   #-------------------------------------------------------------------------------------------
   #-- Measures compare to py
   #-------------------------------------------------------------------------------------------
+
+  measure: var_sp {
+    view_label: "  CY"
+    label: "Var  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
+  measure: var_pct_sp {
+    view_label: "  CY"
+    label: "Var %  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
 
   measure:  rooms_var_perc{
     sql: utl..udf_percent_var((${cy_rooms}),(${stly_rooms})) ;;

@@ -795,6 +795,22 @@ view: revintel_property_pace_f {
   #-- Measures compare to py
   #-------------------------------------------------------------------------------------------
 
+  measure: var_sp {
+    view_label: "   CY"
+    label: "Var  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
+  measure: var_pct_sp {
+    view_label: "   CY"
+    label: "Var %  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
   measure:  rooms_var_perc{
     sql: utl..udf_percent_var((${cy_rooms}),(${stly_rooms})) ;;
     type: number
@@ -1002,6 +1018,30 @@ view: revintel_property_pace_f {
   }
 
   # Period Pickup
+
+  measure: period_start_sp {
+    view_label: "   CY"
+    label: "Period Start  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
+  measure: period_end_sp {
+    view_label: "   CY"
+    label: "Period End  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
+  measure: period_pkup_sp {
+    view_label: "   CY"
+    label: "Period Pickup  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
 
   measure:  cy_rooms_start{
     sql: sum( case when ${dt_revintel_pace_pickup_date.dt_start_asof_dt} =
