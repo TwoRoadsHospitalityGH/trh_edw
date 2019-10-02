@@ -3,7 +3,7 @@ connection: "edw"
 include: "*.view.lkml"                       # include all views in this project
 
 
-label: "GL Monthly w/ Forecast"
+label: "GL Monthly w/ Forecast - Labor"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.fact.glm_property_fte_f ;;
