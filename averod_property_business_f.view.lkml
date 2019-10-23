@@ -37,7 +37,7 @@ view: averod_property_business_f {
   }
 
   dimension: business_level_name {
-    sql: ${TABLE}.parent_business_level_name ;;
+    sql: ${TABLE}.business_level_name ;;
     view_label: "Business Detail"
     label: "Business Level"
     description: "Business Level Name"
