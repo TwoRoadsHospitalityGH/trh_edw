@@ -52,6 +52,22 @@ view: averod_property_business_category_f {
     type: string
   }
 
+  dimension: category_level_name {
+    sql: ${TABLE}.category_level_name ;;
+    view_label: "Business Detail"
+    label: "Category Level"
+    description: "Category Level Name"
+    type: string
+  }
+
+  dimension: category_name {
+    sql: ${TABLE}.category_name ;;
+    view_label: "Business Detail"
+    label: "Category"
+    description: "Category Name"
+    type: string
+  }
+
   #-------------------------------------------------------------------------------------------
   #-- Measures - Business Detail Stats
   #-------------------------------------------------------------------------------------------
