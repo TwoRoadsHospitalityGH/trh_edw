@@ -10,7 +10,7 @@ datagroup: model_caching_dg {
 
 explore: averod_property_business_f {
   group_label: "***Development***"
-  label: "Avero Property (alpha)"
+  label: "Avero Property Summary (alpha)"
   view_label: "  Measures"
   persist_with: model_caching_dg
   case_sensitive: no
