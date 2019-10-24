@@ -347,7 +347,7 @@ view: guest_experience_rpt {
     description: "Minimum Score Value"
     type: min
     sql: ${answer_score_no} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_2
   }
 
   measure: response_score_quartile_1 {
@@ -357,7 +357,7 @@ view: guest_experience_rpt {
     type: percentile
     percentile:  25
     sql: ${answer_score_no} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_2
   }
 
   measure: response_score_med {
@@ -366,7 +366,7 @@ view: guest_experience_rpt {
     description: "Median Score Value (50th Percentile)"
     type: median
     sql: ${answer_score_no} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_2
   }
 
   measure: response_score_quartile_3 {
@@ -376,7 +376,7 @@ view: guest_experience_rpt {
     type: percentile
     percentile:  55
     sql: ${answer_score_no} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_2
   }
 
   measure: response_score_max {
@@ -385,7 +385,7 @@ view: guest_experience_rpt {
     description: "Maximum Score Value"
     type: max
     sql: ${answer_score_no} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_2
   }
 
 }
