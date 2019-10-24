@@ -1050,7 +1050,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql:  ${glm_property_fte_f_ty.fte_amt} - ${glm_property_fte_f_ly.fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: room_fte_amt_toly_v {
@@ -1058,7 +1058,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.room_fte_amt} - ${glm_property_fte_f_ly.room_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: rbe_fte_amt_toly_v {
@@ -1066,7 +1066,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql:  ${glm_property_fte_f_ty.rbe_fte_amt} - ${glm_property_fte_f_ly.rbe_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: rbe_banquet_fte_amt_toly_v {
@@ -1074,7 +1074,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.rbe_banquet_fte_amt} - ${glm_property_fte_f_ly.rbe_banquet_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: rbe_catering_fte_amt_toly_v {
@@ -1082,7 +1082,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.rbe_catering_fte_amt} - ${glm_property_fte_f_ly.rbe_catering_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: rbe_outlet_fte_amt_toly_v {
@@ -1090,7 +1090,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.rbe_outlet_fte_amt} - ${glm_property_fte_f_ly.rbe_outlet_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: rbe_conference_services_fte_amt_toly_v {
@@ -1098,7 +1098,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.rbe_conference_services_fte_amt} - ${glm_property_fte_f_ly.rbe_conference_services_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: rbe_restaurant_fte_amt_toly_v {
@@ -1106,7 +1106,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.rbe_restaurant_fte_amt} - ${glm_property_fte_f_ly.rbe_restaurant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: rbe_lounge_fte_amt_toly_v {
@@ -1114,7 +1114,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.rbe_lounge_fte_amt} - ${glm_property_fte_f_ly.rbe_lounge_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: rbe_other_fte_amt_toly_v {
@@ -1122,7 +1122,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.rbe_other_fte_amt} - ${glm_property_fte_f_ly.rbe_other_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: spa_fte_amt_toly_v {
@@ -1130,7 +1130,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.spa_fte_amt} - ${glm_property_fte_f_ly.spa_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: golf_fte_amt_toly_v {
@@ -1138,7 +1138,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.golf_fte_amt} - ${glm_property_fte_f_ly.golf_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: fitness_recreation_fte_amt_toly_v {
@@ -1146,7 +1146,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.fitness_recreation_fte_amt} - ${glm_property_fte_f_ly.fitness_recreation_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: retail_fte_amt_toly_v {
@@ -1154,7 +1154,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.retail_fte_amt} - ${glm_property_fte_f_ly.retail_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: other_operated_fte_amt_toly_v {
@@ -1162,7 +1162,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.other_operated_fte_amt} - ${glm_property_fte_f_ly.other_operated_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: property_mgmt_fte_amt_toly_v {
@@ -1170,7 +1170,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.property_mgmt_fte_amt} - ${glm_property_fte_f_ly.property_mgmt_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: misc_fte_amt_toly_v {
@@ -1178,7 +1178,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.misc_fte_amt} - ${glm_property_fte_f_ly.misc_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: nonoperating_realty_fte_amt_toly_v {
@@ -1186,7 +1186,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.nonoperating_realty_fte_amt} - ${glm_property_fte_f_ly.nonoperating_realty_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: nonoperating_airport_fte_amt_toly_v {
@@ -1194,7 +1194,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.nonoperating_airport_fte_amt} - ${glm_property_fte_f_ly.nonoperating_airport_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: nonoperating_util_fte_amt_toly_v {
@@ -1202,7 +1202,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.nonoperating_util_fte_amt} - ${glm_property_fte_f_ly.nonoperating_util_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: undistributed_fte_amt_toly_v {
@@ -1210,7 +1210,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.undistributed_fte_amt} - ${glm_property_fte_f_ly.undistributed_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: allocated_fte_amt_toly_v {
@@ -1218,7 +1218,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.allocated_fte_amt} - ${glm_property_fte_f_ly.allocated_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
 
@@ -1227,7 +1227,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.acct_fte_amt} - ${glm_property_fte_f_ly.acct_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: admin_fte_amt_toly_v {
@@ -1235,7 +1235,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.admin_fte_amt} - ${glm_property_fte_f_ly.admin_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: attendant_fte_amt_toly_v {
@@ -1243,7 +1243,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.attendant_fte_amt} - ${glm_property_fte_f_ly.attendant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: bar_attendant_fte_amt_toly_v {
@@ -1251,7 +1251,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.bar_attendant_fte_amt} - ${glm_property_fte_f_ly.bar_attendant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: bell_service_fte_amt_toly_v {
@@ -1259,7 +1259,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.bell_service_fte_amt} - ${glm_property_fte_f_ly.bell_service_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: bus_attendant_fte_amt_toly_v {
@@ -1267,7 +1267,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.bus_attendant_fte_amt} - ${glm_property_fte_f_ly.bus_attendant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: captain_fte_amt_toly_v {
@@ -1275,7 +1275,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.captain_fte_amt} - ${glm_property_fte_f_ly.captain_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: meter_fte_amt_toly_v {
@@ -1283,7 +1283,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.meter_fte_amt} - ${glm_property_fte_f_ly.meter_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: cashier_fte_amt_toly_v {
@@ -1291,7 +1291,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.cashier_fte_amt} - ${glm_property_fte_f_ly.cashier_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: concierge_fte_amt_toly_v {
@@ -1299,7 +1299,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.concierge_fte_amt} - ${glm_property_fte_f_ly.concierge_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: conference_services_fte_amt_toly_v {
@@ -1307,7 +1307,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.conference_services_fte_amt} - ${glm_property_fte_f_ly.conference_services_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: door_attendant_fte_amt_toly_v {
@@ -1315,7 +1315,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.door_attendant_fte_amt} - ${glm_property_fte_f_ly.door_attendant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: driver_fte_amt_toly_v {
@@ -1323,7 +1323,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.driver_fte_amt} - ${glm_property_fte_f_ly.driver_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: supervisor_fte_amt_toly_v {
@@ -1331,7 +1331,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.supervisor_fte_amt} - ${glm_property_fte_f_ly.supervisor_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: food_prep_fte_amt_toly_v {
@@ -1339,7 +1339,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.food_prep_fte_amt} - ${glm_property_fte_f_ly.food_prep_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: front_desk_fte_amt_toly_v {
@@ -1347,7 +1347,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.front_desk_fte_amt} - ${glm_property_fte_f_ly.front_desk_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: grounds_fte_amt_toly_v {
@@ -1355,7 +1355,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.grounds_fte_amt} - ${glm_property_fte_f_ly.grounds_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: guest_services_fte_amt_toly_v {
@@ -1363,7 +1363,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.guest_services_fte_amt} - ${glm_property_fte_f_ly.guest_services_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: house_attendant_fte_amt_toly_v {
@@ -1371,7 +1371,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.house_attendant_fte_amt} - ${glm_property_fte_f_ly.house_attendant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: hr_fte_amt_toly_v {
@@ -1379,7 +1379,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.hr_fte_amt} - ${glm_property_fte_f_ly.hr_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: info_sys_fte_amt_toly_v {
@@ -1387,7 +1387,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.info_sys_fte_amt} - ${glm_property_fte_f_ly.info_sys_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: locker_attendant_fte_amt_toly_v {
@@ -1395,7 +1395,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.locker_attendant_fte_amt} - ${glm_property_fte_f_ly.locker_attendant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: maintenance_fte_amt_toly_v {
@@ -1403,7 +1403,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.maintenance_fte_amt} - ${glm_property_fte_f_ly.maintenance_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: mgmt_fte_amt_toly_v {
@@ -1411,7 +1411,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.mgmt_fte_amt} - ${glm_property_fte_f_ly.mgmt_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: message_therapist_fte_amt_toly_v {
@@ -1419,7 +1419,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.message_therapist_fte_amt} - ${glm_property_fte_f_ly.message_therapist_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: night_attendant_fte_amt_toly_v {
@@ -1427,7 +1427,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.night_attendant_fte_amt} - ${glm_property_fte_f_ly.night_attendant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: night_audit_fte_amt_toly_v {
@@ -1435,7 +1435,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.night_audit_fte_amt} - ${glm_property_fte_f_ly.night_audit_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: public_area_attendant_fte_amt_toly_v {
@@ -1443,7 +1443,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.public_area_attendant_fte_amt} - ${glm_property_fte_f_ly.public_area_attendant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: receptionist_fte_amt_toly_v {
@@ -1451,7 +1451,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.receptionist_fte_amt} - ${glm_property_fte_f_ly.receptionist_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: reservations_fte_amt_toly_v {
@@ -1459,7 +1459,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.reservations_fte_amt} - ${glm_property_fte_f_ly.reservations_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: room_attendant_fte_amt_toly_v {
@@ -1467,7 +1467,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.room_attendant_fte_amt} - ${glm_property_fte_f_ly.room_attendant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: runner_fte_amt_toly_v {
@@ -1475,7 +1475,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.runner_fte_amt} - ${glm_property_fte_f_ly.runner_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: sales_clerk_fte_amt_toly_v {
@@ -1483,7 +1483,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.sales_clerk_fte_amt} - ${glm_property_fte_f_ly.sales_clerk_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: sales_manager_fte_amt_toly_v {
@@ -1491,7 +1491,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.sales_manager_fte_amt} - ${glm_property_fte_f_ly.sales_manager_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: salon_attendant_fte_amt_toly_v {
@@ -1499,7 +1499,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.salon_attendant_fte_amt} - ${glm_property_fte_f_ly.salon_attendant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: security_fte_amt_toly_v {
@@ -1507,7 +1507,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.security_fte_amt} - ${glm_property_fte_f_ly.security_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: server_fte_amt_toly_v {
@@ -1515,7 +1515,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.server_fte_amt} - ${glm_property_fte_f_ly.server_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: steward_fte_amt_toly_v {
@@ -1523,7 +1523,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.steward_fte_amt} - ${glm_property_fte_f_ly.steward_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: store_room_attendant_fte_amt_toly_v {
@@ -1531,7 +1531,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.store_room_attendant_fte_amt} - ${glm_property_fte_f_ly.store_room_attendant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: turn_down_attendant_fte_amt_toly_v {
@@ -1539,7 +1539,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.turn_down_attendant_fte_amt} - ${glm_property_fte_f_ly.turn_down_attendant_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: linen_fte_amt_toly_v {
@@ -1547,7 +1547,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.linen_fte_amt} - ${glm_property_fte_f_ly.linen_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
   measure: valet_fte_amt_toly_v {
@@ -1555,7 +1555,7 @@ view: glm_property_fte_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_fte_f_ty.valet_fte_amt} - ${glm_property_fte_f_ly.valet_fte_amt} ;;
-    value_format_name: decimal_0
+    value_format_name: decimal_1
   }
 
  #-- FTE var %
