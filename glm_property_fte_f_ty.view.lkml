@@ -68,7 +68,7 @@ view: glm_property_fte_f_ty {
     description: "Room Hours (Includes Hskpng, Res, FO, Bell, Guest Srvc. Segment 2: 400-499, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.room_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_hour_amt {
@@ -76,7 +76,7 @@ view: glm_property_fte_f_ty {
     description: "RB&E Hours. Segment 2: 500-599, Segment 3: 9600-9815."
     type: sum
     sql:  iff( ${measure_bt} = 1, ${glm_property_fte_f.rbe_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_banquet_hour_amt {
@@ -84,7 +84,7 @@ view: glm_property_fte_f_ty {
     description: "RB&E Hours Banquet. Segment 2: 510-515, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.rbe_banquet_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_catering_hour_amt {
@@ -92,7 +92,7 @@ view: glm_property_fte_f_ty {
     description: "RB&E Hours Catering. Segment 2: 516-518. Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.rbe_catering_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_outlet_hour_amt {
@@ -100,7 +100,7 @@ view: glm_property_fte_f_ty {
     description: "RB&E Outlet Hours. Segment 2: 530-549. Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.rbe_outlet_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_conference_services_hour_amt {
@@ -108,7 +108,7 @@ view: glm_property_fte_f_ty {
     description: "RB&E Conference Hours. Segment 2: 590-599. Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.rbe_conference_services_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_restaurant_hour_amt {
@@ -116,7 +116,7 @@ view: glm_property_fte_f_ty {
     description: "RB&E Restaurant Hours. Segment 2: 540-549. Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.rbe_restaurant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_lounge_hour_amt {
@@ -124,7 +124,7 @@ view: glm_property_fte_f_ty {
     description: "RB&E Lounge Hours. Segment 2: 530-539. Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.rbe_lounge_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_other_hour_amt {
@@ -132,7 +132,7 @@ view: glm_property_fte_f_ty {
     description: "Admin Hours + Kitchen Hours + Cart Hours + Minibar Hours + Room Service Hours. Segment 2: 500, 550-589, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.rbe_other_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: spa_hour_amt {
@@ -140,7 +140,7 @@ view: glm_property_fte_f_ty {
     description: "Spa Hours. Segment 2: 666, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.spa_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: golf_hour_amt {
@@ -148,7 +148,7 @@ view: glm_property_fte_f_ty {
     description: "Golf Hours. Segment 2: 610-635. Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.golf_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: fitness_recreation_hour_amt {
@@ -156,7 +156,7 @@ view: glm_property_fte_f_ty {
     description: "Fitness & Recreation Hours. Segment 2: 650-664, 668-674, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.fitness_recreation_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: retail_hour_amt {
@@ -164,7 +164,7 @@ view: glm_property_fte_f_ty {
     description: "Retail Hours. Segment 2: 750-769, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.retail_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: other_operated_hour_amt {
@@ -172,7 +172,7 @@ view: glm_property_fte_f_ty {
     description: "Parking & Trans Hours + Dry Cleaning Hours + Telecomm Hours. Segment 2: 710-721, 735-740, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.other_operated_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: property_mgmt_hour_amt {
@@ -180,7 +180,7 @@ view: glm_property_fte_f_ty {
     description: "Property Management Hours. Segment 2: 770-789, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.property_mgmt_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: misc_hour_amt {
@@ -188,7 +188,7 @@ view: glm_property_fte_f_ty {
     description: "Misc Hours. Segment 2: 790-799, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.misc_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: nonoperating_realty_hour_amt {
@@ -196,7 +196,7 @@ view: glm_property_fte_f_ty {
     description: "Nonoperating Realty Hours. Segment 2: 681-685, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.nonoperating_realty_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: nonoperating_airport_hour_amt {
@@ -204,7 +204,7 @@ view: glm_property_fte_f_ty {
     description: "Nonoperating Airport Hours. Segment 2: 680, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.nonoperating_airport_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: nonoperating_util_hour_amt {
@@ -212,7 +212,7 @@ view: glm_property_fte_f_ty {
     description: "Nonoperating Utility Hours. Segment 2: 689-699, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.nonoperating_util_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: undistributed_hour_amt {
@@ -220,7 +220,7 @@ view: glm_property_fte_f_ty {
     description: "Undistributed Hours. Segment 2: 800-876, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.undistributed_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: allocated_hour_amt {
@@ -228,7 +228,7 @@ view: glm_property_fte_f_ty {
     description: "Allocated Dept Hours. Segment 2: 920-999, Segment 3: 9600-9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.allocated_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: acct_hour_amt {
@@ -236,7 +236,7 @@ view: glm_property_fte_f_ty {
     description: "Accounting Position Hours. Segment 3: 9600."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.acct_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: admin_hour_amt {
@@ -244,7 +244,7 @@ view: glm_property_fte_f_ty {
     description: "Admin Position Hours. Segment 3: 9605."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.admin_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: attendant_hour_amt {
@@ -252,7 +252,7 @@ view: glm_property_fte_f_ty {
     description: "Attendants Position Hours. Segment 3: 9610."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.attendant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: bar_attendant_hour_amt {
@@ -260,7 +260,7 @@ view: glm_property_fte_f_ty {
     description: "Bar Att. Position Hours. Segment 3: 9615."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.bar_attendant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: bell_service_hour_amt {
@@ -268,7 +268,7 @@ view: glm_property_fte_f_ty {
     description: "Bell Srvc Position Hours. Segment 3: 9620."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.bell_service_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: bus_attendant_hour_amt {
@@ -276,7 +276,7 @@ view: glm_property_fte_f_ty {
     description: "Bus Attendants Position Hours. Segment 3: 9625."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.bus_attendant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: captain_hour_amt {
@@ -284,7 +284,7 @@ view: glm_property_fte_f_ty {
     description: "Captain Position Hours. Segment 3: 9630."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.captain_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: meter_hour_amt {
@@ -292,7 +292,7 @@ view: glm_property_fte_f_ty {
     description: "Meter Instll Position Hours. Segment 3: 9634."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.meter_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: cashier_hour_amt {
@@ -300,7 +300,7 @@ view: glm_property_fte_f_ty {
     description: "Cashier Position Hours. Segment 3: 9635."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.cashier_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: concierge_hour_amt {
@@ -308,7 +308,7 @@ view: glm_property_fte_f_ty {
     description: "Concierge Position Hours. Segment 3: 9645."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.concierge_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: conference_services_hour_amt {
@@ -316,7 +316,7 @@ view: glm_property_fte_f_ty {
     description: "Conference Srvcs Position Hours. Segment 3: 9650."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.conference_services_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: door_attendant_hour_amt {
@@ -324,7 +324,7 @@ view: glm_property_fte_f_ty {
     description: "Door Att. Position Hours. Segment 3: 9655."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.door_attendant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: driver_hour_amt {
@@ -332,7 +332,7 @@ view: glm_property_fte_f_ty {
     description: "Driver Position Hours. Segment 3: 9660."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.driver_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: supervisor_hour_amt {
@@ -340,7 +340,7 @@ view: glm_property_fte_f_ty {
     description: "Supervisor Position Hours. Segment 3: 9665."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.supervisor_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: food_prep_hour_amt {
@@ -348,7 +348,7 @@ view: glm_property_fte_f_ty {
     description: "Food Prep Position Hours. Segment 3: 9670."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.food_prep_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: front_desk_hour_amt {
@@ -356,7 +356,7 @@ view: glm_property_fte_f_ty {
     description: "Front Desk Position Hours. Segment 3: 9675."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.front_desk_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: grounds_hour_amt {
@@ -364,7 +364,7 @@ view: glm_property_fte_f_ty {
     description: "Grounds Position Hours. Segment 3: 9680."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.grounds_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: guest_services_hour_amt {
@@ -372,7 +372,7 @@ view: glm_property_fte_f_ty {
     description: "Guest Srvcs Position Hours. Segment 3: 9685."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.guest_services_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: house_attendant_hour_amt {
@@ -380,7 +380,7 @@ view: glm_property_fte_f_ty {
     description: "House Att. Position Hours. Segment 3: 9690."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.house_attendant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: hr_hour_amt {
@@ -388,7 +388,7 @@ view: glm_property_fte_f_ty {
     description: "HR Position Hours. Segment 3: 9695."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.hr_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: info_sys_hour_amt {
@@ -396,7 +396,7 @@ view: glm_property_fte_f_ty {
     description: "Info Sys Position Hours. Segment 3: 9700."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.info_sys_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: locker_attendant_hour_amt {
@@ -404,7 +404,7 @@ view: glm_property_fte_f_ty {
     description: "Locker Att. Position Hours. Segment 3: 9705."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.locker_attendant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: maintenance_hour_amt {
@@ -412,7 +412,7 @@ view: glm_property_fte_f_ty {
     description: "Maintenance Position Hours. Segment 3: 9710."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.maintenance_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: mgmt_hour_amt {
@@ -420,7 +420,7 @@ view: glm_property_fte_f_ty {
     description: "Mgmt Position Hours. Segment 3: 9715."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.mgmt_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: message_therapist_hour_amt {
@@ -428,7 +428,7 @@ view: glm_property_fte_f_ty {
     description: "Message Ther. Position Hours. Segment 3: 9720."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.message_therapist_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: night_attendant_hour_amt {
@@ -436,7 +436,7 @@ view: glm_property_fte_f_ty {
     description: "Night Att. Position Hours. Segment 3: 9725."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.night_attendant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: night_audit_hour_amt {
@@ -444,7 +444,7 @@ view: glm_property_fte_f_ty {
     description: "Night Audit Position Hours. Segment 3: 9730."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.night_audit_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: public_area_attendant_hour_amt {
@@ -452,7 +452,7 @@ view: glm_property_fte_f_ty {
     description: "Public Area Position Hours. Segment 3: 9740."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.public_area_attendant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: receptionist_hour_amt {
@@ -460,7 +460,7 @@ view: glm_property_fte_f_ty {
     description: "Receptionist Position Hours. Segment 3: 9745."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.receptionist_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: reservations_hour_amt {
@@ -468,7 +468,7 @@ view: glm_property_fte_f_ty {
     description: "Reservations Position Hours. Segment 3: 9750."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.reservations_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: room_attendant_hour_amt {
@@ -476,7 +476,7 @@ view: glm_property_fte_f_ty {
     description: "Room Att. Position Hours. Segment 3: 9755."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.room_attendant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: runner_hour_amt {
@@ -484,7 +484,7 @@ view: glm_property_fte_f_ty {
     description: "Runner Position Hours. Segment 3: 9760."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.runner_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: sales_clerk_hour_amt {
@@ -492,7 +492,7 @@ view: glm_property_fte_f_ty {
     description: "Sales Clerk Position Hours. Segment 3: 9765."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.sales_clerk_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: sales_manager_hour_amt {
@@ -500,7 +500,7 @@ view: glm_property_fte_f_ty {
     description: "Sales Mngr Position Hours. Segment 3: 9770."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.sales_manager_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: salon_attendant_hour_amt {
@@ -508,7 +508,7 @@ view: glm_property_fte_f_ty {
     description: "Salon Att. Position Hours. Segment 3: 9775."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.salon_attendant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: security_hour_amt {
@@ -516,7 +516,7 @@ view: glm_property_fte_f_ty {
     description: "Security Position Hours. Segment 3: 9780."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.security_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: server_hour_amt {
@@ -524,7 +524,7 @@ view: glm_property_fte_f_ty {
     description: "Server Position Hours. Segment 3: 9785."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.server_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: steward_hour_amt {
@@ -532,7 +532,7 @@ view: glm_property_fte_f_ty {
     description: "Steward Position Hours. Segment 3: 9795."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.steward_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: store_room_attendant_hour_amt {
@@ -540,7 +540,7 @@ view: glm_property_fte_f_ty {
     description: "Store Room Position Hours. Segment 3: 9800."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.store_room_attendant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: turn_down_attendant_hour_amt {
@@ -548,7 +548,7 @@ view: glm_property_fte_f_ty {
     description: "Turn Down Position Hours. Segment 3: 9805."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.turn_down_attendant_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: linen_hour_amt {
@@ -556,7 +556,7 @@ view: glm_property_fte_f_ty {
     description: "Linen Position Hours. Segment 3: 9810."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.linen_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: valet_hour_amt {
@@ -564,7 +564,7 @@ view: glm_property_fte_f_ty {
     description: "Valet Position Hours. Segment 3: 9815."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_fte_f.valet_hour_amt}, to_number( null ) ) ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   #-- FTE (full-time equivalents)
@@ -589,7 +589,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs Total / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: room_fte_amt {
@@ -597,7 +597,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${room_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_fte_amt {
@@ -605,7 +605,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${rbe_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_banquet_fte_amt {
@@ -613,7 +613,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${rbe_banquet_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_catering_fte_amt {
@@ -621,7 +621,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${rbe_catering_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_outlet_fte_amt {
@@ -629,7 +629,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${rbe_outlet_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_conference_services_fte_amt {
@@ -637,7 +637,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${rbe_conference_services_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_restaurant_fte_amt {
@@ -645,7 +645,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${rbe_restaurant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_lounge_fte_amt {
@@ -653,7 +653,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${rbe_lounge_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: rbe_other_fte_amt {
@@ -661,7 +661,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${rbe_other_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: spa_fte_amt {
@@ -669,7 +669,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${spa_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: golf_fte_amt {
@@ -677,7 +677,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${golf_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: fitness_recreation_fte_amt {
@@ -685,7 +685,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${fitness_recreation_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: retail_fte_amt {
@@ -693,7 +693,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${retail_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: other_operated_fte_amt {
@@ -701,7 +701,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${other_operated_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: property_mgmt_fte_amt {
@@ -709,7 +709,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${property_mgmt_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: misc_fte_amt {
@@ -717,7 +717,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${misc_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: nonoperating_realty_fte_amt {
@@ -725,7 +725,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${nonoperating_realty_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: nonoperating_airport_fte_amt {
@@ -733,7 +733,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${nonoperating_airport_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: nonoperating_util_fte_amt {
@@ -741,7 +741,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${nonoperating_util_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: undistributed_fte_amt {
@@ -749,7 +749,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${undistributed_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: allocated_fte_amt {
@@ -757,7 +757,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept / ( Months in Period * 365/12 * 2080/365 )"
     type: number
     sql:  ${allocated_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
 
@@ -770,7 +770,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${acct_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: admin_fte_amt {
@@ -778,7 +778,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${admin_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: attendant_fte_amt {
@@ -786,7 +786,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${attendant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: bar_attendant_fte_amt {
@@ -794,7 +794,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${bar_attendant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: bell_service_fte_amt {
@@ -802,7 +802,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${bell_service_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: bus_attendant_fte_amt {
@@ -810,7 +810,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${bus_attendant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: captain_fte_amt {
@@ -818,7 +818,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${captain_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: meter_fte_amt {
@@ -826,7 +826,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${meter_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: cashier_fte_amt {
@@ -834,7 +834,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${cashier_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: concierge_fte_amt {
@@ -842,7 +842,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${concierge_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: conference_services_fte_amt {
@@ -850,7 +850,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${conference_services_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: door_attendant_fte_amt {
@@ -858,7 +858,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${door_attendant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: driver_fte_amt {
@@ -866,7 +866,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${driver_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: supervisor_fte_amt {
@@ -874,7 +874,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${supervisor_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: food_prep_fte_amt {
@@ -882,7 +882,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${food_prep_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: front_desk_fte_amt {
@@ -890,7 +890,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${front_desk_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: grounds_fte_amt {
@@ -898,7 +898,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${grounds_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: guest_services_fte_amt {
@@ -906,7 +906,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${guest_services_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: house_attendant_fte_amt {
@@ -914,7 +914,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${house_attendant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: hr_fte_amt {
@@ -922,7 +922,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${hr_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: info_sys_fte_amt {
@@ -930,7 +930,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${info_sys_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: locker_attendant_fte_amt {
@@ -938,7 +938,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${locker_attendant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: maintenance_fte_amt {
@@ -946,7 +946,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${maintenance_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: mgmt_fte_amt {
@@ -954,7 +954,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${mgmt_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: message_therapist_fte_amt {
@@ -962,7 +962,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${message_therapist_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: night_attendant_fte_amt {
@@ -970,7 +970,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${night_attendant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: night_audit_fte_amt {
@@ -978,7 +978,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${night_audit_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: public_area_attendant_fte_amt {
@@ -986,7 +986,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${public_area_attendant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: receptionist_fte_amt {
@@ -994,7 +994,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${receptionist_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: reservations_fte_amt {
@@ -1002,7 +1002,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${reservations_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: room_attendant_fte_amt {
@@ -1010,7 +1010,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${room_attendant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: runner_fte_amt {
@@ -1018,7 +1018,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${runner_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: sales_clerk_fte_amt {
@@ -1026,7 +1026,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${sales_clerk_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: sales_manager_fte_amt {
@@ -1034,7 +1034,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${sales_manager_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: salon_attendant_fte_amt {
@@ -1042,7 +1042,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${salon_attendant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: security_fte_amt {
@@ -1050,7 +1050,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${security_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: server_fte_amt {
@@ -1058,7 +1058,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${server_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: steward_fte_amt {
@@ -1066,7 +1066,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${steward_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: store_room_attendant_fte_amt {
@@ -1074,7 +1074,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${store_room_attendant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: turn_down_attendant_fte_amt {
@@ -1082,7 +1082,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${turn_down_attendant_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: linen_fte_amt {
@@ -1090,7 +1090,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${linen_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
   measure: valet_fte_amt {
@@ -1098,7 +1098,7 @@ view: glm_property_fte_f_ty {
     description: "Hrs for Dept /  Months in Period * 365/12 * 2080/365 "
     type: number
     sql: ${valet_hour_amt} * ${fte_multiplier} ;;
-    value_format_name: decimal_1
+    value_format_name: decimal_2
   }
 
 }
