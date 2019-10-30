@@ -89,4 +89,13 @@ explore: guest_experience_rpt {
     relationship: many_to_one
   }
 
+  join: dt_revinate_review_word_cnt {
+    from: dt_revinate_review_word_cnt
+    view_label: " Derived"
+    sql_on: ${dt_revinate_review_word_cnt.property_key} = ${guest_experience_rpt.property_key}
+          and ${dt_revinate_review_word_cnt.review_id} = ${guest_experience_rpt.review_id}
+          ;;
+    type: left_outer
+    relationship: many_to_one
+  }
 }
