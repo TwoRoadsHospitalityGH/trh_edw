@@ -3,7 +3,7 @@ connection: "edw"
 include: "*.view.lkml"                       # include all views in this project
 
 
-label: "GL Monthly w/ Forecast - Labor"
+label: "GL Monthly - Labor"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.fact.glm_property_fte_f ;;
@@ -15,7 +15,7 @@ explore: glm_property_fte_f {
   from: glm_property_fte_f
   sql_table_name: pedw.fact.glm_property_fte_f ;;
   group_label: "Property"
-  label: "GL Monthly w/ Forecast - Labor"
+  label: "GL Monthly - Labor"
   description: "**Labor Metrics (Hours, FTE)
   **Includes forecasts loaded in current month
   **Compares Actuals/Forecast to LY and Budget

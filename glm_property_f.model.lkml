@@ -3,7 +3,7 @@ connection: "edw"
 include: "*.view.lkml"                       # include all views in this project
 
 
-label: "GL Monthly - Hist"
+label: "GL Monthly - Historical"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.fact.glm_property_f ;;
@@ -15,10 +15,10 @@ explore: glm_property_f {
     from: glm_property_f
     sql_table_name: pedw.fact.glm_property_f ;;
     group_label: "Property"
-    label: "GL Monthly - Hist"
-  description: "**Forecast 30 Day and Forecast 60 Day included
+    label: "GL Monthly - Historical"
+  description: "**Historical View - No Future Forecast
   **Compares Actuals to LY, Budget, Fcst30, Fcst60
-  **No Future Forecast
+  **Forecast 30 Day and Forecast 60 Day included
   **Used to support scorecard metrics"
     persist_with: model_caching_dg
     case_sensitive: no
