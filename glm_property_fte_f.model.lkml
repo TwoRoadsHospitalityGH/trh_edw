@@ -14,8 +14,8 @@ datagroup: model_caching_dg {
 explore: glm_property_fte_f {
   from: glm_property_fte_f
   sql_table_name: pedw.fact.glm_property_fte_f ;;
-  group_label: "***User Acceptance Testing***"
-  label: "GL Monthly w/ Forecast - Labor (uat)"
+  group_label: "Property"
+  label: "GL Monthly w/ Forecast - Labor"
   description: "**Labor Metrics (Hours, FTE)
   **Includes forecasts loaded in current month
   **Compares Actuals/Forecast to LY and Budget

@@ -3,7 +3,7 @@ connection: "edw"
 include: "*.view.lkml"                       # include all views in this project
 
 
-label: "GL Monthly"
+label: "GL Monthly - Hist"
 
 datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.fact.glm_property_f ;;
@@ -14,8 +14,8 @@ datagroup: model_caching_dg {
 explore: glm_property_f {
     from: glm_property_f
     sql_table_name: pedw.fact.glm_property_f ;;
-    group_label: "***User Acceptance Testing***"
-    label: "GL Monthly (uat)"
+    group_label: "Property"
+    label: "GL Monthly - Hist"
   description: "**Forecast 30 Day and Forecast 60 Day included
   **Compares Actuals to LY, Budget, Fcst30, Fcst60
   **No Future Forecast
