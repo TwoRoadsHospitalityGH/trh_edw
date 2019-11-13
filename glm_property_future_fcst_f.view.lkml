@@ -615,145 +615,145 @@ view: glm_property_future_fcst_f {
 
   #-- Payroll
 
-  dimension: payroll_amt {
-    type: number
-    sql: ${TABLE}.payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: room_payroll_amt {
-    type: number
-    sql: ${TABLE}.room_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: rbe_payroll_amt {
-    type: number
-    sql: ${TABLE}.rbe_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: spa_payroll_amt {
-    type: number
-    sql: ${TABLE}.spa_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: golf_payroll_amt {
-    type: number
-    sql: ${TABLE}.golf_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: fitness_recreation_payroll_amt {
-    type: number
-    sql: ${TABLE}.fitness_recreation_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: parking_transportation_payroll_amt {
-    type: number
-    sql: ${TABLE}.parking_transportation_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: telecom_payroll_amt {
-    type: number
-    sql: ${TABLE}.telecom_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: retail_payroll_amt {
-    type: number
-    sql: ${TABLE}.retail_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: other_operated_payroll_amt {
-    type: number
-    sql: ${TABLE}.other_operated_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: property_mgmt_payroll_amt {
-    type: number
-    sql: ${TABLE}.property_mgmt_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: administrative_general_payroll_amt {
-    type: number
-    sql: ${TABLE}.administrative_general_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: information_technology_payroll_amt {
-    type: number
-    sql: ${TABLE}.information_technology_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: sales_marketing_payroll_amt {
-    type: number
-    sql: ${TABLE}.sales_marketing_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: property_operations_maintenance_payroll_amt {
-    type: number
-    sql: ${TABLE}.property_operations_maintenance_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: misc_payroll_amt {
-    type: number
-    sql: ${TABLE}.misc_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: nonoperating_realty_payroll_amt {
-    type: number
-    sql: ${TABLE}.nonoperating_realty_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: nonoperating_airport_payroll_amt {
-    type: number
-    sql: ${TABLE}.nonoperating_airport_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: nonoperating_util_payroll_amt {
-    type: number
-    sql: ${TABLE}.nonoperating_util_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
-
-  dimension: rbe_outlet_payroll_amt {
-    type: number
-    sql: ${TABLE}.rbe_outlet_payroll_amt ;;
-    value_format_name: usd_0
-    hidden: yes
-  }
+#   dimension: payroll_amt {
+#     type: number
+#     sql: ${TABLE}.payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: room_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.room_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: rbe_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.rbe_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: spa_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.spa_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: golf_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.golf_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: fitness_recreation_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.fitness_recreation_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: parking_transportation_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.parking_transportation_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: telecom_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.telecom_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: retail_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.retail_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: other_operated_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.other_operated_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: property_mgmt_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.property_mgmt_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: administrative_general_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.administrative_general_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: information_technology_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.information_technology_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: sales_marketing_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.sales_marketing_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: property_operations_maintenance_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.property_operations_maintenance_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: misc_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.misc_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: nonoperating_realty_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.nonoperating_realty_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: nonoperating_airport_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.nonoperating_airport_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: nonoperating_util_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.nonoperating_util_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
+#
+#   dimension: rbe_outlet_payroll_amt {
+#     type: number
+#     sql: ${TABLE}.rbe_outlet_payroll_amt ;;
+#     value_format_name: usd_0
+#     hidden: yes
+#   }
 
   #-- Covers
 

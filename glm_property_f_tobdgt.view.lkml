@@ -1244,327 +1244,327 @@ view: glm_property_f_tobdgt {
 
   #-- Payroll
 
-  measure: payroll_amt_tobdgt_v {
-    label: "Payroll $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.payroll_amt} - ${glm_property_f_bdgt.payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: room_payroll_amt_tobdgt_v {
-    label: "Payroll Rms $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.room_payroll_amt} - ${glm_property_f_bdgt.room_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: rbe_payroll_amt_tobdgt_v {
-    label: "Payroll RB&E Other $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.rbe_payroll_amt} - ${glm_property_f_bdgt.rbe_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: spa_payroll_amt_tobdgt_v {
-    label: "Payroll Spa $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.spa_payroll_amt} - ${glm_property_f_bdgt.spa_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: golf_payroll_amt_tobdgt_v {
-    label: "Payroll RB&E Golf $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.golf_payroll_amt} - ${glm_property_f_bdgt.golf_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: fitness_recreation_payroll_amt_tobdgt_v {
-    label: "Payroll Fitness & Rec $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.fitness_recreation_payroll_amt} - ${glm_property_f_bdgt.fitness_recreation_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: parking_transportation_payroll_amt_tobdgt_v {
-    label: "Payroll Parking & Trans $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.parking_transportation_payroll_amt} - ${glm_property_f_bdgt.parking_transportation_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: telecom_payroll_amt_tobdgt_v {
-    label: "Payroll Telecom $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.telecom_payroll_amt} - ${glm_property_f_bdgt.telecom_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: retail_payroll_amt_tobdgt_v {
-    label: "Payroll Retail $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.retail_payroll_amt} - ${glm_property_f_bdgt.retail_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: other_operated_payroll_amt_tobdgt_v {
-    label: "Payroll Other Op. Dept. $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.other_operated_payroll_amt} - ${glm_property_f_bdgt.other_operated_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: property_mgmt_payroll_amt_tobdgt_v {
-    label: "Payroll Mgmt Srvcs $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.property_mgmt_payroll_amt} - ${glm_property_f_bdgt.property_mgmt_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: administrative_general_payroll_amt_tobdgt_v {
-    label: "Payroll A&G $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.administrative_general_payroll_amt} - ${glm_property_f_bdgt.administrative_general_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: information_technology_payroll_amt_tobdgt_v {
-    label: "Payroll IT $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.information_technology_payroll_amt} - ${glm_property_f_bdgt.information_technology_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: sales_marketing_payroll_amt_tobdgt_v {
-    label: "Payroll S&M $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.sales_marketing_payroll_amt} - ${glm_property_f_bdgt.sales_marketing_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: property_operations_maintenance_payroll_amt_tobdgt_v {
-    label: "Payroll R&M $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.property_operations_maintenance_payroll_amt} - ${glm_property_f_bdgt.property_operations_maintenance_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: misc_payroll_amt_tobdgt_v {
-    label: "Payroll Rentals & Other $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.misc_payroll_amt} - ${glm_property_f_bdgt.misc_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: nonoperating_realty_payroll_amt_tobdgt_v {
-    label: "Payroll Nonoperating Realty $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.nonoperating_realty_payroll_amt} - ${glm_property_f_bdgt.nonoperating_realty_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: nonoperating_airport_payroll_amt_tobdgt_v {
-    label: "Payroll Nonoperating Airport $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.nonoperating_airport_payroll_amt} - ${glm_property_f_bdgt.nonoperating_airport_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: nonoperating_util_payroll_amt_tobdgt_v {
-    label: "Payroll Nonoperating Utility $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.nonoperating_util_payroll_amt} - ${glm_property_f_bdgt.nonoperating_util_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: rbe_outlet_payroll_amt_tobdgt_v {
-    label: "Payroll RB&E Outlet $ Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: ${glm_property_f_ty.rbe_outlet_payroll_amt} - ${glm_property_f_bdgt.rbe_outlet_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  #-- Payroll % var
-
-  measure: payroll_amt_tobdgt {
-    label: "Payroll $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.payroll_amt}, ${glm_property_f_bdgt.payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: room_payroll_amt_tobdgt {
-    label: "Payroll Rms $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.room_payroll_amt}, ${glm_property_f_bdgt.room_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: rbe_payroll_amt_tobdgt {
-    label: "Payroll RB&E Other $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_payroll_amt}, ${glm_property_f_bdgt.rbe_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: spa_payroll_amt_tobdgt {
-    label: "Payroll Spa $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.spa_payroll_amt}, ${glm_property_f_bdgt.spa_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: golf_payroll_amt_tobdgt {
-    label: "Payroll RB&E Golf $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.golf_payroll_amt}, ${glm_property_f_bdgt.golf_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: fitness_recreation_payroll_amt_tobdgt {
-    label: "Payroll Fitness & Rec $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.fitness_recreation_payroll_amt}, ${glm_property_f_bdgt.fitness_recreation_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: parking_transportation_payroll_amt_tobdgt {
-    label: "Payroll Parking & Trans $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.parking_transportation_payroll_amt}, ${glm_property_f_bdgt.parking_transportation_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: telecom_payroll_amt_tobdgt {
-    label: "Payroll Telecom $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.telecom_payroll_amt}, ${glm_property_f_bdgt.telecom_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: retail_payroll_amt_tobdgt {
-    label: "Payroll Retail $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.retail_payroll_amt}, ${glm_property_f_bdgt.retail_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: other_operated_payroll_amt_tobdgt {
-    label: "Payroll Other Op. Dept. $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_payroll_amt}, ${glm_property_f_bdgt.other_operated_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: property_mgmt_payroll_amt_tobdgt {
-    label: "Payroll Mgmt Srvcs $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.property_mgmt_payroll_amt}, ${glm_property_f_bdgt.property_mgmt_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: administrative_general_payroll_amt_tobdgt {
-    label: "Payroll A&G $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.administrative_general_payroll_amt}, ${glm_property_f_bdgt.administrative_general_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: information_technology_payroll_amt_tobdgt {
-    label: "Payroll IT $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.information_technology_payroll_amt}, ${glm_property_f_bdgt.information_technology_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: sales_marketing_payroll_amt_tobdgt {
-    label: "Payroll S&M $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.sales_marketing_payroll_amt}, ${glm_property_f_bdgt.sales_marketing_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: property_operations_maintenance_payroll_amt_tobdgt {
-    label: "Payroll R&M $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.property_operations_maintenance_payroll_amt}, ${glm_property_f_bdgt.property_operations_maintenance_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: misc_payroll_amt_tobdgt {
-    label: "Payroll Rentals & Other $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.misc_payroll_amt}, ${glm_property_f_bdgt.misc_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: nonoperating_realty_payroll_amt_tobdgt {
-    label: "Payroll Nonoperating Realty $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_payroll_amt}, ${glm_property_f_bdgt.nonoperating_realty_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: nonoperating_airport_payroll_amt_tobdgt {
-    label: "Payroll Nonoperating Airport $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_payroll_amt}, ${glm_property_f_bdgt.nonoperating_airport_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: nonoperating_util_payroll_amt_tobdgt {
-    label: "Payroll Nonoperating Utility $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_payroll_amt}, ${glm_property_f_bdgt.nonoperating_util_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: rbe_outlet_payroll_amt_tobdgt {
-    label: "Payroll RB&E Outlet $ Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_payroll_amt}, ${glm_property_f_bdgt.rbe_outlet_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
+#   measure: payroll_amt_tobdgt_v {
+#     label: "Payroll $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.payroll_amt} - ${glm_property_f_bdgt.payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: room_payroll_amt_tobdgt_v {
+#     label: "Payroll Rms $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.room_payroll_amt} - ${glm_property_f_bdgt.room_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: rbe_payroll_amt_tobdgt_v {
+#     label: "Payroll RB&E Other $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.rbe_payroll_amt} - ${glm_property_f_bdgt.rbe_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: spa_payroll_amt_tobdgt_v {
+#     label: "Payroll Spa $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.spa_payroll_amt} - ${glm_property_f_bdgt.spa_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: golf_payroll_amt_tobdgt_v {
+#     label: "Payroll RB&E Golf $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.golf_payroll_amt} - ${glm_property_f_bdgt.golf_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: fitness_recreation_payroll_amt_tobdgt_v {
+#     label: "Payroll Fitness & Rec $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.fitness_recreation_payroll_amt} - ${glm_property_f_bdgt.fitness_recreation_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: parking_transportation_payroll_amt_tobdgt_v {
+#     label: "Payroll Parking & Trans $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.parking_transportation_payroll_amt} - ${glm_property_f_bdgt.parking_transportation_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: telecom_payroll_amt_tobdgt_v {
+#     label: "Payroll Telecom $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.telecom_payroll_amt} - ${glm_property_f_bdgt.telecom_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: retail_payroll_amt_tobdgt_v {
+#     label: "Payroll Retail $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.retail_payroll_amt} - ${glm_property_f_bdgt.retail_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: other_operated_payroll_amt_tobdgt_v {
+#     label: "Payroll Other Op. Dept. $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.other_operated_payroll_amt} - ${glm_property_f_bdgt.other_operated_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: property_mgmt_payroll_amt_tobdgt_v {
+#     label: "Payroll Mgmt Srvcs $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.property_mgmt_payroll_amt} - ${glm_property_f_bdgt.property_mgmt_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: administrative_general_payroll_amt_tobdgt_v {
+#     label: "Payroll A&G $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.administrative_general_payroll_amt} - ${glm_property_f_bdgt.administrative_general_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: information_technology_payroll_amt_tobdgt_v {
+#     label: "Payroll IT $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.information_technology_payroll_amt} - ${glm_property_f_bdgt.information_technology_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: sales_marketing_payroll_amt_tobdgt_v {
+#     label: "Payroll S&M $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.sales_marketing_payroll_amt} - ${glm_property_f_bdgt.sales_marketing_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: property_operations_maintenance_payroll_amt_tobdgt_v {
+#     label: "Payroll R&M $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.property_operations_maintenance_payroll_amt} - ${glm_property_f_bdgt.property_operations_maintenance_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: misc_payroll_amt_tobdgt_v {
+#     label: "Payroll Rentals & Other $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.misc_payroll_amt} - ${glm_property_f_bdgt.misc_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: nonoperating_realty_payroll_amt_tobdgt_v {
+#     label: "Payroll Nonoperating Realty $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.nonoperating_realty_payroll_amt} - ${glm_property_f_bdgt.nonoperating_realty_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: nonoperating_airport_payroll_amt_tobdgt_v {
+#     label: "Payroll Nonoperating Airport $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.nonoperating_airport_payroll_amt} - ${glm_property_f_bdgt.nonoperating_airport_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: nonoperating_util_payroll_amt_tobdgt_v {
+#     label: "Payroll Nonoperating Utility $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.nonoperating_util_payroll_amt} - ${glm_property_f_bdgt.nonoperating_util_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: rbe_outlet_payroll_amt_tobdgt_v {
+#     label: "Payroll RB&E Outlet $ Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: ${glm_property_f_ty.rbe_outlet_payroll_amt} - ${glm_property_f_bdgt.rbe_outlet_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   #-- Payroll % var
+#
+#   measure: payroll_amt_tobdgt {
+#     label: "Payroll $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.payroll_amt}, ${glm_property_f_bdgt.payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: room_payroll_amt_tobdgt {
+#     label: "Payroll Rms $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.room_payroll_amt}, ${glm_property_f_bdgt.room_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: rbe_payroll_amt_tobdgt {
+#     label: "Payroll RB&E Other $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_payroll_amt}, ${glm_property_f_bdgt.rbe_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: spa_payroll_amt_tobdgt {
+#     label: "Payroll Spa $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.spa_payroll_amt}, ${glm_property_f_bdgt.spa_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: golf_payroll_amt_tobdgt {
+#     label: "Payroll RB&E Golf $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.golf_payroll_amt}, ${glm_property_f_bdgt.golf_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: fitness_recreation_payroll_amt_tobdgt {
+#     label: "Payroll Fitness & Rec $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.fitness_recreation_payroll_amt}, ${glm_property_f_bdgt.fitness_recreation_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: parking_transportation_payroll_amt_tobdgt {
+#     label: "Payroll Parking & Trans $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.parking_transportation_payroll_amt}, ${glm_property_f_bdgt.parking_transportation_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: telecom_payroll_amt_tobdgt {
+#     label: "Payroll Telecom $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.telecom_payroll_amt}, ${glm_property_f_bdgt.telecom_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: retail_payroll_amt_tobdgt {
+#     label: "Payroll Retail $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_payroll_amt}, ${glm_property_f_bdgt.retail_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: other_operated_payroll_amt_tobdgt {
+#     label: "Payroll Other Op. Dept. $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_payroll_amt}, ${glm_property_f_bdgt.other_operated_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: property_mgmt_payroll_amt_tobdgt {
+#     label: "Payroll Mgmt Srvcs $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.property_mgmt_payroll_amt}, ${glm_property_f_bdgt.property_mgmt_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: administrative_general_payroll_amt_tobdgt {
+#     label: "Payroll A&G $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.administrative_general_payroll_amt}, ${glm_property_f_bdgt.administrative_general_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: information_technology_payroll_amt_tobdgt {
+#     label: "Payroll IT $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.information_technology_payroll_amt}, ${glm_property_f_bdgt.information_technology_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: sales_marketing_payroll_amt_tobdgt {
+#     label: "Payroll S&M $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.sales_marketing_payroll_amt}, ${glm_property_f_bdgt.sales_marketing_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: property_operations_maintenance_payroll_amt_tobdgt {
+#     label: "Payroll R&M $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.property_operations_maintenance_payroll_amt}, ${glm_property_f_bdgt.property_operations_maintenance_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: misc_payroll_amt_tobdgt {
+#     label: "Payroll Rentals & Other $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.misc_payroll_amt}, ${glm_property_f_bdgt.misc_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: nonoperating_realty_payroll_amt_tobdgt {
+#     label: "Payroll Nonoperating Realty $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_payroll_amt}, ${glm_property_f_bdgt.nonoperating_realty_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: nonoperating_airport_payroll_amt_tobdgt {
+#     label: "Payroll Nonoperating Airport $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_payroll_amt}, ${glm_property_f_bdgt.nonoperating_airport_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: nonoperating_util_payroll_amt_tobdgt {
+#     label: "Payroll Nonoperating Utility $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_payroll_amt}, ${glm_property_f_bdgt.nonoperating_util_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: rbe_outlet_payroll_amt_tobdgt {
+#     label: "Payroll RB&E Outlet $ Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_payroll_amt}, ${glm_property_f_bdgt.rbe_outlet_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
 
   #-- Covers
 
@@ -3021,113 +3021,113 @@ view: glm_property_f_tobdgt {
 
   #-- Payroll /Rev
 
-  measure: payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.payroll_rev_pct} - ${glm_property_f_bdgt.payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  #-- Payroll /Rev % var
-
-  measure: payroll_rev_pct_tobdgt {
-    label: "Payroll /Rev Act:Bdgt - var %"
-    description: "(Actual - Bdgt) / Bdgt"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.payroll_rev_pct}, ${glm_property_f_bdgt.payroll_rev_pct}) ;;
-    value_format_name: percent_1
-  }
-
-  #-- Payroll Rev %
-
-  measure: room_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Rms Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.room_payroll_rev_pct} - ${glm_property_f_bdgt.room_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: rbe_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev RB&E Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.rbe_payroll_rev_pct} - ${glm_property_f_bdgt.rbe_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: spa_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Spa Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.spa_payroll_rev_pct} - ${glm_property_f_bdgt.spa_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: golf_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Golf Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.golf_payroll_rev_pct} - ${glm_property_f_bdgt.golf_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: fitness_recreation_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Fitness & Rec Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.fitness_recreation_payroll_rev_pct} - ${glm_property_f_bdgt.fitness_recreation_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: parking_transportation_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Parking & Trans Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.parking_transportation_payroll_rev_pct} - ${glm_property_f_bdgt.parking_transportation_payroll_rev_pct} );;
-    value_format_name: usd_0
-  }
-
-  measure: telecom_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Telecom Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.telecom_payroll_rev_pct} - ${glm_property_f_bdgt.telecom_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: retail_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Retail Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.retail_payroll_rev_pct} - ${glm_property_f_bdgt.retail_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: other_operated_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Other Op. Dept. Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.other_operated_payroll_rev_pct} - ${glm_property_f_bdgt.other_operated_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: property_mgmt_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Mgmt Srvcs Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.property_mgmt_payroll_rev_pct} - ${glm_property_f_bdgt.property_mgmt_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: misc_payroll_rev_pct_tobdgt_v {
-    label: "Payroll /Rev Rentals & Other Act:Bdgt - var"
-    description: "Actual - Bdgt"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.misc_payroll_rev_pct} - ${glm_property_f_bdgt.misc_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
+#   measure: payroll_rev_pct_tobdgt_v {
+#     label: "Payroll /Rev Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.payroll_rev_pct} - ${glm_property_f_bdgt.payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   #-- Payroll /Rev % var
+#
+#   measure: payroll_rev_pct_tobdgt {
+#     label: "Payroll /Rev Act:Bdgt - var %"
+#     description: "(Actual - Bdgt) / Bdgt"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.payroll_rev_pct}, ${glm_property_f_bdgt.payroll_rev_pct}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   #-- Payroll Rev %
+#
+#   measure: room_payroll_rev_pct_tobdgt_v {
+#     label: "Payroll /Rev Rms Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.room_payroll_rev_pct} - ${glm_property_f_bdgt.room_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: rbe_payroll_rev_pct_tobdgt_v {
+#     label: "Payroll /Rev RB&E Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.rbe_payroll_rev_pct} - ${glm_property_f_bdgt.rbe_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: spa_payroll_rev_pct_tobdgt_v {
+#     label: "Payroll /Rev Spa Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.spa_payroll_rev_pct} - ${glm_property_f_bdgt.spa_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: golf_payroll_rev_pct_tobdgt_v {
+#     label: "Payroll /Rev Golf Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.golf_payroll_rev_pct} - ${glm_property_f_bdgt.golf_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: fitness_recreation_payroll_rev_pct_tobdgt_v {
+#     label: "Payroll /Rev Fitness & Rec Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.fitness_recreation_payroll_rev_pct} - ${glm_property_f_bdgt.fitness_recreation_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: parking_transportation_payroll_rev_pct_tobdgt_v {
+#     label: "Payroll /Rev Parking & Trans Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.parking_transportation_payroll_rev_pct} - ${glm_property_f_bdgt.parking_transportation_payroll_rev_pct} );;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: telecom_payroll_rev_pct_tobdgt_v {
+#     label: "Payroll /Rev Telecom Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.telecom_payroll_rev_pct} - ${glm_property_f_bdgt.telecom_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: retail_payroll_rev_pct_tobdgt_v {
+#     label: "Payroll /Rev Retail Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.retail_payroll_rev_pct} - ${glm_property_f_bdgt.retail_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: other_operated_payroll_rev_pct_tobdgt_v {
+#     label: "Payroll /Rev Other Op. Dept. Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.other_operated_payroll_rev_pct} - ${glm_property_f_bdgt.other_operated_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: property_mgmt_payroll_rev_pct_tobdgt_v {
+#     label: "Payroll /Rev Mgmt Srvcs Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.property_mgmt_payroll_rev_pct} - ${glm_property_f_bdgt.property_mgmt_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: misc_payroll_rev_pct_tobdgt_v {
+#     label: "Payroll /Rev Rentals & Other Act:Bdgt - var"
+#     description: "Actual - Bdgt"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.misc_payroll_rev_pct} - ${glm_property_f_bdgt.misc_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
 
   #-- Rental property splits
 

@@ -887,264 +887,264 @@ view: glm_property_future_fcst_f_ty {
 
   #-- Payroll
 
-  measure: payroll_amt {
-    label: "Payroll $"
-    description: "Payroll Amount. Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: room_payroll_amt {
-    label: "Payroll Rms $"
-    description: "Rooms Payroll. Segment 2: 400-499, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.room_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: rbe_payroll_amt {
-    label: "Payroll RB&E $"
-    description: "RB&E Payroll. Segment 2: 500-599, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: spa_payroll_amt {
-    label: "Payroll Spa $"
-    description: "Spa Payroll. Segment 2: 666, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.spa_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: golf_payroll_amt {
-    label: "Payroll Golf $"
-    description: "Golf Payroll. 610-635, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.golf_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: fitness_recreation_payroll_amt {
-    label: "Payroll Fitness & Rec $"
-    description: "Fitness & Rec Payroll. Segment 2: 650-664, 668-674, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.fitness_recreation_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: parking_transportation_payroll_amt {
-    label: "Payroll Parking & Trans $"
-    description: "Parking & Trans Payroll. Segment 2: 720, 740, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.parking_transportation_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: telecom_payroll_amt {
-    label: "Payroll Telecom $"
-    description: "Telecom Payroll. Segment 2: 735, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.telecom_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: retail_payroll_amt {
-    label: "Payroll Retail $"
-    description: "Retail Payroll. Segment 2: 750-769, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.retail_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: other_operated_payroll_amt {
-    label: "Payroll Other Op. Dept. $"
-    description: "Parking & Trans Payroll, Dry Cleaning Payroll, Telecom Payroll. Segment 2: 710-721, 735-740, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.other_operated_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: property_mgmt_payroll_amt {
-    label: "Payroll Mgmt Srvcs $"
-    description: "Management Services Payroll. Segment 2: 770-789, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.property_mgmt_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: administrative_general_payroll_amt {
-    label: "Payroll A&G $"
-    description: "Admin & General Payroll. Segment 2: 800-814, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.administrative_general_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: information_technology_payroll_amt {
-    label: "Payroll IT $"
-    description: "Info Tech Payroll. Segment 2: 815, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.information_technology_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: sales_marketing_payroll_amt {
-    label: "Payroll S&M $"
-    description: "Sales & Marketing Payroll. Segment 2: 825-849, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.sales_marketing_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: property_operations_maintenance_payroll_amt {
-    label: "Payroll R&M $"
-    description: "Property Ops & Maintenance Payroll. Segment 2: 850-874, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.property_operations_maintenance_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: misc_payroll_amt {
-    label: "Payroll Rentals & Other $"
-    description: "Rentals & Other Payroll. Segment 2: 790-799, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.misc_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: nonoperating_realty_payroll_amt {
-    label: "Payroll Nonoperating Realty $"
-    description: "Nonoperating Realty Payroll. Segment 2: 681-685, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.nonoperating_realty_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: nonoperating_airport_payroll_amt {
-    label: "Payroll Nonoperating Airport $"
-    description: "Nonoperating Airport Payroll. Segment 2: 680, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.nonoperating_airport_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: nonoperating_util_payroll_amt {
-    label: "Payroll Nonoperating Utility $"
-    description: "Nonoperating Utility Payroll. Segment 2: 689-699, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.nonoperating_util_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-  measure: rbe_outlet_payroll_amt {
-    label: "Payroll RB&E Outlet $"
-    description: "RB&E Outlet Payroll. Segment 2: 530-549, Segment 3: 6600-6999."
-    type: sum
-    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_outlet_payroll_amt}, to_number( null ) ) ;;
-    value_format_name: usd_0
-  }
-
-
-  #-- Payroll Rev %
-
-  measure: room_payroll_rev_pct {
-    label: "Payroll /Rev Rms %"
-    description: "Payroll Rms $ / Rev Rms $"
-    type: number
-    sql: utl..udf_divide( ${room_payroll_amt}, ${room_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: rbe_payroll_rev_pct {
-    label: "Payroll /Rev RB&E %"
-    description: "Payroll RB&E $ / Rev RB&E $"
-    type: number
-    sql: utl..udf_divide( ${rbe_payroll_amt}, ${rbe_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: spa_payroll_rev_pct {
-    label: "Payroll /Rev Spa %"
-    description: "Payroll Spa $ / Rev Spa $"
-    type: number
-    sql: utl..udf_divide( ${spa_payroll_amt}, ${spa_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: golf_payroll_rev_pct {
-    label: "Payroll /Rev Golf %"
-    description: "Payroll Golf $ / Rev Golf $"
-    type: number
-    sql: utl..udf_divide( ${golf_payroll_amt}, ${golf_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: fitness_recreation_payroll_rev_pct {
-    label: "Payroll /Rev Fitness & Rec %"
-    description: "Fitness & Rec Payroll $ / Rev Fitness & Rec $"
-    type: number
-    sql: utl..udf_divide( ${fitness_recreation_payroll_amt}, ${fitness_recreation_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: parking_transportation_payroll_rev_pct {
-    label: "Payroll /Rev Parking & Trans %"
-    description: "Payroll Parking & Trans $ / Rev Parking & Trans $"
-    type: number
-    sql: utl..udf_divide( ${parking_transportation_payroll_amt}, ${parking_transportation_rev_amt} );;
-    value_format_name: usd_0
-  }
-
-  measure: telecom_payroll_rev_pct {
-    label: "Payroll /Rev Telecom %"
-    description: "Payroll Telecom $ / Rev Telecom $"
-    type: number
-    sql: utl..udf_divide( ${telecom_payroll_amt}, ${telecom_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: retail_payroll_rev_pct {
-    label: "Payroll /Rev Retail %"
-    description: "Payroll Retail $ / Rev Retail $"
-    type: number
-    sql: utl..udf_divide( ${retail_payroll_amt}, ${retail_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: other_operated_payroll_rev_pct {
-    label: "Payroll /Rev Other Op. Dept. %"
-    description: "Payroll Other Op. Dept. $ / Rev Other Op. dept. $"
-    type: number
-    sql: utl..udf_divide( ${other_operated_payroll_amt}, ${other_operated_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: property_mgmt_payroll_rev_pct {
-    label: "Payroll /Rev Mgmt Srvcs %"
-    description: "Payroll Mgmt Srvcs $ / Rev Mgmt Srvcs $"
-    type: number
-    sql: utl..udf_divide( ${property_mgmt_payroll_amt}, ${property_mgmt_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: misc_payroll_rev_pct {
-    label: "Payroll /Rev Rentals & Other %"
-    description: "Payroll Rentals & Other $ / Rev Rentals & Other $"
-    type: number
-    sql: utl..udf_divide( ${misc_payroll_amt}, ${misc_rev_amt} );;
-    value_format_name: percent_1
-  }
-
-  measure: rbe_outlet_payroll_rev_pct {
-    label: "Payroll /Rev RB&E Outlet %"
-    description: "Payroll RB&E Outlet $ / Rev RB&E Outlet $"
-    type: number
-    sql: utl..udf_divide( ${rbe_outlet_payroll_amt}, ${rbe_outlet_rev_amt} );;
-    value_format_name: percent_1
-  }
+#   measure: payroll_amt {
+#     label: "Payroll $"
+#     description: "Payroll Amount. Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: room_payroll_amt {
+#     label: "Payroll Rms $"
+#     description: "Rooms Payroll. Segment 2: 400-499, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.room_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: rbe_payroll_amt {
+#     label: "Payroll RB&E $"
+#     description: "RB&E Payroll. Segment 2: 500-599, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: spa_payroll_amt {
+#     label: "Payroll Spa $"
+#     description: "Spa Payroll. Segment 2: 666, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.spa_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: golf_payroll_amt {
+#     label: "Payroll Golf $"
+#     description: "Golf Payroll. 610-635, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.golf_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: fitness_recreation_payroll_amt {
+#     label: "Payroll Fitness & Rec $"
+#     description: "Fitness & Rec Payroll. Segment 2: 650-664, 668-674, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.fitness_recreation_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: parking_transportation_payroll_amt {
+#     label: "Payroll Parking & Trans $"
+#     description: "Parking & Trans Payroll. Segment 2: 720, 740, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.parking_transportation_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: telecom_payroll_amt {
+#     label: "Payroll Telecom $"
+#     description: "Telecom Payroll. Segment 2: 735, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.telecom_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: retail_payroll_amt {
+#     label: "Payroll Retail $"
+#     description: "Retail Payroll. Segment 2: 750-769, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.retail_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: other_operated_payroll_amt {
+#     label: "Payroll Other Op. Dept. $"
+#     description: "Parking & Trans Payroll, Dry Cleaning Payroll, Telecom Payroll. Segment 2: 710-721, 735-740, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.other_operated_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: property_mgmt_payroll_amt {
+#     label: "Payroll Mgmt Srvcs $"
+#     description: "Management Services Payroll. Segment 2: 770-789, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.property_mgmt_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: administrative_general_payroll_amt {
+#     label: "Payroll A&G $"
+#     description: "Admin & General Payroll. Segment 2: 800-814, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.administrative_general_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: information_technology_payroll_amt {
+#     label: "Payroll IT $"
+#     description: "Info Tech Payroll. Segment 2: 815, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.information_technology_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: sales_marketing_payroll_amt {
+#     label: "Payroll S&M $"
+#     description: "Sales & Marketing Payroll. Segment 2: 825-849, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.sales_marketing_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: property_operations_maintenance_payroll_amt {
+#     label: "Payroll R&M $"
+#     description: "Property Ops & Maintenance Payroll. Segment 2: 850-874, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.property_operations_maintenance_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: misc_payroll_amt {
+#     label: "Payroll Rentals & Other $"
+#     description: "Rentals & Other Payroll. Segment 2: 790-799, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.misc_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: nonoperating_realty_payroll_amt {
+#     label: "Payroll Nonoperating Realty $"
+#     description: "Nonoperating Realty Payroll. Segment 2: 681-685, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.nonoperating_realty_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: nonoperating_airport_payroll_amt {
+#     label: "Payroll Nonoperating Airport $"
+#     description: "Nonoperating Airport Payroll. Segment 2: 680, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.nonoperating_airport_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: nonoperating_util_payroll_amt {
+#     label: "Payroll Nonoperating Utility $"
+#     description: "Nonoperating Utility Payroll. Segment 2: 689-699, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.nonoperating_util_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: rbe_outlet_payroll_amt {
+#     label: "Payroll RB&E Outlet $"
+#     description: "RB&E Outlet Payroll. Segment 2: 530-549, Segment 3: 6600-6999."
+#     type: sum
+#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_outlet_payroll_amt}, to_number( null ) ) ;;
+#     value_format_name: usd_0
+#   }
+#
+#
+#   #-- Payroll Rev %
+#
+#   measure: room_payroll_rev_pct {
+#     label: "Payroll /Rev Rms %"
+#     description: "Payroll Rms $ / Rev Rms $"
+#     type: number
+#     sql: utl..udf_divide( ${room_payroll_amt}, ${room_rev_amt} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: rbe_payroll_rev_pct {
+#     label: "Payroll /Rev RB&E %"
+#     description: "Payroll RB&E $ / Rev RB&E $"
+#     type: number
+#     sql: utl..udf_divide( ${rbe_payroll_amt}, ${rbe_rev_amt} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: spa_payroll_rev_pct {
+#     label: "Payroll /Rev Spa %"
+#     description: "Payroll Spa $ / Rev Spa $"
+#     type: number
+#     sql: utl..udf_divide( ${spa_payroll_amt}, ${spa_rev_amt} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: golf_payroll_rev_pct {
+#     label: "Payroll /Rev Golf %"
+#     description: "Payroll Golf $ / Rev Golf $"
+#     type: number
+#     sql: utl..udf_divide( ${golf_payroll_amt}, ${golf_rev_amt} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: fitness_recreation_payroll_rev_pct {
+#     label: "Payroll /Rev Fitness & Rec %"
+#     description: "Fitness & Rec Payroll $ / Rev Fitness & Rec $"
+#     type: number
+#     sql: utl..udf_divide( ${fitness_recreation_payroll_amt}, ${fitness_recreation_rev_amt} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: parking_transportation_payroll_rev_pct {
+#     label: "Payroll /Rev Parking & Trans %"
+#     description: "Payroll Parking & Trans $ / Rev Parking & Trans $"
+#     type: number
+#     sql: utl..udf_divide( ${parking_transportation_payroll_amt}, ${parking_transportation_rev_amt} );;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: telecom_payroll_rev_pct {
+#     label: "Payroll /Rev Telecom %"
+#     description: "Payroll Telecom $ / Rev Telecom $"
+#     type: number
+#     sql: utl..udf_divide( ${telecom_payroll_amt}, ${telecom_rev_amt} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: retail_payroll_rev_pct {
+#     label: "Payroll /Rev Retail %"
+#     description: "Payroll Retail $ / Rev Retail $"
+#     type: number
+#     sql: utl..udf_divide( ${retail_payroll_amt}, ${retail_rev_amt} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: other_operated_payroll_rev_pct {
+#     label: "Payroll /Rev Other Op. Dept. %"
+#     description: "Payroll Other Op. Dept. $ / Rev Other Op. dept. $"
+#     type: number
+#     sql: utl..udf_divide( ${other_operated_payroll_amt}, ${other_operated_rev_amt} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: property_mgmt_payroll_rev_pct {
+#     label: "Payroll /Rev Mgmt Srvcs %"
+#     description: "Payroll Mgmt Srvcs $ / Rev Mgmt Srvcs $"
+#     type: number
+#     sql: utl..udf_divide( ${property_mgmt_payroll_amt}, ${property_mgmt_rev_amt} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: misc_payroll_rev_pct {
+#     label: "Payroll /Rev Rentals & Other %"
+#     description: "Payroll Rentals & Other $ / Rev Rentals & Other $"
+#     type: number
+#     sql: utl..udf_divide( ${misc_payroll_amt}, ${misc_rev_amt} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: rbe_outlet_payroll_rev_pct {
+#     label: "Payroll /Rev RB&E Outlet %"
+#     description: "Payroll RB&E Outlet $ / Rev RB&E Outlet $"
+#     type: number
+#     sql: utl..udf_divide( ${rbe_outlet_payroll_amt}, ${rbe_outlet_rev_amt} );;
+#     value_format_name: percent_1
+#   }
 
 
   #-- Covers
@@ -1991,13 +1991,13 @@ view: glm_property_future_fcst_f_ty {
   }
 
   #-- Payroll /Rev
-  measure: payroll_rev_pct {
-    label: "Payroll /Rev %"
-    description: "Payroll $ / Rev $"
-    type: number
-    sql: utl..udf_divide( ${payroll_amt}, ${rev_amt} );;
-    value_format_name: percent_1
-  }
+#   measure: payroll_rev_pct {
+#     label: "Payroll /Rev %"
+#     description: "Payroll $ / Rev $"
+#     type: number
+#     sql: utl..udf_divide( ${payroll_amt}, ${rev_amt} );;
+#     value_format_name: percent_1
+#   }
 
   #-- Avg length of stay
   measure: length_of_stay_avg_amt {

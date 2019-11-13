@@ -1244,327 +1244,327 @@ view: glm_property_f_tofcst30 {
 
   #-- Payroll
 
-  measure: payroll_amt_tofcst30_v {
-    label: "Payroll $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.payroll_amt} - ${glm_property_f_fcst30.payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: room_payroll_amt_tofcst30_v {
-    label: "Payroll Rms $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.room_payroll_amt} - ${glm_property_f_fcst30.room_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: rbe_payroll_amt_tofcst30_v {
-    label: "Payroll RB&E Other $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.rbe_payroll_amt} - ${glm_property_f_fcst30.rbe_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: spa_payroll_amt_tofcst30_v {
-    label: "Payroll Spa $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.spa_payroll_amt} - ${glm_property_f_fcst30.spa_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: golf_payroll_amt_tofcst30_v {
-    label: "Payroll RB&E Golf $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.golf_payroll_amt} - ${glm_property_f_fcst30.golf_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: fitness_recreation_payroll_amt_tofcst30_v {
-    label: "Payroll Fitness & Rec $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.fitness_recreation_payroll_amt} - ${glm_property_f_fcst30.fitness_recreation_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: parking_transportation_payroll_amt_tofcst30_v {
-    label: "Payroll Parking & Trans $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.parking_transportation_payroll_amt} - ${glm_property_f_fcst30.parking_transportation_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: telecom_payroll_amt_tofcst30_v {
-    label: "Payroll Telecom $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.telecom_payroll_amt} - ${glm_property_f_fcst30.telecom_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: retail_payroll_amt_tofcst30_v {
-    label: "Payroll Retail $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.retail_payroll_amt} - ${glm_property_f_fcst30.retail_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: other_operated_payroll_amt_tofcst30_v {
-    label: "Payroll Other Op. Dept. $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.other_operated_payroll_amt} - ${glm_property_f_fcst30.other_operated_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: property_mgmt_payroll_amt_tofcst30_v {
-    label: "Payroll Mgmt Srvcs $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.property_mgmt_payroll_amt} - ${glm_property_f_fcst30.property_mgmt_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: administrative_general_payroll_amt_tofcst30_v {
-    label: "Payroll A&G $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.administrative_general_payroll_amt} - ${glm_property_f_fcst30.administrative_general_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: information_technology_payroll_amt_tofcst30_v {
-    label: "Payroll IT $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.information_technology_payroll_amt} - ${glm_property_f_fcst30.information_technology_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: sales_marketing_payroll_amt_tofcst30_v {
-    label: "Payroll S&M $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.sales_marketing_payroll_amt} - ${glm_property_f_fcst30.sales_marketing_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: property_operations_maintenance_payroll_amt_tofcst30_v {
-    label: "Payroll R&M $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.property_operations_maintenance_payroll_amt} - ${glm_property_f_fcst30.property_operations_maintenance_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: misc_payroll_amt_tofcst30_v {
-    label: "Payroll Rentals & Other $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.misc_payroll_amt} - ${glm_property_f_fcst30.misc_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: nonoperating_realty_payroll_amt_tofcst30_v {
-    label: "Payroll Nonoperating Realty $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.nonoperating_realty_payroll_amt} - ${glm_property_f_fcst30.nonoperating_realty_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: nonoperating_airport_payroll_amt_tofcst30_v {
-    label: "Payroll Nonoperating Airport $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.nonoperating_airport_payroll_amt} - ${glm_property_f_fcst30.nonoperating_airport_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: nonoperating_util_payroll_amt_tofcst30_v {
-    label: "Payroll Nonoperating Utility $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.nonoperating_util_payroll_amt} - ${glm_property_f_fcst30.nonoperating_util_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  measure: rbe_outlet_payroll_amt_tofcst30_v {
-    label: "Payroll RB&E Outlet $ Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: ${glm_property_f_ty.rbe_outlet_payroll_amt} - ${glm_property_f_fcst30.rbe_outlet_payroll_amt} ;;
-    value_format_name: decimal_0
-  }
-
-  #-- Payroll % var
-
-  measure: payroll_amt_tofcst30 {
-    label: "Payroll $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.payroll_amt}, ${glm_property_f_fcst30.payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: room_payroll_amt_tofcst30 {
-    label: "Payroll Rms $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.room_payroll_amt}, ${glm_property_f_fcst30.room_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: rbe_payroll_amt_tofcst30 {
-    label: "Payroll RB&E Other $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_payroll_amt}, ${glm_property_f_fcst30.rbe_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: spa_payroll_amt_tofcst30 {
-    label: "Payroll Spa $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.spa_payroll_amt}, ${glm_property_f_fcst30.spa_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: golf_payroll_amt_tofcst30 {
-    label: "Payroll RB&E Golf $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.golf_payroll_amt}, ${glm_property_f_fcst30.golf_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: fitness_recreation_payroll_amt_tofcst30 {
-    label: "Payroll Fitness & Rec $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.fitness_recreation_payroll_amt}, ${glm_property_f_fcst30.fitness_recreation_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: parking_transportation_payroll_amt_tofcst30 {
-    label: "Payroll Parking & Trans $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.parking_transportation_payroll_amt}, ${glm_property_f_fcst30.parking_transportation_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: telecom_payroll_amt_tofcst30 {
-    label: "Payroll Telecom $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.telecom_payroll_amt}, ${glm_property_f_fcst30.telecom_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: retail_payroll_amt_tofcst30 {
-    label: "Payroll Retail $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.retail_payroll_amt}, ${glm_property_f_fcst30.retail_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: other_operated_payroll_amt_tofcst30 {
-    label: "Payroll Other Op. Dept. $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_payroll_amt}, ${glm_property_f_fcst30.other_operated_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: property_mgmt_payroll_amt_tofcst30 {
-    label: "Payroll Mgmt Srvcs $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.property_mgmt_payroll_amt}, ${glm_property_f_fcst30.property_mgmt_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: administrative_general_payroll_amt_tofcst30 {
-    label: "Payroll A&G $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.administrative_general_payroll_amt}, ${glm_property_f_fcst30.administrative_general_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: information_technology_payroll_amt_tofcst30 {
-    label: "Payroll IT $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.information_technology_payroll_amt}, ${glm_property_f_fcst30.information_technology_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: sales_marketing_payroll_amt_tofcst30 {
-    label: "Payroll S&M $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.sales_marketing_payroll_amt}, ${glm_property_f_fcst30.sales_marketing_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: property_operations_maintenance_payroll_amt_tofcst30 {
-    label: "Payroll R&M $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.property_operations_maintenance_payroll_amt}, ${glm_property_f_fcst30.property_operations_maintenance_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: misc_payroll_amt_tofcst30 {
-    label: "Payroll Rentals & Other $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.misc_payroll_amt}, ${glm_property_f_fcst30.misc_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: nonoperating_realty_payroll_amt_tofcst30 {
-    label: "Payroll Nonoperating Realty $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_payroll_amt}, ${glm_property_f_fcst30.nonoperating_realty_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: nonoperating_airport_payroll_amt_tofcst30 {
-    label: "Payroll Nonoperating Airport $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_payroll_amt}, ${glm_property_f_fcst30.nonoperating_airport_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: nonoperating_util_payroll_amt_tofcst30 {
-    label: "Payroll Nonoperating Utility $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_payroll_amt}, ${glm_property_f_fcst30.nonoperating_util_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
-
-  measure: rbe_outlet_payroll_amt_tofcst30 {
-    label: "Payroll RB&E Outlet $ Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_payroll_amt}, ${glm_property_f_fcst30.rbe_outlet_payroll_amt}) ;;
-    value_format_name: percent_1
-  }
+#   measure: payroll_amt_tofcst30_v {
+#     label: "Payroll $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.payroll_amt} - ${glm_property_f_fcst30.payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: room_payroll_amt_tofcst30_v {
+#     label: "Payroll Rms $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.room_payroll_amt} - ${glm_property_f_fcst30.room_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: rbe_payroll_amt_tofcst30_v {
+#     label: "Payroll RB&E Other $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.rbe_payroll_amt} - ${glm_property_f_fcst30.rbe_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: spa_payroll_amt_tofcst30_v {
+#     label: "Payroll Spa $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.spa_payroll_amt} - ${glm_property_f_fcst30.spa_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: golf_payroll_amt_tofcst30_v {
+#     label: "Payroll RB&E Golf $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.golf_payroll_amt} - ${glm_property_f_fcst30.golf_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: fitness_recreation_payroll_amt_tofcst30_v {
+#     label: "Payroll Fitness & Rec $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.fitness_recreation_payroll_amt} - ${glm_property_f_fcst30.fitness_recreation_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: parking_transportation_payroll_amt_tofcst30_v {
+#     label: "Payroll Parking & Trans $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.parking_transportation_payroll_amt} - ${glm_property_f_fcst30.parking_transportation_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: telecom_payroll_amt_tofcst30_v {
+#     label: "Payroll Telecom $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.telecom_payroll_amt} - ${glm_property_f_fcst30.telecom_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: retail_payroll_amt_tofcst30_v {
+#     label: "Payroll Retail $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.retail_payroll_amt} - ${glm_property_f_fcst30.retail_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: other_operated_payroll_amt_tofcst30_v {
+#     label: "Payroll Other Op. Dept. $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.other_operated_payroll_amt} - ${glm_property_f_fcst30.other_operated_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: property_mgmt_payroll_amt_tofcst30_v {
+#     label: "Payroll Mgmt Srvcs $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.property_mgmt_payroll_amt} - ${glm_property_f_fcst30.property_mgmt_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: administrative_general_payroll_amt_tofcst30_v {
+#     label: "Payroll A&G $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.administrative_general_payroll_amt} - ${glm_property_f_fcst30.administrative_general_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: information_technology_payroll_amt_tofcst30_v {
+#     label: "Payroll IT $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.information_technology_payroll_amt} - ${glm_property_f_fcst30.information_technology_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: sales_marketing_payroll_amt_tofcst30_v {
+#     label: "Payroll S&M $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.sales_marketing_payroll_amt} - ${glm_property_f_fcst30.sales_marketing_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: property_operations_maintenance_payroll_amt_tofcst30_v {
+#     label: "Payroll R&M $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.property_operations_maintenance_payroll_amt} - ${glm_property_f_fcst30.property_operations_maintenance_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: misc_payroll_amt_tofcst30_v {
+#     label: "Payroll Rentals & Other $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.misc_payroll_amt} - ${glm_property_f_fcst30.misc_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: nonoperating_realty_payroll_amt_tofcst30_v {
+#     label: "Payroll Nonoperating Realty $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.nonoperating_realty_payroll_amt} - ${glm_property_f_fcst30.nonoperating_realty_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: nonoperating_airport_payroll_amt_tofcst30_v {
+#     label: "Payroll Nonoperating Airport $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.nonoperating_airport_payroll_amt} - ${glm_property_f_fcst30.nonoperating_airport_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: nonoperating_util_payroll_amt_tofcst30_v {
+#     label: "Payroll Nonoperating Utility $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.nonoperating_util_payroll_amt} - ${glm_property_f_fcst30.nonoperating_util_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   measure: rbe_outlet_payroll_amt_tofcst30_v {
+#     label: "Payroll RB&E Outlet $ Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: ${glm_property_f_ty.rbe_outlet_payroll_amt} - ${glm_property_f_fcst30.rbe_outlet_payroll_amt} ;;
+#     value_format_name: decimal_0
+#   }
+#
+#   #-- Payroll % var
+#
+#   measure: payroll_amt_tofcst30 {
+#     label: "Payroll $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.payroll_amt}, ${glm_property_f_fcst30.payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: room_payroll_amt_tofcst30 {
+#     label: "Payroll Rms $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.room_payroll_amt}, ${glm_property_f_fcst30.room_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: rbe_payroll_amt_tofcst30 {
+#     label: "Payroll RB&E Other $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_payroll_amt}, ${glm_property_f_fcst30.rbe_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: spa_payroll_amt_tofcst30 {
+#     label: "Payroll Spa $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.spa_payroll_amt}, ${glm_property_f_fcst30.spa_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: golf_payroll_amt_tofcst30 {
+#     label: "Payroll RB&E Golf $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.golf_payroll_amt}, ${glm_property_f_fcst30.golf_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: fitness_recreation_payroll_amt_tofcst30 {
+#     label: "Payroll Fitness & Rec $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.fitness_recreation_payroll_amt}, ${glm_property_f_fcst30.fitness_recreation_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: parking_transportation_payroll_amt_tofcst30 {
+#     label: "Payroll Parking & Trans $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.parking_transportation_payroll_amt}, ${glm_property_f_fcst30.parking_transportation_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: telecom_payroll_amt_tofcst30 {
+#     label: "Payroll Telecom $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.telecom_payroll_amt}, ${glm_property_f_fcst30.telecom_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: retail_payroll_amt_tofcst30 {
+#     label: "Payroll Retail $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.retail_payroll_amt}, ${glm_property_f_fcst30.retail_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: other_operated_payroll_amt_tofcst30 {
+#     label: "Payroll Other Op. Dept. $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.other_operated_payroll_amt}, ${glm_property_f_fcst30.other_operated_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: property_mgmt_payroll_amt_tofcst30 {
+#     label: "Payroll Mgmt Srvcs $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.property_mgmt_payroll_amt}, ${glm_property_f_fcst30.property_mgmt_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: administrative_general_payroll_amt_tofcst30 {
+#     label: "Payroll A&G $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.administrative_general_payroll_amt}, ${glm_property_f_fcst30.administrative_general_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: information_technology_payroll_amt_tofcst30 {
+#     label: "Payroll IT $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.information_technology_payroll_amt}, ${glm_property_f_fcst30.information_technology_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: sales_marketing_payroll_amt_tofcst30 {
+#     label: "Payroll S&M $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.sales_marketing_payroll_amt}, ${glm_property_f_fcst30.sales_marketing_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: property_operations_maintenance_payroll_amt_tofcst30 {
+#     label: "Payroll R&M $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.property_operations_maintenance_payroll_amt}, ${glm_property_f_fcst30.property_operations_maintenance_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: misc_payroll_amt_tofcst30 {
+#     label: "Payroll Rentals & Other $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.misc_payroll_amt}, ${glm_property_f_fcst30.misc_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: nonoperating_realty_payroll_amt_tofcst30 {
+#     label: "Payroll Nonoperating Realty $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_realty_payroll_amt}, ${glm_property_f_fcst30.nonoperating_realty_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: nonoperating_airport_payroll_amt_tofcst30 {
+#     label: "Payroll Nonoperating Airport $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_airport_payroll_amt}, ${glm_property_f_fcst30.nonoperating_airport_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: nonoperating_util_payroll_amt_tofcst30 {
+#     label: "Payroll Nonoperating Utility $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.nonoperating_util_payroll_amt}, ${glm_property_f_fcst30.nonoperating_util_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: rbe_outlet_payroll_amt_tofcst30 {
+#     label: "Payroll RB&E Outlet $ Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_outlet_payroll_amt}, ${glm_property_f_fcst30.rbe_outlet_payroll_amt}) ;;
+#     value_format_name: percent_1
+#   }
 
   #-- Covers
 
@@ -3021,113 +3021,113 @@ view: glm_property_f_tofcst30 {
 
   #-- Payroll /Rev
 
-  measure: payroll_rev_pct_tofcst30_v {
-    label: "Payroll /Rev Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.payroll_rev_pct} - ${glm_property_f_fcst30.payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  #-- Payroll /Rev % var
-
-  measure: payroll_rev_pct_tofcst30 {
-    label: "Payroll /Rev Act:Fcst30 - var %"
-    description: "(Actual - Fcst30) / Fcst30"
-    type: number
-    sql: utl..udf_percent_var( ${glm_property_f_ty.payroll_rev_pct}, ${glm_property_f_fcst30.payroll_rev_pct}) ;;
-    value_format_name: percent_1
-  }
-
-  #-- Payroll Rev %
-
-  measure: room_payroll_rev_pct_tofcst30_v {
-    label: "Payroll /Rev Rms Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.room_payroll_rev_pct} - ${glm_property_f_fcst30.room_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: rbe_payroll_rev_pct_tofcst30_v {
-    label: "Payroll /Rev RB&E Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.rbe_payroll_rev_pct} - ${glm_property_f_fcst30.rbe_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: spa_payroll_rev_pct_tofcst30_v {
-    label: "Payroll /Rev Spa Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.spa_payroll_rev_pct} - ${glm_property_f_fcst30.spa_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: golf_payroll_rev_pct_tofcst30_v {
-    label: "Payroll /Rev Golf Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.golf_payroll_rev_pct} - ${glm_property_f_fcst30.golf_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: fitness_recreation_payroll_rev_pct_tofcst30_v {
-    label: "Payroll /Rev Fitness & Rec Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.fitness_recreation_payroll_rev_pct} - ${glm_property_f_fcst30.fitness_recreation_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: parking_transportation_payroll_rev_pct_tofcst30_v {
-    label: "Payroll /Rev Parking & Trans Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.parking_transportation_payroll_rev_pct} - ${glm_property_f_fcst30.parking_transportation_payroll_rev_pct} );;
-    value_format_name: usd_0
-  }
-
-  measure: telecom_payroll_rev_pct_tofcst30_v {
-    label: "Payroll /Rev Telecom Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.telecom_payroll_rev_pct} - ${glm_property_f_fcst30.telecom_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: retail_payroll_rev_pct_tofcst30_v {
-    label: "Payroll /Rev Retail Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.retail_payroll_rev_pct} - ${glm_property_f_fcst30.retail_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: other_operated_payroll_rev_pct_tofcst30_v {
-    label: "Payroll /Rev Other Op. Dept. Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.other_operated_payroll_rev_pct} - ${glm_property_f_fcst30.other_operated_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: property_mgmt_payroll_rev_pct_tofcst30_v {
-    label: "Payroll /Rev Mgmt Srvcs Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.property_mgmt_payroll_rev_pct} - ${glm_property_f_fcst30.property_mgmt_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
-
-  measure: misc_payroll_rev_pct_tofcst30_v {
-    label: "Payroll /Rev Rentals & Other Act:Fcst30 - var"
-    description: "Actual - Fcst30"
-    type: number
-    sql: utl..udf_divide( ${glm_property_f_ty.misc_payroll_rev_pct} - ${glm_property_f_fcst30.misc_payroll_rev_pct} );;
-    value_format_name: percent_1
-  }
+#   measure: payroll_rev_pct_tofcst30_v {
+#     label: "Payroll /Rev Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.payroll_rev_pct} - ${glm_property_f_fcst30.payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   #-- Payroll /Rev % var
+#
+#   measure: payroll_rev_pct_tofcst30 {
+#     label: "Payroll /Rev Act:Fcst30 - var %"
+#     description: "(Actual - Fcst30) / Fcst30"
+#     type: number
+#     sql: utl..udf_percent_var( ${glm_property_f_ty.payroll_rev_pct}, ${glm_property_f_fcst30.payroll_rev_pct}) ;;
+#     value_format_name: percent_1
+#   }
+#
+#   #-- Payroll Rev %
+#
+#   measure: room_payroll_rev_pct_tofcst30_v {
+#     label: "Payroll /Rev Rms Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.room_payroll_rev_pct} - ${glm_property_f_fcst30.room_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: rbe_payroll_rev_pct_tofcst30_v {
+#     label: "Payroll /Rev RB&E Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.rbe_payroll_rev_pct} - ${glm_property_f_fcst30.rbe_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: spa_payroll_rev_pct_tofcst30_v {
+#     label: "Payroll /Rev Spa Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.spa_payroll_rev_pct} - ${glm_property_f_fcst30.spa_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: golf_payroll_rev_pct_tofcst30_v {
+#     label: "Payroll /Rev Golf Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.golf_payroll_rev_pct} - ${glm_property_f_fcst30.golf_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: fitness_recreation_payroll_rev_pct_tofcst30_v {
+#     label: "Payroll /Rev Fitness & Rec Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.fitness_recreation_payroll_rev_pct} - ${glm_property_f_fcst30.fitness_recreation_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: parking_transportation_payroll_rev_pct_tofcst30_v {
+#     label: "Payroll /Rev Parking & Trans Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.parking_transportation_payroll_rev_pct} - ${glm_property_f_fcst30.parking_transportation_payroll_rev_pct} );;
+#     value_format_name: usd_0
+#   }
+#
+#   measure: telecom_payroll_rev_pct_tofcst30_v {
+#     label: "Payroll /Rev Telecom Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.telecom_payroll_rev_pct} - ${glm_property_f_fcst30.telecom_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: retail_payroll_rev_pct_tofcst30_v {
+#     label: "Payroll /Rev Retail Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.retail_payroll_rev_pct} - ${glm_property_f_fcst30.retail_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: other_operated_payroll_rev_pct_tofcst30_v {
+#     label: "Payroll /Rev Other Op. Dept. Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.other_operated_payroll_rev_pct} - ${glm_property_f_fcst30.other_operated_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: property_mgmt_payroll_rev_pct_tofcst30_v {
+#     label: "Payroll /Rev Mgmt Srvcs Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.property_mgmt_payroll_rev_pct} - ${glm_property_f_fcst30.property_mgmt_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
+#
+#   measure: misc_payroll_rev_pct_tofcst30_v {
+#     label: "Payroll /Rev Rentals & Other Act:Fcst30 - var"
+#     description: "Actual - Fcst30"
+#     type: number
+#     sql: utl..udf_divide( ${glm_property_f_ty.misc_payroll_rev_pct} - ${glm_property_f_fcst30.misc_payroll_rev_pct} );;
+#     value_format_name: percent_1
+#   }
 
   #-- Rental property splits
 
