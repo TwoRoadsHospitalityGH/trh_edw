@@ -1216,6 +1216,13 @@ view: glm_property_future_fcst_f_ty {
     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.arrival_cnt}, to_number( null ) ) ;;
   }
 
+  measure: occ_room_sp {
+    label: "Rms Occ  :"
+    description: "Blank space separator."
+    type: string
+    sql: '-----' ;;
+  }
+
   measure: occupied_room_cnt {
     label: "Rms Occ   "
     description: "Occupied Rooms. Segment 2: 400-499, Segment 3: 9000-9075."
