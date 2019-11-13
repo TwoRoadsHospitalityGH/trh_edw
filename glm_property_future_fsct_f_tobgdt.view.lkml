@@ -4538,8 +4538,8 @@ view: glm_property_future_fcst_f_tobdgt {
   }
 
   measure: flow_var_pct {
-    label: "Flow %"
-    description: "Flow Percent"
+    label: "Flow Act:Opt %"
+    description: "Flow Percent (Actual to Optimal)"
     hidden:  no
     type: number
     sql: case
