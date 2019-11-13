@@ -2273,7 +2273,7 @@ view: glm_property_f_tofcst30 {
   #-- Profit % var total rev
 
   measure: profit_rev_pct_tofcst30_v {
-    label: "Profit /TRev RB&E % Act:Fcst30 - var"
+    label: "Profit /TRev % Act:Fcst30 - var"
     description: "Actual - Fcst30"
     type: number
     sql: ${glm_property_f_ty.profit_rev_pct} - ${glm_property_f_fcst30.profit_rev_pct};;
@@ -2288,8 +2288,16 @@ view: glm_property_f_tofcst30 {
     value_format_name: percent_1
   }
 
+  measure: room_profit_rev_pct_tofcst30_v {
+    label: "Profit /Rev Rms % Act:Fcst30 - var"
+    description: "Actual - Fcst30"
+    type: number
+    sql: ${glm_property_f_ty.room_profit_rev_pct} - ${glm_property_f_fcst30.room_profit_rev_pct};;
+    value_format_name: percent_1
+  }
+
   measure: profit_rev_pct_tofcst30 {
-    label: "Profit /TRev RB&E % Act:Fcst30 - var %"
+    label: "Profit /TRev % Act:Fcst30 - var %"
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.profit_rev_pct}, ${glm_property_f_fcst30.profit_rev_pct});;
@@ -2301,6 +2309,14 @@ view: glm_property_f_tofcst30 {
     description: "(Actual - Fcst30) / Fcst30"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_profit_rev_pct}, ${glm_property_f_fcst30.rbe_profit_rev_pct});;
+    value_format_name: percent_1
+  }
+
+  measure: room_profit_rev_pct_tofcst30 {
+    label: "Profit /Rev Rms % Act:Fcst30 - var %"
+    description: "(Actual - Fcst30) / Fcst30"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.room_profit_rev_pct}, ${glm_property_f_fcst30.room_profit_rev_pct});;
     value_format_name: percent_1
   }
 

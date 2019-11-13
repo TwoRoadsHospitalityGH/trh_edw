@@ -2274,7 +2274,7 @@ view: glm_property_f_toly {
   #-- Profit % var total rev
 
   measure: profit_rev_pct_toly_v {
-    label: "Profit /TRev RB&E % Act:LY - var"
+    label: "Profit /TRev % Act:LY - var"
     description: "Actual - LY"
     type: number
     sql: ${glm_property_f_ty.profit_rev_pct} - ${glm_property_f_ly.profit_rev_pct};;
@@ -2289,8 +2289,16 @@ view: glm_property_f_toly {
     value_format_name: percent_1
   }
 
+  measure: room_profit_rev_pct_toly_v {
+    label: "Profit /Rev Rms % Act:LY - var"
+    description: "Actual - LY"
+    type: number
+    sql: ${glm_property_f_ty.room_profit_rev_pct} - ${glm_property_f_ly.room_profit_rev_pct};;
+    value_format_name: percent_1
+  }
+
   measure: profit_rev_pct_toly {
-    label: "Profit /TRev RB&E % Act:LY - var %"
+    label: "Profit /TRev % Act:LY - var %"
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.profit_rev_pct}, ${glm_property_f_ly.profit_rev_pct});;
@@ -2302,6 +2310,14 @@ view: glm_property_f_toly {
     description: "(Actual - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_f_ty.rbe_profit_rev_pct}, ${glm_property_f_ly.rbe_profit_rev_pct});;
+    value_format_name: percent_1
+  }
+
+  measure: room_profit_rev_pct_toly {
+    label: "Profit /Rev Rms % Act:LY - var %"
+    description: "(Actual - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_f_ty.room_profit_rev_pct}, ${glm_property_f_ly.room_profit_rev_pct});;
     value_format_name: percent_1
   }
 

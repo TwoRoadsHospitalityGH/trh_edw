@@ -1512,6 +1512,14 @@ view: glm_property_f_ty {
     value_format_name: percent_1
   }
 
+  measure: room_profit_rev_pct {
+    label: "Profit /Rev Rms %"
+    description: "Profit Rms $ / Rev Rms $"
+    type: number
+    sql: utl..udf_divide( ${room_profit_amt}, ${room_rev_amt} );;
+    value_format_name: percent_1
+  }
+
   #-- Cost
 
   measure: cost_of_sales_amt {
