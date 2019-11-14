@@ -53,7 +53,7 @@ view: averod_property_business_f {
   }
 
   dimension: meal_period_name {
-    sql: ${TABLE}.mean_period_name ;;
+    sql: ${TABLE}.meal_period_name ;;
     view_label: "Business Detail"
     label: "Meal Period"
     description: "Meal Period Name"
