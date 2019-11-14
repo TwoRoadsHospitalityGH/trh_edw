@@ -146,7 +146,7 @@ view: guest_experience_rpt {
             when ${TABLE}.answer_score_no > 2 and ${TABLE}.answer_score_no <= 3 then '2.1 - 3.0'
             when ${TABLE}.answer_score_no > 3 and ${TABLE}.answer_score_no <= 4 then '3.1 - 4.0'
             when ${TABLE}.answer_score_no > 4 and ${TABLE}.answer_score_no <= 5 then '4.1 - 5.0'
-            else ''
+            else 'No Score'
         end
     ;;
   }
