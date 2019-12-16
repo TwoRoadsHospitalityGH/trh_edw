@@ -748,6 +748,14 @@ view: glm_property_future_fcst_f_toly {
     value_format_name: decimal_0
   }
 
+  measure: utility_exp_amt_toly_v {
+    label: "Exp Utility $ TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.utility_exp_amt} - ${glm_property_future_fcst_f_ly.utility_exp_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: misc_exp_amt_toly_v {
     label: "Exp Rentals & Other $ TY:LY - var"
     description: "TY - LY"
@@ -902,6 +910,14 @@ view: glm_property_future_fcst_f_toly {
     value_format_name: percent_1
   }
 
+  measure: utility_exp_amt_toly {
+    label: "Exp Utility $ TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.utility_exp_amt}, ${glm_property_future_fcst_f_ly.utility_exp_amt}) ;;
+    value_format_name: percent_1
+  }
+
   measure: misc_exp_amt_toly {
     label: "Exp Rentals & Other $ TY:LY - var %"
     description: "(TY - LY) / LY"
@@ -1053,6 +1069,14 @@ view: glm_property_future_fcst_f_toly {
     description: "TY - LY"
     type: number
     sql: ${glm_property_future_fcst_f_ty.property_operations_maintenance_other_exp_amt} - ${glm_property_future_fcst_f_ly.property_operations_maintenance_other_exp_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: utility_other_exp_amt_toly_v {
+    label: "Exp Other Utility $ TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.utility_other_exp_amt} - ${glm_property_future_fcst_f_ly.utility_other_exp_amt} ;;
     value_format_name: decimal_0
   }
 

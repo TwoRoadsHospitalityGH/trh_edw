@@ -748,6 +748,14 @@ view: glm_property_future_fcst_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: utility_exp_amt_tobdgt_v {
+    label: "Exp Utility $ TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.utility_exp_amt} - ${glm_property_future_fcst_f_bdgt.utility_exp_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: misc_exp_amt_tobdgt_v {
     label: "Exp Rentals & Other $ TY:Bdgt - var"
     description: "TY - Bdgt"
@@ -899,6 +907,14 @@ view: glm_property_future_fcst_f_tobdgt {
     description: "(TY - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.property_operations_maintenance_exp_amt}, ${glm_property_future_fcst_f_bdgt.property_operations_maintenance_exp_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: utility_exp_amt_tobdgt {
+    label: "Exp Utility $ TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.utility_exp_amt}, ${glm_property_future_fcst_f_bdgt.utility_exp_amt}) ;;
     value_format_name: percent_1
   }
 
@@ -1056,6 +1072,14 @@ view: glm_property_future_fcst_f_tobdgt {
     value_format_name: decimal_0
   }
 
+  measure: utility_other_exp_amt_tobdgt_v {
+    label: "Exp Other Utility $ TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.utility_other_exp_amt} - ${glm_property_future_fcst_f_bdgt.utility_other_exp_amt} ;;
+    value_format_name: decimal_0
+  }
+
   measure: misc_other_exp_amt_tobdgt_v {
     label: "Exp Other Rentals & Other $ TY:Bdgt - var"
     description: "TY - Bdgt"
@@ -1207,6 +1231,14 @@ view: glm_property_future_fcst_f_tobdgt {
     description: "(TY - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.property_operations_maintenance_other_exp_amt}, ${glm_property_future_fcst_f_bdgt.property_operations_maintenance_other_exp_amt}) ;;
+    value_format_name: percent_1
+  }
+
+  measure: utility_other_exp_amt_tobdgt {
+    label: "Exp Other R&M $ TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.utility_other_exp_amt}, ${glm_property_future_fcst_f_bdgt.utility_other_exp_amt}) ;;
     value_format_name: percent_1
   }
 

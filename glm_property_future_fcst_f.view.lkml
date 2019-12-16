@@ -450,6 +450,13 @@ view: glm_property_future_fcst_f {
     hidden: yes
   }
 
+  dimension: utility_exp_amt {
+    type: number
+    sql: ${TABLE}.utility_exp_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
   dimension: misc_exp_amt {
     type: number
     sql: ${TABLE}.misc_exp_amt ;;
@@ -581,6 +588,13 @@ view: glm_property_future_fcst_f {
   dimension: property_operations_maintenance_other_exp_amt {
     type: number
     sql: ${TABLE}.property_operations_maintenance_other_exp_amt ;;
+    value_format_name: usd_0
+    hidden: yes
+  }
+
+  dimension: utility_other_exp_amt {
+    type: number
+    sql: ${TABLE}.utility_other_exp_amt ;;
     value_format_name: usd_0
     hidden: yes
   }

@@ -497,6 +497,15 @@ view: glm_property_future_fcst_f_ty {
     value_format_name: usd_0
   }
 
+  measure: utility_exp_amt {
+    label: "Exp Utility $"
+    description: "Utility Expenses. Segment 2: 875-876, Segment 3: 5000-8999."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.utility_exp_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+
   measure: misc_exp_amt {
     label: "Exp Rentals & Other $"
     description: "Misc Expenses. Segment 2: 790-799, Segment 3: 5000-8999."
@@ -648,6 +657,14 @@ view: glm_property_future_fcst_f_ty {
     description: "Other Property Ops & Maintenance Expenses. Segment 2: 850-874, Segment 3: 7000-8999."
     type: sum
     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.property_operations_maintenance_other_exp_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
+
+  measure: utility_other_exp_amt {
+    label: "Exp Other Utility $"
+    description: "Other Utility Expenses. Segment 2: 875-876, Segment 3: 7000-8999."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.utility_other_exp_amt}, to_number( null ) ) ;;
     value_format_name: usd_0
   }
 
@@ -884,6 +901,14 @@ view: glm_property_future_fcst_f_ty {
     description: "Exp Other R&M $ / Rev $"
     type: number
     sql: utl..udf_divide( ${property_operations_maintenance_other_exp_amt}, ${rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: utility_other_exp_ttl_rev_pct {
+    label: "Exp /TRev Other Utility %"
+    description: "Exp Other Utility $ / Rev $"
+    type: number
+    sql: utl..udf_divide( ${utility_other_exp_amt}, ${rev_amt} );;
     value_format_name: percent_1
   }
 
