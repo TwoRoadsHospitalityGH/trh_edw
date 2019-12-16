@@ -1962,7 +1962,7 @@ view: glm_property_future_fcst_f_ty {
     description: "Rev $ / Rms Occ"
     type: number
     sql: utl..udf_divide( ${rev_amt}, ${occupied_room_cnt} );;
-    value_format_name: usd_0
+    value_format_name: usd
   }
 
   #-- Avg check
