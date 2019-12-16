@@ -505,7 +505,6 @@ view: glm_property_future_fcst_f_ty {
     value_format_name: usd_0
   }
 
-
   measure: misc_exp_amt {
     label: "Exp Rentals & Other $"
     description: "Misc Expenses. Segment 2: 790-799, Segment 3: 5000-8999."
@@ -918,6 +917,168 @@ view: glm_property_future_fcst_f_ty {
     type: number
     sql: utl..udf_divide( ${misc_other_exp_amt}, ${misc_rev_amt} );;
     value_format_name: percent_1
+  }
+
+  #Expenses PAR
+
+  measure: exp_par_amt {
+    label: "Exp PAR $"
+    description: "Exp PARenses Amount. Segment 2: 400-799, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: room_exp_par_amt {
+    label: "Exp PAR Rms $"
+    description: "Room Expenses / Rms Avail Net. Segment 2: 400-499, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${room_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: rbe_exp_par_amt {
+    label: "Exp PAR RB&E $"
+    description: "RB&E Expenses / Rms Avail Net. Segment 2: 500-599, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${rbe_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: spa_exp_par_amt {
+    label: "Exp PAR Spa $"
+    description: "Spa Expenses / Rms Avail Net. Segment 2: 666, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${spa_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: golf_exp_par_amt {
+    label: "Exp PAR Golf $"
+    description: "Golf Expenses / Rms Avail Net. Segment 2: 610-635, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${golf_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: fitness_recreation_exp_par_amt {
+    label: "Exp PAR Fitness & Rec $"
+    description: "Fitness & Recreation Expenses / Rms Avail Net. Segment 2: 650-664, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${fitness_recreation_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: parking_transportation_exp_par_amt {
+    label: "Exp PAR Parking & Trans $"
+    description: "Parking & Transportation Expenses / Rms Avail Net. Segment 2: 720, 740, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${parking_transportation_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: telecom_exp_par_amt {
+    label: "Exp PAR Telecom $"
+    description: "Telecommunications Expenses / Rms Avail Net. Segment 2: 735, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${telecom_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: retail_exp_par_amt {
+    label: "Exp PAR Retail $"
+    description: "Retail Expenses / Rms Avail Net. Segment 2: 750-769, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${retail_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: other_operated_exp_par_amt {
+    label: "Exp PAR Other Op. Dept. $"
+    description: "Parking & Trans Expenses + Dry Cleaning Expenses + Telecomm Expenses / Rms Avail Net. Segment 2: 710-721, 735-740, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${other_operated_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: property_mgmt_exp_par_amt {
+    label: "Exp PAR Mgmt Srvcs $"
+    description: "Management Services Expenses / Rms Avail Net. Segment 2: 770-789, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${property_mgmt_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: administrative_general_exp_par_amt {
+    label: "Exp PAR A&G $"
+    description: "Admin & General Expenses / Rms Avail Net. Segment 2: 800-814, 816-824, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${administrative_general_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: information_technology_exp_par_amt {
+    label: "Exp PAR IT $"
+    description: "Information Technology Expenses / Rms Avail Net. Segment 2: 815, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${information_technology_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: sales_marketing_exp_par_amt {
+    label: "Exp PAR S&M $"
+    description: "Sales & Marketing Expenses / Rms Avail Net. Segment 2: 825-849, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${sales_marketing_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: property_operations_maintenance_exp_par_amt {
+    label: "Exp PAR R&M $"
+    description: "Property Operations & Maintenance Expenses / Rms Avail Net. Segment 2: 850-874, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${property_operations_maintenance_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: utility_exp_par_amt {
+    label: "Exp PAR Utility $"
+    description: "Utility Expenses / Rms Avail Net. Segment 2: 875-876, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${utility_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: misc_exp_par_amt {
+    label: "Exp PAR Rentals & Other $"
+    description: "Misc Expenses / Rms Avail Net. Segment 2: 790-799, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${misc_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_realty_exp_par_amt {
+    label: "Exp PAR Nonoperating Realty $"
+    description: "Nonoperating Realty Expenses / Rms Avail Net. Segment 2: 681-685, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${nonoperating_realty_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_airport_exp_par_amt {
+    label: "Exp PAR Nonoperating Airport $"
+    description: "Nonoperating Airport Expenses / Rms Avail Net. Segment 2: 680, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${nonoperating_airport_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
+  }
+
+  measure: nonoperating_util_exp_par_amt {
+    label: "Exp PAR Nonoperating Utility $"
+    description: "Nonoperating Utility Expenses / Rms Avail Net. Segment 2: 689-699, Segment 3: 5000-8999."
+    type: number
+    sql:  utl..udf_divide( ${nonoperating_util_exp_amt}, ${net_avail_room_cnt} );;
+    value_format_name: usd_0
   }
 
   #-- Payroll
