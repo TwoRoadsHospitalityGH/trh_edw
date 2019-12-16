@@ -1861,7 +1861,7 @@ view: glm_property_future_fcst_f_ty {
     description: "Rev Rms / Rms Occ"
     type: number
     sql: utl..udf_divide( ${room_rev_amt}, ${occupied_room_cnt} );;
-    value_format_name: usd_0
+    value_format_name: usd
   }
 
   measure: adr_transient_amt {
@@ -1869,7 +1869,7 @@ view: glm_property_future_fcst_f_ty {
     description: "Rev Rms Transient / Rms Occ Transient"
     type: number
     sql: utl..udf_divide( ${transient_room_rev_amt}, ${occupied_transient_room_cnt} );;
-    value_format_name: usd_0
+    value_format_name: usd
   }
 
   measure: adr_group_amt {
@@ -1877,7 +1877,7 @@ view: glm_property_future_fcst_f_ty {
     description: "Rev Rms Group / Rms Occ Group"
     type: number
     sql: utl..udf_divide( ${group_room_rev_amt}, ${occupied_group_room_cnt} );;
-    value_format_name: usd_0
+    value_format_name: usd
   }
 
   measure: adr_contract_amt {
@@ -1885,7 +1885,7 @@ view: glm_property_future_fcst_f_ty {
     description: "Rev Rms Contract / Rms Occ Contract"
     type: number
     sql: utl..udf_divide( ${contract_room_rev_amt}, ${occupied_contract_room_cnt} );;
-    value_format_name: usd_0
+    value_format_name: usd
   }
 
   #-- Room nights
@@ -1928,7 +1928,7 @@ view: glm_property_future_fcst_f_ty {
     description: "Rev Rms $ / Rms Avail Net"
     type: number
     sql: utl..udf_divide( ${room_rev_amt}, ${net_avail_room_cnt} );;
-    value_format_name: usd_0
+    value_format_name: usd
   }
 
   measure: rev_par_group_amt {
@@ -1936,7 +1936,7 @@ view: glm_property_future_fcst_f_ty {
     description: "Rev Rms Group $ / Rms Avail Net"
     type: number
     sql: utl..udf_divide( ${group_room_rev_amt}, ${net_avail_room_cnt} );;
-    value_format_name: usd_0
+    value_format_name: usd
   }
 
   measure: rev_par_transient_amt {
@@ -1944,7 +1944,7 @@ view: glm_property_future_fcst_f_ty {
     description: "Rev Rms Transient $ / Rms Avail Net"
     type: number
     sql: utl..udf_divide( ${transient_room_rev_amt}, ${net_avail_room_cnt} );;
-    value_format_name: usd_0
+    value_format_name: usd
   }
 
   measure: rev_par_contract_amt {
@@ -1952,7 +1952,7 @@ view: glm_property_future_fcst_f_ty {
     description: "Rev Rms Contract $ / Rms Avail Net"
     type: number
     sql: utl..udf_divide( ${contract_room_rev_amt}, ${net_avail_room_cnt} );;
-    value_format_name: usd_0
+    value_format_name: usd
   }
 
   #-- Rev POR
