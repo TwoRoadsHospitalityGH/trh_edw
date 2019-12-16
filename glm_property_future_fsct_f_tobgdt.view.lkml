@@ -2952,6 +2952,22 @@ view: glm_property_future_fcst_f_tobdgt {
     value_format_name: percent_1
   }
 
+  measure: rbe_rev_por_amt_tobdgt_v {
+    label: "Rev POR RBE $ TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_rev_por_amt} - ${glm_property_future_fcst_f_bdgt.rbe_rev_por_amt} ;;
+    value_format_name: usd_0
+  }
+
+  measure: rbe_rev_por_amt_tobdgt {
+    label: "Rev POR RBE $ TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_rev_por_amt}, ${glm_property_future_fcst_f_bdgt.rbe_rev_por_amt}) ;;
+    value_format_name: percent_1
+  }
+
   #-- Avg check
 
   measure: rbe_check_avg_amt_tobdgt_v {
