@@ -42,6 +42,16 @@ view: glm_property_future_fcst_f_ty {
     hidden: yes
   }
 
+  #dimension: measure_agg_type_name {
+  #  sql: case when ${glm_property_future_fcst_f.fcst_bt} = 1 then 'Fcst'
+  #            when ${glm_property_future_fcst_f.fcst_bt} = 1 then 'Fcst'
+  #             when ${glm_property_future_fcst_f.bdgt_bt} = 1 then 'Bdgt'
+  #             when ${glm_property_future_fcst_f.act_ly_bt} = 1 then 'LY'
+  #      else 'Other' end
+  #  ;;
+  #  hidden: yes
+  #}
+
   #-------------------------------------------------------------------------------------------
   #-- Measures
   #-------------------------------------------------------------------------------------------
@@ -903,13 +913,13 @@ view: glm_property_future_fcst_f_ty {
 #     value_format_name: usd_0
 #   }
 #
-#   measure: rbe_payroll_amt {
-#     label: "Payroll RB&E $"
-#     description: "RB&E Payroll. Segment 2: 500-599, Segment 3: 6600-6999."
-#     type: sum
-#     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_payroll_amt}, to_number( null ) ) ;;
-#     value_format_name: usd_0
-#   }
+   measure: rbe_payroll_amt {
+     label: "Payroll RB&E $"
+     description: "RB&E Payroll. Segment 2: 500-599, Segment 3: 6600-6999."
+     type: sum
+     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_payroll_amt}, to_number( null ) ) ;;
+     value_format_name: usd_0
+   }
 #
 #   measure: spa_payroll_amt {
 #     label: "Payroll Spa $"

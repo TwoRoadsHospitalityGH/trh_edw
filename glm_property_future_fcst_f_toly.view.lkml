@@ -1260,13 +1260,13 @@ view: glm_property_future_fcst_f_toly {
 #     value_format_name: decimal_0
 #   }
 #
-#   measure: rbe_payroll_amt_toly_v {
-#     label: "Payroll RB&E $ TY:LY - var"
-#     description: "TY - LY"
-#     type: number
-#     sql: ${glm_property_future_fcst_f_ty.rbe_payroll_amt} - ${glm_property_future_fcst_f_ly.rbe_payroll_amt} ;;
-#     value_format_name: decimal_0
-#   }
+   measure: rbe_payroll_amt_toly_v {
+     label: "Payroll RB&E $ TY:LY - var"
+     description: "TY - LY"
+     type: number
+     sql: ${glm_property_future_fcst_f_ty.rbe_payroll_amt} - ${glm_property_future_fcst_f_ly.rbe_payroll_amt} ;;
+     value_format_name: decimal_0
+   }
 #
 #   measure: spa_payroll_amt_toly_v {
 #     label: "Payroll Spa $ TY:LY - var"
