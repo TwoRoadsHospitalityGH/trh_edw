@@ -1260,13 +1260,13 @@ view: glm_property_f_tofcst30 {
 #     value_format_name: decimal_0
 #   }
 #
-#   measure: rbe_payroll_amt_tofcst30_v {
-#     label: "Payroll RB&E Other $ Act:Fcst30 - var"
-#     description: "Actual - Fcst30"
-#     type: number
-#     sql: ${glm_property_f_ty.rbe_payroll_amt} - ${glm_property_f_fcst30.rbe_payroll_amt} ;;
-#     value_format_name: decimal_0
-#   }
+   measure: rbe_payroll_amt_tofcst30_v {
+     label: "Payroll RB&E Other $ Act:Fcst30 - var"
+     description: "Actual - Fcst30"
+     type: number
+     sql: ${glm_property_f_ty.rbe_payroll_amt} - ${glm_property_f_fcst30.rbe_payroll_amt} ;;
+     value_format_name: decimal_0
+   }
 #
 #   measure: spa_payroll_amt_tofcst30_v {
 #     label: "Payroll Spa $ Act:Fcst30 - var"

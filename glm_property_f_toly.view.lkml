@@ -1261,13 +1261,13 @@ view: glm_property_f_toly {
 #     value_format_name: decimal_0
 #   }
 #
-#   measure: rbe_payroll_amt_toly_v {
-#     label: "Payroll RB&E Other $ Act:LY - var"
-#     description: "Actual - LY"
-#     type: number
-#     sql: ${glm_property_f_ty.rbe_payroll_amt} - ${glm_property_f_ly.rbe_payroll_amt} ;;
-#     value_format_name: decimal_0
-#   }
+   measure: rbe_payroll_amt_toly_v {
+     label: "Payroll RB&E Other $ Act:LY - var"
+     description: "Actual - LY"
+     type: number
+     sql: ${glm_property_f_ty.rbe_payroll_amt} - ${glm_property_f_ly.rbe_payroll_amt} ;;
+     value_format_name: decimal_0
+   }
 #
 #   measure: spa_payroll_amt_toly_v {
 #     label: "Payroll Spa $ Act:LY - var"

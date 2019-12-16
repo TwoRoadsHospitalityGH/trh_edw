@@ -658,12 +658,12 @@ view: glm_property_f {
 #     hidden: yes
 #   }
 #
-#   dimension: rbe_payroll_amt {
-#     type: number
-#     sql: ${TABLE}.rbe_payroll_amt ;;
-#     value_format_name: usd_0
-#     hidden: yes
-#   }
+   dimension: rbe_payroll_amt {
+     type: number
+     sql: ${TABLE}.rbe_payroll_amt ;;
+     value_format_name: usd_0
+     hidden: yes
+   }
 #
 #   dimension: spa_payroll_amt {
 #     type: number

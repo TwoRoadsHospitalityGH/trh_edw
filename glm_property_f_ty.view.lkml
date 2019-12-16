@@ -896,13 +896,13 @@ view: glm_property_f_ty {
 #     value_format_name: usd_0
 #   }
 #
-#   measure: rbe_payroll_amt {
-#     label: "Payroll RB&E $"
-#     description: "RB&E Payroll. Segment 2: 500-599, Segment 3: 6600-6999."
-#     type: sum
-#     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_payroll_amt}, to_number( null ) ) ;;
-#     value_format_name: usd_0
-#   }
+   measure: rbe_payroll_amt {
+     label: "Payroll RB&E $"
+     description: "RB&E Payroll. Segment 2: 500-599, Segment 3: 6600-6999."
+     type: sum
+     sql: iff( ${measure_bt} = 1, ${glm_property_f.rbe_payroll_amt}, to_number( null ) ) ;;
+     value_format_name: usd_0
+   }
 #
 #   measure: spa_payroll_amt {
 #     label: "Payroll Spa $"
