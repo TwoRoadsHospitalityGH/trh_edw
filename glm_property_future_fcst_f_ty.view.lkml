@@ -2151,6 +2151,14 @@ view: glm_property_future_fcst_f_ty {
     value_format_name: usd
   }
 
+  measure: rbe_rev_por_amt {
+    label: "Rev POR RB&E $"
+    description: "Rev RBE $ / Rms Occ"
+    type: number
+    sql: utl..udf_divide( ${rbe_rev_amt}, ${occupied_room_cnt} );;
+    value_format_name: usd
+  }
+
   #-- Avg check
 
   measure: rbe_check_avg_amt {
