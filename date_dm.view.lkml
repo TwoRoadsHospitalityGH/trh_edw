@@ -3,7 +3,7 @@ view: date_dm {
  sql_table_name: pedw.fact.date_dm ;;
 
   parameter: available_timeperiod {
-    label: "Timeframe"
+    label: " Timeframe"
     type: string
     allowed_value: {label: "Prior Month" value: "prior_month"}
     allowed_value: {label: "Prior Month Last Year" value: "ly_prior_month"}
@@ -174,6 +174,14 @@ view: date_dm {
     type: yesno
     sql: date_trunc( year, ${cal_dt} ) = date_trunc( year, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
     hidden: yes
+  }
+
+  filter: current_period_ytd_filter {
+    label: "YTD (Prior Months)"
+    description: "Year-to-Date for selected period, prior month and before."
+    type: yesno
+    sql: date_trunc( month, ${cal_dt} ) <= date_trunc( month, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
+    hidden: no
   }
 
   filter: prior_month {
