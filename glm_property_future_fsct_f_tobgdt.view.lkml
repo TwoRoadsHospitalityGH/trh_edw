@@ -2332,6 +2332,22 @@ view: glm_property_future_fcst_f_tobdgt {
     value_format_name: percent_1
   }
 
+  measure: golf_profit_rev_pct_tobdgt_v {
+    label: "Profit /Rev Golf % TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.golf_profit_rev_pct} - ${glm_property_future_fcst_f_bdgt.golf_profit_rev_pct};;
+    value_format_name: percent_1
+  }
+
+  measure: spa_profit_rev_pct_tobdgt_v {
+    label: "Profit /Rev Spa % TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.spa_profit_rev_pct} - ${glm_property_future_fcst_f_bdgt.spa_profit_rev_pct};;
+    value_format_name: percent_1
+  }
+
   measure: profit_rev_pct_tobdgt{
     label: "Profit /TRev % TY:Bdgt - var %"
     description: "(TY - Bdgt) / Bdgt"
@@ -2353,6 +2369,22 @@ view: glm_property_future_fcst_f_tobdgt {
     description: "(TY - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.room_profit_rev_pct}, ${glm_property_future_fcst_f_bdgt.room_profit_rev_pct});;
+    value_format_name: percent_1
+  }
+
+  measure: golf_profit_rev_pct_tobdgt {
+    label: "Profit /Rev Golf % TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.golf_profit_rev_pct}, ${glm_property_future_fcst_f_bdgt.golf_profit_rev_pct});;
+    value_format_name: percent_1
+  }
+
+  measure: spa_profit_rev_pct_tobdgt {
+    label: "Profit /Rev Spa % TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.spa_profit_rev_pct}, ${glm_property_future_fcst_f_bdgt.spa_profit_rev_pct});;
     value_format_name: percent_1
   }
 

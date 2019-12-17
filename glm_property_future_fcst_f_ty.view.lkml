@@ -1730,6 +1730,22 @@ view: glm_property_future_fcst_f_ty {
     value_format_name: percent_1
   }
 
+  measure: golf_profit_rev_pct {
+    label: "Profit /Rev Golf %"
+    description: "Profit Golf $ / Rev Golf $"
+    type: number
+    sql: utl..udf_divide( ${golf_profit_amt}, ${golf_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: spa_profit_rev_pct {
+    label: "Profit /Rev Spa %"
+    description: "Profit Spa $ / Rev Spa $"
+    type: number
+    sql: utl..udf_divide( ${spa_profit_amt}, ${spa_rev_amt} );;
+    value_format_name: percent_1
+  }
+
   #-- Cost
 
   measure: cost_of_sales_amt {
