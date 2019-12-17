@@ -2707,4 +2707,84 @@ view: glm_property_future_fcst_f_ty {
     value_format_name: decimal_2
   }
 
+  #--Ebitda
+
+  measure: fixed_expenses_above_noi_profit_amt {
+    label: "Profit Fixed Expenses Above NOI $"
+    description: "Profit Amount. Segment 2: 890, Segment 3: 4000-8999"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.fixed_expenses_above_noi_profit_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+    hidden:  yes
+  }
+
+  measure: mgmt_fee_profit_amt {
+    label: "Profit Mgmt Fee $"
+    description: "Profit Amount. Segment 2: 885, Segment 3: 4000-8999"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.mgmt_fee_profit_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+    hidden:  yes
+  }
+
+  measure: other_fixed_charge_profit_amt {
+    label: "Profit Fixed Chrg $"
+    description: "ProfitAmount. Segment 2: 920-999, Segment 3: 4000-8999"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.other_fixed_charge_profit_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+    hidden:  yes
+  }
+
+  measure: transition_sales_hoa_costs_profit_amt {
+    label: "Profit Transition HOA Costs $"
+    description: "Profit Amount. Segment 2: 901-909, Segment 3: 4000-8999"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.transition_sales_hoa_costs_profit_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+    hidden:  yes
+  }
+
+  measure: owner_costs_profit_amt {
+    label: "Profit Owner Costs $"
+    description: "Profit Amount. Segment 2: 910-919, Segment 3: 4000-8999"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.owner_costs_profit_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+    hidden:  yes
+  }
+
+  measure: ebitda_before_rr_amt {
+    label: "Ebitda BF RR $"
+    description: "Ebitda Amount Before Replacement Reserves. (GOP + Fixed Expenses Above NOI + Mgmt Fees) - Transition & Owner Costs + Other fixed Charges)"
+    type: number
+    sql:  -1 * ( ${gop_amt} + ${fixed_expenses_above_noi_profit_amt} + ${mgmt_fee_profit_amt} ) -
+    (${transition_sales_hoa_costs_profit_amt} + ${owner_costs_profit_amt} + ${other_fixed_charge_profit_amt})
+    ;;
+    value_format_name: usd_0
+    hidden:  no
+  }
+
+  measure: reserves_profit_amt {
+    label: "Profit Reserves $"
+    description: "Profit Amount. Segment 2: 900, Segment 3: 8060"
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.reserves_profit_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+    hidden:  yes
+  }
+
+  measure: ebitda_after_rr_amt {
+    label: "Ebitda AF RR $"
+    description: "Ebitda Amount After Replacement Reserves. (GOP + Fixed Expenses Above NOI + Mgmt Fees) - Transition & Owner Costs + Other fixed Charges) - Replacement Reserve"
+    type: number
+    sql:  -1 * ( ${gop_amt} + ${fixed_expenses_above_noi_profit_amt} + ${mgmt_fee_profit_amt} ) -
+          (${transition_sales_hoa_costs_profit_amt} + ${owner_costs_profit_amt} + ${other_fixed_charge_profit_amt})
+          -${reserves_profit_amt}
+          ;;
+    value_format_name: usd_0
+    hidden:  no
+  }
+
+
 }

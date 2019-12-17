@@ -1472,4 +1472,42 @@ view: glm_property_future_fcst_f {
     hidden: yes
   }
 
+  # Ebitda
+
+  dimension: fixed_expenses_above_noi_profit_amt {
+    type: number
+    sql: ${TABLE}.fixed_expenses_above_noi_profit_amt ;;
+    hidden: yes
+  }
+
+  dimension: mgmt_fee_profit_amt {
+    type: number
+    sql: ${TABLE}.mgmt_fee_profit_amt ;;
+    hidden: yes
+  }
+
+  dimension: other_fixed_charge_profit_amt {
+    type: number
+    sql: ${TABLE}.other_fixed_charge_profit_amt ;;
+    hidden: yes
+  }
+
+  dimension: transition_sales_hoa_costs_profit_amt {
+    type: number
+    sql: ${TABLE}.transition_sales_hoa_costs_profit_amt ;;
+    hidden: yes
+  }
+
+  dimension: owner_costs_profit_amt {
+    type: number
+    sql: ${TABLE}.owner_costs_profit_amt ;;
+    hidden: yes
+  }
+
+  dimension: reserves_profit_amt {
+    type: number
+    sql: ${TABLE}.reserves_profit_amt ;;
+    hidden: yes
+  }
+
 }

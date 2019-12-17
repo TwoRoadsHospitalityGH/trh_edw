@@ -3832,6 +3832,24 @@ view: glm_property_future_fcst_f_toly {
     value_format_name: decimal_0
   }
 
+  measure: ebida_after_rr_amt_toly_v {
+    label: "Ebitda AF RR TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.ebitda_after_rr_amt} - ${glm_property_future_fcst_f_ly.ebitda_after_rr_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  measure: ebida_before_rr_amt_toly_v {
+    label: "Ebitda BF RR TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.ebitda_before_rr_amt} - ${glm_property_future_fcst_f_ly.ebitda_before_rr_amt} ;;
+    value_format_name: decimal_0
+  }
+
+  #
+
   measure: fte_amt_toly {
     label: "FTE TY:LY - var %"
     description: "(TY - LY) / LY"
@@ -4005,6 +4023,22 @@ view: glm_property_future_fcst_f_toly {
     description: "(TY - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.allocated_fte_amt}, ${glm_property_future_fcst_f_ly.allocated_fte_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: ebita_before_rr_amt_toly {
+    label: "Ebitda Before RR TY:LY- var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.ebitda_before_rr_amt}, ${glm_property_future_fcst_f_ly.ebitda_before_rr_amt} ) ;;
+    value_format_name: percent_1
+  }
+
+  measure: ebita_after_rr_amt_toly {
+    label: "Ebitda After RR TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.ebitda_after_rr_amt}, ${glm_property_future_fcst_f_ly.ebitda_after_rr_amt} ) ;;
     value_format_name: percent_1
   }
 
