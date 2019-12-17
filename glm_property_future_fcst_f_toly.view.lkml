@@ -2337,6 +2337,14 @@ view: glm_property_future_fcst_f_toly {
     value_format_name: percent_1
   }
 
+  measure: fitness_recreation_profit_rev_pct_toly_v {
+    label: "Profit /Rev Fitness & Rec % TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.fitness_recreation_profit_rev_pct} - ${glm_property_future_fcst_f_ly.fitness_recreation_profit_rev_pct};;
+    value_format_name: percent_1
+  }
+
   measure: profit_rev_pct_toly{
     label: "Profit /TRev % TY:LY - var %"
     description: "(TY - LY) / LY"
@@ -2374,6 +2382,14 @@ view: glm_property_future_fcst_f_toly {
     description: "(TY - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.spa_profit_rev_pct}, ${glm_property_future_fcst_f_ly.spa_profit_rev_pct});;
+    value_format_name: percent_1
+  }
+
+  measure: fitness_recreation_profit_rev_pct_toly {
+    label: "Profit /Rev Fitness & Rec % TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.fitness_recreation_profit_rev_pct}, ${glm_property_future_fcst_f_ly.fitness_recreation_profit_rev_pct});;
     value_format_name: percent_1
   }
 

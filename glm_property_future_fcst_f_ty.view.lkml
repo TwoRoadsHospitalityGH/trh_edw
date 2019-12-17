@@ -1746,6 +1746,14 @@ view: glm_property_future_fcst_f_ty {
     value_format_name: percent_1
   }
 
+  measure: fitness_recreation_profit_rev_pct {
+    label: "Profit /Rev Fitness & Rec %"
+    description: "Profit Fitness & Rec $ / Rev Fitness & Rec $"
+    type: number
+    sql: utl..udf_divide( ${fitness_recreation_profit_amt}, ${fitness_recreation_rev_amt} );;
+    value_format_name: percent_1
+  }
+
   #-- Cost
 
   measure: cost_of_sales_amt {
