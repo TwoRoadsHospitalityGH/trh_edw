@@ -176,13 +176,13 @@ view: date_dm {
     hidden: yes
   }
 
-  #filter: current_period_ytd_filter {
-  #  label: "YTD (Prior Months)"
-  #  description: "Year-to-Date for selected period, prior month and before."
-  #  type: yesno
-  #  sql: date_trunc( month, ${cal_dt} ) <= date_trunc( month, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
-  #  hidden: no
-  #}
+  filter: current_period_ytd_filter {
+    label: "YTD (Prior Month)"
+    description: "Year-to-Date for selected period, prior month and before."
+    type: yesno
+    sql: date_trunc( month, ${cal_dt} ) <= date_trunc( month, dateadd( month, -1, dateadd( day, -1, current_date() ) ) );;
+    hidden: no
+  }
 
   filter: prior_month {
     label: "Prior Month"
