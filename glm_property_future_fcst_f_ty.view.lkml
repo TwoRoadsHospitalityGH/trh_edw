@@ -2755,7 +2755,7 @@ view: glm_property_future_fcst_f_ty {
   }
 
   measure: ebitda_before_rr_amt {
-    label: "Ebitda BF RR $"
+    label: "Ebitda Before RR $"
     description: "Ebitda Amount Before Replacement Reserves. (GOP + Fixed Expenses Above NOI + Mgmt Fees) - Transition & Owner Costs + Other fixed Charges)"
     type: number
     sql:  -1 * ( ${gop_amt} + ${fixed_expenses_above_noi_profit_amt} + ${mgmt_fee_profit_amt} ) -
@@ -2775,7 +2775,7 @@ view: glm_property_future_fcst_f_ty {
   }
 
   measure: ebitda_after_rr_amt {
-    label: "Ebitda AF RR $"
+    label: "Ebitda After RR $"
     description: "Ebitda Amount After Replacement Reserves. (GOP + Fixed Expenses Above NOI + Mgmt Fees) - Transition & Owner Costs + Other fixed Charges) - Replacement Reserve"
     type: number
     sql:  -1 * ( ${gop_amt} + ${fixed_expenses_above_noi_profit_amt} + ${mgmt_fee_profit_amt} ) -

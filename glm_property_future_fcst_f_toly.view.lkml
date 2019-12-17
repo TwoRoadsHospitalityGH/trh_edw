@@ -3833,7 +3833,7 @@ view: glm_property_future_fcst_f_toly {
   }
 
   measure: ebida_after_rr_amt_toly_v {
-    label: "Ebitda AF RR TY:LY - var"
+    label: "Ebitda After RR TY:LY - var"
     description: "TY - LY"
     type: number
     sql: ${glm_property_future_fcst_f_ty.ebitda_after_rr_amt} - ${glm_property_future_fcst_f_ly.ebitda_after_rr_amt} ;;
@@ -3841,7 +3841,7 @@ view: glm_property_future_fcst_f_toly {
   }
 
   measure: ebida_before_rr_amt_toly_v {
-    label: "Ebitda BF RR TY:LY - var"
+    label: "Ebitda Before RR TY:LY - var"
     description: "TY - LY"
     type: number
     sql: ${glm_property_future_fcst_f_ty.ebitda_before_rr_amt} - ${glm_property_future_fcst_f_ly.ebitda_before_rr_amt} ;;
