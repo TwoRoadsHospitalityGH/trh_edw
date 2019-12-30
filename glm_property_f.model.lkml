@@ -14,6 +14,7 @@ datagroup: model_caching_dg {
 explore: glm_property_f {
     from: glm_property_f
     sql_table_name: pedw.fact.glm_property_f ;;
+    sql_always_where: ${glm_property_f.date_sid} >= utl..udf_date_to_julian( date_trunc( year, dateadd(year, -10, current_date()))) ;;
     group_label: "Property"
     label: "GL Monthly - Historical"
   description: "**Historical View - No Future Forecast
