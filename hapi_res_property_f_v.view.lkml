@@ -207,21 +207,21 @@ view: hapi_res_property_f_v {
     sql: ${TABLE}.complimentary_cd ;;
   }
 
-  dimension: confidential_rate_cd {
-    view_label: "Room"
-    label: "Confidential Rate Cd"
-    description: "Confidential Rate Code"
-    type: string
-    sql: ${TABLE}.confidential_rate_cd ;;
-  }
+  #dimension: confidential_rate_cd {
+  #  view_label: "Room"
+  #  label: "Confidential Rate Cd"
+  #  description: "Confidential Rate Code"
+  #  type: string
+  #  sql: ${TABLE}.confidential_rate_cd ;;
+  #}
 
-  dimension: guarantee_type_cd {
-    view_label: "Room"
-    label: "Guarantee Type Cd"
-    description: "Guarantee Type Code"
-    type: string
-    sql: ${TABLE}.guarantee_type_cd ;;
-  }
+  #dimension: guarantee_type_cd {
+  #  view_label: "Room"
+  #  label: "Guarantee Type Cd"
+  #  description: "Guarantee Type Code"
+  #  type: string
+  #  sql: ${TABLE}.guarantee_type_cd ;;
+  #}
 
   dimension: market_cd {
     view_label: "Room"
