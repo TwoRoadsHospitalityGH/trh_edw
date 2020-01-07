@@ -44,7 +44,7 @@ view: hapi_res_property_f_v_msr_ty {
     label: "Adults"
     description: "Number of adults."
     type: sum_distinct
-    sql_distinct_key: ${hapi_res_property_f_v.reservation_key} ;;
+    sql_distinct_key: ${hapi_res_property_f_v.primary_key} ;;
     sql: ${hapi_res_property_f_v.adults_cnt} * ${tyly_bt} ;;
     value_format_name: decimal_0
   }
@@ -61,7 +61,7 @@ view: hapi_res_property_f_v_msr_ty {
     label: "Children"
     description: "Number of children."
     type: sum_distinct
-    sql_distinct_key: ${hapi_res_property_f_v.reservation_key} ;;
+    sql_distinct_key: ${hapi_res_property_f_v.primary_key} ;;
     sql: ${hapi_res_property_f_v.children_cnt} * ${tyly_bt} ;;
     value_format_name: decimal_0
   }
@@ -82,13 +82,13 @@ view: hapi_res_property_f_v_msr_ty {
     value_format_name: decimal_0
   }
 
-  measure: rooms_booked_tcnt {
-    label: "Rms Bkd Total"
-    type: sum_distinct
-    sql_distinct_key: ${hapi_res_property_f_v.stay_date_key} ;;
-    sql: ${hapi_res_property_f_v.stay_nights_tcnt} * ${tyly_bt} ;;
-    value_format_name: decimal_0
-  }
+  #measure: rooms_booked_tcnt {
+  #  label: "Rms Bkd Total"
+  #  type: sum_distinct
+  #  sql_distinct_key: ${hapi_res_property_f_v.primary_key} ;;
+  #  sql: ${hapi_res_property_f_v.stay_nights_tcnt} * ${tyly_bt} ;;
+  #  value_format_name: decimal_0
+  #}
 
   measure: avg_res_nights_cnt {
     label: "Rms Bkd / Res"
@@ -98,13 +98,13 @@ view: hapi_res_property_f_v_msr_ty {
     value_format_name: decimal_1
   }
 
-  measure: stay_nights_tpct {
-    label: "Rms Bkd % Total"
-    description: "Rms Bkd / Rms Bkd Total"
-    type: number
-    sql: utl..udf_divide( ${rooms_booked_cnt}, ${rooms_booked_tcnt} ) ;;
-    value_format_name: percent_1
-  }
+  #measure: stay_nights_tpct {
+  #  label: "Rms Bkd % Total"
+  #  description: "Rms Bkd / Rms Bkd Total"
+  #  type: number
+  #  sql: utl..udf_divide( ${rooms_booked_cnt}, ${rooms_booked_tcnt} ) ;;
+  #  value_format_name: percent_1
+  #}
 
   measure: room_rev_amt {
     label: "Rev Rms $"
