@@ -8,8 +8,11 @@ datagroup: model_caching_dg {
   max_cache_age: "8 hours"
 }
 
-#explore: dt_revintel_pace_pickup_date {}
+#explore: dt_revintel_pace_pickup_date {} date_trunc(year, dateadd( year, -2, current_date()))
 explore: revintel_property_pace_f {
+  from: revintel_property_pace_f
+  sql_table_name: pedw.fact.revintel_property_pace_f ;;
+  sql_always_where: ${revintel_property_pace_f.stay_date_sid} >= utl..udf_date_to_julian( date_trunc(year, dateadd( year, -2, current_date()))) ;;
   group_label: "***Development***"
   label: "Revintel Property Pace (alpha)"
   view_label: "  Measures"

@@ -28,6 +28,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_room_rev_amt}, ${str_property_seg_v_ly.property_room_rev_amt} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: property_rbe_rev_amt_toly_v {
@@ -44,6 +50,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_rbe_rev_amt}, ${str_property_seg_v_ly.property_rbe_rev_amt} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: property_room_other_rev_amt_toly_v {
@@ -60,6 +72,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_room_other_rev_amt}, ${str_property_seg_v_ly.property_room_other_rev_amt} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: property_rev_amt_toly_v {
@@ -76,6 +94,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_rev_amt}, ${str_property_seg_v_ly.property_rev_amt} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: property_room_sold_cnt_toly_v {
@@ -92,6 +116,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_room_sold_cnt}, ${str_property_seg_v_ly.property_room_sold_cnt} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: property_occupancy_rate_pct_toly {
@@ -100,6 +130,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_occupancy_rate_pct}, ${str_property_seg_v_ly.property_occupancy_rate_pct} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: property_adr_amt_toly_v {
@@ -116,6 +152,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_adr_amt}, ${str_property_seg_v_ly.property_adr_amt} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: property_revpar_amt_toly_v {
@@ -132,6 +174,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_revpar_amt}, ${str_property_seg_v_ly.property_revpar_amt} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: property_trevpar_amt_toly_v {
@@ -148,6 +196,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_trevpar_amt}, ${str_property_seg_v_ly.property_trevpar_amt} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   #--------------------------------------------------------------------------------
@@ -159,6 +213,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_occ_index_pct}, ${str_property_seg_v_ly.property_occ_index_pct} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: property_adr_index_pct_toly {
@@ -167,6 +227,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_adr_index_pct}, ${str_property_seg_v_ly.property_adr_index_pct} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: property_revpar_index_pct_toly {
@@ -175,6 +241,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_revpar_index_pct}, ${str_property_seg_v_ly.property_revpar_index_pct} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: property_trevpar_index_pct_toly {
@@ -183,6 +255,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.property_trevpar_index_pct}, ${str_property_seg_v_ly.property_trevpar_index_pct} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   #--------------------------------------------------------------------------------
@@ -194,6 +272,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.compset_occupancy_rate_pct}, ${str_property_seg_v_ly.compset_occupancy_rate_pct} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: compset_adr_amt_toly {
@@ -202,6 +286,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.compset_adr_amt}, ${str_property_seg_v_ly.compset_adr_amt} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure: compset_revpar_amt_toly {
@@ -210,6 +300,12 @@ view: str_property_seg_v_toly {
     type: number
     sql: utl..udf_percent_var( ${str_property_seg_v_ty.compset_revpar_amt}, ${str_property_seg_v_ly.compset_revpar_amt} );;
     value_format_name: percent_1
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
 }

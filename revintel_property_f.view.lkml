@@ -745,6 +745,10 @@ view: revintel_property_f {
     view_label: "  CY"
     label: "Rms Bkd Act:STLY - % var"
     description: "(TY - STLY)/STLY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  rooms_var{
@@ -754,6 +758,10 @@ view: revintel_property_f {
     view_label: "  CY"
     label: "Rms Bkd Act:STLY - var"
     description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  room_rev_var_perc{
@@ -763,6 +771,10 @@ view: revintel_property_f {
     view_label: "  CY"
     label: "Rev Rms $ Act:STLY - % var"
     description: "(TY - STLY)/STLY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  room_rev_var{
@@ -772,6 +784,10 @@ view: revintel_property_f {
     view_label: "  CY"
     label: "Rev Rms $ Act:STLY - var"
     description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  food_rev_var_perc{
@@ -781,6 +797,10 @@ view: revintel_property_f {
     view_label: "  CY"
     label: "Rev Food $ Act:STLY - % var"
     description: "(TY - STLY)/STLY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  food_rev_var{
@@ -790,6 +810,10 @@ view: revintel_property_f {
     view_label: "  CY"
     label: "Rev Food $ Act:STLY - var"
     description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  other_rev_var_perc{
@@ -799,6 +823,10 @@ view: revintel_property_f {
     view_label: "  CY"
     label: "Rev Other $ Act:STLY - % var"
     description: "(TY - STLY)/STLY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  other_rev_var{
@@ -808,6 +836,10 @@ view: revintel_property_f {
     view_label: "  CY"
     label: "Rev Other $ Act:STLY - var"
     description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  ttl_rev_var_perc{
@@ -817,6 +849,10 @@ view: revintel_property_f {
     view_label: "  CY"
     label: "Rev $ Act:STLY - % var"
     description: "(TY - STLY)/STLY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  ttl_rev_var{
@@ -826,6 +862,10 @@ view: revintel_property_f {
     view_label: "  CY"
     label: "Rev $ Act:STLY - var"
     description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  room_adr_var_perc{
@@ -835,6 +875,10 @@ view: revintel_property_f {
     view_label: "  CY"
     label: "ADR Act:STLY - % var"
     description: "(TY - STLY)/STLY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  room_adr_var{
@@ -844,6 +888,10 @@ view: revintel_property_f {
     view_label: "  CY"
     label: "ADR Act:STLY - var"
     description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  rooms_bkd_pct_var_perc{
@@ -853,6 +901,10 @@ view: revintel_property_f {
     label: "Rms Bkd % Act:STLY - % var"
     description: "(TY - STLY)/STLY"
     type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  rooms_bkd_pct_var{
@@ -862,6 +914,10 @@ view: revintel_property_f {
     label: "Rms Bkd % Act:STLY - var"
     description: "(TY - STLY)"
     type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  rev_par_var_perc{
@@ -871,6 +927,10 @@ view: revintel_property_f {
     label: "Rev PAR $ Act:STLY - % var"
     description: "(TY - STLY)/STLY"
     type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  rev_par_var{
@@ -880,6 +940,10 @@ view: revintel_property_f {
     label: "Rev PAR $ Act:STLY - var"
     description: "(TY - STLY)"
     type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
 

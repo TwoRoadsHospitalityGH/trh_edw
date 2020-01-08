@@ -38,7 +38,7 @@ view: xx_revintel_property_rate_code_f {
 
   #dimension: lkp_rate_code_nm {
   dimension: standard_rate_code_name {
-    sql: ${TABLE}.standard_rate_code_nm ;;
+    sql: ${TABLE}.standard_rate_code_name ;;
     view_label: "Rate Code Detail"
     label: "Standard Rate Code Name"
     description: "Standard Rate Code Name"
@@ -46,16 +46,48 @@ view: xx_revintel_property_rate_code_f {
   }
 
   dimension: account_type_name {
-    sql: ${TABLE}.account_type_name ;;
+    sql: ${TABLE}.standard_account_type_name ;;
     view_label: "Rate Code Detail"
-    label: "Account Type Name"
+    label: "Account Type"
     description: "Account Type Name (e.g. Consortia, Wholesale)"
+    type: string
+  }
+
+  dimension: rate_code_name_type {
+    sql: ${TABLE}.standard_account_name_cd ;;
+    view_label: "Rate Code Detail"
+    label: "Rate Code Name Type"
+    description: "Rate Code Name Type (Using Standard/Grouped Name or Defaults to Rate Name on PMS Record)"
+    type: string
+  }
+
+  dimension: major_market_segment_name {
+    sql: ${TABLE}.major_market_segment_name ;;
+    view_label: "Rate Code Detail"
+    label: "Major Market Segment"
+    description: "Major Market Segment Name"
+    type: string
+  }
+
+  dimension: minor_market_segment_name {
+    sql: ${TABLE}.minor_market_segment_name ;;
+    view_label: "Rate Code Detail"
+    label: "Minor Market Segment"
+    description: "Minor Market Segment Name"
     type: string
   }
 
   #-------------------------------------------------------------------------------------------
   #-- Measures
   #-------------------------------------------------------------------------------------------
+
+  measure:  cy_sep{
+    sql: '--' ;;
+    view_label: "  CY"
+    label: " CY: "
+    description: "CY Separator"
+    type: string
+  }
 
   measure:  cy_room_cnt{
     sql: ${TABLE}.cy_room_cnt ;;
@@ -88,6 +120,14 @@ view: xx_revintel_property_rate_code_f {
   #-- Measures STLY
   #-------------------------------------------------------------------------------------------
 
+  measure:  stly_sep{
+    sql: '--' ;;
+    view_label: "  STLY"
+    label: " STLY: "
+    description: "STLY Separator"
+    type: string
+  }
+
   measure:  stly_room_cnt{
     sql: ${TABLE}.stly_room_cnt ;;
     value_format_name: decimal_0
@@ -118,6 +158,14 @@ view: xx_revintel_property_rate_code_f {
 #-------------------------------------------------------------------------------------------
   #-- Measures LY
   #-------------------------------------------------------------------------------------------
+
+  measure:  ly_sep{
+    sql: '--' ;;
+    view_label: "  LY"
+    label: " LY: "
+    description: "LY Separator"
+    type: string
+  }
 
   measure:  ly_room_cnt{
     sql: ${TABLE}.ly_room_cnt ;;
@@ -152,6 +200,14 @@ view: xx_revintel_property_rate_code_f {
   #-- Measures compare to py
   #-------------------------------------------------------------------------------------------
 
+  measure:  var_sep{
+    sql: '--' ;;
+    view_label: "  CY"
+    label: "Var: "
+    description: "Var Separator"
+    type: string
+  }
+
   measure:  room_cnt_var_perc{
     sql: utl..udf_percent_var((${cy_room_cnt}),(${stly_room_cnt})) ;;
     type: number
@@ -159,6 +215,12 @@ view: xx_revintel_property_rate_code_f {
     view_label: "  CY"
     label: "Rms Bkd Act:STLY - % var"
     description: "(TY - STLY)/TY"
+    html:
+      {% if value < 0 %}
+      <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+      {% else %}
+      <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  room_cnt_var{
@@ -170,6 +232,14 @@ view: xx_revintel_property_rate_code_f {
     description: "(TY - STLY)"
   }
 
+  measure:  var_pct_sep{
+    sql: '--' ;;
+    view_label: "  CY"
+    label: "Var %: "
+    description: "Var % Separator"
+    type: string
+  }
+
   measure:  room_rev_amt_var_perc{
     sql: utl..udf_percent_var((${cy_room_rev_amt}),(${stly_room_rev_amt})) ;;
     type: number
@@ -177,6 +247,12 @@ view: xx_revintel_property_rate_code_f {
     view_label: "  CY"
     label: "Rev Rms $ Act:STLY - % var"
     description: "(TY - STLY)/TY"
+    html:
+      {% if value < 0 %}
+      <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+      {% else %}
+      <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  room_rev_amt_var{
@@ -188,7 +264,6 @@ view: xx_revintel_property_rate_code_f {
     description: "(TY - STLY)"
   }
 
-
   measure:  room_adr_var_perc{
     sql: utl..udf_percent_var((${cy_room_adr}),(${stly_room_adr})) ;;
     type: number
@@ -196,6 +271,12 @@ view: xx_revintel_property_rate_code_f {
     view_label: "  CY"
     label: "ADR Act:STLY - % var"
     description: "(TY - STLY)/TY"
+    html:
+      {% if value < 0 %}
+      <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+      {% else %}
+      <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  room_adr_var{
@@ -243,7 +324,7 @@ view: xx_revintel_property_rate_code_f {
 #-------------------------------------------------------------------------------------------
 
   measure:  room_cnt_stly_reach{
-    sql: (${room_cnt_stly_pickup}( + (${room_cnt_var}) ;;
+    sql: (${room_cnt_stly_pickup}) + (${room_cnt_var}) ;;
     type: number
     value_format_name: decimal_0
     view_label: "  CY"
