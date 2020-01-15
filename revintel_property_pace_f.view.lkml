@@ -500,6 +500,10 @@ view: revintel_property_pace_f {
     description: "Rms Bkd - Prior Day"
     #type: sum
     type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  cy_rooms_prior_7_day {

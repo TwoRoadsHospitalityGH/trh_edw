@@ -2020,6 +2020,20 @@ view: glm_property_f_ty {
     sql:  iff( ${measure_bt} = 1, ${glm_property_f.net_avail_room_rental_mgmt_2_19_cnt}, to_number( null ) ) ;;
   }
 
+  measure: contract_adjustment_room_rental_mgmt_cnt {
+    label: "Rms Adj Contract Rental"
+    description: "Segment 2: 412-429, Segment 3: 9007."
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.contract_adjustment_room_rental_mgmt_2_19_cnt}, to_number( null ) ) ;;
+  }
+
+  measure: contract_adjustment_room_cnt {
+    label: "Rms Adj Contract"
+    description: "Segment 2: 400-499, Segment 3: 9007."
+    type: sum
+    sql:  iff( ${measure_bt} = 1, ${glm_property_f.contract_adjustment_room_cnt}, to_number( null ) ) ;;
+  }
+
   measure: occupied_room_rental_mgmt_2_19_cnt {
     label: "Rms Occ Rental"
     description: "Rms Occ Transient Rental + Rms Occ Group Rental + Rms Occ Contract Rental"

@@ -414,115 +414,115 @@ No  | Group | Metric Type | Metric Label  | Description |
 407 | To Bdgt | Flow  | Flow %  | Flow Percent  |
 408 | Actuals/Fcst  | FTE | FTE | Hrs Total / ( Months in Period * 365/12 * 2080/365 )  |
 409 | Actuals/Fcst  | FTE | FTE Allocated   | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-410 | To Bdgt | FTE | FTE Allocated TY:Bdgt - var | TY - Bdgt
-411 | To Bdgt | FTE | FTE Allocated TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-412 | To LY | FTE | FTE Allocated TY:LY - var | TY - LY
-413 | To LY | FTE | FTE Allocated TY:LY - var % | (TY - LY) / LY
+410 | To Bdgt | FTE | FTE Allocated TY:Bdgt - var | TY - Bdgt |
+411 | To Bdgt | FTE | FTE Allocated TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+412 | To LY | FTE | FTE Allocated TY:LY - var | TY - LY |
+413 | To LY | FTE | FTE Allocated TY:LY - var % | (TY - LY) / LY  |
 414 | Actuals/Fcst  | FTE | FTE Fitness & Rec   | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-415 | To Bdgt | FTE | FTE Fitness & Rec TY:Bdgt - var | TY - Bdgt
-416 | To Bdgt | FTE | FTE Fitness & Rec TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-417 | To LY | FTE | FTE Fitness & Rec TY:LY - var | TY - LY
-418 | To LY | FTE | FTE Fitness & Rec TY:LY - var % | (TY - LY) / LY
+415 | To Bdgt | FTE | FTE Fitness & Rec TY:Bdgt - var | TY - Bdgt |
+416 | To Bdgt | FTE | FTE Fitness & Rec TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+417 | To LY | FTE | FTE Fitness & Rec TY:LY - var | TY - LY |
+418 | To LY | FTE | FTE Fitness & Rec TY:LY - var % | (TY - LY) / LY  |
 419 | Actuals/Fcst  | FTE | FTE Golf  | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-420 | To Bdgt | FTE | FTE Golf TY:Bdgt - var  | TY - Bdgt
-421 | To Bdgt | FTE | FTE Golf TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-422 | To LY | FTE | FTE Golf TY:LY - var  | TY - LY
-423 | To LY | FTE | FTE Golf TY:LY - var %  | (TY - LY) / LY
+420 | To Bdgt | FTE | FTE Golf TY:Bdgt - var  | TY - Bdgt |
+421 | To Bdgt | FTE | FTE Golf TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+422 | To LY | FTE | FTE Golf TY:LY - var  | TY - LY |
+423 | To LY | FTE | FTE Golf TY:LY - var %  | (TY - LY) / LY  |
 424 | Actuals/Fcst  | FTE | FTE Mgmt Srvcs  | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-425 | To Bdgt | FTE | FTE Mgmt Srvcs TY:Bdgt - var  | TY - Bdgt
-426 | To Bdgt | FTE | FTE Mgmt Srvcs TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-427 | To LY | FTE | FTE Mgmt Srvcs TY:LY - var  | TY - LY
-428 | To LY | FTE | FTE Mgmt Srvcs TY:LY - var %  | (TY - LY) / LY
+425 | To Bdgt | FTE | FTE Mgmt Srvcs TY:Bdgt - var  | TY - Bdgt |
+426 | To Bdgt | FTE | FTE Mgmt Srvcs TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+427 | To LY | FTE | FTE Mgmt Srvcs TY:LY - var  | TY - LY |
+428 | To LY | FTE | FTE Mgmt Srvcs TY:LY - var %  | (TY - LY) / LY  |
 429 | Actuals/Fcst  | FTE | FTE Multiplier  | Months in Period * 365/12 * 2080/365  |
 430 | Actuals/Fcst  | FTE | FTE Nonoperating Airport  | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-431 | To Bdgt | FTE | FTE Nonoperating Airport TY:Bdgt - var  | TY - Bdgt
-432 | To Bdgt | FTE | FTE Nonoperating Airport TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-433 | To LY | FTE | FTE Nonoperating Airport TY:LY - var  | TY - LY
-434 | To LY | FTE | FTE Nonoperating Airport TY:LY - var %  | (TY - LY) / LY
+431 | To Bdgt | FTE | FTE Nonoperating Airport TY:Bdgt - var  | TY - Bdgt |
+432 | To Bdgt | FTE | FTE Nonoperating Airport TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+433 | To LY | FTE | FTE Nonoperating Airport TY:LY - var  | TY - LY |
+434 | To LY | FTE | FTE Nonoperating Airport TY:LY - var %  | (TY - LY) / LY  |
 435 | Actuals/Fcst  | FTE | FTE Nonoperating Realty   | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-436 | To Bdgt | FTE | FTE Nonoperating Realty TY:Bdgt - var | TY - Bdgt
-437 | To Bdgt | FTE | FTE Nonoperating Realty TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-438 | To LY | FTE | FTE Nonoperating Realty TY:LY - var | TY - LY
-439 | To LY | FTE | FTE Nonoperating Realty TY:LY - var % | (TY - LY) / LY
+436 | To Bdgt | FTE | FTE Nonoperating Realty TY:Bdgt - var | TY - Bdgt |
+437 | To Bdgt | FTE | FTE Nonoperating Realty TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+438 | To LY | FTE | FTE Nonoperating Realty TY:LY - var | TY - LY |
+439 | To LY | FTE | FTE Nonoperating Realty TY:LY - var % | (TY - LY) / LY  |
 440 | Actuals/Fcst  | FTE | FTE Nonoperating Utility  | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-441 | To Bdgt | FTE | FTE Nonoperating Utility TY:Bdgt - var  | TY - Bdgt
-442 | To Bdgt | FTE | FTE Nonoperating Utility TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-443 | To LY | FTE | FTE Nonoperating Utility TY:LY - var  | TY - LY
-444 | To LY | FTE | FTE Nonoperating Utility TY:LY - var %  | (TY - LY) / LY
+441 | To Bdgt | FTE | FTE Nonoperating Utility TY:Bdgt - var  | TY - Bdgt |
+442 | To Bdgt | FTE | FTE Nonoperating Utility TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+443 | To LY | FTE | FTE Nonoperating Utility TY:LY - var  | TY - LY |
+444 | To LY | FTE | FTE Nonoperating Utility TY:LY - var %  | (TY - LY) / LY  |
 445 | Actuals/Fcst  | FTE | FTE Other Op. Dept.   | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-446 | To Bdgt | FTE | FTE Other Op. Dept. TY:Bdgt - var | TY - Bdgt
-447 | To Bdgt | FTE | FTE Other Op. Dept. TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-448 | To LY | FTE | FTE Other Op. Dept. TY:LY - var | TY - LY
-449 | To LY | FTE | FTE Other Op. Dept. TY:LY - var % | (TY - LY) / LY
+446 | To Bdgt | FTE | FTE Other Op. Dept. TY:Bdgt - var | TY - Bdgt |
+447 | To Bdgt | FTE | FTE Other Op. Dept. TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+448 | To LY | FTE | FTE Other Op. Dept. TY:LY - var | TY - LY |
+449 | To LY | FTE | FTE Other Op. Dept. TY:LY - var % | (TY - LY) / LY  |
 450 | Actuals/Fcst  | FTE | FTE RB&E  | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
 451 | Actuals/Fcst  | FTE | FTE RB&E Banquet  | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-452 | To Bdgt | FTE | FTE RB&E Banquet TY:Bdgt - var  | TY - Bdgt
-453 | To Bdgt | FTE | FTE RB&E Banquet TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-454 | To LY | FTE | FTE RB&E Banquet TY:LY - var  | TY - LY
-455 | To LY | FTE | FTE RB&E Banquet TY:LY - var %  | (TY - LY) / LY
+452 | To Bdgt | FTE | FTE RB&E Banquet TY:Bdgt - var  | TY - Bdgt |
+453 | To Bdgt | FTE | FTE RB&E Banquet TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+454 | To LY | FTE | FTE RB&E Banquet TY:LY - var  | TY - LY |
+455 | To LY | FTE | FTE RB&E Banquet TY:LY - var %  | (TY - LY) / LY  |
 456 | Actuals/Fcst  | FTE | FTE RB&E Catering   | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-457 | To Bdgt | FTE | FTE RB&E Catering TY:Bdgt - var | TY - Bdgt
-458 | To Bdgt | FTE | FTE RB&E Catering TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-459 | To LY | FTE | FTE RB&E Catering TY:LY - var | TY - LY
-460 | To LY | FTE | FTE RB&E Catering TY:LY - var % | (TY - LY) / LY
+457 | To Bdgt | FTE | FTE RB&E Catering TY:Bdgt - var | TY - Bdgt |
+458 | To Bdgt | FTE | FTE RB&E Catering TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+459 | To LY | FTE | FTE RB&E Catering TY:LY - var | TY - LY |
+460 | To LY | FTE | FTE RB&E Catering TY:LY - var % | (TY - LY) / LY  |
 461 | Actuals/Fcst  | FTE | FTE RB&E Conference Services  | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-462 | To Bdgt | FTE | FTE RB&E Conference Services TY:Bdgt - var  | TY - Bdgt
-463 | To Bdgt | FTE | FTE RB&E Conference Services TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-464 | To LY | FTE | FTE RB&E Conference Services TY:LY - var  | TY - LY
-465 | To LY | FTE | FTE RB&E Conference Services TY:LY - var %  | (TY - LY) / LY
+462 | To Bdgt | FTE | FTE RB&E Conference Services TY:Bdgt - var  | TY - Bdgt |
+463 | To Bdgt | FTE | FTE RB&E Conference Services TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+464 | To LY | FTE | FTE RB&E Conference Services TY:LY - var  | TY - LY |
+465 | To LY | FTE | FTE RB&E Conference Services TY:LY - var %  | (TY - LY) / LY  |
 466 | Actuals/Fcst  | FTE | FTE RB&E Lounge   | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-467 | To Bdgt | FTE | FTE RB&E Lounge TY:Bdgt - var | TY - Bdgt
-468 | To Bdgt | FTE | FTE RB&E Lounge TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-469 | To LY | FTE | FTE RB&E Lounge TY:LY - var | TY - LY
-470 | To LY | FTE | FTE RB&E Lounge TY:LY - var % | (TY - LY) / LY
+467 | To Bdgt | FTE | FTE RB&E Lounge TY:Bdgt - var | TY - Bdgt |
+468 | To Bdgt | FTE | FTE RB&E Lounge TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+469 | To LY | FTE | FTE RB&E Lounge TY:LY - var | TY - LY |
+470 | To LY | FTE | FTE RB&E Lounge TY:LY - var % | (TY - LY) / LY  |
 471 | Actuals/Fcst  | FTE | FTE RB&E Other  | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-472 | To Bdgt | FTE | FTE RB&E Other TY:Bdgt - var  | TY - Bdgt
-473 | To Bdgt | FTE | FTE RB&E Other TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-474 | To LY | FTE | FTE RB&E Other TY:LY - var  | TY - LY
-475 | To LY | FTE | FTE RB&E Other TY:LY - var %  | (TY - LY) / LY
+472 | To Bdgt | FTE | FTE RB&E Other TY:Bdgt - var  | TY - Bdgt |
+473 | To Bdgt | FTE | FTE RB&E Other TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+474 | To LY | FTE | FTE RB&E Other TY:LY - var  | TY - LY |
+475 | To LY | FTE | FTE RB&E Other TY:LY - var %  | (TY - LY) / LY  |
 476 | Actuals/Fcst  | FTE | FTE RB&E Outlet   | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-477 | To Bdgt | FTE | FTE RB&E Outlet TY:Bdgt - var | TY - Bdgt
-478 | To Bdgt | FTE | FTE RB&E Outlet TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-479 | To LY | FTE | FTE RB&E Outlet TY:LY - var | TY - LY
-480 | To LY | FTE | FTE RB&E Outlet TY:LY - var % | (TY - LY) / LY
+477 | To Bdgt | FTE | FTE RB&E Outlet TY:Bdgt - var | TY - Bdgt |
+478 | To Bdgt | FTE | FTE RB&E Outlet TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+479 | To LY | FTE | FTE RB&E Outlet TY:LY - var | TY - LY |
+480 | To LY | FTE | FTE RB&E Outlet TY:LY - var % | (TY - LY) / LY  |
 481 | Actuals/Fcst  | FTE | FTE RB&E Restaurant   | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-482 | To Bdgt | FTE | FTE RB&E Restaurant TY:Bdgt - var | TY - Bdgt
-483 | To Bdgt | FTE | FTE RB&E Restaurant TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-484 | To LY | FTE | FTE RB&E Restaurant TY:LY - var | TY - LY
-485 | To LY | FTE | FTE RB&E Restaurant TY:LY - var % | (TY - LY) / LY
-486 | To Bdgt | FTE | FTE RB&E TY:Bdgt - var  | TY - Bdgt
-487 | To Bdgt | FTE | FTE RB&E TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-488 | To LY | FTE | FTE RB&E TY:LY - var  | TY - LY
-489 | To LY | FTE | FTE RB&E TY:LY - var %  | (TY - LY) / LY
+482 | To Bdgt | FTE | FTE RB&E Restaurant TY:Bdgt - var | TY - Bdgt |
+483 | To Bdgt | FTE | FTE RB&E Restaurant TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+484 | To LY | FTE | FTE RB&E Restaurant TY:LY - var | TY - LY |
+485 | To LY | FTE | FTE RB&E Restaurant TY:LY - var % | (TY - LY) / LY  |
+486 | To Bdgt | FTE | FTE RB&E TY:Bdgt - var  | TY - Bdgt |
+487 | To Bdgt | FTE | FTE RB&E TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+488 | To LY | FTE | FTE RB&E TY:LY - var  | TY - LY |
+489 | To LY | FTE | FTE RB&E TY:LY - var %  | (TY - LY) / LY  |
 490 | Actuals/Fcst  | FTE | FTE Rentals & Other   | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-491 | To Bdgt | FTE | FTE Rentals & Other TY:Bdgt - var | TY - Bdgt
-492 | To Bdgt | FTE | FTE Rentals & Other TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-493 | To LY | FTE | FTE Rentals & Other TY:LY - var | TY - LY
-494 | To LY | FTE | FTE Rentals & Other TY:LY - var % | (TY - LY) / LY
+491 | To Bdgt | FTE | FTE Rentals & Other TY:Bdgt - var | TY - Bdgt |
+492 | To Bdgt | FTE | FTE Rentals & Other TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+493 | To LY | FTE | FTE Rentals & Other TY:LY - var | TY - LY |
+494 | To LY | FTE | FTE Rentals & Other TY:LY - var % | (TY - LY) / LY  |
 495 | Actuals/Fcst  | FTE | FTE Retail  | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-496 | To Bdgt | FTE | FTE Retail TY:Bdgt - var  | TY - Bdgt
-497 | To Bdgt | FTE | FTE Retail TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-498 | To LY | FTE | FTE Retail TY:LY - var  | TY - LY
-499 | To LY | FTE | FTE Retail TY:LY - var %  | (TY - LY) / LY
+496 | To Bdgt | FTE | FTE Retail TY:Bdgt - var  | TY - Bdgt |
+497 | To Bdgt | FTE | FTE Retail TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+498 | To LY | FTE | FTE Retail TY:LY - var  | TY - LY |
+499 | To LY | FTE | FTE Retail TY:LY - var %  | (TY - LY) / LY  |
 500 | Actuals/Fcst  | FTE | FTE Rms   | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-501 | To Bdgt | FTE | FTE Rms TY:Bdgt - var | TY - Bdgt
-502 | To Bdgt | FTE | FTE Rms TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-503 | To LY | FTE | FTE Rms TY:LY - var | TY - LY
-504 | To LY | FTE | FTE Rms TY:LY - var % | (TY - LY) / LY
+501 | To Bdgt | FTE | FTE Rms TY:Bdgt - var | TY - Bdgt |
+502 | To Bdgt | FTE | FTE Rms TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+503 | To LY | FTE | FTE Rms TY:LY - var | TY - LY |
+504 | To LY | FTE | FTE Rms TY:LY - var % | (TY - LY) / LY  |
 505 | Actuals/Fcst  | FTE | FTE Spa   | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-506 | To Bdgt | FTE | FTE Spa TY:Bdgt - var | TY - Bdgt
-507 | To Bdgt | FTE | FTE Spa TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-508 | To LY | FTE | FTE Spa TY:LY - var | TY - LY
-509 | To LY | FTE | FTE Spa TY:LY - var % | (TY - LY) / LY
-510 | To Bdgt | FTE | FTE TY:Bdgt - var | TY - Bdgt
-511 | To Bdgt | FTE | FTE TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-512 | To LY | FTE | FTE TY:LY - var | TY - LY
-513 | To LY | FTE | FTE TY:LY - var % | (TY - LY) / LY
+506 | To Bdgt | FTE | FTE Spa TY:Bdgt - var | TY - Bdgt |
+507 | To Bdgt | FTE | FTE Spa TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+508 | To LY | FTE | FTE Spa TY:LY - var | TY - LY |
+509 | To LY | FTE | FTE Spa TY:LY - var % | (TY - LY) / LY  |
+510 | To Bdgt | FTE | FTE TY:Bdgt - var | TY - Bdgt |
+511 | To Bdgt | FTE | FTE TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+512 | To LY | FTE | FTE TY:LY - var | TY - LY |
+513 | To LY | FTE | FTE TY:LY - var % | (TY - LY) / LY  |
 514 | Actuals/Fcst  | FTE | FTE Undistributed   | Hrs for Dept / ( Months in Period * 365/12 * 2080/365 ) |
-515 | To Bdgt | FTE | FTE Undistributed TY:Bdgt - var | TY - Bdgt
-516 | To Bdgt | FTE | FTE Undistributed TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-517 | To LY | FTE | FTE Undistributed TY:LY - var | TY - LY
-518 | To LY | FTE | FTE Undistributed TY:LY - var % | (TY - LY) / LY
+515 | To Bdgt | FTE | FTE Undistributed TY:Bdgt - var | TY - Bdgt |
+516 | To Bdgt | FTE | FTE Undistributed TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+517 | To LY | FTE | FTE Undistributed TY:LY - var | TY - LY |
+518 | To LY | FTE | FTE Undistributed TY:LY - var % | (TY - LY) / LY  |
 519 | Actuals/Fcst  | GOP | GOP $ | Gross Operating Profit (Dept Rev - Dept Exp - Undistributed Exp). Segment 2: 400-876. |
 520 | To Bdgt | GOP | GOP $ TY:Bdgt - var | TY - Bdgt |
 521 | To Bdgt | GOP | GOP $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
@@ -530,253 +530,119 @@ No  | Group | Metric Type | Metric Label  | Description |
 523 | To LY | GOP | GOP $ TY:LY - var % | (TY - LY) / LY  |
 524 | Actuals/Fcst  | Hours | Hrs | Hours Amount Total. Segment 3: 9600-9815  |
 525 | Actuals/Fcst  | Hours | Hrs Allocated   | "Allocated Dept Hours. Segment 2: 920-999, Segment 3: 9600-9815." |
-526 | To Bdgt | Hours | Hrs Allocated TY:Bdgt - var | TY - Bdgt
-527 | To Bdgt | Hours | Hrs Allocated TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-528 | To LY | Hours | Hrs Allocated TY:LY - var | TY - LY
-529 | To LY | Hours | Hrs Allocated TY:LY - var % | (TY - LY) / LY
+526 | To Bdgt | Hours | Hrs Allocated TY:Bdgt - var | TY - Bdgt |
+527 | To Bdgt | Hours | Hrs Allocated TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+528 | To LY | Hours | Hrs Allocated TY:LY - var | TY - LY |
+529 | To LY | Hours | Hrs Allocated TY:LY - var % | (TY - LY) / LY  |
 530 | Actuals/Fcst  | Hours | Hrs Fitness & Rec   | "Fitness & Recreation Hours. Segment 2: 650-664, 668-674, Segment 3: 9600-9815."  |
-531 | To Bdgt | Hours | Hrs Fitness & Rec TY:Bdgt - var | TY - Bdgt
-532 | To Bdgt | Hours | Hrs Fitness & Rec TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-533 | To LY | Hours | Hrs Fitness & Rec TY:LY - var | TY - LY
-534 | To LY | Hours | Hrs Fitness & Rec TY:LY - var % | (TY - LY) / LY
+531 | To Bdgt | Hours | Hrs Fitness & Rec TY:Bdgt - var | TY - Bdgt |
+532 | To Bdgt | Hours | Hrs Fitness & Rec TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+533 | To LY | Hours | Hrs Fitness & Rec TY:LY - var | TY - LY |
+534 | To LY | Hours | Hrs Fitness & Rec TY:LY - var % | (TY - LY) / LY  |
 535 | Actuals/Fcst  | Hours | Hrs Golf  | Golf Hours. Segment 2: 610-635. Segment 3: 9600-9815. |
-536 | To Bdgt | Hours | Hrs Golf TY:Bdgt - var  | TY - Bdgt
-537 | To Bdgt | Hours | Hrs Golf TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-538 | To LY | Hours | Hrs Golf TY:LY - var  | TY - LY
-539 | To LY | Hours | Hrs Golf TY:LY - var %  | (TY - LY) / LY
+536 | To Bdgt | Hours | Hrs Golf TY:Bdgt - var  | TY - Bdgt |
+537 | To Bdgt | Hours | Hrs Golf TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+538 | To LY | Hours | Hrs Golf TY:LY - var  | TY - LY |
+539 | To LY | Hours | Hrs Golf TY:LY - var %  | (TY - LY) / LY  |
 540 | Actuals/Fcst  | Hours | Hrs Mgmt Srvcs  | "Property Management Hours. Segment 2: 770-789, Segment 3: 9600-9815."  |
-541 | To Bdgt | Hours | Hrs Mgmt Srvcs TY:Bdgt - var  | TY - Bdgt
-542 | To Bdgt | Hours | Hrs Mgmt Srvcs TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-543 | To LY | Hours | Hrs Mgmt Srvcs TY:LY - var  | TY - LY
-544 | To LY | Hours | Hrs Mgmt Srvcs TY:LY - var %  | (TY - LY) / LY
+541 | To Bdgt | Hours | Hrs Mgmt Srvcs TY:Bdgt - var  | TY - Bdgt |
+542 | To Bdgt | Hours | Hrs Mgmt Srvcs TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+543 | To LY | Hours | Hrs Mgmt Srvcs TY:LY - var  | TY - LY |
+544 | To LY | Hours | Hrs Mgmt Srvcs TY:LY - var %  | (TY - LY) / LY  |
 545 | Actuals/Fcst  | Hours | Hrs Nonoperating Airport  | "Nonoperating Airport Hours. Segment 2: 680, Segment 3: 9600-9815." |
-546 | To Bdgt | Hours | Hrs Nonoperating Airport TY:Bdgt - var  | TY - Bdgt
-547 | To Bdgt | Hours | Hrs Nonoperating Airport TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-548 | To LY | Hours | Hrs Nonoperating Airport TY:LY - var  | TY - LY
-549 | To LY | Hours | Hrs Nonoperating Airport TY:LY - var %  | (TY - LY) / LY
+546 | To Bdgt | Hours | Hrs Nonoperating Airport TY:Bdgt - var  | TY - Bdgt |
+547 | To Bdgt | Hours | Hrs Nonoperating Airport TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+548 | To LY | Hours | Hrs Nonoperating Airport TY:LY - var  | TY - LY |
+549 | To LY | Hours | Hrs Nonoperating Airport TY:LY - var %  | (TY - LY) / LY  |
 550 | Actuals/Fcst  | Hours | Hrs Nonoperating Realty   | "Nonoperating Realty Hours. Segment 2: 681-685, Segment 3: 9600-9815."  |
-551 | To Bdgt | Hours | Hrs Nonoperating Realty TY:Bdgt - var | TY - Bdgt
-552 | To Bdgt | Hours | Hrs Nonoperating Realty TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-553 | To LY | Hours | Hrs Nonoperating Realty TY:LY - var | TY - LY
-554 | To LY | Hours | Hrs Nonoperating Realty TY:LY - var % | (TY - LY) / LY
+551 | To Bdgt | Hours | Hrs Nonoperating Realty TY:Bdgt - var | TY - Bdgt |
+552 | To Bdgt | Hours | Hrs Nonoperating Realty TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+553 | To LY | Hours | Hrs Nonoperating Realty TY:LY - var | TY - LY |
+554 | To LY | Hours | Hrs Nonoperating Realty TY:LY - var % | (TY - LY) / LY  |
 555 | Actuals/Fcst  | Hours | Hrs Nonoperating Utility  | "Nonoperating Utility Hours. Segment 2: 689-699, Segment 3: 9600-9815." |
-556 | To Bdgt | Hours | Hrs Nonoperating Utility TY:Bdgt - var  | TY - Bdgt
-557 | To Bdgt | Hours | Hrs Nonoperating Utility TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-558 | To LY | Hours | Hrs Nonoperating Utility TY:LY - var  | TY - LY
-559 | To LY | Hours | Hrs Nonoperating Utility TY:LY - var %  | (TY - LY) / LY
+556 | To Bdgt | Hours | Hrs Nonoperating Utility TY:Bdgt - var  | TY - Bdgt |
+557 | To Bdgt | Hours | Hrs Nonoperating Utility TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+558 | To LY | Hours | Hrs Nonoperating Utility TY:LY - var  | TY - LY |
+559 | To LY | Hours | Hrs Nonoperating Utility TY:LY - var %  | (TY - LY) / LY  |
 560 | Actuals/Fcst  | Hours | Hrs Other Op. Dept.   | "Parking & Trans Hours + Dry Cleaning Hours + Telecomm Hours. Segment 2: 710-721, 735-740, Segment 3: 9600-9815." |
-561 | To Bdgt | Hours | Hrs Other Op. Dept. TY:Bdgt - var | TY - Bdgt
-562 | To Bdgt | Hours | Hrs Other Op. Dept. TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-563 | To LY | Hours | Hrs Other Op. Dept. TY:LY - var | TY - LY
-564 | To LY | Hours | Hrs Other Op. Dept. TY:LY - var % | (TY - LY) / LY
+561 | To Bdgt | Hours | Hrs Other Op. Dept. TY:Bdgt - var | TY - Bdgt |
+562 | To Bdgt | Hours | Hrs Other Op. Dept. TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+563 | To LY | Hours | Hrs Other Op. Dept. TY:LY - var | TY - LY |
+564 | To LY | Hours | Hrs Other Op. Dept. TY:LY - var % | (TY - LY) / LY  |
 565 | Actuals/Fcst  | Hours | Hrs RB&E  | "RB&E Hours. Segment 2: 500-599, Segment 3: 9600-9815." |
 566 | Actuals/Fcst  | Hours | Hrs RB&E Banquet  | "RB&E Hours Banquet. Segment 2: 510-515, Segment 3: 9600-9815." |
-567 | To Bdgt | Hours | Hrs RB&E Banquet TY:Bdgt - var  | TY - Bdgt
-568 | To Bdgt | Hours | Hrs RB&E Banquet TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-569 | To LY | Hours | Hrs RB&E Banquet TY:LY - var  | TY - LY
-570 | To LY | Hours | Hrs RB&E Banquet TY:LY - var %  | (TY - LY) / LY
+567 | To Bdgt | Hours | Hrs RB&E Banquet TY:Bdgt - var  | TY - Bdgt |
+568 | To Bdgt | Hours | Hrs RB&E Banquet TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+569 | To LY | Hours | Hrs RB&E Banquet TY:LY - var  | TY - LY |
+570 | To LY | Hours | Hrs RB&E Banquet TY:LY - var %  | (TY - LY) / LY  |
 571 | Actuals/Fcst  | Hours | Hrs RB&E Catering   | RB&E Hours Catering. Segment 2: 516-518. Segment 3: 9600-9815.  |
-572 | To Bdgt | Hours | Hrs RB&E Catering TY:Bdgt - var | TY - Bdgt
-573 | To Bdgt | Hours | Hrs RB&E Catering TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-574 | To LY | Hours | Hrs RB&E Catering TY:LY - var | TY - LY
-575 | To LY | Hours | Hrs RB&E Catering TY:LY - var % | (TY - LY) / LY
+572 | To Bdgt | Hours | Hrs RB&E Catering TY:Bdgt - var | TY - Bdgt |
+573 | To Bdgt | Hours | Hrs RB&E Catering TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+574 | To LY | Hours | Hrs RB&E Catering TY:LY - var | TY - LY |
+575 | To LY | Hours | Hrs RB&E Catering TY:LY - var % | (TY - LY) / LY  |
 576 | Actuals/Fcst  | Hours | Hrs RB&E Conference Services  | RB&E Conference Hours. Segment 2: 590-599. Segment 3: 9600-9815.  |
-577 | To Bdgt | Hours | Hrs RB&E Conference Services TY:Bdgt - var  | TY - Bdgt
-578 | To Bdgt | Hours | Hrs RB&E Conference Services TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-579 | To LY | Hours | Hrs RB&E Conference Services TY:LY - var  | TY - LY
-580 | To LY | Hours | Hrs RB&E Conference Services TY:LY - var %  | (TY - LY) / LY
+577 | To Bdgt | Hours | Hrs RB&E Conference Services TY:Bdgt - var  | TY - Bdgt |
+578 | To Bdgt | Hours | Hrs RB&E Conference Services TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+579 | To LY | Hours | Hrs RB&E Conference Services TY:LY - var  | TY - LY |
+580 | To LY | Hours | Hrs RB&E Conference Services TY:LY - var %  | (TY - LY) / LY  |
 581 | Actuals/Fcst  | Hours | Hrs RB&E Lounge   | RB&E Lounge Hours. Segment 2: 530-539. Segment 3: 9600-9815.  |
-582 | To Bdgt | Hours | Hrs RB&E Lounge TY:Bdgt - var | TY - Bdgt
-583 | To Bdgt | Hours | Hrs RB&E Lounge TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-584 | To LY | Hours | Hrs RB&E Lounge TY:LY - var | TY - LY
-585 | To LY | Hours | Hrs RB&E Lounge TY:LY - var % | (TY - LY) / LY
+582 | To Bdgt | Hours | Hrs RB&E Lounge TY:Bdgt - var | TY - Bdgt |
+583 | To Bdgt | Hours | Hrs RB&E Lounge TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+584 | To LY | Hours | Hrs RB&E Lounge TY:LY - var | TY - LY |
+585 | To LY | Hours | Hrs RB&E Lounge TY:LY - var % | (TY - LY) / LY  |
 586 | Actuals/Fcst  | Hours | Hrs RB&E Other  | "Admin Hours + Kitchen Hours + Cart Hours + Minibar Hours + Room Service Hours. Segment 2: 500, 550-589, Segment 3: 9600-9815." |
-587 | To Bdgt | Hours | Hrs RB&E Other TY:Bdgt - var  | TY - Bdgt
-588 | To Bdgt | Hours | Hrs RB&E Other TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-589 | To LY | Hours | Hrs RB&E Other TY:LY - var  | TY - LY
-590 | To LY | Hours | Hrs RB&E Other TY:LY - var %  | (TY - LY) / LY
+587 | To Bdgt | Hours | Hrs RB&E Other TY:Bdgt - var  | TY - Bdgt |
+588 | To Bdgt | Hours | Hrs RB&E Other TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+589 | To LY | Hours | Hrs RB&E Other TY:LY - var  | TY - LY |
+590 | To LY | Hours | Hrs RB&E Other TY:LY - var %  | (TY - LY) / LY  |
 591 | Actuals/Fcst  | Hours | Hrs RB&E Outlet   | RB&E Outlet Hours. Segment 2: 530-549. Segment 3: 9600-9815.  |
-592 | To Bdgt | Hours | Hrs RB&E Outlet TY:Bdgt - var | TY - Bdgt
-593 | To Bdgt | Hours | Hrs RB&E Outlet TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-594 | To LY | Hours | Hrs RB&E Outlet TY:LY - var | TY - LY
-595 | To LY | Hours | Hrs RB&E Outlet TY:LY - var % | (TY - LY) / LY
+592 | To Bdgt | Hours | Hrs RB&E Outlet TY:Bdgt - var | TY - Bdgt |
+593 | To Bdgt | Hours | Hrs RB&E Outlet TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+594 | To LY | Hours | Hrs RB&E Outlet TY:LY - var | TY - LY |
+595 | To LY | Hours | Hrs RB&E Outlet TY:LY - var % | (TY - LY) / LY  |
 596 | Actuals/Fcst  | Hours | Hrs RB&E Restaurant   | RB&E Restaurant Hours. Segment 2: 540-549. Segment 3: 9600-9815.  |
-597 | To Bdgt | Hours | Hrs RB&E Restaurant TY:Bdgt - var | TY - Bdgt
-598 | To Bdgt | Hours | Hrs RB&E Restaurant TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-599 | To LY | Hours | Hrs RB&E Restaurant TY:LY - var | TY - LY
-600 | To LY | Hours | Hrs RB&E Restaurant TY:LY - var % | (TY - LY) / LY
-601 | To Bdgt | Hours | Hrs RB&E TY:Bdgt - var  | TY - Bdgt
-602 | To Bdgt | Hours | Hrs RB&E TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-603 | To LY | Hours | Hrs RB&E TY:LY - var  | TY - LY
-604 | To LY | Hours | Hrs RB&E TY:LY - var %  | (TY - LY) / LY
+597 | To Bdgt | Hours | Hrs RB&E Restaurant TY:Bdgt - var | TY - Bdgt |
+598 | To Bdgt | Hours | Hrs RB&E Restaurant TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+599 | To LY | Hours | Hrs RB&E Restaurant TY:LY - var | TY - LY |
+600 | To LY | Hours | Hrs RB&E Restaurant TY:LY - var % | (TY - LY) / LY  |
+601 | To Bdgt | Hours | Hrs RB&E TY:Bdgt - var  | TY - Bdgt |
+602 | To Bdgt | Hours | Hrs RB&E TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+603 | To LY | Hours | Hrs RB&E TY:LY - var  | TY - LY |
+604 | To LY | Hours | Hrs RB&E TY:LY - var %  | (TY - LY) / LY  |
 605 | Actuals/Fcst  | Hours | Hrs Rentals & Other   | "Misc Hours. Segment 2: 790-799, Segment 3: 9600-9815." |
-606 | To Bdgt | Hours | Hrs Rentals & Other TY:Bdgt - var | TY - Bdgt
-607 | To Bdgt | Hours | Hrs Rentals & Other TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-608 | To LY | Hours | Hrs Rentals & Other TY:LY - var | TY - LY
-609 | To LY | Hours | Hrs Rentals & Other TY:LY - var % | (TY - LY) / LY
+606 | To Bdgt | Hours | Hrs Rentals & Other TY:Bdgt - var | TY - Bdgt |
+607 | To Bdgt | Hours | Hrs Rentals & Other TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+608 | To LY | Hours | Hrs Rentals & Other TY:LY - var | TY - LY |
+609 | To LY | Hours | Hrs Rentals & Other TY:LY - var % | (TY - LY) / LY  |
 610 | Actuals/Fcst  | Hours | Hrs Retail  | "Retail Hours. Segment 2: 750-769, Segment 3: 9600-9815." |
-611 | To Bdgt | Hours | Hrs Retail TY:Bdgt - var  | TY - Bdgt
-612 | To Bdgt | Hours | Hrs Retail TY:Bdgt - var %  | (TY - Bdgt) / Bdgt
-613 | To LY | Hours | Hrs Retail TY:LY - var  | TY - LY
-614 | To LY | Hours | Hrs Retail TY:LY - var %  | (TY - LY) / LY
+611 | To Bdgt | Hours | Hrs Retail TY:Bdgt - var  | TY - Bdgt |
+612 | To Bdgt | Hours | Hrs Retail TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
+613 | To LY | Hours | Hrs Retail TY:LY - var  | TY - LY |
+614 | To LY | Hours | Hrs Retail TY:LY - var %  | (TY - LY) / LY  |
 615 | Actuals/Fcst  | Hours | Hrs Rms   | "Room Hours (Includes Hskpng, Res, FO, Bell, Guest Srvc. Segment 2: 400-499, Segment 3: 9600-9815." |
-616 | To Bdgt | Hours | Hrs Rms TY:Bdgt - var | TY - Bdgt
-617 | To Bdgt | Hours | Hrs Rms TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-618 | To LY | Hours | Hrs Rms TY:LY - var | TY - LY
-619 | To LY | Hours | Hrs Rms TY:LY - var % | (TY - LY) / LY
+616 | To Bdgt | Hours | Hrs Rms TY:Bdgt - var | TY - Bdgt |
+617 | To Bdgt | Hours | Hrs Rms TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+618 | To LY | Hours | Hrs Rms TY:LY - var | TY - LY |
+619 | To LY | Hours | Hrs Rms TY:LY - var % | (TY - LY) / LY  |
 620 | Actuals/Fcst  | Hours | Hrs Spa   | "Spa Hours. Segment 2: 666, Segment 3: 9600-9815."  |
-621 | To Bdgt | Hours | Hrs Spa TY:Bdgt - var | TY - Bdgt
-622 | To Bdgt | Hours | Hrs Spa TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-623 | To LY | Hours | Hrs Spa TY:LY - var | TY - LY
-624 | To LY | Hours | Hrs Spa TY:LY - var % | (TY - LY) / LY
+621 | To Bdgt | Hours | Hrs Spa TY:Bdgt - var | TY - Bdgt |
+622 | To Bdgt | Hours | Hrs Spa TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+623 | To LY | Hours | Hrs Spa TY:LY - var | TY - LY |
+624 | To LY | Hours | Hrs Spa TY:LY - var % | (TY - LY) / LY  |
 625 | To Bdgt | Hours | Hrs TY:Bdgt - var | TY - Bdgt |
-626 | To Bdgt | Hours | Hrs TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-627 | To LY | Hours | Hrs TY:LY - var | TY - LY
-628 | To LY | Hours | Hrs TY:LY - var % | (TY - LY) / LY
+626 | To Bdgt | Hours | Hrs TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+627 | To LY | Hours | Hrs TY:LY - var | TY - LY |
+628 | To LY | Hours | Hrs TY:LY - var % | (TY - LY) / LY  |
 629 | Actuals/Fcst  | Hours | Hrs Undistributed   | "Undistributed Hours. Segment 2: 800-876, Segment 3: 9600-9815."  |
-630 | To Bdgt | Hours | Hrs Undistributed TY:Bdgt - var | TY - Bdgt
-631 | To Bdgt | Hours | Hrs Undistributed TY:Bdgt - var % | (TY - Bdgt) / Bdgt
-632 | To LY | Hours | Hrs Undistributed TY:LY - var | TY - LY
-633 | To LY | Hours | Hrs Undistributed TY:LY - var % | (TY - LY) / LY
-634 | Actuals/Fcst  | Payroll | Payroll $ | Payroll Amount. Segment 3: 6600-6999. |
-635 | To Bdgt | Payroll | Payroll $ TY:Bdgt - var | TY - Bdgt |
-636 | To Bdgt | Payroll | Payroll $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-637 | To LY | Payroll | Payroll $ TY:LY - var | TY - LY |
-638 | To LY | Payroll | Payroll $ TY:LY - var % | (TY - LY) / LY  |
-639 | Actuals/Fcst  | Payroll | Payroll /Rev %  | Payroll $ / Rev $ |
-640 | Actuals/Fcst  | Payroll | Payroll /Rev Fitness & Rec %  | Fitness & Rec Payroll $ / Rev Fitness & Rec $ |
-641 | To Bdgt | Payroll | Payroll /Rev Fitness & Rec TY:Bdgt - var  | TY - Bdgt |
-642 | To LY | Payroll | Payroll /Rev Fitness & Rec TY:LY - var  | TY - LY |
-643 | Actuals/Fcst  | Payroll | Payroll /Rev Golf % | Payroll Golf $ / Rev Golf $ |
-644 | To Bdgt | Payroll | Payroll /Rev Golf TY:Bdgt - var | TY - Bdgt |
-645 | To LY | Payroll | Payroll /Rev Golf TY:LY - var | TY - LY |
-646 | Actuals/Fcst  | Payroll | Payroll /Rev Mgmt Srvcs % | Payroll Mgmt Srvcs $ / Rev Mgmt Srvcs $ |
-647 | To Bdgt | Payroll | Payroll /Rev Mgmt Srvcs TY:Bdgt - var | TY - Bdgt |
-648 | To LY | Payroll | Payroll /Rev Mgmt Srvcs TY:LY - var | TY - LY |
-649 | Actuals/Fcst  | Payroll | Payroll /Rev Other Op. Dept. %  | Payroll Other Op. Dept. $ / Rev Other Op. dept. $ |
-650 | To Bdgt | Payroll | Payroll /Rev Other Op. Dept. TY:Bdgt - var  | TY - Bdgt |
-651 | To LY | Payroll | Payroll /Rev Other Op. Dept. TY:LY - var  | TY - LY |
-652 | Actuals/Fcst  | Payroll | Payroll /Rev Parking & Trans %  | Payroll Parking & Trans $ / Rev Parking & Trans $ |
-653 | To Bdgt | Payroll | Payroll /Rev Parking & Trans TY:Bdgt - var  | TY - Bdgt |
-654 | To LY | Payroll | Payroll /Rev Parking & Trans TY:LY - var  | TY - LY |
-655 | Actuals/Fcst  | Payroll | Payroll /Rev RB&E % | Payroll RB&E $ / Rev RB&E $ |
-656 | Actuals/Fcst  | Payroll | Payroll /Rev RB&E Outlet %  | Payroll RB&E Outlet $ / Rev RB&E Outlet $ |
-657 | To Bdgt | Payroll | Payroll /Rev RB&E TY:Bdgt - var | TY - Bdgt |
-658 | To LY | Payroll | Payroll /Rev RB&E TY:LY - var | TY - LY |
-659 | Actuals/Fcst  | Payroll | Payroll /Rev Rentals & Other %  | Payroll Rentals & Other $ / Rev Rentals & Other $ |
-660 | To Bdgt | Payroll | Payroll /Rev Rentals & Other % TY:Bdgt - var  | TY - Bdgt |
-661 | To LY | Payroll | Payroll /Rev Rentals & Other % TY:LY - var  | TY - LY |
-662 | Actuals/Fcst  | Payroll | Payroll /Rev Retail % | Payroll Retail $ / Rev Retail $ |
-663 | To Bdgt | Payroll | Payroll /Rev Retail TY:Bdgt - var | TY - Bdgt |
-664 | To LY | Payroll | Payroll /Rev Retail TY:LY - var | TY - LY |
-665 | Actuals/Fcst  | Payroll | Payroll /Rev Rms %  | Payroll Rms $ / Rev Rms $ |
-666 | To Bdgt | Payroll | Payroll /Rev Rms TY:Bdgt - var  | TY - Bdgt |
-667 | To LY | Payroll | Payroll /Rev Rms TY:LY - var  | TY - LY |
-668 | Actuals/Fcst  | Payroll | Payroll /Rev Spa %  | Payroll Spa $ / Rev Spa $ |
-669 | To Bdgt | Payroll | Payroll /Rev Spa TY:Bdgt - var  | TY - Bdgt |
-670 | To LY | Payroll | Payroll /Rev Spa TY:LY - var  | TY - LY |
-671 | Actuals/Fcst  | Payroll | Payroll /Rev Telecom %  | Payroll Telecom $ / Rev Telecom $ |
-672 | To Bdgt | Payroll | Payroll /Rev Telecom TY:Bdgt - var  | TY - Bdgt |
-673 | To LY | Payroll | Payroll /Rev Telecom TY:LY - var  | TY - LY |
-674 | To Bdgt | Payroll | Payroll /Rev TY:Bdgt - var  | TY - Bdgt |
-675 | To Bdgt | Payroll | Payroll /Rev TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
-676 | To LY | Payroll | Payroll /Rev TY:LY - var  | TY - LY |
-677 | To LY | Payroll | Payroll /Rev TY:LY - var %  | (TY - LY) / LY  |
-678 | Actuals/Fcst  | Payroll | Payroll A&G $ | "Admin & General Payroll. Segment 2: 800-814, Segment 3: 6600-6999."  |
-679 | To Bdgt | Payroll | Payroll A&G $ TY:Bdgt - var | TY - Bdgt |
-680 | To Bdgt | Payroll | Payroll A&G $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-681 | To LY | Payroll | Payroll A&G $ TY:LY - var | TY - LY |
-682 | To LY | Payroll | Payroll A&G $ TY:LY - var % | (TY - LY) / LY  |
-683 | Actuals/Fcst  | Payroll | Payroll Fitness & Rec $ | "Fitness & Rec Payroll. Segment 2: 650-664, 668-674, Segment 3: 6600-6999." |
-684 | To Bdgt | Payroll | Payroll Fitness & Rec $ TY:Bdgt - var | TY - Bdgt |
-685 | To Bdgt | Payroll | Payroll Fitness & Rec $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-686 | To LY | Payroll | Payroll Fitness & Rec $ TY:LY - var | TY - LY |
-687 | To LY | Payroll | Payroll Fitness & Rec $ TY:LY - var % | (TY - LY) / LY  |
-688 | Actuals/Fcst  | Payroll | Payroll Golf $  | "Golf Payroll. 610-635, Segment 3: 6600-6999."  |
-689 | To Bdgt | Payroll | Payroll Golf $ TY:Bdgt - var  | TY - Bdgt |
-690 | To Bdgt | Payroll | Payroll Golf $ TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
-691 | To LY | Payroll | Payroll Golf $ TY:LY - var  | TY - LY |
-692 | To LY | Payroll | Payroll Golf $ TY:LY - var %  | (TY - LY) / LY  |
-693 | Actuals/Fcst  | Payroll | Payroll IT $  | "Info Tech Payroll. Segment 2: 815, Segment 3: 6600-6999."  |
-694 | To Bdgt | Payroll | Payroll IT $ TY:Bdgt - var  | TY - Bdgt |
-695 | To Bdgt | Payroll | Payroll IT $ TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
-696 | To LY | Payroll | Payroll IT $ TY:LY - var  | TY - LY |
-697 | To LY | Payroll | Payroll IT $ TY:LY - var %  | (TY - LY) / LY  |
-698 | Actuals/Fcst  | Payroll | Payroll Mgmt Srvcs $  | "Management Services Payroll. Segment 2: 770-789, Segment 3: 6600-6999."  |
-699 | To Bdgt | Payroll | Payroll Mgmt Srvcs $ TY:Bdgt - var  | TY - Bdgt |
-700 | To Bdgt | Payroll | Payroll Mgmt Srvcs $ TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
-701 | To LY | Payroll | Payroll Mgmt Srvcs $ TY:LY - var  | TY - LY |
-702 | To LY | Payroll | Payroll Mgmt Srvcs $ TY:LY - var %  | (TY - LY) / LY  |
-703 | Actuals/Fcst  | Payroll | Payroll Nonoperating Airport $  | "Nonoperating Airport Payroll. Segment 2: 680, Segment 3: 6600-6999." |
-704 | To Bdgt | Payroll | Payroll Nonoperating Airport $ TY:Bdgt - var  | TY - Bdgt |
-705 | To Bdgt | Payroll | Payroll Nonoperating Airport $ TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
-706 | To LY | Payroll | Payroll Nonoperating Airport $ TY:LY - var  | TY - LY |
-707 | To LY | Payroll | Payroll Nonoperating Airport $ TY:LY - var %  | (TY - LY) / LY  |
-708 | Actuals/Fcst  | Payroll | Payroll Nonoperating Realty $ | "Nonoperating Realty Payroll. Segment 2: 681-685, Segment 3: 6600-6999."  |
-709 | To Bdgt | Payroll | Payroll Nonoperating Realty $ TY:Bdgt - var | TY - Bdgt |
-710 | To Bdgt | Payroll | Payroll Nonoperating Realty $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-711 | To LY | Payroll | Payroll Nonoperating Realty $ TY:LY - var | TY - LY |
-712 | To LY | Payroll | Payroll Nonoperating Realty $ TY:LY - var % | (TY - LY) / LY  |
-713 | Actuals/Fcst  | Payroll | Payroll Nonoperating Utility $  | "Nonoperating Utility Payroll. Segment 2: 689-699, Segment 3: 6600-6999." |
-714 | To Bdgt | Payroll | Payroll Nonoperating Utility $ TY:Bdgt - var  | TY - Bdgt |
-715 | To Bdgt | Payroll | Payroll Nonoperating Utility $ TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
-716 | To LY | Payroll | Payroll Nonoperating Utility $ TY:LY - var  | TY - LY |
-717 | To LY | Payroll | Payroll Nonoperating Utility $ TY:LY - var %  | (TY - LY) / LY  |
-718 | Actuals/Fcst  | Payroll | Payroll Other Op. Dept. $ | "Parking & Trans Payroll, Dry Cleaning Payroll, Telecom Payroll. Segment 2: 710-721, 735-740, Segment 3: 6600-6999."  |
-719 | To Bdgt | Payroll | Payroll Other Op. Dept. $ TY:Bdgt - var | TY - Bdgt |
-720 | To Bdgt | Payroll | Payroll Other Op. Dept. $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-721 | To LY | Payroll | Payroll Other Op. Dept. $ TY:LY - var | TY - LY |
-722 | To LY | Payroll | Payroll Other Op. Dept. $ TY:LY - var % | (TY - LY) / LY  |
-723 | Actuals/Fcst  | Payroll | Payroll Parking & Trans $ | "Parking & Trans Payroll. Segment 2: 720, 740, Segment 3: 6600-6999." |
-724 | To Bdgt | Payroll | Payroll Parking & Trans $ TY:Bdgt - var | TY - Bdgt |
-725 | To Bdgt | Payroll | Payroll Parking & Trans $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-726 | To LY | Payroll | Payroll Parking & Trans $ TY:LY - var | TY - LY |
-727 | To LY | Payroll | Payroll Parking & Trans $ TY:LY - var % | (TY - LY) / LY  |
-728 | Actuals/Fcst  | Payroll | Payroll R&M $ | "Property Ops & Maintenance Payroll. Segment 2: 850-874, Segment 3: 6600-6999." |
-729 | To Bdgt | Payroll | Payroll R&M $ TY:Bdgt - var | TY - Bdgt |
-730 | To Bdgt | Payroll | Payroll R&M $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-731 | To LY | Payroll | Payroll R&M $ TY:LY - var | TY - LY |
-732 | To LY | Payroll | Payroll R&M $ TY:LY - var % | (TY - LY) / LY  |
+630 | To Bdgt | Hours | Hrs Undistributed TY:Bdgt - var | TY - Bdgt |
+631 | To Bdgt | Hours | Hrs Undistributed TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
+632 | To LY | Hours | Hrs Undistributed TY:LY - var | TY - LY |
+633 | To LY | Hours | Hrs Undistributed TY:LY - var % | (TY - LY) / LY  |
 733 | Actuals/Fcst  | Payroll | Payroll RB&E $  | "RB&E Payroll. Segment 2: 500-599, Segment 3: 6600-6999." |
 734 | To Bdgt | Payroll | Payroll RB&E $ TY:Bdgt - var  | TY - Bdgt |
 735 | To Bdgt | Payroll | Payroll RB&E $ TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
 736 | To LY | Payroll | Payroll RB&E $ TY:LY - var  | TY - LY |
 737 | To LY | Payroll | Payroll RB&E $ TY:LY - var %  | (TY - LY) / LY  |
-738 | Actuals/Fcst  | Payroll | Payroll RB&E Outlet $ | "RB&E Outlet Payroll. Segment 2: 530-549, Segment 3: 6600-6999."  |
-739 | To Bdgt | Payroll | Payroll RB&E Outlet $ TY:Bdgt - var | TY - Bdgt |
-740 | To Bdgt | Payroll | Payroll RB&E Outlet $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-741 | To LY | Payroll | Payroll RB&E Outlet $ TY:LY - var | TY - LY |
-742 | To LY | Payroll | Payroll RB&E Outlet $ TY:LY - var % | (TY - LY) / LY  |
-743 | Actuals/Fcst  | Payroll | Payroll Rentals & Other $ | "Rentals & Other Payroll. Segment 2: 790-799, Segment 3: 6600-6999."  |
-744 | To Bdgt | Payroll | Payroll Rentals & Other $ TY:Bdgt - var | TY - Bdgt |
-745 | To Bdgt | Payroll | Payroll Rentals & Other $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-746 | To LY | Payroll | Payroll Rentals & Other $ TY:LY - var | TY - LY |
-747 | To LY | Payroll | Payroll Rentals & Other $ TY:LY - var % | (TY - LY) / LY  |
-748 | Actuals/Fcst  | Payroll | Payroll Retail $  | "Retail Payroll. Segment 2: 750-769, Segment 3: 6600-6999." |
-749 | To Bdgt | Payroll | Payroll Retail $ TY:Bdgt - var  | TY - Bdgt |
-750 | To Bdgt | Payroll | Payroll Retail $ TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |
-751 | To LY | Payroll | Payroll Retail $ TY:LY - var  | TY - LY |
-752 | To LY | Payroll | Payroll Retail $ TY:LY - var %  | (TY - LY) / LY  |
-753 | Actuals/Fcst  | Payroll | Payroll Rms $ | "Rooms Payroll. Segment 2: 400-499, Segment 3: 6600-6999."  |
-754 | To Bdgt | Payroll | Payroll Rms $ TY:Bdgt - var | TY - Bdgt |
-755 | To Bdgt | Payroll | Payroll Rms $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-756 | To LY | Payroll | Payroll Rms $ TY:LY - var | TY - LY |
-757 | To LY | Payroll | Payroll Rms $ TY:LY - var % | (TY - LY) / LY  |
-758 | Actuals/Fcst  | Payroll | Payroll S&M $ | "Sales & Marketing Payroll. Segment 2: 825-849, Segment 3: 6600-6999."  |
-759 | To Bdgt | Payroll | Payroll S&M $ TY:Bdgt - var | TY - Bdgt |
-760 | To Bdgt | Payroll | Payroll S&M $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-761 | To LY | Payroll | Payroll S&M $ TY:LY - var | TY - LY |
-762 | To LY | Payroll | Payroll S&M $ TY:LY - var % | (TY - LY) / LY  |
-763 | Actuals/Fcst  | Payroll | Payroll Spa $ | "Spa Payroll. Segment 2: 666, Segment 3: 6600-6999."  |
-764 | To Bdgt | Payroll | Payroll Spa $ TY:Bdgt - var | TY - Bdgt |
-765 | To Bdgt | Payroll | Payroll Spa $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-766 | To LY | Payroll | Payroll Spa $ TY:LY - var | TY - LY |
-767 | To LY | Payroll | Payroll Spa $ TY:LY - var % | (TY - LY) / LY  |
-768 | Actuals/Fcst  | Payroll | Payroll Telecom $ | "Telecom Payroll. Segment 2: 735, Segment 3: 6600-6999."  |
-769 | To Bdgt | Payroll | Payroll Telecom $ TY:Bdgt - var | TY - Bdgt |
-770 | To Bdgt | Payroll | Payroll Telecom $ TY:Bdgt - var % | (TY - Bdgt) / Bdgt  |
-771 | To LY | Payroll | Payroll Telecom $ TY:LY - var | TY - LY |
-772 | To LY | Payroll | Payroll Telecom $ TY:LY - var % | (TY - LY) / LY  |
 773 | Actuals/Fcst  | Profit  | Profit $  | "Profit Amount. Segment 2: 400-799, Segment 3: 4000-8999."  |
 774 | To Bdgt | Profit  | Profit $ TY:Bdgt - var  | TY - Bdgt |
 775 | To Bdgt | Profit  | Profit $ TY:Bdgt - var %  | (TY - Bdgt) / Bdgt  |

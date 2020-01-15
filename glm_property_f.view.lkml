@@ -1308,6 +1308,18 @@ view: glm_property_f {
     hidden: yes
   }
 
+  dimension: contract_adjustment_room_rental_mgmt_2_19_cnt {
+    type: number
+    sql: ${TABLE}.contract_adjustment_room_rental_mgmt_2_19_cnt ;;
+    hidden: yes
+  }
+
+  dimension: contract_adjustment_room_cnt {
+    type: number
+    sql: ${TABLE}.contract_adjustment_room_cnt ;;
+    hidden: yes
+  }
+
   dimension: occupied_room_rental_mgmt_2_19_cnt {
     type: number
     sql: ${TABLE}.occupied_room_rental_mgmt_2_19_cnt ;;

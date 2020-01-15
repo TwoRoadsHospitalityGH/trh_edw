@@ -28,14 +28,6 @@ view: revintel_property_f {
     type: string
   }
 
-  dimension: minor_market_nm {
-    sql: ${TABLE}.minor_market_name ;;
-    view_label: "Reservation Detail"
-    label: "Minor Market Segment"
-    description: "Minor Market Segment Name"
-    type: string
-  }
-
   dimension: minor_market_nm_sort_no {
     sql: case
           when ${TABLE}.minor_market_name = 'Retail'               then 1
@@ -61,6 +53,15 @@ view: revintel_property_f {
     label: "Minor Market Segment Sort No"
     description: "Minor Market Segment Sort Number"
     type: number
+  }
+
+  dimension: minor_market_nm {
+    sql: ${TABLE}.minor_market_name ;;
+    view_label: "Reservation Detail"
+    label: "Minor Market Segment"
+    description: "Minor Market Segment Name"
+    order_by_field:  minor_market_nm_sort_no
+    type: string
   }
 
   dimension: contribution_channel_nm {
@@ -409,7 +410,7 @@ view: revintel_property_f {
   measure:  cy_room_adr{
     sql: utl..udf_divide(${cy_room_rev},${cy_rooms}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  CY"
     label: "ADR"
     description: "Average Daily Rate"
@@ -459,7 +460,7 @@ view: revintel_property_f {
 
   measure:  cy_rev_par{
     sql: utl..udf_divide(${cy_room_rev}, ${dt_revintel_avail_rooms.dt_cy_avail_room_cnt}) ;;
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  CY"
     label: "Rev PAR $"
     description: "Revenue per Available Room Amount"
@@ -535,7 +536,7 @@ view: revintel_property_f {
   measure:  stly_room_adr{
     sql: utl..udf_divide(${stly_room_rev},${stly_rooms}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  STLY"
     label: "ADR"
     description: "Average Daily Rate"
@@ -585,7 +586,7 @@ view: revintel_property_f {
 
   measure:  stly_rev_par{
     sql: utl..udf_divide(${stly_room_rev}, ${dt_revintel_avail_rooms.dt_stly_avail_room_cnt}) ;;
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  STLY"
     label: "Rev PAR $"
     description: "Revenue per Available Room Amount"
@@ -661,7 +662,7 @@ view: revintel_property_f {
   measure:  ly_room_adr{
     sql: utl..udf_divide(${ly_room_rev},${ly_rooms}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  LY"
     label: "ADR"
     description: "Average Daily Rate"
@@ -711,7 +712,7 @@ view: revintel_property_f {
 
   measure:  ly_rev_par{
     sql: utl..udf_divide(${ly_room_rev}, ${dt_revintel_avail_rooms.dt_ly_avail_room_cnt}) ;;
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  LY"
     label: "Rev PAR $"
     description: "Revenue per Available Room Amount"
@@ -884,7 +885,7 @@ view: revintel_property_f {
   measure:  room_adr_var{
     sql: (${cy_room_adr})-(${stly_room_adr}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  CY"
     label: "ADR Act:STLY - var"
     description: "(TY - STLY)"
@@ -935,7 +936,7 @@ view: revintel_property_f {
 
   measure:  rev_par_var{
     sql: (${cy_rev_par} - ${stly_rev_par}) ;;
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  CY"
     label: "Rev PAR $ Act:STLY - var"
     description: "(TY - STLY)"
