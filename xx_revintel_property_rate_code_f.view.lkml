@@ -230,6 +230,12 @@ view: xx_revintel_property_rate_code_f {
     view_label: "  CY"
     label: "Rms Bkd Act:STLY - var"
     description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  var_pct_sep{
@@ -262,6 +268,12 @@ view: xx_revintel_property_rate_code_f {
     view_label: "  CY"
     label: "Rev Rms $ Act:STLY - var"
     description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  room_adr_var_perc{
@@ -286,6 +298,12 @@ view: xx_revintel_property_rate_code_f {
     view_label: "  CY"
     label: "ADR Act:STLY - var"
     description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   #-------------------------------------------------------------------------------------------
