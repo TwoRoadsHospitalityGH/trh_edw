@@ -3632,7 +3632,7 @@ view: glm_property_future_fcst_f_toly {
 #-- Cost % rev
 
   measure: food_rbe_cost_of_sales_rev_pct_toly_v {
-    label: "COS /Rev Food RBE % TY:LY - var"
+    label: "COS /Rev RB&E Food % TY:LY - var"
     description: "TY - LY"
     type: number
     sql: ${glm_property_future_fcst_f_ty.food_rbe_cost_of_sales_rev_pct} - ${glm_property_future_fcst_f_ly.food_rbe_cost_of_sales_rev_pct} ;;
@@ -3644,7 +3644,7 @@ view: glm_property_future_fcst_f_toly {
   }
 
   measure: beverage_rbe_cost_of_sales_rev_pct_tobdgt_v {
-    label: "COS /Rev Beverage RBE % TY:LY - var"
+    label: "COS /Rev RB&E Beverage % TY:LY - var"
     description: "TY - LY"
     type: number
     sql: ${glm_property_future_fcst_f_ty.beverage_rbe_cost_of_sales_rev_pct} - ${glm_property_future_fcst_f_ly.beverage_rbe_cost_of_sales_rev_pct} ;;
@@ -3656,7 +3656,7 @@ view: glm_property_future_fcst_f_toly {
   }
 
   measure: rbe_outlet_cost_of_sales_rev_pct_tobdgt_v {
-    label: "COS /Rev Outlet RBE % TY:LY - var"
+    label: "COS /Rev RB&E Outlet % TY:LY - var"
     description: "TY - LY"
     type: number
     sql: ${glm_property_future_fcst_f_ty.rbe_outlet_cost_of_sales_rev_pct} - ${glm_property_future_fcst_f_ly.rbe_outlet_cost_of_sales_rev_pct} ;;
