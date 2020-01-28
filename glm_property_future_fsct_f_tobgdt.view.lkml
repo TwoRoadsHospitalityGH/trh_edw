@@ -3433,7 +3433,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3445,7 +3445,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.room_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.room_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3457,7 +3457,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.rbe_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.rbe_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3469,7 +3469,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.spa_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.spa_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3481,7 +3481,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.golf_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.golf_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3493,7 +3493,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.fitness_recreation_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.fitness_recreation_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3505,7 +3505,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.parking_transportation_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.parking_transportation_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3517,7 +3517,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.telecom_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.telecom_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3529,7 +3529,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.retail_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.retail_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3541,7 +3541,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.other_operated_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.other_operated_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3553,7 +3553,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.property_mgmt_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.property_mgmt_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3565,7 +3565,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.misc_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.misc_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3577,7 +3577,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.nonoperating_realty_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_realty_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3589,7 +3589,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.nonoperating_airport_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_airport_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3601,7 +3601,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.nonoperating_util_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_util_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3613,7 +3613,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.food_rbe_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.food_rbe_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3625,7 +3625,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.beverage_rbe_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.beverage_rbe_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3637,7 +3637,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.rbe_outlet_cost_of_sales_amt} - ${glm_property_future_fcst_f_bdgt.rbe_outlet_cost_of_sales_amt} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3651,7 +3651,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.food_rbe_cost_of_sales_rev_pct} - ${glm_property_future_fcst_f_bdgt.food_rbe_cost_of_sales_rev_pct} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3663,7 +3663,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.beverage_rbe_cost_of_sales_rev_pct} - ${glm_property_future_fcst_f_bdgt.beverage_rbe_cost_of_sales_rev_pct} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3675,7 +3675,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: ${glm_property_future_fcst_f_ty.rbe_outlet_cost_of_sales_rev_pct} - ${glm_property_future_fcst_f_bdgt.rbe_outlet_cost_of_sales_rev_pct} ;;
     value_format_name: decimal_0
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3709,7 +3709,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3721,7 +3721,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.room_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.room_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3733,7 +3733,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.rbe_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3745,7 +3745,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.spa_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.spa_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3757,7 +3757,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.golf_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.golf_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3769,7 +3769,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.fitness_recreation_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.fitness_recreation_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3781,7 +3781,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.parking_transportation_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.parking_transportation_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3793,7 +3793,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.telecom_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.telecom_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3805,7 +3805,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.retail_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.retail_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3817,7 +3817,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.other_operated_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.other_operated_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3829,7 +3829,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.property_mgmt_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.property_mgmt_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3841,7 +3841,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.misc_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.misc_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3853,7 +3853,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_realty_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_realty_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3865,7 +3865,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_airport_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_airport_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3877,7 +3877,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_util_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_util_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3889,7 +3889,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.food_rbe_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.food_rbe_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3901,7 +3901,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.beverage_rbe_cost_of_sales_amt}, ${glm_property_future_fcst_f_bdgt.beverage_rbe_cost_of_sales_amt}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3915,7 +3915,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.food_rbe_cost_of_sales_rev_pct}, ${glm_property_future_fcst_f_bdgt.food_rbe_cost_of_sales_rev_pct}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3927,7 +3927,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.beverage_rbe_cost_of_sales_rev_pct}, ${glm_property_future_fcst_f_bdgt.beverage_rbe_cost_of_sales_rev_pct}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
@@ -3939,7 +3939,7 @@ view: glm_property_future_fcst_f_tobdgt {
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_outlet_cost_of_sales_rev_pct}, ${glm_property_future_fcst_f_bdgt.rbe_outlet_cost_of_sales_rev_pct}) ;;
     value_format_name: percent_1
     html:
-     {% if value < 0 %}
+     {% if value > 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
