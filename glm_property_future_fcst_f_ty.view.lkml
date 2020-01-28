@@ -1998,6 +1998,30 @@ view: glm_property_future_fcst_f_ty {
     value_format_name: percent_1
   }
 
+  measure: food_rbe_cost_of_sales_rev_pct {
+    label: "COS /Rev Food RBE %"
+    description: "COS Food RBE $ / Rev RBE $"
+    type: number
+    sql: utl..udf_divide( ${food_rbe_cost_of_sales_amt}, ${rbe_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: beverage_rbe_cost_of_sales_rev_pct {
+    label: "COS /Rev Beverage RBE %"
+    description: "COS Beverage RBE $ / Rev RBE $"
+    type: number
+    sql: utl..udf_divide( ${beverage_rbe_cost_of_sales_amt}, ${rbe_rev_amt} );;
+    value_format_name: percent_1
+  }
+
+  measure: rbe_outlet_cost_of_sales_rev_pct {
+    label: "COS /Rev Outlet RBE %"
+    description: "COS Outlet RBE $ / Rev RBE $"
+    type: number
+    sql: utl..udf_divide( ${rbe_outlet_cost_of_sales_amt}, ${rbe_rev_amt} );;
+    value_format_name: percent_1
+  }
+
   #-- Avg Rev per Spa Treatment / Golf Round
 
   measure: spa_rev_treatment_avg_amt {

@@ -3629,6 +3629,44 @@ view: glm_property_future_fcst_f_toly {
     {% endif %};;
   }
 
+#-- Cost % rev
+
+  measure: food_rbe_cost_of_sales_rev_pct_toly_v {
+    label: "COS /Rev Food RBE % TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.food_rbe_cost_of_sales_rev_pct} - ${glm_property_future_fcst_f_ly.food_rbe_cost_of_sales_rev_pct} ;;
+    value_format_name: decimal_0
+    html:
+     {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure: beverage_rbe_cost_of_sales_rev_pct_tobdgt_v {
+    label: "COS /Rev Beverage RBE % TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.beverage_rbe_cost_of_sales_rev_pct} - ${glm_property_future_fcst_f_ly.beverage_rbe_cost_of_sales_rev_pct} ;;
+    value_format_name: decimal_0
+    html:
+     {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure: rbe_outlet_cost_of_sales_rev_pct_tobdgt_v {
+    label: "COS /Rev Outlet RBE % TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_outlet_cost_of_sales_rev_pct} - ${glm_property_future_fcst_f_ly.rbe_outlet_cost_of_sales_rev_pct} ;;
+    value_format_name: decimal_0
+    html:
+     {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
   #-- Avg Rev per Spa Treatment / Golf Round
 
   measure: spa_rev_treatment_avg_amt_toly_v {
@@ -3846,6 +3884,44 @@ view: glm_property_future_fcst_f_toly {
     description: "(TY - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.beverage_rbe_cost_of_sales_amt}, ${glm_property_future_fcst_f_ly.beverage_rbe_cost_of_sales_amt}) ;;
+    value_format_name: percent_1
+    html:
+     {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  # Cost /rev %
+
+  measure: food_rbe_cost_of_sales_rev_pct_toly {
+    label: "COS /Rev RB&E Food % TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.food_rbe_cost_of_sales_rev_pct}, ${glm_property_future_fcst_f_ly.food_rbe_cost_of_sales_rev_pct}) ;;
+    value_format_name: percent_1
+    html:
+     {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure: beverage_rbe_cost_of_sales_rev_pct_toly {
+    label: "COS /Rev RB&E Beverage % TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.beverage_rbe_cost_of_sales_rev_pct}, ${glm_property_future_fcst_f_ly.beverage_rbe_cost_of_sales_rev_pct}) ;;
+    value_format_name: percent_1
+    html:
+     {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure: rbe_outlet_cost_of_sales_rev_pct_toly {
+    label: "COS /Rev RB&E Outlet % TY:LY - var %"
+    description: "(TY - LY) / LY"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_outlet_cost_of_sales_rev_pct}, ${glm_property_future_fcst_f_ly.rbe_outlet_cost_of_sales_rev_pct}) ;;
     value_format_name: percent_1
     html:
      {% if value < 0 %}
