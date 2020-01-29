@@ -237,6 +237,10 @@ view: revintel_property_segment_pace_f {
     label: "Rms Bkd Act:Prior Day"
     description: "Rms Bkd - Prior Day"
     type: sum
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  cy_rooms_prior_7_day {
@@ -255,6 +259,10 @@ view: revintel_property_segment_pace_f {
     label: "Rms Bkd Act:Prior 7 Days "
     description: "Rooms Bkd - Prior 7 Days"
     type: sum
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  cy_rooms_prior_30_day {
@@ -273,6 +281,10 @@ view: revintel_property_segment_pace_f {
     label: "Rms Bkd Act:MTD"
     description: "Rooms Bkd - Prior 7 Days"
     type: sum
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   #-------------------------------------------------------------------------------------------
@@ -666,6 +678,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rms Bkd Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  rooms_var_toly{
@@ -675,6 +691,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rms Bkd Act:LY - var"
     description: "(TY - LY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  room_rev_var_perc_toly{
@@ -684,6 +704,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Rms $ Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  room_rev_var_toly{
@@ -693,6 +717,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Rms $ Act:LY - var"
     description: "(TY - LY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  food_rev_var_perc_toly{
@@ -702,6 +730,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Food $ Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  food_rev_var_toly{
@@ -711,6 +743,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Food $ Act:LY - var"
     description: "(TY - LY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  other_rev_var_perc_toly{
@@ -720,6 +756,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Other $ Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  other_rev_var_toly{
@@ -729,6 +769,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Other $ Act:LY - var"
     description: "(TY - LY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  ttl_rev_var_perc_toly{
@@ -738,6 +782,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev $ Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  ttl_rev_var_toly{
@@ -747,6 +795,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev $ Act:LY - var"
     description: "(TY - LY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  room_adr_var_perc_toly{
@@ -756,6 +808,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "ADR Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  room_adr_var_toly{
@@ -765,6 +821,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "ADR Act:LY - var"
     description: "(TY - LY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  rooms_bkd_pct_var_perc_toly{
@@ -774,6 +834,10 @@ view: revintel_property_segment_pace_f {
     label: "Rms Bkd % Act:LY - % var"
     description: "(TY - LY)/LY"
     type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  rooms_bkd_pct_var_toly{
@@ -783,6 +847,10 @@ view: revintel_property_segment_pace_f {
     label: "Rms Bkd % Act:LY - var"
     description: "(TY - LY)"
     type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  rev_par_var_perc_toly{
@@ -792,6 +860,10 @@ view: revintel_property_segment_pace_f {
     label: "Rev PAR $ Act:LY - % var"
     description: "(TY - LY)/LY"
     type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  rev_par_var_toly{
@@ -801,6 +873,10 @@ view: revintel_property_segment_pace_f {
     label: "Rev PAR $ Act:LY - var"
     description: "(TY - LY)"
     type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   #-------------------------------------------------------------------------------------------
@@ -1006,6 +1082,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rms Bkd Act:Fcst - % var"
     description: "(TY - FCST)/FCST"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  fcst_rooms_var{
@@ -1015,6 +1095,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rms Bkd Act:Fcst - var"
     description: "(TY - FCST)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  fcst_room_rev_var_perc{
@@ -1024,6 +1108,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Rms $ Act:Fcst - % var"
     description: "(TY - FCST)/FCST"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  fcst_room_rev_var{
@@ -1033,6 +1121,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Rms $ Act:Fcst - var"
     description: "(TY - FCST)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  fcst_room_adr_var_perc{
@@ -1042,6 +1134,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "ADR Act:Fcst - % var"
     description: "(TY - FCST)/FCST"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  fcst_room_adr_var{
@@ -1051,6 +1147,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "ADR Act:Fcst - var"
     description: "(TY - FCST)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  fcst_rev_par_var_perc{
@@ -1060,6 +1160,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "ADR Act:Fcst - % var"
     description: "(TY - FCST)/FCST"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  fcst_rev_par_var{
@@ -1069,6 +1173,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev PAR Act:Fcst - var"
     description: "(TY - FCST)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  bdgt_rooms_var_perc{
@@ -1078,6 +1186,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rms Bkd Act:Bdgt - % var"
     description: "(TY - BDGT)/BDGT"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  bdgt_rooms_var{
@@ -1087,6 +1199,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rms Bkd Act:Bdgt - var"
     description: "(TY - BDGT)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  bdgt_room_rev_var_perc{
@@ -1096,6 +1212,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Rms $ Act:Bdgt - % var"
     description: "(TY - BDGT)/BDGT"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  bdgt_room_rev_var{
@@ -1105,6 +1225,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Rms $ Act:Bdgt - var"
     description: "(TY - BDGT)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  bdgt_room_adr_var_perc{
@@ -1114,6 +1238,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "ADR Act:Bdgt - % var"
     description: "(TY - BDGT)/BDGT"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  bdgt_room_adr_var{
@@ -1123,6 +1251,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "ADR Act:Bdgt - var"
     description: "(TY - BDGT)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  bdgt_rev_par_var_perc{
@@ -1132,6 +1264,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "ADR Act:Bdgt - % var"
     description: "(TY - BDGT)/BDGT"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  bdgt_rev_par_var{
@@ -1141,6 +1277,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev PAR Act:Bdgt - var"
     description: "(TY - BDGT)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
 
@@ -1465,6 +1605,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rms Bkd Period End Act:Bdgt - var"
     description: "(TY - BDGT)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  bdgt_room_rev_period_end_var{
@@ -1474,6 +1618,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Rms Period End Act:Bdgt - var"
     description: "(TY - BDGT)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  bdgt_room_rev_period_end_var_perc{
@@ -1483,6 +1631,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Rms Period End Act:Bdgt - % var"
     description: "(TY - BDGT)/BDGT"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  bdgt_adr_period_end_var{
@@ -1492,6 +1644,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "ADR Period End Act:Bdgt - var"
     description: "(TY - BDGT)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  fcst_rooms_period_end_var{
@@ -1501,6 +1657,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rms Bkd Period End Act:Fcst - var"
     description: "(TY - FCST)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  fcst_room_rev_period_end_var{
@@ -1510,6 +1670,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Rms Period End Act:Fcst - var"
     description: "(TY - FCST)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  fcst_room_rev_period_end_var_perc{
@@ -1519,6 +1683,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "Rev Rms Period End Act:Fcst - % var"
     description: "(TY - FCST)/FCST"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  fcst_adr_period_end_var{
@@ -1528,6 +1696,10 @@ view: revintel_property_segment_pace_f {
     view_label: "   CY"
     label: "ADR Period End Act:Fcst - var"
     description: "(TY - FCST)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
 }
