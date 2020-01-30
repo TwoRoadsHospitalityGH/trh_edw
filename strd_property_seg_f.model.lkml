@@ -8,6 +8,7 @@ datagroup: model_caching_dg {
   sql_trigger: select max( dw_update_dt ) from pedw.fact.strd_property_seg_f ;;
   max_cache_age: "8 hours"
 }
+week_start_day: sunday
 
 explore: str_property_seg_v {
   from: str_property_seg_v

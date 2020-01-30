@@ -62,7 +62,6 @@ view: date_dm {
     allow_fill: no
   }
 
-
   dimension: day_of_week {
     type: date_day_of_week
     label: "Day of Week"
