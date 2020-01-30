@@ -146,6 +146,10 @@ view: averod_property_business_category_f {
     view_label: "   TY"
     label: "Rev $ Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  gross_sales_var{
@@ -155,6 +159,10 @@ view: averod_property_business_category_f {
     view_label: "   TY"
     label: "Rev $ Act:LY - var"
     description: "(TY - LY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  net_sales_var_perc{
@@ -164,6 +172,10 @@ view: averod_property_business_category_f {
     view_label: "   TY"
     label: "Rev Net $ Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  net_sales_var{
@@ -173,6 +185,10 @@ view: averod_property_business_category_f {
     view_label: "   TY"
     label: "Rev Net $ Act:LY - var"
     description: "(TY - LY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
 }

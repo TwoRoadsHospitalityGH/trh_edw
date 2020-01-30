@@ -191,6 +191,10 @@ view: averod_property_business_f {
     view_label: "   TY"
     label: "Rev $ Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  gross_sales_var{
@@ -200,6 +204,10 @@ view: averod_property_business_f {
     view_label: "   TY"
     label: "Rev $ Act:LY - var"
     description: "(TY - LY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  net_sales_var_perc{
@@ -209,6 +217,10 @@ view: averod_property_business_f {
     view_label: "   TY"
     label: "Rev Net $ Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  net_sales_var{
@@ -227,6 +239,10 @@ view: averod_property_business_f {
     view_label: "   TY"
     label: "Cvrs Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  cover_var{
@@ -236,6 +252,10 @@ view: averod_property_business_f {
     view_label: "   TY"
     label: "Cvrs Act:LY - var"
     description: "(TY - LY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  check_var_perc{
@@ -245,6 +265,10 @@ view: averod_property_business_f {
     view_label: "   TY"
     label: "Chks Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  check_var{
@@ -254,6 +278,10 @@ view: averod_property_business_f {
     view_label: "   TY"
     label: "Chks Act:LY - var"
     description: "(TY - LY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  avg_cover_perc{
@@ -263,6 +291,10 @@ view: averod_property_business_f {
     view_label: "   TY"
     label: "Avg Cvrs Act:LY - % var"
     description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
   measure:  avg_cover_var{
@@ -272,6 +304,10 @@ view: averod_property_business_f {
     view_label: "   TY"
     label: "Avg Cvrs Act:LY - var"
     description: "(TY - LY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
   }
 
 }
