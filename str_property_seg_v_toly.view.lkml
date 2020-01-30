@@ -31,8 +31,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -53,8 +51,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -75,8 +71,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -97,8 +91,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -119,8 +111,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -133,8 +123,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -155,8 +143,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -177,8 +163,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -199,8 +183,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -216,8 +198,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -230,8 +210,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -244,8 +222,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -258,8 +234,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -275,8 +249,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -289,8 +261,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
@@ -303,8 +273,6 @@ view: str_property_seg_v_toly {
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% else %}
-    <p style="color: black; font-size:100%">{{ rendered_value }}</p>
     {% endif %};;
   }
 
