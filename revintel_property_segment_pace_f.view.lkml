@@ -915,11 +915,11 @@ view: revintel_property_segment_pace_f {
 #-------------------------------------------------------------------------------------------
 
   measure:  rooms_stly_reach{
-    sql: (${rooms_stly_pickup}( + (${rooms_var}) ;;
+    sql: (${rooms_stly_pickup}) + (${rooms_var}) ;;
     type: number
     value_format_name: decimal_0
     view_label: "   CY"
-    label: "Rms Bkd CY:STLY - Reach"
+    label: "Rms Bkd LY:STLY - Reach"
     description: "(STLY pickup + Act:LY - var)"
   }
 
@@ -1701,5 +1701,6 @@ view: revintel_property_segment_pace_f {
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
   }
+
 
 }
