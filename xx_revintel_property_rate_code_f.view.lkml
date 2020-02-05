@@ -43,6 +43,7 @@ view: xx_revintel_property_rate_code_f {
     label: "Standard Rate Code Name"
     description: "Standard Rate Code Name"
     type: string
+    html: <a href="/dashboards/525?Standard%20Rate%20Code%20Name={{ value }}" target="_blank">{{ value }}</a> ;;
   }
 
   dimension: account_type_name {
