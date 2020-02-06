@@ -479,69 +479,69 @@ view: revintel_property_pace_f {
     type: number
   }
 
-  measure:  cy_rooms_prior_day {
-    #sql: ${TABLE}.cy_rooms_prior_day ;;
-    sql: case
-          when ${TABLE}.cy_rooms_prior_day = 0
-          then ${TABLE}.cy_room_cnt
-          else ${TABLE}.cy_rooms_prior_day end   ;;
-    value_format_name: decimal_0
-    view_label: "   CY"
-    label: "Rms Bkd Prior Day"
-    description: "Rms OTB in Prior Day"
-    type: sum
-  }
+  #measure:  cy_rooms_prior_day {
+  #  #sql: ${TABLE}.cy_rooms_prior_day ;;
+  #  sql: case
+  #        when ${TABLE}.cy_rooms_prior_day = 0
+  #        then ${TABLE}.cy_room_cnt
+  #        else ${TABLE}.cy_rooms_prior_day end   ;;
+  #  value_format_name: decimal_0
+  #  view_label: "   CY"
+  #  label: "Rms Bkd Prior Day"
+  #  description: "Rms OTB in Prior Day"
+  #  type: sum
+  #}
 
-  measure:  cy_rooms_prior_day_var {
-    #sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_rooms_prior_day_pkup ;;
-    sql:  ${cy_rooms} - ${cy_rooms_prior_day} ;;
-    value_format_name: decimal_0
-    view_label: "   CY"
-    label: "Rms Bkd Act:Prior Day (Pkup)"
-    description: "Rms Bkd - Prior Day"
-    #type: sum
-    type: number
-    html:
-    {% if value < 0 %}
-    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% endif %};;
-  }
+  #measure:  cy_rooms_prior_day_var {
+  #  #sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_rooms_prior_day_pkup ;;
+  #  sql:  ${cy_rooms} - ${cy_rooms_prior_day} ;;
+  #  value_format_name: decimal_0
+  #  view_label: "   CY"
+  #  label: "Rms Bkd Act:Prior Day (Pkup)"
+  #  description: "Rms Bkd - Prior Day"
+  #  #type: sum
+  #  type: number
+  #  html:
+  #  {% if value < 0 %}
+  #  <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+  #  {% endif %};;
+  #}
 
-  measure:  cy_rooms_prior_7_day {
-    sql: ${TABLE}.cy_rooms_prior_7_day_pkup ;;
-    value_format_name: decimal_0
-    view_label: "   CY"
-    label: "Rms Bkd Prior 7 Days"
-    description: "Rms OTB Prior 7 Days"
-    type: sum
-  }
+  #measure:  cy_rooms_prior_7_day {
+  #  sql: ${TABLE}.cy_rooms_prior_7_day_pkup ;;
+  #  value_format_name: decimal_0
+  #  view_label: "   CY"
+  #  label: "Rms Bkd Prior 7 Days"
+  #  description: "Rms OTB Prior 7 Days"
+  #  type: sum
+  #}
 
-  measure:  cy_rooms_prior_7_day_var {
-    sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_rooms_prior_7_day_pkup ;;
-    value_format_name: decimal_0
-    view_label: "   CY"
-    label: "Rms Bkd Act:Prior 7 Days (Pkup)"
-    description: "Rooms Bkd - Prior 7 Days"
-    type: sum
-  }
+  #measure:  cy_rooms_prior_7_day_var {
+  #  sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_rooms_prior_7_day_pkup ;;
+  #  value_format_name: decimal_0
+  #  view_label: "   CY"
+  #  label: "Rms Bkd Act:Prior 7 Days (Pkup)"
+  #  description: "Rooms Bkd - Prior 7 Days"
+  #  type: sum
+  #}
 
-  measure:  cy_rooms_prior_30_day {
-    sql: ${TABLE}.cy_rooms_prior_30_day_pkup ;;
-    value_format_name: decimal_0
-    view_label: "   CY"
-    label: "Rms Bkd Prior 30 Days"
-    description: "Rms OTB Prior 30 Days"
-    type: sum
-  }
+  #measure:  cy_rooms_prior_30_day {
+  #  sql: ${TABLE}.cy_rooms_prior_30_day_pkup ;;
+  #  value_format_name: decimal_0
+  #  view_label: "   CY"
+  #  label: "Rms Bkd Prior 30 Days"
+  #  description: "Rms OTB Prior 30 Days"
+  #  type: sum
+  #}
 
-  measure:  cy_rooms_prior_30_day_var {
-    sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_rooms_prior_30_day_pkup ;;
-    value_format_name: decimal_0
-    view_label: "   CY"
-    label: "Rms Bkd Act:Prior 30 Days (Pkup)"
-    description: "Rooms Bkd - Prior 30 Days"
-    type: sum
-  }
+  #measure:  cy_rooms_prior_30_day_var {
+  #  sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_rooms_prior_30_day_pkup ;;
+  #  value_format_name: decimal_0
+  #  view_label: "   CY"
+  #  label: "Rms Bkd Act:Prior 30 Days (Pkup)"
+  #  description: "Rooms Bkd - Prior 30 Days"
+  #  type: sum
+  #}
 
   #-------------------------------------------------------------------------------------------
   #-- Measures STLY
