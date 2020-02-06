@@ -33,14 +33,6 @@ view: revintel_property_pace_f {
     type: string
   }
 
-  dimension: minor_market_nm {
-    sql: ${TABLE}.minor_market_name ;;
-    view_label: "Reservation Detail"
-    label: "Minor Market Segment"
-    description: "Minor Market Segment Name"
-    type: string
-  }
-
   dimension: minor_market_nm_sort_no {
     sql: case
           when ${TABLE}.minor_market_name = 'Retail'               then 1
@@ -66,6 +58,15 @@ view: revintel_property_pace_f {
     label: "Minor Market Segment Sort No"
     description: "Minor Market Segment Sort Number"
     type: number
+  }
+
+  dimension: minor_market_nm {
+    sql: ${TABLE}.minor_market_name ;;
+    view_label: "Reservation Detail"
+    label: "Minor Market Segment"
+    description: "Minor Market Segment Name"
+    type: string
+    order_by_field:  minor_market_nm_sort_no
   }
 
   dimension: contribution_channel_nm {
