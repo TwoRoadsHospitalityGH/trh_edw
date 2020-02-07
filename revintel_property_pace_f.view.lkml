@@ -999,7 +999,7 @@ view: revintel_property_pace_f {
   }
 
   measure:  rev_par_var_perc{
-    sql: utl..udf_divide(${cy_rev_par}, ${stly_rev_par}) ;;
+    sql: utl..udf_percent_var(${cy_rev_par}, ${stly_rev_par}) ;;
     value_format_name: percent_1
     view_label: "   CY"
     label: "Rev PAR $ Act:STLY - % var"

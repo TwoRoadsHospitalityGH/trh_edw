@@ -222,71 +222,71 @@ view: revintel_property_segment_pace_f {
     type: number
   }
 
-  measure:  cy_rooms_prior_day {
-    sql: ${TABLE}.cy_room_cnt_prior_day ;;
-    value_format_name: decimal_0
-    view_label: "   CY"
-    label: "Rms Bkd Prior Day"
-    description: "Rms OTB in Prior Day"
-    type: sum
-  }
+  #measure:  cy_rooms_prior_day {
+  #  sql: ${TABLE}.cy_room_cnt_prior_day ;;
+  #  value_format_name: decimal_0
+  #  view_label: "   CY"
+  #  label: "Rms Bkd Prior Day"
+  #  description: "Rms OTB in Prior Day"
+  #  type: sum
+  #}
 
-  measure:  cy_rooms_prior_day_var {
-    sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_room_cnt_prior_day ;;
-    value_format_name: decimal_0
-    view_label: "   CY"
-    label: "Rms Bkd Act:Prior Day"
-    description: "Rms Bkd - Prior Day"
-    type: sum
-    html:
-    {% if value < 0 %}
-    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% endif %};;
-  }
+  #measure:  cy_rooms_prior_day_var {
+  #  sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_room_cnt_prior_day ;;
+  #  value_format_name: decimal_0
+  #  view_label: "   CY"
+  #  label: "Rms Bkd Act:Prior Day"
+  #  description: "Rms Bkd - Prior Day"
+  #  type: sum
+  #  html:
+  #  {% if value < 0 %}
+  #  <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+  #  {% endif %};;
+  #}
 
-  measure:  cy_rooms_prior_7_day {
-    sql: ${TABLE}.cy_room_cnt_prior_7_day ;;
-    value_format_name: decimal_0
-    view_label: "   CY"
-    label: "Rms Bkd Prior 7 Days"
-    description: "Rms OTB Prior 7 Days"
-    type: sum
-  }
+  #measure:  cy_rooms_prior_7_day {
+  #  sql: ${TABLE}.cy_room_cnt_prior_7_day ;;
+  #  value_format_name: decimal_0
+  #  view_label: "   CY"
+  #  label: "Rms Bkd Prior 7 Days"
+  #  description: "Rms OTB Prior 7 Days"
+  #  type: sum
+  #}
 
-  measure:  cy_rooms_prior_7_day_var {
-    sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_room_cnt_prior_7_day ;;
-    value_format_name: decimal_0
-    view_label: "   CY"
-    label: "Rms Bkd Act:Prior 7 Days "
-    description: "Rooms Bkd - Prior 7 Days"
-    type: sum
-    html:
-    {% if value < 0 %}
-    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% endif %};;
-  }
+  #measure:  cy_rooms_prior_7_day_var {
+  #  sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_room_cnt_prior_7_day ;;
+  #  value_format_name: decimal_0
+  #  view_label: "   CY"
+  #  label: "Rms Bkd Act:Prior 7 Days "
+  #  description: "Rooms Bkd - Prior 7 Days"
+  #  type: sum
+  #  html:
+  #  {% if value < 0 %}
+  #  <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+  #  {% endif %};;
+  #}
 
-  measure:  cy_rooms_prior_30_day {
-    sql: ${TABLE}.cy_room_cnt_prior_30_day ;;
-    value_format_name: decimal_0
-    view_label: "   CY"
-    label: "Rms Bkd MTD"
-    description: "Rms OTB Last 30 Day Start"
-    type: sum
-  }
+  #measure:  cy_rooms_prior_30_day {
+  #  sql: ${TABLE}.cy_room_cnt_prior_30_day ;;
+  #  value_format_name: decimal_0
+  #  view_label: "   CY"
+  #  label: "Rms Bkd MTD"
+  #  description: "Rms OTB Last 30 Day Start"
+  #  type: sum
+  #}
 
-  measure:  cy_rooms_prior_30_day_var {
-    sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_room_cnt_prior_30_day ;;
-    value_format_name: decimal_0
-    view_label: "   CY"
-    label: "Rms Bkd Act:MTD"
-    description: "Rooms Bkd - Prior 7 Days"
-    type: sum
-    html:
-    {% if value < 0 %}
-    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
-    {% endif %};;
-  }
+  #measure:  cy_rooms_prior_30_day_var {
+  #  sql: ${TABLE}.cy_room_cnt - ${TABLE}.cy_room_cnt_prior_30_day ;;
+  #  value_format_name: decimal_0
+  #  view_label: "   CY"
+  #  label: "Rms Bkd Act:MTD"
+  #  description: "Rooms Bkd - Prior 7 Days"
+  #  type: sum
+  #  html:
+  #  {% if value < 0 %}
+  #  <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+  #  {% endif %};;
+  #}
 
   #-------------------------------------------------------------------------------------------
   #-- Measures STLY
@@ -649,7 +649,7 @@ view: revintel_property_segment_pace_f {
   }
 
   measure:  rev_par_var_perc{
-    sql: utl..udf_divide(${cy_rev_par}, ${stly_rev_par}) ;;
+    sql: utl..udf_percent_var(${cy_rev_par}, ${stly_rev_par}) ;;
     value_format_name: percent_1
     view_label: "   CY"
     label: "Rev PAR $ Act:STLY - % var"
