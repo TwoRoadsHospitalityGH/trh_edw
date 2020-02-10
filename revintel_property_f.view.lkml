@@ -947,6 +947,216 @@ view: revintel_property_f {
     {% endif %};;
   }
 
+  #-- measures to LY
+
+  measure:  rooms_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_rooms}),(${ly_rooms})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd Act:LY - % var"
+    description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  rooms_var_toly{
+    sql: (${cy_rooms})-(${ly_rooms}) ;;
+    type: number
+    value_format_name: decimal_0
+    view_label: "  CY"
+    label: "Rms Bkd Act:LY - var"
+    description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  room_rev_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_room_rev}),(${ly_room_rev})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev Rms $ Act:LY - % var"
+    description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  room_rev_var_toly{
+    sql: (${cy_room_rev})-(${ly_room_rev}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev Rms $ Act:LY - var"
+    description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  food_rev_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_food_rev}),(${ly_food_rev})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev Food $ Act:LY - % var"
+    description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  food_rev_var_toly{
+    sql: (${cy_food_rev})-(${ly_food_rev}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev Food $ Act:LY - var"
+    description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  other_rev_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_other_rev}),(${ly_other_rev})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev Other $ Act:LY - % var"
+    description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  other_rev_var_toly{
+    sql: (${cy_other_rev})-(${ly_other_rev}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev Other $ Act:LY - var"
+    description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  ttl_rev_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_ttl_rev}),(${ly_ttl_rev})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rev $ Act:LY - % var"
+    description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  ttl_rev_var_toly{
+    sql: (${cy_ttl_rev})-(${ly_ttl_rev}) ;;
+    type: number
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev $ Act:LY - var"
+    description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  room_adr_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_room_adr}),(${ly_room_adr})) ;;
+    type: number
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "ADR Act:LY - % var"
+    description: "(TY - LY)/LY"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  room_adr_var_toly{
+    sql: (${cy_room_adr})-(${ly_room_adr}) ;;
+    type: number
+    value_format_name: usd
+    view_label: "  CY"
+    label: "ADR Act:LY - var"
+    description: "(TY - STLY)"
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  rooms_bkd_pct_var_perc_toly{
+    sql: utl..udf_percent_var((${cy_rooms_bkd_pct}),(${ly_rooms_bkd_pct})) ;;
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd % Act:LY - % var"
+    description: "(TY - LY)/LY"
+    type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  rooms_bkd_pct_var_toly{
+    sql: (${cy_rooms_bkd_pct})-(${ly_rooms_bkd_pct}) ;;
+    value_format_name: percent_1
+    view_label: "  CY"
+    label: "Rms Bkd % Act:LY - var"
+    description: "(TY - STLY)"
+    type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  rev_par_var_perc_toly{
+    sql: utl..udf_divide(${cy_rev_par}, ${ly_rev_par}) ;;
+    value_format_name: usd_0
+    view_label: "  CY"
+    label: "Rev PAR $ Act:LY - % var"
+    description: "(TY - LY)/LY"
+    type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+  measure:  rev_par_var_toly{
+    sql: (${cy_rev_par} - ${ly_rev_par}) ;;
+    value_format_name: usd
+    view_label: "  CY"
+    label: "Rev PAR $ Act:LY - var"
+    description: "(TY - STLY)"
+    type: number
+    html:
+    {% if value < 0 %}
+    <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
 
   #-------------------------------------------------------------------------------------------
   #-- Measures stly pickup
