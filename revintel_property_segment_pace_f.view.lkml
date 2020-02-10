@@ -169,7 +169,7 @@ view: revintel_property_segment_pace_f {
   measure:  cy_room_adr{
     sql: utl..udf_divide(${cy_room_rev},${cy_rooms}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "   CY"
     label: "ADR"
     description: "Average Daily Rate"
@@ -348,7 +348,7 @@ view: revintel_property_segment_pace_f {
   measure:  stly_room_adr{
     sql: utl..udf_divide(${stly_room_rev},${stly_rooms}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  STLY"
     label: "ADR"
     description: "Average Daily Rate"
@@ -463,7 +463,7 @@ view: revintel_property_segment_pace_f {
   measure:  ly_room_adr{
     sql: utl..udf_divide(${ly_room_rev},${ly_rooms}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  LY"
     label: "ADR"
     description: "Average Daily Rate"
@@ -624,7 +624,7 @@ view: revintel_property_segment_pace_f {
   measure:  room_adr_var{
     sql: (${cy_room_adr})-(${stly_room_adr}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "   CY"
     label: "ADR Act:STLY - var"
     description: "(TY - STLY)"
@@ -818,7 +818,7 @@ view: revintel_property_segment_pace_f {
   measure:  room_adr_var_toly{
     sql: (${cy_room_adr})-(${ly_room_adr}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "   CY"
     label: "ADR Act:LY - var"
     description: "(TY - LY)"
@@ -936,7 +936,7 @@ view: revintel_property_segment_pace_f {
   measure:  room_adr_stly_reach{
     sql: utl..udf_percent_var((${room_rev_stly_reach}),(${rooms_stly_reach})) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "   CY"
     label: "ADR LY:STLY - Reach"
     description: "(STLY pickup + Act:LY - var)"
@@ -975,7 +975,7 @@ view: revintel_property_segment_pace_f {
   measure:  fcst_room_adr{
     sql: utl..udf_divide(${fcst_room_rev_amt},${fcst_room_cnt}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  FCST"
     label: "ADR"
     description: "Average Daily Rate"
@@ -1038,7 +1038,7 @@ view: revintel_property_segment_pace_f {
   measure:  bdgt_room_adr{
     sql: utl..udf_divide(${bdgt_room_rev_amt},${bdgt_room_cnt}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  BDGT"
     label: "ADR"
     description: "Average Daily Rate"
@@ -1144,7 +1144,7 @@ view: revintel_property_segment_pace_f {
   measure:  fcst_room_adr_var{
     sql: (${cy_room_adr})-(${fcst_room_adr}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "   CY"
     label: "ADR Act:Fcst - var"
     description: "(TY - FCST)"
@@ -1248,7 +1248,7 @@ view: revintel_property_segment_pace_f {
   measure:  bdgt_room_adr_var{
     sql: (${cy_room_adr})-(${bdgt_room_adr}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "   CY"
     label: "ADR Act:Bdgt - var"
     description: "(TY - BDGT)"

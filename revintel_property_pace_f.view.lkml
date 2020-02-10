@@ -422,7 +422,7 @@ view: revintel_property_pace_f {
   measure:  cy_room_adr{
     sql: utl..udf_divide(${cy_room_rev},${cy_rooms}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "   CY"
     label: "ADR"
     description: "Average Daily Rate"
@@ -612,7 +612,7 @@ view: revintel_property_pace_f {
   measure:  stly_room_adr{
     sql: utl..udf_divide(${stly_room_rev},${stly_rooms}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  STLY"
     label: "ADR"
     description: "Average Daily Rate"
@@ -738,7 +738,7 @@ view: revintel_property_pace_f {
   measure:  ly_room_adr{
     sql: utl..udf_divide(${ly_room_rev},${ly_rooms}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "  LY"
     label: "ADR"
     description: "Average Daily Rate"
@@ -962,7 +962,7 @@ view: revintel_property_pace_f {
   measure:  room_adr_var{
     sql: (${cy_room_adr})-(${stly_room_adr}) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "   CY"
     label: "ADR Act:STLY - var"
     description: "(TY - STLY)"
@@ -1057,7 +1057,7 @@ view: revintel_property_pace_f {
   measure:  room_adr_stly_pickup{
     sql: utl..udf_percent_var((${room_rev_stly_pickup}),(${rooms_stly_pickup})) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "   CY"
     label: "ADR LY:STLY - Pickup"
     description: "(LY - STLY)"
@@ -1092,7 +1092,7 @@ view: revintel_property_pace_f {
   measure:  room_adr_stly_reach{
     sql: utl..udf_percent_var((${room_rev_stly_reach}),(${rooms_stly_reach})) ;;
     type: number
-    value_format_name: usd_0
+    value_format_name: usd
     view_label: "   CY"
     label: "ADR LY:STLY - Reach"
     description: "(STLY pickup + Act:LY - var)"
