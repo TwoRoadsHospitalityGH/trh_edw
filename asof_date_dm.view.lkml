@@ -59,6 +59,15 @@ view: asof_date_dm {
     allow_fill: no
   }
 
+  dimension: week {
+    type: date_week
+    label: "Week"
+    description: "Week"
+    convert_tz: no
+    sql: ${cal_dt} ;;
+    allow_fill: no
+  }
+
   dimension: month {
     type: date_month
     label: "Month"
