@@ -40,8 +40,8 @@ view: xx_revintel_property_rate_code_f {
   dimension: standard_rate_code_name {
     sql: ${TABLE}.standard_rate_code_name ;;
     view_label: "Rate Code Detail"
-    label: "Standard Rate Code Name"
-    description: "Standard Rate Code Name"
+    label: "Rollup Rate Code Name"
+    description: "Rollup Rate Code Name"
     type: string
     html: <a href="/dashboards/525?Standard%20Rate%20Code%20Name={{ value }}" target="_blank">{{ value }}</a> ;;
   }
