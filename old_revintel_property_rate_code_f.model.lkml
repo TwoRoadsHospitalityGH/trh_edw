@@ -8,7 +8,7 @@ datagroup: model_caching_dg {
   max_cache_age: "8 hours"
 }
 
-explore: revintel_property_rate_code_f {
+explore: old_revintel_property_rate_code_f {
   group_label: "***User Acceptance Testing***"
   label: "Revintel Property Rate Code (uat)"
   view_label: "  Measures"
@@ -22,7 +22,7 @@ explore: revintel_property_rate_code_f {
 
   join: user_property_fdm {
     from:  user_property_fdm
-    sql_on: ${user_property_fdm.property_key} = ${revintel_property_rate_code_f.property_key} ;;
+    sql_on: ${user_property_fdm.property_key} = ${old_revintel_property_rate_code_f.property_key} ;;
     type: inner
     relationship: many_to_one
   }
@@ -30,7 +30,7 @@ explore: revintel_property_rate_code_f {
   join: date_dm{
     from: date_dm
     view_label: " Stay Date"
-    sql_on: ${date_dm.date_sid} = ${revintel_property_rate_code_f.date_sid}  ;;
+    sql_on: ${date_dm.date_sid} = ${old_revintel_property_rate_code_f.date_sid}  ;;
     sql_where: {% parameter date_dm.available_timeperiod %} = ''
     or utl..udf_period_trunc_dt( {% parameter date_dm.available_timeperiod %}, ${date_dm.cal_dt} ) = utl..udf_period_dt( {% parameter date_dm.available_timeperiod %}  ) ;;
     type: inner
@@ -40,7 +40,7 @@ explore: revintel_property_rate_code_f {
   join: property_dm {
     from: property_dm
     view_label: " Property"
-    sql_on: ${property_dm.property_key} = ${revintel_property_rate_code_f.property_key} ;;
+    sql_on: ${property_dm.property_key} = ${old_revintel_property_rate_code_f.property_key} ;;
     type: inner
     relationship: many_to_one
   }
