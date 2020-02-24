@@ -1099,13 +1099,13 @@ view: glm_property_future_fcst_f_ty {
 #     value_format_name: usd_0
 #   }
 #
-   measure: rbe_payroll_amt {
-     label: "Payroll RB&E $"
-     description: "RB&E Payroll. Segment 2: 500-599, Segment 3: 6600-6999."
-     type: sum
-     sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_payroll_amt}, to_number( null ) ) ;;
-     value_format_name: usd_0
-   }
+  measure: rbe_payroll_amt {
+    label: "Payroll RB&E $"
+    description: "RB&E Payroll. Segment 2: 500-599, Segment 3: 6600-6999."
+    type: sum
+    sql: iff( ${measure_bt} = 1, ${glm_property_future_fcst_f.rbe_payroll_amt}, to_number( null ) ) ;;
+    value_format_name: usd_0
+  }
 #
 #   measure: spa_payroll_amt {
 #     label: "Payroll Spa $"
@@ -1999,24 +1999,24 @@ view: glm_property_future_fcst_f_ty {
   }
 
   measure: food_rbe_cost_of_sales_rev_pct {
-    label: "COS /Rev RBE Food %"
-    description: "COS Food RBE $ / Rev Food RBE $"
+    label: "COS /Rev RB&E Food %"
+    description: "COS Food RB&E $ / Rev Food RB&E $"
     type: number
     sql: utl..udf_divide( ${food_rbe_cost_of_sales_amt}, ${food_rbe_rev_amt} );;
     value_format_name: percent_1
   }
 
   measure: beverage_rbe_cost_of_sales_rev_pct {
-    label: "COS /Rev RBE Beverage %"
-    description: "COS Beverage RBE $ / Rev Beverage RBE $"
+    label: "COS /Rev RB&E Beverage %"
+    description: "COS Beverage RB&E $ / Rev Beverage RB&E $"
     type: number
     sql: utl..udf_divide( ${beverage_rbe_cost_of_sales_amt}, ${beverage_rbe_rev_amt} );;
     value_format_name: percent_1
   }
 
   measure: rbe_outlet_cost_of_sales_rev_pct {
-    label: "COS /Rev Outlet RBE %"
-    description: "COS Outlet RBE $ / Rev RBE Outlet $"
+    label: "COS /Rev Outlet RB&E %"
+    description: "COS Outlet RB&E $ / Rev RB&E Outlet $"
     type: number
     sql: utl..udf_divide( ${rbe_outlet_cost_of_sales_amt}, ${rbe_outlet_rev_amt} );;
     value_format_name: percent_1
@@ -2201,7 +2201,7 @@ view: glm_property_future_fcst_f_ty {
 
   measure: rbe_rev_por_amt {
     label: "Rev POR RB&E $"
-    description: "Rev RBE $ / Rms Occ"
+    description: "Rev RB&E $ / Rms Occ"
     type: number
     sql: utl..udf_divide( ${rbe_rev_amt}, ${occupied_room_cnt} );;
     value_format_name: usd
@@ -2798,8 +2798,8 @@ view: glm_property_future_fcst_f_ty {
     description: "Ebitda Amount Before Replacement Reserves. (GOP + Fixed Expenses Above NOI + Mgmt Fees) - Transition & Owner Costs + Other fixed Charges)"
     type: number
     sql:  -1*(-1 * ( ${gop_amt} + ${fixed_expenses_above_noi_profit_amt} + ${mgmt_fee_profit_amt} ) -
-    (${transition_sales_hoa_costs_profit_amt} + ${owner_costs_profit_amt} + ${other_fixed_charge_profit_amt}))
-    ;;
+          (${transition_sales_hoa_costs_profit_amt} + ${owner_costs_profit_amt} + ${other_fixed_charge_profit_amt}))
+          ;;
     value_format_name: usd_0
     hidden:  no
   }

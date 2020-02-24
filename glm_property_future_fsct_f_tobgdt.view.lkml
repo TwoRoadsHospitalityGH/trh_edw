@@ -1916,17 +1916,17 @@ view: glm_property_future_fcst_f_tobdgt {
 #     value_format_name: decimal_0
 #   }
 #
-   measure: rbe_payroll_amt_tobdgt_v {
-     label: "Payroll RB&E $ TY:Bdgt - var"
-     description: "TY - Bdgt"
-     type: number
-     sql: ${glm_property_future_fcst_f_ty.rbe_payroll_amt} - ${glm_property_future_fcst_f_bdgt.rbe_payroll_amt} ;;
-     value_format_name: decimal_0
-     html:
+  measure: rbe_payroll_amt_tobdgt_v {
+    label: "Payroll RB&E $ TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_payroll_amt} - ${glm_property_future_fcst_f_bdgt.rbe_payroll_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
      <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
      {% endif %};;
- }
+  }
 #
 #   measure: spa_payroll_amt_tobdgt_v {
 #     label: "Payroll Spa $ TY:Bdgt - var"
@@ -4337,7 +4337,7 @@ view: glm_property_future_fcst_f_tobdgt {
   }
 
   measure: rbe_rev_por_amt_tobdgt_v {
-    label: "Rev POR RBE $ TY:Bdgt - var"
+    label: "Rev POR RB&E $ TY:Bdgt - var"
     description: "TY - Bdgt"
     type: number
     sql: ${glm_property_future_fcst_f_ty.rbe_rev_por_amt} - ${glm_property_future_fcst_f_bdgt.rbe_rev_por_amt} ;;
@@ -4345,7 +4345,7 @@ view: glm_property_future_fcst_f_tobdgt {
   }
 
   measure: rbe_rev_por_amt_tobdgt {
-    label: "Rev POR RBE $ TY:Bdgt - var %"
+    label: "Rev POR RB&E $ TY:Bdgt - var %"
     description: "(TY - Bdgt) / Bdgt"
     type: number
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_rev_por_amt}, ${glm_property_future_fcst_f_bdgt.rbe_rev_por_amt}) ;;
@@ -4617,1235 +4617,1235 @@ view: glm_property_future_fcst_f_tobdgt {
 
   #-- Rental property splits
 
- measure: room_rental_mgmt_2_19_rev_amt_tobdgt_v {
+  measure: room_rental_mgmt_2_19_rev_amt_tobdgt_v {
 
-  label: "Rev Rms Rental $ TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.room_rental_mgmt_2_19_rev_amt} - ${glm_property_future_fcst_f_bdgt.room_rental_mgmt_2_19_rev_amt} ;;
-  value_format_name: decimal_0
-  html:
+    label: "Rev Rms Rental $ TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.room_rental_mgmt_2_19_rev_amt} - ${glm_property_future_fcst_f_bdgt.room_rental_mgmt_2_19_rev_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
-measure: avail_room_rental_mgmt_2_19_cnt_tobdgt_v {
-  label: "Rms Avail Rental $ TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.avail_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.avail_room_rental_mgmt_2_19_cnt} ;;
-  value_format_name: decimal_0
-  html:
+  }
+  measure: avail_room_rental_mgmt_2_19_cnt_tobdgt_v {
+    label: "Rms Avail Rental $ TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.avail_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.avail_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
-measure: occupied_owner_room_rental_mgmt_2_19_cnt_tobdgt_v {
-  label: "Rms Occ Owner Rental TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.occupied_owner_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.occupied_owner_room_rental_mgmt_2_19_cnt} ;;
-  value_format_name: decimal_0
-  html:
+  }
+  measure: occupied_owner_room_rental_mgmt_2_19_cnt_tobdgt_v {
+    label: "Rms Occ Owner Rental TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.occupied_owner_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.occupied_owner_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
-measure: net_avail_room_rental_mgmt_2_19_cnt_tobdgt_v {
-  label: "Rms Avail Net Rental TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.net_avail_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.net_avail_room_rental_mgmt_2_19_cnt} ;;
-  value_format_name: decimal_0
-  html:
+  }
+  measure: net_avail_room_rental_mgmt_2_19_cnt_tobdgt_v {
+    label: "Rms Avail Net Rental TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.net_avail_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.net_avail_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
-measure: occupied_room_rental_mgmt_2_19_cnt_tobdgt_v {
-  label: "Rms Occ Rental TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.occupied_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.occupied_room_rental_mgmt_2_19_cnt} ;;
-  value_format_name: decimal_0
-  html:
+  }
+  measure: occupied_room_rental_mgmt_2_19_cnt_tobdgt_v {
+    label: "Rms Occ Rental TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.occupied_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.occupied_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
-measure: transient_room_rental_mgmt_2_19_rev_amt_tobdgt_v {
-  label: "Rev Rms Transient Rental TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.transient_room_rental_mgmt_2_19_rev_amt} - ${glm_property_future_fcst_f_bdgt.transient_room_rental_mgmt_2_19_rev_amt} ;;
-  value_format_name: usd_0
-}
-measure: group_room_rental_mgmt_2_19_rev_amt_tobdgt_v {
-  label: "Rev Rms Group Rental $ TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.group_room_rental_mgmt_2_19_rev_amt} - ${glm_property_future_fcst_f_bdgt.group_room_rental_mgmt_2_19_rev_amt} ;;
-  value_format_name: decimal_0
-  html:
+  }
+  measure: transient_room_rental_mgmt_2_19_rev_amt_tobdgt_v {
+    label: "Rev Rms Transient Rental TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.transient_room_rental_mgmt_2_19_rev_amt} - ${glm_property_future_fcst_f_bdgt.transient_room_rental_mgmt_2_19_rev_amt} ;;
+    value_format_name: usd_0
+  }
+  measure: group_room_rental_mgmt_2_19_rev_amt_tobdgt_v {
+    label: "Rev Rms Group Rental $ TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.group_room_rental_mgmt_2_19_rev_amt} - ${glm_property_future_fcst_f_bdgt.group_room_rental_mgmt_2_19_rev_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
-measure: contract_room_rental_mgmt_2_19_rev_amt_tobdgt_v {
-  label: "Rev Rms Contract Rental $ TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.contract_room_rental_mgmt_2_19_rev_amt} - ${glm_property_future_fcst_f_bdgt.contract_room_rental_mgmt_2_19_rev_amt} ;;
-  value_format_name: decimal_0
-  html:
+  }
+  measure: contract_room_rental_mgmt_2_19_rev_amt_tobdgt_v {
+    label: "Rev Rms Contract Rental $ TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.contract_room_rental_mgmt_2_19_rev_amt} - ${glm_property_future_fcst_f_bdgt.contract_room_rental_mgmt_2_19_rev_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
-measure: occupied_transient_room_rental_mgmt_2_19_cnt_tobdgt_v {
-  label: "Rms Occ Transient Rental TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.occupied_transient_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.occupied_transient_room_rental_mgmt_2_19_cnt} ;;
-  value_format_name: decimal_0
-  html:
+  }
+  measure: occupied_transient_room_rental_mgmt_2_19_cnt_tobdgt_v {
+    label: "Rms Occ Transient Rental TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.occupied_transient_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.occupied_transient_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
-measure: occupied_group_room_rental_mgmt_2_19_cnt_tobdgt_v {
-  label: "Rms Occ Group Rental TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.occupied_group_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.occupied_group_room_rental_mgmt_2_19_cnt} ;;
-  value_format_name: decimal_0
-  html:
+  }
+  measure: occupied_group_room_rental_mgmt_2_19_cnt_tobdgt_v {
+    label: "Rms Occ Group Rental TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.occupied_group_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.occupied_group_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
-measure: occupied_contract_room_rental_mgmt_2_19_cnt_tobdgt_v {
-  label: "Rms Occ Contract Rental TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.occupied_contract_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.occupied_contract_room_rental_mgmt_2_19_cnt} ;;
-  value_format_name: decimal_0
-  html:
+  }
+  measure: occupied_contract_room_rental_mgmt_2_19_cnt_tobdgt_v {
+    label: "Rms Occ Contract Rental TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.occupied_contract_room_rental_mgmt_2_19_cnt} - ${glm_property_future_fcst_f_bdgt.occupied_contract_room_rental_mgmt_2_19_cnt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
 #-- Hours
 
-measure: hour_amt_tobdgt_v {
-  label: "Hrs TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql:  ${glm_property_future_fcst_f_ty.hour_amt} - ${glm_property_future_fcst_f_bdgt.hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: hour_amt_tobdgt_v {
+    label: "Hrs TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql:  ${glm_property_future_fcst_f_ty.hour_amt} - ${glm_property_future_fcst_f_bdgt.hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: room_hour_amt_tobdgt_v {
-  label: "Hrs Rms TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.room_hour_amt} - ${glm_property_future_fcst_f_bdgt.room_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: room_hour_amt_tobdgt_v {
+    label: "Hrs Rms TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.room_hour_amt} - ${glm_property_future_fcst_f_bdgt.room_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_hour_amt_tobdgt_v {
-  label: "Hrs RB&E TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql:  ${glm_property_future_fcst_f_ty.rbe_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_hour_amt_tobdgt_v {
+    label: "Hrs RB&E TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql:  ${glm_property_future_fcst_f_ty.rbe_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_banquet_hour_amt_tobdgt_v {
-  label: "Hrs RB&E Banquet TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_banquet_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_banquet_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_banquet_hour_amt_tobdgt_v {
+    label: "Hrs RB&E Banquet TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_banquet_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_banquet_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_catering_hour_amt_tobdgt_v {
-  label: "Hrs RB&E Catering TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_catering_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_catering_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_catering_hour_amt_tobdgt_v {
+    label: "Hrs RB&E Catering TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_catering_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_catering_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_outlet_hour_amt_tobdgt_v {
-  label: "Hrs RB&E Outlet TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_outlet_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_outlet_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_outlet_hour_amt_tobdgt_v {
+    label: "Hrs RB&E Outlet TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_outlet_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_outlet_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_conference_services_hour_amt_tobdgt_v {
-  label: "Hrs RB&E Conference Services TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_conference_services_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_conference_services_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_conference_services_hour_amt_tobdgt_v {
+    label: "Hrs RB&E Conference Services TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_conference_services_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_conference_services_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_restaurant_hour_amt_tobdgt_v {
-  label: "Hrs RB&E Restaurant TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_restaurant_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_restaurant_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_restaurant_hour_amt_tobdgt_v {
+    label: "Hrs RB&E Restaurant TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_restaurant_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_restaurant_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_lounge_hour_amt_tobdgt_v {
-  label: "Hrs RB&E Lounge TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_lounge_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_lounge_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_lounge_hour_amt_tobdgt_v {
+    label: "Hrs RB&E Lounge TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_lounge_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_lounge_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_other_hour_amt_tobdgt_v {
-  label: "Hrs RB&E Other TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_other_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_other_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_other_hour_amt_tobdgt_v {
+    label: "Hrs RB&E Other TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_other_hour_amt} - ${glm_property_future_fcst_f_bdgt.rbe_other_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: spa_hour_amt_tobdgt_v {
-  label: "Hrs Spa TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.spa_hour_amt} - ${glm_property_future_fcst_f_bdgt.spa_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: spa_hour_amt_tobdgt_v {
+    label: "Hrs Spa TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.spa_hour_amt} - ${glm_property_future_fcst_f_bdgt.spa_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: golf_hour_amt_tobdgt_v {
-  label: "Hrs Golf TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.golf_hour_amt} - ${glm_property_future_fcst_f_bdgt.golf_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: golf_hour_amt_tobdgt_v {
+    label: "Hrs Golf TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.golf_hour_amt} - ${glm_property_future_fcst_f_bdgt.golf_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: fitness_recreation_hour_amt_tobdgt_v {
-  label: "Hrs Fitness & Rec TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.fitness_recreation_hour_amt} - ${glm_property_future_fcst_f_bdgt.fitness_recreation_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: fitness_recreation_hour_amt_tobdgt_v {
+    label: "Hrs Fitness & Rec TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.fitness_recreation_hour_amt} - ${glm_property_future_fcst_f_bdgt.fitness_recreation_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: retail_hour_amt_tobdgt_v {
-  label: "Hrs Retail TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.retail_hour_amt} - ${glm_property_future_fcst_f_bdgt.retail_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: retail_hour_amt_tobdgt_v {
+    label: "Hrs Retail TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.retail_hour_amt} - ${glm_property_future_fcst_f_bdgt.retail_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: other_operated_hour_amt_tobdgt_v {
-  label: "Hrs Other Op. Dept. TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.other_operated_hour_amt} - ${glm_property_future_fcst_f_bdgt.other_operated_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: other_operated_hour_amt_tobdgt_v {
+    label: "Hrs Other Op. Dept. TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.other_operated_hour_amt} - ${glm_property_future_fcst_f_bdgt.other_operated_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: property_mgmt_hour_amt_tobdgt_v {
-  label: "Hrs Mgmt Srvcs TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.property_mgmt_hour_amt} - ${glm_property_future_fcst_f_bdgt.property_mgmt_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: property_mgmt_hour_amt_tobdgt_v {
+    label: "Hrs Mgmt Srvcs TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.property_mgmt_hour_amt} - ${glm_property_future_fcst_f_bdgt.property_mgmt_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: misc_hour_amt_tobdgt_v {
-  label: "Hrs Rentals & Other TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.misc_hour_amt} - ${glm_property_future_fcst_f_bdgt.misc_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: misc_hour_amt_tobdgt_v {
+    label: "Hrs Rentals & Other TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.misc_hour_amt} - ${glm_property_future_fcst_f_bdgt.misc_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: nonoperating_realty_hour_amt_tobdgt_v {
-  label: "Hrs Nonoperating Realty TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.nonoperating_realty_hour_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_realty_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: nonoperating_realty_hour_amt_tobdgt_v {
+    label: "Hrs Nonoperating Realty TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.nonoperating_realty_hour_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_realty_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: nonoperating_airport_hour_amt_tobdgt_v {
-  label: "Hrs Nonoperating Airport TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.nonoperating_airport_hour_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_airport_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: nonoperating_airport_hour_amt_tobdgt_v {
+    label: "Hrs Nonoperating Airport TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.nonoperating_airport_hour_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_airport_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: nonoperating_util_hour_amt_tobdgt_v {
-  label: "Hrs Nonoperating Utility TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.nonoperating_util_hour_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_util_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: nonoperating_util_hour_amt_tobdgt_v {
+    label: "Hrs Nonoperating Utility TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.nonoperating_util_hour_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_util_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: undistributed_hour_amt_tobdgt_v {
-  label: "Hrs Undistributed TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.undistributed_hour_amt} - ${glm_property_future_fcst_f_bdgt.undistributed_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: undistributed_hour_amt_tobdgt_v {
+    label: "Hrs Undistributed TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.undistributed_hour_amt} - ${glm_property_future_fcst_f_bdgt.undistributed_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: allocated_hour_amt_tobdgt_v {
-  label: "Hrs Allocated TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.allocated_hour_amt} - ${glm_property_future_fcst_f_bdgt.allocated_hour_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: allocated_hour_amt_tobdgt_v {
+    label: "Hrs Allocated TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.allocated_hour_amt} - ${glm_property_future_fcst_f_bdgt.allocated_hour_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
 
-measure: hour_amt_tobdgt {
-  label: "Hrs TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql:  utl..udf_percent_var( ${glm_property_future_fcst_f_ty.hour_amt}, ${glm_property_future_fcst_f_bdgt.hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: hour_amt_tobdgt {
+    label: "Hrs TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql:  utl..udf_percent_var( ${glm_property_future_fcst_f_ty.hour_amt}, ${glm_property_future_fcst_f_bdgt.hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: room_hour_amt_tobdgt {
-  label: "Hrs Rms TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.room_hour_amt}, ${glm_property_future_fcst_f_bdgt.room_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: room_hour_amt_tobdgt {
+    label: "Hrs Rms TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.room_hour_amt}, ${glm_property_future_fcst_f_bdgt.room_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_hour_amt_tobdgt {
-  label: "Hrs RB&E TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql:  utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_hour_amt_tobdgt {
+    label: "Hrs RB&E TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql:  utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_banquet_hour_amt_tobdgt {
-  label: "Hrs RB&E Banquet TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_banquet_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_banquet_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_banquet_hour_amt_tobdgt {
+    label: "Hrs RB&E Banquet TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_banquet_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_banquet_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_catering_hour_amt_tobdgt {
-  label: "Hrs RB&E Catering TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_catering_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_catering_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_catering_hour_amt_tobdgt {
+    label: "Hrs RB&E Catering TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_catering_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_catering_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_outlet_hour_amt_tobdgt {
-  label: "Hrs RB&E Outlet TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_outlet_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_outlet_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_outlet_hour_amt_tobdgt {
+    label: "Hrs RB&E Outlet TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_outlet_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_outlet_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_conference_services_hour_amt_tobdgt {
-  label: "Hrs RB&E Conference Services TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_conference_services_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_conference_services_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_conference_services_hour_amt_tobdgt {
+    label: "Hrs RB&E Conference Services TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_conference_services_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_conference_services_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_restaurant_hour_amt_tobdgt {
-  label: "Hrs RB&E Restaurant TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_restaurant_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_restaurant_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_restaurant_hour_amt_tobdgt {
+    label: "Hrs RB&E Restaurant TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_restaurant_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_restaurant_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_lounge_hour_amt_tobdgt {
-  label: "Hrs RB&E Lounge TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_lounge_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_lounge_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_lounge_hour_amt_tobdgt {
+    label: "Hrs RB&E Lounge TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_lounge_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_lounge_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_other_hour_amt_tobdgt {
-  label: "Hrs RB&E Other TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_other_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_other_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_other_hour_amt_tobdgt {
+    label: "Hrs RB&E Other TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_other_hour_amt}, ${glm_property_future_fcst_f_bdgt.rbe_other_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: spa_hour_amt_tobdgt {
-  label: "Hrs Spa TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.spa_hour_amt}, ${glm_property_future_fcst_f_bdgt.spa_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: spa_hour_amt_tobdgt {
+    label: "Hrs Spa TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.spa_hour_amt}, ${glm_property_future_fcst_f_bdgt.spa_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: golf_hour_amt_tobdgt {
-  label: "Hrs Golf TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.golf_hour_amt}, ${glm_property_future_fcst_f_bdgt.golf_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: golf_hour_amt_tobdgt {
+    label: "Hrs Golf TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.golf_hour_amt}, ${glm_property_future_fcst_f_bdgt.golf_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: fitness_recreation_hour_amt_tobdgt {
-  label: "Hrs Fitness & Rec TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.fitness_recreation_hour_amt}, ${glm_property_future_fcst_f_bdgt.fitness_recreation_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: fitness_recreation_hour_amt_tobdgt {
+    label: "Hrs Fitness & Rec TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.fitness_recreation_hour_amt}, ${glm_property_future_fcst_f_bdgt.fitness_recreation_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: retail_hour_amt_tobdgt {
-  label: "Hrs Retail TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.retail_hour_amt}, ${glm_property_future_fcst_f_bdgt.retail_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: retail_hour_amt_tobdgt {
+    label: "Hrs Retail TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.retail_hour_amt}, ${glm_property_future_fcst_f_bdgt.retail_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: other_operated_hour_amt_tobdgt {
-  label: "Hrs Other Op. Dept. TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.other_operated_hour_amt}, ${glm_property_future_fcst_f_bdgt.other_operated_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: other_operated_hour_amt_tobdgt {
+    label: "Hrs Other Op. Dept. TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.other_operated_hour_amt}, ${glm_property_future_fcst_f_bdgt.other_operated_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: property_mgmt_hour_amt_tobdgt {
-  label: "Hrs Mgmt Srvcs TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.property_mgmt_hour_amt}, ${glm_property_future_fcst_f_bdgt.property_mgmt_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: property_mgmt_hour_amt_tobdgt {
+    label: "Hrs Mgmt Srvcs TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.property_mgmt_hour_amt}, ${glm_property_future_fcst_f_bdgt.property_mgmt_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: misc_hour_amt_tobdgt {
-  label: "Hrs Rentals & Other TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.misc_hour_amt}, ${glm_property_future_fcst_f_bdgt.misc_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: misc_hour_amt_tobdgt {
+    label: "Hrs Rentals & Other TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.misc_hour_amt}, ${glm_property_future_fcst_f_bdgt.misc_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: nonoperating_realty_hour_amt_tobdgt {
-  label: "Hrs Nonoperating Realty TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_realty_hour_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_realty_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: nonoperating_realty_hour_amt_tobdgt {
+    label: "Hrs Nonoperating Realty TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_realty_hour_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_realty_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: nonoperating_airport_hour_amt_tobdgt {
-  label: "Hrs Nonoperating Airport TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_airport_hour_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_airport_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: nonoperating_airport_hour_amt_tobdgt {
+    label: "Hrs Nonoperating Airport TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_airport_hour_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_airport_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: nonoperating_util_hour_amt_tobdgt {
-  label: "Hrs Nonoperating Utility TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_util_hour_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_util_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: nonoperating_util_hour_amt_tobdgt {
+    label: "Hrs Nonoperating Utility TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_util_hour_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_util_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: undistributed_hour_amt_tobdgt {
-  label: "Hrs Undistributed TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.undistributed_hour_amt}, ${glm_property_future_fcst_f_bdgt.undistributed_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: undistributed_hour_amt_tobdgt {
+    label: "Hrs Undistributed TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.undistributed_hour_amt}, ${glm_property_future_fcst_f_bdgt.undistributed_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: allocated_hour_amt_tobdgt {
-  label: "Hrs Allocated TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.allocated_hour_amt}, ${glm_property_future_fcst_f_bdgt.allocated_hour_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: allocated_hour_amt_tobdgt {
+    label: "Hrs Allocated TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.allocated_hour_amt}, ${glm_property_future_fcst_f_bdgt.allocated_hour_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
 #-- FTE
 
-measure: fte_amt_tobdgt_v {
-  label: "FTE TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql:  ${glm_property_future_fcst_f_ty.fte_amt} - ${glm_property_future_fcst_f_bdgt.fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: fte_amt_tobdgt_v {
+    label: "FTE TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql:  ${glm_property_future_fcst_f_ty.fte_amt} - ${glm_property_future_fcst_f_bdgt.fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: room_fte_amt_tobdgt_v {
-  label: "FTE Rms TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.room_fte_amt} - ${glm_property_future_fcst_f_bdgt.room_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: room_fte_amt_tobdgt_v {
+    label: "FTE Rms TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.room_fte_amt} - ${glm_property_future_fcst_f_bdgt.room_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_fte_amt_tobdgt_v {
-  label: "FTE RB&E TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql:  ${glm_property_future_fcst_f_ty.rbe_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_fte_amt_tobdgt_v {
+    label: "FTE RB&E TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql:  ${glm_property_future_fcst_f_ty.rbe_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_banquet_fte_amt_tobdgt_v {
-  label: "FTE RB&E Banquet TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_banquet_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_banquet_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_banquet_fte_amt_tobdgt_v {
+    label: "FTE RB&E Banquet TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_banquet_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_banquet_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_catering_fte_amt_tobdgt_v {
-  label: "FTE RB&E Catering TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_catering_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_catering_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_catering_fte_amt_tobdgt_v {
+    label: "FTE RB&E Catering TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_catering_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_catering_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_outlet_fte_amt_tobdgt_v {
-  label: "FTE RB&E Outlet TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_outlet_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_outlet_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_outlet_fte_amt_tobdgt_v {
+    label: "FTE RB&E Outlet TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_outlet_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_outlet_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_conference_services_fte_amt_tobdgt_v {
-  label: "FTE RB&E Conference Services TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_conference_services_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_conference_services_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_conference_services_fte_amt_tobdgt_v {
+    label: "FTE RB&E Conference Services TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_conference_services_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_conference_services_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_restaurant_fte_amt_tobdgt_v {
-  label: "FTE RB&E Restaurant TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_restaurant_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_restaurant_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_restaurant_fte_amt_tobdgt_v {
+    label: "FTE RB&E Restaurant TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_restaurant_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_restaurant_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_lounge_fte_amt_tobdgt_v {
-  label: "FTE RB&E Lounge TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_lounge_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_lounge_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_lounge_fte_amt_tobdgt_v {
+    label: "FTE RB&E Lounge TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_lounge_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_lounge_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_other_fte_amt_tobdgt_v {
-  label: "FTE RB&E Other TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.rbe_other_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_other_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: rbe_other_fte_amt_tobdgt_v {
+    label: "FTE RB&E Other TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_other_fte_amt} - ${glm_property_future_fcst_f_bdgt.rbe_other_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: spa_fte_amt_tobdgt_v {
-  label: "FTE Spa TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.spa_fte_amt} - ${glm_property_future_fcst_f_bdgt.spa_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: spa_fte_amt_tobdgt_v {
+    label: "FTE Spa TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.spa_fte_amt} - ${glm_property_future_fcst_f_bdgt.spa_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: golf_fte_amt_tobdgt_v {
-  label: "FTE Golf TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.golf_fte_amt} - ${glm_property_future_fcst_f_bdgt.golf_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: golf_fte_amt_tobdgt_v {
+    label: "FTE Golf TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.golf_fte_amt} - ${glm_property_future_fcst_f_bdgt.golf_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: fitness_recreation_fte_amt_tobdgt_v {
-  label: "FTE Fitness & Rec TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.fitness_recreation_fte_amt} - ${glm_property_future_fcst_f_bdgt.fitness_recreation_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: fitness_recreation_fte_amt_tobdgt_v {
+    label: "FTE Fitness & Rec TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.fitness_recreation_fte_amt} - ${glm_property_future_fcst_f_bdgt.fitness_recreation_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: retail_fte_amt_tobdgt_v {
-  label: "FTE Retail TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.retail_fte_amt} - ${glm_property_future_fcst_f_bdgt.retail_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: retail_fte_amt_tobdgt_v {
+    label: "FTE Retail TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.retail_fte_amt} - ${glm_property_future_fcst_f_bdgt.retail_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: other_operated_fte_amt_tobdgt_v {
-  label: "FTE Other Op. Dept. TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.other_operated_fte_amt} - ${glm_property_future_fcst_f_bdgt.other_operated_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: other_operated_fte_amt_tobdgt_v {
+    label: "FTE Other Op. Dept. TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.other_operated_fte_amt} - ${glm_property_future_fcst_f_bdgt.other_operated_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: property_mgmt_fte_amt_tobdgt_v {
-  label: "FTE Mgmt Srvcs TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.property_mgmt_fte_amt} - ${glm_property_future_fcst_f_bdgt.property_mgmt_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: property_mgmt_fte_amt_tobdgt_v {
+    label: "FTE Mgmt Srvcs TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.property_mgmt_fte_amt} - ${glm_property_future_fcst_f_bdgt.property_mgmt_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: misc_fte_amt_tobdgt_v {
-  label: "FTE Rentals & Other TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.misc_fte_amt} - ${glm_property_future_fcst_f_bdgt.misc_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: misc_fte_amt_tobdgt_v {
+    label: "FTE Rentals & Other TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.misc_fte_amt} - ${glm_property_future_fcst_f_bdgt.misc_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: nonoperating_realty_fte_amt_tobdgt_v {
-  label: "FTE Nonoperating Realty TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.nonoperating_realty_fte_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_realty_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: nonoperating_realty_fte_amt_tobdgt_v {
+    label: "FTE Nonoperating Realty TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.nonoperating_realty_fte_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_realty_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: nonoperating_airport_fte_amt_tobdgt_v {
-  label: "FTE Nonoperating Airport TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.nonoperating_airport_fte_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_airport_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: nonoperating_airport_fte_amt_tobdgt_v {
+    label: "FTE Nonoperating Airport TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.nonoperating_airport_fte_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_airport_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: nonoperating_util_fte_amt_tobdgt_v {
-  label: "FTE Nonoperating Utility TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.nonoperating_util_fte_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_util_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: nonoperating_util_fte_amt_tobdgt_v {
+    label: "FTE Nonoperating Utility TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.nonoperating_util_fte_amt} - ${glm_property_future_fcst_f_bdgt.nonoperating_util_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: undistributed_fte_amt_tobdgt_v {
-  label: "FTE Undistributed TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.undistributed_fte_amt} - ${glm_property_future_fcst_f_bdgt.undistributed_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: undistributed_fte_amt_tobdgt_v {
+    label: "FTE Undistributed TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.undistributed_fte_amt} - ${glm_property_future_fcst_f_bdgt.undistributed_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: allocated_fte_amt_tobdgt_v {
-  label: "FTE Allocated TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.allocated_fte_amt} - ${glm_property_future_fcst_f_bdgt.allocated_fte_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: allocated_fte_amt_tobdgt_v {
+    label: "FTE Allocated TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.allocated_fte_amt} - ${glm_property_future_fcst_f_bdgt.allocated_fte_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: ebida_after_rr_amt_tobdgt_v {
-  label: "Ebitda After RR TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.ebitda_after_rr_amt} - ${glm_property_future_fcst_f_bdgt.ebitda_after_rr_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: ebida_after_rr_amt_tobdgt_v {
+    label: "Ebitda After RR TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.ebitda_after_rr_amt} - ${glm_property_future_fcst_f_bdgt.ebitda_after_rr_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: ebida_before_rr_amt_tobdgt_v {
-  label: "Ebitda Before RR TY:Bdgt - var"
-  description: "TY - Bdgt"
-  type: number
-  sql: ${glm_property_future_fcst_f_ty.ebitda_before_rr_amt} - ${glm_property_future_fcst_f_bdgt.ebitda_before_rr_amt} ;;
-  value_format_name: decimal_0
-  html:
+  measure: ebida_before_rr_amt_tobdgt_v {
+    label: "Ebitda Before RR TY:Bdgt - var"
+    description: "TY - Bdgt"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.ebitda_before_rr_amt} - ${glm_property_future_fcst_f_bdgt.ebitda_before_rr_amt} ;;
+    value_format_name: decimal_0
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
 #
 
-measure: fte_amt_tobdgt {
-  label: "FTE TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql:  utl..udf_percent_var( ${glm_property_future_fcst_f_ty.fte_amt}, ${glm_property_future_fcst_f_bdgt.fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: fte_amt_tobdgt {
+    label: "FTE TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql:  utl..udf_percent_var( ${glm_property_future_fcst_f_ty.fte_amt}, ${glm_property_future_fcst_f_bdgt.fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: room_fte_amt_tobdgt {
-  label: "FTE Rms TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.room_fte_amt}, ${glm_property_future_fcst_f_bdgt.room_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: room_fte_amt_tobdgt {
+    label: "FTE Rms TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.room_fte_amt}, ${glm_property_future_fcst_f_bdgt.room_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_fte_amt_tobdgt {
-  label: "FTE RB&E TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql:  utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_fte_amt_tobdgt {
+    label: "FTE RB&E TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql:  utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_banquet_fte_amt_tobdgt {
-  label: "FTE RB&E Banquet TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_banquet_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_banquet_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_banquet_fte_amt_tobdgt {
+    label: "FTE RB&E Banquet TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_banquet_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_banquet_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_catering_fte_amt_tobdgt {
-  label: "FTE RB&E Catering TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_catering_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_catering_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_catering_fte_amt_tobdgt {
+    label: "FTE RB&E Catering TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_catering_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_catering_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_outlet_fte_amt_tobdgt {
-  label: "FTE RB&E Outlet TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_outlet_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_outlet_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_outlet_fte_amt_tobdgt {
+    label: "FTE RB&E Outlet TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_outlet_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_outlet_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_conference_services_fte_amt_tobdgt {
-  label: "FTE RB&E Conference Services TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_conference_services_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_conference_services_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_conference_services_fte_amt_tobdgt {
+    label: "FTE RB&E Conference Services TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_conference_services_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_conference_services_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_restaurant_fte_amt_tobdgt {
-  label: "FTE RB&E Restaurant TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_restaurant_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_restaurant_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_restaurant_fte_amt_tobdgt {
+    label: "FTE RB&E Restaurant TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_restaurant_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_restaurant_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_lounge_fte_amt_tobdgt {
-  label: "FTE RB&E Lounge TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_lounge_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_lounge_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_lounge_fte_amt_tobdgt {
+    label: "FTE RB&E Lounge TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_lounge_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_lounge_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: rbe_other_fte_amt_tobdgt {
-  label: "FTE RB&E Other TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_other_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_other_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: rbe_other_fte_amt_tobdgt {
+    label: "FTE RB&E Other TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_other_fte_amt}, ${glm_property_future_fcst_f_bdgt.rbe_other_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: spa_fte_amt_tobdgt {
-  label: "FTE Spa TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.spa_fte_amt}, ${glm_property_future_fcst_f_bdgt.spa_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: spa_fte_amt_tobdgt {
+    label: "FTE Spa TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.spa_fte_amt}, ${glm_property_future_fcst_f_bdgt.spa_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: golf_fte_amt_tobdgt {
-  label: "FTE Golf TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.golf_fte_amt}, ${glm_property_future_fcst_f_bdgt.golf_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: golf_fte_amt_tobdgt {
+    label: "FTE Golf TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.golf_fte_amt}, ${glm_property_future_fcst_f_bdgt.golf_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: fitness_recreation_fte_amt_tobdgt {
-  label: "FTE Fitness & Rec TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.fitness_recreation_fte_amt}, ${glm_property_future_fcst_f_bdgt.fitness_recreation_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: fitness_recreation_fte_amt_tobdgt {
+    label: "FTE Fitness & Rec TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.fitness_recreation_fte_amt}, ${glm_property_future_fcst_f_bdgt.fitness_recreation_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: retail_fte_amt_tobdgt {
-  label: "FTE Retail TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.retail_fte_amt}, ${glm_property_future_fcst_f_bdgt.retail_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: retail_fte_amt_tobdgt {
+    label: "FTE Retail TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.retail_fte_amt}, ${glm_property_future_fcst_f_bdgt.retail_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: other_operated_fte_amt_tobdgt {
-  label: "FTE Other Op. Dept. TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.other_operated_fte_amt}, ${glm_property_future_fcst_f_bdgt.other_operated_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: other_operated_fte_amt_tobdgt {
+    label: "FTE Other Op. Dept. TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.other_operated_fte_amt}, ${glm_property_future_fcst_f_bdgt.other_operated_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: property_mgmt_fte_amt_tobdgt {
-  label: "FTE Mgmt Srvcs TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.property_mgmt_fte_amt}, ${glm_property_future_fcst_f_bdgt.property_mgmt_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: property_mgmt_fte_amt_tobdgt {
+    label: "FTE Mgmt Srvcs TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.property_mgmt_fte_amt}, ${glm_property_future_fcst_f_bdgt.property_mgmt_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: misc_fte_amt_tobdgt {
-  label: "FTE Rentals & Other TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.misc_fte_amt}, ${glm_property_future_fcst_f_bdgt.misc_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: misc_fte_amt_tobdgt {
+    label: "FTE Rentals & Other TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.misc_fte_amt}, ${glm_property_future_fcst_f_bdgt.misc_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: nonoperating_realty_fte_amt_tobdgt {
-  label: "FTE Nonoperating Realty TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_realty_fte_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_realty_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: nonoperating_realty_fte_amt_tobdgt {
+    label: "FTE Nonoperating Realty TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_realty_fte_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_realty_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: nonoperating_airport_fte_amt_tobdgt {
-  label: "FTE Nonoperating Airport TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_airport_fte_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_airport_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: nonoperating_airport_fte_amt_tobdgt {
+    label: "FTE Nonoperating Airport TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_airport_fte_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_airport_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: nonoperating_util_fte_amt_tobdgt {
-  label: "FTE Nonoperating Utility TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_util_fte_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_util_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: nonoperating_util_fte_amt_tobdgt {
+    label: "FTE Nonoperating Utility TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.nonoperating_util_fte_amt}, ${glm_property_future_fcst_f_bdgt.nonoperating_util_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: undistributed_fte_amt_tobdgt {
-  label: "FTE Undistributed TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.undistributed_fte_amt}, ${glm_property_future_fcst_f_bdgt.undistributed_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: undistributed_fte_amt_tobdgt {
+    label: "FTE Undistributed TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.undistributed_fte_amt}, ${glm_property_future_fcst_f_bdgt.undistributed_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: allocated_fte_amt_tobdgt {
-  label: "FTE Allocated TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.allocated_fte_amt}, ${glm_property_future_fcst_f_bdgt.allocated_fte_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: allocated_fte_amt_tobdgt {
+    label: "FTE Allocated TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.allocated_fte_amt}, ${glm_property_future_fcst_f_bdgt.allocated_fte_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: ebita_before_rr_amt_tobdgt {
-  label: "Ebitda Before RR TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.ebitda_before_rr_amt}, ${glm_property_future_fcst_f_bdgt.ebitda_before_rr_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: ebita_before_rr_amt_tobdgt {
+    label: "Ebitda Before RR TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.ebitda_before_rr_amt}, ${glm_property_future_fcst_f_bdgt.ebitda_before_rr_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
-measure: ebita_after_rr_amt_tobdgt {
-  label: "Ebitda After RR TY:Bdgt - var %"
-  description: "(TY - Bdgt) / Bdgt"
-  type: number
-  sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.ebitda_after_rr_amt}, ${glm_property_future_fcst_f_bdgt.ebitda_after_rr_amt} ) ;;
-  value_format_name: percent_1
-  html:
+  measure: ebita_after_rr_amt_tobdgt {
+    label: "Ebitda After RR TY:Bdgt - var %"
+    description: "(TY - Bdgt) / Bdgt"
+    type: number
+    sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.ebitda_after_rr_amt}, ${glm_property_future_fcst_f_bdgt.ebitda_after_rr_amt} ) ;;
+    value_format_name: percent_1
+    html:
      {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-}
+  }
 
   #--
   #-- Flow

@@ -1904,17 +1904,17 @@ view: glm_property_future_fcst_f_toly {
 #     value_format_name: decimal_0
 #   }
 #
-   measure: rbe_payroll_amt_toly_v {
-     label: "Payroll RB&E $ TY:LY - var"
-     description: "TY - LY"
-     type: number
-     sql: ${glm_property_future_fcst_f_ty.rbe_payroll_amt} - ${glm_property_future_fcst_f_ly.rbe_payroll_amt} ;;
-     value_format_name: decimal_0
+  measure: rbe_payroll_amt_toly_v {
+    label: "Payroll RB&E $ TY:LY - var"
+    description: "TY - LY"
+    type: number
+    sql: ${glm_property_future_fcst_f_ty.rbe_payroll_amt} - ${glm_property_future_fcst_f_ly.rbe_payroll_amt} ;;
+    value_format_name: decimal_0
     html:
     {% if value < 0 %}
     <p style="color: red; font-size: 100%">{{ rendered_value }}</p>
     {% endif %};;
-   }
+  }
 #
 #   measure: spa_payroll_amt_toly_v {
 #     label: "Payroll Spa $ TY:LY - var"
@@ -4322,7 +4322,7 @@ view: glm_property_future_fcst_f_toly {
   }
 
   measure: rbe_rev_por_amt_toly_v {
-    label: "Rev POR RBE $ TY:LY - var"
+    label: "Rev POR RB&E $ TY:LY - var"
     description: "TY - LY"
     type: number
     sql: ${glm_property_future_fcst_f_ty.rbe_rev_por_amt} - ${glm_property_future_fcst_f_ly.rbe_rev_por_amt} ;;
@@ -4330,7 +4330,7 @@ view: glm_property_future_fcst_f_toly {
   }
 
   measure: rbe_rev_por_amt_toly {
-    label: "Rev POR RBE $ TY:LY - var %"
+    label: "Rev POR RB&E $ TY:LY - var %"
     description: "(TY - LY) / LY"
     type: number
     sql: utl..udf_percent_var( ${glm_property_future_fcst_f_ty.rbe_rev_por_amt}, ${glm_property_future_fcst_f_ly.rbe_rev_por_amt}) ;;
