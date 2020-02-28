@@ -25,12 +25,21 @@ view: revintel_property_segment_pace_f {
   #-- Dimensions
   #-------------------------------------------------------------------------------------------
 
-  dimension: major_market_nm {
-    sql: ${TABLE}.major_market_name ;;
+  dimension:major_market_nm_sort_no {
+    sql: case
+          when ${TABLE}.major_market_name = 'Transient'            then 1
+          when ${TABLE}.major_market_name = 'Group'                then 2
+          when ${TABLE}.major_market_name = 'Contract'             then 3
+          when ${TABLE}.major_market_name = 'Complimentary'        then 4
+          when ${TABLE}.major_market_name = 'Historical'           then 5
+          when ${TABLE}.major_market_name = 'No Rate'              then 6
+          when ${TABLE}.major_market_name = 'Unknown'              then 7
+        else 9999
+      end ;;
     view_label: "Reservation Detail"
-    label: "Major Market Segment"
-    description: "Major Market Segment Name"
-    type: string
+    label: "Major Market Segment Sort No"
+    description: "Major Market Segment Sort Number"
+    type: number
   }
 
   dimension: minor_market_nm_sort_no {
@@ -60,13 +69,22 @@ view: revintel_property_segment_pace_f {
     type: number
   }
 
+  dimension: major_market_nm {
+    sql: ${TABLE}.major_market_name ;;
+    view_label: "Reservation Detail"
+    label: "Major Market Segment"
+    description: "Major Market Segment Name"
+    type: string
+    order_by_field: major_market_nm_sort_no
+  }
+
   dimension: minor_market_nm {
     sql: ${TABLE}.minor_market_name ;;
     view_label: "Reservation Detail"
     label: "Minor Market Segment"
     description: "Minor Market Segment Name"
     type: string
-    order_by_field:  minor_market_nm_sort_no
+    order_by_field: minor_market_nm_sort_no
   }
 
 
