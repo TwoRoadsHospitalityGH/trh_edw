@@ -52,12 +52,29 @@ view: averod_property_business_f {
     type: string
   }
 
+  dimension: meal_period_sort_no {
+    sql: case
+          when ${TABLE}.meal_period_name = 'Breakfast' then 1
+          when ${TABLE}.meal_period_name = 'Lunch' then 2
+          when ${TABLE}.meal_period_name = 'Dinner' then 3
+          when ${TABLE}.meal_period_name = 'Late Night' then 4
+          when ${TABLE}.meal_period_name = 'All Day' then 5
+          else 9999
+        end ;;
+    view_label: "Business Detail"
+    label: "Meal Period"
+    description: "Meal Period Name"
+    type: string
+    hidden:  yes
+  }
+
   dimension: meal_period_name {
     sql: ${TABLE}.meal_period_name ;;
     view_label: "Business Detail"
     label: "Meal Period"
     description: "Meal Period Name"
     type: string
+    order_by_field: meal_period_sort_no
   }
 
   #-------------------------------------------------------------------------------------------
